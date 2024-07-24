@@ -1,0 +1,201 @@
+[gd_scene load_steps=12 format=3 uid="uid://pk7extbu3xea"]
+
+[ext_resource type="Texture2D" uid="uid://ds2kt5kynslc8" path="res://gui-figma/menu back 1.png" id="1_26rl2"]
+[ext_resource type="Script" path="res://scenes/navigation-menu.gd" id="1_ykvwa"]
+[ext_resource type="Texture2D" uid="uid://d1566y1lveil3" path="res://gui-figma/Group 173.png" id="2_qyodl"]
+[ext_resource type="Texture2D" uid="uid://bfdu0amwv7dk3" path="res://gui-figma/hub 2.png" id="3_102d5"]
+[ext_resource type="Texture2D" uid="uid://10u8v4p7qqrb" path="res://gui-figma/character 1.png" id="3_rdbyu"]
+[ext_resource type="Texture2D" uid="uid://d3ckctk8kht1b" path="res://gui-figma/bioms 1.png" id="4_npf7f"]
+[ext_resource type="Texture2D" uid="uid://dv3mstmdt3l0p" path="res://gui-figma/c2.png" id="4_s10b8"]
+[ext_resource type="Texture2D" uid="uid://de4kxwypkmp71" path="res://gui-figma/craft 1.png" id="5_4fuof"]
+[ext_resource type="Texture2D" uid="uid://doi260lvadhgo" path="res://gui-figma/c3.png" id="5_ky8tc"]
+[ext_resource type="Texture2D" uid="uid://dxoe0auoe6ivu" path="res://gui-figma/osady 1.png" id="6_y2eeh"]
+[ext_resource type="Texture2D" uid="uid://cyc7b3rsh3qrr" path="res://gui-figma/Слой 7.png" id="7_gn6ft"]
+
+[node name="Navigation-menu" type="Node2D"]
+script = ExtResource("1_ykvwa")
+
+[node name="BackGround" type="TextureRect" parent="."]
+offset_left = -1009.0
+offset_top = -1.0
+offset_right = 1678.0
+offset_bottom = 1752.0
+scale = Vector2(1.17333, 1.0033)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_26rl2")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="PlayerProfileUI" type="CanvasLayer" parent="."]
+
+[node name="PlayerProfileIcon" type="MarginContainer" parent="PlayerProfileUI"]
+offset_left = 10.0
+offset_top = 22.0
+offset_right = 89.0
+offset_bottom = 96.0
+
+[node name="ElvesIcon" type="TextureRect" parent="PlayerProfileUI/PlayerProfileIcon"]
+visible = false
+layout_mode = 2
+texture = ExtResource("3_rdbyu")
+expand_mode = 1
+
+[node name="HumansIcon" type="TextureRect" parent="PlayerProfileUI/PlayerProfileIcon"]
+visible = false
+layout_mode = 2
+texture = ExtResource("4_s10b8")
+expand_mode = 1
+
+[node name="DwarftsIcon" type="TextureRect" parent="PlayerProfileUI/PlayerProfileIcon"]
+visible = false
+layout_mode = 2
+texture = ExtResource("5_ky8tc")
+expand_mode = 1
+
+[node name="PlayerProfileUI" type="MarginContainer" parent="PlayerProfileUI"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -252.0
+offset_top = -4.0
+offset_right = 252.0
+offset_bottom = 105.0
+grow_horizontal = 2
+
+[node name="PlayerProfileUI" type="TextureRect" parent="PlayerProfileUI/PlayerProfileUI"]
+layout_mode = 2
+texture = ExtResource("2_qyodl")
+
+[node name="PlayerNameContainer" type="MarginContainer" parent="PlayerProfileUI"]
+offset_left = 216.0
+offset_top = 18.0
+offset_right = 367.0
+offset_bottom = 47.0
+
+[node name="PlayerName" type="Label" parent="PlayerProfileUI/PlayerNameContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = "PLAYER NAME"
+
+[node name="ClanBackGround" type="MarginContainer" parent="PlayerProfileUI"]
+offset_left = 110.0
+offset_top = 62.0
+offset_right = 154.0
+offset_bottom = 105.0
+
+[node name="ClanBackGroundTexture" type="TextureRect" parent="PlayerProfileUI/ClanBackGround"]
+layout_mode = 2
+texture = ExtResource("7_gn6ft")
+expand_mode = 1
+
+[node name="Buildings" type="CanvasLayer" parent="."]
+
+[node name="Tavern" type="MarginContainer" parent="Buildings"]
+offset_left = 20.0
+offset_top = 79.0
+offset_right = 230.0
+offset_bottom = 283.0
+
+[node name="Tavern" type="TextureButton" parent="Buildings/Tavern"]
+layout_mode = 2
+texture_normal = ExtResource("3_102d5")
+texture_pressed = ExtResource("3_102d5")
+texture_hover = ExtResource("3_102d5")
+texture_focused = ExtResource("3_102d5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TavernLabel" type="MarginContainer" parent="Buildings"]
+offset_left = 47.0
+offset_top = 247.0
+offset_right = 158.0
+offset_bottom = 293.0
+
+[node name="TavernLabel" type="Label" parent="Buildings/TavernLabel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "Tavern"
+
+[node name="Biom" type="MarginContainer" parent="Buildings"]
+offset_left = 264.0
+offset_top = 96.0
+offset_right = 474.0
+offset_bottom = 300.0
+
+[node name="Biom" type="TextureButton" parent="Buildings/Biom"]
+layout_mode = 2
+texture_normal = ExtResource("4_npf7f")
+texture_pressed = ExtResource("4_npf7f")
+texture_hover = ExtResource("4_npf7f")
+texture_focused = ExtResource("4_npf7f")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BiomLabel" type="MarginContainer" parent="Buildings"]
+offset_left = 332.0
+offset_top = 256.0
+offset_right = 443.0
+offset_bottom = 302.0
+
+[node name="BiomLabel" type="Label" parent="Buildings/BiomLabel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "Biom"
+
+[node name="ClansHall" type="MarginContainer" parent="Buildings"]
+offset_left = 63.0
+offset_top = 349.0
+offset_right = 218.0
+offset_bottom = 521.0
+
+[node name="ClansHall" type="TextureButton" parent="Buildings/ClansHall"]
+layout_mode = 2
+texture_normal = ExtResource("5_4fuof")
+texture_pressed = ExtResource("5_4fuof")
+texture_hover = ExtResource("5_4fuof")
+texture_focused = ExtResource("5_4fuof")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ClansHallLabel" type="MarginContainer" parent="Buildings"]
+offset_left = 53.0
+offset_top = 467.0
+offset_right = 205.0
+offset_bottom = 513.0
+
+[node name="ClansHallLabel" type="Label" parent="Buildings/ClansHallLabel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "Clans hall"
+
+[node name="League" type="MarginContainer" parent="Buildings"]
+offset_left = 270.0
+offset_top = 567.0
+offset_right = 451.0
+offset_bottom = 775.0
+
+[node name="League" type="TextureButton" parent="Buildings/League"]
+layout_mode = 2
+texture_normal = ExtResource("6_y2eeh")
+texture_pressed = ExtResource("6_y2eeh")
+texture_hover = ExtResource("6_y2eeh")
+texture_focused = ExtResource("6_y2eeh")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="LeagueLabel" type="MarginContainer" parent="Buildings"]
+offset_left = 302.0
+offset_top = 732.0
+offset_right = 454.0
+offset_bottom = 778.0
+
+[node name="LeagueLabel" type="Label" parent="Buildings/LeagueLabel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "League"
+
+[connection signal="pressed" from="Buildings/Tavern/Tavern" to="." method="_on_tavern_pressed"]
+[connection signal="pressed" from="Buildings/Biom/Biom" to="." method="_on_biom_pressed"]
+[connection signal="pressed" from="Buildings/ClansHall/ClansHall" to="." method="_on_clans_hall_pressed"]
+[connection signal="pressed" from="Buildings/League/League" to="." method="_on_league_pressed"]

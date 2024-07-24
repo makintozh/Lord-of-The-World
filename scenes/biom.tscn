@@ -1,0 +1,61 @@
+[gd_scene load_steps=4 format=3 uid="uid://posku4uysvkn"]
+
+[ext_resource type="Script" path="res://scripts/biom.gd" id="1_m3bq3"]
+[ext_resource type="Texture2D" uid="uid://b6st1qgk03rsi" path="res://gui-figma/biome map2 1.png" id="2_1q34o"]
+[ext_resource type="Texture2D" uid="uid://ccd7lnobgoth5" path="res://gui-figma/arrow back white.png" id="3_n3uux"]
+
+[node name="Biom" type="Node2D"]
+script = ExtResource("1_m3bq3")
+
+[node name="DoubleBackGround" type="TextureRect" parent="."]
+offset_left = -1648.0
+offset_top = -292.0
+offset_right = 11352.0
+offset_bottom = 6795.0
+scale = Vector2(0.296532, 0.248046)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_1q34o")
+expand_mode = 3
+stretch_mode = 1
+
+[node name="BackGround" type="TextureRect" parent="."]
+offset_left = -15.0
+offset_top = -5.0
+offset_right = 1759.0
+offset_bottom = 7086.0
+scale = Vector2(0.296532, 0.248046)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_1q34o")
+expand_mode = 1
+
+[node name="BiomUI" type="CanvasLayer" parent="."]
+
+[node name="BackButtonContainer" type="MarginContainer" parent="BiomUI"]
+offset_left = 43.0
+offset_top = 30.0
+offset_right = 146.0
+offset_bottom = 87.0
+
+[node name="BackButton" type="TextureButton" parent="BiomUI/BackButtonContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_n3uux")
+texture_pressed = ExtResource("3_n3uux")
+texture_hover = ExtResource("3_n3uux")
+texture_focused = ExtResource("3_n3uux")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 157.0
+offset_top = 379.0
+offset_right = 344.0
+offset_bottom = 451.0
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 51
+text = "Скоро..."
+
+[connection signal="pressed" from="BiomUI/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]
