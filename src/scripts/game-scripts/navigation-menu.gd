@@ -12,7 +12,6 @@ func _ready():
 	player_icon()
 	playernamelabel.text = GLOBAL.player_character_name
 	
-	
 
 
 func player_icon():

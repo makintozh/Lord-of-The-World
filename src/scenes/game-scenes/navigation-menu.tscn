@@ -16,16 +16,11 @@
 script = ExtResource("1_ykvwa")
 
 [node name="BackGround" type="TextureRect" parent="."]
-offset_left = -1009.0
-offset_top = -1.0
-offset_right = 1678.0
-offset_bottom = 1752.0
-scale = Vector2(1.17333, 1.0033)
+offset_right = 500.0
+offset_bottom = 932.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("1_26rl2")
-expand_mode = 2
-stretch_mode = 1
 
 [node name="PlayerProfileUI" type="CanvasLayer" parent="."]
 
