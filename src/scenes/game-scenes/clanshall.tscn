@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://6p3cypaucpbs"]
+
+[ext_resource type="Script" path="res://src/scripts/game-scripts/clanshall.gd" id="1_rlb1d"]
+[ext_resource type="Texture2D" uid="uid://bmof2g6xlu2bf" path="res://src/ui/figma/background.png" id="2_lk8v2"]
+[ext_resource type="Texture2D" uid="uid://bynw4asolnqm8" path="res://src/ui/figma/Group 101.png" id="3_dvq7i"]
+
+[node name="Clanshall" type="Node2D"]
+script = ExtResource("1_rlb1d")
+
+[node name="BackGround" type="TextureRect" parent="."]
+offset_left = -2030.0
+offset_top = -208.0
+offset_right = 4335.0
+offset_bottom = 2270.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_lk8v2")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 157.0
+offset_top = 379.0
+offset_right = 344.0
+offset_bottom = 451.0
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 51
+text = "Скоро..."
+
+[node name="BackButtonContainer" type="MarginContainer" parent="."]
+offset_left = 27.0
+offset_top = 19.0
+offset_right = 124.0
+offset_bottom = 71.0
+
+[node name="BackButton" type="TextureButton" parent="BackButtonContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_dvq7i")
+texture_pressed = ExtResource("3_dvq7i")
+texture_hover = ExtResource("3_dvq7i")
+texture_focused = ExtResource("3_dvq7i")
+stretch_mode = 0
+
+[connection signal="pressed" from="BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]

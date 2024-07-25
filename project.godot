@@ -12,14 +12,14 @@ config_version=5
 
 config/name="Lord of The World"
 config/tags=PackedStringArray("lord_of_the_world")
-run/main_scene="res://scenes/auth-scenes/login_ui.tscn"
+run/main_scene="res://src/scenes/auth-scenes/login_ui.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 boot_splash/bg_color=Color(0.187176, 0.187176, 0.187176, 1)
 boot_splash/show_image=false
 
 [autoload]
 
-GLOBAL="*res://scripts/global-singleton/global_variables.gd"
+GLOBAL="*res://src/scripts/global-singleton/global_variables.gd"
 
 [display]
 
@@ -41,16 +41,15 @@ version_control/autoload_on_startup=true
 
 folder_colors={
 "res://addons/": "gray",
-"res://android/": "gray",
-"res://fonts/": "orange",
-"res://scenes/": "green",
-"res://scripts/": "green",
-"res://ui/": "purple"
+"res://src/fonts/": "orange",
+"res://src/scenes/": "green",
+"res://src/scripts/": "green",
+"res://src/ui/": "purple"
 }
 
 [gui]
 
-theme/custom_font="res://fonts/inika/Inika-Bold.ttf"
+theme/custom_font="res://src/fonts/inika/Inika-Bold.ttf"
 
 [input_devices]
 
