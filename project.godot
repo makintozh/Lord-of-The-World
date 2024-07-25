@@ -39,7 +39,7 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/SmoothScroll/plugin.cfg")
+enabled=PackedStringArray()
 
 [file_customization]
 

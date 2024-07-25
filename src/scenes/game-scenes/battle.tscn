@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4nxlq3fl4exg"]
+
+[ext_resource type="Script" path="res://src/scripts/game-scripts/battle.gd" id="1_r4kbs"]
+[ext_resource type="VideoStream" path="res://src/ui/video/battle-video-background.ogv" id="2_6kmfi"]
+
+[node name="Battle" type="Node2D"]
+script = ExtResource("1_r4kbs")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 504.0
+offset_bottom = 904.0
+stream = ExtResource("2_6kmfi")
+autoplay = true
+expand = true
+loop = true

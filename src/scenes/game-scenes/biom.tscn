@@ -35,7 +35,6 @@ theme_override_styles/grabber_highlight = SubResource("StyleBoxEmpty_6deri")
 theme_override_styles/grabber_pressed = SubResource("StyleBoxEmpty_jtnry")
 min_value = 500.0
 max_value = 700.0
-step = 100.0
 page = 100.0
 value = 500.0
 script = ExtResource("3_abe4y")
