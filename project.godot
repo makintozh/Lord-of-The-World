@@ -12,14 +12,14 @@ config_version=5
 
 config/name="Lord of The World"
 config/tags=PackedStringArray("lord_of_the_world")
-run/main_scene="res://scenes/login_ui.tscn"
+run/main_scene="res://src/scenes/auth-scenes/login_ui.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 boot_splash/bg_color=Color(0.187176, 0.187176, 0.187176, 1)
 boot_splash/show_image=false
 
 [autoload]
 
-GLOBAL="*res://scripts/global_variables.gd"
+GLOBAL="*res://src/scripts/global-singleton/global_variables.gd"
 
 [display]
 
@@ -27,8 +27,8 @@ window/size/viewport_width=500
 window/size/viewport_height=900
 window/size/resizable=false
 window/size/borderless=true
-window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
+window/stretch/mode="viewport"
+window/stretch/aspect="ignore"
 window/handheld/orientation=5
 window/vsync/vsync_mode=0
 
@@ -37,9 +37,24 @@ window/vsync/vsync_mode=0
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
 
+[editor_plugins]
+
+enabled=PackedStringArray()
+
+[file_customization]
+
+folder_colors={
+"res://android/": "gray",
+"res://src/": "green",
+"res://src/fonts/": "orange",
+"res://src/scenes/": "green",
+"res://src/scripts/": "green",
+"res://src/ui/": "purple"
+}
+
 [gui]
 
-theme/custom_font="res://fonts/Inika-Bold.ttf"
+theme/custom_font="res://src/fonts/inika/Inika-Bold.ttf"
 
 [input_devices]
 

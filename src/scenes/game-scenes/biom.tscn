@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://posku4uysvkn"]
+
+[ext_resource type="Script" path="res://src/scripts/game-scripts/biom.gd" id="1_m3bq3"]
+[ext_resource type="Texture2D" uid="uid://b6st1qgk03rsi" path="res://src/ui/figma/biome map2 1.png" id="2_1q34o"]
+[ext_resource type="Script" path="res://src/scripts/game-scripts/BackGroundScrollBar.gd" id="3_abe4y"]
+[ext_resource type="Texture2D" uid="uid://ccd7lnobgoth5" path="res://src/ui/figma/arrow back white.png" id="3_n3uux"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wnu32"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ouc5l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5c2m7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6deri"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jtnry"]
+
+[node name="Biom" type="Node2D"]
+script = ExtResource("1_m3bq3")
+
+[node name="BackGround" type="TextureRect" parent="."]
+offset_right = 500.0
+offset_bottom = 1200.0
+texture = ExtResource("2_1q34o")
+expand_mode = 1
+
+[node name="BackGroundScrollBar" type="VScrollBar" parent="BackGround"]
+offset_top = -2.0
+offset_right = 502.0
+offset_bottom = 1202.0
+theme_override_styles/scroll = SubResource("StyleBoxEmpty_wnu32")
+theme_override_styles/scroll_focus = SubResource("StyleBoxEmpty_ouc5l")
+theme_override_styles/grabber = SubResource("StyleBoxEmpty_5c2m7")
+theme_override_styles/grabber_highlight = SubResource("StyleBoxEmpty_6deri")
+theme_override_styles/grabber_pressed = SubResource("StyleBoxEmpty_jtnry")
+min_value = 500.0
+max_value = 700.0
+page = 100.0
+value = 500.0
+script = ExtResource("3_abe4y")
+
+[node name="BiomUI" type="CanvasLayer" parent="."]
+
+[node name="BackButtonContainer" type="MarginContainer" parent="BiomUI"]
+offset_left = 43.0
+offset_top = 30.0
+offset_right = 146.0
+offset_bottom = 87.0
+
+[node name="BackButton" type="TextureButton" parent="BiomUI/BackButtonContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_n3uux")
+texture_pressed = ExtResource("3_n3uux")
+texture_hover = ExtResource("3_n3uux")
+texture_focused = ExtResource("3_n3uux")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(248, 453)
+scale = Vector2(36.06, 222)
+
+[connection signal="pressed" from="BiomUI/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]
