@@ -1,0 +1,151 @@
+[gd_scene load_steps=15 format=3 uid="uid://0xe68w41ig5c"]
+
+[ext_resource type="Script" path="res://scripts/game-scripts/tavern.gd" id="1_06l26"]
+[ext_resource type="Texture2D" uid="uid://bmof2g6xlu2bf" path="res://ui/figma/background.png" id="2_f0g80"]
+[ext_resource type="Texture2D" uid="uid://b2rs6ecdmj3tl" path="res://ui/figma/geks копия 10.png" id="3_jynqc"]
+[ext_resource type="Texture2D" uid="uid://10u8v4p7qqrb" path="res://ui/figma/character 1.png" id="4_eqj46"]
+[ext_resource type="Texture2D" uid="uid://c3qldwm5umd4l" path="res://ui/figma/base frame 4.png" id="4_etbxp"]
+[ext_resource type="Texture2D" uid="uid://yacxa428bppa" path="res://ui/figma/button_2.png" id="5_5p47d"]
+[ext_resource type="Texture2D" uid="uid://dv3mstmdt3l0p" path="res://ui/figma/c2.png" id="5_87qie"]
+[ext_resource type="Texture2D" uid="uid://doi260lvadhgo" path="res://ui/figma/c3.png" id="6_27vdc"]
+[ext_resource type="Texture2D" uid="uid://bynw4asolnqm8" path="res://ui/figma/Group 101.png" id="6_f5s4r"]
+[ext_resource type="Texture2D" uid="uid://cjbfs42jpw2ed" path="res://ui/figma/green buttom base long.png" id="10_p5dsj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0tiyj"]
+texture = ExtResource("10_p5dsj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8syyp"]
+texture = ExtResource("10_p5dsj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w20eg"]
+texture = ExtResource("10_p5dsj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ed6mt"]
+texture = ExtResource("10_p5dsj")
+
+[node name="Tavern" type="Node2D"]
+script = ExtResource("1_06l26")
+
+[node name="BackGround" type="TextureRect" parent="."]
+offset_left = -2030.0
+offset_top = -208.0
+offset_right = 4335.0
+offset_bottom = 2270.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_f0g80")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="TavernProfileUI" type="CanvasLayer" parent="."]
+
+[node name="IconFrameContainer" type="MarginContainer" parent="TavernProfileUI"]
+offset_left = 109.0
+offset_top = 78.0
+offset_right = 419.0
+offset_bottom = 466.0
+
+[node name="IconFrame" type="TextureRect" parent="TavernProfileUI/IconFrameContainer"]
+layout_mode = 2
+texture = ExtResource("3_jynqc")
+expand_mode = 1
+
+[node name="PlayerProfileIcon" type="MarginContainer" parent="TavernProfileUI"]
+offset_left = 190.0
+offset_top = 120.0
+offset_right = 328.0
+offset_bottom = 251.0
+
+[node name="ElvesIcon" type="TextureRect" parent="TavernProfileUI/PlayerProfileIcon"]
+visible = false
+layout_mode = 2
+texture = ExtResource("4_eqj46")
+expand_mode = 1
+
+[node name="HumansIcon" type="TextureRect" parent="TavernProfileUI/PlayerProfileIcon"]
+visible = false
+layout_mode = 2
+texture = ExtResource("5_87qie")
+expand_mode = 1
+
+[node name="DwarftsIcon" type="TextureRect" parent="TavernProfileUI/PlayerProfileIcon"]
+visible = false
+layout_mode = 2
+texture = ExtResource("6_27vdc")
+expand_mode = 1
+
+[node name="FrameContainer" type="MarginContainer" parent="TavernProfileUI"]
+offset_left = 189.0
+offset_top = 119.0
+offset_right = 328.0
+offset_bottom = 254.0
+
+[node name="Frame" type="TextureRect" parent="TavernProfileUI/FrameContainer"]
+layout_mode = 2
+texture = ExtResource("4_etbxp")
+expand_mode = 1
+
+[node name="UsernameBackGroundContainer" type="MarginContainer" parent="TavernProfileUI"]
+offset_left = 142.0
+offset_top = 258.0
+offset_right = 384.0
+offset_bottom = 314.0
+
+[node name="UsernameBackGround" type="TextureRect" parent="TavernProfileUI/UsernameBackGroundContainer"]
+layout_mode = 2
+texture = ExtResource("5_5p47d")
+expand_mode = 1
+
+[node name="UsernameContainer" type="MarginContainer" parent="TavernProfileUI"]
+offset_left = 162.0
+offset_top = 267.0
+offset_right = 330.0
+offset_bottom = 307.0
+
+[node name="Username" type="Label" parent="TavernProfileUI/UsernameContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "PLAYER NAME"
+
+[node name="PlayerProfileLabelContainer" type="MarginContainer" parent="TavernProfileUI"]
+offset_left = 187.0
+offset_top = 25.0
+offset_right = 312.0
+offset_bottom = 65.0
+
+[node name="PlayerProfileLabel" type="Label" parent="TavernProfileUI/PlayerProfileLabelContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Player profile"
+
+[node name="BackButtonContainer" type="MarginContainer" parent="TavernProfileUI"]
+offset_left = 27.0
+offset_top = 19.0
+offset_right = 124.0
+offset_bottom = 71.0
+
+[node name="BackButton" type="TextureButton" parent="TavernProfileUI/BackButtonContainer"]
+layout_mode = 2
+texture_normal = ExtResource("6_f5s4r")
+texture_pressed = ExtResource("6_f5s4r")
+texture_hover = ExtResource("6_f5s4r")
+texture_focused = ExtResource("6_f5s4r")
+stretch_mode = 0
+
+[node name="OptionsButtonContainer" type="MarginContainer" parent="TavernProfileUI"]
+offset_left = 363.0
+offset_top = 20.0
+offset_right = 472.0
+offset_bottom = 69.0
+
+[node name="OptionsButton" type="Button" parent="TavernProfileUI/OptionsButtonContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_0tiyj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8syyp")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_w20eg")
+theme_override_styles/focus = SubResource("StyleBoxTexture_ed6mt")
+text = "Options"
+
+[connection signal="pressed" from="TavernProfileUI/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="TavernProfileUI/OptionsButtonContainer/OptionsButton" to="." method="_on_options_button_pressed"]
