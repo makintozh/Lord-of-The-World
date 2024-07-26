@@ -2,18 +2,18 @@ extends Node
 
 
 
-var username = ""
-var password = ""
+var username = ""   #Ник Пользователя
+var password = ""   #Пароль Пользователя
 
 
-var player_character_name = ""
+var player_character_name = ""    #Имя Персонажа Пользователя
 
 
-var character_index = 0
+var character_index = 0    #Индекс Выбранного Персонажа Пользователя
 
 
-var enable_button_transparent = "ffffffff"
-var disable_button_transparent = "ffffff78"
+var enable_button_transparent = "ffffffff"    #Прозрачность Включённой Кнопки
+var disable_button_transparent = "ffffff78"   #Прозрачность Отлючённой Кнопки
 
 
 
