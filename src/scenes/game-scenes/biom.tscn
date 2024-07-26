@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://posku4uysvkn"]
+[gd_scene load_steps=15 format=3 uid="uid://posku4uysvkn"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/biom.gd" id="1_m3bq3"]
 [ext_resource type="Texture2D" uid="uid://b6st1qgk03rsi" path="res://src/ui/backgrounds/biome map2 1.png" id="2_1q34o"]
@@ -13,22 +13,14 @@
 [ext_resource type="Texture2D" uid="uid://vf3eqptfac61" path="res://src/ui/buildings/keyfand.png" id="11_56m4m"]
 [ext_resource type="Texture2D" uid="uid://32s3fry3bo84" path="res://src/ui/buildings/мехи.png" id="12_alpq5"]
 [ext_resource type="Texture2D" uid="uid://bkqycvu7gjj28" path="res://src/ui/buildings/celesteal 1.png" id="13_x3ue8"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wnu32"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ouc5l"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5c2m7"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6deri"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jtnry"]
+[ext_resource type="Texture2D" uid="uid://wv5qcobcvpoq" path="res://src/ui/buttons/arrow_.png" id="14_s00r4"]
 
 [node name="Biom" type="Node2D"]
 script = ExtResource("1_m3bq3")
 
 [node name="BackGround" type="TextureRect" parent="."]
-offset_right = 500.0
+offset_left = -5.0
+offset_right = 502.0
 offset_bottom = 1900.0
 texture = ExtResource("2_1q34o")
 expand_mode = 1
@@ -38,7 +30,7 @@ position = Vector2(248, 453)
 scale = Vector2(36.06, 222)
 limit_smoothed = true
 position_smoothing_enabled = true
-position_smoothing_speed = 15.0
+position_smoothing_speed = 4.0
 editor_draw_screen = false
 
 [node name="BiomUI" type="CanvasLayer" parent="."]
@@ -129,33 +121,6 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 34
 text = "Taurelious"
 
-[node name="CivilMortes" type="MarginContainer" parent="Buildings"]
-offset_left = 204.0
-offset_top = 506.0
-offset_right = 497.0
-offset_bottom = 832.0
-
-[node name="CivilMortes" type="TextureButton" parent="Buildings/CivilMortes"]
-layout_mode = 2
-texture_normal = ExtResource("8_8x7xb")
-texture_pressed = ExtResource("8_8x7xb")
-texture_hover = ExtResource("8_8x7xb")
-texture_focused = ExtResource("8_8x7xb")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="CivilMortesLabel" type="MarginContainer" parent="Buildings"]
-offset_left = 360.0
-offset_top = 532.0
-offset_right = 476.0
-offset_bottom = 578.0
-
-[node name="CivilMortesLabel" type="Label" parent="Buildings/CivilMortesLabel"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 34
-text = "Civil
-"
-
 [node name="Elborus" type="Control" parent="Buildings"]
 anchors_preset = 0
 offset_right = 40.0
@@ -186,6 +151,38 @@ offset_bottom = 501.0
 layout_mode = 2
 theme_override_font_sizes/font_size = 34
 text = "Elborus"
+
+[node name="CivilMortes" type="Control" parent="Buildings"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CivilMortes" type="MarginContainer" parent="Buildings/CivilMortes"]
+offset_left = 204.0
+offset_top = 506.0
+offset_right = 497.0
+offset_bottom = 832.0
+
+[node name="CivilMortes" type="TextureButton" parent="Buildings/CivilMortes/CivilMortes"]
+layout_mode = 2
+texture_normal = ExtResource("8_8x7xb")
+texture_pressed = ExtResource("8_8x7xb")
+texture_hover = ExtResource("8_8x7xb")
+texture_focused = ExtResource("8_8x7xb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="CivilMortesLabel" type="MarginContainer" parent="Buildings/CivilMortes"]
+offset_left = 360.0
+offset_top = 532.0
+offset_right = 476.0
+offset_bottom = 578.0
+
+[node name="CivilMortesLabel" type="Label" parent="Buildings/CivilMortes/CivilMortesLabel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "Civil
+"
 
 [node name="Forest" type="Control" parent="Buildings"]
 anchors_preset = 0
@@ -270,9 +267,9 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="NordtoppenLabel" type="MarginContainer" parent="Buildings/Nordtoppen"]
-offset_left = 48.0
+offset_left = 4.0
 offset_top = 1021.0
-offset_right = 231.0
+offset_right = 187.0
 offset_bottom = 1067.0
 
 [node name="NordtoppenLabel" type="Label" parent="Buildings/Nordtoppen/NordtoppenLabel"]
@@ -374,23 +371,58 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 34
 text = "Celestial"
 
-[node name="BackGroundScrollBar" type="VScrollBar" parent="."]
-z_as_relative = false
-offset_left = -111.0
-offset_top = -52.0
-offset_right = 563.0
-offset_bottom = 1935.0
-theme_override_styles/scroll = SubResource("StyleBoxEmpty_wnu32")
-theme_override_styles/scroll_focus = SubResource("StyleBoxEmpty_ouc5l")
-theme_override_styles/grabber = SubResource("StyleBoxEmpty_5c2m7")
-theme_override_styles/grabber_highlight = SubResource("StyleBoxEmpty_6deri")
-theme_override_styles/grabber_pressed = SubResource("StyleBoxEmpty_jtnry")
-min_value = 500.0
-max_value = 1550.0
-step = 40.0
-page = 100.0
-value = 500.0
-custom_step = 1.0
+[node name="NaviagteBiom" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TopButton" type="Control" parent="NaviagteBiom"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TopButtonContainer" type="MarginContainer" parent="NaviagteBiom/TopButton"]
+layout_mode = 0
+offset_left = 203.0
+offset_top = 1087.0
+offset_right = 273.0
+offset_bottom = 1148.0
+rotation = -1.5708
+
+[node name="TopButton" type="TextureButton" parent="NaviagteBiom/TopButton/TopButtonContainer"]
+layout_mode = 2
+texture_normal = ExtResource("14_s00r4")
+texture_pressed = ExtResource("14_s00r4")
+texture_hover = ExtResource("14_s00r4")
+texture_focused = ExtResource("14_s00r4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BottomButton" type="Control" parent="NaviagteBiom"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BottomButtonContainer" type="MarginContainer" parent="NaviagteBiom/BottomButton"]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 812.0
+offset_right = 334.0
+offset_bottom = 873.0
+rotation = 1.5708
+
+[node name="BottomButton" type="TextureButton" parent="NaviagteBiom/BottomButton/BottomButtonContainer"]
+layout_mode = 2
+texture_normal = ExtResource("14_s00r4")
+texture_pressed = ExtResource("14_s00r4")
+texture_hover = ExtResource("14_s00r4")
+texture_focused = ExtResource("14_s00r4")
+ignore_texture_size = true
+stretch_mode = 0
 
 [connection signal="pressed" from="BiomUI/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]
-[connection signal="value_changed" from="BackGroundScrollBar" to="." method="_on_back_ground_scroll_bar_value_changed"]
+[connection signal="pressed" from="Buildings/Civil/Civil/Civil" to="." method="_on_civil_pressed"]
+[connection signal="pressed" from="NaviagteBiom/TopButton/TopButtonContainer/TopButton" to="." method="_on_top_button_pressed"]
+[connection signal="pressed" from="NaviagteBiom/BottomButton/BottomButtonContainer/BottomButton" to="." method="_on_bottom_button_pressed"]
