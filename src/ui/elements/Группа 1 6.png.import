@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qermfqbppotg"
-path="res://.godot/imported/Группа 1 6.png-2316fcbb517b77102d0d65de96acbc15.ctex"
+path="res://.godot/imported/Группа 1 6.png-64528d552dbe27474afba900ac00fd0e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/figma/Группа 1 6.png"
-dest_files=["res://.godot/imported/Группа 1 6.png-2316fcbb517b77102d0d65de96acbc15.ctex"]
+source_file="res://src/ui/elements/Группа 1 6.png"
+dest_files=["res://.godot/imported/Группа 1 6.png-64528d552dbe27474afba900ac00fd0e.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6kvjconjmoj0"
-path="res://.godot/imported/support green.png-680a55cb4b4d137a3db5680066a4070f.ctex"
+path="res://.godot/imported/support green.png-bde0ab721864b8998ebbdf0ec9282a31.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/figma/support green.png"
-dest_files=["res://.godot/imported/support green.png-680a55cb4b4d137a3db5680066a4070f.ctex"]
+source_file="res://src/ui/buttons/support green.png"
+dest_files=["res://.godot/imported/support green.png-bde0ab721864b8998ebbdf0ec9282a31.ctex"]
 
 [params]
 

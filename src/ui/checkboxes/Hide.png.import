@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmpyv16hdidiw"
-path="res://.godot/imported/Hide.png-c9eaba3ad2db8ebea56a82db1f438ae8.ctex"
+path="res://.godot/imported/Hide.png-4d058d29e26aa08b62dcc70e741df22c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/figma/Hide.png"
-dest_files=["res://.godot/imported/Hide.png-c9eaba3ad2db8ebea56a82db1f438ae8.ctex"]
+source_file="res://src/ui/checkboxes/Hide.png"
+dest_files=["res://.godot/imported/Hide.png-4d058d29e26aa08b62dcc70e741df22c.ctex"]
 
 [params]
 

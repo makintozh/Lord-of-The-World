@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://boontk5qqal0n"
-path="res://.godot/imported/enter button.png-d73e55617eb1a2b15c2fda34a0b75cfa.ctex"
+path="res://.godot/imported/enter button.png-f57744ff4bd78ba673e43e5587c9c9e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/figma/enter button.png"
-dest_files=["res://.godot/imported/enter button.png-d73e55617eb1a2b15c2fda34a0b75cfa.ctex"]
+source_file="res://src/ui/buttons/enter button.png"
+dest_files=["res://.godot/imported/enter button.png-f57744ff4bd78ba673e43e5587c9c9e4.ctex"]
 
 [params]
 

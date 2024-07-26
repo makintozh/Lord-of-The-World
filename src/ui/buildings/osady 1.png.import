@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxoe0auoe6ivu"
-path="res://.godot/imported/osady 1.png-6f583d9cf5bd5a3ae815853d461d84ca.ctex"
+path="res://.godot/imported/osady 1.png-27138ea6fda99eb402533abcdde3f6c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/figma/osady 1.png"
-dest_files=["res://.godot/imported/osady 1.png-6f583d9cf5bd5a3ae815853d461d84ca.ctex"]
+source_file="res://src/ui/buildings/osady 1.png"
+dest_files=["res://.godot/imported/osady 1.png-27138ea6fda99eb402533abcdde3f6c1.ctex"]
 
 [params]
 

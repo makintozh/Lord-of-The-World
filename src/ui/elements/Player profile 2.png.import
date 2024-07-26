@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dprer055dopof"
-path="res://.godot/imported/Player profile 2.png-3329cacc97f1fa00eb54e6f8f0e9c426.ctex"
+path="res://.godot/imported/Player profile 2.png-c74dd64ea6844cc5beecea86958252fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/figma/Player profile 2.png"
-dest_files=["res://.godot/imported/Player profile 2.png-3329cacc97f1fa00eb54e6f8f0e9c426.ctex"]
+source_file="res://src/ui/elements/Player profile 2.png"
+dest_files=["res://.godot/imported/Player profile 2.png-c74dd64ea6844cc5beecea86958252fa.ctex"]
 
 [params]
 

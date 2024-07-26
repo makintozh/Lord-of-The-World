@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dw45alwojk1e"
-path="res://.godot/imported/remember копия (1).png-e213e9e67a86795ee7ecef43f2d193e4.ctex"
+path="res://.godot/imported/remember копия (1).png-f416eaf0c232163f6b91d6825fce70a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/figma/remember копия (1).png"
-dest_files=["res://.godot/imported/remember копия (1).png-e213e9e67a86795ee7ecef43f2d193e4.ctex"]
+source_file="res://src/ui/checkboxes/remember копия (1).png"
+dest_files=["res://.godot/imported/remember копия (1).png-f416eaf0c232163f6b91d6825fce70a9.ctex"]
 
 [params]
 

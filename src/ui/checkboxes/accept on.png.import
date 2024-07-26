@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ucrnbtm07umr"
-path="res://.godot/imported/accept on.png-8d11ee92b662d91643de69dd8ac1fd05.ctex"
+path="res://.godot/imported/accept on.png-a0d06f13764bbba227870b406b6761db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/figma/accept on.png"
-dest_files=["res://.godot/imported/accept on.png-8d11ee92b662d91643de69dd8ac1fd05.ctex"]
+source_file="res://src/ui/checkboxes/accept on.png"
+dest_files=["res://.godot/imported/accept on.png-a0d06f13764bbba227870b406b6761db.ctex"]
 
 [params]
 

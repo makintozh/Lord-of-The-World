@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sjllykaa5ea1"
-path="res://.godot/imported/enter button on.png-394d83dbab4a69bfec45fe61db3d45b5.ctex"
+uid="uid://vf3eqptfac61"
+path="res://.godot/imported/keyfand.png-f5977348a661e29fc2518b339e74971e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/figma/enter button on.png"
-dest_files=["res://.godot/imported/enter button on.png-394d83dbab4a69bfec45fe61db3d45b5.ctex"]
+source_file="res://src/ui/buildings/keyfand.png"
+dest_files=["res://.godot/imported/keyfand.png-f5977348a661e29fc2518b339e74971e.ctex"]
 
 [params]
 

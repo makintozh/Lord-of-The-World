@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://de4kxwypkmp71"
-path="res://.godot/imported/craft 1.png-b5226d3c5eee990ce77db84d2e2cf4d6.ctex"
+path="res://.godot/imported/craft 1.png-e438550636ec53484f1e7bc0743f92b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/figma/craft 1.png"
-dest_files=["res://.godot/imported/craft 1.png-b5226d3c5eee990ce77db84d2e2cf4d6.ctex"]
+source_file="res://src/ui/buildings/craft 1.png"
+dest_files=["res://.godot/imported/craft 1.png-e438550636ec53484f1e7bc0743f92b8.ctex"]
 
 [params]
 

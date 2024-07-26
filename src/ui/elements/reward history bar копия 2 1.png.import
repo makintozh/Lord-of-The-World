@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ll4jyvu2c6nx"
-path="res://.godot/imported/reward history bar копия 2 1.png-f667bb69a5c1bf4e9fb66234f20311f2.ctex"
+path="res://.godot/imported/reward history bar копия 2 1.png-4ca07dbd5cc2ddcc6def0c4038fb68f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/figma/reward history bar копия 2 1.png"
-dest_files=["res://.godot/imported/reward history bar копия 2 1.png-f667bb69a5c1bf4e9fb66234f20311f2.ctex"]
+source_file="res://src/ui/elements/reward history bar копия 2 1.png"
+dest_files=["res://.godot/imported/reward history bar копия 2 1.png-4ca07dbd5cc2ddcc6def0c4038fb68f6.ctex"]
 
 [params]
 

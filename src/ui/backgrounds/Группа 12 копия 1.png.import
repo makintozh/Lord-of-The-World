@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dabyr5ndrdpn7"
-path="res://.godot/imported/Группа 12 копия 1.png-671a42b886b3379dfea6b5622711d071.ctex"
+path="res://.godot/imported/Группа 12 копия 1.png-b8e815abb5b3a191cecf38ca490e3445.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/figma/Группа 12 копия 1.png"
-dest_files=["res://.godot/imported/Группа 12 копия 1.png-671a42b886b3379dfea6b5622711d071.ctex"]
+source_file="res://src/ui/backgrounds/Группа 12 копия 1.png"
+dest_files=["res://.godot/imported/Группа 12 копия 1.png-b8e815abb5b3a191cecf38ca490e3445.ctex"]
 
 [params]
 

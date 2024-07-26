@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dj0ey4wxmh23j"
-path="res://.godot/imported/agility.png-c3d137da1af4c76e04c0ddc49ed9d4fc.ctex"
+path="res://.godot/imported/agility.png-fbabfd73313405741ba202b3ca8e1694.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/figma/agility.png"
-dest_files=["res://.godot/imported/agility.png-c3d137da1af4c76e04c0ddc49ed9d4fc.ctex"]
+source_file="res://src/ui/elements/agility.png"
+dest_files=["res://.godot/imported/agility.png-fbabfd73313405741ba202b3ca8e1694.ctex"]
 
 [params]
 

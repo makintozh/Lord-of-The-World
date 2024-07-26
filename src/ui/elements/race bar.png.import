@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cx6ykjind73rd"
-path="res://.godot/imported/race bar.png-f46d69e004c6308c1ea9392594468303.ctex"
+path="res://.godot/imported/race bar.png-4cff30dff016be06579c7b866fa2ee07.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/figma/race bar.png"
-dest_files=["res://.godot/imported/race bar.png-f46d69e004c6308c1ea9392594468303.ctex"]
+source_file="res://src/ui/elements/race bar.png"
+dest_files=["res://.godot/imported/race bar.png-4cff30dff016be06579c7b866fa2ee07.ctex"]
 
 [params]
 
