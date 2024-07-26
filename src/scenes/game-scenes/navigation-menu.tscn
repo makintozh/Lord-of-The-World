@@ -1,16 +1,16 @@
 [gd_scene load_steps=12 format=3 uid="uid://pk7extbu3xea"]
 
-[ext_resource type="Texture2D" uid="uid://ds2kt5kynslc8" path="res://src/ui/figma/menu back 1.png" id="1_26rl2"]
+[ext_resource type="Texture2D" uid="uid://ds2kt5kynslc8" path="res://src/ui/backgrounds/menu back 1.png" id="1_26rl2"]
 [ext_resource type="Script" path="res://src/scripts/game-scripts/navigation-menu.gd" id="1_ykvwa"]
-[ext_resource type="Texture2D" uid="uid://d1566y1lveil3" path="res://src/ui/figma/Group 173.png" id="2_qyodl"]
-[ext_resource type="Texture2D" uid="uid://bfdu0amwv7dk3" path="res://src/ui/figma/hub 2.png" id="3_102d5"]
-[ext_resource type="Texture2D" uid="uid://10u8v4p7qqrb" path="res://src/ui/figma/character 1.png" id="3_rdbyu"]
-[ext_resource type="Texture2D" uid="uid://d3ckctk8kht1b" path="res://src/ui/figma/bioms 1.png" id="4_npf7f"]
-[ext_resource type="Texture2D" uid="uid://dv3mstmdt3l0p" path="res://src/ui/figma/c2.png" id="4_s10b8"]
-[ext_resource type="Texture2D" uid="uid://de4kxwypkmp71" path="res://src/ui/figma/craft 1.png" id="5_4fuof"]
-[ext_resource type="Texture2D" uid="uid://doi260lvadhgo" path="res://src/ui/figma/c3.png" id="5_ky8tc"]
-[ext_resource type="Texture2D" uid="uid://dxoe0auoe6ivu" path="res://src/ui/figma/osady 1.png" id="6_y2eeh"]
-[ext_resource type="Texture2D" uid="uid://cyc7b3rsh3qrr" path="res://src/ui/figma/Слой 7.png" id="7_gn6ft"]
+[ext_resource type="Texture2D" uid="uid://d1566y1lveil3" path="res://src/ui/elements/Group 173.png" id="2_qyodl"]
+[ext_resource type="Texture2D" uid="uid://bfdu0amwv7dk3" path="res://src/ui/buildings/hub 2.png" id="3_102d5"]
+[ext_resource type="Texture2D" uid="uid://10u8v4p7qqrb" path="res://src/ui/characters/character 1.png" id="3_rdbyu"]
+[ext_resource type="Texture2D" uid="uid://d3ckctk8kht1b" path="res://src/ui/buildings/bioms 1.png" id="4_npf7f"]
+[ext_resource type="Texture2D" uid="uid://dv3mstmdt3l0p" path="res://src/ui/characters/c2.png" id="4_s10b8"]
+[ext_resource type="Texture2D" uid="uid://de4kxwypkmp71" path="res://src/ui/buildings/craft 1.png" id="5_4fuof"]
+[ext_resource type="Texture2D" uid="uid://doi260lvadhgo" path="res://src/ui/characters/c3.png" id="5_ky8tc"]
+[ext_resource type="Texture2D" uid="uid://dxoe0auoe6ivu" path="res://src/ui/buildings/osady 1.png" id="6_y2eeh"]
+[ext_resource type="Texture2D" uid="uid://cyc7b3rsh3qrr" path="res://src/ui/elements/Слой 7.png" id="7_gn6ft"]
 
 [node name="Navigation-menu" type="Node2D"]
 script = ExtResource("1_ykvwa")
@@ -81,13 +81,19 @@ expand_mode = 1
 
 [node name="Buildings" type="CanvasLayer" parent="."]
 
-[node name="Tavern" type="MarginContainer" parent="Buildings"]
+[node name="Tavern" type="Control" parent="Buildings"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Tavern" type="MarginContainer" parent="Buildings/Tavern"]
 offset_left = 20.0
 offset_top = 79.0
 offset_right = 230.0
 offset_bottom = 283.0
 
-[node name="Tavern" type="TextureButton" parent="Buildings/Tavern"]
+[node name="Tavern" type="TextureButton" parent="Buildings/Tavern/Tavern"]
 layout_mode = 2
 texture_normal = ExtResource("3_102d5")
 texture_pressed = ExtResource("3_102d5")
@@ -96,24 +102,30 @@ texture_focused = ExtResource("3_102d5")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="TavernLabel" type="MarginContainer" parent="Buildings"]
+[node name="TavernLabel" type="MarginContainer" parent="Buildings/Tavern"]
 offset_left = 47.0
 offset_top = 247.0
 offset_right = 158.0
 offset_bottom = 293.0
 
-[node name="TavernLabel" type="Label" parent="Buildings/TavernLabel"]
+[node name="TavernLabel" type="Label" parent="Buildings/Tavern/TavernLabel"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 34
 text = "Tavern"
 
-[node name="Biom" type="MarginContainer" parent="Buildings"]
+[node name="Biom" type="Control" parent="Buildings"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Biom" type="MarginContainer" parent="Buildings/Biom"]
 offset_left = 264.0
 offset_top = 96.0
 offset_right = 474.0
 offset_bottom = 300.0
 
-[node name="Biom" type="TextureButton" parent="Buildings/Biom"]
+[node name="Biom" type="TextureButton" parent="Buildings/Biom/Biom"]
 layout_mode = 2
 texture_normal = ExtResource("4_npf7f")
 texture_pressed = ExtResource("4_npf7f")
@@ -122,24 +134,30 @@ texture_focused = ExtResource("4_npf7f")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="BiomLabel" type="MarginContainer" parent="Buildings"]
+[node name="BiomLabel" type="MarginContainer" parent="Buildings/Biom"]
 offset_left = 332.0
 offset_top = 256.0
 offset_right = 443.0
 offset_bottom = 302.0
 
-[node name="BiomLabel" type="Label" parent="Buildings/BiomLabel"]
+[node name="BiomLabel" type="Label" parent="Buildings/Biom/BiomLabel"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 34
 text = "Biom"
 
-[node name="ClansHall" type="MarginContainer" parent="Buildings"]
+[node name="ClansHall" type="Control" parent="Buildings"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ClansHall" type="MarginContainer" parent="Buildings/ClansHall"]
 offset_left = 63.0
 offset_top = 349.0
 offset_right = 218.0
 offset_bottom = 521.0
 
-[node name="ClansHall" type="TextureButton" parent="Buildings/ClansHall"]
+[node name="ClansHall" type="TextureButton" parent="Buildings/ClansHall/ClansHall"]
 layout_mode = 2
 texture_normal = ExtResource("5_4fuof")
 texture_pressed = ExtResource("5_4fuof")
@@ -148,24 +166,30 @@ texture_focused = ExtResource("5_4fuof")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="ClansHallLabel" type="MarginContainer" parent="Buildings"]
+[node name="ClansHallLabel" type="MarginContainer" parent="Buildings/ClansHall"]
 offset_left = 53.0
 offset_top = 467.0
 offset_right = 205.0
 offset_bottom = 513.0
 
-[node name="ClansHallLabel" type="Label" parent="Buildings/ClansHallLabel"]
+[node name="ClansHallLabel" type="Label" parent="Buildings/ClansHall/ClansHallLabel"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 34
 text = "Clans hall"
 
-[node name="League" type="MarginContainer" parent="Buildings"]
+[node name="League" type="Control" parent="Buildings"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="League" type="MarginContainer" parent="Buildings/League"]
 offset_left = 270.0
 offset_top = 567.0
 offset_right = 451.0
 offset_bottom = 775.0
 
-[node name="League" type="TextureButton" parent="Buildings/League"]
+[node name="League" type="TextureButton" parent="Buildings/League/League"]
 layout_mode = 2
 texture_normal = ExtResource("6_y2eeh")
 texture_pressed = ExtResource("6_y2eeh")
@@ -174,18 +198,18 @@ texture_focused = ExtResource("6_y2eeh")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="LeagueLabel" type="MarginContainer" parent="Buildings"]
+[node name="LeagueLabel" type="MarginContainer" parent="Buildings/League"]
 offset_left = 302.0
 offset_top = 732.0
 offset_right = 454.0
 offset_bottom = 778.0
 
-[node name="LeagueLabel" type="Label" parent="Buildings/LeagueLabel"]
+[node name="LeagueLabel" type="Label" parent="Buildings/League/LeagueLabel"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 34
 text = "League"
 
-[connection signal="pressed" from="Buildings/Tavern/Tavern" to="." method="_on_tavern_pressed"]
-[connection signal="pressed" from="Buildings/Biom/Biom" to="." method="_on_biom_pressed"]
-[connection signal="pressed" from="Buildings/ClansHall/ClansHall" to="." method="_on_clans_hall_pressed"]
-[connection signal="pressed" from="Buildings/League/League" to="." method="_on_league_pressed"]
+[connection signal="pressed" from="Buildings/Tavern/Tavern/Tavern" to="." method="_on_tavern_pressed"]
+[connection signal="pressed" from="Buildings/Biom/Biom/Biom" to="." method="_on_biom_pressed"]
+[connection signal="pressed" from="Buildings/ClansHall/ClansHall/ClansHall" to="." method="_on_clans_hall_pressed"]
+[connection signal="pressed" from="Buildings/League/League/League" to="." method="_on_league_pressed"]
