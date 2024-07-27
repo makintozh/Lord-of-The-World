@@ -27,11 +27,9 @@ expand_mode = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(248, 453)
-scale = Vector2(36.06, 222)
 limit_smoothed = true
 position_smoothing_enabled = true
-position_smoothing_speed = 4.0
-editor_draw_screen = false
+editor_draw_limits = true
 
 [node name="BiomUI" type="CanvasLayer" parent="."]
 
@@ -63,6 +61,7 @@ offset_right = 40.0
 offset_bottom = 37.0
 
 [node name="Civil" type="MarginContainer" parent="Buildings/Civil"]
+layout_mode = 0
 offset_left = -10.0
 offset_top = 60.0
 offset_right = 297.0
@@ -78,6 +77,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="CivilLabel" type="MarginContainer" parent="Buildings/Civil"]
+layout_mode = 0
 offset_left = 58.0
 offset_top = 104.0
 offset_right = 169.0
@@ -96,6 +96,7 @@ offset_right = 40.0
 offset_bottom = 39.0
 
 [node name="Taurelious" type="MarginContainer" parent="Buildings/Taurelious"]
+layout_mode = 0
 offset_left = 289.0
 offset_top = 240.0
 offset_right = 463.0
@@ -111,6 +112,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="TaureliousLabel" type="MarginContainer" parent="Buildings/Taurelious"]
+layout_mode = 0
 offset_left = 286.0
 offset_top = 197.0
 offset_right = 449.0
@@ -127,6 +129,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Elborus" type="MarginContainer" parent="Buildings/Elborus"]
+layout_mode = 0
 offset_left = 6.0
 offset_top = 507.0
 offset_right = 190.0
@@ -142,6 +145,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="ElborusLabel" type="MarginContainer" parent="Buildings/Elborus"]
+layout_mode = 0
 offset_left = 49.0
 offset_top = 455.0
 offset_right = 165.0
@@ -158,6 +162,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="CivilMortes" type="MarginContainer" parent="Buildings/CivilMortes"]
+layout_mode = 0
 offset_left = 204.0
 offset_top = 506.0
 offset_right = 497.0
@@ -173,6 +178,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="CivilMortesLabel" type="MarginContainer" parent="Buildings/CivilMortes"]
+layout_mode = 0
 offset_left = 360.0
 offset_top = 532.0
 offset_right = 476.0
@@ -190,6 +196,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Forest" type="MarginContainer" parent="Buildings/Forest"]
+layout_mode = 0
 offset_left = -2.0
 offset_top = 751.0
 offset_right = 210.0
@@ -205,6 +212,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="ForestLabel" type="MarginContainer" parent="Buildings/Forest"]
+layout_mode = 0
 offset_left = 74.0
 offset_top = 722.0
 offset_right = 190.0
@@ -221,6 +229,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Carvaras" type="MarginContainer" parent="Buildings/Carvaras"]
+layout_mode = 0
 offset_left = 256.0
 offset_top = 889.0
 offset_right = 482.0
@@ -236,6 +245,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="CarvarasLabel" type="MarginContainer" parent="Buildings/Carvaras"]
+layout_mode = 0
 offset_left = 276.0
 offset_top = 860.0
 offset_right = 415.0
@@ -252,6 +262,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Nordtoppen" type="MarginContainer" parent="Buildings/Nordtoppen"]
+layout_mode = 0
 offset_left = 5.0
 offset_top = 1067.0
 offset_right = 214.0
@@ -267,6 +278,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="NordtoppenLabel" type="MarginContainer" parent="Buildings/Nordtoppen"]
+layout_mode = 0
 offset_left = 4.0
 offset_top = 1021.0
 offset_right = 187.0
@@ -283,6 +295,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Keyfand" type="MarginContainer" parent="Buildings/Keyfand"]
+layout_mode = 0
 offset_left = 247.0
 offset_top = 1259.0
 offset_right = 476.0
@@ -298,6 +311,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="KeyfandLabel" type="MarginContainer" parent="Buildings/Keyfand"]
+layout_mode = 0
 offset_left = 279.0
 offset_top = 1236.0
 offset_right = 462.0
@@ -315,6 +329,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Meches" type="MarginContainer" parent="Buildings/Meches"]
+layout_mode = 0
 offset_left = -7.0
 offset_top = 1515.0
 offset_right = 190.0
@@ -330,6 +345,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="MechesLabel" type="MarginContainer" parent="Buildings/Meches"]
+layout_mode = 0
 offset_left = 60.0
 offset_top = 1477.0
 offset_right = 243.0
@@ -346,6 +362,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Celestial" type="MarginContainer" parent="Buildings/Celestial"]
+layout_mode = 0
 offset_left = 267.0
 offset_top = 1554.0
 offset_right = 472.0
@@ -361,6 +378,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="CelestialLabel" type="MarginContainer" parent="Buildings/Celestial"]
+layout_mode = 0
 offset_left = 358.0
 offset_top = 1512.0
 offset_right = 541.0
@@ -424,5 +442,6 @@ stretch_mode = 0
 
 [connection signal="pressed" from="BiomUI/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="Buildings/Civil/Civil/Civil" to="." method="_on_civil_pressed"]
+[connection signal="pressed" from="Buildings/Elborus/Elborus/Elborus" to="." method="_on_elborus_pressed"]
 [connection signal="pressed" from="NaviagteBiom/TopButton/TopButtonContainer/TopButton" to="." method="_on_top_button_pressed"]
 [connection signal="pressed" from="NaviagteBiom/BottomButton/BottomButtonContainer/BottomButton" to="." method="_on_bottom_button_pressed"]
