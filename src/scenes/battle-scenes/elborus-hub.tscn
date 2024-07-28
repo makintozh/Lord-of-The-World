@@ -32,6 +32,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="BackButtonContainer" type="MarginContainer" parent="UI"]
+layout_mode = 0
 offset_left = 11.0
 offset_top = 16.0
 offset_right = 96.0
@@ -81,6 +82,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Battle2" type="MarginContainer" parent="Go-Battle-Buttons"]
+layout_mode = 0
 offset_left = 338.0
 offset_top = 332.0
 offset_right = 450.0
@@ -96,6 +98,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Battle3" type="MarginContainer" parent="Go-Battle-Buttons"]
+layout_mode = 0
 offset_left = 72.0
 offset_top = 318.0
 offset_right = 184.0
@@ -111,6 +114,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Battle4" type="MarginContainer" parent="Go-Battle-Buttons"]
+layout_mode = 0
 offset_left = 390.0
 offset_top = 134.0
 offset_right = 502.0
@@ -126,6 +130,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Battle5" type="MarginContainer" parent="Go-Battle-Buttons"]
+layout_mode = 0
 offset_left = 70.0
 offset_top = 112.0
 offset_right = 182.0
@@ -185,6 +190,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="DeckBuilder" type="MarginContainer" parent="Naviagte-Buttons"]
+layout_mode = 0
 offset_left = 44.0
 offset_top = 782.0
 offset_right = 159.0
@@ -206,6 +212,7 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_6lb75")
 text = "ДекБилдер"
 
 [node name="Rules" type="MarginContainer" parent="Naviagte-Buttons"]
+layout_mode = 0
 offset_left = 195.0
 offset_top = 782.0
 offset_right = 310.0

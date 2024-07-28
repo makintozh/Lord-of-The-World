@@ -24,16 +24,14 @@ var logged = false
 
 
 
-
 func _ready():
 	after_remember_me()
 	if GLOBAL.username != "" and GLOBAL.password != "":
 		login_data.text = GLOBAL.username
 		password_data.text = GLOBAL.password
 
-
-
-
+	
+	
 func remember_me():
 	var login_remembered = login_data.text
 	var pass_remembered = password_data.text
