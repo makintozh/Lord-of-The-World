@@ -1,27 +1,27 @@
-[gd_scene load_steps=12 format=3 uid="uid://mea22juv2m6t"]
+[gd_scene load_steps=12 format=3 uid="uid://cx5etu0rvfai4"]
 
-[ext_resource type="Texture2D" uid="uid://p5dcxp78xcic" path="res://src/ui/backgrounds/blur2 1.png" id="1_7aeto"]
-[ext_resource type="Script" path="res://src/scripts/auth-scripts/failed_to_connect.gd" id="1_f4pjw"]
-[ext_resource type="Texture2D" uid="uid://cxpni2esf80pi" path="res://src/ui/elements/update 1.png" id="2_msy7c"]
-[ext_resource type="Texture2D" uid="uid://yacxa428bppa" path="res://src/ui/buttons/button_2.png" id="3_og7ri"]
-[ext_resource type="Texture2D" uid="uid://iivtf437avbt" path="res://src/ui/buttons/button.png" id="4_pybtu"]
-[ext_resource type="Texture2D" uid="uid://boontk5qqal0n" path="res://src/ui/buttons/enter button.png" id="5_jkb34"]
+[ext_resource type="Script" path="res://src/scripts/auth-scripts/failed_to_connect.gd" id="1_80jkc"]
+[ext_resource type="Texture2D" uid="uid://p5dcxp78xcic" path="res://src/ui/backgrounds/blur2 1.png" id="2_1apst"]
+[ext_resource type="Texture2D" uid="uid://cxpni2esf80pi" path="res://src/ui/elements/update 1.png" id="3_e7whc"]
+[ext_resource type="Texture2D" uid="uid://yacxa428bppa" path="res://src/ui/buttons/button_2.png" id="4_w6j4o"]
+[ext_resource type="Texture2D" uid="uid://iivtf437avbt" path="res://src/ui/buttons/button.png" id="5_4pvxd"]
+[ext_resource type="Texture2D" uid="uid://boontk5qqal0n" path="res://src/ui/buttons/enter button.png" id="6_ks5g8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rav7r"]
-texture = ExtResource("3_og7ri")
+texture = ExtResource("4_w6j4o")
 expand_margin_top = 10.0
 expand_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_av4ia"]
-texture = ExtResource("4_pybtu")
+texture = ExtResource("5_4pvxd")
 texture_margin_left = 55.0
 texture_margin_right = 50.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_61bk0"]
-texture = ExtResource("4_pybtu")
+texture = ExtResource("5_4pvxd")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y8bln"]
-texture = ExtResource("5_jkb34")
+texture = ExtResource("6_ks5g8")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ool6a"]
 
@@ -32,7 +32,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_f4pjw")
+script = ExtResource("1_80jkc")
 
 [node name="BackGround" type="TextureRect" parent="."]
 self_modulate = Color(1, 1, 1, 0.996078)
@@ -43,7 +43,7 @@ offset_bottom = 2270.0
 scale = Vector2(1.53968, 1.96747)
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("1_7aeto")
+texture = ExtResource("2_1apst")
 expand_mode = 2
 stretch_mode = 1
 
@@ -63,7 +63,7 @@ offset_bottom = 663.0
 
 [node name="Refresh" type="TextureRect" parent="Refresh/Refresh"]
 layout_mode = 2
-texture = ExtResource("2_msy7c")
+texture = ExtResource("3_e7whc")
 expand_mode = 1
 
 [node name="FailedToConnectLabel" type="Control" parent="."]

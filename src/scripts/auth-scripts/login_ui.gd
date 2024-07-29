@@ -31,8 +31,10 @@ func _ready():
 		login_data.text = GLOBAL.username
 		password_data.text = GLOBAL.password
 
-	
-	
+
+
+
+
 func remember_me():
 	var login_remembered = login_data.text
 	var pass_remembered = password_data.text
@@ -41,11 +43,15 @@ func remember_me():
 	data.save_encrypted_pass(data_path, "makintosh")
 
 
+
+
+
 func after_remember_me():
 	if GLOBAL.username == "" and GLOBAL.password == "":
 		data.load_encrypted_pass(data_path, "makintosh")
 		login_data.text = data.get_value(data_name, login_remember, "")
 		password_data.text = data.get_value(data_name, password_remember, "")
+
 
 
 
@@ -95,6 +101,7 @@ func _on_login_button_pressed():
 
 func _on_http_request_request_completed(result, response_code, headers, body):
 	var post_response = JSON.stringify(body.get_string_from_utf8())
+	print(str(result))
 	print("Ответ: " + str(post_response))
 	print(headers)
 	print("Код: " + str(response_code))
@@ -107,6 +114,7 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 		GLOBAL.failed_reason = str(post_response.replace('"',""))
 		failed.visible = true
 		logged = false
+
 
 
 
