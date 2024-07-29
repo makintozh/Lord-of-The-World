@@ -5,6 +5,7 @@ extends Node
 var username = ""   #Ник Пользователя
 var password = ""   #Пароль Пользователя
 
+var failed_reason:String
 
 var player_character_name = ""    #Имя Персонажа Пользователя
 

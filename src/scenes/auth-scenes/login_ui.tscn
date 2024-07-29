@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://8jmr8yn8vriq"]
+[gd_scene load_steps=38 format=3 uid="uid://8jmr8yn8vriq"]
 
 [ext_resource type="Script" path="res://src/scripts/auth-scripts/login_ui.gd" id="1_v5dys"]
 [ext_resource type="Texture2D" uid="uid://bmof2g6xlu2bf" path="res://src/ui/backgrounds/background.png" id="2_x5dwf"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://yacxa428bppa" path="res://src/ui/buttons/button_2.png" id="9_ksyfj"]
 [ext_resource type="Texture2D" uid="uid://iivtf437avbt" path="res://src/ui/buttons/button.png" id="10_r0d8d"]
 [ext_resource type="Texture2D" uid="uid://boontk5qqal0n" path="res://src/ui/buttons/enter button.png" id="11_dkifd"]
+[ext_resource type="PackedScene" uid="uid://mea22juv2m6t" path="res://src/scenes/auth-scenes/failed_to_connect.tscn" id="13_r4bu3"]
 [ext_resource type="Texture2D" uid="uid://6kvjconjmoj0" path="res://src/ui/buttons/support green.png" id="13_wu0o0"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g80ue"]
@@ -112,25 +113,14 @@ grow_vertical = 2
 layout_mode = 2
 texture = ExtResource("3_a17al")
 
-[node name="LoginText" type="Label" parent="."]
-anchors_preset = -1
-anchor_left = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 172.0
-offset_top = 121.0
-offset_right = 357.0
-offset_bottom = 191.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 51
-text = "Log in"
-
-[node name="APIRequest" type="HTTPRequest" parent="."]
-
-[node name="UI" type="CanvasLayer" parent="."]
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="LoginInfoUI" type="MarginContainer" parent="UI"]
+layout_mode = 0
 offset_left = 60.0
 offset_top = 218.0
 offset_right = 464.0
@@ -143,6 +133,7 @@ theme_override_font_sizes/font_size = 21
 text = "Login"
 
 [node name="LoginDataUI" type="MarginContainer" parent="UI"]
+layout_mode = 0
 offset_left = 48.0
 offset_top = 262.0
 offset_right = 452.0
@@ -160,6 +151,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_g80ue")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_e5gki")
 
 [node name="PasswordInfoUI" type="MarginContainer" parent="UI"]
+layout_mode = 0
 offset_left = 58.0
 offset_top = 317.0
 offset_right = 462.0
@@ -172,6 +164,7 @@ theme_override_font_sizes/font_size = 21
 text = "Password"
 
 [node name="PasswordDataUI" type="MarginContainer" parent="UI"]
+layout_mode = 0
 offset_left = 48.0
 offset_top = 360.0
 offset_right = 457.0
@@ -190,6 +183,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_e5gki")
 secret = true
 
 [node name="PasswordHideUI" type="MarginContainer" parent="UI"]
+layout_mode = 0
 offset_left = 398.0
 offset_top = 371.0
 offset_right = 435.0
@@ -204,6 +198,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="RememberMeUI" type="MarginContainer" parent="UI"]
+layout_mode = 0
 offset_left = 116.0
 offset_top = 473.0
 offset_right = 384.0
@@ -227,6 +222,7 @@ theme_override_styles/focus = SubResource("StyleBoxTexture_8ei2v")
 text = "Remember me"
 
 [node name="ForgotPasswordUI" type="MarginContainer" parent="UI"]
+layout_mode = 0
 offset_left = 115.0
 offset_top = 574.0
 offset_right = 387.0
@@ -240,6 +236,22 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_nspu3")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_3kkr4")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_v88gt")
 text = "Forgot password?"
+
+[node name="LoginText" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 172.0
+offset_top = 121.0
+offset_right = 357.0
+offset_bottom = 191.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 51
+text = "Log in"
+
+[node name="APIRequest" type="HTTPRequest" parent="."]
 
 [node name="NavigationContainer" type="HBoxContainer" parent="."]
 anchors_preset = 8
@@ -303,9 +315,12 @@ text = "Tech support"
 icon = ExtResource("13_wu0o0")
 icon_alignment = 2
 
-[connection signal="request_completed" from="APIRequest" to="." method="_on_http_request_request_completed"]
+[node name="FailedToConnect" parent="." instance=ExtResource("13_r4bu3")]
+visible = false
+
 [connection signal="toggled" from="UI/PasswordHideUI/PasswordHideButton" to="." method="_on_password_hide_button_toggled"]
 [connection signal="toggled" from="UI/RememberMeUI/RememberMeCheckBox" to="." method="_on_remember_me_check_box_toggled"]
 [connection signal="pressed" from="UI/ForgotPasswordUI/ForgotPasswordButton" to="." method="_on_forgot_password_button_pressed"]
+[connection signal="request_completed" from="APIRequest" to="." method="_on_http_request_request_completed"]
 [connection signal="pressed" from="NavigationContainer/RegisterButton" to="." method="_on_sign_up_button_pressed"]
 [connection signal="pressed" from="NavigationContainer/LoginButton" to="." method="_on_login_button_pressed"]

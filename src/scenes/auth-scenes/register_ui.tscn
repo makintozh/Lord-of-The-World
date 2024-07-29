@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://c7m1oyoo832ne"]
+[gd_scene load_steps=31 format=3 uid="uid://c7m1oyoo832ne"]
 
 [ext_resource type="Script" path="res://src/scripts/auth-scripts/register_ui.gd" id="1_mfjp8"]
 [ext_resource type="Texture2D" uid="uid://bmof2g6xlu2bf" path="res://src/ui/backgrounds/background.png" id="2_ldkhn"]
@@ -11,22 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://blr2v35pet8yb" path="res://src/ui/elements/input.png" id="10_hgcji"]
 [ext_resource type="Texture2D" uid="uid://dmpyv16hdidiw" path="res://src/ui/checkboxes/Hide.png" id="11_4c5t4"]
 [ext_resource type="Texture2D" uid="uid://b6ihco5cpugkw" path="res://src/ui/checkboxes/Eye.png" id="12_612il"]
+[ext_resource type="PackedScene" uid="uid://mea22juv2m6t" path="res://src/scenes/auth-scenes/failed_to_connect.tscn" id="13_1jsrq"]
 [ext_resource type="Texture2D" uid="uid://6kvjconjmoj0" path="res://src/ui/buttons/support green.png" id="13_xnvx8"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vp42w"]
-texture = ExtResource("10_hgcji")
-texture_margin_left = 20.0
-texture_margin_top = 20.0
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sokdo"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1wjd3"]
-texture = ExtResource("10_hgcji")
-texture_margin_left = 20.0
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sqv44"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iscbl"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ug50c"]
 texture = ExtResource("4_hbt2t")
@@ -59,6 +45,21 @@ texture = ExtResource("7_4l7en")
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jjr5t"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8k6v3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vp42w"]
+texture = ExtResource("10_hgcji")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sokdo"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1wjd3"]
+texture = ExtResource("10_hgcji")
+texture_margin_left = 20.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sqv44"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iscbl"]
 
 [node name="RegisterUI" type="Node2D"]
 script = ExtResource("1_mfjp8")
@@ -103,179 +104,6 @@ theme_override_font_sizes/font_size = 44
 text = "Register"
 
 [node name="APIRequest" type="HTTPRequest" parent="."]
-
-[node name="UI" type="CanvasLayer" parent="."]
-
-[node name="EmailInfoUI" type="MarginContainer" parent="UI"]
-offset_left = 60.0
-offset_top = 222.0
-offset_right = 464.0
-offset_bottom = 281.0
-
-[node name="EmailInfoUI" type="Label" parent="UI/EmailInfoUI"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 21
-text = "E-mail"
-
-[node name="EmailDataUI" type="MarginContainer" parent="UI"]
-offset_left = 52.0
-offset_top = 262.0
-offset_right = 451.0
-offset_bottom = 324.0
-
-[node name="Email" type="TextEdit" parent="UI/EmailDataUI"]
-layout_mode = 2
-auto_translate = false
-localize_numeral_system = false
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
-theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
-theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/line_spacing = 9
-theme_override_font_sizes/font_size = 21
-theme_override_styles/normal = SubResource("StyleBoxTexture_vp42w")
-theme_override_styles/focus = SubResource("StyleBoxTexture_sokdo")
-
-[node name="LoginInfoUI" type="MarginContainer" parent="UI"]
-offset_left = 61.0
-offset_top = 307.0
-offset_right = 465.0
-offset_bottom = 366.0
-
-[node name="LoginInfoUI" type="Label" parent="UI/LoginInfoUI"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 21
-text = "Login"
-
-[node name="LoginDataUI" type="MarginContainer" parent="UI"]
-offset_left = 51.0
-offset_top = 350.0
-offset_right = 455.0
-offset_bottom = 408.0
-
-[node name="Login" type="TextEdit" parent="UI/LoginDataUI"]
-layout_mode = 2
-auto_translate = false
-localize_numeral_system = false
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
-theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
-theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 21
-theme_override_styles/normal = SubResource("StyleBoxTexture_vp42w")
-theme_override_styles/focus = SubResource("StyleBoxTexture_sokdo")
-
-[node name="PasswordInfoUI" type="MarginContainer" parent="UI"]
-offset_left = 59.0
-offset_top = 388.0
-offset_right = 463.0
-offset_bottom = 447.0
-
-[node name="PasswordInfoUI" type="Label" parent="UI/PasswordInfoUI"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 21
-text = "Password"
-
-[node name="PasswordDataUI" type="MarginContainer" parent="UI"]
-offset_left = 48.0
-offset_top = 427.0
-offset_right = 457.0
-offset_bottom = 483.0
-
-[node name="Password" type="LineEdit" parent="UI/PasswordDataUI"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
-theme_override_colors/font_uneditable_color = Color(1, 1, 1, 1)
-theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 23
-theme_override_styles/normal = SubResource("StyleBoxTexture_1wjd3")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_sqv44")
-secret = true
-
-[node name="ConfirmPasswordDataUI2" type="MarginContainer" parent="UI"]
-offset_left = 58.0
-offset_top = 468.0
-offset_right = 462.0
-offset_bottom = 527.0
-
-[node name="ConfirmPasswordDataUI" type="Label" parent="UI/ConfirmPasswordDataUI2"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 21
-text = "Confirm Password"
-
-[node name="ConfirmPasswordDataUI" type="MarginContainer" parent="UI"]
-offset_left = 46.0
-offset_top = 508.0
-offset_right = 464.0
-offset_bottom = 566.0
-
-[node name="ConfirmPassword" type="LineEdit" parent="UI/ConfirmPasswordDataUI"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
-theme_override_colors/font_uneditable_color = Color(1, 1, 1, 1)
-theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 23
-theme_override_styles/normal = SubResource("StyleBoxTexture_1wjd3")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_sqv44")
-secret = true
-
-[node name="PrivacyNoticeCheckBox" type="CheckBox" parent="UI"]
-offset_left = 44.0
-offset_top = 577.0
-offset_right = 311.0
-offset_bottom = 659.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 28
-theme_override_icons/checked = ExtResource("5_hhspj")
-theme_override_icons/checked_disabled = ExtResource("5_hhspj")
-theme_override_icons/unchecked = ExtResource("6_3hpjw")
-theme_override_icons/unchecked_disabled = ExtResource("6_3hpjw")
-theme_override_icons/radio_checked = ExtResource("5_hhspj")
-theme_override_icons/radio_checked_disabled = ExtResource("5_hhspj")
-theme_override_icons/radio_unchecked = ExtResource("6_3hpjw")
-theme_override_icons/radio_unchecked_disabled = ExtResource("6_3hpjw")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_iscbl")
-alignment = 1
-
-[node name="PrivacyNoticeLabel" type="RichTextLabel" parent="UI/PrivacyNoticeCheckBox"]
-layout_mode = 0
-offset_left = 80.0
-offset_top = 21.5
-offset_right = 316.0
-offset_bottom = 77.5
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 28
-bbcode_enabled = true
-text = "[u]Privacy Notice[/u]"
-
-[node name="PasswordHideButtonUI" type="MarginContainer" parent="UI"]
-offset_left = 397.0
-offset_top = 438.0
-offset_right = 434.0
-offset_bottom = 472.0
-
-[node name="PasswordHideButton" type="TextureButton" parent="UI/PasswordHideButtonUI"]
-layout_mode = 2
-toggle_mode = true
-texture_normal = ExtResource("11_4c5t4")
-texture_pressed = ExtResource("12_612il")
-ignore_texture_size = true
-stretch_mode = 0
 
 [node name="NavigationContainer" type="HBoxContainer" parent="."]
 anchors_preset = 8
@@ -339,8 +167,198 @@ text = "Tech support"
 icon = ExtResource("13_xnvx8")
 icon_alignment = 2
 
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="EmailInfoUI" type="MarginContainer" parent="UI"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 222.0
+offset_right = 464.0
+offset_bottom = 281.0
+
+[node name="EmailInfoUI" type="Label" parent="UI/EmailInfoUI"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "E-mail"
+
+[node name="EmailDataUI" type="MarginContainer" parent="UI"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 262.0
+offset_right = 451.0
+offset_bottom = 324.0
+
+[node name="Email" type="TextEdit" parent="UI/EmailDataUI"]
+layout_mode = 2
+auto_translate = false
+localize_numeral_system = false
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 9
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxTexture_vp42w")
+theme_override_styles/focus = SubResource("StyleBoxTexture_sokdo")
+
+[node name="LoginInfoUI" type="MarginContainer" parent="UI"]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 307.0
+offset_right = 465.0
+offset_bottom = 366.0
+
+[node name="LoginInfoUI" type="Label" parent="UI/LoginInfoUI"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "Login"
+
+[node name="LoginDataUI" type="MarginContainer" parent="UI"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 350.0
+offset_right = 455.0
+offset_bottom = 408.0
+
+[node name="Login" type="TextEdit" parent="UI/LoginDataUI"]
+layout_mode = 2
+auto_translate = false
+localize_numeral_system = false
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxTexture_vp42w")
+theme_override_styles/focus = SubResource("StyleBoxTexture_sokdo")
+
+[node name="PasswordInfoUI" type="MarginContainer" parent="UI"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 388.0
+offset_right = 463.0
+offset_bottom = 447.0
+
+[node name="PasswordInfoUI" type="Label" parent="UI/PasswordInfoUI"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "Password"
+
+[node name="PasswordDataUI" type="MarginContainer" parent="UI"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 427.0
+offset_right = 457.0
+offset_bottom = 483.0
+
+[node name="Password" type="LineEdit" parent="UI/PasswordDataUI"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/font_uneditable_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxTexture_1wjd3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sqv44")
+secret = true
+
+[node name="ConfirmPasswordDataUI2" type="MarginContainer" parent="UI"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 468.0
+offset_right = 462.0
+offset_bottom = 527.0
+
+[node name="ConfirmPasswordDataUI" type="Label" parent="UI/ConfirmPasswordDataUI2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "Confirm Password"
+
+[node name="ConfirmPasswordDataUI" type="MarginContainer" parent="UI"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 508.0
+offset_right = 464.0
+offset_bottom = 566.0
+
+[node name="ConfirmPassword" type="LineEdit" parent="UI/ConfirmPasswordDataUI"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/font_uneditable_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxTexture_1wjd3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sqv44")
+secret = true
+
+[node name="PrivacyNoticeCheckBox" type="CheckBox" parent="UI"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 577.0
+offset_right = 311.0
+offset_bottom = 659.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_icons/checked = ExtResource("5_hhspj")
+theme_override_icons/checked_disabled = ExtResource("5_hhspj")
+theme_override_icons/unchecked = ExtResource("6_3hpjw")
+theme_override_icons/unchecked_disabled = ExtResource("6_3hpjw")
+theme_override_icons/radio_checked = ExtResource("5_hhspj")
+theme_override_icons/radio_checked_disabled = ExtResource("5_hhspj")
+theme_override_icons/radio_unchecked = ExtResource("6_3hpjw")
+theme_override_icons/radio_unchecked_disabled = ExtResource("6_3hpjw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_iscbl")
+alignment = 1
+
+[node name="PrivacyNoticeLabel" type="RichTextLabel" parent="UI/PrivacyNoticeCheckBox"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 21.5
+offset_right = 316.0
+offset_bottom = 77.5
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+text = "[u]Privacy Notice[/u]"
+
+[node name="PasswordHideButtonUI" type="MarginContainer" parent="UI"]
+layout_mode = 0
+offset_left = 397.0
+offset_top = 438.0
+offset_right = 434.0
+offset_bottom = 472.0
+
+[node name="PasswordHideButton" type="TextureButton" parent="UI/PasswordHideButtonUI"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("11_4c5t4")
+texture_pressed = ExtResource("12_612il")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="FailedToConnect" parent="." instance=ExtResource("13_1jsrq")]
+visible = false
+
 [connection signal="request_completed" from="APIRequest" to="." method="_on_http_request_request_completed"]
-[connection signal="toggled" from="UI/PrivacyNoticeCheckBox" to="." method="_on_privacy_notice_check_box_toggled"]
-[connection signal="toggled" from="UI/PasswordHideButtonUI/PasswordHideButton" to="." method="_on_password_hide_button_toggled"]
 [connection signal="pressed" from="NavigationContainer/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="NavigationContainer/RegisterButton" to="." method="_on_sign_up_button_pressed"]
+[connection signal="toggled" from="UI/PrivacyNoticeCheckBox" to="." method="_on_privacy_notice_check_box_toggled"]
+[connection signal="toggled" from="UI/PasswordHideButtonUI/PasswordHideButton" to="." method="_on_password_hide_button_toggled"]

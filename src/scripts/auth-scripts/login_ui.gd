@@ -14,6 +14,7 @@ var password_remember = "password"
 @onready var passwordhidebutton = $UI/PasswordHideUI/PasswordHideButton
 @onready var loginbutton = $NavigationContainer/LoginButton
 @onready var api = $APIRequest
+@onready var failed = $FailedToConnect
 
 
 var authlink = "http://31.129.54.119:80/auth"
@@ -74,7 +75,6 @@ func _on_sign_up_button_pressed():
 
 
 func _on_login_button_pressed():
-	
 	var authpost = JSON.stringify({
 
 
@@ -101,8 +101,9 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 			remember_me()
 		get_tree().change_scene_to_file("res://src/scenes/game-scenes/choice_server.tscn")
 	else:
+		GLOBAL.failed_reason = str(post_response.replace('"',""))
+		failed.visible = true
 		logged = false
-
 
 
 
