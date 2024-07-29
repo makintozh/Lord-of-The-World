@@ -65,6 +65,7 @@ layout_mode = 3
 anchors_preset = 0
 
 [node name="#1 ServerBackGroundContainer" type="MarginContainer" parent="#1 Server"]
+layout_mode = 0
 offset_left = 15.0
 offset_top = 127.0
 offset_right = 481.0
@@ -75,6 +76,7 @@ layout_mode = 2
 texture = ExtResource("4_x21et")
 
 [node name="#1 ServerLanguageContainer" type="MarginContainer" parent="#1 Server"]
+layout_mode = 0
 offset_left = 42.0
 offset_top = 144.0
 offset_right = 89.0
@@ -85,6 +87,7 @@ layout_mode = 2
 texture = ExtResource("5_4sk1u")
 
 [node name="#1 ServarNameContainer" type="MarginContainer" parent="#1 Server"]
+layout_mode = 0
 offset_left = 109.0
 offset_top = 148.0
 offset_right = 234.0
@@ -96,6 +99,7 @@ theme_override_font_sizes/font_size = 31
 text = "#1 Alpha"
 
 [node name="#1 ServerPlayButton" type="MarginContainer" parent="#1 Server"]
+layout_mode = 0
 offset_left = 359.0
 offset_top = 147.0
 offset_right = 459.0
@@ -113,8 +117,11 @@ text = "Play"
 [node name="#2 Server" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
+offset_top = 129.0
+offset_bottom = 129.0
 
 [node name="#2 ServerBackGroundContainer" type="MarginContainer" parent="#2 Server"]
+layout_mode = 0
 offset_left = 15.0
 offset_top = 127.0
 offset_right = 481.0
@@ -125,6 +132,7 @@ layout_mode = 2
 texture = ExtResource("4_x21et")
 
 [node name="#2 ServerLanguageContainer" type="MarginContainer" parent="#2 Server"]
+layout_mode = 0
 offset_left = 42.0
 offset_top = 144.0
 offset_right = 89.0
@@ -135,6 +143,7 @@ layout_mode = 2
 texture = ExtResource("5_4sk1u")
 
 [node name="#2 ServarNameContainer" type="MarginContainer" parent="#2 Server"]
+layout_mode = 0
 offset_left = 109.0
 offset_top = 148.0
 offset_right = 234.0
@@ -146,6 +155,7 @@ theme_override_font_sizes/font_size = 31
 text = "#2 Beta"
 
 [node name="#2 ServerPlayButton" type="MarginContainer" parent="#2 Server"]
+layout_mode = 0
 offset_left = 359.0
 offset_top = 147.0
 offset_right = 459.0
