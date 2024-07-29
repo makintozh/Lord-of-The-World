@@ -88,6 +88,9 @@ func _on_login_button_pressed():
 
 	api.request(authlink, [], HTTPClient.METHOD_POST, authpost)
 	print(authpost)
+	await get_tree().create_timer(20).timeout
+	GLOBAL.failed_reason = "No Internet"
+	failed.visible = true
 
 
 func _on_http_request_request_completed(result, response_code, headers, body):

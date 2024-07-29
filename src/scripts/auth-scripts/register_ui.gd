@@ -109,6 +109,9 @@ func _on_sign_up_button_pressed():
 		
 	api.request(authlink, [], HTTPClient.METHOD_POST, authpost)
 	print(authpost)
+	await get_tree().create_timer(20).timeout
+	GLOBAL.failed_reason = "No Internet"
+	failed.visible = true
 
 
 
