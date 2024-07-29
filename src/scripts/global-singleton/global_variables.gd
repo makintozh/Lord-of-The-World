@@ -7,7 +7,7 @@ var password = ""   #Пароль Пользователя
 
 var failed_reason:String
 
-var has_internet:bool
+var has_internet:bool = true
 
 var player_character_name = ""    #Имя Персонажа Пользователя
 
@@ -54,7 +54,7 @@ func _ready():
 	add_child(internet)
 	request_timer.autostart = true
 	request_timer.one_shot = false
-	request_timer.wait_time = 3
+	request_timer.wait_time = 1.5
 	request_timer.timeout.connect(_check_connection)
 	add_child(request_timer)
 	internet.request_completed.connect(_on_request_completed)
@@ -67,15 +67,15 @@ func _check_connection():
 		printerr("No Internet Connection")
 		has_internet = false
 		get_tree().get_root().add_child(not_connection)
+		not_connection.reparent(get_tree().get_root())
 
 
 
 
 func _on_request_completed(result, response_code, headers, body):
-	print("Yes Internet Connection")
+	print("Have Internet Connection")
 	has_internet = true
 	get_tree().get_root().remove_child(not_connection)
-
 
 
 
