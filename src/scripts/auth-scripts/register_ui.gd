@@ -6,6 +6,8 @@ extends Node2D
 @onready var confirmpasswordinput = $UI/ConfirmPasswordDataUI/ConfirmPassword
 @onready var registerbutton = $NavigationContainer/RegisterButton
 @onready var failed = $FailedToConnect
+@onready var waitingresponse = $WaitingResponse
+
 
 
 
@@ -78,6 +80,22 @@ func _on_password_hide_button_toggled(toggled_on):
 		
 
 
+func _on_sign_up_button_pressed():
+	waitingresponse.visible = true
+	var authpost = JSON.stringify({
+		"email":emailinput.text,
+		"username":usernameinput.text,
+		"password":passwordinput.text
+		})
+		
+		
+	api.request(authlink, [], HTTPClient.METHOD_POST, authpost)
+	print(authpost)
+	await get_tree().create_timer(20).timeout
+	GLOBAL.failed_reason = "No Internet"
+	failed.visible = true
+
+
 
 
 
@@ -94,24 +112,9 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 		get_tree().change_scene_to_file("res://src/scenes/auth-scenes/login_ui.tscn")
 	else:
 		GLOBAL.failed_reason = str(post_response.replace('"',""))
+		waitingresponse.visible = false
 		failed.visible = true
 
-
-
-func _on_sign_up_button_pressed():
-	
-	var authpost = JSON.stringify({
-		"email":emailinput.text,
-		"username":usernameinput.text,
-		"password":passwordinput.text
-		})
-		
-		
-	api.request(authlink, [], HTTPClient.METHOD_POST, authpost)
-	print(authpost)
-	await get_tree().create_timer(20).timeout
-	GLOBAL.failed_reason = "No Internet"
-	failed.visible = true
 
 
 

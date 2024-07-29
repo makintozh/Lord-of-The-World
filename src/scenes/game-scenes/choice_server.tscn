@@ -60,7 +60,9 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Select server"
 
-[node name="#1 Server" type="CanvasLayer" parent="."]
+[node name="#1 Server" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="#1 ServerBackGroundContainer" type="MarginContainer" parent="#1 Server"]
 offset_left = 15.0
@@ -108,9 +110,9 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_sf5ew")
 theme_override_styles/focus = SubResource("StyleBoxTexture_jh1a1")
 text = "Play"
 
-[node name="#2 Server" type="CanvasLayer" parent="."]
-offset = Vector2(0, 110.475)
-transform = Transform2D(1, 0, 0, 1, 0, 110.475)
+[node name="#2 Server" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="#2 ServerBackGroundContainer" type="MarginContainer" parent="#2 Server"]
 offset_left = 15.0

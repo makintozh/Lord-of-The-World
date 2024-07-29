@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://c7m1oyoo832ne"]
+[gd_scene load_steps=32 format=3 uid="uid://c7m1oyoo832ne"]
 
 [ext_resource type="Script" path="res://src/scripts/auth-scripts/register_ui.gd" id="1_mfjp8"]
 [ext_resource type="Texture2D" uid="uid://bmof2g6xlu2bf" path="res://src/ui/backgrounds/background.png" id="2_ldkhn"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://b6ihco5cpugkw" path="res://src/ui/checkboxes/Eye.png" id="12_612il"]
 [ext_resource type="PackedScene" uid="uid://mea22juv2m6t" path="res://src/scenes/auth-scenes/failed_to_connect.tscn" id="13_1jsrq"]
 [ext_resource type="Texture2D" uid="uid://6kvjconjmoj0" path="res://src/ui/buttons/support green.png" id="13_xnvx8"]
+[ext_resource type="PackedScene" uid="uid://cx5etu0rvfai4" path="res://src/scenes/auth-scenes/waiting_response.tscn" id="14_a3g2u"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ug50c"]
 texture = ExtResource("4_hbt2t")
@@ -355,6 +356,9 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="FailedToConnect" parent="." instance=ExtResource("13_1jsrq")]
+visible = false
+
+[node name="WaitingResponse" parent="." instance=ExtResource("14_a3g2u")]
 visible = false
 
 [connection signal="request_completed" from="APIRequest" to="." method="_on_http_request_request_completed"]

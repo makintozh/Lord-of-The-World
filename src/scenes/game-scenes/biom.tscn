@@ -31,7 +31,9 @@ limit_smoothed = true
 position_smoothing_enabled = true
 editor_draw_limits = true
 
-[node name="BiomUI" type="CanvasLayer" parent="."]
+[node name="BiomUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="BackButtonContainer" type="MarginContainer" parent="BiomUI"]
 offset_left = 11.0

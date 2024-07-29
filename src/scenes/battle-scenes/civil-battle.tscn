@@ -28,7 +28,9 @@ autoplay = true
 expand = true
 loop = true
 
-[node name="BattleStepLayer" type="CanvasLayer" parent="."]
+[node name="BattleStepLayer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="BattleStepContainer" type="MarginContainer" parent="BattleStepLayer"]
 offset_right = 320.0
@@ -42,7 +44,9 @@ theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_6famp")
 text = "Ход 1\\10"
 
-[node name="BackButtonLayer" type="CanvasLayer" parent="."]
+[node name="BackButtonLayer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="BackButtonContainer" type="MarginContainer" parent="BackButtonLayer"]
 offset_left = 16.0

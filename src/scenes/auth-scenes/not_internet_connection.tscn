@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://dh48cpcwjydq5"]
 
-[ext_resource type="Script" path="res://src/scripts/auth-scripts/failed_to_connect.gd" id="1_pml5t"]
+[ext_resource type="Script" path="res://src/scripts/auth-scripts/not_internet_connection.gd" id="1_joykt"]
 [ext_resource type="Texture2D" uid="uid://p5dcxp78xcic" path="res://src/ui/backgrounds/blur2 1.png" id="2_33bpa"]
 [ext_resource type="Texture2D" uid="uid://cxpni2esf80pi" path="res://src/ui/elements/update 1.png" id="3_3l3ra"]
 [ext_resource type="Texture2D" uid="uid://yacxa428bppa" path="res://src/ui/buttons/button_2.png" id="4_41cki"]
@@ -32,7 +32,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_pml5t")
+script = ExtResource("1_joykt")
 
 [node name="BackGround" type="TextureRect" parent="."]
 self_modulate = Color(1, 1, 1, 0.996078)

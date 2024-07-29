@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://8jmr8yn8vriq"]
+[gd_scene load_steps=39 format=3 uid="uid://8jmr8yn8vriq"]
 
 [ext_resource type="Script" path="res://src/scripts/auth-scripts/login_ui.gd" id="1_v5dys"]
 [ext_resource type="Texture2D" uid="uid://bmof2g6xlu2bf" path="res://src/ui/backgrounds/background.png" id="2_x5dwf"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://boontk5qqal0n" path="res://src/ui/buttons/enter button.png" id="11_dkifd"]
 [ext_resource type="PackedScene" uid="uid://mea22juv2m6t" path="res://src/scenes/auth-scenes/failed_to_connect.tscn" id="13_r4bu3"]
 [ext_resource type="Texture2D" uid="uid://6kvjconjmoj0" path="res://src/ui/buttons/support green.png" id="13_wu0o0"]
+[ext_resource type="PackedScene" uid="uid://cx5etu0rvfai4" path="res://src/scenes/auth-scenes/waiting_response.tscn" id="14_mul5m"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g80ue"]
 texture = ExtResource("4_70ttb")
@@ -316,6 +317,9 @@ icon = ExtResource("13_wu0o0")
 icon_alignment = 2
 
 [node name="FailedToConnect" parent="." instance=ExtResource("13_r4bu3")]
+visible = false
+
+[node name="WaitingResponse" parent="." instance=ExtResource("14_mul5m")]
 visible = false
 
 [connection signal="toggled" from="UI/PasswordHideUI/PasswordHideButton" to="." method="_on_password_hide_button_toggled"]

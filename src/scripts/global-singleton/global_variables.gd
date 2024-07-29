@@ -52,10 +52,9 @@ var not_connection = preload("res://src/scenes/auth-scenes/not_internet_connecti
 
 func _ready():
 	add_child(internet)
-	_check_connection()
 	request_timer.autostart = true
 	request_timer.one_shot = false
-	request_timer.wait_time = 5
+	request_timer.wait_time = 3
 	request_timer.timeout.connect(_check_connection)
 	add_child(request_timer)
 	internet.request_completed.connect(_on_request_completed)

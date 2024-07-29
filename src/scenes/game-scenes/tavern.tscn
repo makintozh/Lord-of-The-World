@@ -1,15 +1,15 @@
 [gd_scene load_steps=15 format=3 uid="uid://0xe68w41ig5c"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/tavern.gd" id="1_06l26"]
-[ext_resource type="Texture2D" uid="uid://bmof2g6xlu2bf" path="res://src/ui/figma/background.png" id="2_f0g80"]
-[ext_resource type="Texture2D" uid="uid://b2rs6ecdmj3tl" path="res://src/ui/figma/geks копия 10.png" id="3_jynqc"]
-[ext_resource type="Texture2D" uid="uid://10u8v4p7qqrb" path="res://src/ui/figma/character 1.png" id="4_eqj46"]
-[ext_resource type="Texture2D" uid="uid://c3qldwm5umd4l" path="res://src/ui/figma/base frame 4.png" id="4_etbxp"]
-[ext_resource type="Texture2D" uid="uid://yacxa428bppa" path="res://src/ui/figma/button_2.png" id="5_5p47d"]
-[ext_resource type="Texture2D" uid="uid://dv3mstmdt3l0p" path="res://src/ui/figma/c2.png" id="5_87qie"]
-[ext_resource type="Texture2D" uid="uid://doi260lvadhgo" path="res://src/ui/figma/c3.png" id="6_27vdc"]
-[ext_resource type="Texture2D" uid="uid://bynw4asolnqm8" path="res://src/ui/figma/Group 101.png" id="6_f5s4r"]
-[ext_resource type="Texture2D" uid="uid://cjbfs42jpw2ed" path="res://src/ui/figma/green buttom base long.png" id="10_p5dsj"]
+[ext_resource type="Texture2D" uid="uid://bmof2g6xlu2bf" path="res://src/ui/backgrounds/background.png" id="2_f0g80"]
+[ext_resource type="Texture2D" uid="uid://b2rs6ecdmj3tl" path="res://src/ui/elements/geks копия 10.png" id="3_jynqc"]
+[ext_resource type="Texture2D" uid="uid://10u8v4p7qqrb" path="res://src/ui/characters/character 1.png" id="4_eqj46"]
+[ext_resource type="Texture2D" uid="uid://c3qldwm5umd4l" path="res://src/ui/elements/base frame 4.png" id="4_etbxp"]
+[ext_resource type="Texture2D" uid="uid://yacxa428bppa" path="res://src/ui/buttons/button_2.png" id="5_5p47d"]
+[ext_resource type="Texture2D" uid="uid://dv3mstmdt3l0p" path="res://src/ui/characters/c2.png" id="5_87qie"]
+[ext_resource type="Texture2D" uid="uid://doi260lvadhgo" path="res://src/ui/characters/c3.png" id="6_27vdc"]
+[ext_resource type="Texture2D" uid="uid://bynw4asolnqm8" path="res://src/ui/buttons/Group 101.png" id="6_f5s4r"]
+[ext_resource type="Texture2D" uid="uid://cjbfs42jpw2ed" path="res://src/ui/buttons/green buttom base long.png" id="10_p5dsj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0tiyj"]
 texture = ExtResource("10_p5dsj")
@@ -37,7 +37,9 @@ texture = ExtResource("2_f0g80")
 expand_mode = 2
 stretch_mode = 1
 
-[node name="TavernProfileUI" type="CanvasLayer" parent="."]
+[node name="TavernProfileUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="IconFrameContainer" type="MarginContainer" parent="TavernProfileUI"]
 offset_left = 109.0

@@ -11,8 +11,9 @@ config_version=5
 [application]
 
 config/name="Lord of The World"
+config/version="dev"
 config/tags=PackedStringArray("lord_of_the_world")
-run/main_scene="res://src/scenes/auth-scenes/login_ui.tscn"
+run/main_scene="res://src/scenes/loading-scene/enter_loading.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 boot_splash/bg_color=Color(0.187176, 0.187176, 0.187176, 1)
 boot_splash/show_image=false

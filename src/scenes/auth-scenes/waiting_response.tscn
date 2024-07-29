@@ -1,11 +1,73 @@
-[gd_scene load_steps=12 format=3 uid="uid://cx5etu0rvfai4"]
+[gd_scene load_steps=15 format=3 uid="uid://cx5etu0rvfai4"]
 
-[ext_resource type="Script" path="res://src/scripts/auth-scripts/failed_to_connect.gd" id="1_80jkc"]
+[ext_resource type="Script" path="res://src/scripts/auth-scripts/waiting_response.gd" id="1_wfv5w"]
 [ext_resource type="Texture2D" uid="uid://p5dcxp78xcic" path="res://src/ui/backgrounds/blur2 1.png" id="2_1apst"]
 [ext_resource type="Texture2D" uid="uid://cxpni2esf80pi" path="res://src/ui/elements/update 1.png" id="3_e7whc"]
 [ext_resource type="Texture2D" uid="uid://yacxa428bppa" path="res://src/ui/buttons/button_2.png" id="4_w6j4o"]
 [ext_resource type="Texture2D" uid="uid://iivtf437avbt" path="res://src/ui/buttons/button.png" id="5_4pvxd"]
 [ext_resource type="Texture2D" uid="uid://boontk5qqal0n" path="res://src/ui/buttons/enter button.png" id="6_ks5g8"]
+
+[sub_resource type="Animation" id="Animation_n6wnf"]
+resource_name = "refreshing"
+length = 0.35
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath(".:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [true, false, false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:flip_v")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_vhv4n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:flip_v")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5avx2"]
+_data = {
+"RESET": SubResource("Animation_vhv4n"),
+"refreshing": SubResource("Animation_n6wnf")
+}
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rav7r"]
 texture = ExtResource("4_w6j4o")
@@ -25,17 +87,18 @@ texture = ExtResource("6_ks5g8")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ool6a"]
 
-[node name="FailedToConnect" type="Control"]
+[node name="WaitingResponse" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_80jkc")
+script = ExtResource("1_wfv5w")
 
 [node name="BackGround" type="TextureRect" parent="."]
 self_modulate = Color(1, 1, 1, 0.996078)
+layout_mode = 0
 offset_left = -2030.0
 offset_top = -208.0
 offset_right = 4335.0
@@ -55,7 +118,7 @@ offset_right = 44.0
 offset_bottom = -139.0
 
 [node name="Refresh" type="MarginContainer" parent="Refresh"]
-layout_mode = 0
+layout_mode = 1
 offset_left = 182.0
 offset_top = 553.0
 offset_right = 286.0
@@ -65,8 +128,14 @@ offset_bottom = 663.0
 layout_mode = 2
 texture = ExtResource("3_e7whc")
 expand_mode = 1
+flip_h = true
 
-[node name="FailedToConnectLabel" type="Control" parent="."]
+[node name="RefreshAnimation" type="AnimationPlayer" parent="Refresh/Refresh/Refresh"]
+libraries = {
+"": SubResource("AnimationLibrary_5avx2")
+}
+
+[node name="WaitLabel" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 4.0
@@ -74,42 +143,42 @@ offset_top = -179.0
 offset_right = 44.0
 offset_bottom = -139.0
 
-[node name="FailedToConnectLabel" type="MarginContainer" parent="FailedToConnectLabel"]
+[node name="WaitLabel" type="MarginContainer" parent="WaitLabel"]
 layout_mode = 0
 offset_left = 95.0
 offset_top = 610.0
 offset_right = 373.0
 offset_bottom = 860.0
 
-[node name="FailedToConnectLabel" type="Label" parent="FailedToConnectLabel/FailedToConnectLabel"]
+[node name="WaitLabel" type="Label" parent="WaitLabel/WaitLabel"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 21
 theme_override_styles/normal = SubResource("StyleBoxTexture_rav7r")
-text = "Failed To Connect"
+text = "Wait..."
 horizontal_alignment = 1
 autowrap_mode = 3
 justification_flags = 235
 
-[node name="Back" type="Control" parent="."]
+[node name="Cancel" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Back" type="MarginContainer" parent="Back"]
+[node name="Cancel" type="MarginContainer" parent="Cancel"]
 layout_mode = 0
 offset_left = 137.0
 offset_top = 694.0
 offset_right = 360.0
 offset_bottom = 795.0
 
-[node name="Back" type="Button" parent="Back/Back"]
+[node name="Cancel" type="Button" parent="Cancel/Cancel"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 31
 theme_override_styles/normal = SubResource("StyleBoxTexture_av4ia")
 theme_override_styles/hover = SubResource("StyleBoxTexture_61bk0")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_y8bln")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ool6a")
-text = "Back"
+text = "Cancel"
 
-[connection signal="pressed" from="Back/Back/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Cancel/Cancel/Cancel" to="." method="_on_cancel_pressed"]
