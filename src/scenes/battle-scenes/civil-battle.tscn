@@ -28,7 +28,9 @@ autoplay = true
 expand = true
 loop = true
 
-[node name="BattleStepLayer" type="CanvasLayer" parent="."]
+[node name="BattleStepLayer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="BattleStepContainer" type="MarginContainer" parent="BattleStepLayer"]
 offset_right = 320.0
@@ -42,7 +44,9 @@ theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_6famp")
 text = "Ход 1\\10"
 
-[node name="BackButtonLayer" type="CanvasLayer" parent="."]
+[node name="BackButtonLayer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="BackButtonContainer" type="MarginContainer" parent="BackButtonLayer"]
 offset_left = 16.0
@@ -82,6 +86,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Card2" type="MarginContainer" parent="PlayerCards"]
+layout_mode = 0
 offset_left = 189.0
 offset_top = 601.0
 offset_right = 279.0
@@ -97,6 +102,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Card3" type="MarginContainer" parent="PlayerCards"]
+layout_mode = 0
 offset_left = 330.0
 offset_top = 589.0
 offset_right = 420.0
@@ -112,6 +118,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Card4" type="MarginContainer" parent="PlayerCards"]
+layout_mode = 0
 offset_left = 330.0
 offset_top = 722.0
 offset_right = 420.0
@@ -127,6 +134,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Card5" type="MarginContainer" parent="PlayerCards"]
+layout_mode = 0
 offset_left = 52.9
 offset_top = 589.0
 offset_right = 142.9
@@ -142,6 +150,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Card6" type="MarginContainer" parent="PlayerCards"]
+layout_mode = 0
 offset_left = 52.9
 offset_top = 722.0
 offset_right = 142.9
@@ -180,6 +189,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Card2" type="MarginContainer" parent="EnemyCards"]
+layout_mode = 0
 offset_left = 189.0
 offset_top = 601.0
 offset_right = 279.0
@@ -195,6 +205,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Card3" type="MarginContainer" parent="EnemyCards"]
+layout_mode = 0
 offset_left = 330.0
 offset_top = 589.0
 offset_right = 420.0
@@ -210,6 +221,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Card4" type="MarginContainer" parent="EnemyCards"]
+layout_mode = 0
 offset_left = 330.0
 offset_top = 722.0
 offset_right = 420.0
@@ -225,6 +237,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Card5" type="MarginContainer" parent="EnemyCards"]
+layout_mode = 0
 offset_left = 52.9
 offset_top = 589.0
 offset_right = 142.9
@@ -240,6 +253,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Card6" type="MarginContainer" parent="EnemyCards"]
+layout_mode = 0
 offset_left = 52.9
 offset_top = 722.0
 offset_right = 142.9

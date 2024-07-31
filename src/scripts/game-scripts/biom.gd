@@ -47,9 +47,16 @@ func _on_bottom_button_pressed():
 	camera_view.position.y = 1450
 	top_button.visible = true
 	bottom_button.visible = false
-	
-	
-	
-	
-	
-	
+
+
+
+
+func _on_elborus_pressed():
+	get_tree().change_scene_to_file("res://src/scenes/battle-scenes/elborus-hub.tscn")
+
+
+
+
+
+
+

@@ -11,11 +11,13 @@ config_version=5
 [application]
 
 config/name="Lord of The World"
+config/version="1.0-debug"
 config/tags=PackedStringArray("lord_of_the_world")
-run/main_scene="res://src/scenes/auth-scenes/login_ui.tscn"
+run/main_scene="res://src/scenes/loading-scene/enter_loading.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 boot_splash/bg_color=Color(0.187176, 0.187176, 0.187176, 1)
 boot_splash/show_image=false
+config/icon="res://src/ui/characters/c2.png"
 
 [autoload]
 
@@ -25,25 +27,22 @@ GLOBAL="*res://src/scripts/global-singleton/global_variables.gd"
 
 window/size/viewport_width=500
 window/size/viewport_height=900
-window/size/mode=2
 window/size/resizable=false
 window/size/borderless=true
 window/stretch/mode="viewport"
-window/stretch/aspect="ignore"
+window/stretch/aspect="expand"
 window/handheld/orientation=5
+window/vsync/vsync_mode=0
 
 [editor]
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
 
-[editor_plugins]
-
-enabled=PackedStringArray()
-
 [file_customization]
 
 folder_colors={
+"res://addons/": "gray",
 "res://android/": "gray",
 "res://src/": "green",
 "res://src/fonts/": "orange",
@@ -56,15 +55,9 @@ folder_colors={
 
 theme/custom_font="res://src/fonts/inika/Inika-Bold.ttf"
 
-[input_devices]
-
-pointing/emulate_touch_from_mouse=true
-pointing/emulate_mouse_from_touch=false
-
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
+renderer/rendering_method.web="mobile"
 textures/vram_compression/import_etc2_astc=true
-anti_aliasing/quality/msaa_2d=3
-anti_aliasing/quality/screen_space_aa=1

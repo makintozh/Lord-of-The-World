@@ -51,7 +51,9 @@ texture = ExtResource("2_juskx")
 expand_mode = 2
 stretch_mode = 1
 
-[node name="CharacterTypeName" type="CanvasLayer" parent="."]
+[node name="CharacterTypeName" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="CharacterTypeNameBackgroun" type="MarginContainer" parent="CharacterTypeName"]
 offset_left = 116.0
@@ -74,7 +76,9 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Elves"
 
-[node name="CharacterChoiceCanvas" type="CanvasLayer" parent="."]
+[node name="CharacterChoiceCanvas" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="Characters" type="Control" parent="CharacterChoiceCanvas"]
 layout_mode = 3
@@ -119,9 +123,9 @@ layout_mode = 2
 texture = ExtResource("6_contp")
 expand_mode = 1
 
-[node name="CharacterFeature" type="CanvasLayer" parent="."]
-offset = Vector2(0, 7.835)
-transform = Transform2D(1, 0, 0, 1, 0, 7.835)
+[node name="CharacterFeature" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="CharacterFeatureBackgroun" type="MarginContainer" parent="CharacterFeature"]
 offset_left = 184.0
@@ -177,9 +181,9 @@ texture_focused = ExtResource("8_mfu6b")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="FeatureScheme" type="CanvasLayer" parent="."]
-offset = Vector2(0, 21.79)
-transform = Transform2D(1, 0, 0, 1, 0, 21.79)
+[node name="FeatureScheme" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="FeatureSchemeContainer" type="MarginContainer" parent="FeatureScheme"]
 offset_left = 92.0
@@ -224,7 +228,9 @@ offset_bottom = 545.21
 layout_mode = 2
 texture = ExtResource("12_1dfr4")
 
-[node name="CharacterName" type="CanvasLayer" parent="."]
+[node name="CharacterName" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="CharacterNameContainer" type="MarginContainer" parent="CharacterName"]
 offset_left = 90.0
@@ -243,7 +249,9 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_3cest")
 theme_override_styles/focus = SubResource("StyleBoxTexture_b75u7")
 placeholder_text = "Name"
 
-[node name="CharacterCreateButton" type="CanvasLayer" parent="."]
+[node name="CharacterCreateButton" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="CharacterCreateButtonContainer" type="MarginContainer" parent="CharacterCreateButton"]
 offset_left = 151.0

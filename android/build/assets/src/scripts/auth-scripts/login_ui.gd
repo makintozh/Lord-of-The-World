@@ -14,13 +14,14 @@ var password_remember = "password"
 @onready var passwordhidebutton = $UI/PasswordHideUI/PasswordHideButton
 @onready var loginbutton = $NavigationContainer/LoginButton
 @onready var api = $APIRequest
+@onready var failed = $FailedToConnect
+@onready var waitingresponse = $WaitingResponse
 
 
 var authlink = "http://31.129.54.119:80/auth"
 
 var is_remember = false
 var logged = false
-
 
 
 
@@ -34,6 +35,7 @@ func _ready():
 
 
 
+
 func remember_me():
 	var login_remembered = login_data.text
 	var pass_remembered = password_data.text
@@ -42,11 +44,15 @@ func remember_me():
 	data.save_encrypted_pass(data_path, "makintosh")
 
 
+
+
+
 func after_remember_me():
 	if GLOBAL.username == "" and GLOBAL.password == "":
 		data.load_encrypted_pass(data_path, "makintosh")
 		login_data.text = data.get_value(data_name, login_remember, "")
 		password_data.text = data.get_value(data_name, password_remember, "")
+
 
 
 
@@ -76,7 +82,7 @@ func _on_sign_up_button_pressed():
 
 
 func _on_login_button_pressed():
-	
+	waitingresponse.visible = true
 	var authpost = JSON.stringify({
 
 
@@ -90,10 +96,14 @@ func _on_login_button_pressed():
 
 	api.request(authlink, [], HTTPClient.METHOD_POST, authpost)
 	print(authpost)
+	await get_tree().create_timer(20).timeout
+	GLOBAL.failed_reason = "No Internet"
+	failed.visible = true
 
 
 func _on_http_request_request_completed(result, response_code, headers, body):
 	var post_response = JSON.stringify(body.get_string_from_utf8())
+	print(str(result))
 	print("Ответ: " + str(post_response))
 	print(headers)
 	print("Код: " + str(response_code))
@@ -103,6 +113,9 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 			remember_me()
 		get_tree().change_scene_to_file("res://src/scenes/game-scenes/choice_server.tscn")
 	else:
+		GLOBAL.failed_reason = str(post_response.replace('"',""))
+		waitingresponse.visible = false
+		failed.visible = true
 		logged = false
 
 

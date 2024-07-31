@@ -1,0 +1,236 @@
+[gd_scene load_steps=11 format=3 uid="uid://bkqop5vtydbqm"]
+
+[ext_resource type="Script" path="res://src/scripts/game-scripts/elborus-hub.gd" id="1_tbxwe"]
+[ext_resource type="Texture2D" uid="uid://cqkf3yemq52r3" path="res://src/ui/backgrounds/Уbioms 1.png" id="2_mi8b7"]
+[ext_resource type="Texture2D" uid="uid://ccd7lnobgoth5" path="res://src/ui/buttons/arrow back white.png" id="3_ohfh3"]
+[ext_resource type="Texture2D" uid="uid://cjtckd87lwd0c" path="res://src/ui/buttons/bottom.png" id="4_q0a5f"]
+[ext_resource type="Texture2D" uid="uid://cd4ulgx3ykttj" path="res://src/ui/buttons/bottom off 3.png" id="5_fqh72"]
+[ext_resource type="Texture2D" uid="uid://dwm58ltawk0uc" path="res://src/ui/buttons/Ellipse 17.png" id="6_vm5qd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2t2pu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_co3ru"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bnc5x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6lb75"]
+
+[node name="Elborus-hub" type="Node2D"]
+script = ExtResource("1_tbxwe")
+
+[node name="BackGround" type="TextureRect" parent="."]
+offset_left = -5.0
+offset_right = 502.0
+offset_bottom = 905.0
+texture = ExtResource("2_mi8b7")
+expand_mode = 1
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BackButtonContainer" type="MarginContainer" parent="UI"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 16.0
+offset_right = 96.0
+offset_bottom = 63.0
+
+[node name="BackButton" type="TextureButton" parent="UI/BackButtonContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_ohfh3")
+texture_pressed = ExtResource("3_ohfh3")
+texture_hover = ExtResource("3_ohfh3")
+texture_focused = ExtResource("3_ohfh3")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Elborus" type="MarginContainer" parent="UI"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 3.0
+offset_right = 290.0
+offset_bottom = 43.0
+
+[node name="Elborus" type="Label" parent="UI/Elborus"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Elborus"
+
+[node name="Go-Battle-Buttons" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Battle" type="MarginContainer" parent="Go-Battle-Buttons"]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 560.0
+offset_right = 288.0
+offset_bottom = 670.0
+
+[node name="Battle" type="TextureButton" parent="Go-Battle-Buttons/Battle"]
+layout_mode = 2
+texture_normal = ExtResource("4_q0a5f")
+texture_pressed = ExtResource("4_q0a5f")
+texture_hover = ExtResource("4_q0a5f")
+texture_focused = ExtResource("4_q0a5f")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Battle2" type="MarginContainer" parent="Go-Battle-Buttons"]
+layout_mode = 0
+offset_left = 338.0
+offset_top = 332.0
+offset_right = 450.0
+offset_bottom = 442.0
+
+[node name="Battle" type="TextureButton" parent="Go-Battle-Buttons/Battle2"]
+layout_mode = 2
+texture_normal = ExtResource("5_fqh72")
+texture_pressed = ExtResource("5_fqh72")
+texture_hover = ExtResource("5_fqh72")
+texture_focused = ExtResource("5_fqh72")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Battle3" type="MarginContainer" parent="Go-Battle-Buttons"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 318.0
+offset_right = 184.0
+offset_bottom = 428.0
+
+[node name="Battle" type="TextureButton" parent="Go-Battle-Buttons/Battle3"]
+layout_mode = 2
+texture_normal = ExtResource("5_fqh72")
+texture_pressed = ExtResource("5_fqh72")
+texture_hover = ExtResource("5_fqh72")
+texture_focused = ExtResource("5_fqh72")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Battle4" type="MarginContainer" parent="Go-Battle-Buttons"]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 134.0
+offset_right = 502.0
+offset_bottom = 244.0
+
+[node name="Battle" type="TextureButton" parent="Go-Battle-Buttons/Battle4"]
+layout_mode = 2
+texture_normal = ExtResource("5_fqh72")
+texture_pressed = ExtResource("5_fqh72")
+texture_hover = ExtResource("5_fqh72")
+texture_focused = ExtResource("5_fqh72")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Battle5" type="MarginContainer" parent="Go-Battle-Buttons"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 112.0
+offset_right = 182.0
+offset_bottom = 222.0
+
+[node name="Battle" type="TextureButton" parent="Go-Battle-Buttons/Battle5"]
+layout_mode = 2
+texture_normal = ExtResource("5_fqh72")
+texture_pressed = ExtResource("5_fqh72")
+texture_hover = ExtResource("5_fqh72")
+texture_focused = ExtResource("5_fqh72")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Auto-Battle" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Auto-Battle-Time" type="MarginContainer" parent="Auto-Battle"]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 256.0
+offset_right = 493.0
+offset_bottom = 319.0
+
+[node name="Auto-Battle-Time" type="Label" parent="Auto-Battle/Auto-Battle-Time"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = "Автобой осталось: 
+31:20 минут"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="Auto-Battle" type="MarginContainer" parent="Auto-Battle"]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 354.0
+offset_right = 417.0
+offset_bottom = 401.0
+
+[node name="Auto-Battle" type="TextureButton" parent="Auto-Battle/Auto-Battle"]
+layout_mode = 2
+texture_normal = ExtResource("6_vm5qd")
+texture_pressed = ExtResource("6_vm5qd")
+texture_hover = ExtResource("6_vm5qd")
+texture_focused = ExtResource("6_vm5qd")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Naviagte-Buttons" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DeckBuilder" type="MarginContainer" parent="Naviagte-Buttons"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 782.0
+offset_right = 159.0
+offset_bottom = 878.0
+
+[node name="DeckBuilder" type="Button" parent="Naviagte-Buttons/DeckBuilder"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxFlat_2t2pu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_co3ru")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bnc5x")
+theme_override_styles/focus = SubResource("StyleBoxFlat_6lb75")
+text = "ДекБилдер"
+
+[node name="Rules" type="MarginContainer" parent="Naviagte-Buttons"]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 782.0
+offset_right = 310.0
+offset_bottom = 878.0
+
+[node name="Rules" type="Button" parent="Naviagte-Buttons/Rules"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxFlat_2t2pu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_co3ru")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bnc5x")
+theme_override_styles/focus = SubResource("StyleBoxFlat_6lb75")
+text = "Правила"
+
+[connection signal="pressed" from="UI/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]
