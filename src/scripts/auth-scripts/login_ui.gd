@@ -52,7 +52,8 @@ func after_remember_me():
 		data.load_encrypted_pass(data_path, "makintosh")
 		login_data.text = data.get_value(data_name, login_remember, "")
 		password_data.text = data.get_value(data_name, password_remember, "")
-
+		if not GLOBAL.sign_out:
+			_on_login_button_pressed()
 
 
 

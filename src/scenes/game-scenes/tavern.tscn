@@ -42,6 +42,7 @@ layout_mode = 3
 anchors_preset = 0
 
 [node name="IconFrameContainer" type="MarginContainer" parent="TavernProfileUI"]
+layout_mode = 0
 offset_left = 109.0
 offset_top = 78.0
 offset_right = 419.0
@@ -53,6 +54,7 @@ texture = ExtResource("3_jynqc")
 expand_mode = 1
 
 [node name="PlayerProfileIcon" type="MarginContainer" parent="TavernProfileUI"]
+layout_mode = 0
 offset_left = 190.0
 offset_top = 120.0
 offset_right = 328.0
@@ -77,6 +79,7 @@ texture = ExtResource("6_27vdc")
 expand_mode = 1
 
 [node name="FrameContainer" type="MarginContainer" parent="TavernProfileUI"]
+layout_mode = 0
 offset_left = 189.0
 offset_top = 119.0
 offset_right = 328.0
@@ -88,6 +91,7 @@ texture = ExtResource("4_etbxp")
 expand_mode = 1
 
 [node name="UsernameBackGroundContainer" type="MarginContainer" parent="TavernProfileUI"]
+layout_mode = 0
 offset_left = 142.0
 offset_top = 258.0
 offset_right = 384.0
@@ -99,6 +103,7 @@ texture = ExtResource("5_5p47d")
 expand_mode = 1
 
 [node name="UsernameContainer" type="MarginContainer" parent="TavernProfileUI"]
+layout_mode = 0
 offset_left = 162.0
 offset_top = 267.0
 offset_right = 330.0
@@ -110,6 +115,7 @@ theme_override_font_sizes/font_size = 20
 text = "PLAYER NAME"
 
 [node name="PlayerProfileLabelContainer" type="MarginContainer" parent="TavernProfileUI"]
+layout_mode = 0
 offset_left = 187.0
 offset_top = 25.0
 offset_right = 312.0
@@ -121,6 +127,7 @@ theme_override_font_sizes/font_size = 20
 text = "Player profile"
 
 [node name="BackButtonContainer" type="MarginContainer" parent="TavernProfileUI"]
+layout_mode = 0
 offset_left = 27.0
 offset_top = 19.0
 offset_right = 124.0
@@ -135,6 +142,7 @@ texture_focused = ExtResource("6_f5s4r")
 stretch_mode = 0
 
 [node name="OptionsButtonContainer" type="MarginContainer" parent="TavernProfileUI"]
+layout_mode = 0
 offset_left = 363.0
 offset_top = 20.0
 offset_right = 472.0
