@@ -66,22 +66,6 @@ func _process(_delta):
 
 
 
-func _on_forgot_password_button_pressed():
-	get_tree().change_scene_to_file("res://src/scenes/auth-scenes/forgot_password.tscn")
-
-
-func _on_back_button_pressed():
-	get_tree().change_scene_to_file("res://src/scenes/auth-scenes/login_ui.tscn")
-	
-	
-func _on_sign_up_button_pressed():
-	get_tree().change_scene_to_file("res://src/scenes/auth-scenes/register_ui.tscn")
-
-
-
-
-
-
 func _on_login_button_pressed():
 	waitingresponse.visible = true
 	var authpost = JSON.stringify({
@@ -98,7 +82,7 @@ func _on_login_button_pressed():
 	api.request(authlink, [], HTTPClient.METHOD_POST, authpost)
 	print(authpost)
 	await get_tree().create_timer(20).timeout
-	GLOBAL.failed_reason = "No Internet"
+	GLOBAL.failed_reason = "No Internet Connection"
 	failed.visible = true
 
 
@@ -157,6 +141,30 @@ func _on_password_hide_button_toggled(toggled_on):
 	
 	
 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+func _on_forgot_password_button_pressed():
+	get_tree().change_scene_to_file("res://src/scenes/auth-scenes/forgot_password.tscn")
+
+
+func _on_back_button_pressed():
+	get_tree().change_scene_to_file("res://src/scenes/auth-scenes/login_ui.tscn")
+	
+	
+func _on_sign_up_button_pressed():
+	get_tree().change_scene_to_file("res://src/scenes/auth-scenes/register_ui.tscn")
 
 
 
