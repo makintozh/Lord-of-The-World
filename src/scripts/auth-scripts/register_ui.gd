@@ -14,7 +14,7 @@ extends Node2D
 @onready var api = $APIRequest
 var authlink = "http://31.129.54.119:80/register"
 
-var signupped = false
+var registered = false
 var privacynotice_enabled = false
 
 var data_path = "user://data.cfg"
@@ -100,13 +100,29 @@ func _on_sign_up_button_pressed():
 
 
 func _on_http_request_request_completed(result, response_code, headers, body):
-	var json = JSON.new()
-	var post_response = JSON.stringify(body.get_string_from_utf8())
+	var post_response = JSON.parse_string(body.get_string_from_utf8())
+	var message = str(post_response["message"])
+	var token = str(post_response["token"])
+	
+	
+	print(str(result))
 	print("Ответ: " + str(post_response))
+	print("Сообщение:" + message)
+	
+	
+	if token == "<null>":
+		printerr("Токен: " + token)
+	else:
+		print("Токен: " + token)
+
+
 	print(headers)
 	print("Код: " + str(response_code))
-	if response_code == 200:
-		signupped = true
+	
+	
+	if !token == "<null>":
+		registered = true
+		GLOBAL.register_token = token
 		GLOBAL.username = str(usernameinput.text)
 		GLOBAL.password = str(passwordinput.text)
 		get_tree().change_scene_to_file("res://src/scenes/auth-scenes/login_ui.tscn")
