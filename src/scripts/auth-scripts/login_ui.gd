@@ -87,21 +87,41 @@ func _on_login_button_pressed():
 
 
 func _on_http_request_request_completed(result, response_code, headers, body):
-	var post_response = JSON.stringify(body.get_string_from_utf8())
+	var post_response = JSON.parse_string(body.get_string_from_utf8())
+	var message = str(post_response["message"])
+	var token = str(post_response["token"])
+	
+	
 	print(str(result))
 	print("Ответ: " + str(post_response))
+	print("Сообщение:" + message)
+	
+	
+	if token == "<null>":
+		printerr("Токен: " + token)
+	else:
+		print("Токен: " + token)
+
+
 	print(headers)
 	print("Код: " + str(response_code))
-	if response_code == 200:
+	
+	
+	if !token == "<null>":
+		GLOBAL.token = token
 		logged = true
 		if logged and is_remember:
 			remember_me()
 		get_tree().change_scene_to_file("res://src/scenes/game-scenes/choice_server.tscn")
 	else:
-		GLOBAL.failed_reason = str(post_response.replace('"',""))
+		GLOBAL.failed_reason = message.replace('"',"")
 		waitingresponse.visible = false
 		failed.visible = true
 		logged = false
+
+
+
+
 
 
 

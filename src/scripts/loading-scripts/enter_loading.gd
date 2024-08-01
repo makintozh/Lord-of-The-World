@@ -11,5 +11,5 @@ func _ready():
 
 
 
-	await get_tree().create_timer(2).timeout
+	await get_tree().create_timer(0.5).timeout
 	get_tree().change_scene_to_file("res://src/scenes/auth-scenes/login_ui.tscn")
