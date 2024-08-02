@@ -1,12 +1,19 @@
 extends Node2D
 
-@onready var server_1 = $"#1 Server"
-@onready var server_2 = $"#2 Server"
-@onready var server_3 = $"#3 Server"
+@onready var server_1 = $"Server-List/#1 Server"
+@onready var server_2 = $"Server-List/#2 Server"
+@onready var server_3 = $"Server-List/#3 Server"
+@onready var server_4 = $"Server-List/#4 Server"
+@onready var server_5 = $"Server-List/#5 Server"
+@onready var server_6 = $"Server-List/#6 Server"
 
-@onready var server_1_name_label = $"#1 Server/ServarNameContainer/ServerName"
-@onready var server_2_name_label = $"#2 Server/ServarNameContainer/ServerName"
-@onready var server_3_name_label = $"#3 Server/ServarNameContainer/ServerName"
+
+@onready var server_1_name_label = $"Server-List/#1 Server/ServarNameContainer/ServerName"
+@onready var server_2_name_label = $"Server-List/#2 Server/ServarNameContainer/ServerName"
+@onready var server_3_name_label = $"Server-List/#3 Server/ServarNameContainer/ServerName"
+@onready var server_4_name_label = $"Server-List/#4 Server/ServarNameContainer/ServerName"
+@onready var server_5_name_label = $"Server-List/#5 Server/ServarNameContainer/ServerName"
+@onready var server_6_name_label = $"Server-List/#6 Server/ServarNameContainer/ServerName"
 
 
 @onready var refreshing = $Refresh
@@ -36,8 +43,9 @@ func _ready():
 func _on_api_request_request_completed(result, response_code, headers, body):
 	var api_response = JSON.parse_string(body.get_string_from_utf8())
 	var message = str(api_response["message"])
-	var servers = api_response["servers"] 
-	print("\nВсе Сервера в JSON:" + str(servers[0]))
+	var servers = api_response["servers"]
+	
+	print("\nВсе Сервера в JSON: " + str(servers))
 	
 	refreshing.visible = false
 
@@ -57,6 +65,15 @@ func _on_api_request_request_completed(result, response_code, headers, body):
 			elif "3" in index:
 				server_3.visible = true
 				server_3_name_label.text = server_name
+			elif "4" in index:
+				server_4.visible = true
+				server_4_name_label.text = server_name
+			elif "5" in index:
+				server_5.visible = true
+				server_5_name_label.text = server_name
+			elif "6" in index:
+				server_6.visible = true
+				server_6_name_label.text = server_name
 			else:
 				printerr("Ошибка сервера")
 
