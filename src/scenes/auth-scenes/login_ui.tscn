@@ -88,6 +88,8 @@ texture = ExtResource("10_r0d8d")
 [node name="LoginUI" type="Node2D"]
 script = ExtResource("1_v5dys")
 
+[node name="APIRequest" type="HTTPRequest" parent="."]
+
 [node name="BackGround" type="TextureRect" parent="."]
 offset_left = -2030.0
 offset_top = -208.0
@@ -252,8 +254,6 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 51
 text = "Log in"
 
-[node name="APIRequest" type="HTTPRequest" parent="."]
-
 [node name="NavigationContainer" type="HBoxContainer" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
@@ -322,9 +322,9 @@ visible = false
 [node name="WaitingResponse" parent="." instance=ExtResource("14_mul5m")]
 visible = false
 
+[connection signal="request_completed" from="APIRequest" to="." method="_on_http_request_request_completed"]
 [connection signal="toggled" from="UI/PasswordHideUI/PasswordHideButton" to="." method="_on_password_hide_button_toggled"]
 [connection signal="toggled" from="UI/RememberMeUI/RememberMeCheckBox" to="." method="_on_remember_me_check_box_toggled"]
 [connection signal="pressed" from="UI/ForgotPasswordUI/ForgotPasswordButton" to="." method="_on_forgot_password_button_pressed"]
-[connection signal="request_completed" from="APIRequest" to="." method="_on_http_request_request_completed"]
 [connection signal="pressed" from="NavigationContainer/RegisterButton" to="." method="_on_sign_up_button_pressed"]
 [connection signal="pressed" from="NavigationContainer/LoginButton" to="." method="_on_login_button_pressed"]

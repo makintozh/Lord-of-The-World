@@ -100,13 +100,13 @@ func _on_sign_up_button_pressed():
 
 
 func _on_http_request_request_completed(result, response_code, headers, body):
-	var post_response = JSON.parse_string(body.get_string_from_utf8())
-	var message = str(post_response["message"])
-	var token = str(post_response["token"])
+	var api_response = JSON.parse_string(body.get_string_from_utf8())
+	var message = str(api_response["message"])
+	var token = str(api_response["token"])
 	
 	
 	print(str(result))
-	print("Ответ: " + str(post_response))
+	print("Ответ: " + str(api_response))
 	print("Сообщение:" + message)
 	
 	
@@ -122,12 +122,12 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 	
 	if !token == "<null>":
 		registered = true
-		GLOBAL.register_token = token
+		GLOBAL.from_register_token = token
 		GLOBAL.username = str(usernameinput.text)
 		GLOBAL.password = str(passwordinput.text)
 		get_tree().change_scene_to_file("res://src/scenes/auth-scenes/login_ui.tscn")
 	else:
-		GLOBAL.failed_reason = str(post_response.replace('"',""))
+		GLOBAL.failed_reason = str(api_response.replace('"',""))
 		waitingresponse.visible = false
 		failed.visible = true
 

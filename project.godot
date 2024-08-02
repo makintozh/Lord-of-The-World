@@ -21,7 +21,7 @@ config/icon="res://src/ui/characters/c2.png"
 
 [autoload]
 
-GLOBAL="*res://src/scripts/global-singleton/global_variables.gd"
+GLOBAL="*res://src/scripts/singleton/global_variables.gd"
 
 [display]
 

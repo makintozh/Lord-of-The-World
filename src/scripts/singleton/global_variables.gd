@@ -5,8 +5,8 @@ extends Node
 var username = ""   #Ник Пользователя
 var password = ""   #Пароль Пользователя
 
-var token:String
-var register_token:String
+var from_auth_token
+var from_register_token
 
 var sign_out:bool = false
 

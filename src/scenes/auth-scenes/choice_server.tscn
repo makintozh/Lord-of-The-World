@@ -1,0 +1,244 @@
+[gd_scene load_steps=11 format=3 uid="uid://cys1kf7rr5t03"]
+
+[ext_resource type="Script" path="res://src/scripts/game-scripts/choice_server.gd" id="1_o2s7j"]
+[ext_resource type="Texture2D" uid="uid://bmof2g6xlu2bf" path="res://src/ui/backgrounds/background.png" id="2_45t4e"]
+[ext_resource type="Texture2D" uid="uid://c2u2i5n4mifyh" path="res://src/ui/buttons/back_button.png" id="3_nsa51"]
+[ext_resource type="Texture2D" uid="uid://yacxa428bppa" path="res://src/ui/buttons/button_2.png" id="4_x21et"]
+[ext_resource type="Texture2D" uid="uid://oi7h147hx8d" path="res://src/ui/elements/Group 1000006717.png" id="5_4sk1u"]
+[ext_resource type="Texture2D" uid="uid://cjbfs42jpw2ed" path="res://src/ui/buttons/green buttom base long.png" id="6_ff5py"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b2grb"]
+texture = ExtResource("6_ff5py")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_45lj6"]
+texture = ExtResource("6_ff5py")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sf5ew"]
+texture = ExtResource("6_ff5py")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jh1a1"]
+texture = ExtResource("6_ff5py")
+
+[node name="ChoiceServer" type="Node2D"]
+script = ExtResource("1_o2s7j")
+
+[node name="APIRequest" type="HTTPRequest" parent="."]
+
+[node name="BackGround" type="TextureRect" parent="."]
+offset_left = -2030.0
+offset_top = -208.0
+offset_right = 4335.0
+offset_bottom = 2270.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_45t4e")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BackButtonContainer" type="MarginContainer" parent="UI"]
+offset_left = 12.0
+offset_top = 18.0
+offset_right = 85.0
+offset_bottom = 83.0
+
+[node name="BackButton" type="TextureButton" parent="UI/BackButtonContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_nsa51")
+texture_pressed = ExtResource("3_nsa51")
+texture_hover = ExtResource("3_nsa51")
+texture_disabled = ExtResource("3_nsa51")
+texture_focused = ExtResource("3_nsa51")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SelectServerLabelContainer" type="MarginContainer" parent="UI"]
+offset_left = 173.0
+offset_top = 28.0
+offset_right = 314.0
+offset_bottom = 68.0
+
+[node name="SelectServerLabel" type="Label" parent="UI/SelectServerLabelContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Select server"
+
+[node name="#1 Server" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ServerBackGroundContainer" type="MarginContainer" parent="#1 Server"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 127.0
+offset_right = 481.0
+offset_bottom = 212.0
+
+[node name="ServerBackGroundTexture" type="TextureRect" parent="#1 Server/ServerBackGroundContainer"]
+layout_mode = 2
+texture = ExtResource("4_x21et")
+
+[node name="ServerLanguageContainer" type="MarginContainer" parent="#1 Server"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 144.0
+offset_right = 89.0
+offset_bottom = 192.0
+
+[node name="ServerLanguageContainer" type="TextureRect" parent="#1 Server/ServerLanguageContainer"]
+layout_mode = 2
+texture = ExtResource("5_4sk1u")
+
+[node name="ServarNameContainer" type="MarginContainer" parent="#1 Server"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 148.0
+offset_right = 234.0
+offset_bottom = 190.0
+
+[node name="ServerName" type="Label" parent="#1 Server/ServarNameContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 31
+text = "SERVER NAME"
+
+[node name="ServerPlayButton" type="MarginContainer" parent="#1 Server"]
+layout_mode = 0
+offset_left = 359.0
+offset_top = 147.0
+offset_right = 459.0
+offset_bottom = 190.0
+
+[node name="PlayButton" type="Button" parent="#1 Server/ServerPlayButton"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_sf5ew")
+theme_override_styles/focus = SubResource("StyleBoxTexture_jh1a1")
+text = "Play"
+
+[node name="#2 Server" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_top = 129.0
+offset_bottom = 129.0
+
+[node name="ServerBackGroundContainer" type="MarginContainer" parent="#2 Server"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 127.0
+offset_right = 481.0
+offset_bottom = 212.0
+
+[node name="ServerBackGroundTexture" type="TextureRect" parent="#2 Server/ServerBackGroundContainer"]
+layout_mode = 2
+texture = ExtResource("4_x21et")
+
+[node name="ServerLanguageContainer" type="MarginContainer" parent="#2 Server"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 144.0
+offset_right = 89.0
+offset_bottom = 192.0
+
+[node name="ServerLanguageContainer" type="TextureRect" parent="#2 Server/ServerLanguageContainer"]
+layout_mode = 2
+texture = ExtResource("5_4sk1u")
+
+[node name="ServarNameContainer" type="MarginContainer" parent="#2 Server"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 148.0
+offset_right = 234.0
+offset_bottom = 190.0
+
+[node name="ServerName" type="Label" parent="#2 Server/ServarNameContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 31
+text = "SERVER NAME"
+
+[node name="ServerPlayButton" type="MarginContainer" parent="#2 Server"]
+layout_mode = 0
+offset_left = 359.0
+offset_top = 147.0
+offset_right = 459.0
+offset_bottom = 190.0
+
+[node name="PlayButton" type="Button" parent="#2 Server/ServerPlayButton"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_sf5ew")
+theme_override_styles/focus = SubResource("StyleBoxTexture_jh1a1")
+text = "Play"
+
+[node name="#3 Server" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_top = 258.0
+offset_bottom = 258.0
+
+[node name="ServerBackGroundContainer" type="MarginContainer" parent="#3 Server"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 127.0
+offset_right = 481.0
+offset_bottom = 212.0
+
+[node name="ServerBackGroundTexture" type="TextureRect" parent="#3 Server/ServerBackGroundContainer"]
+layout_mode = 2
+texture = ExtResource("4_x21et")
+
+[node name="ServerLanguageContainer" type="MarginContainer" parent="#3 Server"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 144.0
+offset_right = 89.0
+offset_bottom = 192.0
+
+[node name="ServerLanguageContainer" type="TextureRect" parent="#3 Server/ServerLanguageContainer"]
+layout_mode = 2
+texture = ExtResource("5_4sk1u")
+
+[node name="ServarNameContainer" type="MarginContainer" parent="#3 Server"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 148.0
+offset_right = 234.0
+offset_bottom = 190.0
+
+[node name="ServerName" type="Label" parent="#3 Server/ServarNameContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 31
+text = "SERVER NAME"
+
+[node name="ServerPlayButton" type="MarginContainer" parent="#3 Server"]
+layout_mode = 0
+offset_left = 359.0
+offset_top = 147.0
+offset_right = 459.0
+offset_bottom = 190.0
+
+[node name="PlayButton" type="Button" parent="#3 Server/ServerPlayButton"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_sf5ew")
+theme_override_styles/focus = SubResource("StyleBoxTexture_jh1a1")
+text = "Play"
+
+[connection signal="request_completed" from="APIRequest" to="." method="_on_api_request_request_completed"]
+[connection signal="pressed" from="UI/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="#1 Server/ServerPlayButton/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="#2 Server/ServerPlayButton/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="#3 Server/ServerPlayButton/PlayButton" to="." method="_on_play_button_pressed"]
