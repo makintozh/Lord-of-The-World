@@ -9,6 +9,8 @@ extends Node2D
 @onready var server_3_name_label = $"#3 Server/ServarNameContainer/ServerName"
 
 
+@onready var refreshing = $Refresh
+
 
 @onready var api = $APIRequest
 var json = JSON.new()
@@ -36,6 +38,8 @@ func _on_api_request_request_completed(result, response_code, headers, body):
 	var message = str(api_response["message"])
 	var servers = api_response["servers"] 
 	
+	refreshing.visible = false
+
 	for data in servers:
 		var server_id = str(data["id"])
 		var server_name =str(data["name"])

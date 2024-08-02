@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cys1kf7rr5t03"]
+[gd_scene load_steps=15 format=3 uid="uid://cys1kf7rr5t03"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/choice_server.gd" id="1_o2s7j"]
 [ext_resource type="Texture2D" uid="uid://bmof2g6xlu2bf" path="res://src/ui/backgrounds/background.png" id="2_45t4e"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://yacxa428bppa" path="res://src/ui/buttons/button_2.png" id="4_x21et"]
 [ext_resource type="Texture2D" uid="uid://oi7h147hx8d" path="res://src/ui/elements/Group 1000006717.png" id="5_4sk1u"]
 [ext_resource type="Texture2D" uid="uid://cjbfs42jpw2ed" path="res://src/ui/buttons/green buttom base long.png" id="6_ff5py"]
+[ext_resource type="Texture2D" uid="uid://cxpni2esf80pi" path="res://src/ui/elements/update 1.png" id="7_q5b6y"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b2grb"]
 texture = ExtResource("6_ff5py")
@@ -18,6 +19,68 @@ texture = ExtResource("6_ff5py")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jh1a1"]
 texture = ExtResource("6_ff5py")
+
+[sub_resource type="Animation" id="Animation_vhv4n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:flip_v")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_n6wnf"]
+resource_name = "refreshing"
+length = 0.35
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath(".:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [true, false, false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:flip_v")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5avx2"]
+_data = {
+"RESET": SubResource("Animation_vhv4n"),
+"refreshing": SubResource("Animation_n6wnf")
+}
 
 [node name="ChoiceServer" type="Node2D"]
 script = ExtResource("1_o2s7j")
@@ -42,6 +105,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="BackButtonContainer" type="MarginContainer" parent="UI"]
+layout_mode = 0
 offset_left = 12.0
 offset_top = 18.0
 offset_right = 85.0
@@ -58,6 +122,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="SelectServerLabelContainer" type="MarginContainer" parent="UI"]
+layout_mode = 0
 offset_left = 173.0
 offset_top = 28.0
 offset_right = 314.0
@@ -236,6 +301,33 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_sf5ew")
 theme_override_styles/focus = SubResource("StyleBoxTexture_jh1a1")
 text = "Play"
+
+[node name="Refresh" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 4.0
+offset_top = -179.0
+offset_right = 44.0
+offset_bottom = -139.0
+
+[node name="Refresh" type="MarginContainer" parent="Refresh"]
+layout_mode = 1
+offset_left = 182.0
+offset_top = 553.0
+offset_right = 286.0
+offset_bottom = 663.0
+
+[node name="Refresh" type="TextureRect" parent="Refresh/Refresh"]
+layout_mode = 2
+texture = ExtResource("7_q5b6y")
+expand_mode = 1
+flip_h = true
+
+[node name="RefreshAnimation" type="AnimationPlayer" parent="Refresh/Refresh/Refresh"]
+libraries = {
+"": SubResource("AnimationLibrary_5avx2")
+}
+autoplay = "refreshing"
 
 [connection signal="request_completed" from="APIRequest" to="." method="_on_api_request_request_completed"]
 [connection signal="pressed" from="UI/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]

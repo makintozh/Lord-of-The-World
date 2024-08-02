@@ -6,9 +6,6 @@ extends Control
 var api = HTTPClient.new()
 
 
-func _process(_delta):
-	refresh_animation.play("refreshing")
-
 
 
 func _on_cancel_pressed():

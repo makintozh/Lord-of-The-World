@@ -134,6 +134,7 @@ flip_h = true
 libraries = {
 "": SubResource("AnimationLibrary_5avx2")
 }
+autoplay = "refreshing"
 
 [node name="WaitLabel" type="Control" parent="."]
 layout_mode = 3
