@@ -185,7 +185,7 @@ offset_top = 147.0
 offset_right = 459.0
 offset_bottom = 190.0
 
-[node name="PlayButton" type="Button" parent="Server-List/#1 Server/ServerPlayButton"]
+[node name="PlayButton-#1Server" type="Button" parent="Server-List/#1 Server/ServerPlayButton"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
@@ -242,7 +242,7 @@ offset_top = 147.0
 offset_right = 459.0
 offset_bottom = 190.0
 
-[node name="PlayButton" type="Button" parent="Server-List/#2 Server/ServerPlayButton"]
+[node name="PlayButton-#2Server" type="Button" parent="Server-List/#2 Server/ServerPlayButton"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
@@ -299,7 +299,7 @@ offset_top = 147.0
 offset_right = 459.0
 offset_bottom = 190.0
 
-[node name="PlayButton" type="Button" parent="Server-List/#3 Server/ServerPlayButton"]
+[node name="PlayButton-#3Server" type="Button" parent="Server-List/#3 Server/ServerPlayButton"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
@@ -356,7 +356,7 @@ offset_top = 147.0
 offset_right = 459.0
 offset_bottom = 190.0
 
-[node name="PlayButton" type="Button" parent="Server-List/#4 Server/ServerPlayButton"]
+[node name="PlayButton-#4Server" type="Button" parent="Server-List/#4 Server/ServerPlayButton"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
@@ -413,7 +413,7 @@ offset_top = 147.0
 offset_right = 459.0
 offset_bottom = 190.0
 
-[node name="PlayButton" type="Button" parent="Server-List/#5 Server/ServerPlayButton"]
+[node name="PlayButton-#5Server" type="Button" parent="Server-List/#5 Server/ServerPlayButton"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
@@ -470,7 +470,7 @@ offset_top = 147.0
 offset_right = 459.0
 offset_bottom = 190.0
 
-[node name="PlayButton" type="Button" parent="Server-List/#6 Server/ServerPlayButton"]
+[node name="PlayButton-#6Server" type="Button" parent="Server-List/#6 Server/ServerPlayButton"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
@@ -520,9 +520,9 @@ text = "Loading servers..."
 
 [connection signal="request_completed" from="APIRequest" to="." method="_on_api_request_request_completed"]
 [connection signal="pressed" from="UI/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="Server-List/#1 Server/ServerPlayButton/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="Server-List/#2 Server/ServerPlayButton/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="Server-List/#3 Server/ServerPlayButton/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="Server-List/#4 Server/ServerPlayButton/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="Server-List/#5 Server/ServerPlayButton/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="Server-List/#6 Server/ServerPlayButton/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Server-List/#1 Server/ServerPlayButton/PlayButton-#1Server" to="." method="_on_play_button_1_server_pressed"]
+[connection signal="pressed" from="Server-List/#2 Server/ServerPlayButton/PlayButton-#2Server" to="." method="_on_play_button_2_server_pressed"]
+[connection signal="pressed" from="Server-List/#3 Server/ServerPlayButton/PlayButton-#3Server" to="." method="_on_play_button_3_server_pressed"]
+[connection signal="pressed" from="Server-List/#4 Server/ServerPlayButton/PlayButton-#4Server" to="." method="_on_play_button_4_server_pressed"]
+[connection signal="pressed" from="Server-List/#5 Server/ServerPlayButton/PlayButton-#5Server" to="." method="_on_play_button_5_server_pressed"]
+[connection signal="pressed" from="Server-List/#6 Server/ServerPlayButton/PlayButton-#6Server" to="." method="_on_play_button_6_server_pressed"]

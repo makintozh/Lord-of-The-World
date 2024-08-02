@@ -8,6 +8,8 @@ var password = ""   #Пароль Пользователя
 var from_auth_token
 var from_register_token
 
+var choiced_server_address = null
+
 var sign_out:bool = false
 
 var failed_reason:String
