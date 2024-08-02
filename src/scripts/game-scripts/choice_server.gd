@@ -37,6 +37,7 @@ func _on_api_request_request_completed(result, response_code, headers, body):
 	var api_response = JSON.parse_string(body.get_string_from_utf8())
 	var message = str(api_response["message"])
 	var servers = api_response["servers"] 
+	print("\nВсе Сервера в JSON:" + str(servers[0]))
 	
 	refreshing.visible = false
 
@@ -45,11 +46,20 @@ func _on_api_request_request_completed(result, response_code, headers, body):
 		var server_name =str(data["name"])
 		var server_locale = str(data["locale"])
 		var server_address = str(data["address"])
-		for id in server_id:
-			if id == "1":
+		
+		for index in server_id:
+			if "1" in index:
 				server_1.visible = true
 				server_1_name_label.text = server_name
-		
+			elif "2" in index:
+				server_2.visible = true
+				server_2_name_label.text = server_name
+			elif "3" in index:
+				server_3.visible = true
+				server_3_name_label.text = server_name
+			else:
+				printerr("Ошибка сервера")
+
 
 
 
@@ -86,4 +96,13 @@ func _on_back_button_pressed():
 
 func _on_play_button_pressed():
 	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+
+
+
+
+
+
+
+
+
 

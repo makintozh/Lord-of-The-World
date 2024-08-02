@@ -329,6 +329,18 @@ libraries = {
 }
 autoplay = "refreshing"
 
+[node name="Refresh_Label" type="MarginContainer" parent="Refresh"]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 658.0
+offset_right = 321.0
+offset_bottom = 698.0
+
+[node name="Refresh_Label" type="Label" parent="Refresh/Refresh_Label"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = "Loading servers..."
+
 [connection signal="request_completed" from="APIRequest" to="." method="_on_api_request_request_completed"]
 [connection signal="pressed" from="UI/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="#1 Server/ServerPlayButton/PlayButton" to="." method="_on_play_button_pressed"]
