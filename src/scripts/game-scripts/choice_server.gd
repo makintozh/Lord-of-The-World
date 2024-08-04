@@ -48,10 +48,6 @@ var server_12_address = null
 @onready var camera_view = $CameraView
 
 
-@onready var to_second_page = $"To-Second-Page"
-@onready var to_first_page = $"To-First-Page"
-
-
 @onready var api = $APIRequest
 var json = JSON.new()
 var serverslink = "http://31.129.54.119/servers"
@@ -75,17 +71,17 @@ func _ready():
 func _on_api_request_request_completed(result, response_code, headers, body):
 	var api_response = JSON.parse_string(body.get_string_from_utf8())
 	var message = str(api_response["message"])
-	var servers = api_response["servers"]
-	#var servers = [
-		#{ "id": 1, "name": "#1 Alpha", "locale": "RU", "address": "31.129.54.121" },
-		#{ "id": 2, "name": "#2 Beta", "locale": "RU", "address": "31.129.54.121" },
-		#{ "id": 3, "name": "#3 Private", "locale": "RU", "address": "31.129.54.121" },
-		#{ "id": 4, "name": "#4 Untested", "locale": "RU", "address": "31.129.54.121" },
-		#{ "id": 5, "name": "#5 Unrecognized", "locale": "RU", "address": "31.129.54.121" },
-		#{ "id": 6, "name": "#6 Makintosh", "locale": "RU", "address": "31.129.54.121" },
-		#{ "id": 7, "name": "#7 Testing", "locale": "RU", "address": "31.129.54.121" },
-		#{ "id": 8, "name": "#8 Defined", "locale": "RU", "address": "31.129.54.121" },
-		#{ "id": 9, "name": "#9 Lord", "locale": "RU", "address": "31.129.54.121" }]
+	#var servers = api_response["servers"]
+	var servers = [
+		{ "id": 1, "name": "#1 Alpha", "locale": "RU", "address": "31.129.54.121" },
+		{ "id": 2, "name": "#2 Beta", "locale": "RU", "address": "31.129.54.121" },
+		{ "id": 3, "name": "#3 Private", "locale": "RU", "address": "31.129.54.121" },
+		{ "id": 4, "name": "#4 Untested", "locale": "RU", "address": "31.129.54.121" },
+		{ "id": 5, "name": "#5 Unrecognized", "locale": "RU", "address": "31.129.54.121" },
+		{ "id": 6, "name": "#6 Makintosh", "locale": "RU", "address": "31.129.54.121" },
+		{ "id": 7, "name": "#7 Testing", "locale": "RU", "address": "31.129.54.121" },
+		{ "id": 8, "name": "#8 Defined", "locale": "RU", "address": "31.129.54.121" },
+		{ "id": 9, "name": "#9 Lord", "locale": "RU", "address": "31.129.54.121" }]
 	
 	
 	
@@ -147,8 +143,7 @@ func _on_api_request_request_completed(result, response_code, headers, body):
 				print(server_address)
 				
 			elif "7" in index:
-				to_first_page.visible = true
-				to_second_page.visible = true
+				#page_container.visible = true
 				server_7.visible = true
 				server_7_name_label.text = server_name
 				server_7_address = server_address
@@ -244,27 +239,8 @@ func _on_play_button_6_server_pressed():
 
 
 
-func _on_to_second_page_pressed():
-	camera_view.position.x = 1185
-
-
-
-
-func _on_to_first_page_pressed():
+func _on_right_arrow_pressed():
 	camera_view.position.x = 252
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+func _on_left_arrow_pressed():
+	camera_view.position.x = 1185

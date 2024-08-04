@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cys1kf7rr5t03"]
+[gd_scene load_steps=16 format=3 uid="uid://cys1kf7rr5t03"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/choice_server.gd" id="1_o2s7j"]
 [ext_resource type="Texture2D" uid="uid://bmof2g6xlu2bf" path="res://src/ui/backgrounds/background.png" id="2_45t4e"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://oi7h147hx8d" path="res://src/ui/elements/Group 1000006717.png" id="5_4sk1u"]
 [ext_resource type="Texture2D" uid="uid://cjbfs42jpw2ed" path="res://src/ui/buttons/green buttom base long.png" id="6_ff5py"]
 [ext_resource type="Texture2D" uid="uid://cxpni2esf80pi" path="res://src/ui/elements/update 1.png" id="7_q5b6y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jy43k"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b2grb"]
 texture = ExtResource("6_ff5py")
@@ -98,23 +100,54 @@ texture = ExtResource("2_45t4e")
 expand_mode = 2
 stretch_mode = 1
 
-[node name="To-First-Page" type="Button" parent="."]
-visible = false
-offset_left = 1060.0
-offset_top = 51.0
-offset_right = 1331.0
-offset_bottom = 114.0
-theme_override_font_sizes/font_size = 41
-text = "GO TO PAGE 1"
+[node name="Page-Arrows" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="To-Second-Page" type="Button" parent="."]
-visible = false
-offset_left = 174.0
-offset_top = 51.0
-offset_right = 317.0
-offset_bottom = 114.0
+[node name="LeftArrow" type="Button" parent="Page-Arrows"]
+offset_left = 1114.0
+offset_top = 64.0
+offset_right = 1166.0
+offset_bottom = 127.0
 theme_override_font_sizes/font_size = 41
-text = "GO TO PAGE 2"
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jy43k")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jy43k")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jy43k")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jy43k")
+text = "<"
+flat = true
+
+[node name="RightArrow" type="Button" parent="Page-Arrows"]
+offset_left = 226.0
+offset_top = 64.0
+offset_right = 278.0
+offset_bottom = 127.0
+theme_override_font_sizes/font_size = 41
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jy43k")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jy43k")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jy43k")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jy43k")
+text = ">"
+flat = true
+
+[node name="Current-1Page" type="Label" parent="Page-Arrows"]
+layout_mode = 0
+offset_left = 226.0
+offset_top = 76.0
+offset_right = 237.0
+offset_bottom = 118.0
+theme_override_font_sizes/font_size = 31
+text = "1"
+
+[node name="Current-2Page" type="Label" parent="Page-Arrows"]
+offset_left = 1151.0
+offset_top = 76.0
+offset_right = 1165.0
+offset_bottom = 118.0
+theme_override_font_sizes/font_size = 31
+text = "2"
 
 [node name="CameraView" type="Camera2D" parent="."]
 position = Vector2(252, 447)
@@ -902,8 +935,8 @@ theme_override_font_sizes/font_size = 21
 text = "Loading servers..."
 
 [connection signal="request_completed" from="APIRequest" to="." method="_on_api_request_request_completed"]
-[connection signal="pressed" from="To-First-Page" to="." method="_on_to_first_page_pressed"]
-[connection signal="pressed" from="To-Second-Page" to="." method="_on_to_second_page_pressed"]
+[connection signal="pressed" from="Page-Arrows/LeftArrow" to="." method="_on_right_arrow_pressed"]
+[connection signal="pressed" from="Page-Arrows/RightArrow" to="." method="_on_left_arrow_pressed"]
 [connection signal="pressed" from="CameraView/UI/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="Server-List/#1 Server/ServerPlayButton/PlayButton-#1Server" to="." method="_on_play_button_1_server_pressed"]
 [connection signal="pressed" from="Server-List/#2 Server/ServerPlayButton/PlayButton-#2Server" to="." method="_on_play_button_2_server_pressed"]
