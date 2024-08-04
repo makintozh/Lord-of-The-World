@@ -1,45 +1,15 @@
 extends Node2D
 
-@onready var server_1 = $"Server-List/#1 Server"
-@onready var server_2 = $"Server-List/#2 Server"
-@onready var server_3 = $"Server-List/#3 Server"
-@onready var server_4 = $"Server-List/#4 Server"
-@onready var server_5 = $"Server-List/#5 Server"
-@onready var server_6 = $"Server-List/#6 Server"
-@onready var server_7 = $"Server-List/#7 Server"
-@onready var server_8 = $"Server-List/#8 Server"
-@onready var server_9 = $"Server-List/#9 Server"
-@onready var server_10 = $"Server-List/#10 Server"
-@onready var server_11 = $"Server-List/#11 Server"
-@onready var server_12 = $"Server-List/#12 Server"
 
 
-@onready var server_1_name_label = $"Server-List/#1 Server/ServarNameContainer/ServerName"
-@onready var server_2_name_label = $"Server-List/#2 Server/ServarNameContainer/ServerName"
-@onready var server_3_name_label = $"Server-List/#3 Server/ServarNameContainer/ServerName"
-@onready var server_4_name_label = $"Server-List/#4 Server/ServarNameContainer/ServerName"
-@onready var server_5_name_label = $"Server-List/#5 Server/ServarNameContainer/ServerName"
-@onready var server_6_name_label = $"Server-List/#6 Server/ServarNameContainer/ServerName"
-@onready var server_7_name_label = $"Server-List/#7 Server/ServarNameContainer/ServerName"
-@onready var server_8_name_label = $"Server-List/#8 Server/ServarNameContainer/ServerName"
-@onready var server_9_name_label = $"Server-List/#9 Server/ServarNameContainer/ServerName"
-@onready var server_10_name_label = $"Server-List/#10 Server/ServarNameContainer/ServerName"
-@onready var server_11_name_label = $"Server-List/#11 Server/ServarNameContainer/ServerName"
-@onready var server_12_name_label = $"Server-List/#12 Server/ServarNameContainer/ServerName"
+
+@onready var server_list = $"Server-List"
 
 
-var server_1_address = null
-var server_2_address = null
-var server_3_address = null
-var server_4_address = null
-var server_5_address = null
-var server_6_address = null
-var server_7_address = null
-var server_8_address = null
-var server_9_address = null
-var server_10_address = null
-var server_11_address = null
-var server_12_address = null
+@onready var main_server = $"Server-List/Main-Server"
+
+
+var current_server_address = null
 
 
 @onready var refreshing = $Refresh
@@ -96,111 +66,23 @@ func _on_api_request_request_completed(result, response_code, headers, body):
 		var server_name =str(data["name"])
 		var server_locale = str(data["locale"])
 		var server_address = str(data["address"])
+		var server_max_players = int(data["max_players"])
+		var server_status = str(data["status"])
+		var server_create_date = str(data["create_date"])
 		
-		#print(server_id)
 		
-		if server_id == 1:
-			server_1.visible = true
-			server_1_name_label.text = server_name
-			server_1_address = server_address
-			print(server_name)
-			print(server_address)
 		
-		elif server_id == 2:
-			server_2.visible = true
-			server_2_name_label.text = server_name
-			server_2_address = server_address
-			print(server_name)
-			print(server_address)
-		#for index in server_id:
-			#print("Индекс: " + str(index))
-			#if "1" in index:
-				#server_1.visible = true
-				#server_1_name_label.text = server_name
-				#server_1_address = server_address
-				#print(server_name)
-				#print(server_address)
-				#
-			#elif "2" in index:
-				#server_2.visible = true
-				#server_2_name_label.text = server_name
-				#server_2_address = server_address
-				#print(server_name)
-				#print(server_address)
-				#
-			#elif "3" in index:
-				#server_3.visible = true
-				#server_3_name_label.text = server_name
-				#server_3_address = server_address
-				#print(server_name)
-				#print(server_address)
-				#
-			#elif "4" in index:
-				#server_4.visible = true
-				#server_4_name_label.text = server_name
-				#server_4_address = server_address
-				#print(server_name)
-				#print(server_address)
-				#
-			#elif "5" in index:
-				#server_5.visible = true
-				#server_5_name_label.text = server_name
-				#server_5_address = server_address
-				#print(server_name)
-				#print(server_address)
-				#
-			#elif "6" in index:
-				#server_6.visible = true
-				#server_6_name_label.text = server_name
-				#server_6_address = server_address
-				#print(server_name)
-				#print(server_address)
-				#
-			#elif "7" in index:
-				##page_container.visible = true
-				#server_7.visible = true
-				#server_7_name_label.text = server_name
-				#server_7_address = server_address
-				#print(server_name)
-				#print(server_address)
-				#
-			#elif "8" in index:
-				#server_8.visible = true
-				#server_8_name_label.text = server_name
-				#server_8_address = server_address
-				#print(server_name)
-				#print(server_address)
-				#
-			#elif "9" in index:
-				#server_9.visible = true
-				#server_9_name_label.text = server_name
-				#server_9_address = server_address
-				#print(server_name)
-				#print(server_address)
-				#
-				#
-				#
-			#
-				#
-				#
-				#
-			#else:
-				#printerr("Ошибка сервера")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		print("Айди Сервера: " + str(server_id) + "  |||  Имя сервера: " + server_name + " (" + server_status + ")  |||  Язык: " + server_locale + "  |||  Адрес: " + server_address)
+		
+		if server_id >= 1:
+			main_server.queue_free()
+			var new_servers = main_server.duplicate(server_id)
+			server_list.add_child(new_servers)
+			new_servers.position.y = -129
+			for i in server_id:
+				new_servers.position.y += 129
+				var new_server_name_label = new_servers.get_child(2).get_children()[0]
+				new_server_name_label.text = server_name
 
 
 
@@ -212,38 +94,8 @@ func _on_back_button_pressed():
 
 
 
-func _on_play_button_1_server_pressed():
-	GLOBAL.choiced_server_address = server_1_address
-	print("Выбран сервер: " + GLOBAL.choiced_server_address)
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
-
-
-func _on_play_button_2_server_pressed():
-	GLOBAL.choiced_server_address = server_2_address
-	print("Выбран сервер: " + GLOBAL.choiced_server_address)
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
-
-
-func _on_play_button_3_server_pressed():
-	GLOBAL.choiced_server_address = server_3_address
-	print("Выбран сервер: " + GLOBAL.choiced_server_address)
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
-
-
-func _on_play_button_4_server_pressed():
-	GLOBAL.choiced_server_address = server_4_address
-	print("Выбран сервер: " + GLOBAL.choiced_server_address)
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
-
-
-func _on_play_button_5_server_pressed():
-	GLOBAL.choiced_server_address = server_5_address
-	print("Выбран сервер: " + GLOBAL.choiced_server_address)
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
-
-
-func _on_play_button_6_server_pressed():
-	GLOBAL.choiced_server_address = server_6_address
+func _on_play_button_pressed():
+	GLOBAL.choiced_server_address = current_server_address
 	print("Выбран сервер: " + GLOBAL.choiced_server_address)
 	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
 
@@ -251,10 +103,3 @@ func _on_play_button_6_server_pressed():
 
 
 
-
-
-func _on_right_arrow_pressed():
-	camera_view.position.x = 252
-
-func _on_left_arrow_pressed():
-	camera_view.position.x = 1185
