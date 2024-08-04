@@ -98,45 +98,38 @@ texture = ExtResource("2_45t4e")
 expand_mode = 2
 stretch_mode = 1
 
-[node name="CameraView" type="Camera2D" parent="."]
-position = Vector2(252, 447)
+[node name="BackGround" type="TextureRect" parent="BackGround"]
+offset_left = -21.0
+offset_top = 1224.0
+offset_right = 6344.0
+offset_bottom = 3702.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_45t4e")
+expand_mode = 2
+stretch_mode = 1
 
-[node name="UI" type="Control" parent="CameraView"]
-layout_mode = 3
-anchors_preset = 0
-offset_left = -252.0
-offset_top = -447.0
-offset_right = -212.0
-offset_bottom = -407.0
+[node name="BackGround" type="TextureRect" parent="BackGround/BackGround"]
+offset_left = -6.0
+offset_top = 695.0
+offset_right = 6359.0
+offset_bottom = 3173.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_45t4e")
+expand_mode = 2
+stretch_mode = 1
 
-[node name="BackButtonContainer" type="MarginContainer" parent="CameraView/UI"]
-layout_mode = 0
-offset_left = 12.0
-offset_top = 18.0
-offset_right = 85.0
-offset_bottom = 83.0
-
-[node name="BackButton" type="TextureButton" parent="CameraView/UI/BackButtonContainer"]
-layout_mode = 2
-texture_normal = ExtResource("3_nsa51")
-texture_pressed = ExtResource("3_nsa51")
-texture_hover = ExtResource("3_nsa51")
-texture_disabled = ExtResource("3_nsa51")
-texture_focused = ExtResource("3_nsa51")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="SelectServerLabelContainer" type="MarginContainer" parent="CameraView/UI"]
-layout_mode = 0
-offset_left = 173.0
-offset_top = 28.0
-offset_right = 314.0
-offset_bottom = 68.0
-
-[node name="SelectServerLabel" type="Label" parent="CameraView/UI/SelectServerLabelContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 24
-text = "Select server"
+[node name="BackGround" type="TextureRect" parent="BackGround/BackGround/BackGround"]
+offset_left = -6.0
+offset_top = 695.0
+offset_right = 6359.0
+offset_bottom = 3173.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_45t4e")
+expand_mode = 2
+stretch_mode = 1
 
 [node name="Server-List" type="Control" parent="."]
 layout_mode = 3
@@ -145,6 +138,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Main-Server" type="Control" parent="Server-List"]
+visible = false
 layout_mode = 2
 anchors_preset = 0
 offset_right = 40.0
@@ -199,6 +193,46 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_sf5ew")
 theme_override_styles/focus = SubResource("StyleBoxTexture_jh1a1")
 text = "Play"
 
+[node name="CameraView" type="Camera2D" parent="."]
+position = Vector2(252, 447)
+
+[node name="UI" type="Control" parent="CameraView"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -252.0
+offset_top = -447.0
+offset_right = -212.0
+offset_bottom = -407.0
+
+[node name="BackButtonContainer" type="MarginContainer" parent="CameraView/UI"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 18.0
+offset_right = 85.0
+offset_bottom = 83.0
+
+[node name="BackButton" type="TextureButton" parent="CameraView/UI/BackButtonContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_nsa51")
+texture_pressed = ExtResource("3_nsa51")
+texture_hover = ExtResource("3_nsa51")
+texture_disabled = ExtResource("3_nsa51")
+texture_focused = ExtResource("3_nsa51")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SelectServerLabelContainer" type="MarginContainer" parent="CameraView/UI"]
+layout_mode = 0
+offset_left = 173.0
+offset_top = 28.0
+offset_right = 314.0
+offset_bottom = 68.0
+
+[node name="SelectServerLabel" type="Label" parent="CameraView/UI/SelectServerLabelContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Select server"
+
 [node name="Refresh" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -238,6 +272,18 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 21
 text = "Loading servers..."
 
+[node name="Server_Pagination_Scroll" type="VScrollBar" parent="."]
+visible = false
+offset_left = -527.0
+offset_top = -106.0
+offset_right = 1129.0
+offset_bottom = 987.0
+pivot_offset = Vector2(0, 0.095)
+min_value = -1200.0
+max_value = 0.0
+page = 100.0
+value = -100.0
+
 [connection signal="request_completed" from="APIRequest" to="." method="_on_api_request_request_completed"]
-[connection signal="pressed" from="CameraView/UI/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="Server-List/Main-Server/ServerPlayButton/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="CameraView/UI/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]

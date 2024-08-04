@@ -4,9 +4,9 @@ extends Node2D
 
 
 @onready var server_list = $"Server-List"
-
-
 @onready var main_server = $"Server-List/Main-Server"
+@onready var server_scroll_pagination = $Server_Pagination_Scroll
+
 
 
 var current_server_address = null
@@ -23,10 +23,14 @@ var json = JSON.new()
 var serverslink = "http://31.129.54.119/servers"
 
 
-
 var token = JSON.stringify({
 		"token":GLOBAL.from_auth_token
 	})
+
+
+
+func _process(_delta):
+	server_list.position.y = server_scroll_pagination.value
 
 
 
@@ -79,10 +83,17 @@ func _on_api_request_request_completed(result, response_code, headers, body):
 			var new_servers = main_server.duplicate(server_id)
 			server_list.add_child(new_servers)
 			new_servers.position.y = -129
-			for i in server_id:
-				new_servers.position.y += 129
+			new_servers.visible = true
+			for amount in server_id:
+				server_scroll_pagination.min_value = amount - amount**2.42
+				server_scroll_pagination.max_value = 0
+				new_servers.position.y += 100
 				var new_server_name_label = new_servers.get_child(2).get_children()[0]
 				new_server_name_label.text = server_name
+				current_server_address = server_address
+		
+		if server_id > 6:
+			pass
 
 
 
