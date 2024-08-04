@@ -89,6 +89,9 @@ func _on_api_request_request_completed(result, response_code, headers, body):
 				server_scroll_pagination.max_value = 0
 				new_servers.position.y += 100
 				var new_server_name_label = new_servers.get_child(2).get_children()[0]
+				var new_server_play_button = new_servers.get_child(3).get_children()[0]
+				if !new_server_play_button.is_connected("pressed", _on_play_button_pressed):
+					new_server_play_button.connect("pressed", _on_play_button_pressed)
 				new_server_name_label.text = server_name
 				current_server_address = server_address
 		

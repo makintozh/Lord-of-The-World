@@ -273,10 +273,11 @@ theme_override_font_sizes/font_size = 21
 text = "Loading servers..."
 
 [node name="Server_Pagination_Scroll" type="VScrollBar" parent="."]
-visible = false
+process_mode = 3
+self_modulate = Color(1, 1, 1, 0)
 offset_left = -527.0
 offset_top = -106.0
-offset_right = 1129.0
+offset_right = 379.0
 offset_bottom = 987.0
 pivot_offset = Vector2(0, 0.095)
 min_value = -1200.0

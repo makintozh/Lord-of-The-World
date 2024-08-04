@@ -27,8 +27,6 @@ GLOBAL="*res://src/scripts/singleton/global_variables.gd"
 
 window/size/viewport_width=500
 window/size/viewport_height=900
-window/size/resizable=false
-window/size/borderless=true
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 window/handheld/orientation=5
