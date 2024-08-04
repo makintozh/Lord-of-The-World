@@ -2,13 +2,19 @@ extends Node
 
 
 
+
 var username = ""   #Ник Пользователя
 var password = ""   #Пароль Пользователя
 
-var token:String
-var register_token:String
+
+var from_auth_token
+var from_register_token
+
+
+var choiced_server_address = null
 
 var sign_out:bool = false
+
 
 var failed_reason:String
 
@@ -21,6 +27,11 @@ var character_index = 0    #Индекс Выбранного Персонажа
 
 var enable_button_transparent = "ffffffff"    #Прозрачность Включённой Кнопки
 var disable_button_transparent = "ffffff78"   #Прозрачность Отлючённой Кнопки
+
+
+
+
+
 
 
 

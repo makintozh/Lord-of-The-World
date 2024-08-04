@@ -68,17 +68,16 @@ func _process(_delta):
 
 func _on_login_button_pressed():
 	waitingresponse.visible = true
+	
 	var authpost = JSON.stringify({
-
-
+		
+		
 		"username":login_data.text,
 		"password":password_data.text
-
-
+		
+		
 		})
-
-
-
+		
 	api.request(authlink, [], HTTPClient.METHOD_POST, authpost)
 	print(authpost)
 	await get_tree().create_timer(20).timeout
@@ -87,14 +86,14 @@ func _on_login_button_pressed():
 
 
 func _on_http_request_request_completed(result, response_code, headers, body):
-	var post_response = JSON.parse_string(body.get_string_from_utf8())
-	var message = str(post_response["message"])
-	var token = str(post_response["token"])
+	var api_response = JSON.parse_string(body.get_string_from_utf8())
+	var message = str(api_response["message"])
+	var token = str(api_response["token"])
 	
 	
 	print(str(result))
-	print("Ответ: " + str(post_response))
-	print("Сообщение:" + message)
+	print("Ответ: " + str(api_response))
+	print("Сообщение: " + message)
 	
 	
 	if token == "<null>":
@@ -108,11 +107,11 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 	
 	
 	if !token == "<null>":
-		GLOBAL.token = token
+		GLOBAL.from_auth_token = token
 		logged = true
 		if logged and is_remember:
 			remember_me()
-		get_tree().change_scene_to_file("res://src/scenes/game-scenes/choice_server.tscn")
+		get_tree().change_scene_to_file("res://src/scenes/auth-scenes/choice_server.tscn")
 	else:
 		GLOBAL.failed_reason = message.replace('"',"")
 		waitingresponse.visible = false

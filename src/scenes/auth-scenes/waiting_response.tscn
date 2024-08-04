@@ -134,6 +134,7 @@ flip_h = true
 libraries = {
 "": SubResource("AnimationLibrary_5avx2")
 }
+autoplay = "refreshing"
 
 [node name="WaitLabel" type="Control" parent="."]
 layout_mode = 3
@@ -156,7 +157,6 @@ theme_override_font_sizes/font_size = 21
 theme_override_styles/normal = SubResource("StyleBoxTexture_rav7r")
 text = "Wait..."
 horizontal_alignment = 1
-autowrap_mode = 3
 justification_flags = 235
 
 [node name="Cancel" type="Control" parent="."]

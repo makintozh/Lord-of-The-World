@@ -31,17 +31,22 @@ limit_smoothed = true
 position_smoothing_enabled = true
 editor_draw_limits = true
 
-[node name="BiomUI" type="Control" parent="."]
+[node name="BiomUI" type="Control" parent="Camera2D"]
 layout_mode = 3
 anchors_preset = 0
+offset_left = -248.0
+offset_top = -453.0
+offset_right = -248.0
+offset_bottom = -453.0
 
-[node name="BackButtonContainer" type="MarginContainer" parent="BiomUI"]
+[node name="BackButtonContainer" type="MarginContainer" parent="Camera2D/BiomUI"]
+layout_mode = 0
 offset_left = 11.0
 offset_top = 16.0
 offset_right = 96.0
 offset_bottom = 63.0
 
-[node name="BackButton" type="TextureButton" parent="BiomUI/BackButtonContainer"]
+[node name="BackButton" type="TextureButton" parent="Camera2D/BiomUI/BackButtonContainer"]
 layout_mode = 2
 texture_normal = ExtResource("3_n3uux")
 texture_pressed = ExtResource("3_n3uux")
@@ -282,9 +287,9 @@ stretch_mode = 0
 [node name="NordtoppenLabel" type="MarginContainer" parent="Buildings/Nordtoppen"]
 layout_mode = 0
 offset_left = 4.0
-offset_top = 1021.0
+offset_top = 1076.0
 offset_right = 187.0
-offset_bottom = 1067.0
+offset_bottom = 1122.0
 
 [node name="NordtoppenLabel" type="Label" parent="Buildings/Nordtoppen/NordtoppenLabel"]
 layout_mode = 2
@@ -442,7 +447,7 @@ texture_focused = ExtResource("14_s00r4")
 ignore_texture_size = true
 stretch_mode = 0
 
-[connection signal="pressed" from="BiomUI/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Camera2D/BiomUI/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="Buildings/Civil/Civil/Civil" to="." method="_on_civil_pressed"]
 [connection signal="pressed" from="Buildings/Elborus/Elborus/Elborus" to="." method="_on_elborus_pressed"]
 [connection signal="pressed" from="NaviagteBiom/TopButton/TopButtonContainer/TopButton" to="." method="_on_top_button_pressed"]

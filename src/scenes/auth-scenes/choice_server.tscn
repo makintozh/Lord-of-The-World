@@ -1,0 +1,304 @@
+[gd_scene load_steps=15 format=3 uid="uid://cys1kf7rr5t03"]
+
+[ext_resource type="Script" path="res://src/scripts/game-scripts/choice_server.gd" id="1_o2s7j"]
+[ext_resource type="Texture2D" uid="uid://bmof2g6xlu2bf" path="res://src/ui/backgrounds/background.png" id="2_45t4e"]
+[ext_resource type="Texture2D" uid="uid://c2u2i5n4mifyh" path="res://src/ui/buttons/back_button.png" id="3_nsa51"]
+[ext_resource type="Texture2D" uid="uid://yacxa428bppa" path="res://src/ui/buttons/button_2.png" id="4_x21et"]
+[ext_resource type="Texture2D" uid="uid://oi7h147hx8d" path="res://src/ui/elements/Group 1000006717.png" id="5_4sk1u"]
+[ext_resource type="Texture2D" uid="uid://cjbfs42jpw2ed" path="res://src/ui/buttons/green buttom base long.png" id="6_ff5py"]
+[ext_resource type="Texture2D" uid="uid://cxpni2esf80pi" path="res://src/ui/elements/update 1.png" id="7_q5b6y"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b2grb"]
+texture = ExtResource("6_ff5py")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_45lj6"]
+texture = ExtResource("6_ff5py")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sf5ew"]
+texture = ExtResource("6_ff5py")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jh1a1"]
+texture = ExtResource("6_ff5py")
+
+[sub_resource type="Animation" id="Animation_vhv4n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:flip_v")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_n6wnf"]
+resource_name = "refreshing"
+length = 0.35
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath(".:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [true, false, false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:flip_v")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5avx2"]
+_data = {
+"RESET": SubResource("Animation_vhv4n"),
+"refreshing": SubResource("Animation_n6wnf")
+}
+
+[node name="ChoiceServer" type="Node2D"]
+script = ExtResource("1_o2s7j")
+
+[node name="APIRequest" type="HTTPRequest" parent="."]
+
+[node name="BackGround" type="TextureRect" parent="."]
+offset_left = -2030.0
+offset_top = -208.0
+offset_right = 4335.0
+offset_bottom = 2270.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_45t4e")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="BackGround" type="TextureRect" parent="BackGround"]
+layout_mode = 0
+offset_left = -21.0
+offset_top = 1224.0
+offset_right = 6344.0
+offset_bottom = 3702.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_45t4e")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="BackGround" type="TextureRect" parent="BackGround/BackGround"]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 695.0
+offset_right = 6359.0
+offset_bottom = 3173.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_45t4e")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="BackGround" type="TextureRect" parent="BackGround/BackGround/BackGround"]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 695.0
+offset_right = 6359.0
+offset_bottom = 3173.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_45t4e")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="BackGround" type="TextureRect" parent="BackGround/BackGround/BackGround/BackGround"]
+offset_left = -6.0
+offset_top = -4915.0
+offset_right = 6359.0
+offset_bottom = -2437.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_45t4e")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="Server-List" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Main-Server" type="Control" parent="Server-List"]
+visible = false
+layout_mode = 2
+anchors_preset = 0
+offset_right = 40.0
+
+[node name="ServerBackGroundContainer" type="MarginContainer" parent="Server-List/Main-Server"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 127.0
+offset_right = 481.0
+offset_bottom = 212.0
+
+[node name="ServerBackGroundTexture" type="TextureRect" parent="Server-List/Main-Server/ServerBackGroundContainer"]
+layout_mode = 2
+texture = ExtResource("4_x21et")
+
+[node name="ServerLanguageContainer" type="MarginContainer" parent="Server-List/Main-Server"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 144.0
+offset_right = 89.0
+offset_bottom = 192.0
+
+[node name="ServerLanguageContainer" type="TextureRect" parent="Server-List/Main-Server/ServerLanguageContainer"]
+layout_mode = 2
+texture = ExtResource("5_4sk1u")
+
+[node name="ServarNameContainer" type="MarginContainer" parent="Server-List/Main-Server"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 148.0
+offset_right = 234.0
+offset_bottom = 190.0
+
+[node name="ServerName" type="Label" parent="Server-List/Main-Server/ServarNameContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 31
+text = "SERVER NAME"
+
+[node name="ServerPlayButton" type="MarginContainer" parent="Server-List/Main-Server"]
+layout_mode = 0
+offset_left = 359.0
+offset_top = 147.0
+offset_right = 459.0
+offset_bottom = 190.0
+
+[node name="PlayButton" type="Button" parent="Server-List/Main-Server/ServerPlayButton"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_sf5ew")
+theme_override_styles/focus = SubResource("StyleBoxTexture_jh1a1")
+text = "Play"
+
+[node name="CameraView" type="Camera2D" parent="."]
+position = Vector2(252, 447)
+
+[node name="UI" type="Control" parent="CameraView"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -252.0
+offset_top = -447.0
+offset_right = -212.0
+offset_bottom = -407.0
+
+[node name="BackButtonContainer" type="MarginContainer" parent="CameraView/UI"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 18.0
+offset_right = 85.0
+offset_bottom = 83.0
+
+[node name="BackButton" type="TextureButton" parent="CameraView/UI/BackButtonContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_nsa51")
+texture_pressed = ExtResource("3_nsa51")
+texture_hover = ExtResource("3_nsa51")
+texture_disabled = ExtResource("3_nsa51")
+texture_focused = ExtResource("3_nsa51")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SelectServerLabelContainer" type="MarginContainer" parent="CameraView/UI"]
+layout_mode = 0
+offset_left = 173.0
+offset_top = 28.0
+offset_right = 314.0
+offset_bottom = 68.0
+
+[node name="SelectServerLabel" type="Label" parent="CameraView/UI/SelectServerLabelContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Select server"
+
+[node name="Refresh" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 4.0
+offset_top = -179.0
+offset_right = 44.0
+offset_bottom = -139.0
+
+[node name="Refresh" type="MarginContainer" parent="Refresh"]
+layout_mode = 1
+offset_left = 182.0
+offset_top = 553.0
+offset_right = 286.0
+offset_bottom = 663.0
+
+[node name="Refresh" type="TextureRect" parent="Refresh/Refresh"]
+layout_mode = 2
+texture = ExtResource("7_q5b6y")
+expand_mode = 1
+flip_h = true
+
+[node name="RefreshAnimation" type="AnimationPlayer" parent="Refresh/Refresh/Refresh"]
+libraries = {
+"": SubResource("AnimationLibrary_5avx2")
+}
+autoplay = "refreshing"
+
+[node name="Refresh_Label" type="MarginContainer" parent="Refresh"]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 658.0
+offset_right = 321.0
+offset_bottom = 698.0
+
+[node name="Refresh_Label" type="Label" parent="Refresh/Refresh_Label"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = "Loading servers..."
+
+[node name="Server_Pagination_Scroll" type="VScrollBar" parent="."]
+process_mode = 3
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -255.0
+offset_top = 89.0
+offset_right = 383.0
+offset_bottom = 1169.0
+pivot_offset = Vector2(0, 0.095)
+min_value = -1200.0
+max_value = 0.0
+page = 100.0
+value = -100.0
+
+[connection signal="request_completed" from="APIRequest" to="." method="_on_api_request_request_completed"]
+[connection signal="pressed" from="Server-List/Main-Server/ServerPlayButton/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="CameraView/UI/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]
