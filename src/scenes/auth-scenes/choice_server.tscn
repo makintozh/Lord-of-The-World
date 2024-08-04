@@ -99,6 +99,7 @@ expand_mode = 2
 stretch_mode = 1
 
 [node name="BackGround" type="TextureRect" parent="BackGround"]
+layout_mode = 0
 offset_left = -21.0
 offset_top = 1224.0
 offset_right = 6344.0
@@ -110,6 +111,7 @@ expand_mode = 2
 stretch_mode = 1
 
 [node name="BackGround" type="TextureRect" parent="BackGround/BackGround"]
+layout_mode = 0
 offset_left = -6.0
 offset_top = 695.0
 offset_right = 6359.0
@@ -121,10 +123,22 @@ expand_mode = 2
 stretch_mode = 1
 
 [node name="BackGround" type="TextureRect" parent="BackGround/BackGround/BackGround"]
+layout_mode = 0
 offset_left = -6.0
 offset_top = 695.0
 offset_right = 6359.0
 offset_bottom = 3173.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_45t4e")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="BackGround" type="TextureRect" parent="BackGround/BackGround/BackGround/BackGround"]
+offset_left = -6.0
+offset_top = -4915.0
+offset_right = 6359.0
+offset_bottom = -2437.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_45t4e")
@@ -274,12 +288,11 @@ text = "Loading servers..."
 
 [node name="Server_Pagination_Scroll" type="VScrollBar" parent="."]
 process_mode = 3
-visible = false
 self_modulate = Color(1, 1, 1, 0)
-offset_left = -527.0
-offset_top = -106.0
-offset_right = 379.0
-offset_bottom = 987.0
+offset_left = -255.0
+offset_top = 89.0
+offset_right = 383.0
+offset_bottom = 1169.0
 pivot_offset = Vector2(0, 0.095)
 min_value = -1200.0
 max_value = 0.0

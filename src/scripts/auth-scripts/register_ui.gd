@@ -103,7 +103,7 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 	var api_response = JSON.parse_string(body.get_string_from_utf8())
 	var message = str(api_response["message"])
 	var token = str(api_response["token"])
-	
+		
 	
 	print(str(result))
 	print("Ответ: " + str(api_response))
