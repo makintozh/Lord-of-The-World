@@ -274,6 +274,7 @@ text = "Loading servers..."
 
 [node name="Server_Pagination_Scroll" type="VScrollBar" parent="."]
 process_mode = 3
+visible = false
 self_modulate = Color(1, 1, 1, 0)
 offset_left = -527.0
 offset_top = -106.0
