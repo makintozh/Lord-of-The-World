@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://bkqop5vtydbqm"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/elborus-hub.gd" id="1_tbxwe"]
-[ext_resource type="Texture2D" uid="uid://cqkf3yemq52r3" path="res://src/ui/backgrounds/Уbioms 1.png" id="2_mi8b7"]
+[ext_resource type="Texture2D" uid="uid://byxdhy5ltq4mn" path="res://src/ui/backgrounds/battle-backgrounds/Elborus-HUB.png" id="2_3jjmd"]
 [ext_resource type="Texture2D" uid="uid://ccd7lnobgoth5" path="res://src/ui/buttons/arrow back white.png" id="3_ohfh3"]
 [ext_resource type="Texture2D" uid="uid://cjtckd87lwd0c" path="res://src/ui/buttons/bottom.png" id="4_q0a5f"]
 [ext_resource type="Texture2D" uid="uid://cd4ulgx3ykttj" path="res://src/ui/buttons/bottom off 3.png" id="5_fqh72"]
@@ -18,11 +18,13 @@
 [node name="Elborus-hub" type="Node2D"]
 script = ExtResource("1_tbxwe")
 
-[node name="BackGround" type="TextureRect" parent="."]
-offset_left = -5.0
-offset_right = 502.0
-offset_bottom = 905.0
-texture = ExtResource("2_mi8b7")
+[node name="BackGround-Image" type="TextureRect" parent="."]
+offset_top = -1.0
+offset_right = 500.0
+offset_bottom = 901.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_3jjmd")
 expand_mode = 1
 
 [node name="UI" type="Control" parent="."]

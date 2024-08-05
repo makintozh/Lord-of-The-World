@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://b4nxlq3fl4exg"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/battle.gd" id="1_i4757"]
-[ext_resource type="Texture2D" uid="uid://dh0n6js15cvpy" path="res://src/ui/backgrounds/Battle elborus 1.png" id="2_b64sn"]
-[ext_resource type="VideoStream" path="res://src/ui/video/battle-video-background.ogv" id="2_hujrb"]
+[ext_resource type="Texture2D" uid="uid://jyt6o7mlkqx" path="res://src/ui/backgrounds/battle-backgrounds/Гномы.PNG" id="2_63c6g"]
+[ext_resource type="VideoStream" path="res://src/ui/backgrounds/battle-backgrounds/Гномы.ogv" id="2_stiwa"]
 [ext_resource type="Texture2D" uid="uid://c2u2i5n4mifyh" path="res://src/ui/buttons/back_button.png" id="3_in8rb"]
 [ext_resource type="Texture2D" uid="uid://b604lcs55mpp0" path="res://src/ui/elements/Battle_Card.png" id="5_b0uih"]
 
@@ -17,13 +17,13 @@ offset_right = 500.0
 offset_bottom = 901.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("2_b64sn")
+texture = ExtResource("2_63c6g")
 expand_mode = 1
 
 [node name="BackGround-Video" type="VideoStreamPlayer" parent="."]
 offset_right = 504.0
 offset_bottom = 904.0
-stream = ExtResource("2_hujrb")
+stream = ExtResource("2_stiwa")
 autoplay = true
 expand = true
 loop = true
@@ -33,6 +33,7 @@ layout_mode = 3
 anchors_preset = 0
 
 [node name="BattleStepContainer" type="MarginContainer" parent="BattleStepLayer"]
+layout_mode = 0
 offset_right = 320.0
 offset_bottom = 81.0
 theme_override_constants/margin_left = 170
@@ -49,6 +50,7 @@ layout_mode = 3
 anchors_preset = 0
 
 [node name="BackButtonContainer" type="MarginContainer" parent="BackButtonLayer"]
+layout_mode = 0
 offset_left = 16.0
 offset_top = 16.0
 offset_right = 88.0
