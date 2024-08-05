@@ -1,26 +1,37 @@
-[gd_scene load_steps=12 format=3 uid="uid://pk7extbu3xea"]
+[gd_scene load_steps=13 format=3 uid="uid://pk7extbu3xea"]
 
-[ext_resource type="Texture2D" uid="uid://ds2kt5kynslc8" path="res://src/ui/backgrounds/menu back 1.png" id="1_26rl2"]
+[ext_resource type="Texture2D" uid="uid://cetoyxw7mpg6l" path="res://src/ui/backgrounds/Главный-экран.PNG" id="1_26rl2"]
 [ext_resource type="Script" path="res://src/scripts/game-scripts/navigation-menu.gd" id="1_ykvwa"]
 [ext_resource type="Texture2D" uid="uid://d1566y1lveil3" path="res://src/ui/elements/Group 173.png" id="2_qyodl"]
-[ext_resource type="Texture2D" uid="uid://bfdu0amwv7dk3" path="res://src/ui/buildings/hub 2.png" id="3_102d5"]
+[ext_resource type="Texture2D" uid="uid://dx6gagsxuu4uy" path="res://src/ui/buildings/Кланы.png" id="3_102d5"]
 [ext_resource type="Texture2D" uid="uid://10u8v4p7qqrb" path="res://src/ui/characters/character 1.png" id="3_rdbyu"]
-[ext_resource type="Texture2D" uid="uid://d3ckctk8kht1b" path="res://src/ui/buildings/bioms 1.png" id="4_npf7f"]
+[ext_resource type="VideoStream" path="res://src/ui/backgrounds/Главный-экран.ogv" id="3_xteh7"]
 [ext_resource type="Texture2D" uid="uid://dv3mstmdt3l0p" path="res://src/ui/characters/c2.png" id="4_s10b8"]
 [ext_resource type="Texture2D" uid="uid://de4kxwypkmp71" path="res://src/ui/buildings/craft 1.png" id="5_4fuof"]
 [ext_resource type="Texture2D" uid="uid://doi260lvadhgo" path="res://src/ui/characters/c3.png" id="5_ky8tc"]
 [ext_resource type="Texture2D" uid="uid://dxoe0auoe6ivu" path="res://src/ui/buildings/osady 1.png" id="6_y2eeh"]
 [ext_resource type="Texture2D" uid="uid://cyc7b3rsh3qrr" path="res://src/ui/elements/Слой 7.png" id="7_gn6ft"]
+[ext_resource type="Texture2D" uid="uid://b1jvu0yh8ojpp" path="res://src/ui/buildings/Биомы.png" id="9_0hf05"]
 
 [node name="Navigation-menu" type="Node2D"]
 script = ExtResource("1_ykvwa")
 
-[node name="BackGround" type="TextureRect" parent="."]
+[node name="BackGround-Image" type="TextureRect" parent="."]
+offset_top = -1.0
 offset_right = 500.0
-offset_bottom = 932.0
+offset_bottom = 901.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("1_26rl2")
+expand_mode = 1
+
+[node name="BackGround-Video" type="VideoStreamPlayer" parent="."]
+offset_right = 504.0
+offset_bottom = 904.0
+stream = ExtResource("3_xteh7")
+autoplay = true
+expand = true
+loop = true
 
 [node name="PlayerProfileUI" type="CanvasLayer" parent="."]
 
@@ -123,17 +134,17 @@ offset_bottom = 40.0
 
 [node name="Biom" type="MarginContainer" parent="Buildings/Biom"]
 layout_mode = 0
-offset_left = 264.0
-offset_top = 96.0
-offset_right = 474.0
-offset_bottom = 300.0
+offset_left = 278.0
+offset_top = 98.0
+offset_right = 450.0
+offset_bottom = 259.0
 
 [node name="Biom" type="TextureButton" parent="Buildings/Biom/Biom"]
 layout_mode = 2
-texture_normal = ExtResource("4_npf7f")
-texture_pressed = ExtResource("4_npf7f")
-texture_hover = ExtResource("4_npf7f")
-texture_focused = ExtResource("4_npf7f")
+texture_normal = ExtResource("9_0hf05")
+texture_pressed = ExtResource("9_0hf05")
+texture_hover = ExtResource("9_0hf05")
+texture_focused = ExtResource("9_0hf05")
 ignore_texture_size = true
 stretch_mode = 0
 

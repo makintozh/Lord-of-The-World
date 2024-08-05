@@ -135,6 +135,7 @@ expand_mode = 2
 stretch_mode = 1
 
 [node name="BackGround" type="TextureRect" parent="BackGround/BackGround/BackGround/BackGround"]
+layout_mode = 0
 offset_left = -6.0
 offset_top = -4915.0
 offset_right = 6359.0
