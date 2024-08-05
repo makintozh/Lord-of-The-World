@@ -32,7 +32,7 @@ func _ready():
 		login_data.text = GLOBAL.username
 		password_data.text = GLOBAL.password
 		
-		$UI.scale = get_viewport().scale
+		
 		
 
 
