@@ -1,0 +1,273 @@
+[gd_scene load_steps=7 format=3 uid="uid://rekbabkemi6e"]
+
+[ext_resource type="Texture2D" uid="uid://cs2v3w5agn0ti" path="res://src/ui/backgrounds/battle-backgrounds/Нежить.PNG" id="1_8gfdy"]
+[ext_resource type="Script" path="res://src/scripts/game-scripts/torres-mortes.gd" id="1_fwnmi"]
+[ext_resource type="VideoStream" path="res://src/ui/backgrounds/battle-backgrounds/Нежить.ogv" id="2_wndqi"]
+[ext_resource type="Texture2D" uid="uid://c2u2i5n4mifyh" path="res://src/ui/buttons/back_button.png" id="3_8jagm"]
+[ext_resource type="Texture2D" uid="uid://b604lcs55mpp0" path="res://src/ui/elements/Battle_Card.png" id="4_ka2nq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_huxy3"]
+
+[node name="Torres-mortes" type="Node2D"]
+script = ExtResource("1_fwnmi")
+
+[node name="BackGround-Image" type="TextureRect" parent="."]
+offset_top = -1.0
+offset_right = 500.0
+offset_bottom = 901.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_8gfdy")
+expand_mode = 1
+
+[node name="BackGround-Video" type="VideoStreamPlayer" parent="."]
+offset_right = 504.0
+offset_bottom = 904.0
+stream = ExtResource("2_wndqi")
+autoplay = true
+expand = true
+loop = true
+
+[node name="BattleStepLayer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="BattleStepContainer" type="MarginContainer" parent="BattleStepLayer"]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 81.0
+theme_override_constants/margin_left = 170
+theme_override_constants/margin_top = 25
+
+[node name="BattleStep" type="Label" parent="BattleStepLayer/BattleStepContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_huxy3")
+text = "Ход 1\\10"
+
+[node name="BackButtonLayer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="BackButtonContainer" type="MarginContainer" parent="BackButtonLayer"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 88.0
+offset_bottom = 73.0
+
+[node name="BackButton" type="TextureButton" parent="BackButtonLayer/BackButtonContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_8jagm")
+texture_pressed = ExtResource("3_8jagm")
+texture_hover = ExtResource("3_8jagm")
+texture_focused = ExtResource("3_8jagm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="PlayerCards" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Card" type="MarginContainer" parent="PlayerCards"]
+layout_mode = 0
+offset_left = 189.0
+offset_top = 733.0
+offset_right = 279.0
+offset_bottom = 856.0
+
+[node name="Card" type="TextureButton" parent="PlayerCards/Card"]
+layout_mode = 2
+texture_normal = ExtResource("4_ka2nq")
+texture_pressed = ExtResource("4_ka2nq")
+texture_hover = ExtResource("4_ka2nq")
+texture_focused = ExtResource("4_ka2nq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Card2" type="MarginContainer" parent="PlayerCards"]
+layout_mode = 0
+offset_left = 189.0
+offset_top = 601.0
+offset_right = 279.0
+offset_bottom = 724.0
+
+[node name="Card" type="TextureButton" parent="PlayerCards/Card2"]
+layout_mode = 2
+texture_normal = ExtResource("4_ka2nq")
+texture_pressed = ExtResource("4_ka2nq")
+texture_hover = ExtResource("4_ka2nq")
+texture_focused = ExtResource("4_ka2nq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Card3" type="MarginContainer" parent="PlayerCards"]
+layout_mode = 0
+offset_left = 330.0
+offset_top = 589.0
+offset_right = 420.0
+offset_bottom = 712.0
+
+[node name="Card" type="TextureButton" parent="PlayerCards/Card3"]
+layout_mode = 2
+texture_normal = ExtResource("4_ka2nq")
+texture_pressed = ExtResource("4_ka2nq")
+texture_hover = ExtResource("4_ka2nq")
+texture_focused = ExtResource("4_ka2nq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Card4" type="MarginContainer" parent="PlayerCards"]
+layout_mode = 0
+offset_left = 330.0
+offset_top = 722.0
+offset_right = 420.0
+offset_bottom = 845.0
+
+[node name="Card" type="TextureButton" parent="PlayerCards/Card4"]
+layout_mode = 2
+texture_normal = ExtResource("4_ka2nq")
+texture_pressed = ExtResource("4_ka2nq")
+texture_hover = ExtResource("4_ka2nq")
+texture_focused = ExtResource("4_ka2nq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Card5" type="MarginContainer" parent="PlayerCards"]
+layout_mode = 0
+offset_left = 52.9
+offset_top = 589.0
+offset_right = 142.9
+offset_bottom = 712.0
+
+[node name="Card" type="TextureButton" parent="PlayerCards/Card5"]
+layout_mode = 2
+texture_normal = ExtResource("4_ka2nq")
+texture_pressed = ExtResource("4_ka2nq")
+texture_hover = ExtResource("4_ka2nq")
+texture_focused = ExtResource("4_ka2nq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Card6" type="MarginContainer" parent="PlayerCards"]
+layout_mode = 0
+offset_left = 52.9
+offset_top = 722.0
+offset_right = 142.9
+offset_bottom = 845.0
+
+[node name="Card" type="TextureButton" parent="PlayerCards/Card6"]
+layout_mode = 2
+texture_normal = ExtResource("4_ka2nq")
+texture_pressed = ExtResource("4_ka2nq")
+texture_hover = ExtResource("4_ka2nq")
+texture_focused = ExtResource("4_ka2nq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="EnemyCards" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = -457.465
+offset_right = 40.0
+offset_bottom = -417.465
+
+[node name="Card" type="MarginContainer" parent="EnemyCards"]
+layout_mode = 0
+offset_left = 189.0
+offset_top = 733.0
+offset_right = 279.0
+offset_bottom = 856.0
+
+[node name="Card" type="TextureButton" parent="EnemyCards/Card"]
+layout_mode = 2
+texture_normal = ExtResource("4_ka2nq")
+texture_pressed = ExtResource("4_ka2nq")
+texture_hover = ExtResource("4_ka2nq")
+texture_focused = ExtResource("4_ka2nq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Card2" type="MarginContainer" parent="EnemyCards"]
+layout_mode = 0
+offset_left = 189.0
+offset_top = 601.0
+offset_right = 279.0
+offset_bottom = 724.0
+
+[node name="Card" type="TextureButton" parent="EnemyCards/Card2"]
+layout_mode = 2
+texture_normal = ExtResource("4_ka2nq")
+texture_pressed = ExtResource("4_ka2nq")
+texture_hover = ExtResource("4_ka2nq")
+texture_focused = ExtResource("4_ka2nq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Card3" type="MarginContainer" parent="EnemyCards"]
+layout_mode = 0
+offset_left = 330.0
+offset_top = 589.0
+offset_right = 420.0
+offset_bottom = 712.0
+
+[node name="Card" type="TextureButton" parent="EnemyCards/Card3"]
+layout_mode = 2
+texture_normal = ExtResource("4_ka2nq")
+texture_pressed = ExtResource("4_ka2nq")
+texture_hover = ExtResource("4_ka2nq")
+texture_focused = ExtResource("4_ka2nq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Card4" type="MarginContainer" parent="EnemyCards"]
+layout_mode = 0
+offset_left = 330.0
+offset_top = 722.0
+offset_right = 420.0
+offset_bottom = 845.0
+
+[node name="Card" type="TextureButton" parent="EnemyCards/Card4"]
+layout_mode = 2
+texture_normal = ExtResource("4_ka2nq")
+texture_pressed = ExtResource("4_ka2nq")
+texture_hover = ExtResource("4_ka2nq")
+texture_focused = ExtResource("4_ka2nq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Card5" type="MarginContainer" parent="EnemyCards"]
+layout_mode = 0
+offset_left = 52.9
+offset_top = 589.0
+offset_right = 142.9
+offset_bottom = 712.0
+
+[node name="Card" type="TextureButton" parent="EnemyCards/Card5"]
+layout_mode = 2
+texture_normal = ExtResource("4_ka2nq")
+texture_pressed = ExtResource("4_ka2nq")
+texture_hover = ExtResource("4_ka2nq")
+texture_focused = ExtResource("4_ka2nq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Card6" type="MarginContainer" parent="EnemyCards"]
+layout_mode = 0
+offset_left = 52.9
+offset_top = 722.0
+offset_right = 142.9
+offset_bottom = 845.0
+
+[node name="Card" type="TextureButton" parent="EnemyCards/Card6"]
+layout_mode = 2
+texture_normal = ExtResource("4_ka2nq")
+texture_pressed = ExtResource("4_ka2nq")
+texture_hover = ExtResource("4_ka2nq")
+texture_focused = ExtResource("4_ka2nq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="BackButtonLayer/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]

@@ -27,8 +27,9 @@ texture = ExtResource("2_ej0f2")
 expand_mode = 1
 
 [node name="BackGround-Image" type="TextureRect" parent="."]
-offset_top = 107.0
-offset_right = 500.0
+offset_left = -9.0
+offset_top = 114.0
+offset_right = 507.0
 offset_bottom = 1011.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -37,7 +38,7 @@ expand_mode = 1
 
 [node name="BackGround-Video" type="VideoStreamPlayer" parent="."]
 offset_top = 108.0
-offset_right = 504.0
+offset_right = 508.0
 offset_bottom = 1007.0
 stream = ExtResource("3_xteh7")
 autoplay = true

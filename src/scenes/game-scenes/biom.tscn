@@ -61,20 +61,20 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Civil" type="Control" parent="Buildings"]
+[node name="Civil-Human" type="Control" parent="Buildings"]
 anchors_preset = 0
 offset_top = -3.0
 offset_right = 40.0
 offset_bottom = 37.0
 
-[node name="Civil" type="MarginContainer" parent="Buildings/Civil"]
+[node name="Civil" type="MarginContainer" parent="Buildings/Civil-Human"]
 layout_mode = 0
 offset_left = -10.0
 offset_top = 60.0
 offset_right = 297.0
 offset_bottom = 380.0
 
-[node name="Civil" type="TextureButton" parent="Buildings/Civil/Civil"]
+[node name="Civil" type="TextureButton" parent="Buildings/Civil-Human/Civil"]
 layout_mode = 2
 texture_normal = ExtResource("5_oitrf")
 texture_pressed = ExtResource("5_oitrf")
@@ -83,33 +83,33 @@ texture_focused = ExtResource("5_oitrf")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="CivilLabel" type="MarginContainer" parent="Buildings/Civil"]
+[node name="CivilLabel" type="MarginContainer" parent="Buildings/Civil-Human"]
 layout_mode = 0
 offset_left = 58.0
 offset_top = 104.0
 offset_right = 169.0
 offset_bottom = 150.0
 
-[node name="CivilLabel" type="Label" parent="Buildings/Civil/CivilLabel"]
+[node name="CivilLabel" type="Label" parent="Buildings/Civil-Human/CivilLabel"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 34
 text = "Civil
 "
 
-[node name="Taurelious" type="Control" parent="Buildings"]
+[node name="Taurelious-Elves" type="Control" parent="Buildings"]
 anchors_preset = 0
 offset_top = -1.0
 offset_right = 40.0
 offset_bottom = 39.0
 
-[node name="Taurelious" type="MarginContainer" parent="Buildings/Taurelious"]
+[node name="Taurelious" type="MarginContainer" parent="Buildings/Taurelious-Elves"]
 layout_mode = 0
 offset_left = 289.0
 offset_top = 240.0
 offset_right = 463.0
 offset_bottom = 437.0
 
-[node name="Taurelious" type="TextureButton" parent="Buildings/Taurelious/Taurelious"]
+[node name="Taurelious" type="TextureButton" parent="Buildings/Taurelious-Elves/Taurelious"]
 layout_mode = 2
 texture_normal = ExtResource("6_c7amb")
 texture_pressed = ExtResource("6_c7amb")
@@ -118,31 +118,31 @@ texture_focused = ExtResource("6_c7amb")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="TaureliousLabel" type="MarginContainer" parent="Buildings/Taurelious"]
+[node name="TaureliousLabel" type="MarginContainer" parent="Buildings/Taurelious-Elves"]
 layout_mode = 0
 offset_left = 286.0
 offset_top = 197.0
 offset_right = 449.0
 offset_bottom = 243.0
 
-[node name="TaureliousLabel" type="Label" parent="Buildings/Taurelious/TaureliousLabel"]
+[node name="TaureliousLabel" type="Label" parent="Buildings/Taurelious-Elves/TaureliousLabel"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 34
 text = "Taurelious"
 
-[node name="Elborus" type="Control" parent="Buildings"]
+[node name="Elborus-Gnomes" type="Control" parent="Buildings"]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Elborus" type="MarginContainer" parent="Buildings/Elborus"]
+[node name="Elborus" type="MarginContainer" parent="Buildings/Elborus-Gnomes"]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 507.0
 offset_right = 190.0
 offset_bottom = 705.0
 
-[node name="Elborus" type="TextureButton" parent="Buildings/Elborus/Elborus"]
+[node name="Elborus" type="TextureButton" parent="Buildings/Elborus-Gnomes/Elborus"]
 layout_mode = 2
 texture_normal = ExtResource("7_w1lb3")
 texture_pressed = ExtResource("7_w1lb3")
@@ -151,31 +151,31 @@ texture_focused = ExtResource("7_w1lb3")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="ElborusLabel" type="MarginContainer" parent="Buildings/Elborus"]
+[node name="ElborusLabel" type="MarginContainer" parent="Buildings/Elborus-Gnomes"]
 layout_mode = 0
 offset_left = 49.0
 offset_top = 455.0
 offset_right = 165.0
 offset_bottom = 501.0
 
-[node name="ElborusLabel" type="Label" parent="Buildings/Elborus/ElborusLabel"]
+[node name="ElborusLabel" type="Label" parent="Buildings/Elborus-Gnomes/ElborusLabel"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 34
 text = "Elborus"
 
-[node name="CivilMortes" type="Control" parent="Buildings"]
+[node name="Torres-Mortes-Nejitb" type="Control" parent="Buildings"]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="CivilMortes" type="MarginContainer" parent="Buildings/CivilMortes"]
+[node name="Torres-Mortes" type="MarginContainer" parent="Buildings/Torres-Mortes-Nejitb"]
 layout_mode = 0
 offset_left = 204.0
 offset_top = 506.0
 offset_right = 497.0
 offset_bottom = 832.0
 
-[node name="CivilMortes" type="TextureButton" parent="Buildings/CivilMortes/CivilMortes"]
+[node name="Torres-Mortes" type="TextureButton" parent="Buildings/Torres-Mortes-Nejitb/Torres-Mortes"]
 layout_mode = 2
 texture_normal = ExtResource("8_8x7xb")
 texture_pressed = ExtResource("8_8x7xb")
@@ -184,18 +184,17 @@ texture_focused = ExtResource("8_8x7xb")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="CivilMortesLabel" type="MarginContainer" parent="Buildings/CivilMortes"]
+[node name="Torres-MortesLabel" type="MarginContainer" parent="Buildings/Torres-Mortes-Nejitb"]
 layout_mode = 0
-offset_left = 360.0
+offset_left = 259.0
 offset_top = 532.0
-offset_right = 476.0
+offset_right = 481.0
 offset_bottom = 578.0
 
-[node name="CivilMortesLabel" type="Label" parent="Buildings/CivilMortes/CivilMortesLabel"]
+[node name="Torres-MortesLabel" type="Label" parent="Buildings/Torres-Mortes-Nejitb/Torres-MortesLabel"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 34
-text = "Civil
-"
+text = "Torres-Mortes"
 
 [node name="Forest" type="Control" parent="Buildings"]
 anchors_preset = 0
@@ -448,7 +447,14 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [connection signal="pressed" from="Camera2D/BiomUI/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="Buildings/Civil/Civil/Civil" to="." method="_on_civil_pressed"]
-[connection signal="pressed" from="Buildings/Elborus/Elborus/Elborus" to="." method="_on_elborus_pressed"]
+[connection signal="pressed" from="Buildings/Civil-Human/Civil/Civil" to="." method="_on_civil_pressed"]
+[connection signal="pressed" from="Buildings/Taurelious-Elves/Taurelious/Taurelious" to="." method="_on_taurelious_pressed"]
+[connection signal="pressed" from="Buildings/Elborus-Gnomes/Elborus/Elborus" to="." method="_on_elborus_pressed"]
+[connection signal="pressed" from="Buildings/Torres-Mortes-Nejitb/Torres-Mortes/Torres-Mortes" to="." method="_on_torres_mortes_pressed"]
+[connection signal="pressed" from="Buildings/Forest/Forest/Forest" to="." method="_on_forest_pressed"]
+[connection signal="pressed" from="Buildings/Carvaras/Carvaras/Carvaras" to="." method="_on_carvaras_pressed"]
+[connection signal="pressed" from="Buildings/Nordtoppen/Nordtoppen/Nordtoppen" to="." method="_on_nordtoppen_pressed"]
+[connection signal="pressed" from="Buildings/Keyfand/Keyfand/Keyfand" to="." method="_on_keyfand_pressed"]
+[connection signal="pressed" from="Buildings/Meches/Meches/Meches" to="." method="_on_meches_pressed"]
 [connection signal="pressed" from="NaviagteBiom/TopButton/TopButtonContainer/TopButton" to="." method="_on_top_button_pressed"]
 [connection signal="pressed" from="NaviagteBiom/BottomButton/BottomButtonContainer/BottomButton" to="." method="_on_bottom_button_pressed"]
