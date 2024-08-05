@@ -297,9 +297,9 @@ offset_bottom = 1169.0
 pivot_offset = Vector2(0, 0.095)
 min_value = -1200.0
 max_value = 0.0
-page = 100.0
+step = -100.0
+page = 50.0
 value = -100.0
 
 [connection signal="request_completed" from="APIRequest" to="." method="_on_api_request_request_completed"]
-[connection signal="pressed" from="Server-List/Main-Server/ServerPlayButton/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="CameraView/UI/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]

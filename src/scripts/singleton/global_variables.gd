@@ -33,11 +33,3 @@ var disable_button_transparent = "ffffff78"   #Прозрачность Отлю
 
 
 
-
-
-
-
-
-
-
-

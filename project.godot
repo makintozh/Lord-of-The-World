@@ -27,8 +27,6 @@ GLOBAL="*res://src/scripts/singleton/global_variables.gd"
 
 window/size/viewport_width=500
 window/size/viewport_height=900
-window/size/resizable=false
-window/size/borderless=true
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 window/handheld/orientation=5
@@ -38,6 +36,10 @@ window/vsync/vsync_mode=0
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/GameGUI/plugin.cfg")
 
 [file_customization]
 
@@ -54,6 +56,12 @@ folder_colors={
 [gui]
 
 theme/custom_font="res://src/fonts/inika/Inika-Bold.ttf"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+pointing/android/enable_long_press_as_right_click=true
+pointing/android/enable_pan_and_scale_gestures=true
 
 [rendering]
 

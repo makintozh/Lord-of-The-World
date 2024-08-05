@@ -50,17 +50,6 @@ texture = ExtResource("9_ksyfj")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v88gt"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ug50c"]
-texture = ExtResource("10_r0d8d")
-texture_margin_left = 55.0
-texture_margin_right = 50.0
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nj4nk"]
-texture = ExtResource("10_r0d8d")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xlckv"]
-texture = ExtResource("11_dkifd")
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mboba"]
 texture = ExtResource("10_r0d8d")
 texture_margin_left = 55.0
@@ -76,6 +65,17 @@ texture = ExtResource("11_dkifd")
 texture = ExtResource("10_r0d8d")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yyylc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ug50c"]
+texture = ExtResource("10_r0d8d")
+texture_margin_left = 55.0
+texture_margin_right = 50.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nj4nk"]
+texture = ExtResource("10_r0d8d")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xlckv"]
+texture = ExtResource("11_dkifd")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ryqk"]
 
@@ -118,9 +118,11 @@ texture = ExtResource("3_a17al")
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="LoginInfoUI" type="MarginContainer" parent="UI"]
 layout_mode = 0
@@ -240,6 +242,45 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_3kkr4")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_v88gt")
 text = "Forgot password?"
 
+[node name="Navigation" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="NavigationContainer" type="HBoxContainer" parent="Navigation"]
+offset_left = 35.5
+offset_top = 727.0
+offset_right = 465.5
+offset_bottom = 814.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+theme_override_constants/separation = 11
+alignment = 1
+
+[node name="LoginButton" type="Button" parent="Navigation/NavigationContainer"]
+modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+theme_override_font_sizes/font_size = 31
+theme_override_styles/normal = SubResource("StyleBoxTexture_mboba")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8taut")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_c224n")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_u7u7t")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yyylc")
+text = "Log in"
+
+[node name="RegisterButton" type="Button" parent="Navigation/NavigationContainer"]
+layout_direction = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 31
+theme_override_styles/normal = SubResource("StyleBoxTexture_ug50c")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nj4nk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xlckv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v88gt")
+text = "Register"
+
 [node name="LoginText" type="Label" parent="."]
 anchors_preset = -1
 anchor_left = 0.5
@@ -254,44 +295,6 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 51
 text = "Log in"
 
-[node name="NavigationContainer" type="HBoxContainer" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 33.0
-offset_top = 727.0
-offset_right = 455.0
-offset_bottom = 814.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-size_flags_stretch_ratio = 0.0
-theme_override_constants/separation = 11
-alignment = 1
-
-[node name="RegisterButton" type="Button" parent="NavigationContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 31
-theme_override_styles/normal = SubResource("StyleBoxTexture_ug50c")
-theme_override_styles/hover = SubResource("StyleBoxTexture_nj4nk")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_xlckv")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_v88gt")
-text = "Register"
-
-[node name="LoginButton" type="Button" parent="NavigationContainer"]
-modulate = Color(1, 1, 1, 0.470588)
-layout_mode = 2
-theme_override_font_sizes/font_size = 31
-theme_override_styles/normal = SubResource("StyleBoxTexture_mboba")
-theme_override_styles/hover = SubResource("StyleBoxTexture_8taut")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_c224n")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_u7u7t")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_yyylc")
-text = "Log in"
-
 [node name="TechSupportUI" type="MarginContainer" parent="."]
 anchors_preset = 7
 anchor_left = 0.5
@@ -304,9 +307,13 @@ offset_right = 361.0
 offset_bottom = 875.0
 grow_horizontal = 2
 grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="TechSupportButton" type="Button" parent="TechSupportUI"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_font_sizes/font_size = 30
 theme_override_styles/hover = SubResource("StyleBoxEmpty_1ryqk")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_ekwd1")
@@ -326,5 +333,5 @@ visible = false
 [connection signal="toggled" from="UI/PasswordHideUI/PasswordHideButton" to="." method="_on_password_hide_button_toggled"]
 [connection signal="toggled" from="UI/RememberMeUI/RememberMeCheckBox" to="." method="_on_remember_me_check_box_toggled"]
 [connection signal="pressed" from="UI/ForgotPasswordUI/ForgotPasswordButton" to="." method="_on_forgot_password_button_pressed"]
-[connection signal="pressed" from="NavigationContainer/RegisterButton" to="." method="_on_sign_up_button_pressed"]
-[connection signal="pressed" from="NavigationContainer/LoginButton" to="." method="_on_login_button_pressed"]
+[connection signal="pressed" from="Navigation/NavigationContainer/LoginButton" to="." method="_on_login_button_pressed"]
+[connection signal="pressed" from="Navigation/NavigationContainer/RegisterButton" to="." method="_on_sign_up_button_pressed"]

@@ -12,7 +12,7 @@ var password_remember = "password"
 @onready var login_data = $UI/LoginDataUI/Login
 @onready var password_data = $UI/PasswordDataUI/Password
 @onready var passwordhidebutton = $UI/PasswordHideUI/PasswordHideButton
-@onready var loginbutton = $NavigationContainer/LoginButton
+@onready var loginbutton = $Navigation/NavigationContainer/LoginButton
 @onready var api = $APIRequest
 @onready var failed = $FailedToConnect
 @onready var waitingresponse = $WaitingResponse
@@ -31,6 +31,9 @@ func _ready():
 	if GLOBAL.username != "" and GLOBAL.password != "":
 		login_data.text = GLOBAL.username
 		password_data.text = GLOBAL.password
+		
+		$UI.scale = get_viewport().scale
+		
 
 
 
@@ -52,8 +55,11 @@ func after_remember_me():
 		data.load_encrypted_pass(data_path, "makintosh")
 		login_data.text = data.get_value(data_name, login_remember, "")
 		password_data.text = data.get_value(data_name, password_remember, "")
+		if !FileAccess.file_exists(data_path):
+			GLOBAL.sign_out = true
 		if not GLOBAL.sign_out:
 			_on_login_button_pressed()
+
 
 
 
