@@ -21,6 +21,7 @@ script = ExtResource("1_ykvwa")
 
 [node name="BackGround-Header" type="TextureRect" parent="."]
 visible = false
+layout_mode = 0
 offset_top = 8.0
 offset_right = 500.0
 offset_bottom = 844.0
@@ -30,6 +31,7 @@ texture = ExtResource("2_ej0f2")
 expand_mode = 1
 
 [node name="BackGround-Image" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = -9.0
 offset_top = 6.0
 offset_right = 507.0
@@ -41,6 +43,7 @@ expand_mode = 1
 
 [node name="BackGround-Video" type="VideoStreamPlayer" parent="."]
 visible = false
+layout_mode = 0
 offset_top = 108.0
 offset_right = 508.0
 offset_bottom = 1007.0
@@ -113,11 +116,15 @@ anchors_preset = 0
 [node name="Tavern" type="Control" parent="Buildings"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 180.0
+offset_bottom = 218.0
 
 [node name="Tavern" type="MarginContainer" parent="Buildings/Tavern"]
 layout_mode = 0
+offset_left = 19.0
+offset_top = 86.0
+offset_right = 213.0
+offset_bottom = 257.0
 
 [node name="Tavern" type="TextureButton" parent="Buildings/Tavern/Tavern"]
 layout_mode = 2

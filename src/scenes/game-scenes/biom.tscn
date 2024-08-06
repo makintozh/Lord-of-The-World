@@ -15,15 +15,27 @@
 [ext_resource type="Texture2D" uid="uid://bkqycvu7gjj28" path="res://src/ui/buildings/celesteal 1.png" id="13_x3ue8"]
 [ext_resource type="Texture2D" uid="uid://wv5qcobcvpoq" path="res://src/ui/buttons/arrow_.png" id="14_s00r4"]
 
-[node name="Biom" type="Node2D"]
+[node name="Biom" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_m3bq3")
 
 [node name="BackGround" type="TextureRect" parent="."]
-offset_left = -5.0
-offset_right = 502.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -253.5
+offset_right = 253.5
 offset_bottom = 1900.0
+grow_horizontal = 2
 texture = ExtResource("2_1q34o")
 expand_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(248, 453)
