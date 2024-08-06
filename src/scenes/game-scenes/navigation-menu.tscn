@@ -14,7 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://b1jvu0yh8ojpp" path="res://src/ui/buildings/Биомы.png" id="9_0hf05"]
 [ext_resource type="Texture2D" uid="uid://rnw0k1k4qq67" path="res://src/ui/buildings/Tavern.png" id="10_rsnri"]
 
-[node name="Navigation-menu" type="Node2D"]
+[node name="Navigation-menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_ykvwa")
 
 [node name="BackGround-Header" type="TextureRect" parent="."]
@@ -116,10 +118,6 @@ offset_bottom = 40.0
 
 [node name="Tavern" type="MarginContainer" parent="Buildings/Tavern"]
 layout_mode = 0
-offset_left = 34.0
-offset_top = 74.0
-offset_right = 199.0
-offset_bottom = 254.0
 
 [node name="Tavern" type="TextureButton" parent="Buildings/Tavern/Tavern"]
 layout_mode = 2
@@ -139,6 +137,7 @@ offset_bottom = 270.0
 
 [node name="TavernLabel" type="Label" parent="Buildings/Tavern/TavernLabel"]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 34
 text = "Tavern"
 

@@ -62,7 +62,15 @@ texture_margin_left = 20.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iscbl"]
 
-[node name="RegisterUI" type="Node2D"]
+[node name="RegisterUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -500.0
+offset_bottom = -900.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_mfjp8")
 
 [node name="APIRequest" type="HTTPRequest" parent="."]
@@ -79,45 +87,35 @@ expand_mode = 2
 stretch_mode = 1
 
 [node name="AuthContainer" type="MarginContainer" parent="."]
-anchors_preset = 15
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 19.0
-offset_top = 44.0
-offset_right = 483.0
-offset_bottom = 688.0
+anchor_bottom = 0.5
+offset_left = 28.0
+offset_top = 50.0
+offset_right = 472.0
+offset_bottom = 687.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="AuthBackground" type="TextureRect" parent="AuthContainer"]
 layout_mode = 2
 texture = ExtResource("3_pdbsj")
 
-[node name="RegisterText" type="Label" parent="."]
-anchors_preset = 15
+[node name="NavigationContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 165.0
-offset_top = 127.0
-offset_right = 359.0
-offset_bottom = 195.0
+offset_left = 35.5
+offset_top = 732.0
+offset_right = 465.5
+offset_bottom = 819.0
 grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 44
-text = "Register"
-
-[node name="NavigationContainer" type="HBoxContainer" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 39.0
-offset_top = 727.0
-offset_right = 449.0
-offset_bottom = 814.0
-grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 size_flags_stretch_ratio = 0.0
@@ -144,7 +142,27 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_8srd0")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_gwbw4")
 text = "Register"
 
+[node name="RegisterText" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 166.0
+offset_top = 128.0
+offset_right = 335.0
+offset_bottom = 187.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="RegisterText" type="Label" parent="RegisterText"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 44
+text = "Register"
+
 [node name="TechSupportUI" type="MarginContainer" parent="."]
+layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -169,17 +187,28 @@ icon = ExtResource("13_xnvx8")
 icon_alignment = 2
 
 [node name="UI" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="EmailInfoUI" type="MarginContainer" parent="UI"]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 222.0
-offset_right = 464.0
-offset_bottom = 281.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 62.0
+offset_top = 219.0
+offset_right = 466.0
+offset_bottom = 278.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="EmailInfoUI" type="Label" parent="UI/EmailInfoUI"]
 layout_mode = 2
@@ -188,11 +217,18 @@ theme_override_font_sizes/font_size = 21
 text = "E-mail"
 
 [node name="EmailDataUI" type="MarginContainer" parent="UI"]
-layout_mode = 0
-offset_left = 52.0
-offset_top = 262.0
-offset_right = 451.0
-offset_bottom = 324.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 46.0
+offset_top = 258.0
+offset_right = 445.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Email" type="TextEdit" parent="UI/EmailDataUI"]
 layout_mode = 2
@@ -209,11 +245,18 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_vp42w")
 theme_override_styles/focus = SubResource("StyleBoxTexture_sokdo")
 
 [node name="LoginInfoUI" type="MarginContainer" parent="UI"]
-layout_mode = 0
-offset_left = 61.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 60.0
 offset_top = 307.0
-offset_right = 465.0
+offset_right = 459.0
 offset_bottom = 366.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="LoginInfoUI" type="Label" parent="UI/LoginInfoUI"]
 layout_mode = 2
@@ -222,11 +265,18 @@ theme_override_font_sizes/font_size = 21
 text = "Login"
 
 [node name="LoginDataUI" type="MarginContainer" parent="UI"]
-layout_mode = 0
-offset_left = 51.0
-offset_top = 350.0
-offset_right = 455.0
-offset_bottom = 408.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 45.0
+offset_top = 348.0
+offset_right = 444.0
+offset_bottom = 410.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Login" type="TextEdit" parent="UI/LoginDataUI"]
 layout_mode = 2
@@ -242,11 +292,18 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_vp42w")
 theme_override_styles/focus = SubResource("StyleBoxTexture_sokdo")
 
 [node name="PasswordInfoUI" type="MarginContainer" parent="UI"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 offset_left = 59.0
-offset_top = 388.0
+offset_top = 387.0
 offset_right = 463.0
-offset_bottom = 447.0
+offset_bottom = 446.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="PasswordInfoUI" type="Label" parent="UI/PasswordInfoUI"]
 layout_mode = 2
@@ -255,11 +312,18 @@ theme_override_font_sizes/font_size = 21
 text = "Password"
 
 [node name="PasswordDataUI" type="MarginContainer" parent="UI"]
-layout_mode = 0
-offset_left = 48.0
-offset_top = 427.0
-offset_right = 457.0
-offset_bottom = 483.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 45.0
+offset_top = 426.0
+offset_right = 444.0
+offset_bottom = 488.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Password" type="LineEdit" parent="UI/PasswordDataUI"]
 layout_mode = 2
@@ -273,25 +337,39 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_1wjd3")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_sqv44")
 secret = true
 
-[node name="ConfirmPasswordDataUI2" type="MarginContainer" parent="UI"]
-layout_mode = 0
-offset_left = 58.0
-offset_top = 468.0
-offset_right = 462.0
-offset_bottom = 527.0
+[node name="ConfirmPasswordInfoUI" type="MarginContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 59.0
+offset_top = 475.0
+offset_right = 463.0
+offset_bottom = 534.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="ConfirmPasswordDataUI" type="Label" parent="UI/ConfirmPasswordDataUI2"]
+[node name="ConfirmPasswordDataUI" type="Label" parent="UI/ConfirmPasswordInfoUI"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 21
 text = "Confirm Password"
 
 [node name="ConfirmPasswordDataUI" type="MarginContainer" parent="UI"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 offset_left = 46.0
-offset_top = 508.0
-offset_right = 464.0
-offset_bottom = 566.0
+offset_top = 516.0
+offset_right = 445.0
+offset_bottom = 578.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ConfirmPassword" type="LineEdit" parent="UI/ConfirmPasswordDataUI"]
 layout_mode = 2
@@ -306,11 +384,18 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_sqv44")
 secret = true
 
 [node name="PrivacyNoticeCheckBox" type="CheckBox" parent="UI"]
-layout_mode = 0
-offset_left = 44.0
-offset_top = 577.0
-offset_right = 311.0
-offset_bottom = 659.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 50.0
+offset_top = 584.0
+offset_right = 133.0
+offset_bottom = 666.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
@@ -342,9 +427,9 @@ text = "[u]Privacy Notice[/u]"
 
 [node name="PasswordHideButtonUI" type="MarginContainer" parent="UI"]
 layout_mode = 0
-offset_left = 397.0
+offset_left = 385.0
 offset_top = 438.0
-offset_right = 434.0
+offset_right = 422.0
 offset_bottom = 472.0
 
 [node name="PasswordHideButton" type="TextureButton" parent="UI/PasswordHideButtonUI"]
@@ -357,9 +442,11 @@ stretch_mode = 0
 
 [node name="FailedToConnect" parent="." instance=ExtResource("13_1jsrq")]
 visible = false
+layout_mode = 1
 
 [node name="WaitingResponse" parent="." instance=ExtResource("14_a3g2u")]
 visible = false
+layout_mode = 1
 
 [connection signal="request_completed" from="APIRequest" to="." method="_on_http_request_request_completed"]
 [connection signal="pressed" from="NavigationContainer/BackButton" to="." method="_on_back_button_pressed"]

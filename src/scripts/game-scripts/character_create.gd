@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 
 
@@ -6,9 +6,9 @@ extends Node2D
 @onready var charactercreatebutton = $CharacterCreateButton/CharacterCreateButtonContainer/CharacterCreateButton
 @onready var characterfeaturename = $CharacterFeature/CharacterFeatureName/CharacterFeatureName
 @onready var charactertypename = $CharacterTypeName/CharacterTypeName/CharacterTypeName
-@onready var elves = $CharacterChoiceCanvas/Characters/Elves
-@onready var dwarfs = $CharacterChoiceCanvas/Characters/Dwarfs
-@onready var humans = $CharacterChoiceCanvas/Characters/Humans
+@onready var elves = $Characters/Elves
+@onready var dwarfs = $Characters/Dwarfs
+@onready var humans = $Characters/Humans
 @onready var agilityfeature = $FeatureScheme/AgilityFeatureScheme
 @onready var strengthfeature = $FeatureScheme/StrengthFeatureScheme
 @onready var intelligencefeature = $FeatureScheme/IntelligenceFeatureScheme

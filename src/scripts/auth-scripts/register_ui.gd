@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 @onready var emailinput = $UI/EmailDataUI/Email
 @onready var usernameinput = $UI/LoginDataUI/Login

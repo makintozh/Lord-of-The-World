@@ -82,16 +82,29 @@ _data = {
 "refreshing": SubResource("Animation_n6wnf")
 }
 
-[node name="ChoiceServer" type="Node2D"]
+[node name="ChoiceServer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_o2s7j")
+metadata/_edit_use_anchors_ = true
 
 [node name="APIRequest" type="HTTPRequest" parent="."]
 
 [node name="BackGround" type="TextureRect" parent="."]
-offset_left = -2030.0
-offset_top = -208.0
-offset_right = 4335.0
-offset_bottom = 2270.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2910.0
+offset_top = -2826.0
+offset_right = -2510.0
+offset_bottom = -2826.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_45t4e")
@@ -147,10 +160,18 @@ expand_mode = 2
 stretch_mode = 1
 
 [node name="Server-List" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -241.0
+offset_top = -555.0
+offset_right = -201.0
+offset_bottom = -515.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Main-Server" type="Control" parent="Server-List"]
 visible = false
@@ -208,25 +229,31 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_sf5ew")
 theme_override_styles/focus = SubResource("StyleBoxTexture_jh1a1")
 text = "Play"
 
-[node name="CameraView" type="Camera2D" parent="."]
-position = Vector2(252, 447)
-
-[node name="UI" type="Control" parent="CameraView"]
-layout_mode = 3
-anchors_preset = 0
-offset_left = -252.0
-offset_top = -447.0
-offset_right = -212.0
-offset_bottom = -407.0
-
-[node name="BackButtonContainer" type="MarginContainer" parent="CameraView/UI"]
-layout_mode = 0
-offset_left = 12.0
+[node name="UI" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -208.0
 offset_top = 18.0
-offset_right = 85.0
-offset_bottom = 83.0
+offset_right = -208.0
+offset_bottom = 18.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+metadata/_edit_use_anchors_ = true
 
-[node name="BackButton" type="TextureButton" parent="CameraView/UI/BackButtonContainer"]
+[node name="BackButtonContainer" type="MarginContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -36.5
+offset_right = 36.5
+offset_bottom = 65.0
+grow_horizontal = 2
+
+[node name="BackButton" type="TextureButton" parent="UI/BackButtonContainer"]
 layout_mode = 2
 texture_normal = ExtResource("3_nsa51")
 texture_pressed = ExtResource("3_nsa51")
@@ -236,25 +263,34 @@ texture_focused = ExtResource("3_nsa51")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SelectServerLabelContainer" type="MarginContainer" parent="CameraView/UI"]
-layout_mode = 0
-offset_left = 173.0
-offset_top = 28.0
-offset_right = 314.0
-offset_bottom = 68.0
+[node name="SelectServerLabelContainer" type="MarginContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 152.0
+offset_right = 293.0
+offset_bottom = 40.0
+grow_horizontal = 2
 
-[node name="SelectServerLabel" type="Label" parent="CameraView/UI/SelectServerLabelContainer"]
+[node name="SelectServerLabel" type="Label" parent="UI/SelectServerLabelContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Select server"
 
 [node name="Refresh" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 4.0
-offset_top = -179.0
-offset_right = 44.0
-offset_bottom = -139.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -246.0
+offset_top = -629.0
+offset_right = -206.0
+offset_bottom = -589.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Refresh" type="MarginContainer" parent="Refresh"]
 layout_mode = 1
@@ -302,4 +338,4 @@ page = 50.0
 value = -100.0
 
 [connection signal="request_completed" from="APIRequest" to="." method="_on_api_request_request_completed"]
-[connection signal="pressed" from="CameraView/UI/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="UI/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]

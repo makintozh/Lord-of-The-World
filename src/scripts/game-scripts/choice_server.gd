@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 
 
@@ -15,7 +15,6 @@ var self_server_address
 @onready var refreshing = $Refresh
 
 
-@onready var camera_view = $CameraView
 
 
 @onready var api = $APIRequest

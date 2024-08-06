@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 
 var data = ConfigFile.new()
@@ -26,7 +26,9 @@ var logged = false
 
 
 
+
 func _ready():
+	
 	after_remember_me()
 	if GLOBAL.username != "" and GLOBAL.password != "":
 		login_data.text = GLOBAL.username
