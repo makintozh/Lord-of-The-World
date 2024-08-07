@@ -19,6 +19,7 @@ var sign_out:bool = false
 var failed_reason:String
 
 
+
 var player_character_name = ""    #Имя Персонажа Пользователя
 
 

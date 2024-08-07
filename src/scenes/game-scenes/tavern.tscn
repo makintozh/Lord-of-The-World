@@ -23,14 +23,23 @@ texture = ExtResource("10_p5dsj")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ed6mt"]
 texture = ExtResource("10_p5dsj")
 
-[node name="Tavern" type="Node2D"]
+[node name="Tavern" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_06l26")
+metadata/_edit_use_anchors_ = true
 
 [node name="BackGround" type="TextureRect" parent="."]
-offset_left = -2030.0
-offset_top = -208.0
-offset_right = 4335.0
-offset_bottom = 2270.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_f0g80")
@@ -38,8 +47,11 @@ expand_mode = 2
 stretch_mode = 1
 
 [node name="TavernProfileUI" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
+layout_mode = 1
+anchor_left = 0.002
+anchor_right = 0.002
+grow_horizontal = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="IconFrameContainer" type="MarginContainer" parent="TavernProfileUI"]
 layout_mode = 0

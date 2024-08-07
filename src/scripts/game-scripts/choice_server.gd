@@ -40,15 +40,16 @@ func _ready():
 
 
 
+
 func _on_api_request_request_completed(result, response_code, headers, body):
 	var api_response = JSON.parse_string(body.get_string_from_utf8())
 	var message = str(api_response["message"])
-	var servers = api_response["servers"]
-	#var servers = [
-		#
-	 #{ "id": 1, "address": "31.129.54.111", "name": "#1 Alpha", "locale": "RU", "max_players": 1000, "status": "active", "create_date": "04/08/2024 19:00:22" },
-	 #{ "id": 2, "address": "31.129.54.222", "name": "#2 Alpha", "locale": "RU", "max_players": 1000, "status": "active", "create_date": "04/08/2024 19:00:22" },
-	 #{ "id": 3, "address": "31.129.54.333", "name": "#3 Alpha", "locale": "RU", "max_players": 1000, "status": "active", "create_date": "04/08/2024 19:00:22" }]
+	#var servers = api_response["servers"]
+	var servers = [
+		
+	 { "id": 1, "address": "31.111.54.111", "name": "#1 Alpha", "locale": "RU", "max_players": 1000, "status": "active", "create_date": "04/08/2024 19:00:22" },
+	 { "id": 2, "address": "31.222.54.222", "name": "#2 Alpha", "locale": "RU", "max_players": 1000, "status": "active", "create_date": "04/08/2024 19:00:22" },
+	 { "id": 3, "address": "31.333.54.333", "name": "#3 Alpha", "locale": "RU", "max_players": 1000, "status": "active", "create_date": "04/08/2024 19:00:22" }]
 	
 	print("\nСообщение: " + message)
 	print("\nВсе Сервера в JSON: " + str(servers))
@@ -65,8 +66,9 @@ func _on_api_request_request_completed(result, response_code, headers, body):
 		var server_max_players = int(data["max_players"])
 		var server_status = str(data["status"])
 		var server_create_date = str(data["create_date"])
-		
-		
+
+
+
 		print("Айди Сервера: " + str(server_id) + "  |||  Имя сервера: " + server_name + " (" + server_status + ")  |||  Язык: " + server_locale + "  |||  Адрес: " + server_address)
 		
 		
@@ -79,8 +81,9 @@ func _on_api_request_request_completed(result, response_code, headers, body):
 			
 			
 			
+			
+			
 			for amount in server_id:
-				
 				server_scroll_pagination.min_value = amount - amount**2.42
 				server_scroll_pagination.max_value = 0
 				new_servers.position.y += 100
@@ -88,9 +91,7 @@ func _on_api_request_request_completed(result, response_code, headers, body):
 				var new_server_play_button = new_servers.get_child(3).get_children()[0]
 				new_server_name_label.text = server_name
 				
-				
-				GLOBAL.choiced_server_address = server_address
-				
+
 				
 				if !new_server_play_button.is_connected("pressed", play):
 					new_server_play_button.connect("pressed", play)
