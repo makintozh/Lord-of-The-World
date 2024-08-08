@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 @onready var emailinput = $UI/EmailDataUI/Email
 @onready var usernameinput = $UI/LoginDataUI/Login
@@ -12,7 +12,6 @@ extends Node2D
 
 
 @onready var api = $APIRequest
-var authlink = "http://31.129.54.119:80/register"
 
 var registered = false
 var privacynotice_enabled = false
@@ -62,6 +61,7 @@ func enable_register():
 
 
 func _on_back_button_pressed():
+	GLOBAL.sign_out = true
 	get_tree().change_scene_to_file("res://src/scenes/auth-scenes/login_ui.tscn")
 
 
@@ -89,7 +89,7 @@ func _on_sign_up_button_pressed():
 		})
 		
 		
-	api.request(authlink, [], HTTPClient.METHOD_POST, authpost)
+	api.request(CONFIG.api_link + "/register", CONFIG.api_headers, HTTPClient.METHOD_POST, authpost)
 	print(authpost)
 	await get_tree().create_timer(20).timeout
 	GLOBAL.failed_reason = "No Internet"

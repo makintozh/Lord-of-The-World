@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 @onready var playernamelabel = $PlayerProfileUI/PlayerNameContainer/PlayerName
 @onready var elvesicon = $PlayerProfileUI/PlayerProfileIcon/ElvesIcon

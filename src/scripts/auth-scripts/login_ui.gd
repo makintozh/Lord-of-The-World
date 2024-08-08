@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 
 var data = ConfigFile.new()
@@ -12,13 +12,12 @@ var password_remember = "password"
 @onready var login_data = $UI/LoginDataUI/Login
 @onready var password_data = $UI/PasswordDataUI/Password
 @onready var passwordhidebutton = $UI/PasswordHideUI/PasswordHideButton
-@onready var loginbutton = $NavigationContainer/LoginButton
+@onready var loginbutton = $Navigation/NavigationContainer/LoginButton
 @onready var api = $APIRequest
 @onready var failed = $FailedToConnect
 @onready var waitingresponse = $WaitingResponse
 
 
-var authlink = "http://31.129.54.119:80/auth"
 
 var is_remember = false
 var logged = false
@@ -26,11 +25,16 @@ var logged = false
 
 
 
+
 func _ready():
+	
 	after_remember_me()
 	if GLOBAL.username != "" and GLOBAL.password != "":
 		login_data.text = GLOBAL.username
 		password_data.text = GLOBAL.password
+		
+		
+		
 
 
 
@@ -52,8 +56,11 @@ func after_remember_me():
 		data.load_encrypted_pass(data_path, "makintosh")
 		login_data.text = data.get_value(data_name, login_remember, "")
 		password_data.text = data.get_value(data_name, password_remember, "")
+		if !FileAccess.file_exists(data_path):
+			GLOBAL.sign_out = true
 		if not GLOBAL.sign_out:
 			_on_login_button_pressed()
+
 
 
 
@@ -78,7 +85,7 @@ func _on_login_button_pressed():
 		
 		})
 		
-	api.request(authlink, [], HTTPClient.METHOD_POST, authpost)
+	api.request(CONFIG.api_link + "/auth", CONFIG.api_headers, HTTPClient.METHOD_POST, authpost)
 	print(authpost)
 	await get_tree().create_timer(20).timeout
 	GLOBAL.failed_reason = "No Internet Connection"

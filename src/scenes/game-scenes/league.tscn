@@ -12,10 +12,18 @@
 [ext_resource type="Texture2D" uid="uid://cgx3myjuryye8" path="res://src/ui/buttons/league button копия.png" id="10_tv21f"]
 [ext_resource type="Texture2D" uid="uid://btp38il2qekb8" path="res://src/ui/buttons/league button копия 4.png" id="11_4qexy"]
 
-[node name="League" type="Node2D"]
+[node name="League" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_3jcwj")
+metadata/_edit_use_anchors_ = true
 
 [node name="DoubleBackGround" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = -1648.0
 offset_top = -292.0
 offset_right = 11352.0
@@ -28,10 +36,23 @@ expand_mode = 3
 stretch_mode = 1
 
 [node name="BackGround" type="TextureRect" parent="."]
-offset_left = -15.0
-offset_top = -5.0
-offset_right = 1759.0
-offset_bottom = 3664.0
+layout_mode = 0
+offset_left = -135.0
+offset_top = -132.0
+offset_right = 2398.0
+offset_bottom = 4940.0
+scale = Vector2(0.296532, 0.248046)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_q5fyo")
+expand_mode = 1
+
+[node name="BackGround" type="TextureRect" parent="BackGround"]
+layout_mode = 0
+offset_left = -5494.0
+offset_top = -9861.0
+offset_right = 38596.0
+offset_bottom = 26738.0
 scale = Vector2(0.296532, 0.248046)
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -39,10 +60,13 @@ texture = ExtResource("2_q5fyo")
 expand_mode = 1
 
 [node name="LeagueUI" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
 
 [node name="BackButtonContainer" type="MarginContainer" parent="LeagueUI"]
+layout_mode = 0
 offset_left = 2.0
 offset_top = 4.0
 offset_right = 65.0
@@ -57,58 +81,39 @@ texture_focused = ExtResource("3_cv0c5")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="LeagueUI"]
-offset_left = 48.0
-offset_top = -5.0
-offset_right = 457.0
-offset_bottom = 175.0
+[node name="LeagueTextureTop" type="MarginContainer" parent="LeagueUI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = -10.0
+offset_right = 209.0
+offset_bottom = 170.0
+grow_horizontal = 2
+metadata/_edit_use_anchors_ = true
 
-[node name="TextureRect" type="TextureRect" parent="LeagueUI/MarginContainer"]
+[node name="LeagueTextureTop" type="TextureRect" parent="LeagueUI/LeagueTextureTop"]
 layout_mode = 2
 texture = ExtResource("4_baurt")
 expand_mode = 1
 
-[node name="DownTexture" type="MarginContainer" parent="LeagueUI"]
-offset_top = 670.0
-offset_right = 496.0
-offset_bottom = 909.0
-
-[node name="DownTexture" type="TextureRect" parent="LeagueUI/DownTexture"]
-layout_mode = 2
-texture = ExtResource("5_bosic")
-expand_mode = 1
-
-[node name="DeckButtonContainer" type="MarginContainer" parent="LeagueUI"]
-offset_left = 173.0
-offset_top = 751.0
-offset_right = 323.0
-offset_bottom = 871.0
-
-[node name="DeckButton" type="TextureButton" parent="LeagueUI/DeckButtonContainer"]
-layout_mode = 2
-texture_normal = ExtResource("6_ljh7x")
-texture_pressed = ExtResource("6_ljh7x")
-texture_hover = ExtResource("6_ljh7x")
-texture_focused = ExtResource("6_ljh7x")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="DeckTextLabel" type="MarginContainer" parent="LeagueUI"]
-offset_left = 224.0
-offset_top = 769.0
-offset_right = 285.0
-offset_bottom = 809.0
-
-[node name="DeckTextLabel" type="Label" parent="LeagueUI/DeckTextLabel"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 20
-text = "DECK"
-
 [node name="LeagueButtonsUI" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -450.0
+offset_right = -250.0
+offset_bottom = -450.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="LeagueButtonContainer" type="MarginContainer" parent="LeagueButtonsUI"]
+layout_mode = 0
 offset_left = 30.0
 offset_top = 185.0
 offset_right = 118.0
@@ -124,6 +129,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="LeagueButtonContainer2" type="MarginContainer" parent="LeagueButtonsUI"]
+layout_mode = 0
 offset_left = 114.0
 offset_top = 203.0
 offset_right = 202.0
@@ -139,6 +145,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="LeagueButtonContainer3" type="MarginContainer" parent="LeagueButtonsUI"]
+layout_mode = 0
 offset_left = 200.0
 offset_top = 185.0
 offset_right = 288.0
@@ -154,6 +161,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="LeagueButtonContainer4" type="MarginContainer" parent="LeagueButtonsUI"]
+layout_mode = 0
 offset_left = 286.0
 offset_top = 203.0
 offset_right = 374.0
@@ -169,6 +177,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="LeagueButtonContainer5" type="MarginContainer" parent="LeagueButtonsUI"]
+layout_mode = 0
 offset_left = 369.0
 offset_top = 185.0
 offset_right = 457.0
@@ -182,5 +191,77 @@ texture_hover = ExtResource("11_4qexy")
 texture_focused = ExtResource("11_4qexy")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="Deck" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -900.0
+offset_right = -500.0
+offset_bottom = -900.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="DownTexture" type="MarginContainer" parent="Deck"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = 670.0
+offset_right = 496.0
+offset_bottom = 909.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="DownTexture" type="TextureRect" parent="Deck/DownTexture"]
+layout_mode = 2
+texture = ExtResource("5_bosic")
+expand_mode = 1
+
+[node name="DeckButtonContainer" type="MarginContainer" parent="Deck"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 173.0
+offset_top = 751.0
+offset_right = 323.0
+offset_bottom = 871.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="DeckButton" type="TextureButton" parent="Deck/DeckButtonContainer"]
+layout_mode = 2
+texture_normal = ExtResource("6_ljh7x")
+texture_pressed = ExtResource("6_ljh7x")
+texture_hover = ExtResource("6_ljh7x")
+texture_focused = ExtResource("6_ljh7x")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="DeckTextLabel" type="MarginContainer" parent="Deck"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 224.0
+offset_top = 769.0
+offset_right = 285.0
+offset_bottom = 809.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="DeckTextLabel" type="Label" parent="Deck/DeckTextLabel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "DECK"
 
 [connection signal="pressed" from="LeagueUI/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]

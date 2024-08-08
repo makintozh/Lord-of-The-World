@@ -22,6 +22,7 @@ config/icon="res://src/ui/characters/c2.png"
 [autoload]
 
 GLOBAL="*res://src/scripts/singleton/global_variables.gd"
+CONFIG="*res://src/scripts/singleton/config.gd"
 
 [display]
 
@@ -39,6 +40,10 @@ window/vsync/vsync_mode=0
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
 
+[editor_plugins]
+
+enabled=PackedStringArray()
+
 [file_customization]
 
 folder_colors={
@@ -54,6 +59,12 @@ folder_colors={
 [gui]
 
 theme/custom_font="res://src/fonts/inika/Inika-Bold.ttf"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+pointing/android/enable_long_press_as_right_click=true
+pointing/android/enable_pan_and_scale_gestures=true
 
 [rendering]
 

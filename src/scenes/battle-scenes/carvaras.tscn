@@ -8,8 +8,15 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_phn2u"]
 
-[node name="Carvaras" type="Node2D"]
+[node name="Carvaras" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_qk8bw")
+metadata/_edit_use_anchors_ = true
 
 [node name="BackGround-Image" type="TextureRect" parent="."]
 offset_top = -1.0
@@ -21,8 +28,9 @@ texture = ExtResource("2_8tljq")
 expand_mode = 1
 
 [node name="BackGround-Video" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
 offset_right = 504.0
-offset_bottom = 904.0
+offset_bottom = 903.0
 stream = ExtResource("3_q5rpv")
 autoplay = true
 expand = true
