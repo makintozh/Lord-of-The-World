@@ -76,6 +76,7 @@ script = ExtResource("1_mfjp8")
 [node name="APIRequest" type="HTTPRequest" parent="."]
 
 [node name="BackGround" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = -2030.0
 offset_top = -208.0
 offset_right = 4335.0

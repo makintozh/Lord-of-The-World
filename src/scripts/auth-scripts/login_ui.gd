@@ -18,7 +18,6 @@ var password_remember = "password"
 @onready var waitingresponse = $WaitingResponse
 
 
-var authlink = "http://31.129.54.119:80/auth"
 
 var is_remember = false
 var logged = false
@@ -86,7 +85,7 @@ func _on_login_button_pressed():
 		
 		})
 		
-	api.request(authlink, [], HTTPClient.METHOD_POST, authpost)
+	api.request(CONFIG.api_link + "/auth", CONFIG.api_headers, HTTPClient.METHOD_POST, authpost)
 	print(authpost)
 	await get_tree().create_timer(20).timeout
 	GLOBAL.failed_reason = "No Internet Connection"

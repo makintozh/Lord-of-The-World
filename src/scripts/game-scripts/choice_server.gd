@@ -19,7 +19,6 @@ var self_server_address
 
 @onready var api = $APIRequest
 var json = JSON.new()
-var serverslink = "http://31.129.54.119/servers"
 
 
 var token = JSON.stringify({
@@ -36,7 +35,7 @@ func _process(_delta):
 
 
 func _ready():
-	api.request(serverslink, [], HTTPClient.METHOD_GET, token)
+	api.request(CONFIG.api_link + "/servers", CONFIG.api_headers, HTTPClient.METHOD_GET, token)
 
 
 
@@ -44,12 +43,12 @@ func _ready():
 func _on_api_request_request_completed(result, response_code, headers, body):
 	var api_response = JSON.parse_string(body.get_string_from_utf8())
 	var message = str(api_response["message"])
-	#var servers = api_response["servers"]
-	var servers = [
-		
-	 { "id": 1, "address": "31.111.54.111", "name": "#1 Alpha", "locale": "RU", "max_players": 1000, "status": "active", "create_date": "04/08/2024 19:00:22" },
-	 { "id": 2, "address": "31.222.54.222", "name": "#2 Alpha", "locale": "RU", "max_players": 1000, "status": "active", "create_date": "04/08/2024 19:00:22" },
-	 { "id": 3, "address": "31.333.54.333", "name": "#3 Alpha", "locale": "RU", "max_players": 1000, "status": "active", "create_date": "04/08/2024 19:00:22" }]
+	var servers = api_response["servers"]
+	#var servers = [
+		#
+	 #{ "id": 1, "address": "31.111.54.111", "name": "#1 Alpha", "locale": "RU", "max_players": 1000, "status": "active", "create_date": "04/08/2024 19:00:22" },
+	 #{ "id": 2, "address": "31.222.54.222", "name": "#2 Alpha", "locale": "RU", "max_players": 1000, "status": "active", "create_date": "04/08/2024 19:00:22" },
+	 #{ "id": 3, "address": "31.333.54.333", "name": "#3 Alpha", "locale": "RU", "max_players": 1000, "status": "active", "create_date": "04/08/2024 19:00:22" }]
 	
 	print("\nСообщение: " + message)
 	print("\nВсе Сервера в JSON: " + str(servers))
@@ -114,7 +113,7 @@ func _on_back_button_pressed():
 
 
 func play():
-	print("Выбран сервер: " + GLOBAL.choiced_server_address)
+	#print("Выбран сервер: " + GLOBAL.choiced_server_address)
 	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
 
 
