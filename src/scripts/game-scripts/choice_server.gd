@@ -8,7 +8,9 @@ extends Control
 @onready var server_scroll_pagination = $Server_Pagination_Scroll
 
 
-var self_server_address
+var s1adr = null
+var s2adr = null
+var s3adr = null
 
 
 
@@ -43,12 +45,12 @@ func _ready():
 func _on_api_request_request_completed(result, response_code, headers, body):
 	var api_response = JSON.parse_string(body.get_string_from_utf8())
 	var message = str(api_response["message"])
-	var servers = api_response["servers"]
-	#var servers = [
-		#
-	 #{ "id": 1, "address": "31.111.54.111", "name": "#1 Alpha", "locale": "RU", "max_players": 1000, "status": "active", "create_date": "04/08/2024 19:00:22" },
-	 #{ "id": 2, "address": "31.222.54.222", "name": "#2 Alpha", "locale": "RU", "max_players": 1000, "status": "active", "create_date": "04/08/2024 19:00:22" },
-	 #{ "id": 3, "address": "31.333.54.333", "name": "#3 Alpha", "locale": "RU", "max_players": 1000, "status": "active", "create_date": "04/08/2024 19:00:22" }]
+	#var servers = api_response["servers"]
+	var servers = [
+		
+	 { "id": 1, "address": "31.111.54.111", "name": "#1 Alpha", "locale": "RU", "max_players": 1000, "status": "active", "create_date": "04/08/2024 19:00:22" },
+	 { "id": 2, "address": "31.222.54.222", "name": "#2 Alpha", "locale": "RU", "max_players": 1000, "status": "active", "create_date": "04/08/2024 19:00:22" },
+	 { "id": 3, "address": "31.333.54.333", "name": "#3 Alpha", "locale": "RU", "max_players": 1000, "status": "active", "create_date": "04/08/2024 19:00:22" }]
 	
 	print("\nСообщение: " + message)
 	print("\nВсе Сервера в JSON: " + str(servers))
@@ -77,6 +79,9 @@ func _on_api_request_request_completed(result, response_code, headers, body):
 			server_list.add_child(new_servers)
 			new_servers.position.y = -129
 			new_servers.visible = true
+		
+		elif server_id == 1:
+			s1adr = server_address
 			
 			
 			
