@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dcdrv5wqkg6e0"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/forest.gd" id="1_xtu5g"]
-[ext_resource type="Texture2D" uid="uid://brsxj7m4rqbol" path="res://src/ui/backgrounds/battle-backgrounds/Звери.PNG" id="2_6712k"]
+[ext_resource type="Texture2D" uid="uid://hl1vyhc7ilwh" path="res://src/ui/backgrounds/battle-backgrounds/Звери.PNG" id="2_6712k"]
 [ext_resource type="VideoStream" path="res://src/ui/backgrounds/battle-backgrounds/Звери.ogv" id="3_cjutj"]
 [ext_resource type="Texture2D" uid="uid://c2u2i5n4mifyh" path="res://src/ui/buttons/back_button.png" id="4_t03gy"]
 [ext_resource type="Texture2D" uid="uid://b604lcs55mpp0" path="res://src/ui/elements/Battle_Card.png" id="5_gfd6d"]
@@ -15,6 +15,7 @@ script = ExtResource("1_xtu5g")
 offset_top = -1.0
 offset_right = 500.0
 offset_bottom = 901.0
+scale = Vector2(1.065, 1.065)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_6712k")
@@ -23,6 +24,7 @@ expand_mode = 1
 [node name="BackGround-Video" type="VideoStreamPlayer" parent="."]
 offset_right = 504.0
 offset_bottom = 904.0
+scale = Vector2(1.065, 1.065)
 stream = ExtResource("3_cjutj")
 autoplay = true
 expand = true
@@ -33,6 +35,7 @@ layout_mode = 3
 anchors_preset = 0
 
 [node name="BattleStepContainer" type="MarginContainer" parent="BattleStepLayer"]
+visible = false
 layout_mode = 0
 offset_right = 320.0
 offset_bottom = 81.0
@@ -66,6 +69,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="PlayerCards" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -168,6 +172,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="EnemyCards" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_top = -457.465

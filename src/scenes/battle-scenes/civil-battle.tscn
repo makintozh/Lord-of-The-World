@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://b4nxlq3fl4exg"]
+[gd_scene load_steps=6 format=3 uid="uid://b4nxlq3fl4exg"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/battle.gd" id="1_i4757"]
-[ext_resource type="Texture2D" uid="uid://jyt6o7mlkqx" path="res://src/ui/backgrounds/battle-backgrounds/Гномы.PNG" id="2_63c6g"]
-[ext_resource type="VideoStream" path="res://src/ui/backgrounds/battle-backgrounds/Гномы.ogv" id="2_stiwa"]
+[ext_resource type="Texture2D" uid="uid://cywqlemtd42e8" path="res://src/ui/backgrounds/battle-backgrounds/Люди.PNG" id="2_srcqt"]
 [ext_resource type="Texture2D" uid="uid://c2u2i5n4mifyh" path="res://src/ui/buttons/back_button.png" id="3_in8rb"]
 [ext_resource type="Texture2D" uid="uid://b604lcs55mpp0" path="res://src/ui/elements/Battle_Card.png" id="5_b0uih"]
 
@@ -15,20 +14,21 @@ script = ExtResource("1_i4757")
 offset_top = -1.0
 offset_right = 500.0
 offset_bottom = 901.0
+scale = Vector2(1.065, 1.065)
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("2_63c6g")
+texture = ExtResource("2_srcqt")
 expand_mode = 1
 
 [node name="BackGround-Video" type="VideoStreamPlayer" parent="."]
 offset_right = 504.0
 offset_bottom = 904.0
-stream = ExtResource("2_stiwa")
 autoplay = true
 expand = true
 loop = true
 
 [node name="BattleStepLayer" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 
@@ -66,6 +66,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="PlayerCards" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -168,6 +169,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="EnemyCards" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_top = -457.465

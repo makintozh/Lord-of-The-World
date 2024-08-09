@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://carnv2swwmwu2"]
+[gd_scene load_steps=6 format=3 uid="uid://carnv2swwmwu2"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/nordtoppen.gd" id="1_hc6am"]
-[ext_resource type="Texture2D" uid="uid://bn70o2b6sa5eo" path="res://src/ui/backgrounds/battle-backgrounds/Тролли.PNG" id="2_2b2ql"]
-[ext_resource type="VideoStream" path="res://src/ui/backgrounds/battle-backgrounds/Тролли.ogv" id="3_dxrwo"]
+[ext_resource type="Texture2D" uid="uid://1b6ku10kghsy" path="res://src/ui/backgrounds/battle-backgrounds/Тролли.PNG" id="2_2b2ql"]
 [ext_resource type="Texture2D" uid="uid://c2u2i5n4mifyh" path="res://src/ui/buttons/back_button.png" id="4_osixa"]
 [ext_resource type="Texture2D" uid="uid://b604lcs55mpp0" path="res://src/ui/elements/Battle_Card.png" id="5_88k6i"]
 
@@ -15,6 +14,7 @@ script = ExtResource("1_hc6am")
 offset_top = -1.0
 offset_right = 500.0
 offset_bottom = 901.0
+scale = Vector2(1.065, 1.065)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_2b2ql")
@@ -23,7 +23,7 @@ expand_mode = 1
 [node name="BackGround-Video" type="VideoStreamPlayer" parent="."]
 offset_right = 504.0
 offset_bottom = 904.0
-stream = ExtResource("3_dxrwo")
+scale = Vector2(1.065, 1.065)
 autoplay = true
 expand = true
 loop = true

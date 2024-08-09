@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cd6a328befmcg"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/meches.gd" id="1_nw08x"]
-[ext_resource type="Texture2D" uid="uid://d3l3wwqmnxjc1" path="res://src/ui/backgrounds/battle-backgrounds/Механизмы.PNG" id="2_alvug"]
+[ext_resource type="Texture2D" uid="uid://barrsvessecyg" path="res://src/ui/backgrounds/battle-backgrounds/Механизмы.PNG" id="2_alvug"]
 [ext_resource type="VideoStream" path="res://src/ui/backgrounds/battle-backgrounds/Механизмы.ogv" id="3_v41j7"]
 [ext_resource type="Texture2D" uid="uid://c2u2i5n4mifyh" path="res://src/ui/buttons/back_button.png" id="4_xjoqo"]
 [ext_resource type="Texture2D" uid="uid://b604lcs55mpp0" path="res://src/ui/elements/Battle_Card.png" id="5_58s5u"]
@@ -15,6 +15,7 @@ script = ExtResource("1_nw08x")
 offset_top = -1.0
 offset_right = 500.0
 offset_bottom = 901.0
+scale = Vector2(1.065, 1.065)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_alvug")
@@ -23,6 +24,7 @@ expand_mode = 1
 [node name="BackGround-Video" type="VideoStreamPlayer" parent="."]
 offset_right = 504.0
 offset_bottom = 904.0
+scale = Vector2(1.065, 1.065)
 stream = ExtResource("3_v41j7")
 autoplay = true
 expand = true

@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://bkqop5vtydbqm"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/elborus-hub.gd" id="1_tbxwe"]
-[ext_resource type="Texture2D" uid="uid://byxdhy5ltq4mn" path="res://src/ui/backgrounds/battle-backgrounds/Elborus-HUB.png" id="2_3jjmd"]
+[ext_resource type="Texture2D" uid="uid://j0bsur6lcbcl" path="res://src/ui/backgrounds/battle-backgrounds/Гномы.PNG" id="2_3jjmd"]
 [ext_resource type="Texture2D" uid="uid://ccd7lnobgoth5" path="res://src/ui/buttons/arrow back white.png" id="3_ohfh3"]
 [ext_resource type="Texture2D" uid="uid://cjtckd87lwd0c" path="res://src/ui/buttons/bottom.png" id="4_q0a5f"]
 [ext_resource type="Texture2D" uid="uid://cd4ulgx3ykttj" path="res://src/ui/buttons/bottom off 3.png" id="5_fqh72"]
@@ -32,6 +32,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.055, 1.055)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_3jjmd")
@@ -92,10 +93,10 @@ grow_vertical = 2
 
 [node name="Battle" type="MarginContainer" parent="Go-Battle-Buttons"]
 layout_mode = 0
-offset_left = 176.0
-offset_top = 560.0
-offset_right = 288.0
-offset_bottom = 670.0
+offset_left = 187.0
+offset_top = 536.0
+offset_right = 299.0
+offset_bottom = 646.0
 
 [node name="Battle" type="TextureButton" parent="Go-Battle-Buttons/Battle"]
 layout_mode = 2
@@ -108,10 +109,10 @@ stretch_mode = 0
 
 [node name="Battle2" type="MarginContainer" parent="Go-Battle-Buttons"]
 layout_mode = 0
-offset_left = 338.0
-offset_top = 332.0
-offset_right = 450.0
-offset_bottom = 442.0
+offset_left = 294.0
+offset_top = 362.0
+offset_right = 406.0
+offset_bottom = 472.0
 
 [node name="Battle" type="TextureButton" parent="Go-Battle-Buttons/Battle2"]
 layout_mode = 2
@@ -124,10 +125,10 @@ stretch_mode = 0
 
 [node name="Battle3" type="MarginContainer" parent="Go-Battle-Buttons"]
 layout_mode = 0
-offset_left = 72.0
-offset_top = 318.0
-offset_right = 184.0
-offset_bottom = 428.0
+offset_left = 116.0
+offset_top = 322.0
+offset_right = 228.0
+offset_bottom = 432.0
 
 [node name="Battle" type="TextureButton" parent="Go-Battle-Buttons/Battle3"]
 layout_mode = 2
@@ -140,10 +141,10 @@ stretch_mode = 0
 
 [node name="Battle4" type="MarginContainer" parent="Go-Battle-Buttons"]
 layout_mode = 0
-offset_left = 390.0
-offset_top = 134.0
-offset_right = 502.0
-offset_bottom = 244.0
+offset_left = 315.0
+offset_top = 162.0
+offset_right = 427.0
+offset_bottom = 272.0
 
 [node name="Battle" type="TextureButton" parent="Go-Battle-Buttons/Battle4"]
 layout_mode = 2
@@ -156,10 +157,10 @@ stretch_mode = 0
 
 [node name="Battle5" type="MarginContainer" parent="Go-Battle-Buttons"]
 layout_mode = 0
-offset_left = 70.0
-offset_top = 112.0
-offset_right = 182.0
-offset_bottom = 222.0
+offset_left = 190.0
+offset_top = 37.0
+offset_right = 302.0
+offset_bottom = 147.0
 
 [node name="Battle" type="TextureButton" parent="Go-Battle-Buttons/Battle5"]
 layout_mode = 2
@@ -177,10 +178,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -252.0
-offset_top = -446.0
-offset_right = -252.0
-offset_bottom = -446.0
+offset_left = -290.0
+offset_top = -411.0
+offset_right = -290.0
+offset_bottom = -411.0
 grow_horizontal = 2
 grow_vertical = 2
 
