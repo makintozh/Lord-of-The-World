@@ -747,12 +747,10 @@ func _on_api_request_request_completed(result, response_code, headers, body):
 				#print(amount)
 				if server_id >= 8:
 					server_scroll_pagination.visible = true
-					server_scroll_pagination.min_value = amount - amount**2.45
-					server_scroll_pagination.max_value = -100
+					server_scroll_pagination.min_value = amount - amount**2.44
+					server_scroll_pagination.max_value = -200
 				else:
 					server_scroll_pagination.visible = false
-					server_scroll_pagination.min_value = 0
-					server_scroll_pagination.max_value = -100
 
 
 
