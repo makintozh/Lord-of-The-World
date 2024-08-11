@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dcdrv5wqkg6e0"]
+[gd_scene load_steps=7 format=3 uid="uid://45dv43nfywqm"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/forest.gd" id="1_xtu5g"]
 [ext_resource type="Texture2D" uid="uid://hl1vyhc7ilwh" path="res://src/ui/backgrounds/battle-backgrounds/Звери.PNG" id="2_6712k"]

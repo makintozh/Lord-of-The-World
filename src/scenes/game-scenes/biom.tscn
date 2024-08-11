@@ -17,46 +17,50 @@
 
 [node name="Biom" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_m3bq3")
 
 [node name="BackGround" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -253.5
-offset_right = 253.5
-offset_bottom = 1900.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -251.0
+offset_top = -449.0
+offset_right = 249.0
+offset_bottom = 1421.0
 grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_1q34o")
 expand_mode = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(248, 453)
 limit_smoothed = true
 position_smoothing_enabled = true
 editor_draw_limits = true
 
 [node name="BiomUI" type="Control" parent="Camera2D"]
 layout_mode = 3
-anchors_preset = 0
-offset_left = -248.0
-offset_top = -453.0
-offset_right = -248.0
-offset_bottom = -453.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -230.0
+offset_top = -428.0
+offset_right = -230.0
+offset_bottom = -428.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="BackButtonContainer" type="MarginContainer" parent="Camera2D/BiomUI"]
-layout_mode = 0
-offset_left = 11.0
-offset_top = 16.0
-offset_right = 96.0
-offset_bottom = 63.0
+layout_mode = 1
+offset_right = 85.0
+offset_bottom = 47.0
 
 [node name="BackButton" type="TextureButton" parent="Camera2D/BiomUI/BackButtonContainer"]
 layout_mode = 2
@@ -68,23 +72,28 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Buildings" type="Control" parent="."]
-layout_mode = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -245.0
+offset_top = -456.0
+offset_right = -245.0
+offset_bottom = -456.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Civil-Human" type="Control" parent="Buildings"]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Civil-Human" type="Control" parent="Buildings"]
-anchors_preset = 0
-offset_top = -3.0
-offset_right = 40.0
-offset_bottom = 37.0
-
 [node name="Civil" type="MarginContainer" parent="Buildings/Civil-Human"]
 layout_mode = 0
-offset_left = -10.0
-offset_top = 60.0
-offset_right = 297.0
-offset_bottom = 380.0
+offset_left = -17.0
+offset_top = 59.0
+offset_right = 290.0
+offset_bottom = 379.0
 
 [node name="Civil" type="TextureButton" parent="Buildings/Civil-Human/Civil"]
 layout_mode = 2
@@ -97,10 +106,10 @@ stretch_mode = 0
 
 [node name="CivilLabel" type="MarginContainer" parent="Buildings/Civil-Human"]
 layout_mode = 0
-offset_left = 58.0
-offset_top = 104.0
-offset_right = 169.0
-offset_bottom = 150.0
+offset_left = 59.0
+offset_top = 289.0
+offset_right = 170.0
+offset_bottom = 335.0
 
 [node name="CivilLabel" type="Label" parent="Buildings/Civil-Human/CivilLabel"]
 layout_mode = 2
@@ -408,6 +417,7 @@ theme_override_font_sizes/font_size = 34
 text = "Celestial"
 
 [node name="NaviagteBiom" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

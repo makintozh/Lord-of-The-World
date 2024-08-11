@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://rekbabkemi6e"]
+[gd_scene load_steps=6 format=3 uid="uid://qsj3a8hjgg7m"]
 
 [ext_resource type="Texture2D" uid="uid://p0114i6o0hjb" path="res://src/ui/backgrounds/battle-backgrounds/Нежить.PNG" id="1_8gfdy"]
 [ext_resource type="Script" path="res://src/scripts/game-scripts/torres-mortes.gd" id="1_fwnmi"]
@@ -18,21 +18,18 @@ script = ExtResource("1_fwnmi")
 
 [node name="BackGround-Image" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.065
-anchor_bottom = 1.065
-offset_right = -32.5
-offset_bottom = -58.5001
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.065, 1.065)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("1_8gfdy")
 expand_mode = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="BackGround-Video" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
 offset_right = 504.0
 offset_bottom = 904.0
 scale = Vector2(1.065, 1.065)
