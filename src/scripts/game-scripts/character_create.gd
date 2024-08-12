@@ -14,7 +14,7 @@ extends Control
 @onready var intelligencefeature = $FeatureScheme/IntelligenceFeatureScheme
 
 
-var animation_duration:float = 0.09
+
 var other_character_position_y = 115
 var current_character_position_y = 101
 var current_character_position_x = 170
@@ -34,9 +34,148 @@ var min_index:int = -1
 
 
 
+
+@onready var api = $APIRequest
+@onready var api_character = $APICharacterCreate
+@onready var api_summary = $APISummary
+
+
+
+
+@onready var refreshing = $Refresh
+
+
+
+
+
+var token = JSON.stringify({
+		
+		"token":GLOBAL.from_auth_token
+		
+		})
+
+
+
+func _ready():
+	api_summary.request("http://" + GLOBAL.choiced_server_address + "/summary", CONFIG.api_headers, HTTPClient.METHOD_GET, token)
+	api.request("http://" + GLOBAL.choiced_server_address + "/archetypes", CONFIG.api_headers, HTTPClient.METHOD_GET, token)
+	$CharacterTypeName.visible = false
+	$Characters.visible = false
+	$FeatureScheme.visible = false
+	$CharacterFeature.visible = false
+	$CharacterName.visible = false
+	$CharacterCreateButton.visible = false
+
+
+
+
 func _process(_delta):
 	current_character()
 	checkcharacternameinput()
+
+
+
+
+func check_archetype():
+	if characterfeaturename.text ==  "Strength":
+		GLOBAL.choiced_archetype_index = 1
+	elif characterfeaturename.text ==  "Dexterity":
+		GLOBAL.choiced_archetype_index = 2
+	elif characterfeaturename.text ==  "Intelligence":
+		GLOBAL.choiced_archetype_index = 3
+
+
+
+
+
+
+func _on_character_create_button_pressed(): 
+	check_archetype()
+	
+	var character_data = JSON.stringify({
+		
+		
+		"token":GLOBAL.from_auth_token,
+		"name":characternameinput.text,
+		"archetype_id":GLOBAL.choiced_archetype_index
+		
+		})
+		
+		
+	print(character_data)
+	api_character.request("http://" + GLOBAL.choiced_server_address + "/create_character", CONFIG.api_headers, HTTPClient.METHOD_POST, character_data)
+
+
+
+
+
+func _on_api_request_request_completed(result, response_code, headers, body):
+	var api_response = JSON.parse_string(body.get_string_from_utf8())
+	var message = str(api_response["message"])
+	var archetypes = str(api_response["archetypes"][0])
+	
+	
+	print(str(result))
+	print("Сообщение: " + message)
+	print("\nАрхетипы: " + archetypes)
+	
+
+
+
+
+
+
+
+func _on_api_character_create_request_completed(result, response_code, headers, body):
+	var api_response = JSON.parse_string(body.get_string_from_utf8())
+	print(api_response)
+	print(str(response_code))
+	
+	
+	if response_code == 200:
+		get_tree().change_scene_to_file("res://src/scenes/game-scenes/navigation-menu.tscn")
+		refreshing.visible = false
+	else:
+		$CharacterTypeName.visible = true
+		$Characters.visible = true
+		$FeatureScheme.visible = true
+		$CharacterFeature.visible = true
+		$CharacterName.visible = true
+		$CharacterCreateButton.visible = true
+
+
+
+
+
+func _on_api_summary_request_completed(result, response_code, headers, body):
+	var api_response = JSON.parse_string(body.get_string_from_utf8())
+	var character_info = str(api_response["character_info"])
+	print(api_response)
+	print("\nCharacter Info: " + character_info)
+	
+	if character_info != "<null>":
+		get_tree().change_scene_to_file("res://src/scenes/game-scenes/navigation-menu.tscn")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -62,7 +201,7 @@ func current_character():
 		
 	if GLOBAL.character_index == 0:
 		current_character_name = "Elves"
-		characterfeaturename.text = "Agility"
+		characterfeaturename.text = "Dexterity"
 		charactertypename.text = "Elves"
 		
 		agilityfeature.visible = true
@@ -174,9 +313,7 @@ func enable_create():
 
 
 
-func _on_character_create_button_pressed():
-	GLOBAL.player_character_name = characternameinput.text
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/navigation-menu.tscn")
+
 
 
 
@@ -197,8 +334,6 @@ func go_right():
 
 func go_left():
 	GLOBAL.character_index -= 1
-
-
 
 
 

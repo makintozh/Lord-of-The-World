@@ -13,6 +13,11 @@ var from_register_token
 
 var choiced_server_address = null
 
+
+var choiced_archetype_index
+
+
+
 var sign_out:bool = false
 
 

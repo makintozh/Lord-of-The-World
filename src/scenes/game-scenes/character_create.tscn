@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://do85wm7qmftwm"]
+[gd_scene load_steps=26 format=3 uid="uid://do85wm7qmftwm"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/character_create.gd" id="1_t13y3"]
 [ext_resource type="Texture2D" uid="uid://bmof2g6xlu2bf" path="res://src/ui/backgrounds/background.png" id="2_juskx"]
@@ -14,6 +14,14 @@
 [ext_resource type="Texture2D" uid="uid://cjbfs42jpw2ed" path="res://src/ui/buttons/green buttom base long.png" id="11_c771i"]
 [ext_resource type="Texture2D" uid="uid://b2n2hn8q5eaa2" path="res://src/ui/elements/strenght.png" id="11_xy1f6"]
 [ext_resource type="Texture2D" uid="uid://wegdp53eswmk" path="res://src/ui/elements/int.png" id="12_1dfr4"]
+[ext_resource type="Texture2D" uid="uid://cxpni2esf80pi" path="res://src/ui/elements/update 1.png" id="15_hneh2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3cest"]
+texture = ExtResource("10_n5pao")
+texture_margin_left = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b75u7"]
+texture = ExtResource("10_n5pao")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5tp33"]
 texture = ExtResource("11_c771i")
@@ -30,12 +38,67 @@ texture = ExtResource("11_c771i")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bl7up"]
 texture = ExtResource("11_c771i")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3cest"]
-texture = ExtResource("10_n5pao")
-texture_margin_left = 25.0
+[sub_resource type="Animation" id="Animation_vhv4n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:flip_v")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b75u7"]
-texture = ExtResource("10_n5pao")
+[sub_resource type="Animation" id="Animation_n6wnf"]
+resource_name = "refreshing"
+length = 0.35
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath(".:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [true, false, false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:flip_v")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5avx2"]
+_data = {
+"RESET": SubResource("Animation_vhv4n"),
+"refreshing": SubResource("Animation_n6wnf")
+}
 
 [node name="CharacterCreate" type="Control"]
 layout_mode = 3
@@ -46,7 +109,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_t13y3")
 
+[node name="APIRequest" type="HTTPRequest" parent="."]
+
+[node name="APISummary" type="HTTPRequest" parent="."]
+
+[node name="APICharacterCreate" type="HTTPRequest" parent="."]
+
 [node name="BackGround" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = -2030.0
 offset_top = -208.0
 offset_right = 4335.0
@@ -238,40 +308,6 @@ grow_vertical = 2
 layout_mode = 2
 texture = ExtResource("12_1dfr4")
 
-[node name="CharacterCreateButton" type="Control" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -250.0
-offset_right = -250.0
-grow_horizontal = 2
-
-[node name="CharacterCreateButtonContainer" type="MarginContainer" parent="CharacterCreateButton"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 151.0
-offset_top = 769.0
-offset_right = 342.0
-offset_bottom = 831.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="CharacterCreateButton" type="Button" parent="CharacterCreateButton/CharacterCreateButtonContainer"]
-modulate = Color(1, 1, 1, 0.470588)
-layout_mode = 2
-theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxTexture_5tp33")
-theme_override_styles/hover = SubResource("StyleBoxTexture_3hy0n")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_j1crl")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_rhrv2")
-theme_override_styles/focus = SubResource("StyleBoxTexture_bl7up")
-text = "CREATE"
-
 [node name="CharacterFeature" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 5
@@ -376,6 +412,89 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_3cest")
 theme_override_styles/focus = SubResource("StyleBoxTexture_b75u7")
 placeholder_text = "Name"
 
-[connection signal="pressed" from="CharacterCreateButton/CharacterCreateButtonContainer/CharacterCreateButton" to="." method="_on_character_create_button_pressed"]
+[node name="CharacterCreateButton" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_right = -250.0
+grow_horizontal = 2
+
+[node name="CharacterCreateButtonContainer" type="MarginContainer" parent="CharacterCreateButton"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 151.0
+offset_top = 769.0
+offset_right = 342.0
+offset_bottom = 831.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CharacterCreateButton" type="Button" parent="CharacterCreateButton/CharacterCreateButtonContainer"]
+modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxTexture_5tp33")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3hy0n")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_j1crl")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_rhrv2")
+theme_override_styles/focus = SubResource("StyleBoxTexture_bl7up")
+text = "CREATE"
+
+[node name="Refresh" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -246.0
+offset_top = -629.0
+offset_right = -206.0
+offset_bottom = -589.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Refresh" type="MarginContainer" parent="Refresh"]
+layout_mode = 1
+offset_left = 182.0
+offset_top = 553.0
+offset_right = 286.0
+offset_bottom = 663.0
+
+[node name="Refresh" type="TextureRect" parent="Refresh/Refresh"]
+layout_mode = 2
+texture = ExtResource("15_hneh2")
+expand_mode = 1
+flip_h = true
+
+[node name="RefreshAnimation" type="AnimationPlayer" parent="Refresh/Refresh/Refresh"]
+libraries = {
+"": SubResource("AnimationLibrary_5avx2")
+}
+autoplay = "refreshing"
+
+[node name="Refresh_Label" type="MarginContainer" parent="Refresh"]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 658.0
+offset_right = 321.0
+offset_bottom = 698.0
+
+[node name="Refresh_Label" type="Label" parent="Refresh/Refresh_Label"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = "Wait..."
+horizontal_alignment = 1
+
+[connection signal="request_completed" from="APIRequest" to="." method="_on_api_request_request_completed"]
+[connection signal="request_completed" from="APISummary" to="." method="_on_api_summary_request_completed"]
+[connection signal="request_completed" from="APICharacterCreate" to="." method="_on_api_character_create_request_completed"]
 [connection signal="pressed" from="CharacterFeature/CharacterChangeLeftButton/LeftChoiceButton" to="." method="_on_left_choice_button_pressed"]
 [connection signal="pressed" from="CharacterFeature/CharacterChangeRighttButton/RightChoiceButton" to="." method="_on_right_choice_button_pressed"]
+[connection signal="pressed" from="CharacterCreateButton/CharacterCreateButtonContainer/CharacterCreateButton" to="." method="_on_character_create_button_pressed"]
