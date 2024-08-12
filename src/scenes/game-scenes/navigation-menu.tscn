@@ -1919,18 +1919,6 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 texture = ExtResource("2_qyodl")
 
-[node name="PlayerNameContainer" type="MarginContainer" parent="PlayerProfileUI"]
-layout_mode = 0
-offset_left = 216.0
-offset_top = 18.0
-offset_right = 367.0
-offset_bottom = 47.0
-
-[node name="PlayerName" type="Label" parent="PlayerProfileUI/PlayerNameContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 21
-text = "PLAYER NAME"
-
 [node name="ClanBackGround" type="MarginContainer" parent="PlayerProfileUI"]
 layout_mode = 0
 offset_left = 112.0
@@ -1976,10 +1964,10 @@ frame_progress = 0.390949
 
 [node name="TavernLabel" type="MarginContainer" parent="Buildings/Tavern"]
 layout_mode = 0
-offset_left = 85.0
-offset_top = 224.0
-offset_right = 196.0
-offset_bottom = 270.0
+offset_left = 60.0
+offset_top = 326.0
+offset_right = 171.0
+offset_bottom = 372.0
 
 [node name="TavernLabel" type="Label" parent="Buildings/Tavern/TavernLabel"]
 layout_mode = 2
@@ -2097,10 +2085,10 @@ frame_progress = 0.453017
 
 [node name="LeagueLabel" type="MarginContainer" parent="Buildings/League"]
 layout_mode = 0
-offset_left = 317.0
-offset_top = 732.0
-offset_right = 469.0
-offset_bottom = 778.0
+offset_left = 326.0
+offset_top = 723.0
+offset_right = 478.0
+offset_bottom = 769.0
 
 [node name="LeagueLabel" type="Label" parent="Buildings/League/LeagueLabel"]
 layout_mode = 2

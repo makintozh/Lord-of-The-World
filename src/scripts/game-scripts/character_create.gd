@@ -108,7 +108,6 @@ func _on_character_create_button_pressed():
 
 
 
-
 func _on_api_request_request_completed(result, response_code, headers, body):
 	var api_response = JSON.parse_string(body.get_string_from_utf8())
 	var message = str(api_response["message"])
@@ -149,13 +148,14 @@ func _on_api_character_create_request_completed(result, response_code, headers, 
 
 func _on_api_summary_request_completed(result, response_code, headers, body):
 	var api_response = JSON.parse_string(body.get_string_from_utf8())
-	var character_info = str(api_response["character_info"])
+	var character_info = api_response["character_info"]
 	print(api_response)
-	print("\nCharacter Info: " + character_info)
+	print("\nCharacter Info: " + str(character_info))
 	
-	if character_info != "<null>":
+	if str(character_info) != "<null>":
 		get_tree().change_scene_to_file("res://src/scenes/game-scenes/navigation-menu.tscn")
-
+	
+	
 
 
 
