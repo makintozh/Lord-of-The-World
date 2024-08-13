@@ -33,18 +33,23 @@ grow_vertical = 2
 script = ExtResource("1_06l26")
 metadata/_edit_use_anchors_ = true
 
-[node name="BackGround" type="TextureRect" parent="."]
+[node name="BackGround-Image" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -31.0
+offset_top = -41.0
+offset_right = 385.0
+offset_bottom = 838.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.71, 0.71)
+pivot_offset = Vector2(0, 0.23)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_f0g80")
-expand_mode = 2
-stretch_mode = 1
+stretch_mode = 4
 
 [node name="TavernProfileUI" type="Control" parent="."]
 layout_mode = 1

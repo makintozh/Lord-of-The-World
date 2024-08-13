@@ -4,7 +4,7 @@ extends Control
 
 @onready var characternameinput = $CharacterName/CharacterNameContainer/CharacterNameInput
 @onready var charactercreatebutton = $CharacterCreateButton/CharacterCreateButtonContainer/CharacterCreateButton
-@onready var characterfeaturename = $CharacterFeature/CharacterFeatureName/CharacterFeatureName
+@onready var archetype = $Archetype/Archetype/Archetype
 @onready var charactertypename = $CharacterTypeName/CharacterTypeName/CharacterTypeName
 @onready var elves = $Characters/Elves
 @onready var dwarfs = $Characters/Dwarfs
@@ -62,7 +62,7 @@ func _ready():
 	$CharacterTypeName.visible = false
 	$Characters.visible = false
 	$FeatureScheme.visible = false
-	$CharacterFeature.visible = false
+	$Archetype.visible = false
 	$CharacterName.visible = false
 	$CharacterCreateButton.visible = false
 
@@ -77,11 +77,11 @@ func _process(_delta):
 
 
 func check_archetype():
-	if characterfeaturename.text ==  "Strength":
+	if archetype.text ==  "Strength":
 		GLOBAL.choiced_archetype_index = 1
-	elif characterfeaturename.text ==  "Dexterity":
+	elif archetype.text ==  "Dexterity":
 		GLOBAL.choiced_archetype_index = 2
-	elif characterfeaturename.text ==  "Intelligence":
+	elif archetype.text ==  "Intelligence":
 		GLOBAL.choiced_archetype_index = 3
 
 
@@ -134,13 +134,6 @@ func _on_api_character_create_request_completed(result, response_code, headers, 
 	if response_code == 200:
 		get_tree().change_scene_to_file("res://src/scenes/game-scenes/navigation-menu.tscn")
 		refreshing.visible = false
-	else:
-		$CharacterTypeName.visible = true
-		$Characters.visible = true
-		$FeatureScheme.visible = true
-		$CharacterFeature.visible = true
-		$CharacterName.visible = true
-		$CharacterCreateButton.visible = true
 
 
 
@@ -154,7 +147,14 @@ func _on_api_summary_request_completed(result, response_code, headers, body):
 	
 	if str(character_info) != "<null>":
 		get_tree().change_scene_to_file("res://src/scenes/game-scenes/navigation-menu.tscn")
-	
+	else:
+		refreshing.visible = false
+		$CharacterTypeName.visible = true
+		$Characters.visible = true
+		$FeatureScheme.visible = true
+		$Archetype.visible = true
+		$CharacterName.visible = true
+		$CharacterCreateButton.visible = true
 	
 
 
@@ -201,7 +201,7 @@ func current_character():
 		
 	if GLOBAL.character_index == 0:
 		current_character_name = "Elves"
-		characterfeaturename.text = "Dexterity"
+		archetype.text = "Dexterity"
 		charactertypename.text = "Elves"
 		
 		agilityfeature.visible = true
@@ -234,7 +234,7 @@ func current_character():
 
 	elif GLOBAL.character_index == 1:
 		current_character_name = "Dwarfs"
-		characterfeaturename.text = "Strength"
+		archetype.text = "Strength"
 		charactertypename.text = "Dwarfs"
 		
 		agilityfeature.visible = false
@@ -267,7 +267,7 @@ func current_character():
 
 	elif GLOBAL.character_index == -1:
 		current_character_name = "Humans"
-		characterfeaturename.text = "Intelligence"
+		archetype.text = "Intelligence"
 		charactertypename.text = "Humans"
 		
 		agilityfeature.visible = false

@@ -115,17 +115,23 @@ script = ExtResource("1_t13y3")
 
 [node name="APICharacterCreate" type="HTTPRequest" parent="."]
 
-[node name="BackGround" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = -2030.0
-offset_top = -208.0
-offset_right = 4335.0
-offset_bottom = 2270.0
+[node name="BackGround-Image" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -37.0
+offset_top = -48.0
+offset_right = 379.0
+offset_bottom = 831.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+pivot_offset = Vector2(0, 0.23)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_juskx")
-expand_mode = 2
-stretch_mode = 1
+stretch_mode = 4
 
 [node name="CharacterTypeName" type="Control" parent="."]
 layout_mode = 1
@@ -308,7 +314,7 @@ grow_vertical = 2
 layout_mode = 2
 texture = ExtResource("12_1dfr4")
 
-[node name="CharacterFeature" type="Control" parent="."]
+[node name="Archetype" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -318,19 +324,19 @@ offset_right = 250.0
 offset_bottom = 754.0
 grow_horizontal = 2
 
-[node name="CharacterFeatureBackgroun" type="MarginContainer" parent="CharacterFeature"]
+[node name="ArchetypeBackground" type="MarginContainer" parent="Archetype"]
 layout_mode = 0
 offset_left = 184.0
 offset_top = 250.0
 offset_right = 306.0
 offset_bottom = 288.0
 
-[node name="CharacteCharacterFeatureBackgrounTexture" type="TextureRect" parent="CharacterFeature/CharacterFeatureBackgroun"]
+[node name="CharacteCharacterFeatureBackgrounTexture" type="TextureRect" parent="Archetype/ArchetypeBackground"]
 layout_mode = 2
 texture = ExtResource("3_yt8dn")
 expand_mode = 1
 
-[node name="CharacterFeatureName" type="MarginContainer" parent="CharacterFeature"]
+[node name="Archetype" type="MarginContainer" parent="Archetype"]
 layout_mode = 0
 offset_left = 199.0
 offset_top = 256.165
@@ -339,19 +345,19 @@ offset_bottom = 278.165
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="CharacterFeatureName" type="Label" parent="CharacterFeature/CharacterFeatureName"]
+[node name="Archetype" type="Label" parent="Archetype/Archetype"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "Agility"
 
-[node name="CharacterChangeLeftButton" type="MarginContainer" parent="CharacterFeature"]
+[node name="CharacterChangeLeftButton" type="MarginContainer" parent="Archetype"]
 layout_mode = 0
 offset_left = 134.0
 offset_top = 250.0
 offset_right = 179.0
 offset_bottom = 288.0
 
-[node name="LeftChoiceButton" type="TextureButton" parent="CharacterFeature/CharacterChangeLeftButton"]
+[node name="LeftChoiceButton" type="TextureButton" parent="Archetype/CharacterChangeLeftButton"]
 layout_mode = 2
 texture_normal = ExtResource("7_bnfx2")
 texture_pressed = ExtResource("7_bnfx2")
@@ -360,14 +366,14 @@ texture_focused = ExtResource("7_bnfx2")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="CharacterChangeRighttButton" type="MarginContainer" parent="CharacterFeature"]
+[node name="CharacterChangeRighttButton" type="MarginContainer" parent="Archetype"]
 layout_mode = 0
 offset_left = 311.0
 offset_top = 250.0
 offset_right = 356.0
 offset_bottom = 288.0
 
-[node name="RightChoiceButton" type="TextureButton" parent="CharacterFeature/CharacterChangeRighttButton"]
+[node name="RightChoiceButton" type="TextureButton" parent="Archetype/CharacterChangeRighttButton"]
 layout_mode = 2
 texture_normal = ExtResource("8_mfu6b")
 texture_pressed = ExtResource("8_mfu6b")
@@ -495,6 +501,6 @@ horizontal_alignment = 1
 [connection signal="request_completed" from="APIRequest" to="." method="_on_api_request_request_completed"]
 [connection signal="request_completed" from="APISummary" to="." method="_on_api_summary_request_completed"]
 [connection signal="request_completed" from="APICharacterCreate" to="." method="_on_api_character_create_request_completed"]
-[connection signal="pressed" from="CharacterFeature/CharacterChangeLeftButton/LeftChoiceButton" to="." method="_on_left_choice_button_pressed"]
-[connection signal="pressed" from="CharacterFeature/CharacterChangeRighttButton/RightChoiceButton" to="." method="_on_right_choice_button_pressed"]
+[connection signal="pressed" from="Archetype/CharacterChangeLeftButton/LeftChoiceButton" to="." method="_on_left_choice_button_pressed"]
+[connection signal="pressed" from="Archetype/CharacterChangeRighttButton/RightChoiceButton" to="." method="_on_right_choice_button_pressed"]
 [connection signal="pressed" from="CharacterCreateButton/CharacterCreateButtonContainer/CharacterCreateButton" to="." method="_on_character_create_button_pressed"]
