@@ -6,11 +6,6 @@ extends Control
 var api = HTTPClient.new()
 
 
-func _process(_delta):
-	refresh_animation.play("refreshing")
-	
-	if GLOBAL.has_internet == false:
-		self.visible = false
 
 
 func _on_cancel_pressed():

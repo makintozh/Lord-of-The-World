@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 
 @onready var username = $TavernProfileUI/UsernameContainer/Username
@@ -6,6 +6,7 @@ extends Node2D
 @onready var humansicon = $TavernProfileUI/PlayerProfileIcon/HumansIcon
 @onready var dwarftsicon = $TavernProfileUI/PlayerProfileIcon/DwarftsIcon
 
+var options = preload("res://src/scenes/settings-scenes/options_tavern.tscn")
 
 
 func _ready():
@@ -42,7 +43,13 @@ func _on_back_button_pressed():
 
 #Если нажата кнопка "Настройки"
 func _on_options_button_pressed():
-	pass 
+	options.instantiate()
+	add_child(options.instantiate())
+
+
+
+
+
 
 
 

@@ -1,17 +1,21 @@
 extends Control
 
-@onready var playernamelabel = $PlayerProfileUI/PlayerNameContainer/PlayerName
+
+
+
 @onready var elvesicon = $PlayerProfileUI/PlayerProfileIcon/ElvesIcon
 @onready var humansicon = $PlayerProfileUI/PlayerProfileIcon/HumansIcon
-@onready var dwarftsicon = $PlayerProfileUI/PlayerProfileIcon/DwarftsIcon
+@onready var dwarftsicon = $PlayerProfileUI               /PlayerProfileIcon/DwarftsIcon
 
 
 
 
 func _ready():
 	player_icon()    #Аватарка Пользователя
-	playernamelabel.text = GLOBAL.player_character_name    #Имя Пользователя
-	
+
+
+
+
 
 
 func player_icon():

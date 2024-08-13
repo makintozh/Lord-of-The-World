@@ -1,41 +1,57 @@
-[gd_scene load_steps=7 format=3 uid="uid://rekbabkemi6e"]
+[gd_scene load_steps=6 format=3 uid="uid://qsj3a8hjgg7m"]
 
-[ext_resource type="Texture2D" uid="uid://cs2v3w5agn0ti" path="res://src/ui/backgrounds/battle-backgrounds/Нежить.PNG" id="1_8gfdy"]
+[ext_resource type="Texture2D" uid="uid://p0114i6o0hjb" path="res://src/ui/backgrounds/battle-backgrounds/Нежить.PNG" id="1_8gfdy"]
 [ext_resource type="Script" path="res://src/scripts/game-scripts/torres-mortes.gd" id="1_fwnmi"]
-[ext_resource type="VideoStream" path="res://src/ui/backgrounds/battle-backgrounds/Нежить.ogv" id="2_wndqi"]
 [ext_resource type="Texture2D" uid="uid://c2u2i5n4mifyh" path="res://src/ui/buttons/back_button.png" id="3_8jagm"]
 [ext_resource type="Texture2D" uid="uid://b604lcs55mpp0" path="res://src/ui/elements/Battle_Card.png" id="4_ka2nq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_huxy3"]
 
-[node name="Torres-mortes" type="Node2D"]
+[node name="Torres-mortes" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_fwnmi")
 
 [node name="BackGround-Image" type="TextureRect" parent="."]
-offset_top = -1.0
-offset_right = 500.0
-offset_bottom = 901.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("1_8gfdy")
 expand_mode = 1
 
 [node name="BackGround-Video" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
 offset_right = 504.0
 offset_bottom = 904.0
-stream = ExtResource("2_wndqi")
+scale = Vector2(1.065, 1.065)
 autoplay = true
 expand = true
 loop = true
 
 [node name="BattleStepLayer" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
 
 [node name="BattleStepContainer" type="MarginContainer" parent="BattleStepLayer"]
-layout_mode = 0
-offset_right = 320.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -245.0
+offset_right = 75.0
 offset_bottom = 81.0
+grow_horizontal = 2
 theme_override_constants/margin_left = 170
 theme_override_constants/margin_top = 25
 
@@ -66,17 +82,27 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="PlayerCards" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -475.0
+offset_right = -460.0
+offset_bottom = -435.0
+grow_horizontal = 2
 
 [node name="Card" type="MarginContainer" parent="PlayerCards"]
-layout_mode = 0
-offset_left = 189.0
-offset_top = 733.0
-offset_right = 279.0
-offset_bottom = 856.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 169.0
+offset_top = 713.0
+offset_right = 259.0
+offset_bottom = 836.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Card" type="TextureButton" parent="PlayerCards/Card"]
 layout_mode = 2
@@ -88,11 +114,18 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Card2" type="MarginContainer" parent="PlayerCards"]
-layout_mode = 0
-offset_left = 189.0
-offset_top = 601.0
-offset_right = 279.0
-offset_bottom = 724.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 169.0
+offset_top = 581.0
+offset_right = 259.0
+offset_bottom = 704.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Card" type="TextureButton" parent="PlayerCards/Card2"]
 layout_mode = 2
@@ -104,11 +137,18 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Card3" type="MarginContainer" parent="PlayerCards"]
-layout_mode = 0
-offset_left = 330.0
-offset_top = 589.0
-offset_right = 420.0
-offset_bottom = 712.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 310.0
+offset_top = 569.0
+offset_right = 400.0
+offset_bottom = 692.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Card" type="TextureButton" parent="PlayerCards/Card3"]
 layout_mode = 2
@@ -120,11 +160,18 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Card4" type="MarginContainer" parent="PlayerCards"]
-layout_mode = 0
-offset_left = 330.0
-offset_top = 722.0
-offset_right = 420.0
-offset_bottom = 845.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 310.0
+offset_top = 702.0
+offset_right = 400.0
+offset_bottom = 825.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Card" type="TextureButton" parent="PlayerCards/Card4"]
 layout_mode = 2
@@ -136,11 +183,18 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Card5" type="MarginContainer" parent="PlayerCards"]
-layout_mode = 0
-offset_left = 52.9
-offset_top = 589.0
-offset_right = 142.9
-offset_bottom = 712.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 32.0
+offset_top = 569.0
+offset_right = 122.0
+offset_bottom = 692.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Card" type="TextureButton" parent="PlayerCards/Card5"]
 layout_mode = 2
@@ -152,11 +206,18 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Card6" type="MarginContainer" parent="PlayerCards"]
-layout_mode = 0
-offset_left = 52.9
-offset_top = 722.0
-offset_right = 142.9
-offset_bottom = 845.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 39.0
+offset_top = 702.0
+offset_right = 129.0
+offset_bottom = 825.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Card" type="TextureButton" parent="PlayerCards/Card6"]
 layout_mode = 2
@@ -168,18 +229,31 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="EnemyCards" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_top = -457.465
-offset_right = 40.0
-offset_bottom = -417.465
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -900.0
+offset_right = -460.0
+offset_bottom = -860.0
+grow_horizontal = 2
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
 
 [node name="Card" type="MarginContainer" parent="EnemyCards"]
-layout_mode = 0
-offset_left = 189.0
-offset_top = 733.0
-offset_right = 279.0
-offset_bottom = 856.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 169.0
+offset_top = 713.0
+offset_right = 259.0
+offset_bottom = 836.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Card" type="TextureButton" parent="EnemyCards/Card"]
 layout_mode = 2
@@ -191,11 +265,18 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Card2" type="MarginContainer" parent="EnemyCards"]
-layout_mode = 0
-offset_left = 189.0
-offset_top = 601.0
-offset_right = 279.0
-offset_bottom = 724.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 169.0
+offset_top = 581.0
+offset_right = 259.0
+offset_bottom = 704.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Card" type="TextureButton" parent="EnemyCards/Card2"]
 layout_mode = 2
@@ -207,11 +288,18 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Card3" type="MarginContainer" parent="EnemyCards"]
-layout_mode = 0
-offset_left = 330.0
-offset_top = 589.0
-offset_right = 420.0
-offset_bottom = 712.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 310.0
+offset_top = 569.0
+offset_right = 400.0
+offset_bottom = 692.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Card" type="TextureButton" parent="EnemyCards/Card3"]
 layout_mode = 2
@@ -223,11 +311,18 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Card4" type="MarginContainer" parent="EnemyCards"]
-layout_mode = 0
-offset_left = 330.0
-offset_top = 722.0
-offset_right = 420.0
-offset_bottom = 845.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 310.0
+offset_top = 702.0
+offset_right = 400.0
+offset_bottom = 825.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Card" type="TextureButton" parent="EnemyCards/Card4"]
 layout_mode = 2
@@ -239,11 +334,18 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Card5" type="MarginContainer" parent="EnemyCards"]
-layout_mode = 0
-offset_left = 52.9
-offset_top = 589.0
-offset_right = 142.9
-offset_bottom = 712.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 32.0
+offset_top = 569.0
+offset_right = 122.0
+offset_bottom = 692.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Card" type="TextureButton" parent="EnemyCards/Card5"]
 layout_mode = 2
@@ -255,11 +357,18 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Card6" type="MarginContainer" parent="EnemyCards"]
-layout_mode = 0
-offset_left = 52.9
-offset_top = 722.0
-offset_right = 142.9
-offset_bottom = 845.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 39.0
+offset_top = 702.0
+offset_right = 129.0
+offset_bottom = 825.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Card" type="TextureButton" parent="EnemyCards/Card6"]
 layout_mode = 2

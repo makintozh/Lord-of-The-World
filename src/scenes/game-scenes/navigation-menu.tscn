@@ -1840,34 +1840,52 @@ animations = [{
 
 [node name="Navigation-menu" type="Control"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -500.0
+offset_bottom = -900.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_ykvwa")
 
 [node name="BackGround-Image" type="TextureRect" parent="."]
-layout_mode = 0
-offset_top = -117.0
-offset_right = 503.0
-offset_bottom = 1051.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -41.325
+offset_right = 420.0
+offset_bottom = 901.675
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.195, 1.195)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("3_j0xlm")
-expand_mode = 1
+stretch_mode = 4
 
 [node name="BackGround-Video" type="VideoStreamPlayer" parent="."]
 layout_mode = 1
-offset_top = -117.0
-offset_right = 503.0
-offset_bottom = 1051.0
+offset_top = -41.325
+offset_right = 420.0
+offset_bottom = 901.675
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.195, 1.195)
 stream = ExtResource("3_q2uc8")
 autoplay = true
 expand = true
 loop = true
+metadata/_edit_use_anchors_ = true
 
-[node name="PlayerProfileUI" type="CanvasLayer" parent="."]
+[node name="PlayerProfileUI" type="Control" parent="."]
+anchors_preset = 0
 
 [node name="PlayerProfileIcon" type="MarginContainer" parent="PlayerProfileUI"]
+layout_mode = 0
 offset_left = 13.0
 offset_top = 27.0
 offset_right = 92.0
@@ -1892,6 +1910,7 @@ texture = ExtResource("5_ky8tc")
 expand_mode = 1
 
 [node name="PlayerProfileUI" type="MarginContainer" parent="PlayerProfileUI"]
+layout_mode = 0
 offset_right = 504.0
 offset_bottom = 109.0
 metadata/_edit_use_anchors_ = true
@@ -1900,18 +1919,8 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 texture = ExtResource("2_qyodl")
 
-[node name="PlayerNameContainer" type="MarginContainer" parent="PlayerProfileUI"]
-offset_left = 216.0
-offset_top = 18.0
-offset_right = 367.0
-offset_bottom = 47.0
-
-[node name="PlayerName" type="Label" parent="PlayerProfileUI/PlayerNameContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 21
-text = "PLAYER NAME"
-
 [node name="ClanBackGround" type="MarginContainer" parent="PlayerProfileUI"]
+layout_mode = 0
 offset_left = 112.0
 offset_top = 70.0
 offset_right = 156.0
@@ -1923,23 +1932,22 @@ texture = ExtResource("7_gn6ft")
 expand_mode = 1
 
 [node name="Buildings" type="Control" parent="."]
-layout_mode = 3
 anchors_preset = 0
 
 [node name="Tavern" type="Control" parent="Buildings"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -19.0
-offset_top = 72.0
-offset_right = 161.0
-offset_bottom = 290.0
+offset_left = -20.0
+offset_top = -1.0
+offset_right = -20.0
+offset_bottom = -1.0
 
 [node name="Tavern" type="MarginContainer" parent="Buildings/Tavern"]
 layout_mode = 0
-offset_left = -1.0
-offset_top = 82.0
-offset_right = 190.0
-offset_bottom = 262.0
+offset_left = 4.0
+offset_top = 196.0
+offset_right = 158.0
+offset_bottom = 346.0
 
 [node name="Tavern" type="TextureButton" parent="Buildings/Tavern/Tavern"]
 layout_mode = 2
@@ -1956,10 +1964,10 @@ frame_progress = 0.390949
 
 [node name="TavernLabel" type="MarginContainer" parent="Buildings/Tavern"]
 layout_mode = 0
-offset_left = 85.0
-offset_top = 224.0
-offset_right = 196.0
-offset_bottom = 270.0
+offset_left = 60.0
+offset_top = 326.0
+offset_right = 171.0
+offset_bottom = 372.0
 
 [node name="TavernLabel" type="Label" parent="Buildings/Tavern/TavernLabel"]
 layout_mode = 2
@@ -1970,17 +1978,17 @@ text = "Tavern"
 [node name="Biom" type="Control" parent="Buildings"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -44.0
-offset_top = 187.0
-offset_right = -4.0
-offset_bottom = 227.0
+offset_left = 8.0
+offset_top = 48.0
+offset_right = 8.0
+offset_bottom = 48.0
 
 [node name="Biom" type="MarginContainer" parent="Buildings/Biom"]
 layout_mode = 0
-offset_left = 291.0
-offset_top = 104.0
-offset_right = 445.0
-offset_bottom = 254.0
+offset_left = 232.0
+offset_top = 283.0
+offset_right = 386.0
+offset_bottom = 433.0
 
 [node name="Biom" type="TextureButton" parent="Buildings/Biom/Biom"]
 layout_mode = 2
@@ -1996,10 +2004,10 @@ autoplay = "Biom"
 
 [node name="BiomLabel" type="MarginContainer" parent="Buildings/Biom"]
 layout_mode = 0
-offset_left = 336.0
-offset_top = 217.0
-offset_right = 447.0
-offset_bottom = 263.0
+offset_left = 283.0
+offset_top = 404.0
+offset_right = 394.0
+offset_bottom = 450.0
 
 [node name="BiomLabel" type="Label" parent="Buildings/Biom/BiomLabel"]
 layout_mode = 2
@@ -2009,17 +2017,17 @@ text = "Biom"
 [node name="ClansHall" type="Control" parent="Buildings"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -30.0
-offset_top = 140.0
-offset_right = 10.0
-offset_bottom = 180.0
+offset_left = -27.0
+offset_top = 94.0
+offset_right = -27.0
+offset_bottom = 94.0
 
 [node name="ClansHall" type="MarginContainer" parent="Buildings/ClansHall"]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 438.0
-offset_right = 194.0
-offset_bottom = 615.0
+offset_left = 6.0
+offset_top = 522.0
+offset_right = 182.0
+offset_bottom = 699.0
 
 [node name="ClansHall" type="TextureButton" parent="Buildings/ClansHall/ClansHall"]
 layout_mode = 2
@@ -2037,10 +2045,10 @@ frame_progress = 0.00634395
 
 [node name="ClansHallLabel" type="MarginContainer" parent="Buildings/ClansHall"]
 layout_mode = 0
-offset_left = 47.0
-offset_top = 561.0
-offset_right = 199.0
-offset_bottom = 607.0
+offset_left = 33.0
+offset_top = 622.0
+offset_right = 185.0
+offset_bottom = 668.0
 
 [node name="ClansHallLabel" type="Label" parent="Buildings/ClansHall/ClansHallLabel"]
 layout_mode = 2
@@ -2050,17 +2058,17 @@ text = "Clans hall"
 [node name="League" type="Control" parent="Buildings"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 77.0
-offset_top = 144.0
-offset_right = 117.0
-offset_bottom = 184.0
+offset_left = -6.0
+offset_top = 117.0
+offset_right = -6.0
+offset_bottom = 117.0
 
 [node name="League" type="MarginContainer" parent="Buildings/League"]
 layout_mode = 0
-offset_left = 267.0
-offset_top = 567.0
-offset_right = 449.0
-offset_bottom = 724.0
+offset_left = 360.0
+offset_top = 640.0
+offset_right = 542.0
+offset_bottom = 797.0
 
 [node name="League" type="TextureButton" parent="Buildings/League/League"]
 layout_mode = 2
@@ -2077,10 +2085,10 @@ frame_progress = 0.453017
 
 [node name="LeagueLabel" type="MarginContainer" parent="Buildings/League"]
 layout_mode = 0
-offset_left = 290.0
-offset_top = 690.0
-offset_right = 442.0
-offset_bottom = 736.0
+offset_left = 326.0
+offset_top = 723.0
+offset_right = 478.0
+offset_bottom = 769.0
 
 [node name="LeagueLabel" type="Label" parent="Buildings/League/LeagueLabel"]
 layout_mode = 2

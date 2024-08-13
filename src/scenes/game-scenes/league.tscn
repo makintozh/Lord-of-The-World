@@ -22,42 +22,23 @@ grow_vertical = 2
 script = ExtResource("1_3jcwj")
 metadata/_edit_use_anchors_ = true
 
-[node name="DoubleBackGround" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = -1648.0
-offset_top = -292.0
-offset_right = 11352.0
-offset_bottom = 6795.0
-scale = Vector2(0.296532, 0.248046)
+[node name="BackGround-Image" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -45.0
+offset_top = -80.0
+offset_right = 371.0
+offset_bottom = 949.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.71, 0.71)
+pivot_offset = Vector2(0, 0.23)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_q5fyo")
-expand_mode = 3
-stretch_mode = 1
-
-[node name="BackGround" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = -135.0
-offset_top = -132.0
-offset_right = 2398.0
-offset_bottom = 4940.0
-scale = Vector2(0.296532, 0.248046)
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = ExtResource("2_q5fyo")
-expand_mode = 1
-
-[node name="BackGround" type="TextureRect" parent="BackGround"]
-layout_mode = 0
-offset_left = -5494.0
-offset_top = -9861.0
-offset_right = 38596.0
-offset_bottom = 26738.0
-scale = Vector2(0.296532, 0.248046)
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = ExtResource("2_q5fyo")
-expand_mode = 1
+stretch_mode = 4
 
 [node name="LeagueUI" type="Control" parent="."]
 layout_mode = 1

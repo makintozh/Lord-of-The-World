@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 
 
@@ -55,8 +55,29 @@ func _on_elborus_pressed():
 	get_tree().change_scene_to_file("res://src/scenes/battle-scenes/elborus-hub.tscn")
 
 
+func _on_taurelious_pressed():
+	get_tree().change_scene_to_file("res://src/scenes/battle-scenes/taurelious.tscn")
 
 
+func _on_torres_mortes_pressed():
+	get_tree().change_scene_to_file("res://src/scenes/battle-scenes/torres-mortes.tscn")
 
 
+func _on_forest_pressed():
+	get_tree().change_scene_to_file("res://src/scenes/battle-scenes/forest.tscn")
 
+
+func _on_carvaras_pressed():
+	get_tree().change_scene_to_file("res://src/scenes/battle-scenes/carvaras.tscn")
+
+
+func _on_nordtoppen_pressed():
+	get_tree().change_scene_to_file("res://src/scenes/battle-scenes/nordtoppen.tscn")
+
+
+func _on_keyfand_pressed():
+	get_tree().change_scene_to_file("res://src/scenes/battle-scenes/keyfand.tscn")
+
+
+func _on_meches_pressed():
+	get_tree().change_scene_to_file("res://src/scenes/battle-scenes/meches.tscn")

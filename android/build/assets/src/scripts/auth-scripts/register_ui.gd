@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 @onready var emailinput = $UI/EmailDataUI/Email
 @onready var usernameinput = $UI/LoginDataUI/Login
@@ -12,9 +12,8 @@ extends Node2D
 
 
 @onready var api = $APIRequest
-var authlink = "http://31.129.54.119:80/register"
 
-var signupped = false
+var registered = false
 var privacynotice_enabled = false
 
 var data_path = "user://data.cfg"
@@ -62,6 +61,7 @@ func enable_register():
 
 
 func _on_back_button_pressed():
+	GLOBAL.sign_out = true
 	get_tree().change_scene_to_file("res://src/scenes/auth-scenes/login_ui.tscn")
 
 
@@ -89,7 +89,7 @@ func _on_sign_up_button_pressed():
 		})
 		
 		
-	api.request(authlink, [], HTTPClient.METHOD_POST, authpost)
+	api.request(CONFIG.api_link + "/register", CONFIG.api_headers, HTTPClient.METHOD_POST, authpost)
 	print(authpost)
 	await get_tree().create_timer(20).timeout
 	GLOBAL.failed_reason = "No Internet"
@@ -100,18 +100,34 @@ func _on_sign_up_button_pressed():
 
 
 func _on_http_request_request_completed(result, response_code, headers, body):
-	var json = JSON.new()
-	var post_response = JSON.stringify(body.get_string_from_utf8())
-	print("Ответ: " + str(post_response))
+	var api_response = JSON.parse_string(body.get_string_from_utf8())
+	var message = str(api_response["message"])
+	var token = str(api_response["token"])
+		
+	
+	print(str(result))
+	print("Ответ: " + str(api_response))
+	print("Сообщение:" + message)
+	
+	
+	if token == "<null>":
+		printerr("Токен: " + token)
+	else:
+		print("Токен: " + token)
+
+
 	print(headers)
 	print("Код: " + str(response_code))
-	if response_code == 200:
-		signupped = true
+	
+	
+	if !token == "<null>":
+		registered = true
+		GLOBAL.from_register_token = token
 		GLOBAL.username = str(usernameinput.text)
 		GLOBAL.password = str(passwordinput.text)
 		get_tree().change_scene_to_file("res://src/scenes/auth-scenes/login_ui.tscn")
 	else:
-		GLOBAL.failed_reason = str(post_response.replace('"',""))
+		GLOBAL.failed_reason = str(api_response.replace('"',""))
 		waitingresponse.visible = false
 		failed.visible = true
 
