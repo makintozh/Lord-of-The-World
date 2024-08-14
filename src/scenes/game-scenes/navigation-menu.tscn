@@ -1,13 +1,10 @@
-[gd_scene load_steps=274 format=3 uid="uid://pk7extbu3xea"]
+[gd_scene load_steps=271 format=3 uid="uid://pk7extbu3xea"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/navigation-menu.gd" id="1_ykvwa"]
 [ext_resource type="Texture2D" uid="uid://d1566y1lveil3" path="res://src/ui/elements/Group 173.png" id="2_qyodl"]
 [ext_resource type="Texture2D" uid="uid://dx6gagsxuu4uy" path="res://src/ui/buildings/Кланы.png" id="3_102d5"]
 [ext_resource type="Texture2D" uid="uid://da06sp2foodbu" path="res://src/ui/backgrounds/Главный_экран_адаптировано_под_размер_.PNG" id="3_j0xlm"]
 [ext_resource type="VideoStream" path="res://src/ui/backgrounds/Главный_экран_адаптировано_под_размер_1.ogv" id="3_q2uc8"]
-[ext_resource type="Texture2D" uid="uid://10u8v4p7qqrb" path="res://src/ui/characters/character 1.png" id="3_rdbyu"]
-[ext_resource type="Texture2D" uid="uid://dv3mstmdt3l0p" path="res://src/ui/characters/c2.png" id="4_s10b8"]
-[ext_resource type="Texture2D" uid="uid://doi260lvadhgo" path="res://src/ui/characters/c3.png" id="5_ky8tc"]
 [ext_resource type="Texture2D" uid="uid://cyc7b3rsh3qrr" path="res://src/ui/elements/Слой 7.png" id="7_gn6ft"]
 [ext_resource type="Texture2D" uid="uid://kr6jqwihjpv" path="res://src/ui/buildings/animated/Tavern.png" id="9_8b332"]
 [ext_resource type="Texture2D" uid="uid://d0eww28jq5ovf" path="res://src/ui/buildings/animated/Biom.png" id="10_bbc1g"]
@@ -1883,31 +1880,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="PlayerProfileUI" type="Control" parent="."]
 anchors_preset = 0
-
-[node name="PlayerProfileIcon" type="MarginContainer" parent="PlayerProfileUI"]
-layout_mode = 0
-offset_left = 13.0
-offset_top = 27.0
-offset_right = 92.0
-offset_bottom = 101.0
-
-[node name="ElvesIcon" type="TextureRect" parent="PlayerProfileUI/PlayerProfileIcon"]
-visible = false
-layout_mode = 2
-texture = ExtResource("3_rdbyu")
-expand_mode = 1
-
-[node name="HumansIcon" type="TextureRect" parent="PlayerProfileUI/PlayerProfileIcon"]
-visible = false
-layout_mode = 2
-texture = ExtResource("4_s10b8")
-expand_mode = 1
-
-[node name="DwarftsIcon" type="TextureRect" parent="PlayerProfileUI/PlayerProfileIcon"]
-visible = false
-layout_mode = 2
-texture = ExtResource("5_ky8tc")
-expand_mode = 1
 
 [node name="PlayerProfileUI" type="MarginContainer" parent="PlayerProfileUI"]
 layout_mode = 0

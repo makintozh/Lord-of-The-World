@@ -1,11 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://do85wm7qmftwm"]
+[gd_scene load_steps=20 format=3 uid="uid://do85wm7qmftwm"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/character_create.gd" id="1_t13y3"]
 [ext_resource type="Texture2D" uid="uid://bmof2g6xlu2bf" path="res://src/ui/backgrounds/background.png" id="2_juskx"]
 [ext_resource type="Texture2D" uid="uid://cx6ykjind73rd" path="res://src/ui/elements/race bar.png" id="3_yt8dn"]
-[ext_resource type="Texture2D" uid="uid://10u8v4p7qqrb" path="res://src/ui/characters/character 1.png" id="4_vps2q"]
-[ext_resource type="Texture2D" uid="uid://dv3mstmdt3l0p" path="res://src/ui/characters/c2.png" id="5_g5ftp"]
-[ext_resource type="Texture2D" uid="uid://doi260lvadhgo" path="res://src/ui/characters/c3.png" id="6_contp"]
 [ext_resource type="Texture2D" uid="uid://b6mi42u7yt1yy" path="res://src/ui/buttons/arrow_ (1).png" id="7_bnfx2"]
 [ext_resource type="Texture2D" uid="uid://wv5qcobcvpoq" path="res://src/ui/buttons/arrow_.png" id="8_mfu6b"]
 [ext_resource type="Texture2D" uid="uid://wgcovtfu4fot" path="res://src/ui/elements/gekso.png" id="9_0yv3s"]
@@ -130,40 +127,41 @@ size_flags_vertical = 4
 texture = ExtResource("2_juskx")
 stretch_mode = 4
 
-[node name="CharacterTypeName" type="Control" parent="."]
-layout_mode = 1
+[node name="MainUI" type="CanvasLayer" parent="."]
+
+[node name="CharacterName" type="Control" parent="MainUI"]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_use_anchors_ = true
 
-[node name="CharacterTypeNameBackgroun" type="MarginContainer" parent="CharacterTypeName"]
+[node name="CharacterNameBackground" type="MarginContainer" parent="MainUI/CharacterName"]
 layout_mode = 0
 offset_left = 116.0
 offset_top = 31.0
 offset_right = 378.0
 offset_bottom = 87.0
 
-[node name="CharacterTypeNameBackgrounTexture" type="TextureRect" parent="CharacterTypeName/CharacterTypeNameBackgroun"]
+[node name="CharacterTypeNameBackgrounTexture" type="TextureRect" parent="MainUI/CharacterName/CharacterNameBackground"]
 layout_mode = 2
 texture = ExtResource("3_yt8dn")
 
-[node name="CharacterTypeName" type="MarginContainer" parent="CharacterTypeName"]
+[node name="CharacterName" type="MarginContainer" parent="MainUI/CharacterName"]
 layout_mode = 0
 offset_left = 194.0
 offset_top = 42.0
 offset_right = 252.0
 offset_bottom = 75.0
 
-[node name="CharacterTypeName" type="Label" parent="CharacterTypeName/CharacterTypeName"]
+[node name="CharacterName" type="Label" parent="MainUI/CharacterName/CharacterName"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
-text = "Elves"
+text = "CHARACTER NAME"
 
-[node name="Characters" type="Control" parent="."]
-layout_mode = 1
+[node name="Characters" type="Control" parent="MainUI"]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -172,74 +170,28 @@ offset_bottom = -900.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Elves" type="MarginContainer" parent="Characters"]
-light_mask = 2
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 190.0
-offset_top = 117.0
-offset_right = 290.0
-offset_bottom = 217.0
-grow_horizontal = 2
-grow_vertical = 0
+[node name="VBoxContainer" type="VBoxContainer" parent="MainUI/Characters"]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 123.0
+offset_right = 277.0
+offset_bottom = 163.0
 
-[node name="ElvesIcon" type="TextureRect" parent="Characters/Elves"]
+[node name="Label" type="Label" parent="MainUI/Characters/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("4_vps2q")
-expand_mode = 1
+theme_override_font_sizes/font_size = 31
+text = "ICONS PLACE"
 
-[node name="Dwarfs" type="MarginContainer" parent="Characters"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 311.0
-offset_top = 86.0
-offset_right = 460.0
-offset_bottom = 212.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="DwarfsIcon" type="TextureRect" parent="Characters/Dwarfs"]
-layout_mode = 2
-texture = ExtResource("6_contp")
-expand_mode = 1
-
-[node name="Humans" type="MarginContainer" parent="Characters"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 12.0
-offset_top = 84.0
-offset_right = 164.0
-offset_bottom = 196.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="HumansIcon" type="TextureRect" parent="Characters/Humans"]
-layout_mode = 2
-texture = ExtResource("5_g5ftp")
-expand_mode = 1
-
-[node name="FeatureScheme" type="Control" parent="."]
-layout_mode = 1
+[node name="ArchetypeGraph" type="Control" parent="MainUI"]
+layout_mode = 3
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -250.0
-offset_right = 250.0
-offset_bottom = 900.0
+offset_right = 226.0
 grow_horizontal = 2
 
-[node name="FeatureSchemeContainer" type="MarginContainer" parent="FeatureScheme"]
+[node name="FeatureSchemeContainer" type="MarginContainer" parent="MainUI/ArchetypeGraph"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -250,12 +202,12 @@ offset_right = 161.0
 offset_bottom = 598.0
 grow_horizontal = 2
 
-[node name="FeatureSchemeTexture" type="TextureRect" parent="FeatureScheme/FeatureSchemeContainer"]
+[node name="FeatureSchemeTexture" type="TextureRect" parent="MainUI/ArchetypeGraph/FeatureSchemeContainer"]
 layout_mode = 2
 texture = ExtResource("9_0yv3s")
 
-[node name="Archetype" type="Control" parent="."]
-layout_mode = 1
+[node name="Archetype" type="Control" parent="MainUI"]
+layout_mode = 3
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -263,19 +215,19 @@ offset_left = -250.0
 offset_right = -250.0
 grow_horizontal = 2
 
-[node name="ArchetypeBackground" type="MarginContainer" parent="Archetype"]
+[node name="ArchetypeBackground" type="MarginContainer" parent="MainUI/Archetype"]
 layout_mode = 0
 offset_left = 184.0
 offset_top = 250.0
 offset_right = 306.0
 offset_bottom = 288.0
 
-[node name="CharacteCharacterFeatureBackgrounTexture" type="TextureRect" parent="Archetype/ArchetypeBackground"]
+[node name="CharacteCharacterFeatureBackgrounTexture" type="TextureRect" parent="MainUI/Archetype/ArchetypeBackground"]
 layout_mode = 2
 texture = ExtResource("3_yt8dn")
 expand_mode = 1
 
-[node name="Archetype" type="MarginContainer" parent="Archetype"]
+[node name="Archetype" type="MarginContainer" parent="MainUI/Archetype"]
 layout_mode = 0
 offset_left = 199.0
 offset_top = 256.165
@@ -284,45 +236,13 @@ offset_bottom = 278.165
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Archetype" type="Label" parent="Archetype/Archetype"]
+[node name="Archetype" type="Label" parent="MainUI/Archetype/Archetype"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
-text = "Agility"
+text = "archetype"
 
-[node name="CharacterChangeLeftButton" type="MarginContainer" parent="Archetype"]
-layout_mode = 0
-offset_left = 134.0
-offset_top = 250.0
-offset_right = 179.0
-offset_bottom = 288.0
-
-[node name="LeftChoiceButton" type="TextureButton" parent="Archetype/CharacterChangeLeftButton"]
-layout_mode = 2
-texture_normal = ExtResource("7_bnfx2")
-texture_pressed = ExtResource("7_bnfx2")
-texture_hover = ExtResource("7_bnfx2")
-texture_focused = ExtResource("7_bnfx2")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="CharacterChangeRighttButton" type="MarginContainer" parent="Archetype"]
-layout_mode = 0
-offset_left = 311.0
-offset_top = 250.0
-offset_right = 356.0
-offset_bottom = 288.0
-
-[node name="RightChoiceButton" type="TextureButton" parent="Archetype/CharacterChangeRighttButton"]
-layout_mode = 2
-texture_normal = ExtResource("8_mfu6b")
-texture_pressed = ExtResource("8_mfu6b")
-texture_hover = ExtResource("8_mfu6b")
-texture_focused = ExtResource("8_mfu6b")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="CharacterName" type="Control" parent="."]
-layout_mode = 1
+[node name="PlayerCharacterName" type="Control" parent="MainUI"]
+layout_mode = 3
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -332,7 +252,7 @@ offset_right = 250.0
 offset_bottom = 884.0
 grow_horizontal = 2
 
-[node name="CharacterNameContainer" type="MarginContainer" parent="CharacterName"]
+[node name="CharacterNameContainer" type="MarginContainer" parent="MainUI/PlayerCharacterName"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -346,7 +266,7 @@ offset_bottom = -182.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="CharacterNameInput" type="LineEdit" parent="CharacterName/CharacterNameContainer"]
+[node name="CharacterNameInput" type="LineEdit" parent="MainUI/PlayerCharacterName/CharacterNameContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
@@ -357,8 +277,8 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_3cest")
 theme_override_styles/focus = SubResource("StyleBoxTexture_b75u7")
 placeholder_text = "Name"
 
-[node name="CharacterCreateButton" type="Control" parent="."]
-layout_mode = 1
+[node name="CharacterCreateButton" type="Control" parent="MainUI"]
+layout_mode = 3
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -366,7 +286,7 @@ offset_left = -250.0
 offset_right = -250.0
 grow_horizontal = 2
 
-[node name="CharacterCreateButtonContainer" type="MarginContainer" parent="CharacterCreateButton"]
+[node name="CharacterCreateButtonContainer" type="MarginContainer" parent="MainUI/CharacterCreateButton"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -380,7 +300,7 @@ offset_bottom = 831.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="CharacterCreateButton" type="Button" parent="CharacterCreateButton/CharacterCreateButtonContainer"]
+[node name="CharacterCreateButton" type="Button" parent="MainUI/CharacterCreateButton/CharacterCreateButtonContainer"]
 modulate = Color(1, 1, 1, 0.470588)
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
@@ -390,6 +310,42 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_j1crl")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_rhrv2")
 theme_override_styles/focus = SubResource("StyleBoxTexture_bl7up")
 text = "CREATE"
+
+[node name="Index_Buttons" type="Control" parent="MainUI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RightButton" type="MarginContainer" parent="MainUI/Index_Buttons"]
+offset_left = 311.0
+offset_top = 250.0
+offset_right = 356.0
+offset_bottom = 288.0
+
+[node name="RightButton" type="TextureButton" parent="MainUI/Index_Buttons/RightButton"]
+layout_mode = 2
+texture_normal = ExtResource("8_mfu6b")
+texture_pressed = ExtResource("8_mfu6b")
+texture_hover = ExtResource("8_mfu6b")
+texture_focused = ExtResource("8_mfu6b")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="LeftButton" type="MarginContainer" parent="MainUI/Index_Buttons"]
+offset_left = 134.0
+offset_top = 250.0
+offset_right = 179.0
+offset_bottom = 288.0
+
+[node name="LeftButton" type="TextureButton" parent="MainUI/Index_Buttons/LeftButton"]
+layout_mode = 2
+texture_normal = ExtResource("7_bnfx2")
+texture_pressed = ExtResource("7_bnfx2")
+texture_hover = ExtResource("7_bnfx2")
+texture_focused = ExtResource("7_bnfx2")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Refresh" type="Control" parent="."]
 layout_mode = 1
@@ -440,6 +396,6 @@ horizontal_alignment = 1
 [connection signal="request_completed" from="APIRequest" to="." method="_on_api_request_request_completed"]
 [connection signal="request_completed" from="APISummary" to="." method="_on_api_summary_request_completed"]
 [connection signal="request_completed" from="APICharacterCreate" to="." method="_on_api_character_create_request_completed"]
-[connection signal="pressed" from="Archetype/CharacterChangeLeftButton/LeftChoiceButton" to="." method="_on_left_choice_button_pressed"]
-[connection signal="pressed" from="Archetype/CharacterChangeRighttButton/RightChoiceButton" to="." method="_on_right_choice_button_pressed"]
-[connection signal="pressed" from="CharacterCreateButton/CharacterCreateButtonContainer/CharacterCreateButton" to="." method="_on_character_create_button_pressed"]
+[connection signal="pressed" from="MainUI/CharacterCreateButton/CharacterCreateButtonContainer/CharacterCreateButton" to="." method="_on_character_create_button_pressed"]
+[connection signal="pressed" from="MainUI/Index_Buttons/RightButton/RightButton" to="." method="_on_right_button_pressed"]
+[connection signal="pressed" from="MainUI/Index_Buttons/LeftButton/LeftButton" to="." method="_on_left_button_pressed"]

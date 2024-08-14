@@ -322,7 +322,7 @@ func _on_api_request_request_completed(result, response_code, headers, body):
 
 	for data in servers:
 		var server_id = int(data["id"])
-		var server_name =str(data["name"])
+		var server_name = str(data["name"])
 		var server_locale = str(data["locale"])
 		var server_address = str(data["address"])
 		var server_max_players = int(data["max_players"])
