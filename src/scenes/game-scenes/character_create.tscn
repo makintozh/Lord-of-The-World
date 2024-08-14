@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://do85wm7qmftwm"]
+[gd_scene load_steps=23 format=3 uid="uid://do85wm7qmftwm"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/character_create.gd" id="1_t13y3"]
 [ext_resource type="Texture2D" uid="uid://bmof2g6xlu2bf" path="res://src/ui/backgrounds/background.png" id="2_juskx"]
@@ -9,11 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://b6mi42u7yt1yy" path="res://src/ui/buttons/arrow_ (1).png" id="7_bnfx2"]
 [ext_resource type="Texture2D" uid="uid://wv5qcobcvpoq" path="res://src/ui/buttons/arrow_.png" id="8_mfu6b"]
 [ext_resource type="Texture2D" uid="uid://wgcovtfu4fot" path="res://src/ui/elements/gekso.png" id="9_0yv3s"]
-[ext_resource type="Texture2D" uid="uid://dj0ey4wxmh23j" path="res://src/ui/elements/agility.png" id="10_m2ey1"]
 [ext_resource type="Texture2D" uid="uid://blr2v35pet8yb" path="res://src/ui/elements/input.png" id="10_n5pao"]
 [ext_resource type="Texture2D" uid="uid://cjbfs42jpw2ed" path="res://src/ui/buttons/green buttom base long.png" id="11_c771i"]
-[ext_resource type="Texture2D" uid="uid://b2n2hn8q5eaa2" path="res://src/ui/elements/strenght.png" id="11_xy1f6"]
-[ext_resource type="Texture2D" uid="uid://wegdp53eswmk" path="res://src/ui/elements/int.png" id="12_1dfr4"]
 [ext_resource type="Texture2D" uid="uid://cxpni2esf80pi" path="res://src/ui/elements/update 1.png" id="15_hneh2"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3cest"]
@@ -257,71 +254,13 @@ grow_horizontal = 2
 layout_mode = 2
 texture = ExtResource("9_0yv3s")
 
-[node name="AgilityFeatureScheme" type="MarginContainer" parent="FeatureScheme"]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -54.0
-offset_top = -25.0
-offset_right = 52.0
-offset_bottom = 89.0001
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="AgilityFeatureSchemeTexture" type="TextureRect" parent="FeatureScheme/AgilityFeatureScheme"]
-layout_mode = 2
-texture = ExtResource("10_m2ey1")
-
-[node name="StrengthFeatureScheme" type="MarginContainer" parent="FeatureScheme"]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -21.0
-offset_top = -67.0
-offset_right = 104.0
-offset_bottom = 47.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="StrengthFeatureSchemeTexture" type="TextureRect" parent="FeatureScheme/StrengthFeatureScheme"]
-layout_mode = 2
-texture = ExtResource("11_xy1f6")
-
-[node name="IntelligenceFeatureScheme" type="MarginContainer" parent="FeatureScheme"]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -58.0
-offset_top = -39.0
-offset_right = 67.0
-offset_bottom = 95.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="IntelligenceFeatureSchemeTexture" type="TextureRect" parent="FeatureScheme/IntelligenceFeatureScheme"]
-layout_mode = 2
-texture = ExtResource("12_1dfr4")
-
 [node name="Archetype" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -250.0
-offset_right = 250.0
-offset_bottom = 754.0
+offset_right = -250.0
 grow_horizontal = 2
 
 [node name="ArchetypeBackground" type="MarginContainer" parent="Archetype"]

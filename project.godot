@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Lord of The World"
-config/version="1.0-debug"
+config/version="1"
 config/tags=PackedStringArray("lord_of_the_world")
 run/main_scene="res://src/scenes/auth-scenes/login_ui.tscn"
 config/features=PackedStringArray("4.2", "Mobile")

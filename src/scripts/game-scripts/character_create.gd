@@ -9,9 +9,6 @@ extends Control
 @onready var elves = $Characters/Elves
 @onready var dwarfs = $Characters/Dwarfs
 @onready var humans = $Characters/Humans
-@onready var agilityfeature = $FeatureScheme/AgilityFeatureScheme
-@onready var strengthfeature = $FeatureScheme/StrengthFeatureScheme
-@onready var intelligencefeature = $FeatureScheme/IntelligenceFeatureScheme
 
 
 
@@ -76,13 +73,6 @@ func _process(_delta):
 
 
 
-func check_archetype():
-	if archetype.text ==  "Strength":
-		GLOBAL.choiced_archetype_index = 1
-	elif archetype.text ==  "Dexterity":
-		GLOBAL.choiced_archetype_index = 2
-	elif archetype.text ==  "Intelligence":
-		GLOBAL.choiced_archetype_index = 3
 
 
 
@@ -115,10 +105,20 @@ func _on_api_request_request_completed(result, response_code, headers, body):
 	
 	
 	print(str(result))
-	print("Сообщение: " + message)
+	print("\nСообщение: " + message)
 	print("\nАрхетипы: " + archetypes)
 	
+	$Archetype/Archetype/Archetype.text = archetypes
+	
 
+
+func check_archetype():
+	if archetype.text ==  "Strength":
+		GLOBAL.choiced_archetype_index = 1
+	elif archetype.text ==  "Dexterity":
+		GLOBAL.choiced_archetype_index = 2
+	elif archetype.text ==  "Intelligence":
+		GLOBAL.choiced_archetype_index = 3
 
 
 
@@ -204,10 +204,6 @@ func current_character():
 		archetype.text = "Dexterity"
 		charactertypename.text = "Elves"
 		
-		agilityfeature.visible = true
-		strengthfeature.visible = false
-		intelligencefeature.visible = false
-		
 		elves.top_level = true
 		dwarfs.top_level = false
 		humans.top_level = false
@@ -237,10 +233,6 @@ func current_character():
 		archetype.text = "Strength"
 		charactertypename.text = "Dwarfs"
 		
-		agilityfeature.visible = false
-		strengthfeature.visible = true
-		intelligencefeature.visible = false
-		
 		elves.top_level = false
 		dwarfs.top_level = true
 		humans.top_level = false
@@ -269,10 +261,6 @@ func current_character():
 		current_character_name = "Humans"
 		archetype.text = "Intelligence"
 		charactertypename.text = "Humans"
-		
-		agilityfeature.visible = false
-		strengthfeature.visible = false
-		intelligencefeature.visible = true
 		
 		elves.top_level = false
 		dwarfs.top_level = false
