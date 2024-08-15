@@ -3,36 +3,6 @@ extends Control
 
 
 
-@onready var elvesicon = $PlayerProfileUI/PlayerProfileIcon/ElvesIcon
-@onready var humansicon = $PlayerProfileUI/PlayerProfileIcon/HumansIcon
-@onready var dwarftsicon = $PlayerProfileUI               /PlayerProfileIcon/DwarftsIcon
-
-
-
-
-func _ready():
-	player_icon()    #Аватарка Пользователя
-
-
-
-
-
-
-func player_icon():
-	if GLOBAL.character_index == 0:
-		elvesicon.visible = true
-		humansicon.visible = false
-		dwarftsicon.visible = false
-	elif GLOBAL.character_index == 1:
-		elvesicon.visible = false
-		humansicon.visible = false
-		dwarftsicon.visible = true
-	elif GLOBAL.character_index == -1:
-		elvesicon.visible = false
-		humansicon.visible = true
-		dwarftsicon.visible = false
-
-
 #Вход в Таверну
 func _on_tavern_pressed():
 	get_tree().change_scene_to_file("res://src/scenes/game-scenes/tavern.tscn")
