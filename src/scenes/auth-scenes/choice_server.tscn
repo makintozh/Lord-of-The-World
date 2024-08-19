@@ -122,7 +122,7 @@ grow_horizontal = 2
 grow_vertical = 2
 follow_focus = true
 horizontal_scroll_mode = 0
-vertical_scroll_mode = 3
+vertical_scroll_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Server-List" type="VBoxContainer" parent="ScrollContainer"]

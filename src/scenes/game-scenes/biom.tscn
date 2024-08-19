@@ -1,8 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://posku4uysvkn"]
+[gd_scene load_steps=14 format=3 uid="uid://posku4uysvkn"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/biom.gd" id="1_m3bq3"]
 [ext_resource type="Texture2D" uid="uid://b6st1qgk03rsi" path="res://src/ui/backgrounds/biome map2 1.png" id="2_1q34o"]
-[ext_resource type="Texture2D" uid="uid://ccd7lnobgoth5" path="res://src/ui/buttons/arrow back white.png" id="3_n3uux"]
 [ext_resource type="Texture2D" uid="uid://bbwu1bd0boos8" path="res://src/ui/buildings/Civil_r2 1.png" id="5_oitrf"]
 [ext_resource type="Texture2D" uid="uid://cvtwpiemi8kd7" path="res://src/ui/buildings/taurelious.png" id="6_c7amb"]
 [ext_resource type="Texture2D" uid="uid://turqtip52gs8" path="res://src/ui/buildings/гномыElborus.png" id="7_w1lb3"]
@@ -12,8 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://cqrvmq8nagg2p" path="res://src/ui/buildings/nordtoppen.png" id="10_nigbv"]
 [ext_resource type="Texture2D" uid="uid://vf3eqptfac61" path="res://src/ui/buildings/keyfand.png" id="11_56m4m"]
 [ext_resource type="Texture2D" uid="uid://32s3fry3bo84" path="res://src/ui/buildings/мехи.png" id="12_alpq5"]
+[ext_resource type="Texture2D" uid="uid://c2u2i5n4mifyh" path="res://src/ui/buttons/back_button.png" id="13_34gb7"]
 [ext_resource type="Texture2D" uid="uid://bkqycvu7gjj28" path="res://src/ui/buildings/celesteal 1.png" id="13_x3ue8"]
-[ext_resource type="Texture2D" uid="uid://wv5qcobcvpoq" path="res://src/ui/buttons/arrow_.png" id="14_s00r4"]
 
 [node name="Biom" type="Control"]
 layout_mode = 3
@@ -26,22 +25,381 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_m3bq3")
 
-[node name="BackGround" type="TextureRect" parent="."]
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+clip_contents = false
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 10
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -249.0
-offset_top = -508.0
-offset_right = 180.0
-offset_bottom = 1345.0
+offset_left = -5.0
+offset_top = -37.0
+offset_right = 432.0
+offset_bottom = 988.81
 grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(1.165, 1.165)
+scale = Vector2(1.17, 1.17)
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="BackGround" type="TextureRect" parent="ScrollContainer/VBox"]
+layout_mode = 2
 texture = ExtResource("2_1q34o")
 stretch_mode = 4
 
+[node name="ScrollContainer2" type="ScrollContainer" parent="ScrollContainer"]
+clip_contents = false
+layout_mode = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="Civil-Human" type="Control" parent="ScrollContainer/ScrollContainer2"]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Civil" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Civil-Human"]
+layout_mode = 0
+offset_left = -17.0
+offset_top = 59.0
+offset_right = 238.0
+offset_bottom = 369.0
+
+[node name="Civil" type="TextureButton" parent="ScrollContainer/ScrollContainer2/Civil-Human/Civil"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("5_oitrf")
+texture_pressed = ExtResource("5_oitrf")
+texture_hover = ExtResource("5_oitrf")
+texture_focused = ExtResource("5_oitrf")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="CivilLabel" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Civil-Human"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 289.0
+offset_right = 170.0
+offset_bottom = 335.0
+
+[node name="CivilLabel" type="Label" parent="ScrollContainer/ScrollContainer2/Civil-Human/CivilLabel"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_font_sizes/font_size = 34
+text = "Civil
+"
+
+[node name="Taurelious-Elves" type="Control" parent="ScrollContainer/ScrollContainer2"]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Taurelious" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Taurelious-Elves"]
+layout_mode = 0
+offset_left = 219.658
+offset_top = 235.897
+offset_right = 393.658
+offset_bottom = 432.897
+
+[node name="Taurelious" type="TextureButton" parent="ScrollContainer/ScrollContainer2/Taurelious-Elves/Taurelious"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("6_c7amb")
+texture_pressed = ExtResource("6_c7amb")
+texture_hover = ExtResource("6_c7amb")
+texture_focused = ExtResource("6_c7amb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TaureliousLabel" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Taurelious-Elves"]
+layout_mode = 0
+offset_left = 226.496
+offset_top = 393.162
+offset_right = 389.496
+offset_bottom = 439.162
+
+[node name="TaureliousLabel" type="Label" parent="ScrollContainer/ScrollContainer2/Taurelious-Elves/TaureliousLabel"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_font_sizes/font_size = 34
+text = "Taurelious"
+
+[node name="Elborus-Gnomes" type="Control" parent="ScrollContainer/ScrollContainer2"]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Elborus" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Elborus-Gnomes"]
+layout_mode = 0
+offset_left = -12.8205
+offset_top = 491.453
+offset_right = 171.179
+offset_bottom = 689.453
+
+[node name="Elborus" type="TextureButton" parent="ScrollContainer/ScrollContainer2/Elborus-Gnomes/Elborus"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("7_w1lb3")
+texture_pressed = ExtResource("7_w1lb3")
+texture_hover = ExtResource("7_w1lb3")
+texture_focused = ExtResource("7_w1lb3")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ElborusLabel" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Elborus-Gnomes"]
+layout_mode = 0
+offset_left = 43.5897
+offset_top = 648.718
+offset_right = 159.59
+offset_bottom = 694.718
+
+[node name="ElborusLabel" type="Label" parent="ScrollContainer/ScrollContainer2/Elborus-Gnomes/ElborusLabel"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_font_sizes/font_size = 34
+text = "Elborus"
+
+[node name="Torres-Mortes-Nejitb" type="Control" parent="ScrollContainer/ScrollContainer2"]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Torres-Mortes" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Torres-Mortes-Nejitb"]
+layout_mode = 0
+offset_left = 153.846
+offset_top = 490.598
+offset_right = 446.846
+offset_bottom = 816.598
+
+[node name="Torres-Mortes" type="TextureButton" parent="ScrollContainer/ScrollContainer2/Torres-Mortes-Nejitb/Torres-Mortes"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("8_8x7xb")
+texture_pressed = ExtResource("8_8x7xb")
+texture_hover = ExtResource("8_8x7xb")
+texture_focused = ExtResource("8_8x7xb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Torres-MortesLabel" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Torres-Mortes-Nejitb"]
+layout_mode = 0
+offset_left = 191.453
+offset_top = 736.752
+offset_right = 413.453
+offset_bottom = 782.752
+
+[node name="Torres-MortesLabel" type="Label" parent="ScrollContainer/ScrollContainer2/Torres-Mortes-Nejitb/Torres-MortesLabel"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_font_sizes/font_size = 34
+text = "Torres-Mortes"
+
+[node name="Forest-Zveri" type="Control" parent="ScrollContainer/ScrollContainer2"]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Forest" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Forest-Zveri"]
+layout_mode = 0
+offset_left = -11.9658
+offset_top = 731.624
+offset_right = 200.034
+offset_bottom = 951.624
+
+[node name="Forest" type="TextureButton" parent="ScrollContainer/ScrollContainer2/Forest-Zveri/Forest"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("8_csmka")
+texture_pressed = ExtResource("8_csmka")
+texture_hover = ExtResource("8_csmka")
+texture_focused = ExtResource("8_csmka")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ForestLabel" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Forest-Zveri"]
+layout_mode = 0
+offset_left = 34.188
+offset_top = 907.692
+offset_right = 150.188
+offset_bottom = 953.692
+
+[node name="ForestLabel" type="Label" parent="ScrollContainer/ScrollContainer2/Forest-Zveri/ForestLabel"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_font_sizes/font_size = 34
+text = "Forest"
+
+[node name="Carvaras-Orki" type="Control" parent="ScrollContainer/ScrollContainer2"]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Carvaras" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Carvaras-Orki"]
+layout_mode = 0
+offset_left = 204.274
+offset_top = 864.957
+offset_right = 430.273
+offset_bottom = 1097.96
+
+[node name="Carvaras" type="TextureButton" parent="ScrollContainer/ScrollContainer2/Carvaras-Orki/Carvaras"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("9_wl1d7")
+texture_pressed = ExtResource("9_wl1d7")
+texture_hover = ExtResource("9_wl1d7")
+texture_focused = ExtResource("9_wl1d7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="CarvarasLabel" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Carvaras-Orki"]
+layout_mode = 0
+offset_left = 245.299
+offset_top = 1013.68
+offset_right = 384.299
+offset_bottom = 1059.68
+
+[node name="CarvarasLabel" type="Label" parent="ScrollContainer/ScrollContainer2/Carvaras-Orki/CarvarasLabel"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_font_sizes/font_size = 34
+text = "Carvaras"
+
+[node name="Nordtoppen-Trolli" type="Control" parent="ScrollContainer/ScrollContainer2"]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Nordtoppen" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Nordtoppen-Trolli"]
+layout_mode = 0
+offset_left = -1.7094
+offset_top = 1026.5
+offset_right = 207.291
+offset_bottom = 1233.5
+
+[node name="Nordtoppen" type="TextureButton" parent="ScrollContainer/ScrollContainer2/Nordtoppen-Trolli/Nordtoppen"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("10_nigbv")
+texture_pressed = ExtResource("10_nigbv")
+texture_hover = ExtResource("10_nigbv")
+texture_focused = ExtResource("10_nigbv")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="NordtoppenLabel" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Nordtoppen-Trolli"]
+layout_mode = 0
+offset_left = 35.8974
+offset_top = 1174.36
+offset_right = 218.897
+offset_bottom = 1220.36
+
+[node name="NordtoppenLabel" type="Label" parent="ScrollContainer/ScrollContainer2/Nordtoppen-Trolli/NordtoppenLabel"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_font_sizes/font_size = 34
+text = "Nordtoppen"
+
+[node name="Keyfand-Goblin" type="Control" parent="ScrollContainer/ScrollContainer2"]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Keyfand" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Keyfand-Goblin"]
+layout_mode = 0
+offset_left = 192.308
+offset_top = 1210.26
+offset_right = 421.308
+offset_bottom = 1441.26
+
+[node name="Keyfand" type="TextureButton" parent="ScrollContainer/ScrollContainer2/Keyfand-Goblin/Keyfand"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("11_56m4m")
+texture_pressed = ExtResource("11_56m4m")
+texture_hover = ExtResource("11_56m4m")
+texture_focused = ExtResource("11_56m4m")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="KeyfandLabel" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Keyfand-Goblin"]
+layout_mode = 0
+offset_left = 229.06
+offset_top = 1388.03
+offset_right = 412.06
+offset_bottom = 1434.03
+
+[node name="KeyfandLabel" type="Label" parent="ScrollContainer/ScrollContainer2/Keyfand-Goblin/KeyfandLabel"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_font_sizes/font_size = 34
+text = "Keyfand
+"
+
+[node name="Meches-Mehanizmi" type="Control" parent="ScrollContainer/ScrollContainer2"]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Meches" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Meches-Mehanizmi"]
+layout_mode = 0
+offset_left = -17.9487
+offset_top = 1473.5
+offset_right = 179.051
+offset_bottom = 1671.5
+
+[node name="Meches" type="TextureButton" parent="ScrollContainer/ScrollContainer2/Meches-Mehanizmi/Meches"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("12_alpq5")
+texture_pressed = ExtResource("12_alpq5")
+texture_hover = ExtResource("12_alpq5")
+texture_focused = ExtResource("12_alpq5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MechesLabel" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Meches-Mehanizmi"]
+layout_mode = 0
+offset_left = 47.8633
+offset_top = 1615.38
+offset_right = 230.863
+offset_bottom = 1661.38
+
+[node name="MechesLabel" type="Label" parent="ScrollContainer/ScrollContainer2/Meches-Mehanizmi/MechesLabel"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_font_sizes/font_size = 34
+text = "Meches"
+
+[node name="Celestial-Pervorojdennie" type="Control" parent="ScrollContainer/ScrollContainer2"]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Celestial" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Celestial-Pervorojdennie"]
+layout_mode = 0
+offset_left = 223.077
+offset_top = 1511.11
+offset_right = 428.077
+offset_bottom = 1732.11
+
+[node name="Celestial" type="TextureButton" parent="ScrollContainer/ScrollContainer2/Celestial-Pervorojdennie/Celestial"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("13_x3ue8")
+texture_pressed = ExtResource("13_x3ue8")
+texture_hover = ExtResource("13_x3ue8")
+texture_focused = ExtResource("13_x3ue8")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="CelestialLabel" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Celestial-Pervorojdennie"]
+layout_mode = 0
+offset_left = 249.573
+offset_top = 1697.44
+offset_right = 432.573
+offset_bottom = 1743.44
+
+[node name="CelestialLabel" type="Label" parent="ScrollContainer/ScrollContainer2/Celestial-Pervorojdennie/CelestialLabel"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_font_sizes/font_size = 34
+text = "Celestial"
+
 [node name="Buildings" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 0
 offset_left = -230.0
@@ -401,95 +759,42 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 34
 text = "Celestial"
 
-[node name="NaviagteBiom" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_left = -233.0
-offset_top = -507.0
-offset_right = -193.0
-offset_bottom = -467.0
-
-[node name="BottomButton" type="Control" parent="NaviagteBiom"]
-layout_mode = 3
+[node name="GUI" type="Control" parent="."]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="BottomButtonContainer" type="MarginContainer" parent="NaviagteBiom/BottomButton"]
-layout_mode = 0
-offset_left = 264.0
-offset_top = 812.0
-offset_right = 334.0
-offset_bottom = 873.0
-rotation = 1.5708
-
-[node name="BottomButton" type="TextureButton" parent="NaviagteBiom/BottomButton/BottomButtonContainer"]
-layout_mode = 2
-texture_normal = ExtResource("14_s00r4")
-texture_pressed = ExtResource("14_s00r4")
-texture_hover = ExtResource("14_s00r4")
-texture_focused = ExtResource("14_s00r4")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="TopButton" type="Control" parent="NaviagteBiom"]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TopButtonContainer" type="MarginContainer" parent="NaviagteBiom/TopButton"]
-layout_mode = 0
-offset_left = 207.0
-offset_top = 1119.0
-offset_right = 277.0
-offset_bottom = 1180.0
-rotation = -1.5708
-
-[node name="TopButton" type="TextureButton" parent="NaviagteBiom/TopButton/TopButtonContainer"]
-layout_mode = 2
-texture_normal = ExtResource("14_s00r4")
-texture_pressed = ExtResource("14_s00r4")
-texture_hover = ExtResource("14_s00r4")
-texture_focused = ExtResource("14_s00r4")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Camera2D" type="Camera2D" parent="."]
-limit_smoothed = true
-position_smoothing_enabled = true
-editor_draw_limits = true
-
-[node name="BiomUI" type="Control" parent="Camera2D"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 5.0
-offset_top = -13.0
-offset_right = 5.0
-offset_bottom = -13.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="BackButtonContainer" type="MarginContainer" parent="Camera2D/BiomUI"]
+[node name="BackButtonContainer" type="MarginContainer" parent="GUI"]
 layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = -234.0
-offset_top = -424.0
-offset_right = -149.0
-offset_bottom = -377.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -13.0
+offset_top = 14.0
+offset_right = 60.0
+offset_bottom = 79.0
 grow_horizontal = 2
 
-[node name="BackButton" type="TextureButton" parent="Camera2D/BiomUI/BackButtonContainer"]
+[node name="BackButton" type="TextureButton" parent="GUI/BackButtonContainer"]
 layout_mode = 2
-texture_normal = ExtResource("3_n3uux")
-texture_pressed = ExtResource("3_n3uux")
-texture_hover = ExtResource("3_n3uux")
-texture_focused = ExtResource("3_n3uux")
+texture_normal = ExtResource("13_34gb7")
+texture_pressed = ExtResource("13_34gb7")
+texture_hover = ExtResource("13_34gb7")
+texture_disabled = ExtResource("13_34gb7")
+texture_focused = ExtResource("13_34gb7")
 ignore_texture_size = true
 stretch_mode = 0
 
+[connection signal="pressed" from="ScrollContainer/ScrollContainer2/Civil-Human/Civil/Civil" to="." method="_on_civil_pressed"]
+[connection signal="pressed" from="ScrollContainer/ScrollContainer2/Taurelious-Elves/Taurelious/Taurelious" to="." method="_on_taurelious_pressed"]
+[connection signal="pressed" from="ScrollContainer/ScrollContainer2/Elborus-Gnomes/Elborus/Elborus" to="." method="_on_elborus_pressed"]
+[connection signal="pressed" from="ScrollContainer/ScrollContainer2/Torres-Mortes-Nejitb/Torres-Mortes/Torres-Mortes" to="." method="_on_torres_mortes_pressed"]
+[connection signal="pressed" from="ScrollContainer/ScrollContainer2/Forest-Zveri/Forest/Forest" to="." method="_on_forest_pressed"]
+[connection signal="pressed" from="ScrollContainer/ScrollContainer2/Carvaras-Orki/Carvaras/Carvaras" to="." method="_on_carvaras_pressed"]
+[connection signal="pressed" from="ScrollContainer/ScrollContainer2/Nordtoppen-Trolli/Nordtoppen/Nordtoppen" to="." method="_on_nordtoppen_pressed"]
+[connection signal="pressed" from="ScrollContainer/ScrollContainer2/Keyfand-Goblin/Keyfand/Keyfand" to="." method="_on_keyfand_pressed"]
+[connection signal="pressed" from="ScrollContainer/ScrollContainer2/Meches-Mehanizmi/Meches/Meches" to="." method="_on_meches_pressed"]
+[connection signal="pressed" from="ScrollContainer/ScrollContainer2/Celestial-Pervorojdennie/Celestial/Celestial" to="." method="_on_celestial_pressed"]
 [connection signal="pressed" from="Buildings/Civil-Human/Civil/Civil" to="." method="_on_civil_pressed"]
 [connection signal="pressed" from="Buildings/Taurelious-Elves/Taurelious/Taurelious" to="." method="_on_taurelious_pressed"]
 [connection signal="pressed" from="Buildings/Elborus-Gnomes/Elborus/Elborus" to="." method="_on_elborus_pressed"]
@@ -500,6 +805,4 @@ stretch_mode = 0
 [connection signal="pressed" from="Buildings/Keyfand-Goblin/Keyfand/Keyfand" to="." method="_on_keyfand_pressed"]
 [connection signal="pressed" from="Buildings/Meches-Mehanizmi/Meches/Meches" to="." method="_on_meches_pressed"]
 [connection signal="pressed" from="Buildings/Celestial-Pervorojdennie/Celestial/Celestial" to="." method="_on_celestial_pressed"]
-[connection signal="pressed" from="NaviagteBiom/BottomButton/BottomButtonContainer/BottomButton" to="." method="_on_bottom_button_pressed"]
-[connection signal="pressed" from="NaviagteBiom/TopButton/TopButtonContainer/TopButton" to="." method="_on_top_button_pressed"]
-[connection signal="pressed" from="Camera2D/BiomUI/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="GUI/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]

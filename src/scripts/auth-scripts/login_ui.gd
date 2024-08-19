@@ -27,7 +27,6 @@ var logged = false
 
 
 func _ready():
-	
 	after_remember_me()
 	if GLOBAL.username != "" and GLOBAL.password != "":
 		login_data.text = GLOBAL.username
@@ -118,7 +117,7 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 		logged = true
 		if logged and is_remember:
 			remember_me()
-		get_tree().change_scene_to_file("res://src/scenes/auth-scenes/choice_server.tscn")
+		SceneChangeManager.go_to_scene("res://src/scenes/auth-scenes/choice_server.tscn")
 	else:
 		GLOBAL.failed_reason = message.replace('"',"")
 		waitingresponse.visible = false
@@ -182,15 +181,15 @@ func _on_password_hide_button_toggled(toggled_on):
 
 
 func _on_forgot_password_button_pressed():
-	get_tree().change_scene_to_file("res://src/scenes/auth-scenes/forgot_password.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/auth-scenes/forgot_password.tscn")
 
 
 func _on_back_button_pressed():
-	get_tree().change_scene_to_file("res://src/scenes/auth-scenes/login_ui.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/auth-scenes/login_ui.tscn")
 	
 	
 func _on_sign_up_button_pressed():
-	get_tree().change_scene_to_file("res://src/scenes/auth-scenes/register_ui.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/auth-scenes/register_ui.tscn")
 
 
 

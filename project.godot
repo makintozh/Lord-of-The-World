@@ -23,6 +23,7 @@ config/icon="res://src/ui/characters/c2.png"
 
 GLOBAL="*res://src/scripts/singleton/global_variables.gd"
 CONFIG="*res://src/scripts/singleton/config.gd"
+SceneChangeManager="*res://src/scripts/singleton/SceneChangeManager.gd"
 
 [display]
 
@@ -58,14 +59,33 @@ folder_colors={
 
 theme/custom_font="res://src/fonts/inika/Inika-Bold.ttf"
 
+[importer_defaults]
+
+texture={
+"compress/channel_pack": 1,
+"compress/mode": 3
+}
+2d_array_texture={
+"compress/mode": 3
+}
+scene={
+"animation/fps": 120.0
+}
+oggvorbisstr={
+"loop": true
+}
+
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
-pointing/android/enable_pan_and_scale_gestures=true
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
 renderer/rendering_method.web="mobile"
 textures/vram_compression/import_etc2_astc=true
+textures/lossless_compression/force_png=true
+textures/webp_compression/compression_method=0
+textures/decals/filter=0
+textures/light_projectors/filter=0
+textures/screen_space_roughness_limiter/amount=0.25

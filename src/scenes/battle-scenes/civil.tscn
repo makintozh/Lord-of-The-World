@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8s551r3qj805"]
+[gd_scene load_steps=5 format=3 uid="uid://b8s551r3qj805"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/battle.gd" id="1_i4757"]
 [ext_resource type="Texture2D" uid="uid://cywqlemtd42e8" path="res://src/ui/backgrounds/battle-backgrounds/Люди.PNG" id="2_srcqt"]
 [ext_resource type="Texture2D" uid="uid://c2u2i5n4mifyh" path="res://src/ui/buttons/back_button.png" id="3_in8rb"]
+[ext_resource type="VideoStream" path="res://src/ui/backgrounds/battle-backgrounds/Люди.ogv" id="3_o84bj"]
 
 [node name="Civil" type="Control"]
 layout_mode = 3
@@ -18,17 +19,25 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -18.605
+offset_top = -22.5
+offset_right = 31.59
+offset_bottom = 164.2
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.145, 1.145)
+scale = Vector2(1.02, 1.02)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_srcqt")
 stretch_mode = 4
 
 [node name="BackGround-Video" type="VideoStreamPlayer" parent="."]
-offset_right = 504.0
-offset_bottom = 904.0
+layout_mode = 0
+offset_left = -18.605
+offset_right = 531.59
+offset_bottom = 1086.7
+scale = Vector2(1.02, 1.02)
+stream = ExtResource("3_o84bj")
 autoplay = true
 expand = true
 loop = true

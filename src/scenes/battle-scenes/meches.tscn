@@ -16,10 +16,10 @@ script = ExtResource("1_w2beo")
 
 [node name="BackGround-Image" type="TextureRect" parent="."]
 layout_mode = 0
+offset_left = -35.135
 offset_top = -1.0
-offset_right = 530.0
-offset_bottom = 943.0
-scale = Vector2(1.115, 1.115)
+offset_right = 558.305
+offset_bottom = 1102.43
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_kpovo")
@@ -27,9 +27,9 @@ stretch_mode = 4
 
 [node name="BackGround-Video" type="VideoStreamPlayer" parent="."]
 layout_mode = 0
-offset_right = 530.0
-offset_bottom = 944.0
-scale = Vector2(1.115, 1.115)
+offset_left = -35.135
+offset_right = 558.305
+offset_bottom = 1103.43
 stream = ExtResource("3_j5uw3")
 autoplay = true
 expand = true

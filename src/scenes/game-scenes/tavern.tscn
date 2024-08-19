@@ -36,60 +36,64 @@ grow_vertical = 2
 script = ExtResource("1_06l26")
 metadata/_edit_use_anchors_ = true
 
-[node name="BackGround-Image" type="TextureRect" parent="."]
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+clip_contents = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -64.0
-offset_top = -164.0
-offset_right = 429.0
-offset_bottom = 915.0
+offset_left = -212.0
+offset_right = 212.0
+offset_bottom = 570.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.71, 0.71)
-pivot_offset = Vector2(0, 0.23)
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="BackGround-Image" type="TextureRect" parent="ScrollContainer"]
+layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+mouse_filter = 2
 texture = ExtResource("2_f0g80")
 stretch_mode = 4
 
-[node name="PlayerInfo" type="Control" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="PlayerInfo" type="Control" parent="ScrollContainer"]
+layout_mode = 2
+mouse_filter = 2
 
-[node name="Information" type="MarginContainer" parent="PlayerInfo"]
+[node name="Information" type="MarginContainer" parent="ScrollContainer/PlayerInfo"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -239.5
-offset_top = 612.825
-offset_right = 239.5
-offset_bottom = 1039.82
+offset_left = 224.0
+offset_top = 613.0
+offset_right = 703.0
+offset_bottom = 1039.99
 grow_horizontal = 2
+mouse_filter = 2
 
-[node name="InformationBackGround" type="TextureRect" parent="PlayerInfo/Information"]
+[node name="InformationBackGround" type="TextureRect" parent="ScrollContainer/PlayerInfo/Information"]
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("8_syltn")
 expand_mode = 1
 
-[node name="InformationText" type="MarginContainer" parent="PlayerInfo"]
+[node name="InformationText" type="MarginContainer" parent="ScrollContainer/PlayerInfo"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -200.0
+offset_left = 266.0
 offset_top = 626.0
-offset_right = 40.0
+offset_right = 506.0
 offset_bottom = 1029.0
 grow_horizontal = 2
+mouse_filter = 2
 
-[node name="Label" type="Label" parent="PlayerInfo/InformationText"]
+[node name="Label" type="Label" parent="ScrollContainer/PlayerInfo/InformationText"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 18
 text = "Damage: 125
@@ -107,199 +111,207 @@ Accuracy: 80%
 Spirit: 1"
 autowrap_mode = 3
 
-[node name="VBoxContainer" type="HBoxContainer" parent="PlayerInfo"]
+[node name="VBoxContainer" type="HBoxContainer" parent="ScrollContainer/PlayerInfo"]
 layout_mode = 0
-offset_left = 144.0
-offset_top = 318.0
-offset_right = 195.0
-offset_bottom = 358.0
+offset_left = 353.0
+offset_top = 321.0
+offset_right = 560.0
+offset_bottom = 361.0
+mouse_filter = 2
 theme_override_constants/separation = 105
 
-[node name="lvl" type="Label" parent="PlayerInfo/VBoxContainer"]
+[node name="lvl" type="Label" parent="ScrollContainer/PlayerInfo/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 21
 text = "lvl 31"
 
-[node name="pvp" type="Label" parent="PlayerInfo/VBoxContainer"]
+[node name="pvp" type="Label" parent="ScrollContainer/PlayerInfo/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 21
 text = "13 982"
 
-[node name="TextureRect" type="TextureRect" parent="PlayerInfo/VBoxContainer/pvp"]
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/PlayerInfo/VBoxContainer/pvp"]
 layout_mode = 2
 offset_left = -26.0
 offset_top = 3.0
 offset_bottom = 27.0
+mouse_filter = 2
 texture = ExtResource("9_2fdt2")
 expand_mode = 1
 
-[node name="VBoxContainer2" type="HBoxContainer" parent="PlayerInfo"]
-offset_left = 197.0
-offset_top = 359.0
-offset_right = 305.0
-offset_bottom = 376.0
-
-[node name="TextureRect" type="TextureRect" parent="PlayerInfo/VBoxContainer2"]
-layout_mode = 2
-texture = ExtResource("10_5il1k")
-
-[node name="TextureRect2" type="TextureRect" parent="PlayerInfo/VBoxContainer2"]
-layout_mode = 2
-texture = ExtResource("10_5il1k")
-
-[node name="TextureRect3" type="TextureRect" parent="PlayerInfo/VBoxContainer2"]
-layout_mode = 2
-texture = ExtResource("10_5il1k")
-
-[node name="TextureRect4" type="TextureRect" parent="PlayerInfo/VBoxContainer2"]
-layout_mode = 2
-texture = ExtResource("11_w6t47")
-
-[node name="TextureRect5" type="TextureRect" parent="PlayerInfo/VBoxContainer2"]
-layout_mode = 2
-texture = ExtResource("11_w6t47")
-
-[node name="Abilites" type="HBoxContainer" parent="PlayerInfo"]
+[node name="VBoxContainer2" type="HBoxContainer" parent="ScrollContainer/PlayerInfo"]
 layout_mode = 0
-offset_left = 84.0
-offset_top = 510.0
-offset_right = 415.0
-offset_bottom = 579.0
+offset_left = 393.0
+offset_top = 363.0
+offset_right = 501.0
+offset_bottom = 380.0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/PlayerInfo/VBoxContainer2"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("10_5il1k")
+
+[node name="TextureRect2" type="TextureRect" parent="ScrollContainer/PlayerInfo/VBoxContainer2"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("10_5il1k")
+
+[node name="TextureRect3" type="TextureRect" parent="ScrollContainer/PlayerInfo/VBoxContainer2"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("10_5il1k")
+
+[node name="TextureRect4" type="TextureRect" parent="ScrollContainer/PlayerInfo/VBoxContainer2"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("11_w6t47")
+
+[node name="TextureRect5" type="TextureRect" parent="ScrollContainer/PlayerInfo/VBoxContainer2"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("11_w6t47")
+
+[node name="Abilites" type="HBoxContainer" parent="ScrollContainer/PlayerInfo"]
+layout_mode = 0
+offset_left = 289.0
+offset_top = 514.0
+offset_right = 620.0
+offset_bottom = 583.0
+mouse_filter = 2
 theme_override_constants/separation = 17
 
-[node name="TextureRect" type="TextureRect" parent="PlayerInfo/Abilites"]
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/PlayerInfo/Abilites"]
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("7_nsrmq")
 
-[node name="TextureRect2" type="TextureRect" parent="PlayerInfo/Abilites"]
+[node name="TextureRect2" type="TextureRect" parent="ScrollContainer/PlayerInfo/Abilites"]
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("7_nsrmq")
 
-[node name="TextureRect3" type="TextureRect" parent="PlayerInfo/Abilites"]
+[node name="TextureRect3" type="TextureRect" parent="ScrollContainer/PlayerInfo/Abilites"]
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("7_nsrmq")
 
-[node name="TextureRect4" type="TextureRect" parent="PlayerInfo/Abilites"]
+[node name="TextureRect4" type="TextureRect" parent="ScrollContainer/PlayerInfo/Abilites"]
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("7_nsrmq")
 
-[node name="MarginContainer" type="MarginContainer" parent="PlayerInfo"]
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/PlayerInfo"]
 layout_mode = 0
-offset_left = 203.0
-offset_top = 463.0
-offset_right = 293.0
-offset_bottom = 503.0
+offset_left = 399.0
+offset_top = 467.0
+offset_right = 489.0
+offset_bottom = 507.0
+mouse_filter = 2
 
-[node name="Label" type="Label" parent="PlayerInfo/MarginContainer"]
+[node name="Label" type="Label" parent="ScrollContainer/PlayerInfo/MarginContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Abilities"
 
-[node name="Scroll" type="VScrollBar" parent="."]
-process_mode = 3
-self_modulate = Color(1, 1, 1, 0)
-offset_left = -98.0
-offset_top = -105.0
-offset_right = 624.0
-offset_bottom = 1148.0
-pivot_offset = Vector2(0, 0.095)
-min_value = 450.0
-max_value = 600.0
-step = -100.0
-value = 450.0
-
-[node name="TavernProfileUI" type="Control" parent="."]
-layout_mode = 1
-anchor_left = 0.002
-anchor_right = 0.002
-grow_horizontal = 2
+[node name="TavernProfileUI" type="Control" parent="ScrollContainer"]
+layout_mode = 2
+mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="IconFrameContainer" type="MarginContainer" parent="TavernProfileUI"]
+[node name="IconFrameContainer" type="MarginContainer" parent="ScrollContainer/TavernProfileUI"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 47.0
-offset_right = 391.0
-offset_bottom = 441.0
+offset_left = 313.0
+offset_top = 49.0
+offset_right = 595.0
+offset_bottom = 443.0
+mouse_filter = 2
 
-[node name="IconFrame" type="TextureRect" parent="TavernProfileUI/IconFrameContainer"]
+[node name="IconFrame" type="TextureRect" parent="ScrollContainer/TavernProfileUI/IconFrameContainer"]
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("3_jynqc")
 expand_mode = 1
 
-[node name="PlayerProfileIcon" type="MarginContainer" parent="TavernProfileUI"]
+[node name="PlayerProfileIcon" type="MarginContainer" parent="ScrollContainer/TavernProfileUI"]
 layout_mode = 0
-offset_left = 209.0
-offset_top = 119.0
-offset_right = 347.0
-offset_bottom = 250.0
+offset_left = 413.0
+offset_top = 121.0
+offset_right = 551.0
+offset_bottom = 252.0
+mouse_filter = 2
 
-[node name="Label" type="Label" parent="TavernProfileUI/PlayerProfileIcon"]
+[node name="Label" type="Label" parent="ScrollContainer/TavernProfileUI/PlayerProfileIcon"]
 layout_mode = 2
 text = "ICON PLACE"
 
-[node name="FrameContainer" type="MarginContainer" parent="TavernProfileUI"]
+[node name="FrameContainer" type="MarginContainer" parent="ScrollContainer/TavernProfileUI"]
 layout_mode = 0
-offset_left = 158.0
-offset_top = 73.0
-offset_right = 340.0
-offset_bottom = 256.0
+offset_left = 362.0
+offset_top = 75.0
+offset_right = 544.0
+offset_bottom = 258.0
+mouse_filter = 2
 
-[node name="Frame" type="TextureRect" parent="TavernProfileUI/FrameContainer"]
+[node name="Frame" type="TextureRect" parent="ScrollContainer/TavernProfileUI/FrameContainer"]
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("4_etbxp")
 expand_mode = 1
 
-[node name="UsernameBackGroundContainer" type="MarginContainer" parent="TavernProfileUI"]
+[node name="UsernameBackGroundContainer" type="MarginContainer" parent="ScrollContainer/TavernProfileUI"]
 layout_mode = 0
-offset_left = 131.0
-offset_top = 261.0
-offset_right = 373.0
-offset_bottom = 317.0
+offset_left = 335.0
+offset_top = 263.0
+offset_right = 577.0
+offset_bottom = 319.0
+mouse_filter = 2
 
-[node name="UsernameBackGround" type="TextureRect" parent="TavernProfileUI/UsernameBackGroundContainer"]
+[node name="UsernameBackGround" type="TextureRect" parent="ScrollContainer/TavernProfileUI/UsernameBackGroundContainer"]
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("5_5p47d")
 expand_mode = 1
 
-[node name="UsernameContainer" type="MarginContainer" parent="TavernProfileUI"]
+[node name="UsernameContainer" type="MarginContainer" parent="ScrollContainer/TavernProfileUI"]
 layout_mode = 0
-offset_left = 162.0
-offset_top = 270.0
-offset_right = 330.0
-offset_bottom = 310.0
+offset_left = 366.0
+offset_top = 272.0
+offset_right = 534.0
+offset_bottom = 312.0
+mouse_filter = 2
 
-[node name="Username" type="Label" parent="TavernProfileUI/UsernameContainer"]
+[node name="Username" type="Label" parent="ScrollContainer/TavernProfileUI/UsernameContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "PLAYER NAME"
 
-[node name="Line" type="MarginContainer" parent="TavernProfileUI"]
+[node name="Line" type="MarginContainer" parent="ScrollContainer/TavernProfileUI"]
 layout_mode = 0
-offset_left = 12.0
+offset_left = 227.0
 offset_top = 459.0
-offset_right = 487.0
+offset_right = 702.0
 offset_bottom = 462.0
+mouse_filter = 2
 
-[node name="TextureRect" type="TextureRect" parent="TavernProfileUI/Line"]
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/TavernProfileUI/Line"]
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("8_b0sav")
 expand_mode = 1
 
-[node name="Camera2D" type="Camera2D" parent="TavernProfileUI"]
-position = Vector2(250, 448)
-
-[node name="Control" type="Control" parent="TavernProfileUI"]
+[node name="Control" type="Control" parent="ScrollContainer/TavernProfileUI"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_left = 257.0
-offset_top = 449.0
-offset_right = 262.0
-offset_bottom = 496.0
+offset_left = 461.0
+offset_top = 451.0
+offset_right = 466.0
+offset_bottom = 498.0
 grow_horizontal = 2
+mouse_filter = 2
 
-[node name="BackButtonContainer" type="MarginContainer" parent="TavernProfileUI/Control"]
+[node name="BackButtonContainer" type="MarginContainer" parent="ScrollContainer/TavernProfileUI/Control"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -309,7 +321,7 @@ offset_right = -188.0
 offset_bottom = -389.0
 grow_horizontal = 2
 
-[node name="BackButton" type="TextureButton" parent="TavernProfileUI/Control/BackButtonContainer"]
+[node name="BackButton" type="TextureButton" parent="ScrollContainer/TavernProfileUI/Control/BackButtonContainer"]
 layout_mode = 2
 texture_normal = ExtResource("6_2ujnu")
 texture_pressed = ExtResource("6_2ujnu")
@@ -318,7 +330,7 @@ texture_focused = ExtResource("6_2ujnu")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="OptionsButtonContainer" type="MarginContainer" parent="TavernProfileUI/Control"]
+[node name="OptionsButtonContainer" type="MarginContainer" parent="ScrollContainer/TavernProfileUI/Control"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -328,7 +340,7 @@ offset_right = 228.0
 offset_bottom = -402.0
 grow_horizontal = 2
 
-[node name="OptionsButton" type="Button" parent="TavernProfileUI/Control/OptionsButtonContainer"]
+[node name="OptionsButton" type="Button" parent="ScrollContainer/TavernProfileUI/Control/OptionsButtonContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_0tiyj")
@@ -337,5 +349,5 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_w20eg")
 theme_override_styles/focus = SubResource("StyleBoxTexture_ed6mt")
 text = "Options"
 
-[connection signal="pressed" from="TavernProfileUI/Control/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="TavernProfileUI/Control/OptionsButtonContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/TavernProfileUI/Control/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/TavernProfileUI/Control/OptionsButtonContainer/OptionsButton" to="." method="_on_options_button_pressed"]

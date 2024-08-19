@@ -1180,9 +1180,9 @@ func _on_api_request_request_completed(result, response_code, headers, body):
 func _on_back_button_pressed():
 	if not GLOBAL.from_change_server:
 		GLOBAL.sign_out = true
-		get_tree().change_scene_to_file("res://src/scenes/auth-scenes/login_ui.tscn")
+		SceneChangeManager.go_to_scene("res://src/scenes/auth-scenes/login_ui.tscn")
 	else:
-		get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+		SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1191,7 +1191,7 @@ func _on_play_button_server_1_pressed():
 	GLOBAL.choiced_server_address = server1_address
 	GLOBAL.choiced_server_name = server1_name_label.text
 	print("\nВыбрано: " + server1_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1199,7 +1199,7 @@ func _on_play_button_server_2_pressed():
 	GLOBAL.choiced_server_address = server2_address
 	GLOBAL.choiced_server_name = server2_name_label.text
 	print("\nВыбрано: " + server2_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1207,7 +1207,7 @@ func _on_play_button_server_3_pressed():
 	GLOBAL.choiced_server_address = server3_address
 	GLOBAL.choiced_server_name = server3_name_label.text
 	print("\nВыбрано: " + server3_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1215,7 +1215,7 @@ func _on_play_button_server_4_pressed():
 	GLOBAL.choiced_server_address = server4_address
 	GLOBAL.choiced_server_name = server4_name_label.text
 	print("\nВыбрано: " + server4_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1223,7 +1223,7 @@ func _on_play_button_server_5_pressed():
 	GLOBAL.choiced_server_address = server5_address
 	GLOBAL.choiced_server_name = server5_name_label.text
 	print("\nВыбрано: " + server5_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1231,7 +1231,7 @@ func _on_play_button_server_6_pressed():
 	GLOBAL.choiced_server_address = server6_address
 	GLOBAL.choiced_server_name = server6_name_label.text
 	print("\nВыбрано: " + server6_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1239,7 +1239,7 @@ func _on_play_button_server_7_pressed():
 	GLOBAL.choiced_server_address = server7_address
 	GLOBAL.choiced_server_name = server7_name_label.text
 	print("\nВыбрано: " + server7_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1247,7 +1247,7 @@ func _on_play_button_server_8_pressed():
 	GLOBAL.choiced_server_address = server8_address
 	GLOBAL.choiced_server_name = server8_name_label.text
 	print("\nВыбрано: " + server8_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1255,7 +1255,7 @@ func _on_play_button_server_9_pressed():
 	GLOBAL.choiced_server_address = server9_address
 	GLOBAL.choiced_server_name = server9_name_label.text
 	print("\nВыбрано: " + server9_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1263,7 +1263,7 @@ func _on_play_button_server_10_pressed():
 	GLOBAL.choiced_server_address = server10_address
 	GLOBAL.choiced_server_name = server10_name_label.text
 	print("\nВыбрано: " + server10_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1271,7 +1271,7 @@ func _on_play_button_server_11_pressed():
 	GLOBAL.choiced_server_address = server11_address
 	GLOBAL.choiced_server_name = server11_name_label.text
 	print("\nВыбрано: " + server11_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1279,7 +1279,7 @@ func _on_play_button_server_12_pressed():
 	GLOBAL.choiced_server_address = server12_address
 	GLOBAL.choiced_server_name = server12_name_label.text
 	print("\nВыбрано: " + server12_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1287,7 +1287,7 @@ func _on_play_button_server_13_pressed():
 	GLOBAL.choiced_server_address = server13_address
 	GLOBAL.choiced_server_name = server13_name_label.text
 	print("\nВыбрано: " + server13_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1295,7 +1295,7 @@ func _on_play_button_server_14_pressed():
 	GLOBAL.choiced_server_address = server14_address
 	GLOBAL.choiced_server_name = server14_name_label.text
 	print("\nВыбрано: " + server14_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1303,7 +1303,7 @@ func _on_play_button_server_15_pressed():
 	GLOBAL.choiced_server_address = server15_address
 	GLOBAL.choiced_server_name = server15_name_label.text
 	print("\nВыбрано: " + server15_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1311,7 +1311,7 @@ func _on_play_button_server_16_pressed():
 	GLOBAL.choiced_server_address = server16_address
 	GLOBAL.choiced_server_name = server16_name_label.text
 	print("\nВыбрано: " + server16_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1319,7 +1319,7 @@ func _on_play_button_server_17_pressed():
 	GLOBAL.choiced_server_address = server17_address
 	GLOBAL.choiced_server_name = server17_name_label.text
 	print("\nВыбрано: " + server17_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1327,7 +1327,7 @@ func _on_play_button_server_18_pressed():
 	GLOBAL.choiced_server_address = server18_address
 	GLOBAL.choiced_server_name = server18_name_label.text
 	print("\nВыбрано: " + server18_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1335,7 +1335,7 @@ func _on_play_button_server_19_pressed():
 	GLOBAL.choiced_server_address = server19_address
 	GLOBAL.choiced_server_name = server19_name_label.text
 	print("\nВыбрано: " + server19_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1343,7 +1343,7 @@ func _on_play_button_server_20_pressed():
 	GLOBAL.choiced_server_address = server20_address
 	GLOBAL.choiced_server_name = server20_name_label.text
 	print("\nВыбрано: " + server20_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1351,7 +1351,7 @@ func _on_play_button_server_21_pressed():
 	GLOBAL.choiced_server_address = server21_address
 	GLOBAL.choiced_server_name = server21_name_label.text
 	print("\nВыбрано: " + server21_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1359,7 +1359,7 @@ func _on_play_button_server_22_pressed():
 	GLOBAL.choiced_server_address = server22_address
 	GLOBAL.choiced_server_name = server22_name_label.text
 	print("\nВыбрано: " + server22_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1367,7 +1367,7 @@ func _on_play_button_server_23_pressed():
 	GLOBAL.choiced_server_address = server23_address
 	GLOBAL.choiced_server_name = server23_name_label.text
 	print("\nВыбрано: " + server23_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1375,7 +1375,7 @@ func _on_play_button_server_24_pressed():
 	GLOBAL.choiced_server_address = server24_address
 	GLOBAL.choiced_server_name = server24_name_label.text
 	print("\nВыбрано: " + server24_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1383,7 +1383,7 @@ func _on_play_button_server_25_pressed():
 	GLOBAL.choiced_server_address = server25_address
 	GLOBAL.choiced_server_name = server25_name_label.text
 	print("\nВыбрано: " + server25_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1391,7 +1391,7 @@ func _on_play_button_server_26_pressed():
 	GLOBAL.choiced_server_address = server26_address
 	GLOBAL.choiced_server_name = server26_name_label.text
 	print("\nВыбрано: " + server26_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1399,7 +1399,7 @@ func _on_play_button_server_27_pressed():
 	GLOBAL.choiced_server_address = server27_address
 	GLOBAL.choiced_server_name = server27_name_label.text
 	print("\nВыбрано: " + server27_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1407,7 +1407,7 @@ func _on_play_button_server_28_pressed():
 	GLOBAL.choiced_server_address = server28_address
 	GLOBAL.choiced_server_name = server28_name_label.text
 	print("\nВыбрано: " + server28_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1415,7 +1415,7 @@ func _on_play_button_server_29_pressed():
 	GLOBAL.choiced_server_address = server29_address
 	GLOBAL.choiced_server_name = server29_name_label.text
 	print("\nВыбрано: " + server29_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1423,7 +1423,7 @@ func _on_play_button_server_30_pressed():
 	GLOBAL.choiced_server_address = server30_address
 	GLOBAL.choiced_server_name = server30_name_label.text
 	print("\nВыбрано: " + server30_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1431,7 +1431,7 @@ func _on_play_button_server_31_pressed():
 	GLOBAL.choiced_server_address = server31_address
 	GLOBAL.choiced_server_name = server31_name_label.text
 	print("\nВыбрано: " + server31_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1439,7 +1439,7 @@ func _on_play_button_server_32_pressed():
 	GLOBAL.choiced_server_address = server32_address
 	GLOBAL.choiced_server_name = server32_name_label.text
 	print("\nВыбрано: " + server32_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1447,7 +1447,7 @@ func _on_play_button_server_33_pressed():
 	GLOBAL.choiced_server_address = server33_address
 	GLOBAL.choiced_server_name = server33_name_label.text
 	print("\nВыбрано: " + server33_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1455,7 +1455,7 @@ func _on_play_button_server_34_pressed():
 	GLOBAL.choiced_server_address = server34_address
 	GLOBAL.choiced_server_name = server34_name_label.text
 	print("\nВыбрано: " + server34_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1463,7 +1463,7 @@ func _on_play_button_server_35_pressed():
 	GLOBAL.choiced_server_address = server35_address
 	GLOBAL.choiced_server_name = server35_name_label.text
 	print("\nВыбрано: " + server35_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1471,7 +1471,7 @@ func _on_play_button_server_36_pressed():
 	GLOBAL.choiced_server_address = server36_address
 	GLOBAL.choiced_server_name = server36_name_label.text
 	print("\nВыбрано: " + server36_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1479,7 +1479,7 @@ func _on_play_button_server_37_pressed():
 	GLOBAL.choiced_server_address = server37_address
 	GLOBAL.choiced_server_name = server37_name_label.text
 	print("\nВыбрано: " + server37_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1487,7 +1487,7 @@ func _on_play_button_server_38_pressed():
 	GLOBAL.choiced_server_address = server38_address
 	GLOBAL.choiced_server_name = server38_name_label.text
 	print("\nВыбрано: " + server38_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1495,7 +1495,7 @@ func _on_play_button_server_39_pressed():
 	GLOBAL.choiced_server_address = server39_address
 	GLOBAL.choiced_server_name = server39_name_label.text
 	print("\nВыбрано: " + server39_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1503,7 +1503,7 @@ func _on_play_button_server_40_pressed():
 	GLOBAL.choiced_server_address = server40_address
 	GLOBAL.choiced_server_name = server40_name_label.text
 	print("\nВыбрано: " + server40_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1511,7 +1511,7 @@ func _on_play_button_server_41_pressed():
 	GLOBAL.choiced_server_address = server41_address
 	GLOBAL.choiced_server_name = server41_name_label.text
 	print("\nВыбрано: " + server41_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1519,7 +1519,7 @@ func _on_play_button_server_42_pressed():
 	GLOBAL.choiced_server_address = server42_address
 	GLOBAL.choiced_server_name = server42_name_label.text
 	print("\nВыбрано: " + server42_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1527,7 +1527,7 @@ func _on_play_button_server_43_pressed():
 	GLOBAL.choiced_server_address = server43_address
 	GLOBAL.choiced_server_name = server43_name_label.text
 	print("\nВыбрано: " + server43_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1535,7 +1535,7 @@ func _on_play_button_server_44_pressed():
 	GLOBAL.choiced_server_address = server44_address
 	GLOBAL.choiced_server_name = server44_name_label.text
 	print("\nВыбрано: " + server44_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1543,7 +1543,7 @@ func _on_play_button_server_45_pressed():
 	GLOBAL.choiced_server_address = server45_address
 	GLOBAL.choiced_server_name = server45_name_label.text
 	print("\nВыбрано: " + server45_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1551,7 +1551,7 @@ func _on_play_button_server_46_pressed():
 	GLOBAL.choiced_server_address = server46_address
 	GLOBAL.choiced_server_name = server46_name_label.text
 	print("\nВыбрано: " + server46_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1559,7 +1559,7 @@ func _on_play_button_server_47_pressed():
 	GLOBAL.choiced_server_address = server47_address
 	GLOBAL.choiced_server_name = server47_name_label.text
 	print("\nВыбрано: " + server47_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1567,7 +1567,7 @@ func _on_play_button_server_48_pressed():
 	GLOBAL.choiced_server_address = server48_address
 	GLOBAL.choiced_server_name = server48_name_label.text
 	print("\nВыбрано: " + server48_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1575,7 +1575,7 @@ func _on_play_button_server_49_pressed():
 	GLOBAL.choiced_server_address = server49_address
 	GLOBAL.choiced_server_name = server49_name_label.text
 	print("\nВыбрано: " + server49_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1583,7 +1583,7 @@ func _on_play_button_server_50_pressed():
 	GLOBAL.choiced_server_address = server50_address
 	GLOBAL.choiced_server_name = server50_name_label.text
 	print("\nВыбрано: " + server50_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1591,7 +1591,7 @@ func _on_play_button_server_51_pressed():
 	GLOBAL.choiced_server_address = server51_address
 	GLOBAL.choiced_server_name = server51_name_label.text
 	print("\nВыбрано: " + server51_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1599,7 +1599,7 @@ func _on_play_button_server_52_pressed():
 	GLOBAL.choiced_server_address = server52_address
 	GLOBAL.choiced_server_name = server52_name_label.text
 	print("\nВыбрано: " + server52_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1607,7 +1607,7 @@ func _on_play_button_server_53_pressed():
 	GLOBAL.choiced_server_address = server53_address
 	GLOBAL.choiced_server_name = server53_name_label.text
 	print("\nВыбрано: " + server53_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1615,7 +1615,7 @@ func _on_play_button_server_54_pressed():
 	GLOBAL.choiced_server_address = server54_address
 	GLOBAL.choiced_server_name = server54_name_label.text
 	print("\nВыбрано: " + server54_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1623,7 +1623,7 @@ func _on_play_button_server_55_pressed():
 	GLOBAL.choiced_server_address = server55_address
 	GLOBAL.choiced_server_name = server55_name_label.text
 	print("\nВыбрано: " + server55_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1631,7 +1631,7 @@ func _on_play_button_server_56_pressed():
 	GLOBAL.choiced_server_address = server56_address
 	GLOBAL.choiced_server_name = server56_name_label.text
 	print("\nВыбрано: " + server56_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1639,7 +1639,7 @@ func _on_play_button_server_57_pressed():
 	GLOBAL.choiced_server_address = server57_address
 	GLOBAL.choiced_server_name = server57_name_label.text
 	print("\nВыбрано: " + server57_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1647,7 +1647,7 @@ func _on_play_button_server_58_pressed():
 	GLOBAL.choiced_server_address = server58_address
 	GLOBAL.choiced_server_name = server58_name_label.text
 	print("\nВыбрано: " + server58_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1655,7 +1655,7 @@ func _on_play_button_server_59_pressed():
 	GLOBAL.choiced_server_address = server59_address
 	GLOBAL.choiced_server_name = server59_name_label.text
 	print("\nВыбрано: " + server59_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1663,7 +1663,7 @@ func _on_play_button_server_60_pressed():
 	GLOBAL.choiced_server_address = server60_address
 	GLOBAL.choiced_server_name = server60_name_label.text
 	print("\nВыбрано: " + server60_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1671,7 +1671,7 @@ func _on_play_button_server_61_pressed():
 	GLOBAL.choiced_server_address = server61_address
 	GLOBAL.choiced_server_name = server61_name_label.text
 	print("\nВыбрано: " + server61_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1679,7 +1679,7 @@ func _on_play_button_server_62_pressed():
 	GLOBAL.choiced_server_address = server62_address
 	GLOBAL.choiced_server_name = server62_name_label.text
 	print("\nВыбрано: " + server62_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1687,7 +1687,7 @@ func _on_play_button_server_63_pressed():
 	GLOBAL.choiced_server_address = server63_address
 	GLOBAL.choiced_server_name = server63_name_label.text
 	print("\nВыбрано: " + server63_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1695,7 +1695,7 @@ func _on_play_button_server_64_pressed():
 	GLOBAL.choiced_server_address = server64_address
 	GLOBAL.choiced_server_name = server64_name_label.text
 	print("\nВыбрано: " + server64_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1703,7 +1703,7 @@ func _on_play_button_server_65_pressed():
 	GLOBAL.choiced_server_address = server65_address
 	GLOBAL.choiced_server_name = server65_name_label.text
 	print("\nВыбрано: " + server65_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1711,7 +1711,7 @@ func _on_play_button_server_66_pressed():
 	GLOBAL.choiced_server_address = server66_address
 	GLOBAL.choiced_server_name = server66_name_label.text
 	print("\nВыбрано: " + server66_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1719,7 +1719,7 @@ func _on_play_button_server_67_pressed():
 	GLOBAL.choiced_server_address = server67_address
 	GLOBAL.choiced_server_name = server67_name_label.text
 	print("\nВыбрано: " + server67_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1727,7 +1727,7 @@ func _on_play_button_server_68_pressed():
 	GLOBAL.choiced_server_address = server68_address
 	GLOBAL.choiced_server_name = server68_name_label.text
 	print("\nВыбрано: " + server68_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1735,7 +1735,7 @@ func _on_play_button_server_69_pressed():
 	GLOBAL.choiced_server_address = server69_address
 	GLOBAL.choiced_server_name = server69_name_label.text
 	print("\nВыбрано: " + server69_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1743,7 +1743,7 @@ func _on_play_button_server_70_pressed():
 	GLOBAL.choiced_server_address = server70_address
 	GLOBAL.choiced_server_name = server70_name_label.text
 	print("\nВыбрано: " + server70_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1751,7 +1751,7 @@ func _on_play_button_server_71_pressed():
 	GLOBAL.choiced_server_address = server71_address
 	GLOBAL.choiced_server_name = server71_name_label.text
 	print("\nВыбрано: " + server71_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1759,7 +1759,7 @@ func _on_play_button_server_72_pressed():
 	GLOBAL.choiced_server_address = server72_address
 	GLOBAL.choiced_server_name = server72_name_label.text
 	print("\nВыбрано: " + server72_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1767,7 +1767,7 @@ func _on_play_button_server_73_pressed():
 	GLOBAL.choiced_server_address = server73_address
 	GLOBAL.choiced_server_name = server73_name_label.text
 	print("\nВыбрано: " + server73_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1775,7 +1775,7 @@ func _on_play_button_server_74_pressed():
 	GLOBAL.choiced_server_address = server74_address
 	GLOBAL.choiced_server_name = server74_name_label.text
 	print("\nВыбрано: " + server74_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1783,7 +1783,7 @@ func _on_play_button_server_75_pressed():
 	GLOBAL.choiced_server_address = server75_address
 	GLOBAL.choiced_server_name = server75_name_label.text
 	print("\nВыбрано: " + server75_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1791,7 +1791,7 @@ func _on_play_button_server_76_pressed():
 	GLOBAL.choiced_server_address = server76_address
 	GLOBAL.choiced_server_name = server76_name_label.text
 	print("\nВыбрано: " + server76_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1799,7 +1799,7 @@ func _on_play_button_server_77_pressed():
 	GLOBAL.choiced_server_address = server77_address
 	GLOBAL.choiced_server_name = server77_name_label.text
 	print("\nВыбрано: " + server77_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1807,7 +1807,7 @@ func _on_play_button_server_78_pressed():
 	GLOBAL.choiced_server_address = server78_address
 	GLOBAL.choiced_server_name = server78_name_label.text
 	print("\nВыбрано: " + server78_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1815,7 +1815,7 @@ func _on_play_button_server_79_pressed():
 	GLOBAL.choiced_server_address = server79_address
 	GLOBAL.choiced_server_name = server79_name_label.text
 	print("\nВыбрано: " + server79_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 
@@ -1823,7 +1823,7 @@ func _on_play_button_server_80_pressed():
 	GLOBAL.choiced_server_address = server80_address
 	GLOBAL.choiced_server_name = server80_name_label.text
 	print("\nВыбрано: " + server80_name_label.text + " " + str(GLOBAL.choiced_server_address))
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/character_create.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
 
 
 

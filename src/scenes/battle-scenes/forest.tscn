@@ -16,10 +16,11 @@ script = ExtResource("1_xtu5g")
 
 [node name="BackGround-Image" type="TextureRect" parent="."]
 layout_mode = 0
+offset_left = -9.63
 offset_top = -1.0
-offset_right = 500.0
-offset_bottom = 901.0
-scale = Vector2(1.115, 1.115)
+offset_right = 562.445
+offset_bottom = 1063.31
+scale = Vector2(1.05, 1.05)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_6712k")
@@ -27,9 +28,10 @@ stretch_mode = 4
 
 [node name="BackGround-Video" type="VideoStreamPlayer" parent="."]
 layout_mode = 0
-offset_right = 521.0
-offset_bottom = 928.0
-scale = Vector2(1.115, 1.115)
+offset_left = -9.63
+offset_right = 562.445
+offset_bottom = 1064.31
+scale = Vector2(1.05, 1.05)
 stream = ExtResource("3_cjutj")
 autoplay = true
 expand = true

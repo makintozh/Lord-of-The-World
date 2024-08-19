@@ -15,19 +15,22 @@ grow_vertical = 2
 script = ExtResource("1_23jm1")
 
 [node name="BackGround-Image" type="TextureRect" parent="."]
-offset_top = -1.0
-offset_right = 500.0
-offset_bottom = 901.0
-scale = Vector2(1.115, 1.115)
+layout_mode = 0
+offset_left = -64.735
+offset_top = -3.0
+offset_right = 624.83
+offset_bottom = 1101.4
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_a26n8")
 stretch_mode = 4
 
 [node name="BackGround-Video" type="VideoStreamPlayer" parent="."]
-offset_right = 521.0
-offset_bottom = 928.0
-scale = Vector2(1.115, 1.115)
+layout_mode = 0
+offset_left = -64.735
+offset_top = -2.0
+offset_right = 624.83
+offset_bottom = 1102.4
 stream = ExtResource("3_e3t5f")
 autoplay = true
 expand = true

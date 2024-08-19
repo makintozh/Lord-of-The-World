@@ -1,7 +1,7 @@
 extends Control
 
 
-@onready var username = $TavernProfileUI/UsernameContainer/Username
+@onready var username = $ScrollContainer/TavernProfileUI/UsernameContainer/Username
 
 
 var options = preload("res://src/scenes/settings-scenes/options_tavern.tscn")
@@ -12,18 +12,12 @@ func _ready():
 
 
 
-func _process(_delta):
-	$TavernProfileUI/Camera2D.position.y = $Scroll.value
-
-
-
-
 
 
 
 #Если нажата стрелочка "Назад"
 func _on_back_button_pressed():
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/navigation-menu.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/navigation-menu.tscn")
 
 
 

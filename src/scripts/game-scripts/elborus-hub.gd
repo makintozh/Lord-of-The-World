@@ -13,4 +13,4 @@ func _process(_delta):
 
 
 func _on_back_button_pressed():
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/biom.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/game-scenes/biom.tscn")
