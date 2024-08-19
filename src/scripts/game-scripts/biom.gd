@@ -28,11 +28,6 @@ func _on_back_button_pressed():
 
 
 
-func _on_civil_pressed():
-	get_tree().change_scene_to_file("res://src/scenes/battle-scenes/civil-battle.tscn")
-
-
-
 
 
 func _on_top_button_pressed():
@@ -49,18 +44,24 @@ func _on_bottom_button_pressed():
 	bottom_button.visible = false
 
 
+\
 
 
-func _on_elborus_pressed():
-	get_tree().change_scene_to_file("res://src/scenes/battle-scenes/elborus-hub.tscn")
+
+func _on_civil_pressed():
+	get_tree().change_scene_to_file("res://src/scenes/battle-scenes/civil.tscn")
 
 
 func _on_taurelious_pressed():
 	get_tree().change_scene_to_file("res://src/scenes/battle-scenes/taurelious.tscn")
 
 
+func _on_elborus_pressed():
+	get_tree().change_scene_to_file("res://src/scenes/battle-scenes/elborus.tscn")
+
+
 func _on_torres_mortes_pressed():
-	get_tree().change_scene_to_file("res://src/scenes/battle-scenes/torres-mortes.tscn")
+	get_tree().change_scene_to_file("res://src/scenes/battle-scenes/torresmortes.tscn")
 
 
 func _on_forest_pressed():
@@ -81,3 +82,12 @@ func _on_keyfand_pressed():
 
 func _on_meches_pressed():
 	get_tree().change_scene_to_file("res://src/scenes/battle-scenes/meches.tscn")
+
+
+func _on_celestial_pressed():
+	get_tree().change_scene_to_file("res://src/scenes/battle-scenes/celestial.tscn")
+
+
+
+
+

@@ -107,6 +107,8 @@ func _on_api_summary_request_completed(result, response_code, headers, body):
 	
 	
 	if str(character_info) != "<null>":
+		var name = str(character_info["name"])
+		GLOBAL.player_character_name = name
 		get_tree().change_scene_to_file("res://src/scenes/game-scenes/navigation-menu.tscn")
 	else:
 		refreshing.visible = false

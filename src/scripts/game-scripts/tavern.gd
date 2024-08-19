@@ -12,7 +12,8 @@ func _ready():
 
 
 
-
+func _process(_delta):
+	$TavernProfileUI/Camera2D.position.y = $Scroll.value
 
 
 

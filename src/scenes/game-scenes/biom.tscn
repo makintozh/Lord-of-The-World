@@ -20,6 +20,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -500.0
+offset_bottom = -900.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_m3bq3")
@@ -29,31 +31,30 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -256.0
-offset_top = -522.0
-offset_right = -191.0
-offset_bottom = 571.0
+offset_left = -249.0
+offset_top = -508.0
+offset_right = 180.0
+offset_bottom = 1345.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.165, 1.165)
 texture = ExtResource("2_1q34o")
-expand_mode = 1
+stretch_mode = 4
 
 [node name="Buildings" type="Control" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -243.0
-offset_top = -469.0
-offset_right = -243.0
-offset_bottom = -469.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_left = -230.0
+offset_top = -475.0
+offset_right = -230.0
+offset_bottom = -475.0
 
 [node name="Civil-Human" type="Control" parent="Buildings"]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -19.0
+offset_top = -13.0
+offset_right = 21.0
+offset_bottom = 27.0
 
 [node name="Civil" type="MarginContainer" parent="Buildings/Civil-Human"]
 layout_mode = 0
@@ -86,9 +87,10 @@ text = "Civil
 
 [node name="Taurelious-Elves" type="Control" parent="Buildings"]
 anchors_preset = 0
-offset_top = -1.0
-offset_right = 40.0
-offset_bottom = 39.0
+offset_left = -38.0
+offset_top = 19.0
+offset_right = 2.0
+offset_bottom = 59.0
 
 [node name="Taurelious" type="MarginContainer" parent="Buildings/Taurelious-Elves"]
 layout_mode = 0
@@ -120,8 +122,10 @@ text = "Taurelious"
 
 [node name="Elborus-Gnomes" type="Control" parent="Buildings"]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -30.0
+offset_top = 40.0
+offset_right = 10.0
+offset_bottom = 80.0
 
 [node name="Elborus" type="MarginContainer" parent="Buildings/Elborus-Gnomes"]
 layout_mode = 0
@@ -153,8 +157,10 @@ text = "Elborus"
 
 [node name="Torres-Mortes-Nejitb" type="Control" parent="Buildings"]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -9.0
+offset_top = 61.0
+offset_right = 31.0
+offset_bottom = 101.0
 
 [node name="Torres-Mortes" type="MarginContainer" parent="Buildings/Torres-Mortes-Nejitb"]
 layout_mode = 0
@@ -184,19 +190,21 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 34
 text = "Torres-Mortes"
 
-[node name="Forest" type="Control" parent="Buildings"]
+[node name="Forest-Zveri" type="Control" parent="Buildings"]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -21.0
+offset_top = 92.0
+offset_right = 19.0
+offset_bottom = 132.0
 
-[node name="Forest" type="MarginContainer" parent="Buildings/Forest"]
+[node name="Forest" type="MarginContainer" parent="Buildings/Forest-Zveri"]
 layout_mode = 0
 offset_left = -2.0
 offset_top = 751.0
 offset_right = 210.0
 offset_bottom = 971.0
 
-[node name="Forest" type="TextureButton" parent="Buildings/Forest/Forest"]
+[node name="Forest" type="TextureButton" parent="Buildings/Forest-Zveri/Forest"]
 layout_mode = 2
 texture_normal = ExtResource("8_csmka")
 texture_pressed = ExtResource("8_csmka")
@@ -205,31 +213,33 @@ texture_focused = ExtResource("8_csmka")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="ForestLabel" type="MarginContainer" parent="Buildings/Forest"]
+[node name="ForestLabel" type="MarginContainer" parent="Buildings/Forest-Zveri"]
 layout_mode = 0
 offset_left = 74.0
 offset_top = 722.0
 offset_right = 190.0
 offset_bottom = 768.0
 
-[node name="ForestLabel" type="Label" parent="Buildings/Forest/ForestLabel"]
+[node name="ForestLabel" type="Label" parent="Buildings/Forest-Zveri/ForestLabel"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 34
 text = "Forest"
 
-[node name="Carvaras" type="Control" parent="Buildings"]
+[node name="Carvaras-Orki" type="Control" parent="Buildings"]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -18.0
+offset_top = 120.0
+offset_right = 22.0
+offset_bottom = 160.0
 
-[node name="Carvaras" type="MarginContainer" parent="Buildings/Carvaras"]
+[node name="Carvaras" type="MarginContainer" parent="Buildings/Carvaras-Orki"]
 layout_mode = 0
 offset_left = 256.0
 offset_top = 889.0
 offset_right = 482.0
 offset_bottom = 1122.0
 
-[node name="Carvaras" type="TextureButton" parent="Buildings/Carvaras/Carvaras"]
+[node name="Carvaras" type="TextureButton" parent="Buildings/Carvaras-Orki/Carvaras"]
 layout_mode = 2
 texture_normal = ExtResource("9_wl1d7")
 texture_pressed = ExtResource("9_wl1d7")
@@ -238,31 +248,33 @@ texture_focused = ExtResource("9_wl1d7")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="CarvarasLabel" type="MarginContainer" parent="Buildings/Carvaras"]
+[node name="CarvarasLabel" type="MarginContainer" parent="Buildings/Carvaras-Orki"]
 layout_mode = 0
 offset_left = 276.0
 offset_top = 860.0
 offset_right = 415.0
 offset_bottom = 906.0
 
-[node name="CarvarasLabel" type="Label" parent="Buildings/Carvaras/CarvarasLabel"]
+[node name="CarvarasLabel" type="Label" parent="Buildings/Carvaras-Orki/CarvarasLabel"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 34
 text = "Carvaras"
 
-[node name="Nordtoppen" type="Control" parent="Buildings"]
+[node name="Nordtoppen-Trolli" type="Control" parent="Buildings"]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -32.0
+offset_top = 135.0
+offset_right = 8.0
+offset_bottom = 175.0
 
-[node name="Nordtoppen" type="MarginContainer" parent="Buildings/Nordtoppen"]
+[node name="Nordtoppen" type="MarginContainer" parent="Buildings/Nordtoppen-Trolli"]
 layout_mode = 0
 offset_left = 5.0
 offset_top = 1067.0
 offset_right = 214.0
 offset_bottom = 1274.0
 
-[node name="Nordtoppen" type="TextureButton" parent="Buildings/Nordtoppen/Nordtoppen"]
+[node name="Nordtoppen" type="TextureButton" parent="Buildings/Nordtoppen-Trolli/Nordtoppen"]
 layout_mode = 2
 texture_normal = ExtResource("10_nigbv")
 texture_pressed = ExtResource("10_nigbv")
@@ -271,31 +283,33 @@ texture_focused = ExtResource("10_nigbv")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="NordtoppenLabel" type="MarginContainer" parent="Buildings/Nordtoppen"]
+[node name="NordtoppenLabel" type="MarginContainer" parent="Buildings/Nordtoppen-Trolli"]
 layout_mode = 0
 offset_left = 4.0
 offset_top = 1076.0
 offset_right = 187.0
 offset_bottom = 1122.0
 
-[node name="NordtoppenLabel" type="Label" parent="Buildings/Nordtoppen/NordtoppenLabel"]
+[node name="NordtoppenLabel" type="Label" parent="Buildings/Nordtoppen-Trolli/NordtoppenLabel"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 34
 text = "Nordtoppen"
 
-[node name="Keyfand" type="Control" parent="Buildings"]
+[node name="Keyfand-Goblin" type="Control" parent="Buildings"]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -20.0
+offset_top = 161.0
+offset_right = 20.0
+offset_bottom = 201.0
 
-[node name="Keyfand" type="MarginContainer" parent="Buildings/Keyfand"]
+[node name="Keyfand" type="MarginContainer" parent="Buildings/Keyfand-Goblin"]
 layout_mode = 0
 offset_left = 247.0
 offset_top = 1259.0
 offset_right = 476.0
 offset_bottom = 1490.0
 
-[node name="Keyfand" type="TextureButton" parent="Buildings/Keyfand/Keyfand"]
+[node name="Keyfand" type="TextureButton" parent="Buildings/Keyfand-Goblin/Keyfand"]
 layout_mode = 2
 texture_normal = ExtResource("11_56m4m")
 texture_pressed = ExtResource("11_56m4m")
@@ -304,32 +318,34 @@ texture_focused = ExtResource("11_56m4m")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="KeyfandLabel" type="MarginContainer" parent="Buildings/Keyfand"]
+[node name="KeyfandLabel" type="MarginContainer" parent="Buildings/Keyfand-Goblin"]
 layout_mode = 0
 offset_left = 279.0
 offset_top = 1236.0
 offset_right = 462.0
 offset_bottom = 1282.0
 
-[node name="KeyfandLabel" type="Label" parent="Buildings/Keyfand/KeyfandLabel"]
+[node name="KeyfandLabel" type="Label" parent="Buildings/Keyfand-Goblin/KeyfandLabel"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 34
 text = "Keyfand
 "
 
-[node name="Meches" type="Control" parent="Buildings"]
+[node name="Meches-Mehanizmi" type="Control" parent="Buildings"]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -33.0
+offset_top = 199.0
+offset_right = 7.0
+offset_bottom = 239.0
 
-[node name="Meches" type="MarginContainer" parent="Buildings/Meches"]
+[node name="Meches" type="MarginContainer" parent="Buildings/Meches-Mehanizmi"]
 layout_mode = 0
 offset_left = -7.0
 offset_top = 1515.0
 offset_right = 190.0
 offset_bottom = 1713.0
 
-[node name="Meches" type="TextureButton" parent="Buildings/Meches/Meches"]
+[node name="Meches" type="TextureButton" parent="Buildings/Meches-Mehanizmi/Meches"]
 layout_mode = 2
 texture_normal = ExtResource("12_alpq5")
 texture_pressed = ExtResource("12_alpq5")
@@ -338,31 +354,33 @@ texture_focused = ExtResource("12_alpq5")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="MechesLabel" type="MarginContainer" parent="Buildings/Meches"]
+[node name="MechesLabel" type="MarginContainer" parent="Buildings/Meches-Mehanizmi"]
 layout_mode = 0
 offset_left = 60.0
 offset_top = 1477.0
 offset_right = 243.0
 offset_bottom = 1523.0
 
-[node name="MechesLabel" type="Label" parent="Buildings/Meches/MechesLabel"]
+[node name="MechesLabel" type="Label" parent="Buildings/Meches-Mehanizmi/MechesLabel"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 34
 text = "Meches"
 
-[node name="Celestial" type="Control" parent="Buildings"]
+[node name="Celestial-Pervorojdennie" type="Control" parent="Buildings"]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -22.0
+offset_top = 219.0
+offset_right = 18.0
+offset_bottom = 259.0
 
-[node name="Celestial" type="MarginContainer" parent="Buildings/Celestial"]
+[node name="Celestial" type="MarginContainer" parent="Buildings/Celestial-Pervorojdennie"]
 layout_mode = 0
 offset_left = 267.0
 offset_top = 1554.0
 offset_right = 472.0
 offset_bottom = 1775.0
 
-[node name="Celestial" type="TextureButton" parent="Buildings/Celestial/Celestial"]
+[node name="Celestial" type="TextureButton" parent="Buildings/Celestial-Pervorojdennie/Celestial"]
 layout_mode = 2
 texture_normal = ExtResource("13_x3ue8")
 texture_pressed = ExtResource("13_x3ue8")
@@ -371,14 +389,14 @@ texture_focused = ExtResource("13_x3ue8")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="CelestialLabel" type="MarginContainer" parent="Buildings/Celestial"]
+[node name="CelestialLabel" type="MarginContainer" parent="Buildings/Celestial-Pervorojdennie"]
 layout_mode = 0
 offset_left = 358.0
 offset_top = 1512.0
 offset_right = 541.0
 offset_bottom = 1558.0
 
-[node name="CelestialLabel" type="Label" parent="Buildings/Celestial/CelestialLabel"]
+[node name="CelestialLabel" type="Label" parent="Buildings/Celestial-Pervorojdennie/CelestialLabel"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 34
 text = "Celestial"
@@ -390,28 +408,6 @@ offset_left = -233.0
 offset_top = -507.0
 offset_right = -193.0
 offset_bottom = -467.0
-
-[node name="TopButton" type="Control" parent="NaviagteBiom"]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TopButtonContainer" type="MarginContainer" parent="NaviagteBiom/TopButton"]
-layout_mode = 0
-offset_left = 203.0
-offset_top = 1087.0
-offset_right = 273.0
-offset_bottom = 1148.0
-rotation = -1.5708
-
-[node name="TopButton" type="TextureButton" parent="NaviagteBiom/TopButton/TopButtonContainer"]
-layout_mode = 2
-texture_normal = ExtResource("14_s00r4")
-texture_pressed = ExtResource("14_s00r4")
-texture_hover = ExtResource("14_s00r4")
-texture_focused = ExtResource("14_s00r4")
-ignore_texture_size = true
-stretch_mode = 0
 
 [node name="BottomButton" type="Control" parent="NaviagteBiom"]
 layout_mode = 3
@@ -436,6 +432,28 @@ texture_focused = ExtResource("14_s00r4")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="TopButton" type="Control" parent="NaviagteBiom"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TopButtonContainer" type="MarginContainer" parent="NaviagteBiom/TopButton"]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 1119.0
+offset_right = 277.0
+offset_bottom = 1180.0
+rotation = -1.5708
+
+[node name="TopButton" type="TextureButton" parent="NaviagteBiom/TopButton/TopButtonContainer"]
+layout_mode = 2
+texture_normal = ExtResource("14_s00r4")
+texture_pressed = ExtResource("14_s00r4")
+texture_hover = ExtResource("14_s00r4")
+texture_focused = ExtResource("14_s00r4")
+ignore_texture_size = true
+stretch_mode = 0
+
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_smoothed = true
 position_smoothing_enabled = true
@@ -446,6 +464,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -13.0
+offset_right = 5.0
+offset_bottom = -13.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -472,11 +494,12 @@ stretch_mode = 0
 [connection signal="pressed" from="Buildings/Taurelious-Elves/Taurelious/Taurelious" to="." method="_on_taurelious_pressed"]
 [connection signal="pressed" from="Buildings/Elborus-Gnomes/Elborus/Elborus" to="." method="_on_elborus_pressed"]
 [connection signal="pressed" from="Buildings/Torres-Mortes-Nejitb/Torres-Mortes/Torres-Mortes" to="." method="_on_torres_mortes_pressed"]
-[connection signal="pressed" from="Buildings/Forest/Forest/Forest" to="." method="_on_forest_pressed"]
-[connection signal="pressed" from="Buildings/Carvaras/Carvaras/Carvaras" to="." method="_on_carvaras_pressed"]
-[connection signal="pressed" from="Buildings/Nordtoppen/Nordtoppen/Nordtoppen" to="." method="_on_nordtoppen_pressed"]
-[connection signal="pressed" from="Buildings/Keyfand/Keyfand/Keyfand" to="." method="_on_keyfand_pressed"]
-[connection signal="pressed" from="Buildings/Meches/Meches/Meches" to="." method="_on_meches_pressed"]
-[connection signal="pressed" from="NaviagteBiom/TopButton/TopButtonContainer/TopButton" to="." method="_on_top_button_pressed"]
+[connection signal="pressed" from="Buildings/Forest-Zveri/Forest/Forest" to="." method="_on_forest_pressed"]
+[connection signal="pressed" from="Buildings/Carvaras-Orki/Carvaras/Carvaras" to="." method="_on_carvaras_pressed"]
+[connection signal="pressed" from="Buildings/Nordtoppen-Trolli/Nordtoppen/Nordtoppen" to="." method="_on_nordtoppen_pressed"]
+[connection signal="pressed" from="Buildings/Keyfand-Goblin/Keyfand/Keyfand" to="." method="_on_keyfand_pressed"]
+[connection signal="pressed" from="Buildings/Meches-Mehanizmi/Meches/Meches" to="." method="_on_meches_pressed"]
+[connection signal="pressed" from="Buildings/Celestial-Pervorojdennie/Celestial/Celestial" to="." method="_on_celestial_pressed"]
 [connection signal="pressed" from="NaviagteBiom/BottomButton/BottomButtonContainer/BottomButton" to="." method="_on_bottom_button_pressed"]
+[connection signal="pressed" from="NaviagteBiom/TopButton/TopButtonContainer/TopButton" to="." method="_on_top_button_pressed"]
 [connection signal="pressed" from="Camera2D/BiomUI/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]

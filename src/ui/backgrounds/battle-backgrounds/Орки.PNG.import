@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://behm80151f2v8"
-path="res://.godot/imported/Орки.PNG-f60843f860b7771a6018e321e01bc306.ctex"
+uid="uid://cltv53byhvbjv"
+path="res://.godot/imported/Орки.png-979151c4b937a4f295c6233aed533a15.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/backgrounds/battle-backgrounds/Орки.PNG"
-dest_files=["res://.godot/imported/Орки.PNG-f60843f860b7771a6018e321e01bc306.ctex"]
+source_file="res://src/ui/backgrounds/battle-backgrounds/Орки.png"
+dest_files=["res://.godot/imported/Орки.png-979151c4b937a4f295c6233aed533a15.ctex"]
 
 [params]
 

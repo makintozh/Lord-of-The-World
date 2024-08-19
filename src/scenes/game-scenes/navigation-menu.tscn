@@ -1903,6 +1903,19 @@ layout_mode = 2
 texture = ExtResource("7_gn6ft")
 expand_mode = 1
 
+[node name="Scroll" type="VScrollBar" parent="."]
+process_mode = 3
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -98.0
+offset_top = -105.0
+offset_right = 624.0
+offset_bottom = 1148.0
+pivot_offset = Vector2(0, 0.095)
+min_value = 450.0
+max_value = 545.0
+step = -100.0
+value = 500.0
+
 [node name="Buildings" type="Control" parent="."]
 anchors_preset = 0
 
@@ -2066,6 +2079,9 @@ offset_bottom = 769.0
 layout_mode = 2
 theme_override_font_sizes/font_size = 34
 text = "League"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(250, 448)
 
 [connection signal="pressed" from="Buildings/Tavern/Tavern/Tavern" to="." method="_on_tavern_pressed"]
 [connection signal="pressed" from="Buildings/Biom/Biom/Biom" to="." method="_on_biom_pressed"]

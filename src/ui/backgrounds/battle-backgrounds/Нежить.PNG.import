@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://p0114i6o0hjb"
-path="res://.godot/imported/Нежить.PNG-5ff1449b5af70b6c4bc397f532ca7fc4.ctex"
+uid="uid://de2iqwo0thlkj"
+path="res://.godot/imported/Нежить.png-31822dda12599408ccd86a0d1b66da8d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/backgrounds/battle-backgrounds/Нежить.PNG"
-dest_files=["res://.godot/imported/Нежить.PNG-5ff1449b5af70b6c4bc397f532ca7fc4.ctex"]
+source_file="res://src/ui/backgrounds/battle-backgrounds/Нежить.png"
+dest_files=["res://.godot/imported/Нежить.png-31822dda12599408ccd86a0d1b66da8d.ctex"]
 
 [params]
 

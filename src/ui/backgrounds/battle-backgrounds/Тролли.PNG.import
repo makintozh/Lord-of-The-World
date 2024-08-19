@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1b6ku10kghsy"
-path="res://.godot/imported/Тролли.PNG-e88b4fbb0b05f4e261d641195f27a1f5.ctex"
+uid="uid://doyukoaw8mnlb"
+path="res://.godot/imported/Тролли.png-c10453d6905537a48e95a9808e05245a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/backgrounds/battle-backgrounds/Тролли.PNG"
-dest_files=["res://.godot/imported/Тролли.PNG-e88b4fbb0b05f4e261d641195f27a1f5.ctex"]
+source_file="res://src/ui/backgrounds/battle-backgrounds/Тролли.png"
+dest_files=["res://.godot/imported/Тролли.png-c10453d6905537a48e95a9808e05245a.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://j0bsur6lcbcl"
-path="res://.godot/imported/Гномы.PNG-9628f2c71be7170c3a5078e016b3442e.ctex"
+uid="uid://bemv138ir6wi0"
+path="res://.godot/imported/Гномы.png-42f427507f64372e9359ca075d020b2c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/backgrounds/battle-backgrounds/Гномы.PNG"
-dest_files=["res://.godot/imported/Гномы.PNG-9628f2c71be7170c3a5078e016b3442e.ctex"]
+source_file="res://src/ui/backgrounds/battle-backgrounds/Гномы.png"
+dest_files=["res://.godot/imported/Гномы.png-42f427507f64372e9359ca075d020b2c.ctex"]
 
 [params]
 

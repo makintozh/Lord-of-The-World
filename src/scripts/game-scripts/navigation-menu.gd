@@ -3,6 +3,20 @@ extends Control
 
 
 
+
+
+
+
+
+
+func _process(_delta):
+	$Camera2D.position.y = $Scroll.value
+
+
+
+
+
+
 #Вход в Таверну
 func _on_tavern_pressed():
 	get_tree().change_scene_to_file("res://src/scenes/game-scenes/tavern.tscn")
