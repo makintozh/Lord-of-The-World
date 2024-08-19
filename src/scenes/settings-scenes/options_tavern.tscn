@@ -6,6 +6,10 @@
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_swi1p"]
 texture = ExtResource("3_rqtwo")
+texture_margin_left = 20.0
+texture_margin_top = 10.0
+texture_margin_right = 20.0
+texture_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rq658"]
 texture = ExtResource("3_rqtwo")
@@ -27,10 +31,10 @@ script = ExtResource("1_sdfht")
 
 [node name="BackGround" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -113.0
-offset_top = 64.0
-offset_right = 342.0
-offset_bottom = 443.0
+offset_left = -112.0
+offset_top = 57.0
+offset_right = 343.0
+offset_bottom = 436.0
 scale = Vector2(1.53968, 1.96747)
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -66,21 +70,52 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_4jypw")
 theme_override_styles/focus = SubResource("StyleBoxTexture_x8wp7")
 text = "Close"
 
-[node name="SignOutButton" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_left = 162.0
-offset_top = 542.0
-offset_right = 319.0
-offset_bottom = 617.0
+[node name="OptionContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = 48.0
+offset_right = 65.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 11
 
-[node name="SignOutButton" type="Button" parent="SignOutButton"]
+[node name="SignOutButton" type="Button" parent="OptionContainer"]
+visible = false
 layout_mode = 2
-theme_override_font_sizes/font_size = 20
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 21
 theme_override_styles/normal = SubResource("StyleBoxTexture_swi1p")
 theme_override_styles/hover = SubResource("StyleBoxTexture_rq658")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_4jypw")
 theme_override_styles/focus = SubResource("StyleBoxTexture_x8wp7")
 text = "Sign Out"
 
+[node name="ServerName" type="Label" parent="OptionContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = "Current Server: "
+
+[node name="ChangeServerContainer" type="HBoxContainer" parent="OptionContainer"]
+layout_mode = 2
+
+[node name="ChangeServer" type="Button" parent="OptionContainer/ChangeServerContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxTexture_swi1p")
+theme_override_styles/hover = SubResource("StyleBoxTexture_rq658")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4jypw")
+theme_override_styles/focus = SubResource("StyleBoxTexture_x8wp7")
+text = "Change Server"
+
 [connection signal="pressed" from="CloseButton/CloseButton" to="." method="_on_close_button_pressed"]
-[connection signal="pressed" from="SignOutButton/SignOutButton" to="." method="_on_sign_out_button_pressed"]
+[connection signal="pressed" from="OptionContainer/SignOutButton" to="." method="_on_sign_out_button_pressed"]
+[connection signal="pressed" from="OptionContainer/ChangeServerContainer/ChangeServer" to="." method="_on_change_server_pressed"]

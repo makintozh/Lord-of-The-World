@@ -17,11 +17,9 @@
 
 [node name="Biom" type="Control"]
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_m3bq3")
@@ -31,55 +29,24 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -251.0
-offset_top = -449.0
-offset_right = 249.0
-offset_bottom = 1421.0
+offset_left = -256.0
+offset_top = -522.0
+offset_right = -191.0
+offset_bottom = 571.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_1q34o")
 expand_mode = 1
-
-[node name="Camera2D" type="Camera2D" parent="."]
-limit_smoothed = true
-position_smoothing_enabled = true
-editor_draw_limits = true
-
-[node name="BiomUI" type="Control" parent="Camera2D"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -230.0
-offset_top = -428.0
-offset_right = -230.0
-offset_bottom = -428.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="BackButtonContainer" type="MarginContainer" parent="Camera2D/BiomUI"]
-layout_mode = 1
-offset_right = 85.0
-offset_bottom = 47.0
-
-[node name="BackButton" type="TextureButton" parent="Camera2D/BiomUI/BackButtonContainer"]
-layout_mode = 2
-texture_normal = ExtResource("3_n3uux")
-texture_pressed = ExtResource("3_n3uux")
-texture_hover = ExtResource("3_n3uux")
-texture_focused = ExtResource("3_n3uux")
-ignore_texture_size = true
-stretch_mode = 0
 
 [node name="Buildings" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -245.0
-offset_top = -456.0
-offset_right = -245.0
-offset_bottom = -456.0
+offset_left = -243.0
+offset_top = -469.0
+offset_right = -243.0
+offset_bottom = -469.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -417,11 +384,12 @@ theme_override_font_sizes/font_size = 34
 text = "Celestial"
 
 [node name="NaviagteBiom" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -233.0
+offset_top = -507.0
+offset_right = -193.0
+offset_bottom = -467.0
 
 [node name="TopButton" type="Control" parent="NaviagteBiom"]
 anchors_preset = 0
@@ -468,7 +436,38 @@ texture_focused = ExtResource("14_s00r4")
 ignore_texture_size = true
 stretch_mode = 0
 
-[connection signal="pressed" from="Camera2D/BiomUI/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_smoothed = true
+position_smoothing_enabled = true
+editor_draw_limits = true
+
+[node name="BiomUI" type="Control" parent="Camera2D"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackButtonContainer" type="MarginContainer" parent="Camera2D/BiomUI"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -234.0
+offset_top = -424.0
+offset_right = -149.0
+offset_bottom = -377.0
+grow_horizontal = 2
+
+[node name="BackButton" type="TextureButton" parent="Camera2D/BiomUI/BackButtonContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_n3uux")
+texture_pressed = ExtResource("3_n3uux")
+texture_hover = ExtResource("3_n3uux")
+texture_focused = ExtResource("3_n3uux")
+ignore_texture_size = true
+stretch_mode = 0
+
 [connection signal="pressed" from="Buildings/Civil-Human/Civil/Civil" to="." method="_on_civil_pressed"]
 [connection signal="pressed" from="Buildings/Taurelious-Elves/Taurelious/Taurelious" to="." method="_on_taurelious_pressed"]
 [connection signal="pressed" from="Buildings/Elborus-Gnomes/Elborus/Elborus" to="." method="_on_elborus_pressed"]
@@ -480,3 +479,4 @@ stretch_mode = 0
 [connection signal="pressed" from="Buildings/Meches/Meches/Meches" to="." method="_on_meches_pressed"]
 [connection signal="pressed" from="NaviagteBiom/TopButton/TopButtonContainer/TopButton" to="." method="_on_top_button_pressed"]
 [connection signal="pressed" from="NaviagteBiom/BottomButton/BottomButtonContainer/BottomButton" to="." method="_on_bottom_button_pressed"]
+[connection signal="pressed" from="Camera2D/BiomUI/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]

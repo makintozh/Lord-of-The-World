@@ -318,6 +318,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="RightButton" type="MarginContainer" parent="MainUI/Index_Buttons"]
+layout_mode = 0
 offset_left = 311.0
 offset_top = 250.0
 offset_right = 356.0
@@ -333,6 +334,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="LeftButton" type="MarginContainer" parent="MainUI/Index_Buttons"]
+layout_mode = 0
 offset_left = 134.0
 offset_top = 250.0
 offset_right = 179.0
