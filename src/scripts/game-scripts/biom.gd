@@ -9,8 +9,8 @@ extends Control
 @onready var bottom_button = $NaviagteBiom/BottomButton/BottomButtonContainer
 
 
-var top_biom_position_y = 1450
-var bottom_biom_position_y = 453
+var top_biom_position_y = 1000
+var bottom_biom_position_y = 0
 
 
 
@@ -36,7 +36,7 @@ func _on_civil_pressed():
 
 
 func _on_top_button_pressed():
-	camera_view.position.y = 453
+	camera_view.position.y = bottom_biom_position_y
 	top_button.visible = false
 	bottom_button.visible = true
 
@@ -44,7 +44,7 @@ func _on_top_button_pressed():
 
 
 func _on_bottom_button_pressed():
-	camera_view.position.y = 1450
+	camera_view.position.y = top_biom_position_y
 	top_button.visible = true
 	bottom_button.visible = false
 
