@@ -173,10 +173,25 @@ func check_index_valid():
 
 
 
-func _process(_delta):
-	var height = DisplayServer.virtual_keyboard_get_height()
-	main_ui.offset.y = -height/6                                                                                                                                                                                                                       
+
+
+
+func adaptive_keyboard():
+	if OS.get_name() == "Android" or OS.get_name() == "iOS":
+		var height = DisplayServer.virtual_keyboard_get_height()
+		main_ui.offset.y = -height/CONFIG.adaptive_keyboard_pixel   
+
+
+
+
+
+
+func _process(_delta):                                                                                                                                                                                                   
 	check_player_character_name()
+	adaptive_keyboard()
+
+
+
 
 
 

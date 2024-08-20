@@ -9,6 +9,7 @@ var login_remember = "login"
 var password_remember = "password"
 
 
+@onready var login_ui = $"."
 @onready var login_data = $UI/LoginDataUI/Login
 @onready var password_data = $UI/PasswordDataUI/Password
 @onready var passwordhidebutton = $UI/PasswordHideUI/PasswordHideButton
@@ -63,11 +64,22 @@ func after_remember_me():
 
 
 
+func adaptive_keyboard():
+	if OS.get_name() == "Android" or OS.get_name() == "iOS":
+		var height = DisplayServer.virtual_keyboard_get_height()
+		login_ui.position.y = -height/CONFIG.adaptive_keyboard_pixel
+
+
+
+
+
+
 func _process(_delta):
 	if is_remember and logged:
 		remember_me()
 		
 	checkloginandpassword()
+	adaptive_keyboard()
 
 
 

@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://di8jtkjd8j3ea"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/biom-scripts/hub-scripts/carvaras-hub.gd" id="1_pdk3s"]
-[ext_resource type="Texture2D" uid="uid://cbbefpjd1ftkg" path="res://src/ui/backgrounds/hub-backgrounds/Орки(Carvaras.png" id="2_7pbpg"]
+[ext_resource type="Texture2D" uid="uid://cs077oeo73d1c" path="res://src/ui/backgrounds/hub-backgrounds/Орки(Carvaras.png" id="2_7pbpg"]
 [ext_resource type="VideoStream" path="res://src/ui/backgrounds/hub-backgrounds/Орки(Carvaras).ogv" id="3_hhmqk"]
-[ext_resource type="Texture2D" uid="uid://cjtckd87lwd0c" path="res://src/ui/buttons/bottom.png" id="4_us0vk"]
-[ext_resource type="Texture2D" uid="uid://cda5el5v64kmd" path="res://src/ui/elements/New item.png" id="5_8h6lr"]
-[ext_resource type="Texture2D" uid="uid://cd4ulgx3ykttj" path="res://src/ui/buttons/bottom off 3.png" id="6_v2mpf"]
-[ext_resource type="Texture2D" uid="uid://6kvjconjmoj0" path="res://src/ui/buttons/support green.png" id="7_i3r24"]
-[ext_resource type="Texture2D" uid="uid://c2u2i5n4mifyh" path="res://src/ui/buttons/back_button.png" id="8_gb20f"]
-[ext_resource type="Texture2D" uid="uid://biil6f6gwp5ww" path="res://src/ui/backgrounds/battle_step.png" id="9_knkwq"]
+[ext_resource type="Texture2D" uid="uid://b67l7s4xxyiak" path="res://src/ui/buttons/bottom.png" id="4_us0vk"]
+[ext_resource type="Texture2D" uid="uid://ddmgygmejy5n7" path="res://src/ui/elements/New item.png" id="5_8h6lr"]
+[ext_resource type="Texture2D" uid="uid://fb5gv6homoy0" path="res://src/ui/buttons/bottom off 3.png" id="6_v2mpf"]
+[ext_resource type="Texture2D" uid="uid://477md2io47v1" path="res://src/ui/buttons/support green.png" id="7_i3r24"]
+[ext_resource type="Texture2D" uid="uid://b5crkkfaua4yl" path="res://src/ui/buttons/back_button.png" id="8_gb20f"]
+[ext_resource type="Texture2D" uid="uid://dngwvbbemy43q" path="res://src/ui/backgrounds/battle_step.png" id="9_knkwq"]
 
 [node name="Carvaras-Hub" type="Control"]
 layout_mode = 3
@@ -22,34 +22,29 @@ metadata/_edit_use_anchors_ = true
 
 [node name="BackGround-Image" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.10382
-anchor_top = -0.116661
-anchor_right = 0.94018
-anchor_bottom = 0.995558
-offset_left = -13.09
-offset_top = 103.43
-offset_right = 80.165
-offset_bottom = 199.545
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_7pbpg")
 expand_mode = 1
-metadata/_edit_use_anchors_ = true
+stretch_mode = 6
 
-[node name="BackGround-Video" type="VideoStreamPlayer" parent="."]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.07982
-anchor_top = -0.113817
-anchor_right = -0.0538199
-anchor_bottom = -0.113817
-offset_left = -25.09
-offset_top = 100.87
-offset_right = 577.165
-offset_bottom = 1197.99
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+ratio = 0.6
+stretch_mode = 3
+
+[node name="BackGround-Video" type="VideoStreamPlayer" parent="AspectRatioContainer"]
+layout_mode = 2
 stream = ExtResource("3_hhmqk")
 autoplay = true
 expand = true

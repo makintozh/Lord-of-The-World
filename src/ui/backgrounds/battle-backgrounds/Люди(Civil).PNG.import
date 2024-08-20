@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c31wdc445oedx"
+uid="uid://cq4x60xftnyf0"
 path="res://.godot/imported/Люди(Civil).PNG-09ad9cf5d59684ff99b44b9498fa5c11.ctex"
 metadata={
 "vram_texture": false
@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/Люди(Civil).PNG-09ad9cf5d59684ff99b44b949
 
 [params]
 
-compress/mode=3
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

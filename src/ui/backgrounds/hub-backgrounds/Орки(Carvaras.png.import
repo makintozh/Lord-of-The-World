@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbbefpjd1ftkg"
+uid="uid://cs077oeo73d1c"
 path="res://.godot/imported/Орки(Carvaras.png-06930e5380020f0600efd739ef2f080f.ctex"
 metadata={
 "vram_texture": false
@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/Орки(Carvaras.png-06930e5380020f0600efd73
 
 [params]
 
-compress/mode=3
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://bhd0pexfsnwir"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/biom-scripts/battle-scripts/torres_mortes-battle.gd" id="1_8finw"]
-[ext_resource type="Texture2D" uid="uid://4tx4c3blf6da" path="res://src/ui/backgrounds/battle-backgrounds/Нежить(Torres-Mortes).PNG" id="2_mwqu8"]
+[ext_resource type="Texture2D" uid="uid://jl5dh8e1rwik" path="res://src/ui/backgrounds/battle-backgrounds/Нежить(Torres-Mortes).PNG" id="2_mwqu8"]
 [ext_resource type="VideoStream" path="res://src/ui/backgrounds/battle-backgrounds/Нежить(Torres-Mortes).ogv" id="3_quu7p"]
-[ext_resource type="Texture2D" uid="uid://c2u2i5n4mifyh" path="res://src/ui/buttons/back_button.png" id="4_gmp8n"]
+[ext_resource type="Texture2D" uid="uid://b5crkkfaua4yl" path="res://src/ui/buttons/back_button.png" id="4_gmp8n"]
 
 [node name="Torres_Mortes-Battle" type="Control"]
 layout_mode = 3
@@ -19,24 +19,27 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 72.58
-offset_bottom = 105.22
+offset_right = 14.0
+offset_bottom = 17.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_mwqu8")
-stretch_mode = 4
+stretch_mode = 6
 
-[node name="BackGround-Video" type="VideoStreamPlayer" parent="."]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 72.58
-offset_bottom = 105.22
 grow_horizontal = 2
 grow_vertical = 2
+ratio = 0.6
+stretch_mode = 3
+
+[node name="BackGround-Video" type="VideoStreamPlayer" parent="AspectRatioContainer"]
+layout_mode = 2
 stream = ExtResource("3_quu7p")
 autoplay = true
 expand = true

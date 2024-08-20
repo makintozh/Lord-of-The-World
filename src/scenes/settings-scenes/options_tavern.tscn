@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://xgqgl081paug"]
 
 [ext_resource type="Script" path="res://src/scripts/settings-scripts/options_tavern.gd" id="1_sdfht"]
-[ext_resource type="Texture2D" uid="uid://dabyr5ndrdpn7" path="res://src/ui/backgrounds/Группа 12 копия 1.png" id="2_8qd1w"]
-[ext_resource type="Texture2D" uid="uid://cjbfs42jpw2ed" path="res://src/ui/buttons/green buttom base long.png" id="3_rqtwo"]
+[ext_resource type="Texture2D" uid="uid://cpb466allk1d0" path="res://src/ui/backgrounds/Группа 12 копия 1.png" id="2_8qd1w"]
+[ext_resource type="Texture2D" uid="uid://cgsykm02o0fr0" path="res://src/ui/buttons/green buttom base long.png" id="3_rqtwo"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_swi1p"]
 texture = ExtResource("3_rqtwo")
@@ -39,8 +39,8 @@ scale = Vector2(1.53968, 1.96747)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_8qd1w")
-expand_mode = 2
-stretch_mode = 1
+expand_mode = 1
+stretch_mode = 6
 
 [node name="OptionsLabel" type="MarginContainer" parent="."]
 layout_mode = 0

@@ -62,8 +62,7 @@ theme/custom_font="res://src/fonts/inika/Inika-Bold.ttf"
 [importer_defaults]
 
 texture={
-"compress/channel_pack": 1,
-"compress/mode": 3
+"compress/channel_pack": 1
 }
 2d_array_texture={
 "compress/mode": 3

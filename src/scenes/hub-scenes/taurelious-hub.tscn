@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://beimgli81xrln"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/biom-scripts/hub-scripts/taurelious-hub.gd" id="1_ydso6"]
-[ext_resource type="Texture2D" uid="uid://cn5d166pufb04" path="res://src/ui/backgrounds/hub-backgrounds/Гномы(Elborus).png" id="2_ingfy"]
+[ext_resource type="Texture2D" uid="uid://cwnj75yogeheg" path="res://src/ui/backgrounds/hub-backgrounds/Гномы(Elborus).png" id="2_ingfy"]
 [ext_resource type="VideoStream" path="res://src/ui/backgrounds/hub-backgrounds/Гномы(Elborus).ogv" id="3_5gx0v"]
-[ext_resource type="Texture2D" uid="uid://cjtckd87lwd0c" path="res://src/ui/buttons/bottom.png" id="4_2norc"]
-[ext_resource type="Texture2D" uid="uid://cda5el5v64kmd" path="res://src/ui/elements/New item.png" id="5_4flnt"]
-[ext_resource type="Texture2D" uid="uid://cd4ulgx3ykttj" path="res://src/ui/buttons/bottom off 3.png" id="6_6kwvh"]
-[ext_resource type="Texture2D" uid="uid://6kvjconjmoj0" path="res://src/ui/buttons/support green.png" id="7_52maa"]
-[ext_resource type="Texture2D" uid="uid://c2u2i5n4mifyh" path="res://src/ui/buttons/back_button.png" id="8_8egkw"]
-[ext_resource type="Texture2D" uid="uid://biil6f6gwp5ww" path="res://src/ui/backgrounds/battle_step.png" id="9_sra0m"]
+[ext_resource type="Texture2D" uid="uid://b67l7s4xxyiak" path="res://src/ui/buttons/bottom.png" id="4_2norc"]
+[ext_resource type="Texture2D" uid="uid://ddmgygmejy5n7" path="res://src/ui/elements/New item.png" id="5_4flnt"]
+[ext_resource type="Texture2D" uid="uid://fb5gv6homoy0" path="res://src/ui/buttons/bottom off 3.png" id="6_6kwvh"]
+[ext_resource type="Texture2D" uid="uid://477md2io47v1" path="res://src/ui/buttons/support green.png" id="7_52maa"]
+[ext_resource type="Texture2D" uid="uid://b5crkkfaua4yl" path="res://src/ui/buttons/back_button.png" id="8_8egkw"]
+[ext_resource type="Texture2D" uid="uid://dngwvbbemy43q" path="res://src/ui/backgrounds/battle_step.png" id="9_sra0m"]
 
 [node name="Taurelious-Hub" type="Control"]
 layout_mode = 3
@@ -22,33 +22,29 @@ metadata/_edit_use_anchors_ = true
 
 [node name="BackGround-Image" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.024
-anchor_top = -0.0272892
-anchor_right = 1.02
-anchor_bottom = 1.08493
-offset_left = -13.09
-offset_top = 22.9953
-offset_right = -7.01999
-offset_bottom = 119.11
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_ingfy")
 expand_mode = 1
-metadata/_edit_use_anchors_ = true
+stretch_mode = 6
 
-[node name="BackGround-Video" type="VideoStreamPlayer" parent="."]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_top = -0.0244444
-anchor_right = 0.026
-anchor_bottom = -0.0244444
-offset_left = -25.09
-offset_top = 20.435
-offset_right = 489.98
-offset_bottom = 1117.55
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+ratio = 0.6
+stretch_mode = 3
+
+[node name="BackGround-Video" type="VideoStreamPlayer" parent="AspectRatioContainer"]
+layout_mode = 2
 stream = ExtResource("3_5gx0v")
 autoplay = true
 expand = true

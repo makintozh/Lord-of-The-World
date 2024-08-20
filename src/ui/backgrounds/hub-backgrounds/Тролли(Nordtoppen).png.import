@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4bhr0pho5iix"
+uid="uid://dw2gym1wjudv6"
 path="res://.godot/imported/Тролли(Nordtoppen).png-48a47f8fdfbeeaad9852f01056083693.ctex"
 metadata={
 "vram_texture": false
@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/Тролли(Nordtoppen).png-48a47f8fdfbeeaad
 
 [params]
 
-compress/mode=3
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

@@ -26,18 +26,17 @@ func _ready():
 	registerbutton.disabled = false
 
 
-
-
+func adaptive_keyboard():
+	if OS.get_name() == "Android" or OS.get_name() == "iOS":
+		var height = DisplayServer.virtual_keyboard_get_height()
+		register_ui.position.y = -height/CONFIG.adaptive_keyboard_pixel
 
 
 
 
 func _process(_delta):
-	var height = DisplayServer.virtual_keyboard_get_height()
-	register_ui.position.y = -height/6
 	checkinputdata()
-	
-
+	adaptive_keyboard()
 
 
 func checkinputdata():

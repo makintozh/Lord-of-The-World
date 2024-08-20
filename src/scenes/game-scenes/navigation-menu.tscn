@@ -1,15 +1,15 @@
 [gd_scene load_steps=271 format=3 uid="uid://pk7extbu3xea"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/navigation-menu.gd" id="1_ykvwa"]
-[ext_resource type="Texture2D" uid="uid://d1566y1lveil3" path="res://src/ui/elements/Group 173.png" id="2_qyodl"]
-[ext_resource type="Texture2D" uid="uid://dx6gagsxuu4uy" path="res://src/ui/buildings/Кланы.png" id="3_102d5"]
-[ext_resource type="Texture2D" uid="uid://da06sp2foodbu" path="res://src/ui/backgrounds/Главный_экран_адаптировано_под_размер_.PNG" id="3_j0xlm"]
+[ext_resource type="Texture2D" uid="uid://r8g057sioym2" path="res://src/ui/elements/Group 173.png" id="2_qyodl"]
+[ext_resource type="Texture2D" uid="uid://cyhdqqjpu43bn" path="res://src/ui/buildings/Кланы.png" id="3_102d5"]
+[ext_resource type="Texture2D" uid="uid://csvx7h234tnr5" path="res://src/ui/backgrounds/Главный_экран_адаптировано_под_размер_.PNG" id="3_j0xlm"]
 [ext_resource type="VideoStream" path="res://src/ui/backgrounds/Главный_экран_адаптировано_под_размер_1.ogv" id="3_q2uc8"]
-[ext_resource type="Texture2D" uid="uid://cyc7b3rsh3qrr" path="res://src/ui/elements/Слой 7.png" id="7_gn6ft"]
-[ext_resource type="Texture2D" uid="uid://kr6jqwihjpv" path="res://src/ui/buildings/animated/Tavern.png" id="9_8b332"]
-[ext_resource type="Texture2D" uid="uid://d0eww28jq5ovf" path="res://src/ui/buildings/animated/Biom.png" id="10_bbc1g"]
-[ext_resource type="Texture2D" uid="uid://bcl7kpmxheno2" path="res://src/ui/buildings/animated/ClansHall.png" id="12_vctx2"]
-[ext_resource type="Texture2D" uid="uid://bqycqbhl2pm7d" path="res://src/ui/buildings/animated/League.png" id="13_6paem"]
+[ext_resource type="Texture2D" uid="uid://bb0xnc6eesimr" path="res://src/ui/elements/Слой 7.png" id="7_gn6ft"]
+[ext_resource type="Texture2D" uid="uid://nxc85tqy5c0c" path="res://src/ui/buildings/animated/Tavern.png" id="9_8b332"]
+[ext_resource type="Texture2D" uid="uid://xvqanx20v8y6" path="res://src/ui/buildings/animated/Biom.png" id="10_bbc1g"]
+[ext_resource type="Texture2D" uid="uid://c3g8hl7gusw58" path="res://src/ui/buildings/animated/ClansHall.png" id="12_vctx2"]
+[ext_resource type="Texture2D" uid="uid://b4i44tp0vnpcf" path="res://src/ui/buildings/animated/League.png" id="13_6paem"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_36twm"]
 atlas = ExtResource("9_8b332")
@@ -1869,8 +1869,6 @@ layout_mode = 1
 offset_top = -41.325
 offset_right = 420.0
 offset_bottom = 901.675
-grow_horizontal = 2
-grow_vertical = 2
 scale = Vector2(1.195, 1.195)
 stream = ExtResource("3_q2uc8")
 autoplay = true
