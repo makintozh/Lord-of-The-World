@@ -1,5 +1,8 @@
 extends Control
 
+
+
+@onready var register_ui = $"."
 @onready var emailinput = $UI/EmailDataUI/Email
 @onready var usernameinput = $UI/LoginDataUI/Login
 @onready var passwordinput = $UI/PasswordDataUI/Password
@@ -30,6 +33,8 @@ func _ready():
 
 
 func _process(_delta):
+	var height = DisplayServer.virtual_keyboard_get_height()
+	register_ui.position.y = -height/6
 	checkinputdata()
 	
 
@@ -127,7 +132,7 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 		GLOBAL.password = str(passwordinput.text)
 		SceneChangeManager.go_to_scene("res://src/scenes/auth-scenes/login_ui.tscn")
 	else:
-		GLOBAL.failed_reason = str(api_response.replace('"',""))
+		GLOBAL.failed_reason = message.replace('"',"")
 		waitingresponse.visible = false
 		failed.visible = true
 

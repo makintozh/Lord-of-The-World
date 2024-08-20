@@ -174,6 +174,8 @@ func check_index_valid():
 
 
 func _process(_delta):
+	var height = DisplayServer.virtual_keyboard_get_height()
+	main_ui.offset.y = -height/7                                                                                                                                                                                                                                 
 	check_player_character_name()
 
 

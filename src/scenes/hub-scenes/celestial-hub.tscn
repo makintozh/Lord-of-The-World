@@ -1,0 +1,277 @@
+[gd_scene load_steps=10 format=3 uid="uid://bgtodro1bmp73"]
+
+[ext_resource type="Script" path="res://src/scripts/game-scripts/biom-scripts/hub-scripts/celestial-hub.gd" id="1_rtby0"]
+[ext_resource type="Texture2D" uid="uid://4pjtnlmgmfyi" path="res://src/ui/backgrounds/hub-backgrounds/Перворожденные(Celestial).png" id="2_f4bdw"]
+[ext_resource type="VideoStream" path="res://src/ui/backgrounds/hub-backgrounds/Перворожденные(Celestial).ogv" id="3_s3tss"]
+[ext_resource type="Texture2D" uid="uid://cjtckd87lwd0c" path="res://src/ui/buttons/bottom.png" id="4_ao48b"]
+[ext_resource type="Texture2D" uid="uid://cda5el5v64kmd" path="res://src/ui/elements/New item.png" id="5_xggbc"]
+[ext_resource type="Texture2D" uid="uid://cd4ulgx3ykttj" path="res://src/ui/buttons/bottom off 3.png" id="6_48d5p"]
+[ext_resource type="Texture2D" uid="uid://6kvjconjmoj0" path="res://src/ui/buttons/support green.png" id="7_7wl7s"]
+[ext_resource type="Texture2D" uid="uid://c2u2i5n4mifyh" path="res://src/ui/buttons/back_button.png" id="8_xvgrn"]
+[ext_resource type="Texture2D" uid="uid://biil6f6gwp5ww" path="res://src/ui/backgrounds/battle_step.png" id="9_ct2tj"]
+
+[node name="Celestial-Hub" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rtby0")
+metadata/_edit_use_anchors_ = true
+
+[node name="BackGround-Image" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.024
+anchor_top = -0.0272892
+anchor_right = 1.02
+anchor_bottom = 1.08493
+offset_left = -13.09
+offset_top = 22.9953
+offset_right = -7.01999
+offset_bottom = 119.11
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_f4bdw")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="BackGround-Video" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.0244444
+anchor_right = 0.026
+anchor_bottom = -0.0244444
+offset_left = -25.09
+offset_top = 20.435
+offset_right = 489.98
+offset_bottom = 1117.55
+stream = ExtResource("3_s3tss")
+autoplay = true
+expand = true
+loop = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Go-Battle-Buttons" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -238.0
+offset_top = -607.0
+offset_right = -238.0
+offset_bottom = -607.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.06, 1.06)
+
+[node name="Battle" type="MarginContainer" parent="Go-Battle-Buttons"]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 910.0
+offset_right = 295.0
+offset_bottom = 1020.0
+
+[node name="Battle" type="TextureButton" parent="Go-Battle-Buttons/Battle"]
+layout_mode = 2
+texture_normal = ExtResource("4_ao48b")
+texture_pressed = ExtResource("4_ao48b")
+texture_hover = ExtResource("4_ao48b")
+texture_focused = ExtResource("4_ao48b")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Go-Battle-Buttons"]
+layout_mode = 0
+offset_left = 209.0
+offset_top = 930.0
+offset_right = 268.0
+offset_bottom = 990.0
+
+[node name="Battle1" type="TextureButton" parent="Go-Battle-Buttons/MarginContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_xggbc")
+texture_pressed = ExtResource("5_xggbc")
+texture_hover = ExtResource("5_xggbc")
+texture_focused = ExtResource("5_xggbc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Battle2" type="MarginContainer" parent="Go-Battle-Buttons"]
+layout_mode = 0
+offset_left = 84.9057
+offset_top = 782.076
+offset_right = 196.906
+offset_bottom = 892.076
+
+[node name="Battle2" type="TextureButton" parent="Go-Battle-Buttons/Battle2"]
+layout_mode = 2
+texture_normal = ExtResource("6_48d5p")
+texture_pressed = ExtResource("6_48d5p")
+texture_hover = ExtResource("6_48d5p")
+texture_focused = ExtResource("6_48d5p")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Battle3" type="MarginContainer" parent="Go-Battle-Buttons"]
+layout_mode = 0
+offset_left = 247.17
+offset_top = 624.528
+offset_right = 359.17
+offset_bottom = 734.528
+
+[node name="Battle3" type="TextureButton" parent="Go-Battle-Buttons/Battle3"]
+layout_mode = 2
+texture_normal = ExtResource("6_48d5p")
+texture_pressed = ExtResource("6_48d5p")
+texture_hover = ExtResource("6_48d5p")
+texture_focused = ExtResource("6_48d5p")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Battle5" type="MarginContainer" parent="Go-Battle-Buttons"]
+layout_mode = 0
+offset_left = 41.5094
+offset_top = 582.076
+offset_right = 153.509
+offset_bottom = 692.076
+
+[node name="Battle5" type="TextureButton" parent="Go-Battle-Buttons/Battle5"]
+layout_mode = 2
+texture_normal = ExtResource("6_48d5p")
+texture_pressed = ExtResource("6_48d5p")
+texture_hover = ExtResource("6_48d5p")
+texture_focused = ExtResource("6_48d5p")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Battle6" type="MarginContainer" parent="Go-Battle-Buttons"]
+layout_mode = 0
+offset_left = 216.038
+offset_top = 337.736
+offset_right = 328.038
+offset_bottom = 447.736
+
+[node name="Battle6" type="TextureButton" parent="Go-Battle-Buttons/Battle6"]
+layout_mode = 2
+texture_normal = ExtResource("6_48d5p")
+texture_pressed = ExtResource("6_48d5p")
+texture_hover = ExtResource("6_48d5p")
+texture_focused = ExtResource("6_48d5p")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Battle7" type="MarginContainer" parent="Go-Battle-Buttons"]
+layout_mode = 0
+offset_left = 170.755
+offset_top = 467.925
+offset_right = 282.755
+offset_bottom = 577.925
+
+[node name="Battle7" type="TextureButton" parent="Go-Battle-Buttons/Battle7"]
+layout_mode = 2
+texture_normal = ExtResource("6_48d5p")
+texture_pressed = ExtResource("6_48d5p")
+texture_hover = ExtResource("6_48d5p")
+texture_focused = ExtResource("6_48d5p")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Battle8" type="MarginContainer" parent="Go-Battle-Buttons"]
+layout_mode = 0
+offset_left = 134.906
+offset_top = 210.377
+offset_right = 246.906
+offset_bottom = 320.377
+
+[node name="Battle8" type="TextureButton" parent="Go-Battle-Buttons/Battle8"]
+layout_mode = 2
+texture_normal = ExtResource("6_48d5p")
+texture_pressed = ExtResource("6_48d5p")
+texture_hover = ExtResource("6_48d5p")
+texture_focused = ExtResource("6_48d5p")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -5.0
+offset_right = 2.0
+offset_bottom = -788.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HelpContainer" type="MarginContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 439.0
+offset_top = 11.0
+offset_right = -11.0
+offset_bottom = 61.0
+grow_horizontal = 2
+
+[node name="HelpButton" type="TextureButton" parent="UI/HelpContainer"]
+layout_mode = 2
+texture_normal = ExtResource("7_7wl7s")
+texture_pressed = ExtResource("7_7wl7s")
+texture_hover = ExtResource("7_7wl7s")
+texture_focused = ExtResource("7_7wl7s")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BackButtonContainer" type="MarginContainer" parent="UI"]
+layout_mode = 1
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 92.0
+offset_bottom = 69.0
+
+[node name="BackButton" type="TextureButton" parent="UI/BackButtonContainer"]
+layout_mode = 2
+texture_normal = ExtResource("8_xvgrn")
+texture_pressed = ExtResource("8_xvgrn")
+texture_hover = ExtResource("8_xvgrn")
+texture_focused = ExtResource("8_xvgrn")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Elborus" type="MarginContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -101.0
+offset_top = 16.0
+offset_right = 102.0
+offset_bottom = 62.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI/Elborus"]
+layout_mode = 2
+texture = ExtResource("9_ct2tj")
+
+[node name="Elborus" type="Label" parent="UI/Elborus"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "1/10"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Go-Battle-Buttons/Battle/Battle" to="." method="_on_battle_pressed"]
+[connection signal="pressed" from="Go-Battle-Buttons/MarginContainer/Battle1" to="." method="_on_battle_1_pressed"]
+[connection signal="pressed" from="Go-Battle-Buttons/Battle2/Battle2" to="." method="_on_battle_2_pressed"]
+[connection signal="pressed" from="Go-Battle-Buttons/Battle3/Battle3" to="." method="_on_battle_3_pressed"]
+[connection signal="pressed" from="Go-Battle-Buttons/Battle5/Battle5" to="." method="_on_battle_5_pressed"]
+[connection signal="pressed" from="Go-Battle-Buttons/Battle6/Battle6" to="." method="_on_battle_6_pressed"]
+[connection signal="pressed" from="Go-Battle-Buttons/Battle7/Battle7" to="." method="_on_battle_7_pressed"]
+[connection signal="pressed" from="Go-Battle-Buttons/Battle8/Battle8" to="." method="_on_battle_8_pressed"]
+[connection signal="pressed" from="UI/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]

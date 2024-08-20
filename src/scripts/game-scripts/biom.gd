@@ -16,43 +16,41 @@ func _on_back_button_pressed():
 
 
 func _on_civil_pressed():
-	SceneChangeManager.go_to_scene("res://src/scenes/battle-scenes/civil.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/hub-scenes/civil-hub.tscn")
 
 
 func _on_taurelious_pressed():
-	SceneChangeManager.go_to_scene("res://src/scenes/battle-scenes/taurelious.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/hub-scenes/taurelious-hub.tscn")
 
 
 func _on_elborus_pressed():
-	SceneChangeManager.go_to_scene("res://src/scenes/battle-scenes/elborus.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/hub-scenes/elborus-hub.tscn")
 
 
 func _on_torres_mortes_pressed():
-	SceneChangeManager.go_to_scene("res://src/scenes/battle-scenes/torresmortes.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/hub-scenes/torres_mortes-hub.tscn")
 
 
 func _on_forest_pressed():
-	SceneChangeManager.go_to_scene("res://src/scenes/battle-scenes/forest.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/hub-scenes/forest-hub.tscn")
 
 
 func _on_carvaras_pressed():
-	SceneChangeManager.go_to_scene("res://src/scenes/battle-scenes/carvaras.tscn")
-
+	SceneChangeManager.go_to_scene("res://src/scenes/hub-scenes/carvaras-hub.tscn")
 
 func _on_nordtoppen_pressed():
-	SceneChangeManager.go_to_scene("res://src/scenes/battle-scenes/nordtoppen.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/hub-scenes/nordtoppen-hub.tscn")
 
 
 func _on_keyfand_pressed():
-	SceneChangeManager.go_to_scene("res://src/scenes/battle-scenes/keyfand.tscn")
-
+	SceneChangeManager.go_to_scene("res://src/scenes/hub-scenes/keyfand-hub.tscn")
 
 func _on_meches_pressed():
-	SceneChangeManager.go_to_scene("res://src/scenes/battle-scenes/meches.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/hub-scenes/meches-hub.tscn")
 
 
 func _on_celestial_pressed():
-	SceneChangeManager.go_to_scene("res://src/scenes/battle-scenes/celestial.tscn")
+	SceneChangeManager.go_to_scene("res://src/scenes/hub-scenes/celestial-hub.tscn")
 
 
 

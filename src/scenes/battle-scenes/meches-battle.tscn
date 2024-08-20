@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://ds3fcle106lfv"]
+
+[ext_resource type="Script" path="res://src/scripts/game-scripts/biom-scripts/meches-battle.gd" id="1_80t1x"]
+[ext_resource type="Texture2D" uid="uid://bhf141drp3ov3" path="res://src/ui/backgrounds/battle-backgrounds/Механизмы(Meches).PNG" id="2_yycqe"]
+[ext_resource type="VideoStream" path="res://src/ui/backgrounds/battle-backgrounds/Механизмы(Meches).ogv" id="3_ukole"]
+[ext_resource type="Texture2D" uid="uid://c2u2i5n4mifyh" path="res://src/ui/buttons/back_button.png" id="4_gxw3y"]
+
+[node name="Meches-Battle" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_80t1x")
+
+[node name="BackGround-Image" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 72.58
+offset_bottom = 105.22
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_yycqe")
+stretch_mode = 4
+
+[node name="BackGround-Video" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 72.58
+offset_bottom = 105.22
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("3_ukole")
+autoplay = true
+expand = true
+loop = true
+
+[node name="BackButtonLayer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="BackButtonContainer" type="MarginContainer" parent="BackButtonLayer"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 88.0
+offset_bottom = 73.0
+
+[node name="BackButton" type="TextureButton" parent="BackButtonLayer/BackButtonContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_gxw3y")
+texture_pressed = ExtResource("4_gxw3y")
+texture_hover = ExtResource("4_gxw3y")
+texture_focused = ExtResource("4_gxw3y")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="BackButtonLayer/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]

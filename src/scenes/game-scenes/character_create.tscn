@@ -150,9 +150,9 @@ texture = ExtResource("3_yt8dn")
 
 [node name="CharacterName" type="MarginContainer" parent="MainUI/CharacterName"]
 layout_mode = 0
-offset_left = 194.0
+offset_left = 136.0
 offset_top = 42.0
-offset_right = 252.0
+offset_right = 359.0
 offset_bottom = 75.0
 
 [node name="CharacterName" type="Label" parent="MainUI/CharacterName/CharacterName"]
