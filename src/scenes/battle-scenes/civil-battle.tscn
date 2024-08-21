@@ -1,49 +1,48 @@
-[gd_scene load_steps=6 format=3 uid="uid://b4nxlq3fl4exg"]
+[gd_scene load_steps=5 format=3 uid="uid://dwq5ql2swy17c"]
 
-[ext_resource type="Script" path="res://src/scripts/game-scripts/battle.gd" id="1_i4757"]
-[ext_resource type="Texture2D" uid="uid://cywqlemtd42e8" path="res://src/ui/backgrounds/battle-backgrounds/Люди.PNG" id="2_srcqt"]
-[ext_resource type="Texture2D" uid="uid://c2u2i5n4mifyh" path="res://src/ui/buttons/back_button.png" id="3_in8rb"]
-[ext_resource type="Texture2D" uid="uid://b604lcs55mpp0" path="res://src/ui/elements/Battle_Card.png" id="5_b0uih"]
+[ext_resource type="Script" path="res://src/scripts/game-scripts/biom-scripts/battle-scripts/civil-battle.gd" id="1_li0o5"]
+[ext_resource type="Texture2D" uid="uid://cq4x60xftnyf0" path="res://src/ui/backgrounds/battle-backgrounds/Люди(Civil).PNG" id="2_ifnew"]
+[ext_resource type="VideoStream" path="res://src/ui/backgrounds/battle-backgrounds/Люди(Civil).ogv" id="3_2sywt"]
+[ext_resource type="Texture2D" uid="uid://b5crkkfaua4yl" path="res://src/ui/buttons/back_button.png" id="4_mwrbi"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6famp"]
-
-[node name="Battle" type="Node2D"]
-script = ExtResource("1_i4757")
+[node name="Civil-Battle" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_li0o5")
 
 [node name="BackGround-Image" type="TextureRect" parent="."]
-offset_top = -1.0
-offset_right = 500.0
-offset_bottom = 901.0
-scale = Vector2(1.065, 1.065)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("2_srcqt")
+texture = ExtResource("2_ifnew")
 expand_mode = 1
+stretch_mode = 6
 
-[node name="BackGround-Video" type="VideoStreamPlayer" parent="."]
-offset_right = 504.0
-offset_bottom = 904.0
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+ratio = 0.6
+stretch_mode = 3
+
+[node name="BackGround-Video" type="VideoStreamPlayer" parent="AspectRatioContainer"]
+layout_mode = 2
+stream = ExtResource("3_2sywt")
 autoplay = true
 expand = true
 loop = true
-
-[node name="BattleStepLayer" type="Control" parent="."]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-
-[node name="BattleStepContainer" type="MarginContainer" parent="BattleStepLayer"]
-layout_mode = 0
-offset_right = 320.0
-offset_bottom = 81.0
-theme_override_constants/margin_left = 170
-theme_override_constants/margin_top = 25
-
-[node name="BattleStep" type="Label" parent="BattleStepLayer/BattleStepContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_6famp")
-text = "Ход 1\\10"
 
 [node name="BackButtonLayer" type="Control" parent="."]
 layout_mode = 3
@@ -58,217 +57,10 @@ offset_bottom = 73.0
 
 [node name="BackButton" type="TextureButton" parent="BackButtonLayer/BackButtonContainer"]
 layout_mode = 2
-texture_normal = ExtResource("3_in8rb")
-texture_pressed = ExtResource("3_in8rb")
-texture_hover = ExtResource("3_in8rb")
-texture_focused = ExtResource("3_in8rb")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="PlayerCards" type="Control" parent="."]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Card" type="MarginContainer" parent="PlayerCards"]
-layout_mode = 0
-offset_left = 189.0
-offset_top = 733.0
-offset_right = 279.0
-offset_bottom = 856.0
-
-[node name="Card" type="TextureButton" parent="PlayerCards/Card"]
-layout_mode = 2
-texture_normal = ExtResource("5_b0uih")
-texture_pressed = ExtResource("5_b0uih")
-texture_hover = ExtResource("5_b0uih")
-texture_focused = ExtResource("5_b0uih")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Card2" type="MarginContainer" parent="PlayerCards"]
-layout_mode = 0
-offset_left = 189.0
-offset_top = 601.0
-offset_right = 279.0
-offset_bottom = 724.0
-
-[node name="Card" type="TextureButton" parent="PlayerCards/Card2"]
-layout_mode = 2
-texture_normal = ExtResource("5_b0uih")
-texture_pressed = ExtResource("5_b0uih")
-texture_hover = ExtResource("5_b0uih")
-texture_focused = ExtResource("5_b0uih")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Card3" type="MarginContainer" parent="PlayerCards"]
-layout_mode = 0
-offset_left = 330.0
-offset_top = 589.0
-offset_right = 420.0
-offset_bottom = 712.0
-
-[node name="Card" type="TextureButton" parent="PlayerCards/Card3"]
-layout_mode = 2
-texture_normal = ExtResource("5_b0uih")
-texture_pressed = ExtResource("5_b0uih")
-texture_hover = ExtResource("5_b0uih")
-texture_focused = ExtResource("5_b0uih")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Card4" type="MarginContainer" parent="PlayerCards"]
-layout_mode = 0
-offset_left = 330.0
-offset_top = 722.0
-offset_right = 420.0
-offset_bottom = 845.0
-
-[node name="Card" type="TextureButton" parent="PlayerCards/Card4"]
-layout_mode = 2
-texture_normal = ExtResource("5_b0uih")
-texture_pressed = ExtResource("5_b0uih")
-texture_hover = ExtResource("5_b0uih")
-texture_focused = ExtResource("5_b0uih")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Card5" type="MarginContainer" parent="PlayerCards"]
-layout_mode = 0
-offset_left = 52.9
-offset_top = 589.0
-offset_right = 142.9
-offset_bottom = 712.0
-
-[node name="Card" type="TextureButton" parent="PlayerCards/Card5"]
-layout_mode = 2
-texture_normal = ExtResource("5_b0uih")
-texture_pressed = ExtResource("5_b0uih")
-texture_hover = ExtResource("5_b0uih")
-texture_focused = ExtResource("5_b0uih")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Card6" type="MarginContainer" parent="PlayerCards"]
-layout_mode = 0
-offset_left = 52.9
-offset_top = 722.0
-offset_right = 142.9
-offset_bottom = 845.0
-
-[node name="Card" type="TextureButton" parent="PlayerCards/Card6"]
-layout_mode = 2
-texture_normal = ExtResource("5_b0uih")
-texture_pressed = ExtResource("5_b0uih")
-texture_hover = ExtResource("5_b0uih")
-texture_focused = ExtResource("5_b0uih")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="EnemyCards" type="Control" parent="."]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_top = -457.465
-offset_right = 40.0
-offset_bottom = -417.465
-
-[node name="Card" type="MarginContainer" parent="EnemyCards"]
-layout_mode = 0
-offset_left = 189.0
-offset_top = 733.0
-offset_right = 279.0
-offset_bottom = 856.0
-
-[node name="Card" type="TextureButton" parent="EnemyCards/Card"]
-layout_mode = 2
-texture_normal = ExtResource("5_b0uih")
-texture_pressed = ExtResource("5_b0uih")
-texture_hover = ExtResource("5_b0uih")
-texture_focused = ExtResource("5_b0uih")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Card2" type="MarginContainer" parent="EnemyCards"]
-layout_mode = 0
-offset_left = 189.0
-offset_top = 601.0
-offset_right = 279.0
-offset_bottom = 724.0
-
-[node name="Card" type="TextureButton" parent="EnemyCards/Card2"]
-layout_mode = 2
-texture_normal = ExtResource("5_b0uih")
-texture_pressed = ExtResource("5_b0uih")
-texture_hover = ExtResource("5_b0uih")
-texture_focused = ExtResource("5_b0uih")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Card3" type="MarginContainer" parent="EnemyCards"]
-layout_mode = 0
-offset_left = 330.0
-offset_top = 589.0
-offset_right = 420.0
-offset_bottom = 712.0
-
-[node name="Card" type="TextureButton" parent="EnemyCards/Card3"]
-layout_mode = 2
-texture_normal = ExtResource("5_b0uih")
-texture_pressed = ExtResource("5_b0uih")
-texture_hover = ExtResource("5_b0uih")
-texture_focused = ExtResource("5_b0uih")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Card4" type="MarginContainer" parent="EnemyCards"]
-layout_mode = 0
-offset_left = 330.0
-offset_top = 722.0
-offset_right = 420.0
-offset_bottom = 845.0
-
-[node name="Card" type="TextureButton" parent="EnemyCards/Card4"]
-layout_mode = 2
-texture_normal = ExtResource("5_b0uih")
-texture_pressed = ExtResource("5_b0uih")
-texture_hover = ExtResource("5_b0uih")
-texture_focused = ExtResource("5_b0uih")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Card5" type="MarginContainer" parent="EnemyCards"]
-layout_mode = 0
-offset_left = 52.9
-offset_top = 589.0
-offset_right = 142.9
-offset_bottom = 712.0
-
-[node name="Card" type="TextureButton" parent="EnemyCards/Card5"]
-layout_mode = 2
-texture_normal = ExtResource("5_b0uih")
-texture_pressed = ExtResource("5_b0uih")
-texture_hover = ExtResource("5_b0uih")
-texture_focused = ExtResource("5_b0uih")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Card6" type="MarginContainer" parent="EnemyCards"]
-layout_mode = 0
-offset_left = 52.9
-offset_top = 722.0
-offset_right = 142.9
-offset_bottom = 845.0
-
-[node name="Card" type="TextureButton" parent="EnemyCards/Card6"]
-layout_mode = 2
-texture_normal = ExtResource("5_b0uih")
-texture_pressed = ExtResource("5_b0uih")
-texture_hover = ExtResource("5_b0uih")
-texture_focused = ExtResource("5_b0uih")
+texture_normal = ExtResource("4_mwrbi")
+texture_pressed = ExtResource("4_mwrbi")
+texture_hover = ExtResource("4_mwrbi")
+texture_focused = ExtResource("4_mwrbi")
 ignore_texture_size = true
 stretch_mode = 0
 

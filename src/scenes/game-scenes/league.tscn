@@ -1,16 +1,16 @@
 [gd_scene load_steps=12 format=3 uid="uid://5eqoqa4pqydi"]
 
-[ext_resource type="Script" path="res://src/scripts/game-scripts/league.gd" id="1_3jcwj"]
-[ext_resource type="Texture2D" uid="uid://dabyr5ndrdpn7" path="res://src/ui/backgrounds/Группа 12 копия 1.png" id="2_q5fyo"]
-[ext_resource type="Texture2D" uid="uid://c2u2i5n4mifyh" path="res://src/ui/buttons/back_button.png" id="3_cv0c5"]
-[ext_resource type="Texture2D" uid="uid://c3xr84w7u6ka5" path="res://src/ui/elements/Группа 15 копия 1.png" id="4_baurt"]
-[ext_resource type="Texture2D" uid="uid://ll4jyvu2c6nx" path="res://src/ui/elements/reward history bar копия 2 1.png" id="5_bosic"]
-[ext_resource type="Texture2D" uid="uid://c52gseq7xfbph" path="res://src/ui/buttons/Deck button копия 2.png" id="6_ljh7x"]
-[ext_resource type="Texture2D" uid="uid://dhqjqhuktff3r" path="res://src/ui/buttons/league button копия 3.png" id="7_sxayq"]
-[ext_resource type="Texture2D" uid="uid://gwksroyg7nw4" path="res://src/ui/buttons/league button копия 2.png" id="8_nxbcs"]
-[ext_resource type="Texture2D" uid="uid://i8y61eblceed" path="res://src/ui/buttons/league button копия 5.png" id="9_7a8mr"]
-[ext_resource type="Texture2D" uid="uid://cgx3myjuryye8" path="res://src/ui/buttons/league button копия.png" id="10_tv21f"]
-[ext_resource type="Texture2D" uid="uid://btp38il2qekb8" path="res://src/ui/buttons/league button копия 4.png" id="11_4qexy"]
+[ext_resource type="Script" path="res://src/scripts/game-scripts/league.gd" id="1_udntj"]
+[ext_resource type="Texture2D" uid="uid://cpb466allk1d0" path="res://src/ui/backgrounds/Группа 12 копия 1.png" id="2_q5fyo"]
+[ext_resource type="Texture2D" uid="uid://b5crkkfaua4yl" path="res://src/ui/buttons/back_button.png" id="3_cv0c5"]
+[ext_resource type="Texture2D" uid="uid://7n2tnjmmj3f4" path="res://src/ui/elements/Группа 15 копия 1.png" id="4_baurt"]
+[ext_resource type="Texture2D" uid="uid://0ss2kqanmdl0" path="res://src/ui/elements/reward history bar копия 2 1.png" id="5_bosic"]
+[ext_resource type="Texture2D" uid="uid://xgl0nhk2bb35" path="res://src/ui/buttons/Deck button копия 2.png" id="6_ljh7x"]
+[ext_resource type="Texture2D" uid="uid://dnebhew48dvvp" path="res://src/ui/buttons/league button копия 3.png" id="7_sxayq"]
+[ext_resource type="Texture2D" uid="uid://tajtsxhncd8u" path="res://src/ui/buttons/league button копия 2.png" id="8_nxbcs"]
+[ext_resource type="Texture2D" uid="uid://bate573l8f0k" path="res://src/ui/buttons/league button копия 5.png" id="9_7a8mr"]
+[ext_resource type="Texture2D" uid="uid://s3w30ygw3mu1" path="res://src/ui/buttons/league button копия.png" id="10_tv21f"]
+[ext_resource type="Texture2D" uid="uid://4fp47m31500n" path="res://src/ui/buttons/league button копия 4.png" id="11_4qexy"]
 
 [node name="League" type="Control"]
 layout_mode = 3
@@ -19,7 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_3jcwj")
+script = ExtResource("1_udntj")
 metadata/_edit_use_anchors_ = true
 
 [node name="BackGround-Image" type="TextureRect" parent="."]
@@ -27,18 +27,14 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -45.0
-offset_top = -80.0
-offset_right = 371.0
-offset_bottom = 949.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.71, 0.71)
 pivot_offset = Vector2(0, 0.23)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_q5fyo")
-stretch_mode = 4
+expand_mode = 1
+stretch_mode = 6
 
 [node name="LeagueUI" type="Control" parent="."]
 layout_mode = 1

@@ -1,7 +1,7 @@
 extends Control
 
 
-@onready var username = $TavernProfileUI/UsernameContainer/Username
+@onready var username = $ScrollContainer/TavernProfileUI/UsernameContainer/Username
 
 
 var options = preload("res://src/scenes/settings-scenes/options_tavern.tscn")
@@ -13,16 +13,15 @@ func _ready():
 
 
 
-
-
-
-
+func _notification(what):
+	if what == NOTIFICATION_WM_GO_BACK_REQUEST:
+		_on_back_button_pressed()
 
 
 
 #Если нажата стрелочка "Назад"
 func _on_back_button_pressed():
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/navigation-menu.tscn")
+	SceneManager.go_to_scene("res://src/scenes/game-scenes/navigation-menu.tscn")
 
 
 

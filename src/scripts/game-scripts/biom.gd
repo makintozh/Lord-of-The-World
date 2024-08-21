@@ -2,15 +2,11 @@ extends Control
 
 
 
-#Камера2D
-@onready var camera_view = $Camera2D
-
-@onready var top_button = $NaviagteBiom/TopButton/TopButtonContainer
-@onready var bottom_button = $NaviagteBiom/BottomButton/BottomButtonContainer
 
 
-var top_biom_position_y = 1000
-var bottom_biom_position_y = 0
+
+
+
 
 
 
@@ -20,7 +16,7 @@ var bottom_biom_position_y = 0
 
 #Если нажата стрелочка "Назад"
 func _on_back_button_pressed():
-	get_tree().change_scene_to_file("res://src/scenes/game-scenes/navigation-menu.tscn")
+	SceneManager.go_to_scene("res://src/scenes/game-scenes/navigation-menu.tscn")
 
 
 
@@ -29,55 +25,43 @@ func _on_back_button_pressed():
 
 
 func _on_civil_pressed():
-	get_tree().change_scene_to_file("res://src/scenes/battle-scenes/civil-battle.tscn")
-
-
-
-
-
-func _on_top_button_pressed():
-	camera_view.position.y = bottom_biom_position_y
-	top_button.visible = false
-	bottom_button.visible = true
-
-
-
-
-func _on_bottom_button_pressed():
-	camera_view.position.y = top_biom_position_y
-	top_button.visible = true
-	bottom_button.visible = false
-
-
-
-
-func _on_elborus_pressed():
-	get_tree().change_scene_to_file("res://src/scenes/battle-scenes/elborus-hub.tscn")
+	SceneManager.go_to_scene("res://src/scenes/hub-scenes/civil-hub.tscn")
 
 
 func _on_taurelious_pressed():
-	get_tree().change_scene_to_file("res://src/scenes/battle-scenes/taurelious.tscn")
+	SceneManager.go_to_scene("res://src/scenes/hub-scenes/taurelious-hub.tscn")
+
+
+func _on_elborus_pressed():
+	SceneManager.go_to_scene("res://src/scenes/hub-scenes/elborus-hub.tscn")
 
 
 func _on_torres_mortes_pressed():
-	get_tree().change_scene_to_file("res://src/scenes/battle-scenes/torres-mortes.tscn")
+	SceneManager.go_to_scene("res://src/scenes/hub-scenes/torres_mortes-hub.tscn")
 
 
 func _on_forest_pressed():
-	get_tree().change_scene_to_file("res://src/scenes/battle-scenes/forest.tscn")
+	SceneManager.go_to_scene("res://src/scenes/hub-scenes/forest-hub.tscn")
 
 
 func _on_carvaras_pressed():
-	get_tree().change_scene_to_file("res://src/scenes/battle-scenes/carvaras.tscn")
-
+	SceneManager.go_to_scene("res://src/scenes/hub-scenes/carvaras-hub.tscn")
 
 func _on_nordtoppen_pressed():
-	get_tree().change_scene_to_file("res://src/scenes/battle-scenes/nordtoppen.tscn")
+	SceneManager.go_to_scene("res://src/scenes/hub-scenes/nordtoppen-hub.tscn")
 
 
 func _on_keyfand_pressed():
-	get_tree().change_scene_to_file("res://src/scenes/battle-scenes/keyfand.tscn")
-
+	SceneManager.go_to_scene("res://src/scenes/hub-scenes/keyfand-hub.tscn")
 
 func _on_meches_pressed():
-	get_tree().change_scene_to_file("res://src/scenes/battle-scenes/meches.tscn")
+	SceneManager.go_to_scene("res://src/scenes/hub-scenes/meches-hub.tscn")
+
+
+func _on_celestial_pressed():
+	SceneManager.go_to_scene("res://src/scenes/hub-scenes/celestial-hub.tscn")
+
+
+
+
+

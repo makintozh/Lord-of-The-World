@@ -1,5 +1,8 @@
 extends Control
 
+
+
+@onready var register_ui = $"."
 @onready var emailinput = $UI/EmailDataUI/Email
 @onready var usernameinput = $UI/LoginDataUI/Login
 @onready var passwordinput = $UI/PasswordDataUI/Password
@@ -23,16 +26,17 @@ func _ready():
 	registerbutton.disabled = false
 
 
-
-
+func adaptive_keyboard():
+	if OS.get_name() == "Android" or OS.get_name() == "iOS":
+		var height = DisplayServer.virtual_keyboard_get_height()
+		register_ui.position.y = -height/CONFIG.adaptive_keyboard_pixel
 
 
 
 
 func _process(_delta):
 	checkinputdata()
-	
-
+	adaptive_keyboard()
 
 
 func checkinputdata():
@@ -62,7 +66,7 @@ func enable_register():
 
 func _on_back_button_pressed():
 	GLOBAL.sign_out = true
-	get_tree().change_scene_to_file("res://src/scenes/auth-scenes/login_ui.tscn")
+	SceneManager.go_to_scene("res://src/scenes/auth-scenes/login_ui.tscn")
 
 
 
@@ -125,9 +129,9 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 		GLOBAL.from_register_token = token
 		GLOBAL.username = str(usernameinput.text)
 		GLOBAL.password = str(passwordinput.text)
-		get_tree().change_scene_to_file("res://src/scenes/auth-scenes/login_ui.tscn")
+		SceneManager.go_to_scene("res://src/scenes/auth-scenes/login_ui.tscn")
 	else:
-		GLOBAL.failed_reason = str(api_response.replace('"',""))
+		GLOBAL.failed_reason = message.replace('"',"")
 		waitingresponse.visible = false
 		failed.visible = true
 

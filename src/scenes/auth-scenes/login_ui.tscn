@@ -1,18 +1,18 @@
 [gd_scene load_steps=39 format=3 uid="uid://8jmr8yn8vriq"]
 
 [ext_resource type="Script" path="res://src/scripts/auth-scripts/login_ui.gd" id="1_v5dys"]
-[ext_resource type="Texture2D" uid="uid://bmof2g6xlu2bf" path="res://src/ui/backgrounds/background.png" id="2_x5dwf"]
-[ext_resource type="Texture2D" uid="uid://c6oisapi75ah0" path="res://src/ui/elements/auth_background.png" id="3_a17al"]
-[ext_resource type="Texture2D" uid="uid://blr2v35pet8yb" path="res://src/ui/elements/input.png" id="4_70ttb"]
-[ext_resource type="Texture2D" uid="uid://dmpyv16hdidiw" path="res://src/ui/checkboxes/Hide.png" id="5_v35h3"]
-[ext_resource type="Texture2D" uid="uid://b6ihco5cpugkw" path="res://src/ui/checkboxes/Eye.png" id="6_lr44l"]
-[ext_resource type="Texture2D" uid="uid://dw45alwojk1e" path="res://src/ui/checkboxes/remember копия (1).png" id="7_4b762"]
-[ext_resource type="Texture2D" uid="uid://br8fsfct7rqtn" path="res://src/ui/checkboxes/remember off копия.png" id="8_pvexc"]
-[ext_resource type="Texture2D" uid="uid://yacxa428bppa" path="res://src/ui/buttons/button_2.png" id="9_ksyfj"]
-[ext_resource type="Texture2D" uid="uid://iivtf437avbt" path="res://src/ui/buttons/button.png" id="10_r0d8d"]
-[ext_resource type="Texture2D" uid="uid://boontk5qqal0n" path="res://src/ui/buttons/enter button.png" id="11_dkifd"]
+[ext_resource type="Texture2D" uid="uid://d0f377gqpli7j" path="res://src/ui/backgrounds/background.png" id="2_x5dwf"]
+[ext_resource type="Texture2D" uid="uid://ct660h11aw53b" path="res://src/ui/elements/auth_background.png" id="3_a17al"]
+[ext_resource type="Texture2D" uid="uid://0x0pnqrcwtda" path="res://src/ui/elements/input.png" id="4_70ttb"]
+[ext_resource type="Texture2D" uid="uid://bavt2xo3lppgf" path="res://src/ui/checkboxes/Hide.png" id="5_v35h3"]
+[ext_resource type="Texture2D" uid="uid://bnmq00i8mna1c" path="res://src/ui/checkboxes/Eye.png" id="6_lr44l"]
+[ext_resource type="Texture2D" uid="uid://56alsg4qujye" path="res://src/ui/checkboxes/remember копия (1).png" id="7_4b762"]
+[ext_resource type="Texture2D" uid="uid://dua6jpqrd28nx" path="res://src/ui/checkboxes/remember off копия.png" id="8_pvexc"]
+[ext_resource type="Texture2D" uid="uid://xqn1xyhwx0e5" path="res://src/ui/buttons/button_2.png" id="9_ksyfj"]
+[ext_resource type="Texture2D" uid="uid://ddwk6e4i75igf" path="res://src/ui/buttons/button.png" id="10_r0d8d"]
+[ext_resource type="Texture2D" uid="uid://hjercimx0d7f" path="res://src/ui/buttons/enter button.png" id="11_dkifd"]
 [ext_resource type="PackedScene" uid="uid://mea22juv2m6t" path="res://src/scenes/auth-scenes/failed_to_connect.tscn" id="13_r4bu3"]
-[ext_resource type="Texture2D" uid="uid://6kvjconjmoj0" path="res://src/ui/buttons/support green.png" id="13_wu0o0"]
+[ext_resource type="Texture2D" uid="uid://477md2io47v1" path="res://src/ui/buttons/support green.png" id="13_wu0o0"]
 [ext_resource type="PackedScene" uid="uid://cx5etu0rvfai4" path="res://src/scenes/auth-scenes/waiting_response.tscn" id="14_mul5m"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g80ue"]
@@ -106,10 +106,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -45.0
-offset_top = -80.0
-offset_right = 871.0
-offset_bottom = 1699.0
+offset_right = 916.0
+offset_bottom = 1779.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.775, 0.775)
@@ -117,7 +115,7 @@ pivot_offset = Vector2(0, 0.23)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_x5dwf")
-stretch_mode = 4
+stretch_mode = 6
 
 [node name="AuthContainer" type="MarginContainer" parent="."]
 layout_mode = 1

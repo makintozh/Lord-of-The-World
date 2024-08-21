@@ -14,6 +14,7 @@ config/name="Lord of The World"
 config/version="1"
 config/tags=PackedStringArray("lord_of_the_world")
 run/main_scene="res://src/scenes/auth-scenes/login_ui.tscn"
+config/quit_on_go_back=false
 config/features=PackedStringArray("4.2", "Mobile")
 boot_splash/bg_color=Color(0.187176, 0.187176, 0.187176, 1)
 boot_splash/show_image=false
@@ -23,6 +24,15 @@ config/icon="res://src/ui/characters/c2.png"
 
 GLOBAL="*res://src/scripts/singleton/global_variables.gd"
 CONFIG="*res://src/scripts/singleton/config.gd"
+SceneManager="*res://src/scripts/singleton/SceneManager.gd"
+
+[debug]
+
+gdscript/warnings/unused_variable=0
+gdscript/warnings/unused_local_constant=0
+gdscript/warnings/unused_private_class_variable=0
+gdscript/warnings/unused_parameter=0
+gdscript/warnings/unused_signal=0
 
 [display]
 
@@ -40,13 +50,14 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/dialogue_nodes/plugin.cfg")
 
 [file_customization]
 
 folder_colors={
 "res://addons/": "gray",
 "res://android/": "gray",
+"res://build-keys/": "gray",
 "res://src/": "green",
 "res://src/fonts/": "orange",
 "res://src/scenes/": "green",
@@ -58,15 +69,34 @@ folder_colors={
 
 theme/custom_font="res://src/fonts/inika/Inika-Bold.ttf"
 
+[importer_defaults]
+
+texture={
+"compress/channel_pack": 1
+}
+2d_array_texture={
+"compress/mode": 3
+}
+scene={
+"animation/fps": 120.0
+}
+oggvorbisstr={
+"loop": true
+}
+
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
-pointing/android/enable_long_press_as_right_click=true
-pointing/android/enable_pan_and_scale_gestures=true
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
 renderer/rendering_method.web="mobile"
 textures/vram_compression/import_etc2_astc=true
+textures/webp_compression/compression_method=0
+textures/default_filters/use_nearest_mipmap_filter=true
+textures/default_filters/anisotropic_filtering_level=4
+textures/decals/filter=5
+textures/light_projectors/filter=5
+anti_aliasing/quality/msaa_2d=3
+anti_aliasing/quality/screen_space_aa=1

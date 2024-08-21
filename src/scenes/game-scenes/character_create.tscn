@@ -1,14 +1,14 @@
 [gd_scene load_steps=20 format=3 uid="uid://do85wm7qmftwm"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/character_create.gd" id="1_t13y3"]
-[ext_resource type="Texture2D" uid="uid://bmof2g6xlu2bf" path="res://src/ui/backgrounds/background.png" id="2_juskx"]
-[ext_resource type="Texture2D" uid="uid://cx6ykjind73rd" path="res://src/ui/elements/race bar.png" id="3_yt8dn"]
-[ext_resource type="Texture2D" uid="uid://b6mi42u7yt1yy" path="res://src/ui/buttons/arrow_ (1).png" id="7_bnfx2"]
-[ext_resource type="Texture2D" uid="uid://wv5qcobcvpoq" path="res://src/ui/buttons/arrow_.png" id="8_mfu6b"]
-[ext_resource type="Texture2D" uid="uid://wgcovtfu4fot" path="res://src/ui/elements/gekso.png" id="9_0yv3s"]
-[ext_resource type="Texture2D" uid="uid://blr2v35pet8yb" path="res://src/ui/elements/input.png" id="10_n5pao"]
-[ext_resource type="Texture2D" uid="uid://cjbfs42jpw2ed" path="res://src/ui/buttons/green buttom base long.png" id="11_c771i"]
-[ext_resource type="Texture2D" uid="uid://cxpni2esf80pi" path="res://src/ui/elements/update 1.png" id="15_hneh2"]
+[ext_resource type="Texture2D" uid="uid://d0f377gqpli7j" path="res://src/ui/backgrounds/background.png" id="2_juskx"]
+[ext_resource type="Texture2D" uid="uid://b77ju66niaa3" path="res://src/ui/elements/race bar.png" id="3_yt8dn"]
+[ext_resource type="Texture2D" uid="uid://b2v8pvhki8ptw" path="res://src/ui/buttons/arrow_ (1).png" id="7_bnfx2"]
+[ext_resource type="Texture2D" uid="uid://bntlhgal3i2oe" path="res://src/ui/buttons/arrow_.png" id="8_mfu6b"]
+[ext_resource type="Texture2D" uid="uid://xyfvdcufo1ds" path="res://src/ui/elements/gekso.png" id="9_0yv3s"]
+[ext_resource type="Texture2D" uid="uid://0x0pnqrcwtda" path="res://src/ui/elements/input.png" id="10_n5pao"]
+[ext_resource type="Texture2D" uid="uid://cgsykm02o0fr0" path="res://src/ui/buttons/green buttom base long.png" id="11_c771i"]
+[ext_resource type="Texture2D" uid="uid://bdwktogmi00db" path="res://src/ui/elements/update 1.png" id="15_hneh2"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3cest"]
 texture = ExtResource("10_n5pao")
@@ -114,18 +114,14 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -37.0
-offset_top = -48.0
-offset_right = 379.0
-offset_bottom = 831.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.7, 0.7)
 pivot_offset = Vector2(0, 0.23)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_juskx")
-stretch_mode = 4
+expand_mode = 1
+stretch_mode = 6
 
 [node name="MainUI" type="CanvasLayer" parent="."]
 
@@ -150,9 +146,9 @@ texture = ExtResource("3_yt8dn")
 
 [node name="CharacterName" type="MarginContainer" parent="MainUI/CharacterName"]
 layout_mode = 0
-offset_left = 194.0
+offset_left = 136.0
 offset_top = 42.0
-offset_right = 252.0
+offset_right = 359.0
 offset_bottom = 75.0
 
 [node name="CharacterName" type="Label" parent="MainUI/CharacterName/CharacterName"]

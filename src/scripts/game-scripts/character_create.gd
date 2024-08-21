@@ -92,7 +92,7 @@ func _on_api_character_create_request_completed(result, response_code, headers, 
 	
 	
 	if response_code == 200:
-		get_tree().change_scene_to_file("res://src/scenes/game-scenes/navigation-menu.tscn")
+		SceneManager.go_to_scene("res://src/scenes/game-scenes/navigation-menu.tscn")
 		refreshing.visible = false
 
 
@@ -107,7 +107,9 @@ func _on_api_summary_request_completed(result, response_code, headers, body):
 	
 	
 	if str(character_info) != "<null>":
-		get_tree().change_scene_to_file("res://src/scenes/game-scenes/navigation-menu.tscn")
+		var name = str(character_info["name"])
+		GLOBAL.player_character_name = name
+		SceneManager.go_to_scene("res://src/scenes/game-scenes/navigation-menu.tscn")
 	else:
 		refreshing.visible = false
 		main_ui.visible = true
@@ -171,8 +173,32 @@ func check_index_valid():
 
 
 
-func _process(_delta):
+
+
+
+func adaptive_keyboard():
+	if OS.get_name() == "Android" or OS.get_name() == "iOS":
+		var height = DisplayServer.virtual_keyboard_get_height()
+		main_ui.offset.y = -height/CONFIG.adaptive_keyboard_pixel   
+
+
+
+
+
+
+func _process(_delta):                                                                                                                                                                                                   
 	check_player_character_name()
+	adaptive_keyboard()
+
+
+
+
+
+
+func _on_back_button_pressed():
+	SceneManager.go_to_scene("res://src/scenes/auth-scenes/choice_server.tscn")
+
+
 
 
 

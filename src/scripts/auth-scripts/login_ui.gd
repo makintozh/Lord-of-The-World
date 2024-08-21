@@ -9,6 +9,7 @@ var login_remember = "login"
 var password_remember = "password"
 
 
+@onready var login_ui = $"."
 @onready var login_data = $UI/LoginDataUI/Login
 @onready var password_data = $UI/PasswordDataUI/Password
 @onready var passwordhidebutton = $UI/PasswordHideUI/PasswordHideButton
@@ -27,7 +28,6 @@ var logged = false
 
 
 func _ready():
-	
 	after_remember_me()
 	if GLOBAL.username != "" and GLOBAL.password != "":
 		login_data.text = GLOBAL.username
@@ -64,11 +64,22 @@ func after_remember_me():
 
 
 
+func adaptive_keyboard():
+	if OS.get_name() == "Android" or OS.get_name() == "iOS":
+		var height = DisplayServer.virtual_keyboard_get_height()
+		login_ui.position.y = -height/CONFIG.adaptive_keyboard_pixel
+
+
+
+
+
+
 func _process(_delta):
 	if is_remember and logged:
 		remember_me()
 		
 	checkloginandpassword()
+	adaptive_keyboard()
 
 
 
@@ -118,7 +129,7 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 		logged = true
 		if logged and is_remember:
 			remember_me()
-		get_tree().change_scene_to_file("res://src/scenes/auth-scenes/choice_server.tscn")
+		SceneManager.go_to_scene("res://src/scenes/auth-scenes/choice_server.tscn")
 	else:
 		GLOBAL.failed_reason = message.replace('"',"")
 		waitingresponse.visible = false
@@ -182,15 +193,15 @@ func _on_password_hide_button_toggled(toggled_on):
 
 
 func _on_forgot_password_button_pressed():
-	get_tree().change_scene_to_file("res://src/scenes/auth-scenes/forgot_password.tscn")
+	SceneManager.go_to_scene("res://src/scenes/auth-scenes/forgot_password.tscn")
 
 
 func _on_back_button_pressed():
-	get_tree().change_scene_to_file("res://src/scenes/auth-scenes/login_ui.tscn")
+	SceneManager.go_to_scene("res://src/scenes/auth-scenes/login_ui.tscn")
 	
 	
 func _on_sign_up_button_pressed():
-	get_tree().change_scene_to_file("res://src/scenes/auth-scenes/register_ui.tscn")
+	SceneManager.go_to_scene("res://src/scenes/auth-scenes/register_ui.tscn")
 
 
 

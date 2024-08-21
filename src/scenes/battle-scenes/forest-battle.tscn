@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=3 uid="uid://nq14e5b248cm"]
+
+[ext_resource type="Script" path="res://src/scripts/game-scripts/biom-scripts/battle-scripts/forest-battle.gd" id="1_3n72x"]
+[ext_resource type="Texture2D" uid="uid://cee762pxffdp7" path="res://src/ui/backgrounds/battle-backgrounds/Звери(Forest).PNG" id="2_raa8m"]
+[ext_resource type="VideoStream" path="res://src/ui/backgrounds/battle-backgrounds/Звери(Forest).ogv" id="3_52xd3"]
+[ext_resource type="Texture2D" uid="uid://b5crkkfaua4yl" path="res://src/ui/buttons/back_button.png" id="4_1r10j"]
+
+[node name="Forest-Battle" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3n72x")
+
+[node name="BackGround-Image" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_raa8m")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+ratio = 0.6
+stretch_mode = 3
+
+[node name="BackGround-Video" type="VideoStreamPlayer" parent="AspectRatioContainer"]
+layout_mode = 2
+stream = ExtResource("3_52xd3")
+autoplay = true
+expand = true
+loop = true
+
+[node name="BackButtonLayer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="BackButtonContainer" type="MarginContainer" parent="BackButtonLayer"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 88.0
+offset_bottom = 73.0
+
+[node name="BackButton" type="TextureButton" parent="BackButtonLayer/BackButtonContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_1r10j")
+texture_pressed = ExtResource("4_1r10j")
+texture_hover = ExtResource("4_1r10j")
+texture_focused = ExtResource("4_1r10j")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="BackButtonLayer/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]

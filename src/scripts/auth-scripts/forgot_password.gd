@@ -1,7 +1,7 @@
-extends Node2D
+extends Control
 
 
 
 
 func _on_back_button_pressed():
-	get_tree().change_scene_to_file("res://src/scenes/auth-scenes/login_ui.tscn")
+	SceneManager.go_to_scene("res://src/scenes/auth-scenes/login_ui.tscn")

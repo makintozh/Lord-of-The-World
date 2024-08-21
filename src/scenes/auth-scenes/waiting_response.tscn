@@ -1,11 +1,11 @@
 [gd_scene load_steps=15 format=3 uid="uid://cx5etu0rvfai4"]
 
 [ext_resource type="Script" path="res://src/scripts/auth-scripts/waiting_response.gd" id="1_wfv5w"]
-[ext_resource type="Texture2D" uid="uid://p5dcxp78xcic" path="res://src/ui/backgrounds/blur2 1.png" id="2_1apst"]
-[ext_resource type="Texture2D" uid="uid://cxpni2esf80pi" path="res://src/ui/elements/update 1.png" id="3_e7whc"]
-[ext_resource type="Texture2D" uid="uid://yacxa428bppa" path="res://src/ui/buttons/button_2.png" id="4_w6j4o"]
-[ext_resource type="Texture2D" uid="uid://iivtf437avbt" path="res://src/ui/buttons/button.png" id="5_4pvxd"]
-[ext_resource type="Texture2D" uid="uid://boontk5qqal0n" path="res://src/ui/buttons/enter button.png" id="6_ks5g8"]
+[ext_resource type="Texture2D" uid="uid://brxhh8xk60mxf" path="res://src/ui/backgrounds/blur2 1.png" id="2_1apst"]
+[ext_resource type="Texture2D" uid="uid://bdwktogmi00db" path="res://src/ui/elements/update 1.png" id="3_e7whc"]
+[ext_resource type="Texture2D" uid="uid://xqn1xyhwx0e5" path="res://src/ui/buttons/button_2.png" id="4_w6j4o"]
+[ext_resource type="Texture2D" uid="uid://ddwk6e4i75igf" path="res://src/ui/buttons/button.png" id="5_4pvxd"]
+[ext_resource type="Texture2D" uid="uid://hjercimx0d7f" path="res://src/ui/buttons/enter button.png" id="6_ks5g8"]
 
 [sub_resource type="Animation" id="Animation_vhv4n"]
 length = 0.001
@@ -98,17 +98,14 @@ script = ExtResource("1_wfv5w")
 
 [node name="BackGround" type="TextureRect" parent="."]
 self_modulate = Color(1, 1, 1, 0.996078)
-layout_mode = 0
-offset_left = -2030.0
-offset_top = -208.0
-offset_right = 4335.0
-offset_bottom = 2270.0
+offset_right = 400.0
+offset_bottom = 900.0
 scale = Vector2(1.53968, 1.96747)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_1apst")
-expand_mode = 2
-stretch_mode = 1
+expand_mode = 1
+stretch_mode = 6
 
 [node name="Refresh" type="Control" parent="."]
 anchors_preset = 0
