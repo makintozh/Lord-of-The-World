@@ -196,13 +196,6 @@ func _on_forgot_password_button_pressed():
 	SceneManager.go_to_scene("res://src/scenes/auth-scenes/forgot_password.tscn")
 
 
-func _on_back_button_pressed():
-	SceneManager.go_to_scene("res://src/scenes/auth-scenes/login_ui.tscn")
-	
 	
 func _on_sign_up_button_pressed():
 	SceneManager.go_to_scene("res://src/scenes/auth-scenes/register_ui.tscn")
-
-
-
-

@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://ds3fcle106lfv"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/biom-scripts/meches-battle.gd" id="1_80t1x"]
-[ext_resource type="Texture2D" uid="uid://c2o5hne87a3nm" path="res://src/ui/backgrounds/battle-backgrounds/Механизмы(Meches).PNG" id="2_yycqe"]
+[ext_resource type="Texture2D" uid="uid://ba7wx6qh4ro4q" path="res://src/ui/backgrounds/battle-backgrounds/Механизмы(Meches).PNG" id="2_yycqe"]
 [ext_resource type="VideoStream" path="res://src/ui/backgrounds/battle-backgrounds/Механизмы(Meches).ogv" id="3_ukole"]
-[ext_resource type="Texture2D" uid="uid://b5crkkfaua4yl" path="res://src/ui/buttons/back_button.png" id="4_gxw3y"]
+[ext_resource type="Texture2D" uid="uid://bbpw08kj24coi" path="res://src/ui/buttons/back_button.png" id="4_gxw3y"]
 
 [node name="Meches-Battle" type="Control"]
 layout_mode = 3

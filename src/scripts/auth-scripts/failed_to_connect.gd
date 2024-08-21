@@ -20,13 +20,3 @@ func check_reason():
 
 func _on_back_pressed():
 	failed.visible = false
-
-
-
-
-
-
-
-
-
-

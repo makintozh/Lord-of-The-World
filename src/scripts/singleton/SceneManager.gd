@@ -16,6 +16,7 @@ var loading = false
 
 
 
+var singleton_count = 3
 
 
 
@@ -60,9 +61,13 @@ func _process(_delta):
 		get_tree().change_scene_to_packed(ResourceLoader.load_threaded_get((scene_to_load_path)))
 		loading_screen_scene_instance.queue_free()
 		loading = false
-		
+
+
 	else:
-		print("Ошибка загрузки!")
+		push_error("Ошибка загрузки!")  
+		error_dialogue("Loading error!   " + str(get_tree().get_root().get_child(singleton_count)) + "      ERROR CODE: BAD BACK PARAMETER ")                             
+
+
 
 
 
@@ -71,37 +76,52 @@ func _process(_delta):
 
 
 func _notification(what):
-	var singleton_count = 3
 	
 	if what == NOTIFICATION_WM_GO_BACK_REQUEST and OS.get_name() == "Android" or OS.get_name() == "iOS":
-		
+
+
 		if get_tree().get_root().get_child(singleton_count).has_method("_on_back_button_pressed"):
-			print("Переход на предыдущую с  " + str(get_tree().get_root().get_child(3)))
+			print("Переход на предыдущую с  " + str(get_tree().get_root().get_child(singleton_count)))
+			await get_tree().create_timer(0.3).timeout
 			get_tree().get_root().get_child(singleton_count).call("_on_back_button_pressed")
-		
+
+
+		elif !get_tree().get_root().get_child(singleton_count).has_method("_on_back_button_pressed"):
+			print("[SECOND TRY] Переход на предыдущую с  " + str(get_tree().get_root().get_child(singleton_count)))
+			await get_tree().create_timer(0.3).timeout
+			get_tree().get_root().get_child(singleton_count + 1).call("_on_back_button_pressed")
+
+
 		else:
+			error_dialogue(str(get_tree().get_root().get_child(singleton_count)) + " ERROR CODE: BAD BACK PARAMETER [in notif SMgr]")
 			print(str(get_tree().get_root().get_child(singleton_count)) + " Не имеет метода _on_back_button_pressed ")
 	
+	
+	
 
+	
+	
+func restart_application():
+	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://src/scenes/auth-scenes/login_ui.tscn")
 
+	
+	
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
+	
+	
+func error_dialogue(reason: String):
+	var error_dialogue_instantiate = preload("res://src/scenes/dialogue-scenes/error-dialogue.tscn").instantiate()
+	get_tree().get_root().add_child.call_deferred(error_dialogue_instantiate)
+	
+	await get_tree().create_timer(0.3).timeout
+	get_tree().get_root().get_node("Error-dialogue").call("error_dialogue_starter", reason)
+	
+	
+	
+	
+	
+	
+	
+	

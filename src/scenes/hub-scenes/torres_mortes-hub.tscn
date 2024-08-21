@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://bjoqw8f5b0iqy"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/biom-scripts/hub-scripts/torres_mortes-hub.gd" id="1_sikll"]
-[ext_resource type="Texture2D" uid="uid://jan8yjar1mkt" path="res://src/ui/backgrounds/hub-backgrounds/Нежить(Torres-Mortes).png" id="2_884jc"]
+[ext_resource type="Texture2D" uid="uid://br7ynxhp0nbbe" path="res://src/ui/backgrounds/hub-backgrounds/Нежить(Torres-Mortes).png" id="2_884jc"]
 [ext_resource type="VideoStream" path="res://src/ui/backgrounds/hub-backgrounds/Нежить(Torres-Mortes).ogv" id="3_t8f2e"]
-[ext_resource type="Texture2D" uid="uid://b67l7s4xxyiak" path="res://src/ui/buttons/bottom.png" id="4_q5huf"]
-[ext_resource type="Texture2D" uid="uid://ddmgygmejy5n7" path="res://src/ui/elements/New item.png" id="5_xhsf2"]
-[ext_resource type="Texture2D" uid="uid://fb5gv6homoy0" path="res://src/ui/buttons/bottom off 3.png" id="6_ni1ka"]
-[ext_resource type="Texture2D" uid="uid://477md2io47v1" path="res://src/ui/buttons/support green.png" id="7_btp8m"]
-[ext_resource type="Texture2D" uid="uid://b5crkkfaua4yl" path="res://src/ui/buttons/back_button.png" id="8_5qxut"]
-[ext_resource type="Texture2D" uid="uid://dngwvbbemy43q" path="res://src/ui/backgrounds/battle_step.png" id="9_35vop"]
+[ext_resource type="Texture2D" uid="uid://cxvwvuvbhim3y" path="res://src/ui/buttons/bottom.png" id="4_q5huf"]
+[ext_resource type="Texture2D" uid="uid://cq5lejgcnil4s" path="res://src/ui/elements/New item.png" id="5_xhsf2"]
+[ext_resource type="Texture2D" uid="uid://cq4yc1cdcmtb5" path="res://src/ui/buttons/bottom off 3.png" id="6_ni1ka"]
+[ext_resource type="Texture2D" uid="uid://cbs8xmap4tgjv" path="res://src/ui/buttons/support green.png" id="7_btp8m"]
+[ext_resource type="Texture2D" uid="uid://doq20ct6rvrxb" path="res://src/ui/buttons/back_button.png" id="8_5qxut"]
+[ext_resource type="Texture2D" uid="uid://bjbfwcm8ld8l1" path="res://src/ui/backgrounds/battle_step.png" id="9_35vop"]
 
 [node name="Torres_Mortes-Hub" type="Control"]
 layout_mode = 3

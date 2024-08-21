@@ -11,14 +11,3 @@ var api = HTTPClient.new()
 func _on_cancel_pressed():
 	api.close()
 	queue_free()
-
-
-
-
-
-
-
-
-
-
-

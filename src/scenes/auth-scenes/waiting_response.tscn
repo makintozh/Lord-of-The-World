@@ -1,11 +1,11 @@
 [gd_scene load_steps=15 format=3 uid="uid://cx5etu0rvfai4"]
 
 [ext_resource type="Script" path="res://src/scripts/auth-scripts/waiting_response.gd" id="1_wfv5w"]
-[ext_resource type="Texture2D" uid="uid://brxhh8xk60mxf" path="res://src/ui/backgrounds/blur2 1.png" id="2_1apst"]
-[ext_resource type="Texture2D" uid="uid://bdwktogmi00db" path="res://src/ui/elements/update 1.png" id="3_e7whc"]
-[ext_resource type="Texture2D" uid="uid://xqn1xyhwx0e5" path="res://src/ui/buttons/button_2.png" id="4_w6j4o"]
-[ext_resource type="Texture2D" uid="uid://ddwk6e4i75igf" path="res://src/ui/buttons/button.png" id="5_4pvxd"]
-[ext_resource type="Texture2D" uid="uid://hjercimx0d7f" path="res://src/ui/buttons/enter button.png" id="6_ks5g8"]
+[ext_resource type="Texture2D" uid="uid://bevhmxo8dpk65" path="res://src/ui/backgrounds/blur2 1.png" id="2_1apst"]
+[ext_resource type="Texture2D" uid="uid://cecb8khykhxef" path="res://src/ui/elements/update 1.png" id="3_e7whc"]
+[ext_resource type="Texture2D" uid="uid://cux0dplgh7axj" path="res://src/ui/buttons/button_2.png" id="4_w6j4o"]
+[ext_resource type="Texture2D" uid="uid://c1dekmihxjd1c" path="res://src/ui/buttons/button.png" id="5_4pvxd"]
+[ext_resource type="Texture2D" uid="uid://bs08othgxc8v2" path="res://src/ui/buttons/enter button.png" id="6_ks5g8"]
 
 [sub_resource type="Animation" id="Animation_vhv4n"]
 length = 0.001
@@ -74,10 +74,7 @@ texture = ExtResource("4_w6j4o")
 expand_margin_top = 10.0
 expand_margin_bottom = 10.0
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_av4ia"]
-texture = ExtResource("5_4pvxd")
-texture_margin_left = 55.0
-texture_margin_right = 50.0
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ool6a"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_61bk0"]
 texture = ExtResource("5_4pvxd")
@@ -85,7 +82,10 @@ texture = ExtResource("5_4pvxd")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y8bln"]
 texture = ExtResource("6_ks5g8")
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ool6a"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_av4ia"]
+texture = ExtResource("5_4pvxd")
+texture_margin_left = 55.0
+texture_margin_right = 50.0
 
 [node name="WaitingResponse" type="Control"]
 layout_mode = 3
@@ -98,6 +98,7 @@ script = ExtResource("1_wfv5w")
 
 [node name="BackGround" type="TextureRect" parent="."]
 self_modulate = Color(1, 1, 1, 0.996078)
+layout_mode = 0
 offset_right = 400.0
 offset_bottom = 900.0
 scale = Vector2(1.53968, 1.96747)
@@ -172,10 +173,10 @@ offset_bottom = 795.0
 [node name="Cancel" type="Button" parent="Cancel/Cancel"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 31
-theme_override_styles/normal = SubResource("StyleBoxTexture_av4ia")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ool6a")
 theme_override_styles/hover = SubResource("StyleBoxTexture_61bk0")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_y8bln")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_ool6a")
+theme_override_styles/normal = SubResource("StyleBoxTexture_av4ia")
 text = "Cancel"
 
 [connection signal="pressed" from="Cancel/Cancel/Cancel" to="." method="_on_cancel_pressed"]

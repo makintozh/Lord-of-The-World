@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://5a1rq24an53u"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_2y7l5"]
+
+[resource]
+script = ExtResource("1_2y7l5")
+starts = {
+"warning": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(-160, 0),
+"start_id": "warning"
+},
+"1_1": {
+"dialogue": "Are you sure you want to go back to the server selection?",
+"offset": Vector2(-120, 180),
+"options": {
+0: {
+"condition": {},
+"link": &"3_1",
+"text": "YES"
+},
+1: {
+"condition": {},
+"link": &"3_2",
+"text": "NO"
+}
+},
+"size": Vector2(300, 289),
+"speaker": "WARNING"
+},
+"3_1": {
+"link": "END",
+"offset": Vector2(280, 280),
+"signalValue": "YES"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2(280, 360),
+"signalValue": "NO"
+}
+}
+variables = {}
+strays = Array[String]([])
+characters = ""

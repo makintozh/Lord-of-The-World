@@ -146,12 +146,3 @@ func _on_privacy_notice_check_box_toggled(toggled_on):
 		privacynotice_enabled = true
 	else:
 		privacynotice_enabled = false
-
-
-
-
-
-
-
-
-

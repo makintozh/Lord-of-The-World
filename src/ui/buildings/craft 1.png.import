@@ -2,9 +2,10 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6sqov53l8gki"
+uid="uid://ltrjtr5w3qad"
 path="res://.godot/imported/craft 1.png-e438550636ec53484f1e7bc0743f92b8.ctex"
 metadata={
+"has_editor_variant": true,
 "vram_texture": false
 }
 
@@ -21,14 +22,14 @@ compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=1
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
 process/fix_alpha_border=true
-process/premult_alpha=false
+process/premult_alpha=true
 process/normal_map_invert_y=false
-process/hdr_as_srgb=false
-process/hdr_clamp_exposure=false
+process/hdr_as_srgb=true
+process/hdr_clamp_exposure=true
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

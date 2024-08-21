@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://bhd0pexfsnwir"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/biom-scripts/battle-scripts/torres_mortes-battle.gd" id="1_8finw"]
-[ext_resource type="Texture2D" uid="uid://jl5dh8e1rwik" path="res://src/ui/backgrounds/battle-backgrounds/Нежить(Torres-Mortes).PNG" id="2_mwqu8"]
+[ext_resource type="Texture2D" uid="uid://bg7j3b18xldhi" path="res://src/ui/backgrounds/battle-backgrounds/Нежить(Torres-Mortes).PNG" id="2_mwqu8"]
 [ext_resource type="VideoStream" path="res://src/ui/backgrounds/battle-backgrounds/Нежить(Torres-Mortes).ogv" id="3_quu7p"]
-[ext_resource type="Texture2D" uid="uid://b5crkkfaua4yl" path="res://src/ui/buttons/back_button.png" id="4_gmp8n"]
+[ext_resource type="Texture2D" uid="uid://bbpw08kj24coi" path="res://src/ui/buttons/back_button.png" id="4_gmp8n"]
 
 [node name="Torres_Mortes-Battle" type="Control"]
 layout_mode = 3

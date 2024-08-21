@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://di8jtkjd8j3ea"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/biom-scripts/hub-scripts/carvaras-hub.gd" id="1_pdk3s"]
-[ext_resource type="Texture2D" uid="uid://cs077oeo73d1c" path="res://src/ui/backgrounds/hub-backgrounds/Орки(Carvaras.png" id="2_7pbpg"]
+[ext_resource type="Texture2D" uid="uid://ii805xddvrd6" path="res://src/ui/backgrounds/hub-backgrounds/Орки(Carvaras.png" id="2_7pbpg"]
 [ext_resource type="VideoStream" path="res://src/ui/backgrounds/hub-backgrounds/Орки(Carvaras).ogv" id="3_hhmqk"]
-[ext_resource type="Texture2D" uid="uid://b67l7s4xxyiak" path="res://src/ui/buttons/bottom.png" id="4_us0vk"]
-[ext_resource type="Texture2D" uid="uid://ddmgygmejy5n7" path="res://src/ui/elements/New item.png" id="5_8h6lr"]
-[ext_resource type="Texture2D" uid="uid://fb5gv6homoy0" path="res://src/ui/buttons/bottom off 3.png" id="6_v2mpf"]
-[ext_resource type="Texture2D" uid="uid://477md2io47v1" path="res://src/ui/buttons/support green.png" id="7_i3r24"]
-[ext_resource type="Texture2D" uid="uid://b5crkkfaua4yl" path="res://src/ui/buttons/back_button.png" id="8_gb20f"]
-[ext_resource type="Texture2D" uid="uid://dngwvbbemy43q" path="res://src/ui/backgrounds/battle_step.png" id="9_knkwq"]
+[ext_resource type="Texture2D" uid="uid://cxvwvuvbhim3y" path="res://src/ui/buttons/bottom.png" id="4_us0vk"]
+[ext_resource type="Texture2D" uid="uid://cq5lejgcnil4s" path="res://src/ui/elements/New item.png" id="5_8h6lr"]
+[ext_resource type="Texture2D" uid="uid://cq4yc1cdcmtb5" path="res://src/ui/buttons/bottom off 3.png" id="6_v2mpf"]
+[ext_resource type="Texture2D" uid="uid://cbs8xmap4tgjv" path="res://src/ui/buttons/support green.png" id="7_i3r24"]
+[ext_resource type="Texture2D" uid="uid://doq20ct6rvrxb" path="res://src/ui/buttons/back_button.png" id="8_gb20f"]
+[ext_resource type="Texture2D" uid="uid://bjbfwcm8ld8l1" path="res://src/ui/backgrounds/battle_step.png" id="9_knkwq"]
 
 [node name="Carvaras-Hub" type="Control"]
 layout_mode = 3
@@ -58,10 +58,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -259.0
-offset_top = -632.0
-offset_right = -259.0
-offset_bottom = -632.0
+offset_left = -240.0
+offset_top = -730.0
+offset_right = -240.0
+offset_bottom = -730.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.06, 1.06)
@@ -100,10 +100,10 @@ stretch_mode = 0
 
 [node name="Battle2" type="MarginContainer" parent="Go-Battle-Buttons"]
 layout_mode = 0
-offset_left = 313.208
-offset_top = 621.698
-offset_right = 425.208
-offset_bottom = 731.698
+offset_left = 270.755
+offset_top = 660.377
+offset_right = 382.755
+offset_bottom = 770.377
 
 [node name="Battle2" type="TextureButton" parent="Go-Battle-Buttons/Battle2"]
 layout_mode = 2
@@ -116,10 +116,10 @@ stretch_mode = 0
 
 [node name="Battle3" type="MarginContainer" parent="Go-Battle-Buttons"]
 layout_mode = 0
-offset_left = 157.0
-offset_top = 731.0
-offset_right = 269.0
-offset_bottom = 841.0
+offset_left = 108.491
+offset_top = 783.019
+offset_right = 220.491
+offset_bottom = 893.019
 
 [node name="Battle3" type="TextureButton" parent="Go-Battle-Buttons/Battle3"]
 layout_mode = 2
@@ -132,10 +132,10 @@ stretch_mode = 0
 
 [node name="Battle5" type="MarginContainer" parent="Go-Battle-Buttons"]
 layout_mode = 0
-offset_left = 81.1321
-offset_top = 605.66
-offset_right = 193.132
-offset_bottom = 715.66
+offset_left = 69.8113
+offset_top = 637.736
+offset_right = 181.811
+offset_bottom = 747.736
 
 [node name="Battle5" type="TextureButton" parent="Go-Battle-Buttons/Battle5"]
 layout_mode = 2
@@ -148,10 +148,10 @@ stretch_mode = 0
 
 [node name="Battle6" type="MarginContainer" parent="Go-Battle-Buttons"]
 layout_mode = 0
-offset_left = 306.604
-offset_top = 368.868
-offset_right = 418.604
-offset_bottom = 478.868
+offset_left = 302.83
+offset_top = 420.755
+offset_right = 414.83
+offset_bottom = 530.755
 
 [node name="Battle6" type="TextureButton" parent="Go-Battle-Buttons/Battle6"]
 layout_mode = 2
@@ -164,10 +164,10 @@ stretch_mode = 0
 
 [node name="Battle7" type="MarginContainer" parent="Go-Battle-Buttons"]
 layout_mode = 0
-offset_left = 45.283
-offset_top = 369.811
-offset_right = 157.283
-offset_bottom = 479.811
+offset_left = 58.4906
+offset_top = 466.981
+offset_right = 170.491
+offset_bottom = 576.981
 
 [node name="Battle7" type="TextureButton" parent="Go-Battle-Buttons/Battle7"]
 layout_mode = 2
@@ -180,10 +180,10 @@ stretch_mode = 0
 
 [node name="Battle8" type="MarginContainer" parent="Go-Battle-Buttons"]
 layout_mode = 0
-offset_left = 159.434
-offset_top = 186.792
-offset_right = 271.434
-offset_bottom = 296.792
+offset_left = 163.208
+offset_top = 316.038
+offset_right = 275.208
+offset_bottom = 426.038
 
 [node name="Battle8" type="TextureButton" parent="Go-Battle-Buttons/Battle8"]
 layout_mode = 2

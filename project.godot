@@ -15,7 +15,7 @@ config/version="1"
 config/tags=PackedStringArray("lord_of_the_world")
 run/main_scene="res://src/scenes/auth-scenes/login_ui.tscn"
 config/quit_on_go_back=false
-config/features=PackedStringArray("4.2", "Mobile")
+config/features=PackedStringArray("4.3", "Mobile")
 boot_splash/bg_color=Color(0.187176, 0.187176, 0.187176, 1)
 boot_splash/show_image=false
 config/icon="res://src/ui/characters/c2.png"
@@ -45,6 +45,9 @@ window/vsync/vsync_mode=0
 
 [editor]
 
+movie_writer/mjpeg_quality=1.0
+movie_writer/disable_vsync=true
+movie_writer/fps=300
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
 
@@ -71,17 +74,56 @@ theme/custom_font="res://src/fonts/inika/Inika-Bold.ttf"
 
 [importer_defaults]
 
-texture={
-"compress/channel_pack": 1
-}
 2d_array_texture={
-"compress/mode": 3
+"compress/mode": 0
 }
 scene={
-"animation/fps": 120.0
+"animation/fps": 120.0,
+"meshes/force_disable_compression": true
 }
 oggvorbisstr={
 "loop": true
+}
+texture={
+"compress/channel_pack": 1,
+"detect_3d/compress_to": 0,
+"editor/convert_colors_with_editor_theme": true,
+"editor/scale_with_editor_scale": true,
+"mipmaps/generate": true,
+"process/hdr_as_srgb": true,
+"process/hdr_clamp_exposure": true,
+"process/premult_alpha": true
+}
+font_data_bmfont={
+"compress": false
+}
+font_data_dynamic={
+"compress": false,
+"generate_mipmaps": true,
+"msdf_pixel_range": 100,
+"msdf_size": 250,
+"multichannel_signed_distance_field": true
+}
+font_data_image={
+"compress": false
+}
+wavefront_obj={
+"force_disable_mesh_compression": true
+}
+csv_translation={
+"compress": false
+}
+animation_library={
+"animation/fps": 120.0
+}
+cubemap_texture={
+"compress/mode": 0
+}
+cubemap_array_texture={
+"compress/mode": 0
+}
+3d_texture={
+"compress/mode": 0
 }
 
 [input_devices]
@@ -90,13 +132,13 @@ pointing/emulate_touch_from_mouse=true
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=2
 renderer/rendering_method="mobile"
 renderer/rendering_method.web="mobile"
 textures/vram_compression/import_etc2_astc=true
-textures/webp_compression/compression_method=0
+textures/lossless_compression/force_png=true
 textures/default_filters/use_nearest_mipmap_filter=true
-textures/default_filters/anisotropic_filtering_level=4
-textures/decals/filter=5
-textures/light_projectors/filter=5
-anti_aliasing/quality/msaa_2d=3
+anti_aliasing/quality/msaa_2d=2
+viewport/hdr_2d=true
 anti_aliasing/quality/screen_space_aa=1
+anti_aliasing/quality/use_debanding=true

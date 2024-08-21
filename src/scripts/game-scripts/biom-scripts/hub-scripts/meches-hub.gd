@@ -46,7 +46,3 @@ func _on_battle_7_pressed():
 
 func _on_battle_8_pressed():
 	SceneManager.go_to_scene("res://src/scenes/battle-scenes/meches-battle.tscn")
-
-
-
-

@@ -1,46 +1,45 @@
 [gd_scene load_steps=39 format=3 uid="uid://8jmr8yn8vriq"]
 
 [ext_resource type="Script" path="res://src/scripts/auth-scripts/login_ui.gd" id="1_v5dys"]
-[ext_resource type="Texture2D" uid="uid://d0f377gqpli7j" path="res://src/ui/backgrounds/background.png" id="2_x5dwf"]
-[ext_resource type="Texture2D" uid="uid://ct660h11aw53b" path="res://src/ui/elements/auth_background.png" id="3_a17al"]
-[ext_resource type="Texture2D" uid="uid://0x0pnqrcwtda" path="res://src/ui/elements/input.png" id="4_70ttb"]
-[ext_resource type="Texture2D" uid="uid://bavt2xo3lppgf" path="res://src/ui/checkboxes/Hide.png" id="5_v35h3"]
-[ext_resource type="Texture2D" uid="uid://bnmq00i8mna1c" path="res://src/ui/checkboxes/Eye.png" id="6_lr44l"]
-[ext_resource type="Texture2D" uid="uid://56alsg4qujye" path="res://src/ui/checkboxes/remember копия (1).png" id="7_4b762"]
-[ext_resource type="Texture2D" uid="uid://dua6jpqrd28nx" path="res://src/ui/checkboxes/remember off копия.png" id="8_pvexc"]
-[ext_resource type="Texture2D" uid="uid://xqn1xyhwx0e5" path="res://src/ui/buttons/button_2.png" id="9_ksyfj"]
-[ext_resource type="Texture2D" uid="uid://ddwk6e4i75igf" path="res://src/ui/buttons/button.png" id="10_r0d8d"]
-[ext_resource type="Texture2D" uid="uid://hjercimx0d7f" path="res://src/ui/buttons/enter button.png" id="11_dkifd"]
+[ext_resource type="Texture2D" uid="uid://dpbb3nvjo3ri8" path="res://src/ui/backgrounds/background.png" id="2_x5dwf"]
+[ext_resource type="Texture2D" uid="uid://cm0p8pr46ylpx" path="res://src/ui/elements/auth_background.png" id="3_a17al"]
+[ext_resource type="Texture2D" uid="uid://dl51j7qd80cba" path="res://src/ui/elements/input.png" id="4_70ttb"]
+[ext_resource type="Texture2D" uid="uid://cf5rqg8fn78jr" path="res://src/ui/checkboxes/Hide.png" id="5_v35h3"]
+[ext_resource type="Texture2D" uid="uid://dwjceudxwctv5" path="res://src/ui/checkboxes/Eye.png" id="6_lr44l"]
+[ext_resource type="Texture2D" uid="uid://dfjl41dsg56og" path="res://src/ui/checkboxes/remember копия (1).png" id="7_4b762"]
+[ext_resource type="Texture2D" uid="uid://ckb4g1jecs4ok" path="res://src/ui/checkboxes/remember off копия.png" id="8_pvexc"]
+[ext_resource type="Texture2D" uid="uid://dk7ow2l76cqyi" path="res://src/ui/buttons/button_2.png" id="9_ksyfj"]
+[ext_resource type="Texture2D" uid="uid://b10tu43xxexs6" path="res://src/ui/buttons/button.png" id="10_r0d8d"]
+[ext_resource type="Texture2D" uid="uid://dqd4m8tu6a7sb" path="res://src/ui/buttons/enter button.png" id="11_dkifd"]
 [ext_resource type="PackedScene" uid="uid://mea22juv2m6t" path="res://src/scenes/auth-scenes/failed_to_connect.tscn" id="13_r4bu3"]
-[ext_resource type="Texture2D" uid="uid://477md2io47v1" path="res://src/ui/buttons/support green.png" id="13_wu0o0"]
+[ext_resource type="Texture2D" uid="uid://cbs8xmap4tgjv" path="res://src/ui/buttons/support green.png" id="13_wu0o0"]
 [ext_resource type="PackedScene" uid="uid://cx5etu0rvfai4" path="res://src/scenes/auth-scenes/waiting_response.tscn" id="14_mul5m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e5gki"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g80ue"]
 texture = ExtResource("4_70ttb")
 texture_margin_left = 20.0
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e5gki"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k18xo"]
-texture = ExtResource("9_ksyfj")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q6kwe"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ei2v"]
 texture = ExtResource("9_ksyfj")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v8pjy"]
 texture = ExtResource("9_ksyfj")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gja7d"]
-texture = ExtResource("9_ksyfj")
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xbiu1"]
 texture = ExtResource("9_ksyfj")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ei2v"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gja7d"]
 texture = ExtResource("9_ksyfj")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y8yyr"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q6kwe"]
 texture = ExtResource("9_ksyfj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k18xo"]
+texture = ExtResource("9_ksyfj")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v88gt"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nspu3"]
 texture = ExtResource("9_ksyfj")
@@ -48,12 +47,8 @@ texture = ExtResource("9_ksyfj")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3kkr4"]
 texture = ExtResource("9_ksyfj")
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v88gt"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ug50c"]
-texture = ExtResource("10_r0d8d")
-texture_margin_left = 55.0
-texture_margin_right = 50.0
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y8yyr"]
+texture = ExtResource("9_ksyfj")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nj4nk"]
 texture = ExtResource("10_r0d8d")
@@ -61,10 +56,15 @@ texture = ExtResource("10_r0d8d")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xlckv"]
 texture = ExtResource("11_dkifd")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mboba"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ug50c"]
 texture = ExtResource("10_r0d8d")
 texture_margin_left = 55.0
 texture_margin_right = 50.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yyylc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u7u7t"]
+texture = ExtResource("10_r0d8d")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8taut"]
 texture = ExtResource("10_r0d8d")
@@ -72,18 +72,18 @@ texture = ExtResource("10_r0d8d")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c224n"]
 texture = ExtResource("11_dkifd")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u7u7t"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mboba"]
 texture = ExtResource("10_r0d8d")
+texture_margin_left = 55.0
+texture_margin_right = 50.0
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yyylc"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qrire"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bgawa"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ryqk"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ekwd1"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bgawa"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qrire"]
 
 [node name="LoginUI" type="Control"]
 layout_mode = 3
@@ -199,14 +199,14 @@ grow_vertical = 2
 
 [node name="Login" type="LineEdit" parent="UI/LoginDataUI"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
-theme_override_colors/font_uneditable_color = Color(1, 1, 1, 1)
 theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/font_uneditable_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 23
-theme_override_styles/normal = SubResource("StyleBoxTexture_g80ue")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_e5gki")
+theme_override_styles/normal = SubResource("StyleBoxTexture_g80ue")
 
 [node name="PasswordInfoUI" type="MarginContainer" parent="UI"]
 layout_mode = 1
@@ -244,14 +244,14 @@ grow_vertical = 2
 
 [node name="Password" type="LineEdit" parent="UI/PasswordDataUI"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
-theme_override_colors/font_uneditable_color = Color(1, 1, 1, 1)
 theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/font_uneditable_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 23
-theme_override_styles/normal = SubResource("StyleBoxTexture_g80ue")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_e5gki")
+theme_override_styles/normal = SubResource("StyleBoxTexture_g80ue")
 secret = true
 
 [node name="PasswordHideUI" type="MarginContainer" parent="UI"]
@@ -293,18 +293,18 @@ grow_vertical = 2
 [node name="RememberMeCheckBox" type="CheckBox" parent="UI/RememberMeUI"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 21
-theme_override_icons/checked = ExtResource("7_4b762")
-theme_override_icons/checked_disabled = ExtResource("7_4b762")
-theme_override_icons/unchecked = ExtResource("8_pvexc")
-theme_override_icons/unchecked_disabled = ExtResource("8_pvexc")
-theme_override_icons/radio_unchecked = ExtResource("8_pvexc")
-theme_override_icons/radio_unchecked_disabled = ExtResource("8_pvexc")
-theme_override_styles/normal = SubResource("StyleBoxTexture_k18xo")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_q6kwe")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_v8pjy")
-theme_override_styles/hover = SubResource("StyleBoxTexture_gja7d")
-theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_xbiu1")
 theme_override_styles/focus = SubResource("StyleBoxTexture_8ei2v")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_v8pjy")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_xbiu1")
+theme_override_styles/hover = SubResource("StyleBoxTexture_gja7d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_q6kwe")
+theme_override_styles/normal = SubResource("StyleBoxTexture_k18xo")
+theme_override_icons/checked = ExtResource("7_4b762")
+theme_override_icons/unchecked = ExtResource("8_pvexc")
+theme_override_icons/radio_unchecked = ExtResource("8_pvexc")
+theme_override_icons/checked_disabled = ExtResource("7_4b762")
+theme_override_icons/unchecked_disabled = ExtResource("8_pvexc")
+theme_override_icons/radio_unchecked_disabled = ExtResource("8_pvexc")
 text = "Remember me"
 
 [node name="ForgotPasswordUI" type="MarginContainer" parent="UI"]
@@ -324,10 +324,10 @@ grow_vertical = 2
 [node name="ForgotPasswordButton" type="Button" parent="UI/ForgotPasswordUI"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 21
-theme_override_styles/normal = SubResource("StyleBoxTexture_y8yyr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v88gt")
 theme_override_styles/hover = SubResource("StyleBoxTexture_nspu3")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_3kkr4")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_v88gt")
+theme_override_styles/normal = SubResource("StyleBoxTexture_y8yyr")
 text = "Forgot password?"
 
 [node name="Navigation" type="Control" parent="."]
@@ -362,21 +362,21 @@ alignment = 1
 layout_direction = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 31
-theme_override_styles/normal = SubResource("StyleBoxTexture_ug50c")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v88gt")
 theme_override_styles/hover = SubResource("StyleBoxTexture_nj4nk")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_xlckv")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_v88gt")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ug50c")
 text = "Register"
 
 [node name="LoginButton" type="Button" parent="Navigation/NavigationContainer"]
 modulate = Color(1, 1, 1, 0.470588)
 layout_mode = 2
 theme_override_font_sizes/font_size = 31
-theme_override_styles/normal = SubResource("StyleBoxTexture_mboba")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yyylc")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_u7u7t")
 theme_override_styles/hover = SubResource("StyleBoxTexture_8taut")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_c224n")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_u7u7t")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_yyylc")
+theme_override_styles/normal = SubResource("StyleBoxTexture_mboba")
 text = "Log in"
 
 [node name="TechSupportUI" type="MarginContainer" parent="."]
@@ -400,10 +400,17 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 30
-theme_override_styles/hover = SubResource("StyleBoxEmpty_1ryqk")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_ekwd1")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_bgawa")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_qrire")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_qrire")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_bgawa")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_bgawa")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_bgawa")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_bgawa")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1ryqk")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_1ryqk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ekwd1")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_ekwd1")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ekwd1")
 text = "Tech support"
 icon = ExtResource("13_wu0o0")
 icon_alignment = 2

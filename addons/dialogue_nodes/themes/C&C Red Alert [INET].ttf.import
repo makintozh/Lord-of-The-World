@@ -2,7 +2,7 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bpid28mjg4jgt"
+uid="uid://mskb0iullk1i"
 path="res://.godot/imported/C&C Red Alert [INET].ttf-afbbc5b68423023ce39e563000c84d0b.fontdata"
 
 [deps]
@@ -14,10 +14,11 @@ dest_files=["res://.godot/imported/C&C Red Alert [INET].ttf-afbbc5b68423023ce39e
 
 Rendering=null
 antialiasing=1
-generate_mipmaps=false
-multichannel_signed_distance_field=false
-msdf_pixel_range=8
-msdf_size=48
+generate_mipmaps=true
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=true
+msdf_pixel_range=100
+msdf_size=250
 allow_system_fallback=true
 force_autohinter=false
 hinting=1
@@ -26,7 +27,7 @@ oversampling=0.0
 Fallbacks=null
 fallbacks=[]
 Compress=null
-compress=true
+compress=false
 preload=[]
 language_support={}
 script_support={}

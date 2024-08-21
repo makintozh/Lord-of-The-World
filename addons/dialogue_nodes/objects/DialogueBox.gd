@@ -186,7 +186,7 @@ func _enter_tree():
 	
 	dialogue_label = RichTextLabel.new()
 	_sub_container.add_child(dialogue_label)
-	dialogue_label.text = 'Some dialogue text to demonstrate how an actual dialogue might look like.'
+	dialogue_label.text = 'TEXT'
 	dialogue_label.bbcode_enabled = true
 	dialogue_label.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	dialogue_label.custom_effects = custom_effects
