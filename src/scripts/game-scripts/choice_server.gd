@@ -386,7 +386,7 @@ var token = JSON.stringify({
 
 
 func _ready():
-	api.request(CONFIG.api_link + "/servers", CONFIG.api_headers, HTTPClient.METHOD_GET, token)
+	api.request(CONFIG.api_link + "/servers", ["Authorization: Bearer"], HTTPClient.METHOD_GET, token)
 
 
 

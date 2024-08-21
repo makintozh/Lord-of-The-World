@@ -1,12 +1,12 @@
 [gd_scene load_steps=15 format=3 uid="uid://cys1kf7rr5t03"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/choice_server.gd" id="1_o2s7j"]
-[ext_resource type="Texture2D" uid="uid://d0f377gqpli7j" path="res://src/ui/backgrounds/background.png" id="2_45t4e"]
-[ext_resource type="Texture2D" uid="uid://b5crkkfaua4yl" path="res://src/ui/buttons/back_button.png" id="3_nsa51"]
-[ext_resource type="Texture2D" uid="uid://xqn1xyhwx0e5" path="res://src/ui/buttons/button_2.png" id="4_x21et"]
-[ext_resource type="Texture2D" uid="uid://cv7ni4dkhcfoi" path="res://src/ui/elements/Group 1000006717.png" id="5_4sk1u"]
-[ext_resource type="Texture2D" uid="uid://cgsykm02o0fr0" path="res://src/ui/buttons/green buttom base long.png" id="6_ff5py"]
-[ext_resource type="Texture2D" uid="uid://bdwktogmi00db" path="res://src/ui/elements/update 1.png" id="7_q5b6y"]
+[ext_resource type="Texture2D" uid="uid://deogoyws606ay" path="res://src/ui/backgrounds/background.png" id="2_45t4e"]
+[ext_resource type="Texture2D" uid="uid://cbar6q76od41h" path="res://src/ui/buttons/back_button.png" id="3_nsa51"]
+[ext_resource type="Texture2D" uid="uid://b8g6d7u0e5b8u" path="res://src/ui/buttons/button_2.png" id="4_x21et"]
+[ext_resource type="Texture2D" uid="uid://b0y5ymhpld31a" path="res://src/ui/elements/Group 1000006717.png" id="5_4sk1u"]
+[ext_resource type="Texture2D" uid="uid://b7kavqts3jctx" path="res://src/ui/buttons/green buttom base long.png" id="6_ff5py"]
+[ext_resource type="Texture2D" uid="uid://cq4r3wywcji8n" path="res://src/ui/elements/update 1.png" id="7_q5b6y"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b2grb"]
 texture = ExtResource("6_ff5py")
