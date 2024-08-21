@@ -163,6 +163,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server1/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -175,6 +176,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server1" type="Button" parent="ScrollContainer/Server-List/Server1/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -218,6 +220,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server2/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -230,6 +233,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server2" type="Button" parent="ScrollContainer/Server-List/Server2/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -273,6 +277,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server3/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -285,6 +290,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server3" type="Button" parent="ScrollContainer/Server-List/Server3/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -328,6 +334,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server4/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -340,6 +347,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server4" type="Button" parent="ScrollContainer/Server-List/Server4/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -383,6 +391,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server5/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -395,6 +404,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server5" type="Button" parent="ScrollContainer/Server-List/Server5/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -438,6 +448,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server6/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -450,6 +461,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server6" type="Button" parent="ScrollContainer/Server-List/Server6/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -493,6 +505,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server7/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -505,6 +518,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server7" type="Button" parent="ScrollContainer/Server-List/Server7/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -548,6 +562,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server8/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -560,6 +575,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server8" type="Button" parent="ScrollContainer/Server-List/Server8/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -603,6 +619,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server9/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -615,6 +632,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server9" type="Button" parent="ScrollContainer/Server-List/Server9/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -658,6 +676,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server10/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -670,6 +689,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server10" type="Button" parent="ScrollContainer/Server-List/Server10/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -713,6 +733,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server11/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -725,6 +746,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server11" type="Button" parent="ScrollContainer/Server-List/Server11/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -768,6 +790,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server12/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -780,6 +803,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server12" type="Button" parent="ScrollContainer/Server-List/Server12/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -823,6 +847,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server13/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -835,6 +860,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server13" type="Button" parent="ScrollContainer/Server-List/Server13/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -878,6 +904,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server14/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -890,6 +917,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server14" type="Button" parent="ScrollContainer/Server-List/Server14/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -933,6 +961,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server15/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -945,6 +974,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server15" type="Button" parent="ScrollContainer/Server-List/Server15/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -988,6 +1018,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server16/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -1000,6 +1031,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server16" type="Button" parent="ScrollContainer/Server-List/Server16/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -1043,6 +1075,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server17/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -1055,6 +1088,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server17" type="Button" parent="ScrollContainer/Server-List/Server17/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -1098,6 +1132,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server18/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -1110,6 +1145,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server18" type="Button" parent="ScrollContainer/Server-List/Server18/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -1153,6 +1189,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server19/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -1165,6 +1202,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server19" type="Button" parent="ScrollContainer/Server-List/Server19/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -1208,6 +1246,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server20/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -1220,6 +1259,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server20" type="Button" parent="ScrollContainer/Server-List/Server20/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -1263,6 +1303,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server21/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -1275,6 +1316,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server21" type="Button" parent="ScrollContainer/Server-List/Server21/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -1318,6 +1360,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server22/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -1330,6 +1373,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server22" type="Button" parent="ScrollContainer/Server-List/Server22/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -1373,6 +1417,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server23/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -1385,6 +1430,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server23" type="Button" parent="ScrollContainer/Server-List/Server23/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -1428,6 +1474,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server24/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -1440,6 +1487,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server24" type="Button" parent="ScrollContainer/Server-List/Server24/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -1483,6 +1531,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server25/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -1495,6 +1544,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server25" type="Button" parent="ScrollContainer/Server-List/Server25/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -1538,6 +1588,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server26/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -1550,6 +1601,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server26" type="Button" parent="ScrollContainer/Server-List/Server26/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -1593,6 +1645,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server27/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -1605,6 +1658,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server27" type="Button" parent="ScrollContainer/Server-List/Server27/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -1648,6 +1702,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server28/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -1660,6 +1715,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server28" type="Button" parent="ScrollContainer/Server-List/Server28/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -1703,6 +1759,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server29/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -1715,6 +1772,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server29" type="Button" parent="ScrollContainer/Server-List/Server29/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -1758,6 +1816,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server30/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -1770,6 +1829,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server30" type="Button" parent="ScrollContainer/Server-List/Server30/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -1813,6 +1873,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server31/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -1825,6 +1886,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server31" type="Button" parent="ScrollContainer/Server-List/Server31/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -1868,6 +1930,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server32/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -1880,6 +1943,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server32" type="Button" parent="ScrollContainer/Server-List/Server32/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -1923,6 +1987,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server33/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -1935,6 +2000,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server33" type="Button" parent="ScrollContainer/Server-List/Server33/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -1978,6 +2044,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server34/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -1990,6 +2057,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server34" type="Button" parent="ScrollContainer/Server-List/Server34/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -2033,6 +2101,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server35/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -2045,6 +2114,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server35" type="Button" parent="ScrollContainer/Server-List/Server35/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -2088,6 +2158,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server36/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -2100,6 +2171,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server36" type="Button" parent="ScrollContainer/Server-List/Server36/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -2143,6 +2215,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server37/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -2155,6 +2228,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server37" type="Button" parent="ScrollContainer/Server-List/Server37/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -2198,6 +2272,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server38/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -2210,6 +2285,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server38" type="Button" parent="ScrollContainer/Server-List/Server38/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -2253,6 +2329,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server39/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -2265,6 +2342,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server39" type="Button" parent="ScrollContainer/Server-List/Server39/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -2308,6 +2386,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server40/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -2320,6 +2399,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server40" type="Button" parent="ScrollContainer/Server-List/Server40/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -2363,6 +2443,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server41/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -2375,6 +2456,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server41" type="Button" parent="ScrollContainer/Server-List/Server41/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -2418,6 +2500,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server42/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -2430,6 +2513,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server42" type="Button" parent="ScrollContainer/Server-List/Server42/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -2473,6 +2557,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server43/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -2485,6 +2570,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server43" type="Button" parent="ScrollContainer/Server-List/Server43/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -2528,6 +2614,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server44/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -2540,6 +2627,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server44" type="Button" parent="ScrollContainer/Server-List/Server44/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -2583,6 +2671,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server45/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -2595,6 +2684,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server45" type="Button" parent="ScrollContainer/Server-List/Server45/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -2638,6 +2728,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server46/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -2650,6 +2741,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server46" type="Button" parent="ScrollContainer/Server-List/Server46/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -2693,6 +2785,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server47/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -2705,6 +2798,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server47" type="Button" parent="ScrollContainer/Server-List/Server47/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -2748,6 +2842,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server48/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -2760,6 +2855,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server48" type="Button" parent="ScrollContainer/Server-List/Server48/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -2803,6 +2899,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server49/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -2815,6 +2912,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server49" type="Button" parent="ScrollContainer/Server-List/Server49/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -2858,6 +2956,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server50/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -2870,6 +2969,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server50" type="Button" parent="ScrollContainer/Server-List/Server50/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -2913,6 +3013,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server51/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -2925,6 +3026,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server51" type="Button" parent="ScrollContainer/Server-List/Server51/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -2968,6 +3070,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server52/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -2980,6 +3083,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server52" type="Button" parent="ScrollContainer/Server-List/Server52/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -3023,6 +3127,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server53/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -3035,6 +3140,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server53" type="Button" parent="ScrollContainer/Server-List/Server53/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -3078,6 +3184,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server54/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -3090,6 +3197,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server54" type="Button" parent="ScrollContainer/Server-List/Server54/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -3133,6 +3241,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server55/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -3145,6 +3254,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server55" type="Button" parent="ScrollContainer/Server-List/Server55/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -3188,6 +3298,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server56/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -3200,6 +3311,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server56" type="Button" parent="ScrollContainer/Server-List/Server56/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -3243,6 +3355,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server57/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -3255,6 +3368,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server57" type="Button" parent="ScrollContainer/Server-List/Server57/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -3298,6 +3412,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server58/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -3310,6 +3425,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server58" type="Button" parent="ScrollContainer/Server-List/Server58/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -3353,6 +3469,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server59/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -3365,6 +3482,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server59" type="Button" parent="ScrollContainer/Server-List/Server59/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -3408,6 +3526,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server60/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -3420,6 +3539,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server60" type="Button" parent="ScrollContainer/Server-List/Server60/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -3463,6 +3583,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server61/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -3475,6 +3596,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server61" type="Button" parent="ScrollContainer/Server-List/Server61/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -3518,6 +3640,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server62/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -3530,6 +3653,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server62" type="Button" parent="ScrollContainer/Server-List/Server62/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -3573,6 +3697,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server63/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -3585,6 +3710,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server63" type="Button" parent="ScrollContainer/Server-List/Server63/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -3628,6 +3754,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server64/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -3640,6 +3767,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server64" type="Button" parent="ScrollContainer/Server-List/Server64/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -3683,6 +3811,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server65/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -3695,6 +3824,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server65" type="Button" parent="ScrollContainer/Server-List/Server65/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -3738,6 +3868,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server66/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -3750,6 +3881,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server66" type="Button" parent="ScrollContainer/Server-List/Server66/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -3793,6 +3925,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server67/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -3805,6 +3938,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server67" type="Button" parent="ScrollContainer/Server-List/Server67/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -3848,6 +3982,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server68/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -3860,6 +3995,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server68" type="Button" parent="ScrollContainer/Server-List/Server68/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -3903,6 +4039,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server69/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -3915,6 +4052,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server69" type="Button" parent="ScrollContainer/Server-List/Server69/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -3958,6 +4096,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server70/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -3970,6 +4109,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server70" type="Button" parent="ScrollContainer/Server-List/Server70/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -4013,6 +4153,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server71/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -4025,6 +4166,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server71" type="Button" parent="ScrollContainer/Server-List/Server71/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -4068,6 +4210,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server72/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -4080,6 +4223,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server72" type="Button" parent="ScrollContainer/Server-List/Server72/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -4123,6 +4267,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server73/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -4135,6 +4280,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server73" type="Button" parent="ScrollContainer/Server-List/Server73/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -4178,6 +4324,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server74/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -4190,6 +4337,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server74" type="Button" parent="ScrollContainer/Server-List/Server74/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -4233,6 +4381,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server75/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -4245,6 +4394,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server75" type="Button" parent="ScrollContainer/Server-List/Server75/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -4288,6 +4438,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server76/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -4300,6 +4451,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server76" type="Button" parent="ScrollContainer/Server-List/Server76/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -4343,6 +4495,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server77/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -4355,6 +4508,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server77" type="Button" parent="ScrollContainer/Server-List/Server77/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -4398,6 +4552,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server78/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -4410,6 +4565,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server78" type="Button" parent="ScrollContainer/Server-List/Server78/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -4453,6 +4609,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server79/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -4465,6 +4622,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server79" type="Button" parent="ScrollContainer/Server-List/Server79/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")
@@ -4508,6 +4666,7 @@ offset_bottom = 190.0
 
 [node name="ServerName" type="Label" parent="ScrollContainer/Server-List/Server80/ServarNameContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 31
 text = "SERVER NAME"
 
@@ -4520,6 +4679,7 @@ offset_bottom = 190.0
 
 [node name="PlayButton_Server80" type="Button" parent="ScrollContainer/Server-List/Server80/ServerPlayButton"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2grb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_45lj6")

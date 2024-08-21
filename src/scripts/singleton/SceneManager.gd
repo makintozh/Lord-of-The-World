@@ -7,9 +7,18 @@ extends Node
 @onready var loading_screen_scene = preload("res://src/scenes/loading-scenes/loading.tscn")
 
 
+
+
+
 var scene_to_load_path
 var loading_screen_scene_instance
 var loading = false
+
+
+
+
+
+
 
 
 func go_to_scene(path):
@@ -27,6 +36,12 @@ func go_to_scene(path):
 	
 	loading = true
 	scene_to_load_path = path
+
+
+
+
+
+
 
 
 func _process(_delta):
@@ -48,6 +63,43 @@ func _process(_delta):
 		
 	else:
 		print("Ошибка загрузки!")
+
+
+
+
+
+
+
+func _notification(what):
+	var singleton_count = 3
+	
+	if what == NOTIFICATION_WM_GO_BACK_REQUEST and OS.get_name() == "Android" or OS.get_name() == "iOS":
+		
+		if get_tree().get_root().get_child(singleton_count).has_method("_on_back_button_pressed"):
+			print("Переход на предыдущую с  " + str(get_tree().get_root().get_child(3)))
+			get_tree().get_root().get_child(singleton_count).call("_on_back_button_pressed")
+		
+		else:
+			print(str(get_tree().get_root().get_child(singleton_count)) + " Не имеет метода _on_back_button_pressed ")
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

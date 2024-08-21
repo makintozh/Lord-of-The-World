@@ -7,7 +7,6 @@ extends Node
 
 
 
-
 var username = ""   #Ник Пользователя
 var password = ""   #Пароль Пользователя
 

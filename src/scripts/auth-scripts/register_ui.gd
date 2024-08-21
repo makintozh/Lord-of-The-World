@@ -66,7 +66,7 @@ func enable_register():
 
 func _on_back_button_pressed():
 	GLOBAL.sign_out = true
-	SceneChangeManager.go_to_scene("res://src/scenes/auth-scenes/login_ui.tscn")
+	SceneManager.go_to_scene("res://src/scenes/auth-scenes/login_ui.tscn")
 
 
 
@@ -129,7 +129,7 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 		GLOBAL.from_register_token = token
 		GLOBAL.username = str(usernameinput.text)
 		GLOBAL.password = str(passwordinput.text)
-		SceneChangeManager.go_to_scene("res://src/scenes/auth-scenes/login_ui.tscn")
+		SceneManager.go_to_scene("res://src/scenes/auth-scenes/login_ui.tscn")
 	else:
 		GLOBAL.failed_reason = message.replace('"',"")
 		waitingresponse.visible = false

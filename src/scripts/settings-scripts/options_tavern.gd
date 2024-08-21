@@ -24,7 +24,7 @@ func _on_close_button_pressed():
 
 func _on_sign_out_button_pressed():
 	GLOBAL.sign_out = true
-	SceneChangeManager.go_to_scene("res://src/scenes/auth-scenes/login_ui.tscn")
+	SceneManager.go_to_scene("res://src/scenes/auth-scenes/login_ui.tscn")
 
 
 
@@ -32,7 +32,7 @@ func _on_sign_out_button_pressed():
 
 func _on_change_server_pressed():
 	GLOBAL.from_change_server = true
-	SceneChangeManager.go_to_scene("res://src/scenes/auth-scenes/choice_server.tscn")
+	SceneManager.go_to_scene("res://src/scenes/auth-scenes/choice_server.tscn")
 	
 	
 	

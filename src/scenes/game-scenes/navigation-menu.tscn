@@ -1,15 +1,20 @@
-[gd_scene load_steps=271 format=3 uid="uid://pk7extbu3xea"]
+[gd_scene load_steps=279 format=3 uid="uid://pk7extbu3xea"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/navigation-menu.gd" id="1_ykvwa"]
-[ext_resource type="Texture2D" uid="uid://r8g057sioym2" path="res://src/ui/elements/Group 173.png" id="2_qyodl"]
-[ext_resource type="Texture2D" uid="uid://cyhdqqjpu43bn" path="res://src/ui/buildings/Кланы.png" id="3_102d5"]
-[ext_resource type="Texture2D" uid="uid://csvx7h234tnr5" path="res://src/ui/backgrounds/Главный_экран_адаптировано_под_размер_.PNG" id="3_j0xlm"]
+[ext_resource type="Texture2D" uid="uid://cycppphhcsmys" path="res://src/ui/elements/Group 173.png" id="2_qyodl"]
+[ext_resource type="Texture2D" uid="uid://c4k8035dxnhcu" path="res://src/ui/buildings/Кланы.png" id="3_102d5"]
+[ext_resource type="Texture2D" uid="uid://ce1jntdd461wa" path="res://src/ui/backgrounds/Главный_экран_адаптировано_под_размер_.PNG" id="3_j0xlm"]
 [ext_resource type="VideoStream" path="res://src/ui/backgrounds/Главный_экран_адаптировано_под_размер_1.ogv" id="3_q2uc8"]
-[ext_resource type="Texture2D" uid="uid://bb0xnc6eesimr" path="res://src/ui/elements/Слой 7.png" id="7_gn6ft"]
-[ext_resource type="Texture2D" uid="uid://nxc85tqy5c0c" path="res://src/ui/buildings/animated/Tavern.png" id="9_8b332"]
-[ext_resource type="Texture2D" uid="uid://xvqanx20v8y6" path="res://src/ui/buildings/animated/Biom.png" id="10_bbc1g"]
-[ext_resource type="Texture2D" uid="uid://c3g8hl7gusw58" path="res://src/ui/buildings/animated/ClansHall.png" id="12_vctx2"]
-[ext_resource type="Texture2D" uid="uid://b4i44tp0vnpcf" path="res://src/ui/buildings/animated/League.png" id="13_6paem"]
+[ext_resource type="Texture2D" uid="uid://co8whrd7y7enu" path="res://src/ui/elements/Слой 7.png" id="7_gn6ft"]
+[ext_resource type="Texture2D" uid="uid://dwdcko5vqflno" path="res://src/ui/buildings/animated/Tavern.png" id="9_8b332"]
+[ext_resource type="Texture2D" uid="uid://x51d0hw23pfc" path="res://src/ui/buildings/animated/Biom.png" id="10_bbc1g"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="11_8sxna"]
+[ext_resource type="Resource" uid="uid://5a1rq24an53u" path="res://src/ui/dialogues/wantyouback.tres" id="12_f0vy2"]
+[ext_resource type="Texture2D" uid="uid://poisvutk8dtf" path="res://src/ui/buildings/animated/ClansHall.png" id="12_vctx2"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="12_yq8ua"]
+[ext_resource type="Texture2D" uid="uid://bksw1x1vdblhe" path="res://src/ui/buildings/animated/League.png" id="13_6paem"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="13_8tv22"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="14_x8ksr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_36twm"]
 atlas = ExtResource("9_8b332")
@@ -1835,6 +1840,15 @@ animations = [{
 "speed": 30.0
 }]
 
+[sub_resource type="RichTextEffect" id="RichTextEffect_00ilh"]
+script = ExtResource("12_yq8ua")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_er177"]
+script = ExtResource("13_8tv22")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_dggjw"]
+script = ExtResource("14_x8ksr")
+
 [node name="Navigation-menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -1925,8 +1939,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Taverna_Animated" type="AnimatedSprite2D" parent="Buildings/Tavern/Tavern"]
-position = Vector2(101, 92)
-scale = Vector2(1.25195, 1.21729)
+position = Vector2(89, 130)
 sprite_frames = SubResource("SpriteFrames_2rkp6")
 animation = &"Tavern"
 autoplay = "Tavern"
@@ -1934,10 +1947,10 @@ frame_progress = 0.390949
 
 [node name="TavernLabel" type="MarginContainer" parent="Buildings/Tavern"]
 layout_mode = 0
-offset_left = 60.0
-offset_top = 326.0
-offset_right = 171.0
-offset_bottom = 372.0
+offset_left = 40.0
+offset_top = 344.0
+offset_right = 151.0
+offset_bottom = 390.0
 
 [node name="TavernLabel" type="Label" parent="Buildings/Tavern/TavernLabel"]
 layout_mode = 2
@@ -1966,18 +1979,17 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Biom_Animated" type="AnimatedSprite2D" parent="Buildings/Biom/Biom"]
-position = Vector2(80, 73)
-scale = Vector2(1.09033, 1.09729)
+position = Vector2(74, 98)
 sprite_frames = SubResource("SpriteFrames_ibxjl")
 animation = &"Biom"
 autoplay = "Biom"
 
 [node name="BiomLabel" type="MarginContainer" parent="Buildings/Biom"]
 layout_mode = 0
-offset_left = 283.0
-offset_top = 404.0
-offset_right = 394.0
-offset_bottom = 450.0
+offset_left = 256.0
+offset_top = 408.0
+offset_right = 367.0
+offset_bottom = 454.0
 
 [node name="BiomLabel" type="Label" parent="Buildings/Biom/BiomLabel"]
 layout_mode = 2
@@ -1994,10 +2006,10 @@ offset_bottom = 94.0
 
 [node name="ClansHall" type="MarginContainer" parent="Buildings/ClansHall"]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 522.0
-offset_right = 182.0
-offset_bottom = 699.0
+offset_left = 10.0
+offset_top = 534.0
+offset_right = 186.0
+offset_bottom = 711.0
 
 [node name="ClansHall" type="TextureButton" parent="Buildings/ClansHall/ClansHall"]
 layout_mode = 2
@@ -2006,8 +2018,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="ClansHall_Animated" type="AnimatedSprite2D" parent="Buildings/ClansHall/ClansHall"]
-position = Vector2(92, 89)
-scale = Vector2(1.335, 1.335)
+position = Vector2(82, 95)
 sprite_frames = SubResource("SpriteFrames_fah3o")
 animation = &"ClansHall"
 autoplay = "ClansHall"
@@ -2015,15 +2026,15 @@ frame_progress = 0.00634395
 
 [node name="ClansHallLabel" type="MarginContainer" parent="Buildings/ClansHall"]
 layout_mode = 0
-offset_left = 33.0
-offset_top = 622.0
-offset_right = 185.0
-offset_bottom = 668.0
+offset_left = 54.0
+offset_top = 651.0
+offset_right = 206.0
+offset_bottom = 697.0
 
 [node name="ClansHallLabel" type="Label" parent="Buildings/ClansHall/ClansHallLabel"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 34
-text = "Clans hall"
+text = "Clans Hall"
 
 [node name="League" type="Control" parent="Buildings"]
 layout_mode = 3
@@ -2046,8 +2057,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="League_Animated" type="AnimatedSprite2D" parent="Buildings/League/League"]
-position = Vector2(87, 75)
-scale = Vector2(1.375, 1.375)
+position = Vector2(85, 87)
 sprite_frames = SubResource("SpriteFrames_unykc")
 animation = &"League"
 autoplay = "League"
@@ -2055,17 +2065,55 @@ frame_progress = 0.453017
 
 [node name="LeagueLabel" type="MarginContainer" parent="Buildings/League"]
 layout_mode = 0
-offset_left = 326.0
-offset_top = 723.0
-offset_right = 478.0
-offset_bottom = 769.0
+offset_left = 335.0
+offset_top = 733.0
+offset_right = 487.0
+offset_bottom = 779.0
 
 [node name="LeagueLabel" type="Label" parent="Buildings/League/LeagueLabel"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 34
 text = "League"
 
+[node name="TransparentBack" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -477.0
+offset_top = -279.0
+offset_right = 828.0
+offset_bottom = 1395.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.529412)
+
+[node name="BackDialogue" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1.0
+offset_top = 482.0
+offset_right = 499.0
+offset_bottom = 786.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("11_8sxna")
+data = ExtResource("12_f0vy2")
+start_id = "1"
+hide_portrait = true
+scroll_speed = 25079
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_00ilh"), SubResource("RichTextEffect_er177"), SubResource("RichTextEffect_dggjw")])
+max_options_count = 2
+options_alignment = 1
+options_vertical = true
+
 [connection signal="pressed" from="Buildings/Tavern/Tavern/Tavern" to="." method="_on_tavern_pressed"]
 [connection signal="pressed" from="Buildings/Biom/Biom/Biom" to="." method="_on_biom_pressed"]
 [connection signal="pressed" from="Buildings/ClansHall/ClansHall/ClansHall" to="." method="_on_clans_hall_pressed"]
 [connection signal="pressed" from="Buildings/League/League/League" to="." method="_on_league_pressed"]
+[connection signal="dialogue_signal" from="BackDialogue" to="." method="_on_back_dialogue_dialogue_signal"]
