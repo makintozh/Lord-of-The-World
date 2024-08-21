@@ -82,26 +82,3 @@ func _notification(what):
 		else:
 			print(str(get_tree().get_root().get_child(singleton_count)) + " Не имеет метода _on_back_button_pressed ")
 	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

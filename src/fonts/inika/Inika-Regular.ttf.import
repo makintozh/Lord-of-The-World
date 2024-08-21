@@ -2,7 +2,7 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://rirx5gaxmtfc"
+uid="uid://bswe17605fftu"
 path="res://.godot/imported/Inika-Regular.ttf-6d0712f66a4fac2a7c746b476278e4e1.fontdata"
 
 [deps]
@@ -15,6 +15,7 @@ dest_files=["res://.godot/imported/Inika-Regular.ttf-6d0712f66a4fac2a7c746b47627
 Rendering=null
 antialiasing=1
 generate_mipmaps=true
+disable_embedded_bitmaps=true
 multichannel_signed_distance_field=true
 msdf_pixel_range=100
 msdf_size=250

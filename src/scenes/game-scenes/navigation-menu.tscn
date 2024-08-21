@@ -1,18 +1,17 @@
-[gd_scene load_steps=279 format=3 uid="uid://pk7extbu3xea"]
+[gd_scene load_steps=278 format=3 uid="uid://pk7extbu3xea"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/navigation-menu.gd" id="1_ykvwa"]
-[ext_resource type="Texture2D" uid="uid://b36pf6wcgfajg" path="res://src/ui/elements/Group 173.png" id="2_qyodl"]
-[ext_resource type="Texture2D" uid="uid://ymdpuvn0ykv" path="res://src/ui/buildings/Кланы.png" id="3_102d5"]
-[ext_resource type="Texture2D" uid="uid://fd3fywjp7sa0" path="res://src/ui/backgrounds/Главный_экран_адаптировано_под_размер_.PNG" id="3_j0xlm"]
+[ext_resource type="Texture2D" uid="uid://bvjiis4tp4d3d" path="res://src/ui/elements/Group 173.png" id="2_qyodl"]
+[ext_resource type="Texture2D" uid="uid://cic3e5jc0m4wv" path="res://src/ui/backgrounds/Главный_экран_адаптировано_под_размер_.PNG" id="3_j0xlm"]
 [ext_resource type="VideoStream" path="res://src/ui/backgrounds/Главный_экран_адаптировано_под_размер_1.ogv" id="3_q2uc8"]
-[ext_resource type="Texture2D" uid="uid://c8ggma1q6e48g" path="res://src/ui/elements/Слой 7.png" id="7_gn6ft"]
-[ext_resource type="Texture2D" uid="uid://c3i5pqmigo042" path="res://src/ui/buildings/animated/Tavern.png" id="9_8b332"]
-[ext_resource type="Texture2D" uid="uid://utpbuxqiocrw" path="res://src/ui/buildings/animated/Biom.png" id="10_bbc1g"]
+[ext_resource type="Texture2D" uid="uid://p1vvbys60bcj" path="res://src/ui/elements/Слой 7.png" id="7_gn6ft"]
+[ext_resource type="Texture2D" uid="uid://badii7en6viys" path="res://src/ui/buildings/animated/Tavern.png" id="9_8b332"]
+[ext_resource type="Texture2D" uid="uid://c45yqc3m71uwh" path="res://src/ui/buildings/animated/Biom.png" id="10_bbc1g"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="11_8sxna"]
 [ext_resource type="Resource" uid="uid://5a1rq24an53u" path="res://src/ui/dialogues/wantyouback.tres" id="12_f0vy2"]
-[ext_resource type="Texture2D" uid="uid://dlmhxf1qd5rxo" path="res://src/ui/buildings/animated/ClansHall.png" id="12_vctx2"]
+[ext_resource type="Texture2D" uid="uid://rbi22gkwue8n" path="res://src/ui/buildings/animated/ClansHall.png" id="12_vctx2"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="12_yq8ua"]
-[ext_resource type="Texture2D" uid="uid://cyoqvoywi6vbo" path="res://src/ui/buildings/animated/League.png" id="13_6paem"]
+[ext_resource type="Texture2D" uid="uid://blefep2p3836k" path="res://src/ui/buildings/animated/League.png" id="13_6paem"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="13_8tv22"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="14_x8ksr"]
 
@@ -2011,7 +2010,6 @@ offset_bottom = 711.0
 
 [node name="ClansHall" type="TextureButton" parent="Buildings/ClansHall/ClansHall"]
 layout_mode = 2
-texture_focused = ExtResource("3_102d5")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -2097,10 +2095,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 1.0
-offset_top = 482.0
-offset_right = 499.0
-offset_bottom = 786.0
+offset_left = -250.0
+offset_top = -120.0
+offset_right = 248.0
+offset_bottom = 184.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("11_8sxna")

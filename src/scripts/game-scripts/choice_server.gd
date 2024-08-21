@@ -1824,18 +1824,3 @@ func _on_play_button_server_80_pressed():
 	GLOBAL.choiced_server_name = server80_name_label.text
 	print("\nВыбрано: " + server80_name_label.text + " " + str(GLOBAL.choiced_server_address))
 	SceneManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

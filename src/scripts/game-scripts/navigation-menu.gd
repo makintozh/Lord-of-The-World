@@ -50,10 +50,3 @@ func _on_back_dialogue_dialogue_signal(value):
 
 	if value == 'NO':
 		close_dialogue()
-
-
-
-
-
-
-
