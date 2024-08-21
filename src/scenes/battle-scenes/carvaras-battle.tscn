@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://cx2nutr0ahh8e"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/biom-scripts/battle-scripts/carvaras-battle.gd" id="1_husbi"]
-[ext_resource type="Texture2D" uid="uid://b8i4p8o7ihe6y" path="res://src/ui/backgrounds/battle-backgrounds/Орки(Carvaras).PNG" id="2_i21v8"]
+[ext_resource type="Texture2D" uid="uid://yjegphtcey47" path="res://src/ui/backgrounds/battle-backgrounds/Орки(Carvaras).PNG" id="2_i21v8"]
 [ext_resource type="VideoStream" path="res://src/ui/backgrounds/battle-backgrounds/Орки(Carvaras).ogv" id="3_htshc"]
-[ext_resource type="Texture2D" uid="uid://b5crkkfaua4yl" path="res://src/ui/buttons/back_button.png" id="4_cbjvg"]
+[ext_resource type="Texture2D" uid="uid://bbpw08kj24coi" path="res://src/ui/buttons/back_button.png" id="4_cbjvg"]
 
 [node name="Carvaras-Battle" type="Control"]
 layout_mode = 3

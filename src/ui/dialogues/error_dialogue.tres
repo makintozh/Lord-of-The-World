@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://bo8fnmu502em0"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_n3xoa"]
+
+[resource]
+script = ExtResource("1_n3xoa")
+starts = {
+"error": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(-349.857, -246.679),
+"start_id": "error"
+},
+"1_1": {
+"dialogue": "{{reason}}",
+"offset": Vector2(-97.1579, -177.425),
+"options": {
+0: {
+"condition": {},
+"link": &"3_1",
+"text": "RESTART"
+}
+},
+"size": Vector2(300, 240),
+"speaker": "ERROR [SEND THIS TO DEVELOPER]"
+},
+"3_1": {
+"link": "END",
+"offset": Vector2(301.711, -2.71203),
+"signalValue": "RESTART"
+}
+}
+variables = {
+"reason": {
+"type": 4,
+"value": "ERROR_DESCRIPTION"
+}
+}
+strays = Array[String]([])
+characters = ""

@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://73dph75xcuni"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/biom-scripts/battle-scripts/celestial-battle.gd" id="1_xrqt6"]
-[ext_resource type="Texture2D" uid="uid://3r7t3mufqtc0" path="res://src/ui/backgrounds/hub-backgrounds/Перворожденные(Celestial).png" id="2_rrftt"]
-[ext_resource type="VideoStream" path="res://src/ui/backgrounds/hub-backgrounds/Перворожденные(Celestial).ogv" id="3_yfjb5"]
-[ext_resource type="Texture2D" uid="uid://b5crkkfaua4yl" path="res://src/ui/buttons/back_button.png" id="4_5qb7k"]
+[ext_resource type="Texture2D" uid="uid://dycfodcltiddi" path="res://src/ui/backgrounds/battle-backgrounds/Перворожденные(Celestial) - поле битвы.PNG" id="2_74b4p"]
+[ext_resource type="VideoStream" path="res://src/ui/backgrounds/battle-backgrounds/Перворожденные(Celestial) - поле битвы.ogv" id="3_1x3uu"]
+[ext_resource type="Texture2D" uid="uid://bbpw08kj24coi" path="res://src/ui/buttons/back_button.png" id="4_5qb7k"]
 
 [node name="Celestial-Battle" type="Control"]
 layout_mode = 3
@@ -23,7 +23,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("2_rrftt")
+texture = ExtResource("2_74b4p")
 expand_mode = 1
 stretch_mode = 6
 
@@ -39,7 +39,7 @@ stretch_mode = 3
 
 [node name="BackGround-Video" type="VideoStreamPlayer" parent="AspectRatioContainer"]
 layout_mode = 2
-stream = ExtResource("3_yfjb5")
+stream = ExtResource("3_1x3uu")
 autoplay = true
 expand = true
 loop = true

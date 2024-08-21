@@ -1,19 +1,17 @@
-[gd_scene load_steps=278 format=3 uid="uid://pk7extbu3xea"]
+[gd_scene load_steps=276 format=3 uid="uid://pk7extbu3xea"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/navigation-menu.gd" id="1_ykvwa"]
-[ext_resource type="Texture2D" uid="uid://bvjiis4tp4d3d" path="res://src/ui/elements/Group 173.png" id="2_qyodl"]
-[ext_resource type="Texture2D" uid="uid://cic3e5jc0m4wv" path="res://src/ui/backgrounds/Главный_экран_адаптировано_под_размер_.PNG" id="3_j0xlm"]
+[ext_resource type="Texture2D" uid="uid://bjxgaaelebetc" path="res://src/ui/elements/Group 173.png" id="2_qyodl"]
+[ext_resource type="Texture2D" uid="uid://b5yjn1ipjeovm" path="res://src/ui/backgrounds/Главный_экран_адаптировано_под_размер_.PNG" id="3_j0xlm"]
 [ext_resource type="VideoStream" path="res://src/ui/backgrounds/Главный_экран_адаптировано_под_размер_1.ogv" id="3_q2uc8"]
-[ext_resource type="Texture2D" uid="uid://p1vvbys60bcj" path="res://src/ui/elements/Слой 7.png" id="7_gn6ft"]
-[ext_resource type="Texture2D" uid="uid://badii7en6viys" path="res://src/ui/buildings/animated/Tavern.png" id="9_8b332"]
-[ext_resource type="Texture2D" uid="uid://c45yqc3m71uwh" path="res://src/ui/buildings/animated/Biom.png" id="10_bbc1g"]
+[ext_resource type="Texture2D" uid="uid://cjjbfj14yb5k0" path="res://src/ui/elements/Слой 7.png" id="7_gn6ft"]
+[ext_resource type="Texture2D" uid="uid://c04nb0me56hhv" path="res://src/ui/buildings/animated/Tavern.png" id="9_8b332"]
+[ext_resource type="Texture2D" uid="uid://dirmmb5psfaha" path="res://src/ui/buildings/animated/Biom.png" id="10_bbc1g"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="11_8sxna"]
-[ext_resource type="Resource" uid="uid://5a1rq24an53u" path="res://src/ui/dialogues/wantyouback.tres" id="12_f0vy2"]
-[ext_resource type="Texture2D" uid="uid://rbi22gkwue8n" path="res://src/ui/buildings/animated/ClansHall.png" id="12_vctx2"]
+[ext_resource type="Resource" uid="uid://5a1rq24an53u" path="res://src/ui/dialogues/warning_back_dialogue.tres" id="12_f0vy2"]
+[ext_resource type="Texture2D" uid="uid://bjciqj54bguy1" path="res://src/ui/buildings/animated/ClansHall.png" id="12_vctx2"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="12_yq8ua"]
-[ext_resource type="Texture2D" uid="uid://blefep2p3836k" path="res://src/ui/buildings/animated/League.png" id="13_6paem"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="13_8tv22"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="14_x8ksr"]
+[ext_resource type="Texture2D" uid="uid://b3i1kfgv0t35x" path="res://src/ui/buildings/animated/League.png" id="13_6paem"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_36twm"]
 atlas = ExtResource("9_8b332")
@@ -1839,14 +1837,14 @@ animations = [{
 "speed": 30.0
 }]
 
-[sub_resource type="RichTextEffect" id="RichTextEffect_00ilh"]
+[sub_resource type="RichTextEffect" id="RichTextEffect_atejj"]
 script = ExtResource("12_yq8ua")
 
-[sub_resource type="RichTextEffect" id="RichTextEffect_er177"]
-script = ExtResource("13_8tv22")
+[sub_resource type="RichTextEffect" id="RichTextEffect_sprpr"]
+script = ExtResource("12_yq8ua")
 
-[sub_resource type="RichTextEffect" id="RichTextEffect_dggjw"]
-script = ExtResource("14_x8ksr")
+[sub_resource type="RichTextEffect" id="RichTextEffect_iqsd7"]
+script = ExtResource("12_yq8ua")
 
 [node name="Navigation-menu" type="Control"]
 layout_mode = 3
@@ -2097,16 +2095,15 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -250.0
 offset_top = -120.0
-offset_right = 248.0
+offset_right = 251.0
 offset_bottom = 184.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("11_8sxna")
 data = ExtResource("12_f0vy2")
-start_id = "1"
+start_id = "warning"
 hide_portrait = true
-scroll_speed = 25079
-custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_00ilh"), SubResource("RichTextEffect_er177"), SubResource("RichTextEffect_dggjw")])
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_atejj"), SubResource("RichTextEffect_sprpr"), SubResource("RichTextEffect_iqsd7")])
 max_options_count = 2
 options_alignment = 1
 options_vertical = true
