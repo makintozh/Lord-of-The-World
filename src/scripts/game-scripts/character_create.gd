@@ -36,6 +36,7 @@ var token = JSON.stringify({
 
 
 func _ready():
+	print(token)
 	api_summary.request("http://" + GLOBAL.choiced_server_address + "/summary", CONFIG.api_headers, HTTPClient.METHOD_GET, token)
 	api.request("http://" + GLOBAL.choiced_server_address + "/archetypes", CONFIG.api_headers, HTTPClient.METHOD_GET, token)
 	main_ui.visible = false
@@ -197,12 +198,3 @@ func _process(_delta):
 
 func _on_back_button_pressed():
 	SceneManager.go_to_scene("res://src/scenes/auth-scenes/choice_server.tscn")
-
-
-
-
-
-
-
-
-

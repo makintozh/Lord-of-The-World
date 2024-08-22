@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://6p3cypaucpbs"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/clanshall.gd" id="1_rlb1d"]
-[ext_resource type="Texture2D" uid="uid://d0f377gqpli7j" path="res://src/ui/backgrounds/background.png" id="2_lk8v2"]
-[ext_resource type="Texture2D" uid="uid://487jqfb64sul" path="res://src/ui/buttons/Group 101.png" id="3_dvq7i"]
+[ext_resource type="Texture2D" uid="uid://dpbb3nvjo3ri8" path="res://src/ui/backgrounds/background.png" id="2_lk8v2"]
+[ext_resource type="Texture2D" uid="uid://bh5ey0ygeanhx" path="res://src/ui/buttons/Group 101.png" id="3_dvq7i"]
 
 [node name="Clanshall" type="Control"]
 layout_mode = 3
