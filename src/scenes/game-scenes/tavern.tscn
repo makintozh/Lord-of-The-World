@@ -1,20 +1,20 @@
 [gd_scene load_steps=18 format=3 uid="uid://0xe68w41ig5c"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/tavern.gd" id="1_06l26"]
-[ext_resource type="Texture2D" uid="uid://d0f377gqpli7j" path="res://src/ui/backgrounds/background.png" id="2_f0g80"]
-[ext_resource type="Texture2D" uid="uid://cyjrqxjr216eq" path="res://src/ui/elements/geks копия 10.png" id="3_jynqc"]
-[ext_resource type="Texture2D" uid="uid://4n8nbm2p220p" path="res://src/ui/elements/base frame 4.png" id="4_etbxp"]
-[ext_resource type="Texture2D" uid="uid://xqn1xyhwx0e5" path="res://src/ui/buttons/button_2.png" id="5_5p47d"]
-[ext_resource type="Texture2D" uid="uid://b5crkkfaua4yl" path="res://src/ui/buttons/back_button.png" id="6_2ujnu"]
-[ext_resource type="Texture2D" uid="uid://cat1s32ei0h8q" path="res://src/ui/elements/abil.png" id="7_nsrmq"]
-[ext_resource type="Texture2D" uid="uid://bu2ucf8j8tlcm" path="res://src/ui/elements/Line.png" id="8_b0sav"]
-[ext_resource type="Texture2D" uid="uid://ci3m7q01kie1i" path="res://src/ui/elements/black_info.png" id="8_syltn"]
-[ext_resource type="Texture2D" uid="uid://b2vpp1wcm05" path="res://src/ui/elements/Battle_Raiting.png" id="9_2fdt2"]
-[ext_resource type="Texture2D" uid="uid://xiua2qpxkn1u" path="res://src/ui/elements/on_star.png" id="10_5il1k"]
-[ext_resource type="Texture2D" uid="uid://cgsykm02o0fr0" path="res://src/ui/buttons/green buttom base long.png" id="10_p5dsj"]
-[ext_resource type="Texture2D" uid="uid://dyenfpjr45bf" path="res://src/ui/elements/off_star.png" id="11_w6t47"]
+[ext_resource type="Texture2D" uid="uid://dpbb3nvjo3ri8" path="res://src/ui/backgrounds/background.png" id="2_f0g80"]
+[ext_resource type="Texture2D" uid="uid://ceik1hj0va8t8" path="res://src/ui/elements/geks копия 10.png" id="3_jynqc"]
+[ext_resource type="Texture2D" uid="uid://yfvt8cyglyas" path="res://src/ui/elements/base frame 4.png" id="4_etbxp"]
+[ext_resource type="Texture2D" uid="uid://dk7ow2l76cqyi" path="res://src/ui/buttons/button_2.png" id="5_5p47d"]
+[ext_resource type="Texture2D" uid="uid://doq20ct6rvrxb" path="res://src/ui/buttons/back_button.png" id="6_2ujnu"]
+[ext_resource type="Texture2D" uid="uid://c2foijudbgsj0" path="res://src/ui/elements/abil.png" id="7_nsrmq"]
+[ext_resource type="Texture2D" uid="uid://0bp37iul3ut1" path="res://src/ui/elements/Line.png" id="8_b0sav"]
+[ext_resource type="Texture2D" uid="uid://de1cu8lwtu8xx" path="res://src/ui/elements/black_info.png" id="8_syltn"]
+[ext_resource type="Texture2D" uid="uid://cppsssierp3va" path="res://src/ui/elements/Battle_Raiting.png" id="9_2fdt2"]
+[ext_resource type="Texture2D" uid="uid://4uekocpumi5i" path="res://src/ui/elements/on_star.png" id="10_5il1k"]
+[ext_resource type="Texture2D" uid="uid://fbou1lxjmqxv" path="res://src/ui/buttons/green buttom base long.png" id="10_p5dsj"]
+[ext_resource type="Texture2D" uid="uid://cakr5bhvx1qgr" path="res://src/ui/elements/off_star.png" id="11_w6t47"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0tiyj"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ed6mt"]
 texture = ExtResource("10_p5dsj")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8syyp"]
@@ -23,7 +23,7 @@ texture = ExtResource("10_p5dsj")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w20eg"]
 texture = ExtResource("10_p5dsj")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ed6mt"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0tiyj"]
 texture = ExtResource("10_p5dsj")
 
 [node name="Tavern" type="Control"]
@@ -178,6 +178,7 @@ offset_left = 289.0
 offset_top = 514.0
 offset_right = 620.0
 offset_bottom = 583.0
+scale = Vector2(0.25, 0.25)
 mouse_filter = 2
 theme_override_constants/separation = 17
 
@@ -343,10 +344,10 @@ grow_horizontal = 2
 [node name="OptionsButton" type="Button" parent="ScrollContainer/TavernProfileUI/Control/OptionsButtonContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxTexture_0tiyj")
+theme_override_styles/focus = SubResource("StyleBoxTexture_ed6mt")
 theme_override_styles/hover = SubResource("StyleBoxTexture_8syyp")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_w20eg")
-theme_override_styles/focus = SubResource("StyleBoxTexture_ed6mt")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0tiyj")
 text = "Options"
 
 [connection signal="pressed" from="ScrollContainer/TavernProfileUI/Control/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]

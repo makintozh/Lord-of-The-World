@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjciqj54bguy1"
-path="res://.godot/imported/ClansHall.png-01816d5aeaa65bafe1abe6040133e696.ctex"
+uid="uid://ckocgnpr3rno3"
+path="res://.godot/imported/Clanshall.png-fd59148ccc20c9f44f4c499d02cb345a.ctex"
 metadata={
 "has_editor_variant": true,
 "vram_texture": false
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://src/ui/buildings/animated/ClansHall.png"
-dest_files=["res://.godot/imported/ClansHall.png-01816d5aeaa65bafe1abe6040133e696.ctex"]
+source_file="res://src/ui/buildings/animated/Clanshall.png"
+dest_files=["res://.godot/imported/Clanshall.png-fd59148ccc20c9f44f4c499d02cb345a.ctex"]
 
 [params]
 

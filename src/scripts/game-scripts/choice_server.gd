@@ -6,9 +6,7 @@ var label_style = load("res://src/ui/tres/server_label_texture.tres")
 var button_style = load("res://src/ui/tres/server_button_texture.tres")
 
 
-
 @onready var server_list = $"ScrollContainer/Server-List"
-@onready var server_control = $"ScrollContainer/Server-List/Server"
 
 @onready var refreshing = $Refresh
 
@@ -76,6 +74,9 @@ func create_server_buttons():
 		play_button.add_theme_stylebox_override("hover", button_style)
 		play_button.add_theme_stylebox_override("pressed", button_style)
 		play_button.add_theme_font_size_override("font_size" , 21)
+		play_button.mouse_filter = Control.MOUSE_FILTER_PASS
+		play_button.z_index = 2
+		
 		
 		play_button.text = "Play"
 		play_button.pressed.connect(self._on_play_button_pressed.bind(server["name"],server["address"]))
@@ -84,17 +85,59 @@ func create_server_buttons():
 		
 		
 		var server_name_label = Label.new()
-		server_name_label.add_theme_font_size_override("font_size" , 41)
-		server_name_label.add_theme_stylebox_override("normal", label_style)
-		
-		server_name_label.text = server.name
-		
-		server_list.add_child(server_name_label)
-		server_list.add_child(play_button)
-		
-		
+		server_name_label.add_theme_font_size_override("font_size" , 31)
+		#server_name_label.add_theme_stylebox_override("normal", label_style)
+		#server_name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		server_name_label.z_index = 3
 
 
+		server_name_label.text = "          " + server.name
+		
+		var hbox = HBoxContainer.new()
+		hbox.add_theme_constant_override("separation" , 0)
+		
+		
+		
+		
+		var locale_icon_RU = TextureRect.new()
+		locale_icon_RU.set_texture(load("res://src/ui/elements/Group 1000006717.png"))
+		locale_icon_RU.z_index = 1
+		locale_icon_RU.expand_mode = TextureRect.EXPAND_FIT_WIDTH_PROPORTIONAL
+		locale_icon_RU.stretch_mode = TextureRect.STRETCH_SCALE
+		
+		
+		server_list.add_child(hbox)
+		
+		
+		var server_background = TextureRect.new()
+		server_background.set_texture(load("res://src/ui/buttons/button_2.png"))
+		server_background.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		server_background.size.x = 450
+		server_background.size.y = 60
+		server_background.z_index = 0
+		server_background.z_as_relative = false
+		
+		
+		server_background.duplicate(server.id + 1)
+		
+		for i in range(server.id + 1):
+			server_background.position.x = 20
+			server_background.position.y = -10
+		
+		server_name_label.add_child(server_background)
+		server_name_label.add_child(locale_icon_RU)
+		locale_icon_RU.position.x = 40
+		locale_icon_RU.size.y = 37
+		
+		play_button.position.x = 350
+		play_button.position.y = 0
+		play_button.size.x = 0
+		play_button.size.y = 40
+		
+		#hbox.add_child(locale_icon_RU)
+		hbox.add_child(server_name_label)
+		server_name_label.add_child(play_button)
+		
 
 
 

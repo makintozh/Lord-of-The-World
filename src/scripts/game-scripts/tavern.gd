@@ -29,12 +29,3 @@ func _on_back_button_pressed():
 func _on_options_button_pressed():
 	options.instantiate()
 	add_child(options.instantiate())
-
-
-
-
-
-
-
-
-

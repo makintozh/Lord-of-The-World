@@ -73,6 +73,9 @@ func _on_api_request_request_completed(result, response_code, headers, body):
 	print("\nАрхетипы: " + str(archetypes))
 	
 	
+		
+		
+		
 	for data in archetypes:
 		archetype_id = str(data["id"])
 		archetype_title = str(data["title"])
@@ -83,6 +86,11 @@ func _on_api_request_request_completed(result, response_code, headers, body):
 		archetype.text = archetypes[0]["title"]
 		
 		
+
+	if message == "Token is invalid!":
+		push_error("/archetype token error")
+		printerr("/archetype token error")
+		SceneManager.exit_app("/arch token error")
 
 
 
@@ -102,9 +110,13 @@ func _on_api_character_create_request_completed(result, response_code, headers, 
 
 func _on_api_summary_request_completed(result, response_code, headers, body):
 	var api_response = JSON.parse_string(body.get_string_from_utf8())
+	var message = str(api_response["message"])
 	var character_info = api_response["character_info"]
+	
 	print(api_response)
 	print("\nCharacter Info: " + str(character_info))
+	
+	
 	
 	
 	if str(character_info) != "<null>":
@@ -117,6 +129,10 @@ func _on_api_summary_request_completed(result, response_code, headers, body):
 
 
 
+	if message == "Token is invalid!":
+		push_error("/summary token error")
+		printerr("/summary token error")
+		SceneManager.exit_app("/summ token error")
 
 
 
