@@ -1,17 +1,17 @@
 [gd_scene load_steps=276 format=3 uid="uid://pk7extbu3xea"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/navigation-menu.gd" id="1_ykvwa"]
-[ext_resource type="Texture2D" uid="uid://bjxgaaelebetc" path="res://src/ui/elements/Group 173.png" id="2_qyodl"]
-[ext_resource type="Texture2D" uid="uid://b5yjn1ipjeovm" path="res://src/ui/backgrounds/Главный_экран_адаптировано_под_размер_.PNG" id="3_j0xlm"]
+[ext_resource type="Texture2D" uid="uid://cfibkhs7865sw" path="res://src/ui/elements/Group 173.png" id="2_qyodl"]
+[ext_resource type="Texture2D" uid="uid://d0ldpl40umepx" path="res://src/ui/backgrounds/Главный_экран_адаптировано_под_размер_.PNG" id="3_j0xlm"]
 [ext_resource type="VideoStream" path="res://src/ui/backgrounds/Главный_экран_адаптировано_под_размер_1.ogv" id="3_q2uc8"]
-[ext_resource type="Texture2D" uid="uid://cjjbfj14yb5k0" path="res://src/ui/elements/Слой 7.png" id="7_gn6ft"]
-[ext_resource type="Texture2D" uid="uid://d1dpq2agq5q02" path="res://src/ui/buildings/animated/Tavern.png" id="9_8b332"]
-[ext_resource type="Texture2D" uid="uid://cwf5xd4dknd06" path="res://src/ui/buildings/animated/Biom.png" id="10_bbc1g"]
+[ext_resource type="Texture2D" uid="uid://b21nohjuul2qr" path="res://src/ui/elements/Слой 7.png" id="7_gn6ft"]
+[ext_resource type="Texture2D" uid="uid://ef8qeih38uyp" path="res://src/ui/buildings/animated/Tavern.png" id="9_8b332"]
+[ext_resource type="Texture2D" uid="uid://ctlmpjuh3j06m" path="res://src/ui/buildings/animated/Biom.png" id="10_bbc1g"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="11_8sxna"]
 [ext_resource type="Resource" uid="uid://5a1rq24an53u" path="res://src/ui/dialogues/warning_back_dialogue.tres" id="12_f0vy2"]
-[ext_resource type="Texture2D" uid="uid://ckocgnpr3rno3" path="res://src/ui/buildings/animated/ClansHall.png" id="12_vctx2"]
+[ext_resource type="Texture2D" uid="uid://tljvwhyal1tr" path="res://src/ui/buildings/animated/ClansHall.png" id="12_vctx2"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="12_yq8ua"]
-[ext_resource type="Texture2D" uid="uid://csxs3f37ncs7g" path="res://src/ui/buildings/animated/League.png" id="13_6paem"]
+[ext_resource type="Texture2D" uid="uid://c4h6fkrjrs6g3" path="res://src/ui/buildings/animated/League.png" id="13_6paem"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vuhtl"]
 atlas = ExtResource("9_8b332")
@@ -2060,10 +2060,10 @@ frame_progress = 0.453017
 
 [node name="LeagueLabel" type="MarginContainer" parent="Buildings/League"]
 layout_mode = 0
-offset_left = 335.0
-offset_top = 733.0
-offset_right = 487.0
-offset_bottom = 779.0
+offset_left = 325.0
+offset_top = 777.0
+offset_right = 477.0
+offset_bottom = 823.0
 
 [node name="LeagueLabel" type="Label" parent="Buildings/League/LeagueLabel"]
 layout_mode = 2

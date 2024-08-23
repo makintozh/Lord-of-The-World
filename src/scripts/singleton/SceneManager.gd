@@ -16,7 +16,7 @@ var loading = false
 
 
 
-var singleton_count = 3
+var singleton_count = 4
 
 
 
@@ -64,6 +64,7 @@ func _process(_delta):
 
 
 	else:
+		printerr("Ошибка загрузки!")
 		push_error("Ошибка загрузки!")  
 		error_dialogue("Loading error!   " + str(get_tree().get_root().get_child(singleton_count)) + "      ERROR CODE: BAD BACK PARAMETER ")                             
 
