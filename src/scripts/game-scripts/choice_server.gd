@@ -33,7 +33,7 @@ var bearer_header = ["Authorization: Bearer " + GLOBAL.from_auth_token]
 
 func _ready():
 	print(bearer_header)
-	api.request(CONFIG.api_link + "/servers", bearer_header, HTTPClient.METHOD_GET, token)
+	api.request(CONFIG.api_link + "/servers", bearer_header, HTTPClient.METHOD_GET)
 
 
 

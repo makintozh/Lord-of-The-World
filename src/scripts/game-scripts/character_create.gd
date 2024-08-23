@@ -32,13 +32,14 @@ var token = JSON.stringify({
 		})
 
 
-
+var bearer_header = ["Authorization: Bearer " + GLOBAL.from_auth_token]
 
 
 func _ready():
 	print(token)
-	api_summary.request("http://" + GLOBAL.choiced_server_address + "/summary", CONFIG.api_headers, HTTPClient.METHOD_GET, token)
-	api.request("http://" + GLOBAL.choiced_server_address + "/archetypes", CONFIG.api_headers, HTTPClient.METHOD_GET, token)
+	print(bearer_header)
+	api_summary.request("http://" + GLOBAL.choiced_server_address + "/summary", bearer_header, HTTPClient.METHOD_GET)
+	api.request("http://" + GLOBAL.choiced_server_address + "/archetypes", bearer_header, HTTPClient.METHOD_GET)
 	main_ui.visible = false
 
 
@@ -49,7 +50,6 @@ func _ready():
 func _on_character_create_button_pressed(): 
 	var character_data = JSON.stringify({
 		
-		"token":GLOBAL.from_auth_token,
 		"name":player_character_name.text,
 		"archetype_id":current_index + 1 
 		
