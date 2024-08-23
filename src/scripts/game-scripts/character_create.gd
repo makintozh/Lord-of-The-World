@@ -35,12 +35,18 @@ var token = JSON.stringify({
 var bearer_header = ["Authorization: Bearer " + GLOBAL.from_auth_token]
 
 
+
+
+
 func _ready():
 	print(token)
 	print(bearer_header)
-	api_summary.request("http://" + GLOBAL.choiced_server_address + "/summary", bearer_header, HTTPClient.METHOD_GET)
-	api.request("http://" + GLOBAL.choiced_server_address + "/archetypes", bearer_header, HTTPClient.METHOD_GET)
+	
 	main_ui.visible = false
+	api_summary.request("http://" + GLOBAL.choiced_server_address + "/summary", bearer_header, HTTPClient.METHOD_GET)
+	await get_tree().create_timer(0.3).timeout
+	api.request("http://" + GLOBAL.choiced_server_address + "/archetypes", bearer_header, HTTPClient.METHOD_GET)
+	
 
 
 
@@ -57,7 +63,7 @@ func _on_character_create_button_pressed():
 		
 		
 	print(character_data)
-	api_character.request("http://" + GLOBAL.choiced_server_address + "/create_character", CONFIG.api_headers, HTTPClient.METHOD_POST, character_data)
+	api_character.request("http://" + GLOBAL.choiced_server_address + "/create_character", bearer_header, HTTPClient.METHOD_POST, character_data)
 
 
 
@@ -96,14 +102,19 @@ func _on_api_request_request_completed(result, response_code, headers, body):
 
 func _on_api_character_create_request_completed(result, response_code, headers, body):
 	var api_response = JSON.parse_string(body.get_string_from_utf8())
+	var message = str(api_response["message"])
+	
 	print(api_response)
 	print(str(response_code))
 	
 	
-	if response_code == 200:
+	if response_code == 200 and message != "Token is invalid":
 		SceneManager.go_to_scene("res://src/scenes/game-scenes/navigation-menu.tscn")
 		refreshing.visible = false
-
+	else:
+		printerr("Token is invalid on Character Create")
+		push_error("Token is invalid on Character Create")
+		SceneManager.exit_app("/createcharacter token error")
 
 
 
