@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://nq14e5b248cm"]
+[gd_scene load_steps=6 format=3 uid="uid://nq14e5b248cm"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/biom-scripts/battle-scripts/forest-battle.gd" id="1_3n72x"]
-[ext_resource type="Texture2D" uid="uid://cee762pxffdp7" path="res://src/ui/backgrounds/battle-backgrounds/Звери(Forest).PNG" id="2_raa8m"]
+[ext_resource type="Texture2D" uid="uid://c01788mak5ahk" path="res://src/ui/backgrounds/battle-backgrounds/Звери(Forest).PNG" id="2_raa8m"]
 [ext_resource type="VideoStream" path="res://src/ui/backgrounds/battle-backgrounds/Звери(Forest).ogv" id="3_52xd3"]
-[ext_resource type="Texture2D" uid="uid://b5crkkfaua4yl" path="res://src/ui/buttons/back_button.png" id="4_1r10j"]
+[ext_resource type="Texture2D" uid="uid://v5tk14cvhbwv" path="res://src/ui/buttons/back_button.png" id="4_1r10j"]
+[ext_resource type="PackedScene" uid="uid://bt6aixyt4p8pl" path="res://src/scenes/gui-scenes/battle_gui.tscn" id="5_0jicx"]
 
 [node name="Forest-Battle" type="Control"]
 layout_mode = 3
@@ -43,6 +44,9 @@ stream = ExtResource("3_52xd3")
 autoplay = true
 expand = true
 loop = true
+
+[node name="Battle-GUI" parent="." instance=ExtResource("5_0jicx")]
+layout_mode = 1
 
 [node name="BackButtonLayer" type="Control" parent="."]
 layout_mode = 3

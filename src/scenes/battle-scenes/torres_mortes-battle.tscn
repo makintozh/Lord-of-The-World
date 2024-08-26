@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bhd0pexfsnwir"]
+[gd_scene load_steps=6 format=3 uid="uid://bhd0pexfsnwir"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/biom-scripts/battle-scripts/torres_mortes-battle.gd" id="1_8finw"]
-[ext_resource type="Texture2D" uid="uid://bg7j3b18xldhi" path="res://src/ui/backgrounds/battle-backgrounds/Нежить(Torres-Mortes).PNG" id="2_mwqu8"]
+[ext_resource type="Texture2D" uid="uid://dbpfulf8p6kjh" path="res://src/ui/backgrounds/battle-backgrounds/Нежить(Torres-Mortes).PNG" id="2_mwqu8"]
 [ext_resource type="VideoStream" path="res://src/ui/backgrounds/battle-backgrounds/Нежить(Torres-Mortes).ogv" id="3_quu7p"]
-[ext_resource type="Texture2D" uid="uid://bbpw08kj24coi" path="res://src/ui/buttons/back_button.png" id="4_gmp8n"]
+[ext_resource type="Texture2D" uid="uid://v5tk14cvhbwv" path="res://src/ui/buttons/back_button.png" id="4_gmp8n"]
+[ext_resource type="PackedScene" uid="uid://bt6aixyt4p8pl" path="res://src/scenes/gui-scenes/battle_gui.tscn" id="5_l4eoc"]
 
 [node name="Torres_Mortes-Battle" type="Control"]
 layout_mode = 3
@@ -44,6 +45,9 @@ stream = ExtResource("3_quu7p")
 autoplay = true
 expand = true
 loop = true
+
+[node name="Battle-GUI" parent="." instance=ExtResource("5_l4eoc")]
+layout_mode = 1
 
 [node name="BackButtonLayer" type="Control" parent="."]
 layout_mode = 3

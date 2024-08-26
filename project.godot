@@ -27,6 +27,7 @@ CONFIG="*res://src/scripts/singleton/config.gd"
 SceneManager="*res://src/scripts/singleton/SceneManager.gd"
 DebugMenu="*res://addons/debug_menu/debug_menu.tscn"
 GuiTransitions="*res://addons/simple-gui-transitions/singleton.gd"
+Shaker="*res://addons/shaker/src/Shaker.gd"
 
 [debug]
 
@@ -39,7 +40,8 @@ gdscript/warnings/unused_signal=0
 [display]
 
 window/size/viewport_width=500
-window/size/viewport_height=900
+window/size/viewport_height=1000
+window/size/always_on_top=true
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 window/handheld/orientation=1
@@ -54,7 +56,7 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/CodeEditorBackground/plugin.cfg", "res://addons/debug_menu/plugin.cfg", "res://addons/dialogue_nodes/plugin.cfg", "res://addons/script-ide/plugin.cfg")
+enabled=PackedStringArray("res://addons/CodeEditorBackground/plugin.cfg", "res://addons/debug_menu/plugin.cfg", "res://addons/dialogue_nodes/plugin.cfg", "res://addons/script-ide/plugin.cfg", "res://addons/shaker/plugin.cfg")
 
 [file_customization]
 

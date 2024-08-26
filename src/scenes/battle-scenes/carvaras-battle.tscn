@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cx2nutr0ahh8e"]
+[gd_scene load_steps=6 format=3 uid="uid://cx2nutr0ahh8e"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/biom-scripts/battle-scripts/carvaras-battle.gd" id="1_husbi"]
-[ext_resource type="Texture2D" uid="uid://yjegphtcey47" path="res://src/ui/backgrounds/battle-backgrounds/Орки(Carvaras).PNG" id="2_i21v8"]
+[ext_resource type="Texture2D" uid="uid://bhlp5q4x2bgko" path="res://src/ui/backgrounds/battle-backgrounds/Орки(Carvaras).PNG" id="2_i21v8"]
 [ext_resource type="VideoStream" path="res://src/ui/backgrounds/battle-backgrounds/Орки(Carvaras).ogv" id="3_htshc"]
-[ext_resource type="Texture2D" uid="uid://bbpw08kj24coi" path="res://src/ui/buttons/back_button.png" id="4_cbjvg"]
+[ext_resource type="Texture2D" uid="uid://v5tk14cvhbwv" path="res://src/ui/buttons/back_button.png" id="4_cbjvg"]
+[ext_resource type="PackedScene" uid="uid://bt6aixyt4p8pl" path="res://src/scenes/gui-scenes/battle_gui.tscn" id="5_343x1"]
 
 [node name="Carvaras-Battle" type="Control"]
 layout_mode = 3
@@ -43,6 +44,9 @@ stream = ExtResource("3_htshc")
 autoplay = true
 expand = true
 loop = true
+
+[node name="Battle-GUI" parent="." instance=ExtResource("5_343x1")]
+layout_mode = 1
 
 [node name="BackButtonLayer" type="Control" parent="."]
 layout_mode = 3

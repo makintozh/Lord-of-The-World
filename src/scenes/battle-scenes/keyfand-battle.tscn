@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bv3igdfnf80cv"]
+[gd_scene load_steps=6 format=3 uid="uid://bv3igdfnf80cv"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/biom-scripts/keyfand-battle.gd" id="1_64y4k"]
-[ext_resource type="Texture2D" uid="uid://b5hf2t33ia7ik" path="res://src/ui/backgrounds/battle-backgrounds/Гоблины(Keyfand).PNG" id="2_vvh6c"]
+[ext_resource type="Texture2D" uid="uid://lp553ncwi5yp" path="res://src/ui/backgrounds/battle-backgrounds/Гоблины(Keyfand).PNG" id="2_vvh6c"]
 [ext_resource type="VideoStream" path="res://src/ui/backgrounds/battle-backgrounds/Гоблины(Keyfand).ogv" id="3_o72jw"]
-[ext_resource type="Texture2D" uid="uid://b5crkkfaua4yl" path="res://src/ui/buttons/back_button.png" id="4_p6ixd"]
+[ext_resource type="Texture2D" uid="uid://v5tk14cvhbwv" path="res://src/ui/buttons/back_button.png" id="4_p6ixd"]
+[ext_resource type="PackedScene" uid="uid://bt6aixyt4p8pl" path="res://src/scenes/gui-scenes/battle_gui.tscn" id="5_58w5p"]
 
 [node name="Keyfand-Battle" type="Control"]
 layout_mode = 3
@@ -45,6 +46,9 @@ stream = ExtResource("3_o72jw")
 autoplay = true
 expand = true
 loop = true
+
+[node name="Battle-GUI" parent="." instance=ExtResource("5_58w5p")]
+layout_mode = 1
 
 [node name="BackButtonLayer" type="Control" parent="."]
 layout_mode = 3

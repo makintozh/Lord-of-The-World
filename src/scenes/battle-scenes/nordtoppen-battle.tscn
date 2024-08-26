@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://d06tq7583nmfo"]
+[gd_scene load_steps=6 format=3 uid="uid://d06tq7583nmfo"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/biom-scripts/battle-scripts/nordtoppen-battle.gd" id="1_ksjhl"]
-[ext_resource type="Texture2D" uid="uid://d3hbydfmgrhv5" path="res://src/ui/backgrounds/battle-backgrounds/Тролли(Nordtoppen).PNG" id="2_5gx31"]
+[ext_resource type="Texture2D" uid="uid://byr1trrkkbcut" path="res://src/ui/backgrounds/battle-backgrounds/Тролли(Nordtoppen).PNG" id="2_5gx31"]
 [ext_resource type="VideoStream" path="res://src/ui/backgrounds/battle-backgrounds/Тролли(Nordtoppen).ogv" id="3_qlg2t"]
-[ext_resource type="Texture2D" uid="uid://b5crkkfaua4yl" path="res://src/ui/buttons/back_button.png" id="4_2ftuh"]
+[ext_resource type="Texture2D" uid="uid://v5tk14cvhbwv" path="res://src/ui/buttons/back_button.png" id="4_2ftuh"]
+[ext_resource type="PackedScene" uid="uid://bt6aixyt4p8pl" path="res://src/scenes/gui-scenes/battle_gui.tscn" id="5_26i04"]
 
 [node name="Nordtoppen-Battle" type="Control"]
 layout_mode = 3
@@ -44,6 +45,9 @@ stream = ExtResource("3_qlg2t")
 autoplay = true
 expand = true
 loop = true
+
+[node name="Battle-GUI" parent="." instance=ExtResource("5_26i04")]
+layout_mode = 1
 
 [node name="BackButtonLayer" type="Control" parent="."]
 layout_mode = 3

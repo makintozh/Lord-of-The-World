@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://d263kjlad6pli"]
+[gd_scene load_steps=6 format=3 uid="uid://d263kjlad6pli"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/biom-scripts/battle-scripts/taurelious-battle.gd" id="1_gvdjt"]
-[ext_resource type="Texture2D" uid="uid://cs02jjmnj7jc5" path="res://src/ui/backgrounds/battle-backgrounds/Эльфы(Taurelious).PNG" id="2_2dm4b"]
+[ext_resource type="Texture2D" uid="uid://cnt6j8qd3e75k" path="res://src/ui/backgrounds/battle-backgrounds/Эльфы(Taurelious).PNG" id="2_2dm4b"]
 [ext_resource type="VideoStream" path="res://src/ui/backgrounds/battle-backgrounds/Эльфы(Taurelious).ogv" id="3_xvo8w"]
-[ext_resource type="Texture2D" uid="uid://b5crkkfaua4yl" path="res://src/ui/buttons/back_button.png" id="4_fog83"]
+[ext_resource type="Texture2D" uid="uid://v5tk14cvhbwv" path="res://src/ui/buttons/back_button.png" id="4_fog83"]
+[ext_resource type="PackedScene" uid="uid://bt6aixyt4p8pl" path="res://src/scenes/gui-scenes/battle_gui.tscn" id="5_me22l"]
 
 [node name="Taurelious-Battle" type="Control"]
 layout_mode = 3
@@ -43,6 +44,9 @@ stream = ExtResource("3_xvo8w")
 autoplay = true
 expand = true
 loop = true
+
+[node name="Battle-GUI" parent="." instance=ExtResource("5_me22l")]
+layout_mode = 1
 
 [node name="BackButtonLayer" type="Control" parent="."]
 layout_mode = 3
