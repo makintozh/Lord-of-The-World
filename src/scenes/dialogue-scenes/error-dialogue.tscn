@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://c8sgggx2qfsx2"]
+[gd_scene load_steps=9 format=3 uid="uid://c8sgggx2qfsx2"]
 
 [ext_resource type="Script" path="res://src/scripts/dialogue-scripts/error_dialogue.gd" id="1_26cfa"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="2_4n3bk"]
 [ext_resource type="Resource" uid="uid://bo8fnmu502em0" path="res://src/ui/dialogues/error_dialogue.tres" id="3_dj43v"]
+[ext_resource type="Texture2D" uid="uid://bdu77guc7p4br" path="res://src/ui/elements/error icon 2.png" id="4_6y0e7"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="4_k8hsk"]
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_atejj"]
@@ -15,10 +16,19 @@ script = ExtResource("4_k8hsk")
 script = ExtResource("4_k8hsk")
 
 [node name="Error-dialogue" type="Node"]
+process_mode = 3
+process_thread_group = 1
+process_thread_group_order = 0
+process_thread_messages = 0
 script = ExtResource("1_26cfa")
 
 [node name="TransparentBack" type="ColorRect" parent="."]
+process_mode = 3
+process_thread_group = 1
+process_thread_group_order = 0
+process_thread_messages = 0
 visible = false
+z_index = 30
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -31,6 +41,12 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.827451)
 
 [node name="ErrorDialogue" type="Panel" parent="."]
+process_mode = 3
+process_thread_group = 1
+process_thread_group_order = 0
+process_thread_messages = 0
+visible = false
+z_index = 55
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -45,7 +61,7 @@ grow_vertical = 2
 script = ExtResource("2_4n3bk")
 data = ExtResource("3_dj43v")
 start_id = "error"
-hide_portrait = true
+sample_portrait = ExtResource("4_6y0e7")
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_atejj"), SubResource("RichTextEffect_sprpr"), SubResource("RichTextEffect_iqsd7")])
 max_options_count = 2
 options_alignment = 1

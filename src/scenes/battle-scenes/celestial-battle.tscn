@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://73dph75xcuni"]
+[gd_scene load_steps=6 format=3 uid="uid://73dph75xcuni"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/biom-scripts/battle-scripts/celestial-battle.gd" id="1_xrqt6"]
-[ext_resource type="Texture2D" uid="uid://dycfodcltiddi" path="res://src/ui/backgrounds/battle-backgrounds/Перворожденные(Celestial) - поле битвы.PNG" id="2_74b4p"]
+[ext_resource type="Texture2D" uid="uid://bd6cdaoecrlqh" path="res://src/ui/backgrounds/battle-backgrounds/Перворожденные(Celestial) - поле битвы.PNG" id="2_74b4p"]
 [ext_resource type="VideoStream" path="res://src/ui/backgrounds/battle-backgrounds/Перворожденные(Celestial) - поле битвы.ogv" id="3_1x3uu"]
-[ext_resource type="Texture2D" uid="uid://bbpw08kj24coi" path="res://src/ui/buttons/back_button.png" id="4_5qb7k"]
+[ext_resource type="Texture2D" uid="uid://v5tk14cvhbwv" path="res://src/ui/buttons/back_button.png" id="4_5qb7k"]
+[ext_resource type="PackedScene" uid="uid://bt6aixyt4p8pl" path="res://src/scenes/gui-scenes/battle_gui.tscn" id="5_kcdlb"]
 
 [node name="Celestial-Battle" type="Control"]
 layout_mode = 3
@@ -43,6 +44,9 @@ stream = ExtResource("3_1x3uu")
 autoplay = true
 expand = true
 loop = true
+
+[node name="Battle-GUI" parent="." instance=ExtResource("5_kcdlb")]
+layout_mode = 1
 
 [node name="BackButtonLayer" type="Control" parent="."]
 layout_mode = 3

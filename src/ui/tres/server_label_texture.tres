@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://b8ejjqd4tssrk"]
+
+[ext_resource type="Texture2D" uid="uid://dk7ow2l76cqyi" path="res://src/ui/buttons/button_2.png" id="1_naqfk"]
+
+[resource]
+texture = ExtResource("1_naqfk")
+texture_margin_right = 200.0
+expand_margin_left = 50.0
+expand_margin_top = 15.0
+expand_margin_right = 210.0
+expand_margin_bottom = 15.0

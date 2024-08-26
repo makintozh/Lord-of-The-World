@@ -1,26 +1,24 @@
 [gd_scene load_steps=14 format=3 uid="uid://posku4uysvkn"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/biom.gd" id="1_m3bq3"]
-[ext_resource type="Texture2D" uid="uid://1hwcai54qa3k" path="res://src/ui/backgrounds/biome map2 1.png" id="2_1q34o"]
-[ext_resource type="Texture2D" uid="uid://chyp88gbfj5g" path="res://src/ui/buildings/Civil_r2 1.png" id="5_oitrf"]
-[ext_resource type="Texture2D" uid="uid://do1ilx3huhjgd" path="res://src/ui/buildings/taurelious.png" id="6_c7amb"]
-[ext_resource type="Texture2D" uid="uid://dy1w6nk8iahb2" path="res://src/ui/buildings/гномыElborus.png" id="7_w1lb3"]
-[ext_resource type="Texture2D" uid="uid://sk7rj7x3t2ck" path="res://src/ui/buildings/mortes.png" id="8_8x7xb"]
-[ext_resource type="Texture2D" uid="uid://dn7jqc51tfe86" path="res://src/ui/buildings/forest.png" id="8_csmka"]
-[ext_resource type="Texture2D" uid="uid://c0wm1fl3mj0ei" path="res://src/ui/buildings/carvaras.png" id="9_wl1d7"]
-[ext_resource type="Texture2D" uid="uid://d4ayhepfjifhf" path="res://src/ui/buildings/nordtoppen.png" id="10_nigbv"]
-[ext_resource type="Texture2D" uid="uid://b4tfjakgk73mg" path="res://src/ui/buildings/keyfand.png" id="11_56m4m"]
-[ext_resource type="Texture2D" uid="uid://cilg87rhs5v8d" path="res://src/ui/buildings/мехи.png" id="12_alpq5"]
-[ext_resource type="Texture2D" uid="uid://e3kwcjqv136r" path="res://src/ui/buttons/back_button.png" id="13_34gb7"]
-[ext_resource type="Texture2D" uid="uid://bfu1mdy8p0dv2" path="res://src/ui/buildings/celesteal 1.png" id="13_x3ue8"]
+[ext_resource type="Texture2D" uid="uid://dwbvic3m2e0hd" path="res://src/ui/backgrounds/biome map2 1.png" id="2_1q34o"]
+[ext_resource type="Texture2D" uid="uid://h0ns6hpa17ab" path="res://src/ui/buildings/Civil_r2 1.png" id="5_oitrf"]
+[ext_resource type="Texture2D" uid="uid://bvwyxge5s78fn" path="res://src/ui/buildings/taurelious.png" id="6_c7amb"]
+[ext_resource type="Texture2D" uid="uid://cr5t7yhmhu7di" path="res://src/ui/buildings/гномыElborus.png" id="7_w1lb3"]
+[ext_resource type="Texture2D" uid="uid://dokbkrvcuku7e" path="res://src/ui/buildings/mortes.png" id="8_8x7xb"]
+[ext_resource type="Texture2D" uid="uid://bghaghgh2whok" path="res://src/ui/buildings/forest.png" id="8_csmka"]
+[ext_resource type="Texture2D" uid="uid://ct075001qe683" path="res://src/ui/buildings/carvaras.png" id="9_wl1d7"]
+[ext_resource type="Texture2D" uid="uid://022ycgby423j" path="res://src/ui/buildings/nordtoppen.png" id="10_nigbv"]
+[ext_resource type="Texture2D" uid="uid://dl5u5xn0bgf82" path="res://src/ui/buildings/keyfand.png" id="11_56m4m"]
+[ext_resource type="Texture2D" uid="uid://c0pkaweav14e7" path="res://src/ui/buildings/мехи.png" id="12_alpq5"]
+[ext_resource type="Texture2D" uid="uid://doq20ct6rvrxb" path="res://src/ui/buttons/back_button.png" id="13_34gb7"]
+[ext_resource type="Texture2D" uid="uid://bp5qb0rvkyk8w" path="res://src/ui/buildings/celesteal 1.png" id="13_x3ue8"]
 
 [node name="Biom" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -500.0
-offset_bottom = -900.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_m3bq3")
@@ -28,14 +26,16 @@ script = ExtResource("1_m3bq3")
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 clip_contents = false
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = 15
 anchor_right = 1.0
-offset_left = -5.0
-offset_top = -37.0
-offset_right = 432.0
-offset_bottom = 988.81
+anchor_bottom = 1.0
+offset_left = -262.0
+offset_top = -8.0
+offset_right = 1671.0
+offset_bottom = 1397.0
 grow_horizontal = 2
-scale = Vector2(1.17, 1.17)
+grow_vertical = 2
+scale = Vector2(0.44, 0.44)
 follow_focus = true
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 2
@@ -47,7 +47,7 @@ theme_override_constants/separation = 100
 [node name="BackGround" type="TextureRect" parent="ScrollContainer/VBox"]
 layout_mode = 2
 texture = ExtResource("2_1q34o")
-stretch_mode = 4
+stretch_mode = 6
 
 [node name="ScrollContainer2" type="ScrollContainer" parent="ScrollContainer"]
 clip_contents = false
@@ -62,10 +62,11 @@ mouse_filter = 1
 
 [node name="Civil" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Civil-Human"]
 layout_mode = 0
-offset_left = 0.854701
-offset_top = 52.1367
-offset_right = 264.855
-offset_bottom = 369.137
+offset_left = 715.909
+offset_top = 184.091
+offset_right = 979.909
+offset_bottom = 501.091
+scale = Vector2(2.14, 2.14)
 
 [node name="Civil" type="TextureButton" parent="ScrollContainer/ScrollContainer2/Civil-Human/Civil"]
 layout_mode = 2
@@ -79,10 +80,11 @@ stretch_mode = 0
 
 [node name="CivilLabel" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Civil-Human"]
 layout_mode = 0
-offset_left = 78.6325
-offset_top = 279.487
-offset_right = 189.632
-offset_bottom = 325.487
+offset_left = 822.727
+offset_top = 652.273
+offset_right = 933.727
+offset_bottom = 698.273
+scale = Vector2(2.14, 2.14)
 
 [node name="CivilLabel" type="Label" parent="ScrollContainer/ScrollContainer2/Civil-Human/CivilLabel"]
 layout_mode = 2
@@ -97,10 +99,11 @@ mouse_filter = 1
 
 [node name="Taurelious" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Taurelious-Elves"]
 layout_mode = 0
-offset_left = 232.479
-offset_top = 238.462
-offset_right = 405.479
-offset_bottom = 427.462
+offset_left = 1184.09
+offset_top = 586.364
+offset_right = 1357.09
+offset_bottom = 775.364
+scale = Vector2(2.14, 2.14)
 
 [node name="Taurelious" type="TextureButton" parent="ScrollContainer/ScrollContainer2/Taurelious-Elves/Taurelious"]
 layout_mode = 2
@@ -114,10 +117,11 @@ stretch_mode = 0
 
 [node name="TaureliousLabel" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Taurelious-Elves"]
 layout_mode = 0
-offset_left = 239.317
-offset_top = 395.727
-offset_right = 402.317
-offset_bottom = 441.727
+offset_left = 1168.18
+offset_top = 895.455
+offset_right = 1331.18
+offset_bottom = 941.455
+scale = Vector2(2.14, 2.14)
 
 [node name="TaureliousLabel" type="Label" parent="ScrollContainer/ScrollContainer2/Taurelious-Elves/TaureliousLabel"]
 layout_mode = 2
@@ -131,10 +135,11 @@ mouse_filter = 1
 
 [node name="Elborus" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Elborus-Gnomes"]
 layout_mode = 0
-offset_left = -12.8205
-offset_top = 491.453
-offset_right = 162.18
-offset_bottom = 661.453
+offset_left = 702.273
+offset_top = 1145.45
+offset_right = 877.273
+offset_bottom = 1315.45
+scale = Vector2(2.14, 2.14)
 
 [node name="Elborus" type="TextureButton" parent="ScrollContainer/ScrollContainer2/Elborus-Gnomes/Elborus"]
 layout_mode = 2
@@ -148,10 +153,11 @@ stretch_mode = 0
 
 [node name="ElborusLabel" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Elborus-Gnomes"]
 layout_mode = 0
-offset_left = 40.1709
-offset_top = 627.35
-offset_right = 156.171
-offset_bottom = 673.35
+offset_left = 745.455
+offset_top = 1438.64
+offset_right = 863.455
+offset_bottom = 1484.64
+scale = Vector2(2.14, 2.14)
 
 [node name="ElborusLabel" type="Label" parent="ScrollContainer/ScrollContainer2/Elborus-Gnomes/ElborusLabel"]
 layout_mode = 2
@@ -165,10 +171,11 @@ mouse_filter = 1
 
 [node name="Torres-Mortes" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Torres-Mortes-Nejitb"]
 layout_mode = 0
-offset_left = 185.47
-offset_top = 494.017
-offset_right = 442.47
-offset_bottom = 796.017
+offset_left = 1093.18
+offset_top = 1145.45
+offset_right = 1350.18
+offset_bottom = 1447.45
+scale = Vector2(2.14, 2.14)
 
 [node name="Torres-Mortes" type="TextureButton" parent="ScrollContainer/ScrollContainer2/Torres-Mortes-Nejitb/Torres-Mortes"]
 layout_mode = 2
@@ -182,10 +189,11 @@ stretch_mode = 0
 
 [node name="Torres-MortesLabel" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Torres-Mortes-Nejitb"]
 layout_mode = 0
-offset_left = 193.162
-offset_top = 711.111
-offset_right = 415.162
-offset_bottom = 757.111
+offset_left = 1156.82
+offset_top = 1584.09
+offset_right = 1382.82
+offset_bottom = 1630.09
+scale = Vector2(2.14, 2.14)
 
 [node name="Torres-MortesLabel" type="Label" parent="ScrollContainer/ScrollContainer2/Torres-Mortes-Nejitb/Torres-MortesLabel"]
 layout_mode = 2
@@ -199,10 +207,11 @@ mouse_filter = 1
 
 [node name="Forest" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Forest-Zveri"]
 layout_mode = 0
-offset_left = 0.854701
-offset_top = 780.342
-offset_right = 200.855
-offset_bottom = 942.342
+offset_left = 681.818
+offset_top = 1736.36
+offset_right = 881.819
+offset_bottom = 1898.36
+scale = Vector2(2.14, 2.14)
 
 [node name="Forest" type="TextureButton" parent="ScrollContainer/ScrollContainer2/Forest-Zveri/Forest"]
 layout_mode = 2
@@ -216,10 +225,11 @@ stretch_mode = 0
 
 [node name="ForestLabel" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Forest-Zveri"]
 layout_mode = 0
-offset_left = 57.265
-offset_top = 903.419
-offset_right = 173.265
-offset_bottom = 949.419
+offset_left = 745.455
+offset_top = 2043.18
+offset_right = 861.455
+offset_bottom = 2089.18
+scale = Vector2(2.14, 2.14)
 
 [node name="ForestLabel" type="Label" parent="ScrollContainer/ScrollContainer2/Forest-Zveri/ForestLabel"]
 layout_mode = 2
@@ -233,10 +243,11 @@ mouse_filter = 1
 
 [node name="Carvaras" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Carvaras-Orki"]
 layout_mode = 0
-offset_left = 223.932
-offset_top = 900.855
-offset_right = 426.932
-offset_bottom = 1084.85
+offset_left = 1184.09
+offset_top = 2011.36
+offset_right = 1387.09
+offset_bottom = 2195.36
+scale = Vector2(2.14, 2.14)
 
 [node name="Carvaras" type="TextureButton" parent="ScrollContainer/ScrollContainer2/Carvaras-Orki/Carvaras"]
 layout_mode = 2
@@ -250,10 +261,11 @@ stretch_mode = 0
 
 [node name="CarvarasLabel" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Carvaras-Orki"]
 layout_mode = 0
-offset_left = 264.957
-offset_top = 1049.58
-offset_right = 403.957
-offset_bottom = 1095.58
+offset_left = 1222.73
+offset_top = 2315.91
+offset_right = 1364.73
+offset_bottom = 2361.91
+scale = Vector2(2.14, 2.14)
 
 [node name="CarvarasLabel" type="Label" parent="ScrollContainer/ScrollContainer2/Carvaras-Orki/CarvarasLabel"]
 layout_mode = 2
@@ -267,10 +279,11 @@ mouse_filter = 1
 
 [node name="Nordtoppen" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Nordtoppen-Trolli"]
 layout_mode = 0
-offset_left = 6.83761
-offset_top = 1046.15
-offset_right = 200.838
-offset_bottom = 1231.15
+offset_left = 665.909
+offset_top = 2365.91
+offset_right = 859.909
+offset_bottom = 2550.91
+scale = Vector2(2.14, 2.14)
 
 [node name="Nordtoppen" type="TextureButton" parent="ScrollContainer/ScrollContainer2/Nordtoppen-Trolli/Nordtoppen"]
 layout_mode = 2
@@ -284,10 +297,11 @@ stretch_mode = 0
 
 [node name="NordtoppenLabel" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Nordtoppen-Trolli"]
 layout_mode = 0
-offset_left = 44.4444
-offset_top = 1194.01
-offset_right = 227.444
-offset_bottom = 1240.01
+offset_left = 745.455
+offset_top = 2734.09
+offset_right = 930.455
+offset_bottom = 2780.09
+scale = Vector2(2.14, 2.14)
 
 [node name="NordtoppenLabel" type="Label" parent="ScrollContainer/ScrollContainer2/Nordtoppen-Trolli/NordtoppenLabel"]
 layout_mode = 2
@@ -301,10 +315,11 @@ mouse_filter = 1
 
 [node name="Keyfand" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Keyfand-Goblin"]
 layout_mode = 0
-offset_left = 232.479
-offset_top = 1223.08
-offset_right = 415.479
-offset_bottom = 1428.08
+offset_left = 1209.09
+offset_top = 2743.18
+offset_right = 1392.09
+offset_bottom = 2948.18
+scale = Vector2(2.14, 2.14)
 
 [node name="Keyfand" type="TextureButton" parent="ScrollContainer/ScrollContainer2/Keyfand-Goblin/Keyfand"]
 layout_mode = 2
@@ -318,10 +333,11 @@ stretch_mode = 0
 
 [node name="KeyfandLabel" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Keyfand-Goblin"]
 layout_mode = 0
-offset_left = 234.188
-offset_top = 1400.85
-offset_right = 417.188
-offset_bottom = 1446.85
+offset_left = 1238.64
+offset_top = 3122.73
+offset_right = 1421.64
+offset_bottom = 3168.73
+scale = Vector2(2.14, 2.14)
 
 [node name="KeyfandLabel" type="Label" parent="ScrollContainer/ScrollContainer2/Keyfand-Goblin/KeyfandLabel"]
 layout_mode = 2
@@ -336,10 +352,11 @@ mouse_filter = 1
 
 [node name="Meches" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Meches-Mehanizmi"]
 layout_mode = 0
-offset_left = 5.12821
-offset_top = 1500.0
-offset_right = 173.128
-offset_bottom = 1660.0
+offset_left = 675.0
+offset_top = 3279.55
+offset_right = 843.0
+offset_bottom = 3439.55
+scale = Vector2(2.14, 2.14)
 
 [node name="Meches" type="TextureButton" parent="ScrollContainer/ScrollContainer2/Meches-Mehanizmi/Meches"]
 layout_mode = 2
@@ -353,10 +370,11 @@ stretch_mode = 0
 
 [node name="MechesLabel" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Meches-Mehanizmi"]
 layout_mode = 0
-offset_left = 48.7179
-offset_top = 1623.94
-offset_right = 231.718
-offset_bottom = 1669.94
+offset_left = 836.364
+offset_top = 3534.09
+offset_right = 1019.36
+offset_bottom = 3580.09
+scale = Vector2(2.14, 2.14)
 
 [node name="MechesLabel" type="Label" parent="ScrollContainer/ScrollContainer2/Meches-Mehanizmi/MechesLabel"]
 layout_mode = 2
@@ -370,10 +388,11 @@ mouse_filter = 1
 
 [node name="Celestial" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Celestial-Pervorojdennie"]
 layout_mode = 0
-offset_left = 229.06
-offset_top = 1538.46
-offset_right = 417.06
-offset_bottom = 1726.46
+offset_left = 1190.91
+offset_top = 3361.36
+offset_right = 1378.91
+offset_bottom = 3549.36
+scale = Vector2(2.14, 2.14)
 
 [node name="Celestial" type="TextureButton" parent="ScrollContainer/ScrollContainer2/Celestial-Pervorojdennie/Celestial"]
 layout_mode = 2
@@ -387,10 +406,11 @@ stretch_mode = 0
 
 [node name="CelestialLabel" type="MarginContainer" parent="ScrollContainer/ScrollContainer2/Celestial-Pervorojdennie"]
 layout_mode = 0
-offset_left = 236.752
-offset_top = 1699.15
-offset_right = 419.752
-offset_bottom = 1745.15
+offset_left = 1097.73
+offset_top = 3715.91
+offset_right = 1280.73
+offset_bottom = 3761.91
+scale = Vector2(2.14, 2.14)
 
 [node name="CelestialLabel" type="Label" parent="ScrollContainer/ScrollContainer2/Celestial-Pervorojdennie/CelestialLabel"]
 layout_mode = 2

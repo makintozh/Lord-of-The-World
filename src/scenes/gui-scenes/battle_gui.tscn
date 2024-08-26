@@ -1,0 +1,495 @@
+[gd_scene load_steps=19 format=3 uid="uid://bt6aixyt4p8pl"]
+
+[ext_resource type="Script" path="res://src/scripts/gui-scripts/battle_gui.gd" id="1_4revc"]
+[ext_resource type="Texture2D" uid="uid://ceolosojoh0ct" path="res://src/ui/buttons/dark_button_base_long.png" id="1_ycoh6"]
+[ext_resource type="Texture2D" uid="uid://cy5fg20knkhtc" path="res://src/ui/buttons/green buttom base long.png" id="2_5iwok"]
+[ext_resource type="Texture2D" uid="uid://d4nmlf8l77lt0" path="res://src/ui/elements/BackSkull.png" id="3_y02k2"]
+[ext_resource type="Texture2D" uid="uid://ddsbj1le0dhpx" path="res://src/ui/elements/risk-skull(1) 1.png" id="4_ebq7b"]
+[ext_resource type="Texture2D" uid="uid://qjevingp2g65" path="res://src/ui/elements/Group 1000006723.png" id="5_eyoc6"]
+[ext_resource type="Texture2D" uid="uid://dsltjj8lyve8l" path="res://src/ui/elements/Card_Man_1 6.png" id="6_86bsy"]
+[ext_resource type="Script" path="res://addons/shaker/src/Vector2/shaker_component2D.gd" id="7_iut60"]
+[ext_resource type="Script" path="res://addons/shaker/data/Vector2/BaseShakerType2D.gd" id="8_t76ew"]
+[ext_resource type="Script" path="res://addons/shaker/data/Vector2/ShakerTypeSineWave2D.gd" id="9_goflx"]
+[ext_resource type="Script" path="res://addons/shaker/data/Single/BaseShakerType1D.gd" id="10_dwtgp"]
+[ext_resource type="Script" path="res://addons/shaker/data/Vector2/ShakerPreset2D.gd" id="11_c667c"]
+[ext_resource type="Texture2D" uid="uid://cs0um0rxqku4" path="res://src/ui/elements/Card_troll_1.png" id="13_tqsrk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y4pqg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fvvyx"]
+texture = ExtResource("2_5iwok")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y040i"]
+texture = ExtResource("3_y02k2")
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="Resource" id="Resource_aa1ca"]
+script = ExtResource("9_goflx")
+frequency = Vector2(0.5, 0.5)
+phase = Vector2(1, 1)
+amplitude = Vector2(10, 2)
+offset = Vector2(0, 0)
+BlendingMode = 0
+fade_in = 2.46231e-05
+fade_out = 1.68178e-05
+start_percent = 0.0
+end_percent = 1.0
+_temp_graph = false
+bake_internal = 96
+
+[sub_resource type="Resource" id="Resource_87x3o"]
+script = ExtResource("11_c667c")
+PositionShake = Array[ExtResource("8_t76ew")]([SubResource("Resource_aa1ca")])
+RotationShake = Array[ExtResource("10_dwtgp")]([])
+ScaleShake = Array[ExtResource("8_t76ew")]([])
+bake_internal = 64
+__follow_timeline = false
+
+[node name="Battle-GUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4revc")
+
+[node name="Buttons" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -252.0
+offset_top = -459.0
+offset_right = -159.485
+offset_bottom = -411.8
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ChangeDeck" type="MarginContainer" parent="Buttons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0432362
+anchor_top = 0.550847
+anchor_right = 0.11944
+anchor_bottom = 0.656779
+offset_left = 205.0
+offset_top = 528.0
+offset_right = 321.95
+offset_bottom = 556.0
+metadata/_edit_use_anchors_ = true
+
+[node name="ChangeDeck" type="TextureButton" parent="Buttons/ChangeDeck"]
+layout_mode = 2
+texture_normal = ExtResource("1_ycoh6")
+texture_pressed = ExtResource("1_ycoh6")
+texture_hover = ExtResource("1_ycoh6")
+texture_disabled = ExtResource("1_ycoh6")
+texture_focused = ExtResource("1_ycoh6")
+stretch_mode = 6
+
+[node name="Start" type="MarginContainer" parent="Buttons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0324272
+anchor_top = -0.974576
+anchor_right = 0.130249
+anchor_bottom = -0.317797
+offset_left = 195.305
+offset_top = 529.32
+offset_right = 329.825
+offset_bottom = 560.59
+metadata/_edit_use_anchors_ = true
+
+[node name="Start" type="Button" parent="Buttons/Start"]
+layout_direction = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 31
+theme_override_styles/focus = SubResource("StyleBoxEmpty_y4pqg")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_fvvyx")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_fvvyx")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_fvvyx")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_fvvyx")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_fvvyx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fvvyx")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_fvvyx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fvvyx")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_fvvyx")
+theme_override_styles/normal = SubResource("StyleBoxTexture_fvvyx")
+text = "Start"
+
+[node name="Ui" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -255.0
+offset_right = -162.485
+offset_bottom = 47.2
+grow_horizontal = 2
+
+[node name="Step" type="MarginContainer" parent="Ui"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.94617
+anchor_top = -10.911
+anchor_right = 1.94617
+anchor_bottom = -10.5297
+offset_left = 205.0
+offset_top = 528.0
+offset_right = 321.95
+offset_bottom = 556.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Step" type="Label" parent="Ui/Step"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_y040i")
+text = "1/10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Skull" type="MarginContainer" parent="Ui"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 357.742
+offset_top = 27.0
+offset_right = 373.742
+offset_bottom = 43.0
+grow_horizontal = 2
+
+[node name="Skull" type="TextureRect" parent="Ui/Skull"]
+layout_mode = 2
+texture = ExtResource("4_ebq7b")
+expand_mode = 1
+
+[node name="Energy" type="MarginContainer" parent="Ui"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.324272
+anchor_top = -11.0593
+anchor_right = 6.36707
+anchor_bottom = -6.56779
+offset_left = 205.0
+offset_top = 528.0
+offset_right = 321.95
+offset_bottom = 556.0
+scale = Vector2(0.22, 0.22)
+metadata/_edit_use_anchors_ = true
+
+[node name="Energy" type="TextureButton" parent="Ui/Energy"]
+layout_mode = 2
+texture_normal = ExtResource("5_eyoc6")
+texture_pressed = ExtResource("5_eyoc6")
+texture_hover = ExtResource("5_eyoc6")
+texture_disabled = ExtResource("5_eyoc6")
+texture_focused = ExtResource("5_eyoc6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="PlayerCards" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 525.0
+offset_bottom = 525.0
+
+[node name="Card1" type="MarginContainer" parent="PlayerCards"]
+offset_left = 69.0
+offset_top = 587.0
+offset_right = 160.0
+offset_bottom = 710.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(50, 50)
+
+[node name="Card1" type="Node2D" parent="PlayerCards/Card1"]
+position = Vector2(7.62939e-06, -4.76837e-07)
+
+[node name="Card1" type="TextureRect" parent="PlayerCards/Card1/Card1"]
+offset_right = 91.0
+offset_bottom = 123.0
+pivot_offset = Vector2(50, 50)
+texture = ExtResource("6_86bsy")
+stretch_mode = 2
+
+[node name="Card2" type="MarginContainer" parent="PlayerCards"]
+offset_left = 205.0
+offset_top = 587.0
+offset_right = 296.0
+offset_bottom = 710.0
+pivot_offset = Vector2(50, 50)
+
+[node name="Card2" type="Node2D" parent="PlayerCards/Card2"]
+position = Vector2(7.62939e-06, -4.76837e-07)
+
+[node name="Card2" type="TextureRect" parent="PlayerCards/Card2/Card2"]
+offset_right = 91.0
+offset_bottom = 123.0
+pivot_offset = Vector2(50, 50)
+texture = ExtResource("6_86bsy")
+stretch_mode = 2
+
+[node name="Card3" type="MarginContainer" parent="PlayerCards"]
+offset_left = 341.0
+offset_top = 587.0
+offset_right = 432.0
+offset_bottom = 710.0
+pivot_offset = Vector2(50, 50)
+
+[node name="Card3" type="Node2D" parent="PlayerCards/Card3"]
+position = Vector2(7.62939e-06, -4.76837e-07)
+
+[node name="Card3" type="TextureRect" parent="PlayerCards/Card3/Card3"]
+offset_right = 91.0
+offset_bottom = 123.0
+pivot_offset = Vector2(50, 50)
+texture = ExtResource("6_86bsy")
+stretch_mode = 2
+
+[node name="Card4" type="MarginContainer" parent="PlayerCards"]
+offset_left = 69.0
+offset_top = 745.0
+offset_right = 160.0
+offset_bottom = 868.0
+pivot_offset = Vector2(50, 50)
+
+[node name="Card4" type="Node2D" parent="PlayerCards/Card4"]
+position = Vector2(7.62939e-06, -4.76837e-07)
+
+[node name="Card4" type="TextureRect" parent="PlayerCards/Card4/Card4"]
+offset_right = 91.0
+offset_bottom = 123.0
+pivot_offset = Vector2(50, 50)
+texture = ExtResource("6_86bsy")
+stretch_mode = 2
+
+[node name="Card5" type="MarginContainer" parent="PlayerCards"]
+offset_left = 205.0
+offset_top = 745.0
+offset_right = 296.0
+offset_bottom = 868.0
+pivot_offset = Vector2(50, 50)
+
+[node name="Card5" type="Node2D" parent="PlayerCards/Card5"]
+position = Vector2(7.62939e-06, -4.76837e-07)
+
+[node name="Card5" type="TextureRect" parent="PlayerCards/Card5/Card5"]
+offset_right = 91.0
+offset_bottom = 123.0
+pivot_offset = Vector2(50, 50)
+texture = ExtResource("6_86bsy")
+stretch_mode = 2
+
+[node name="Card6" type="MarginContainer" parent="PlayerCards"]
+offset_left = 341.0
+offset_top = 745.0
+offset_right = 432.0
+offset_bottom = 868.0
+pivot_offset = Vector2(50, 50)
+
+[node name="Card6" type="Node2D" parent="PlayerCards/Card6"]
+position = Vector2(7.62939e-06, -4.76837e-07)
+
+[node name="Card6" type="TextureRect" parent="PlayerCards/Card6/Card6"]
+offset_right = 91.0
+offset_bottom = 123.0
+pivot_offset = Vector2(50, 50)
+texture = ExtResource("6_86bsy")
+stretch_mode = 2
+
+[node name="ReserveCards" type="HBoxContainer" parent="PlayerCards"]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 879.0
+offset_right = 554.0
+offset_bottom = 1015.0
+scale = Vector2(0.665, 0.665)
+theme_override_constants/separation = 110
+
+[node name="Card1" type="MarginContainer" parent="PlayerCards/ReserveCards"]
+layout_mode = 2
+
+[node name="Card1" type="Node2D" parent="PlayerCards/ReserveCards/Card1"]
+position = Vector2(3.8147e-06, 0)
+
+[node name="Card1" type="TextureRect" parent="PlayerCards/ReserveCards/Card1/Card1"]
+offset_right = 91.0
+offset_bottom = 123.0
+pivot_offset = Vector2(50, 50)
+texture = ExtResource("6_86bsy")
+stretch_mode = 2
+
+[node name="Card2" type="MarginContainer" parent="PlayerCards/ReserveCards"]
+layout_mode = 2
+
+[node name="Card2" type="Node2D" parent="PlayerCards/ReserveCards/Card2"]
+position = Vector2(1.90735e-06, 0)
+
+[node name="Card2" type="TextureRect" parent="PlayerCards/ReserveCards/Card2/Card2"]
+offset_right = 91.0
+offset_bottom = 123.0
+pivot_offset = Vector2(50, 50)
+texture = ExtResource("6_86bsy")
+stretch_mode = 2
+
+[node name="Card3" type="MarginContainer" parent="PlayerCards/ReserveCards"]
+layout_mode = 2
+
+[node name="Card3" type="Node2D" parent="PlayerCards/ReserveCards/Card3"]
+position = Vector2(3.8147e-06, 0)
+
+[node name="Card3" type="TextureRect" parent="PlayerCards/ReserveCards/Card3/Card3"]
+offset_right = 91.0
+offset_bottom = 123.0
+pivot_offset = Vector2(50, 50)
+texture = ExtResource("6_86bsy")
+stretch_mode = 2
+
+[node name="Card4" type="MarginContainer" parent="PlayerCards/ReserveCards"]
+layout_mode = 2
+
+[node name="Card4" type="Node2D" parent="PlayerCards/ReserveCards/Card4"]
+position = Vector2(1.90735e-06, 0)
+
+[node name="Card4" type="TextureRect" parent="PlayerCards/ReserveCards/Card4/Card4"]
+offset_right = 91.0
+offset_bottom = 123.0
+pivot_offset = Vector2(50, 50)
+texture = ExtResource("6_86bsy")
+stretch_mode = 2
+
+[node name="Shaker2D" type="Node2D" parent="PlayerCards" node_paths=PackedStringArray("Targets")]
+script = ExtResource("7_iut60")
+custom_target = true
+Targets = [NodePath("../Card1/Card1"), NodePath("../Card2/Card2"), NodePath("../Card3/Card3"), NodePath("../Card4/Card4"), NodePath("../Card5/Card5"), NodePath("../Card6/Card6"), NodePath("../ReserveCards/Card1/Card1"), NodePath("../ReserveCards/Card2/Card2"), NodePath("../ReserveCards/Card3/Card3"), NodePath("../ReserveCards/Card4/Card4")]
+intensity = 3.0
+duration = 3.0
+shake_speed = 1.5
+fade_out = 0.87055
+shakerPreset = SubResource("Resource_87x3o")
+
+[node name="EnemyCards" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = -1000.0
+offset_bottom = -1000.0
+
+[node name="Card1" type="MarginContainer" parent="EnemyCards"]
+offset_left = 69.0
+offset_top = 587.0
+offset_right = 160.0
+offset_bottom = 710.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(50, 50)
+
+[node name="Card1" type="Node2D" parent="EnemyCards/Card1"]
+position = Vector2(1.90735e-05, -4.76837e-07)
+
+[node name="Card1" type="TextureRect" parent="EnemyCards/Card1/Card1"]
+offset_right = 91.0
+offset_bottom = 123.0
+pivot_offset = Vector2(50, 50)
+texture = ExtResource("13_tqsrk")
+stretch_mode = 2
+
+[node name="Card2" type="MarginContainer" parent="EnemyCards"]
+offset_left = 205.0
+offset_top = 587.0
+offset_right = 296.0
+offset_bottom = 710.0
+pivot_offset = Vector2(50, 50)
+
+[node name="Card2" type="Node2D" parent="EnemyCards/Card2"]
+position = Vector2(1.90735e-05, -4.76837e-07)
+
+[node name="Card2" type="TextureRect" parent="EnemyCards/Card2/Card2"]
+offset_right = 91.0
+offset_bottom = 123.0
+pivot_offset = Vector2(50, 50)
+texture = ExtResource("13_tqsrk")
+stretch_mode = 2
+
+[node name="Card3" type="MarginContainer" parent="EnemyCards"]
+offset_left = 341.0
+offset_top = 587.0
+offset_right = 432.0
+offset_bottom = 710.0
+pivot_offset = Vector2(50, 50)
+
+[node name="Card3" type="Node2D" parent="EnemyCards/Card3"]
+position = Vector2(1.90176e-05, -4.76371e-07)
+
+[node name="Card3" type="TextureRect" parent="EnemyCards/Card3/Card3"]
+offset_right = 91.0
+offset_bottom = 123.0
+pivot_offset = Vector2(50, 50)
+texture = ExtResource("13_tqsrk")
+stretch_mode = 2
+
+[node name="Card4" type="MarginContainer" parent="EnemyCards"]
+offset_left = 69.0
+offset_top = 745.0
+offset_right = 160.0
+offset_bottom = 868.0
+pivot_offset = Vector2(50, 50)
+
+[node name="Card4" type="Node2D" parent="EnemyCards/Card4"]
+position = Vector2(1.90756e-05, -4.77507e-07)
+
+[node name="Card4" type="TextureRect" parent="EnemyCards/Card4/Card4"]
+offset_right = 91.0
+offset_bottom = 123.0
+pivot_offset = Vector2(50, 50)
+texture = ExtResource("13_tqsrk")
+stretch_mode = 2
+
+[node name="Card5" type="MarginContainer" parent="EnemyCards"]
+offset_left = 205.0
+offset_top = 745.0
+offset_right = 296.0
+offset_bottom = 868.0
+pivot_offset = Vector2(50, 50)
+
+[node name="Card5" type="Node2D" parent="EnemyCards/Card5"]
+position = Vector2(1.90735e-05, -4.76837e-07)
+
+[node name="Card5" type="TextureRect" parent="EnemyCards/Card5/Card5"]
+offset_right = 91.0
+offset_bottom = 123.0
+pivot_offset = Vector2(50, 50)
+texture = ExtResource("13_tqsrk")
+stretch_mode = 2
+
+[node name="Card6" type="MarginContainer" parent="EnemyCards"]
+offset_left = 341.0
+offset_top = 745.0
+offset_right = 432.0
+offset_bottom = 868.0
+pivot_offset = Vector2(50, 50)
+
+[node name="Card6" type="Node2D" parent="EnemyCards/Card6"]
+position = Vector2(1.90735e-05, -4.76837e-07)
+
+[node name="Card6" type="TextureRect" parent="EnemyCards/Card6/Card6"]
+offset_right = 91.0
+offset_bottom = 123.0
+pivot_offset = Vector2(50, 50)
+texture = ExtResource("13_tqsrk")
+stretch_mode = 2
+
+[node name="Shaker2D" type="Node2D" parent="EnemyCards" node_paths=PackedStringArray("Targets")]
+script = ExtResource("7_iut60")
+custom_target = true
+Targets = [NodePath("../Card1/Card1"), NodePath("../Card2/Card2"), NodePath("../Card3/Card3"), NodePath("../Card4/Card4"), NodePath("../Card5/Card5"), NodePath("../Card6/Card6")]
+intensity = 3.0
+duration = 3.0
+shake_speed = 1.5
+fade_out = 0.87055
+shakerPreset = SubResource("Resource_87x3o")
+
+[connection signal="pressed" from="Buttons/Start/Start" to="." method="_on_start_pressed"]

@@ -16,7 +16,7 @@ var loading = false
 
 
 
-var singleton_count = 3
+var singleton_count = 4
 
 
 
@@ -64,6 +64,7 @@ func _process(_delta):
 
 
 	else:
+		printerr("Ошибка загрузки!")
 		push_error("Ошибка загрузки!")  
 		error_dialogue("Loading error!   " + str(get_tree().get_root().get_child(singleton_count)) + "      ERROR CODE: BAD BACK PARAMETER ")                             
 
@@ -99,13 +100,12 @@ func _notification(what):
 	
 	
 
+func exit_app(reason: String):
+	error_dialogue("Closing app! Fatal error! Closing after 10 second                                     Reason: " + reason)
+	await get_tree().create_timer(10.0).timeout
+	OS.kill(OS.get_process_id())
 	
-	
-func restart_application():
-	get_tree().reload_current_scene()
-	get_tree().change_scene_to_file("res://src/scenes/auth-scenes/login_ui.tscn")
 
-	
 	
 
 	
@@ -117,6 +117,9 @@ func error_dialogue(reason: String):
 	
 	await get_tree().create_timer(0.3).timeout
 	get_tree().get_root().get_node("Error-dialogue").call("error_dialogue_starter", reason)
+	get_tree().paused = true
+	
+	
 	
 	
 	

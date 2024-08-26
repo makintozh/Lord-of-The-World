@@ -25,6 +25,9 @@ config/icon="res://src/ui/characters/c2.png"
 GLOBAL="*res://src/scripts/singleton/global_variables.gd"
 CONFIG="*res://src/scripts/singleton/config.gd"
 SceneManager="*res://src/scripts/singleton/SceneManager.gd"
+DebugMenu="*res://addons/debug_menu/debug_menu.tscn"
+GuiTransitions="*res://addons/simple-gui-transitions/singleton.gd"
+Shaker="*res://addons/shaker/src/Shaker.gd"
 
 [debug]
 
@@ -37,11 +40,11 @@ gdscript/warnings/unused_signal=0
 [display]
 
 window/size/viewport_width=500
-window/size/viewport_height=900
+window/size/viewport_height=1000
+window/size/always_on_top=true
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 window/handheld/orientation=1
-window/vsync/vsync_mode=0
 
 [editor]
 
@@ -53,7 +56,7 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogue_nodes/plugin.cfg")
+enabled=PackedStringArray("res://addons/CodeEditorBackground/plugin.cfg", "res://addons/debug_menu/plugin.cfg", "res://addons/dialogue_nodes/plugin.cfg", "res://addons/script-ide/plugin.cfg", "res://addons/shaker/plugin.cfg")
 
 [file_customization]
 
@@ -71,6 +74,18 @@ folder_colors={
 [gui]
 
 theme/custom_font="res://src/fonts/inika/Inika-Bold.ttf"
+
+[gui_transitions]
+
+config/default/auto_start=true
+config/default/fade_layout=true
+config/default/center_pivot=true
+config/default/duration=1.0
+config/default/delay=0.0
+config/default/ease_type="IN_OUT"
+config/default/animation_enter=4
+config/default/animation_leave=4
+config/default/transition_type="BACK"
 
 [importer_defaults]
 

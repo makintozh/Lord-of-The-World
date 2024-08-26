@@ -1,18 +1,18 @@
 [gd_scene load_steps=32 format=3 uid="uid://c7m1oyoo832ne"]
 
 [ext_resource type="Script" path="res://src/scripts/auth-scripts/register_ui.gd" id="1_mfjp8"]
-[ext_resource type="Texture2D" uid="uid://6uladkfb4n6i" path="res://src/ui/backgrounds/background.png" id="2_ldkhn"]
-[ext_resource type="Texture2D" uid="uid://bwvdq41r205os" path="res://src/ui/elements/auth_background.png" id="3_pdbsj"]
-[ext_resource type="Texture2D" uid="uid://c1dekmihxjd1c" path="res://src/ui/buttons/button.png" id="4_hbt2t"]
-[ext_resource type="Texture2D" uid="uid://bab6hhiohl0ar" path="res://src/ui/checkboxes/remember копия (1).png" id="5_hhspj"]
-[ext_resource type="Texture2D" uid="uid://bkyd28twckssf" path="res://src/ui/buttons/arrow back white.png" id="6_2y8fy"]
-[ext_resource type="Texture2D" uid="uid://bro17pd8pngr6" path="res://src/ui/checkboxes/remember off копия.png" id="6_3hpjw"]
-[ext_resource type="Texture2D" uid="uid://bs08othgxc8v2" path="res://src/ui/buttons/enter button.png" id="7_4l7en"]
-[ext_resource type="Texture2D" uid="uid://cuhqyvgagkcvk" path="res://src/ui/elements/input.png" id="10_hgcji"]
-[ext_resource type="Texture2D" uid="uid://bct427tku7c13" path="res://src/ui/checkboxes/Hide.png" id="11_4c5t4"]
-[ext_resource type="Texture2D" uid="uid://dn3024lgbtnjn" path="res://src/ui/checkboxes/Eye.png" id="12_612il"]
+[ext_resource type="Texture2D" uid="uid://dvq7k76euq5b1" path="res://src/ui/backgrounds/background.png" id="2_ldkhn"]
+[ext_resource type="Texture2D" uid="uid://12ni60j4siyq" path="res://src/ui/elements/auth_background.png" id="3_pdbsj"]
+[ext_resource type="Texture2D" uid="uid://befpc56lvoqsk" path="res://src/ui/buttons/button.png" id="4_hbt2t"]
+[ext_resource type="Texture2D" uid="uid://cqtqdfwvygjmv" path="res://src/ui/checkboxes/remember копия (1).png" id="5_hhspj"]
+[ext_resource type="Texture2D" uid="uid://b5ukiu6tkvi8f" path="res://src/ui/buttons/arrow back white.png" id="6_2y8fy"]
+[ext_resource type="Texture2D" uid="uid://chl0jmlx1dv56" path="res://src/ui/checkboxes/remember off копия.png" id="6_3hpjw"]
+[ext_resource type="Texture2D" uid="uid://c53x5d628hanj" path="res://src/ui/buttons/enter button.png" id="7_4l7en"]
+[ext_resource type="Texture2D" uid="uid://daxo25nsn56qc" path="res://src/ui/elements/input.png" id="10_hgcji"]
+[ext_resource type="Texture2D" uid="uid://fq4fcsgwlcx" path="res://src/ui/checkboxes/Hide.png" id="11_4c5t4"]
+[ext_resource type="Texture2D" uid="uid://cwea3s5cdyt8n" path="res://src/ui/checkboxes/Eye.png" id="12_612il"]
 [ext_resource type="PackedScene" uid="uid://mea22juv2m6t" path="res://src/scenes/auth-scenes/failed_to_connect.tscn" id="13_1jsrq"]
-[ext_resource type="Texture2D" uid="uid://cnuwogyy50p7w" path="res://src/ui/buttons/support green.png" id="13_xnvx8"]
+[ext_resource type="Texture2D" uid="uid://dxpst56gxe60t" path="res://src/ui/buttons/support green.png" id="13_xnvx8"]
 [ext_resource type="PackedScene" uid="uid://cx5etu0rvfai4" path="res://src/scenes/auth-scenes/waiting_response.tscn" id="14_a3g2u"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rvhr0"]
@@ -49,8 +49,9 @@ texture = ExtResource("7_4l7en")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vp42w"]
 texture = ExtResource("10_hgcji")
-texture_margin_left = 20.0
-texture_margin_top = 20.0
+texture_margin_left = 25.0
+texture_margin_top = 25.0
+texture_margin_bottom = 25.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sokdo"]
 
@@ -58,7 +59,7 @@ texture_margin_top = 20.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1wjd3"]
 texture = ExtResource("10_hgcji")
-texture_margin_left = 20.0
+texture_margin_left = 25.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iscbl"]
 
@@ -99,13 +100,13 @@ anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = 28.0
-offset_top = 50.0
-offset_right = 472.0
-offset_bottom = 687.0
+offset_left = 22.0
+offset_top = 39.0
+offset_right = 1658.0
+offset_bottom = 2375.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_use_anchors_ = true
+scale = Vector2(0.275, 0.275)
 
 [node name="AuthBackground" type="TextureRect" parent="AuthContainer"]
 layout_mode = 2
@@ -161,7 +162,6 @@ offset_right = 335.0
 offset_bottom = 187.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_use_anchors_ = true
 
 [node name="RegisterText" type="Label" parent="RegisterText"]
 layout_mode = 2

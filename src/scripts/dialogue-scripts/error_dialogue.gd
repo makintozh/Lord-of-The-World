@@ -6,6 +6,8 @@ extends Node
 @onready var transparent_back = $TransparentBack
 
 
+func error_dialogue_stop():
+	error_dialogue.stop()
 
 
 
@@ -18,4 +20,4 @@ func error_dialogue_starter(reason: String):
 
 func _on_error_dialogue_dialogue_signal(value: String) -> void:
 	match value:
-		'RESTART': SceneManager.restart_application()
+		'EXIT': SceneManager.exit_app("Fatal")

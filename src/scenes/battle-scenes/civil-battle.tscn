@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dwq5ql2swy17c"]
+[gd_scene load_steps=6 format=3 uid="uid://dwq5ql2swy17c"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/biom-scripts/battle-scripts/civil-battle.gd" id="1_li0o5"]
-[ext_resource type="Texture2D" uid="uid://cq4x60xftnyf0" path="res://src/ui/backgrounds/battle-backgrounds/Люди(Civil).PNG" id="2_ifnew"]
+[ext_resource type="Texture2D" uid="uid://dyjpasu6tdh1g" path="res://src/ui/backgrounds/battle-backgrounds/Люди(Civil).PNG" id="2_ifnew"]
 [ext_resource type="VideoStream" path="res://src/ui/backgrounds/battle-backgrounds/Люди(Civil).ogv" id="3_2sywt"]
-[ext_resource type="Texture2D" uid="uid://b5crkkfaua4yl" path="res://src/ui/buttons/back_button.png" id="4_mwrbi"]
+[ext_resource type="Texture2D" uid="uid://v5tk14cvhbwv" path="res://src/ui/buttons/back_button.png" id="4_mwrbi"]
+[ext_resource type="PackedScene" uid="uid://bt6aixyt4p8pl" path="res://src/scenes/gui-scenes/battle_gui.tscn" id="5_pqlgm"]
 
 [node name="Civil-Battle" type="Control"]
 layout_mode = 3
@@ -43,6 +44,9 @@ stream = ExtResource("3_2sywt")
 autoplay = true
 expand = true
 loop = true
+
+[node name="Battle-GUI" parent="." instance=ExtResource("5_pqlgm")]
+layout_mode = 1
 
 [node name="BackButtonLayer" type="Control" parent="."]
 layout_mode = 3

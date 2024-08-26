@@ -1,23 +1,26 @@
 [gd_scene load_steps=20 format=3 uid="uid://do85wm7qmftwm"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/character_create.gd" id="1_t13y3"]
-[ext_resource type="Texture2D" uid="uid://d0f377gqpli7j" path="res://src/ui/backgrounds/background.png" id="2_juskx"]
-[ext_resource type="Texture2D" uid="uid://b77ju66niaa3" path="res://src/ui/elements/race bar.png" id="3_yt8dn"]
-[ext_resource type="Texture2D" uid="uid://b2v8pvhki8ptw" path="res://src/ui/buttons/arrow_ (1).png" id="7_bnfx2"]
-[ext_resource type="Texture2D" uid="uid://bntlhgal3i2oe" path="res://src/ui/buttons/arrow_.png" id="8_mfu6b"]
-[ext_resource type="Texture2D" uid="uid://xyfvdcufo1ds" path="res://src/ui/elements/gekso.png" id="9_0yv3s"]
-[ext_resource type="Texture2D" uid="uid://0x0pnqrcwtda" path="res://src/ui/elements/input.png" id="10_n5pao"]
-[ext_resource type="Texture2D" uid="uid://cgsykm02o0fr0" path="res://src/ui/buttons/green buttom base long.png" id="11_c771i"]
-[ext_resource type="Texture2D" uid="uid://bdwktogmi00db" path="res://src/ui/elements/update 1.png" id="15_hneh2"]
+[ext_resource type="Texture2D" uid="uid://dvq7k76euq5b1" path="res://src/ui/backgrounds/background.png" id="2_juskx"]
+[ext_resource type="Texture2D" uid="uid://ca8c2oawcspri" path="res://src/ui/elements/race bar.png" id="3_yt8dn"]
+[ext_resource type="Texture2D" uid="uid://c4fhrghf3a3wm" path="res://src/ui/buttons/arrow_ (1).png" id="7_bnfx2"]
+[ext_resource type="Texture2D" uid="uid://dca1p24c1tkf8" path="res://src/ui/buttons/arrow_.png" id="8_mfu6b"]
+[ext_resource type="Texture2D" uid="uid://cnsdkk42xm44r" path="res://src/ui/elements/gekso.png" id="9_0yv3s"]
+[ext_resource type="Texture2D" uid="uid://daxo25nsn56qc" path="res://src/ui/elements/input.png" id="10_n5pao"]
+[ext_resource type="Texture2D" uid="uid://cy5fg20knkhtc" path="res://src/ui/buttons/green buttom base long.png" id="11_c771i"]
+[ext_resource type="Texture2D" uid="uid://d1n0rdc1jyd13" path="res://src/ui/elements/update 1.png" id="15_hneh2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b75u7"]
+texture = ExtResource("10_n5pao")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3cest"]
 texture = ExtResource("10_n5pao")
 texture_margin_left = 25.0
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b75u7"]
-texture = ExtResource("10_n5pao")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bl7up"]
+texture = ExtResource("11_c771i")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5tp33"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rhrv2"]
 texture = ExtResource("11_c771i")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3hy0n"]
@@ -26,10 +29,7 @@ texture = ExtResource("11_c771i")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j1crl"]
 texture = ExtResource("11_c771i")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rhrv2"]
-texture = ExtResource("11_c771i")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bl7up"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5tp33"]
 texture = ExtResource("11_c771i")
 
 [sub_resource type="Animation" id="Animation_vhv4n"]
@@ -264,13 +264,13 @@ grow_vertical = 0
 
 [node name="CharacterNameInput" type="LineEdit" parent="MainUI/PlayerCharacterName/CharacterNameContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
 theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
 theme_override_colors/font_uneditable_color = Color(1, 1, 1, 1)
-theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxTexture_3cest")
 theme_override_styles/focus = SubResource("StyleBoxTexture_b75u7")
+theme_override_styles/normal = SubResource("StyleBoxTexture_3cest")
 placeholder_text = "Name"
 
 [node name="CharacterCreateButton" type="Control" parent="MainUI"]
@@ -300,11 +300,11 @@ grow_vertical = 0
 modulate = Color(1, 1, 1, 0.470588)
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxTexture_5tp33")
+theme_override_styles/focus = SubResource("StyleBoxTexture_bl7up")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_rhrv2")
 theme_override_styles/hover = SubResource("StyleBoxTexture_3hy0n")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_j1crl")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_rhrv2")
-theme_override_styles/focus = SubResource("StyleBoxTexture_bl7up")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5tp33")
 text = "CREATE"
 
 [node name="Index_Buttons" type="Control" parent="MainUI"]

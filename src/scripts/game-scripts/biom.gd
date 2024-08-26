@@ -60,8 +60,3 @@ func _on_meches_pressed():
 
 func _on_celestial_pressed():
 	SceneManager.go_to_scene("res://src/scenes/hub-scenes/celestial-hub.tscn")
-
-
-
-
-

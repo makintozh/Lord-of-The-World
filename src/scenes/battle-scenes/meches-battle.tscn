@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ds3fcle106lfv"]
+[gd_scene load_steps=6 format=3 uid="uid://ds3fcle106lfv"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/biom-scripts/meches-battle.gd" id="1_80t1x"]
-[ext_resource type="Texture2D" uid="uid://ba7wx6qh4ro4q" path="res://src/ui/backgrounds/battle-backgrounds/Механизмы(Meches).PNG" id="2_yycqe"]
+[ext_resource type="Texture2D" uid="uid://dg78gfkaxgg12" path="res://src/ui/backgrounds/battle-backgrounds/Механизмы(Meches).PNG" id="2_yycqe"]
 [ext_resource type="VideoStream" path="res://src/ui/backgrounds/battle-backgrounds/Механизмы(Meches).ogv" id="3_ukole"]
-[ext_resource type="Texture2D" uid="uid://bbpw08kj24coi" path="res://src/ui/buttons/back_button.png" id="4_gxw3y"]
+[ext_resource type="Texture2D" uid="uid://v5tk14cvhbwv" path="res://src/ui/buttons/back_button.png" id="4_gxw3y"]
+[ext_resource type="PackedScene" uid="uid://bt6aixyt4p8pl" path="res://src/scenes/gui-scenes/battle_gui.tscn" id="5_v01g3"]
 
 [node name="Meches-Battle" type="Control"]
 layout_mode = 3
@@ -43,6 +44,9 @@ stream = ExtResource("3_ukole")
 autoplay = true
 expand = true
 loop = true
+
+[node name="Battle-GUI" parent="." instance=ExtResource("5_v01g3")]
+layout_mode = 1
 
 [node name="BackButtonLayer" type="Control" parent="."]
 layout_mode = 3
