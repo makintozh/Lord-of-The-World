@@ -6,14 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://mbnb8y642xbj" path="res://src/ui/elements/BackSkull.png" id="3_y02k2"]
 [ext_resource type="Texture2D" uid="uid://1r41nlm2jvie" path="res://src/ui/elements/risk-skull(1) 1.png" id="4_ebq7b"]
 [ext_resource type="Texture2D" uid="uid://yjgdjghkhr6j" path="res://src/ui/elements/Group 1000006723.png" id="5_eyoc6"]
-[ext_resource type="Texture2D" uid="uid://cwc35noltohsn" path="res://src/ui/elements/Card_Man_1 6.png" id="6_86bsy"]
+[ext_resource type="Texture2D" uid="uid://cwc35noltohsn" path="res://src/ui/characters/Card_Man_1 6.png" id="6_86bsy"]
 [ext_resource type="Script" path="res://addons/shaker/src/Vector2/shaker_component2D.gd" id="7_iut60"]
 [ext_resource type="Script" path="res://addons/shaker/data/Vector2/BaseShakerType2D.gd" id="8_t76ew"]
 [ext_resource type="Script" path="res://addons/shaker/data/Vector2/ShakerTypeSineWave2D.gd" id="9_goflx"]
 [ext_resource type="Script" path="res://addons/shaker/data/Single/BaseShakerType1D.gd" id="10_dwtgp"]
 [ext_resource type="Script" path="res://addons/shaker/data/Vector2/ShakerPreset2D.gd" id="11_c667c"]
 [ext_resource type="Script" path="res://addons/shaker/data/Single/ShakerTypeSineWave1D.gd" id="13_eiqpp"]
-[ext_resource type="Texture2D" uid="uid://bnwwqf3y8c8lt" path="res://src/ui/elements/Card_troll_1.png" id="13_tqsrk"]
+[ext_resource type="Texture2D" uid="uid://bnwwqf3y8c8lt" path="res://src/ui/characters/Card_troll_1.png" id="13_tqsrk"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y4pqg"]
 
@@ -318,17 +318,18 @@ pivot_offset = Vector2(50, 50)
 texture = ExtResource("6_86bsy")
 stretch_mode = 2
 
-[node name="ReserveCards" type="HBoxContainer" parent="PlayerCards"]
-layout_mode = 0
+[node name="ReserveCards" type="Control" parent="PlayerCards"]
+anchors_preset = 0
 offset_left = 108.0
 offset_top = 2122.0
 offset_right = 554.0
 offset_bottom = 2258.0
 scale = Vector2(0.665, 0.665)
-theme_override_constants/separation = 110
 
 [node name="Card1" type="MarginContainer" parent="PlayerCards/ReserveCards"]
 layout_mode = 2
+offset_bottom = 136.0
+pivot_offset = Vector2(50, 50)
 
 [node name="Card1" type="Node2D" parent="PlayerCards/ReserveCards/Card1"]
 position = Vector2(3.8147e-06, 0)
@@ -342,6 +343,10 @@ stretch_mode = 2
 
 [node name="Card2" type="MarginContainer" parent="PlayerCards/ReserveCards"]
 layout_mode = 2
+offset_left = 110.0
+offset_right = 110.0
+offset_bottom = 136.0
+pivot_offset = Vector2(50, 50)
 
 [node name="Card2" type="Node2D" parent="PlayerCards/ReserveCards/Card2"]
 position = Vector2(1.90735e-06, 0)
@@ -355,6 +360,10 @@ stretch_mode = 2
 
 [node name="Card3" type="MarginContainer" parent="PlayerCards/ReserveCards"]
 layout_mode = 2
+offset_left = 220.0
+offset_right = 220.0
+offset_bottom = 136.0
+pivot_offset = Vector2(50, 50)
 
 [node name="Card3" type="Node2D" parent="PlayerCards/ReserveCards/Card3"]
 position = Vector2(3.81499e-06, 0)
@@ -368,6 +377,10 @@ stretch_mode = 2
 
 [node name="Card4" type="MarginContainer" parent="PlayerCards/ReserveCards"]
 layout_mode = 2
+offset_left = 330.0
+offset_right = 330.0
+offset_bottom = 136.0
+pivot_offset = Vector2(50, 50)
 
 [node name="Card4" type="Node2D" parent="PlayerCards/ReserveCards/Card4"]
 position = Vector2(1.90735e-06, 0)

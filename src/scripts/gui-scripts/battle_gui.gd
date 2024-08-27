@@ -59,50 +59,51 @@ var position_enemy_card_6 : Vector2 = Vector2(341.0, 245.0)
 var reserve_player_cards_position = Vector2(109.0, 905.0)
 
 
-var top_gate : Vector2 = Vector2(209.0,-19.0)
-var down_gate : Vector2 = Vector2(209.0,850.0)
+var top_gate : Vector2 = Vector2(209.0,-200.0)
+var down_gate : Vector2 = Vector2(209.0,1400.0)
 
 
-var easing = Tween.TRANS_CIRC
+var easing = Tween.TRANS_LINEAR
 
 var time_across = 0.1
 
 
-@export var go_duration = 0.4
+@export var go_duration = 0.2
 @export var rotate_duration = go_duration + 0.5
-@export var rotate_angle = 25.133
+@export var rotate_angle = 12.566
 
 
 
 func start_card():
-	var tween = create_tween().set_parallel()
+	var tween = create_tween().set_parallel(true).set_speed_scale(1.5)
 	
 	
-	tween.tween_property(player_card1, "position", down_gate, go_duration)
-	tween.chain().tween_property(player_card1, "position", position_player_card_1, go_duration)
+	tween.tween_property(player_card1, "position", down_gate, go_duration).set_trans(easing)
+	tween.tween_property(player_card1, "position", position_player_card_1, go_duration).set_trans(easing)
 	tween.tween_property(player_card1, "rotation", rotate_angle, rotate_duration).set_trans(easing)
-	
-	tween.chain().tween_property(player_card2, "position", down_gate, go_duration)
-	tween.chain().tween_property(player_card2, "position", position_player_card_2, go_duration)
+
+	tween.tween_property(player_card2, "position", down_gate, go_duration).set_trans(easing)
+	tween.chain().tween_property(player_card2, "position", position_player_card_2, go_duration).set_trans(easing)
 	tween.tween_property(player_card2, "rotation", rotate_angle, rotate_duration).set_trans(easing)
 	
-	tween.chain().tween_property(player_card3, "position", down_gate, go_duration)
-	tween.chain().tween_property(player_card3, "position", position_player_card_3, go_duration)
+	tween.tween_property(player_card3, "position", down_gate, go_duration).set_trans(easing)
+	tween.chain().tween_property(player_card3, "position", position_player_card_3, go_duration).set_trans(easing)
 	tween.tween_property(player_card3, "rotation", rotate_angle, rotate_duration).set_trans(easing)
 	
-	tween.chain().tween_property(player_card4, "position", down_gate, go_duration)
-	tween.chain().tween_property(player_card4, "position", position_player_card_4, go_duration)
+	tween.tween_property(player_card4, "position", down_gate, go_duration).set_trans(easing)
+	tween.chain().tween_property(player_card4, "position", position_player_card_4, go_duration).set_trans(easing)
 	tween.tween_property(player_card4, "rotation", rotate_angle, rotate_duration).set_trans(easing)
 	
-	tween.chain().tween_property(player_card5, "position", down_gate, go_duration)
-	tween.chain().tween_property(player_card5, "position", position_player_card_5, go_duration)
+	tween.tween_property(player_card5, "position", down_gate, go_duration).set_trans(easing)
+	tween.chain().tween_property(player_card5, "position", position_player_card_5, go_duration).set_trans(easing)
 	tween.tween_property(player_card5, "rotation", rotate_angle, rotate_duration).set_trans(easing)
 	
-	tween.chain().tween_property(player_card6, "position", down_gate, go_duration)
-	tween.chain().tween_property(player_card6, "position", position_player_card_6, go_duration)
+	tween.tween_property(player_card6, "position", down_gate, go_duration).set_trans(easing)
+	tween.chain().tween_property(player_card6, "position", position_player_card_6, go_duration).set_trans(easing)
 	tween.tween_property(player_card6, "rotation", rotate_angle, rotate_duration).set_trans(easing)
 	
-	tween.chain().tween_property(reserve_player_cards, "position", reserve_player_cards_position, go_duration)
+	
+	tween.chain().tween_property(reserve_player_cards, "position", reserve_player_cards_position, go_duration).set_trans(easing)
 	tween.tween_property(reserve_player_card1, "rotation", rotate_angle, rotate_duration).set_trans(easing)
 	tween.tween_property(reserve_player_card2, "rotation", rotate_angle, rotate_duration).set_trans(easing)
 	tween.tween_property(reserve_player_card3, "rotation", rotate_angle, rotate_duration).set_trans(easing)
@@ -111,28 +112,28 @@ func start_card():
 	
 	
 	
-	tween.chain().tween_property(enemy_card1, "position", top_gate, go_duration)
-	tween.chain().tween_property(enemy_card1, "position", position_enemy_card_1, go_duration)
+	tween.chain().tween_property(enemy_card1, "position", top_gate, go_duration).set_trans(easing)
+	tween.chain().tween_property(enemy_card1, "position", position_enemy_card_1, go_duration).set_trans(easing)
 	tween.tween_property(enemy_card1, "rotation", rotate_angle, rotate_duration).set_trans(easing)
 	
-	tween.chain().tween_property(enemy_card2, "position", top_gate, go_duration)
-	tween.chain().tween_property(enemy_card2, "position", position_enemy_card_2, go_duration)
+	tween.tween_property(enemy_card2, "position", top_gate, go_duration).set_trans(easing)
+	tween.chain().tween_property(enemy_card2, "position", position_enemy_card_2, go_duration).set_trans(easing)
 	tween.tween_property(enemy_card2, "rotation", rotate_angle, rotate_duration).set_trans(easing)
 
-	tween.chain().tween_property(enemy_card3, "position", top_gate, go_duration)
-	tween.chain().tween_property(enemy_card3, "position", position_enemy_card_3, go_duration)
+	tween.tween_property(enemy_card3, "position", top_gate, go_duration).set_trans(easing)
+	tween.chain().tween_property(enemy_card3, "position", position_enemy_card_3, go_duration).set_trans(easing)
 	tween.tween_property(enemy_card3, "rotation", rotate_angle, rotate_duration).set_trans(easing)
 
-	tween.chain().tween_property(enemy_card4, "position", top_gate, go_duration)
-	tween.chain().tween_property(enemy_card4, "position", position_enemy_card_4, go_duration)
+	tween.tween_property(enemy_card4, "position", top_gate, go_duration).set_trans(easing)
+	tween.chain().tween_property(enemy_card4, "position", position_enemy_card_4, go_duration).set_trans(easing)
 	tween.tween_property(enemy_card4, "rotation", rotate_angle, rotate_duration).set_trans(easing)
 
-	tween.chain().tween_property(enemy_card5, "position", top_gate, go_duration)
-	tween.chain().tween_property(enemy_card5, "position", position_enemy_card_5, go_duration)
+	tween.tween_property(enemy_card5, "position", top_gate, go_duration).set_trans(easing)
+	tween.chain().tween_property(enemy_card5, "position", position_enemy_card_5, go_duration).set_trans(easing)
 	tween.tween_property(enemy_card5, "rotation", rotate_angle, rotate_duration).set_trans(easing)
 
-	tween.chain().tween_property(enemy_card6, "position", top_gate, go_duration)
-	tween.chain().tween_property(enemy_card6, "position", position_enemy_card_6, go_duration)
+	tween.tween_property(enemy_card6, "position", top_gate, go_duration).set_trans(easing)
+	tween.chain().tween_property(enemy_card6, "position", position_enemy_card_6, go_duration).set_trans(easing)
 	tween.tween_property(enemy_card6, "rotation", rotate_angle, rotate_duration).set_trans(easing)
 
 
@@ -145,16 +146,19 @@ func start_card():
 
 
 
-var move_duration = 0.4
+var move_duration = 0.3
 var across_move_time = 4
 
+var normal_scale : Vector2 = Vector2(1.0 , 1.0)
+var small_scale : Vector2 = Vector2(0.8 , 0.8)
+var scale_duration = 0.3
 
 func move_card(card:Node, to_card_position:Vector2):
-	var node2D = card.get_child(0)
-	shaker2D.reparent(node2D)
-	await get_tree().create_timer(0.1).timeout 
-	shaker2D.duration = move_duration + 0.1
-	shaker2D.play_shake()
+	#var node2D = card.get_child(0)
+	#shaker2D.reparent(node2D)
+	#await get_tree().create_timer(0.1).timeout 
+	#shaker2D.duration = move_duration + 0.1
+	#shaker2D.play_shake()
 	
 	await get_tree().create_timer(0.3)
 	var original_card_position = card.position
@@ -162,27 +166,29 @@ func move_card(card:Node, to_card_position:Vector2):
 	
 	
 	var tween = create_tween()
+	tween.tween_property(card, "scale", small_scale, scale_duration)
+	tween.tween_property(card, "scale", normal_scale, scale_duration)
 	tween.tween_property(card, "position", to_card_position, move_duration)
 	tween.chain().tween_property(card, "position", original_card_position, move_duration).set_delay(0.1)
 
 
 func mover():
-	move_card(player_card1, position_enemy_card_6)
+	move_card(player_card5, position_enemy_card_2)
 	await get_tree().create_timer(across_move_time).timeout
 	
-	move_card(player_card2, position_enemy_card_1)
+	move_card(player_card5, position_enemy_card_1)
 	await get_tree().create_timer(across_move_time).timeout
 	
-	move_card(player_card3, position_enemy_card_2)
+	move_card(player_card5, position_enemy_card_3)
 	await get_tree().create_timer(across_move_time).timeout
 	
-	move_card(player_card4, position_enemy_card_3)
+	move_card(player_card5, position_enemy_card_5)
 	await get_tree().create_timer(across_move_time).timeout
 	
 	move_card(player_card5, position_enemy_card_4)
 	await get_tree().create_timer(across_move_time).timeout
 	
-	move_card(player_card6, position_enemy_card_5)
+	move_card(player_card5, position_enemy_card_6)
 
 
 

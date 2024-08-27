@@ -2,17 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0ceq10x1dm0o"
-path="res://.godot/imported/character 1.png-af7b409b34f447c476f7019ce8c232ed.ctex"
+uid="uid://cwc35noltohsn"
+path="res://.godot/imported/Card_Man_1 6.png-85799c4c7c5baf61681b6b1221b2d28a.ctex"
 metadata={
-"has_editor_variant": true,
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/characters/character 1.png"
-dest_files=["res://.godot/imported/character 1.png-af7b409b34f447c476f7019ce8c232ed.ctex"]
+source_file="res://src/ui/characters/Card_Man_1 6.png"
+dest_files=["res://.godot/imported/Card_Man_1 6.png-85799c4c7c5baf61681b6b1221b2d28a.ctex"]
 
 [params]
 
