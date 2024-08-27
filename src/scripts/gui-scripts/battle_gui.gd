@@ -68,7 +68,7 @@ var easing = Tween.TRANS_LINEAR
 var time_across = 0.1
 
 
-@export var go_duration = 0.2
+@export var go_duration = 0.5
 @export var rotate_duration = go_duration + 0.5
 @export var rotate_angle = 12.566
 
