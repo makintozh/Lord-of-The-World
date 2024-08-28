@@ -2375,10 +2375,10 @@ anchors_preset = 0
 [node name="Tavern" type="Control" parent="Buildings"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -20.0
-offset_top = -1.0
-offset_right = -20.0
-offset_bottom = -1.0
+offset_left = -13.0
+offset_top = 1.0
+offset_right = -13.0
+offset_bottom = 1.0
 
 [node name="Tavern" type="MarginContainer" parent="Buildings/Tavern"]
 layout_mode = 0
@@ -2427,10 +2427,10 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_xpp1x")
 [node name="Biom" type="Control" parent="Buildings"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 8.0
-offset_top = 48.0
-offset_right = 8.0
-offset_bottom = 48.0
+offset_left = 9.0
+offset_top = 60.0
+offset_right = 9.0
+offset_bottom = 60.0
 
 [node name="Biom" type="MarginContainer" parent="Buildings/Biom"]
 layout_mode = 0
@@ -2458,6 +2458,7 @@ theme_override_font_sizes/font_size = 34
 text = "Biom"
 
 [node name="BiomHitBox" type="Button" parent="Buildings/Biom"]
+layout_mode = 0
 offset_left = 216.0
 offset_top = 322.0
 offset_right = 389.0
@@ -2477,10 +2478,10 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_xpp1x")
 [node name="ClansHall" type="Control" parent="Buildings"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -26.0
-offset_top = 100.0
-offset_right = -26.0
-offset_bottom = 100.0
+offset_left = -19.0
+offset_top = 116.0
+offset_right = -19.0
+offset_bottom = 116.0
 
 [node name="ClansHall" type="MarginContainer" parent="Buildings/ClansHall"]
 layout_mode = 0
@@ -2510,6 +2511,7 @@ theme_override_font_sizes/font_size = 34
 text = "Clans Hall"
 
 [node name="ClansHallHitBox" type="Button" parent="Buildings/ClansHall"]
+layout_mode = 0
 offset_left = 18.0
 offset_top = 549.0
 offset_right = 208.0
@@ -2530,9 +2532,9 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_xpp1x")
 layout_mode = 3
 anchors_preset = 0
 offset_left = -22.0
-offset_top = -446.0
+offset_top = -458.0
 offset_right = -22.0
-offset_bottom = -446.0
+offset_bottom = -458.0
 
 [node name="League" type="MarginContainer" parent="Buildings/League"]
 layout_mode = 0
@@ -2561,6 +2563,7 @@ theme_override_font_sizes/font_size = 34
 text = "League"
 
 [node name="LeagueHitBox" type="Button" parent="Buildings/League"]
+layout_mode = 0
 offset_left = 333.0
 offset_top = 631.0
 offset_right = 515.0
@@ -2580,10 +2583,10 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_xpp1x")
 [node name="Sieges" type="Control" parent="Buildings"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -8.0
-offset_top = 114.0
-offset_right = -8.0
-offset_bottom = 114.0
+offset_left = -12.0
+offset_top = 141.0
+offset_right = -12.0
+offset_bottom = 141.0
 
 [node name="Sieges" type="MarginContainer" parent="Buildings/Sieges"]
 layout_mode = 0
@@ -2606,10 +2609,10 @@ autoplay = "Sieges"
 
 [node name="SiegesLabel" type="MarginContainer" parent="Buildings/Sieges"]
 layout_mode = 0
-offset_left = 365.0
-offset_top = 765.0
-offset_right = 517.0
-offset_bottom = 812.0
+offset_left = 349.0
+offset_top = 751.0
+offset_right = 501.0
+offset_bottom = 798.0
 
 [node name="SiegesLabel" type="Label" parent="Buildings/Sieges/SiegesLabel"]
 layout_mode = 2
@@ -2617,6 +2620,7 @@ theme_override_font_sizes/font_size = 34
 text = "Sieges"
 
 [node name="SiegesHitBox" type="Button" parent="Buildings/Sieges"]
+layout_mode = 0
 offset_left = 333.0
 offset_top = 631.0
 offset_right = 515.0
