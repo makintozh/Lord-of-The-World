@@ -25,6 +25,9 @@ func _on_league_pressed():
 	SceneManager.go_to_scene("res://src/scenes/game-scenes/league.tscn")
 
 
+func _on_sieges_pressed() -> void:
+	pass # Replace with function body.
+
 
 func _on_back_button_pressed():
 	if not back_dialogue.is_running():

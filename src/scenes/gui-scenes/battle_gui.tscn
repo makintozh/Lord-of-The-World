@@ -320,15 +320,16 @@ stretch_mode = 2
 
 [node name="ReserveCards" type="Control" parent="PlayerCards"]
 anchors_preset = 0
-offset_left = 108.0
-offset_top = 2122.0
-offset_right = 554.0
-offset_bottom = 2258.0
+offset_right = 446.0
+offset_bottom = 136.0
 scale = Vector2(0.665, 0.665)
 
 [node name="Card1" type="MarginContainer" parent="PlayerCards/ReserveCards"]
 layout_mode = 2
-offset_bottom = 136.0
+offset_left = 169.925
+offset_top = 3180.45
+offset_right = 169.925
+offset_bottom = 3316.45
 pivot_offset = Vector2(50, 50)
 
 [node name="Card1" type="Node2D" parent="PlayerCards/ReserveCards/Card1"]
@@ -343,9 +344,10 @@ stretch_mode = 2
 
 [node name="Card2" type="MarginContainer" parent="PlayerCards/ReserveCards"]
 layout_mode = 2
-offset_left = 110.0
-offset_right = 110.0
-offset_bottom = 136.0
+offset_left = 279.925
+offset_top = 3180.45
+offset_right = 279.925
+offset_bottom = 3316.45
 pivot_offset = Vector2(50, 50)
 
 [node name="Card2" type="Node2D" parent="PlayerCards/ReserveCards/Card2"]
@@ -360,9 +362,10 @@ stretch_mode = 2
 
 [node name="Card3" type="MarginContainer" parent="PlayerCards/ReserveCards"]
 layout_mode = 2
-offset_left = 220.0
-offset_right = 220.0
-offset_bottom = 136.0
+offset_left = 389.925
+offset_top = 3180.45
+offset_right = 389.925
+offset_bottom = 3316.45
 pivot_offset = Vector2(50, 50)
 
 [node name="Card3" type="Node2D" parent="PlayerCards/ReserveCards/Card3"]
@@ -377,9 +380,10 @@ stretch_mode = 2
 
 [node name="Card4" type="MarginContainer" parent="PlayerCards/ReserveCards"]
 layout_mode = 2
-offset_left = 330.0
-offset_right = 330.0
-offset_bottom = 136.0
+offset_left = 499.925
+offset_top = 3180.45
+offset_right = 499.925
+offset_bottom = 3316.45
 pivot_offset = Vector2(50, 50)
 
 [node name="Card4" type="Node2D" parent="PlayerCards/ReserveCards/Card4"]
@@ -505,7 +509,6 @@ stretch_mode = 2
 
 [node name="Button" type="Button" parent="."]
 self_modulate = Color(1, 1, 1, 0.176471)
-layout_mode = 0
 offset_left = 10.0
 offset_top = 468.0
 offset_right = 176.0

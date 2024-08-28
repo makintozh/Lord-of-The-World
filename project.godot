@@ -16,8 +16,7 @@ config/tags=PackedStringArray("lord_of_the_world")
 run/main_scene="res://src/scenes/auth-scenes/login_ui.tscn"
 config/quit_on_go_back=false
 config/features=PackedStringArray("4.3", "Mobile")
-boot_splash/bg_color=Color(0.187176, 0.187176, 0.187176, 1)
-boot_splash/show_image=false
+boot_splash/bg_color=Color(0, 0, 0, 0)
 
 [autoload]
 
