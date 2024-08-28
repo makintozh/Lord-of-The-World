@@ -16,7 +16,7 @@ var loading = false
 
 
 
-var singleton_count = 4
+var singleton_count = 5
 
 
 

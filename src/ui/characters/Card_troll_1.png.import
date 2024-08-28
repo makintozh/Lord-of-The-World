@@ -2,17 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct70edn0u32ia"
-path="res://.godot/imported/c3.png-cb64a516a2bfc854b4d9255fc61998d8.ctex"
+uid="uid://bnwwqf3y8c8lt"
+path="res://.godot/imported/Card_troll_1.png-74b2d01304102af01f4cd88683c7d241.ctex"
 metadata={
-"has_editor_variant": true,
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/characters/c3.png"
-dest_files=["res://.godot/imported/c3.png-cb64a516a2bfc854b4d9255fc61998d8.ctex"]
+source_file="res://src/ui/characters/Card_troll_1.png"
+dest_files=["res://.godot/imported/Card_troll_1.png-74b2d01304102af01f4cd88683c7d241.ctex"]
 
 [params]
 
