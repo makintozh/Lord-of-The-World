@@ -16,6 +16,7 @@ config/tags=PackedStringArray("lord_of_the_world")
 run/main_scene="res://src/scenes/auth-scenes/login_ui.tscn"
 config/quit_on_go_back=false
 config/features=PackedStringArray("4.3", "Mobile")
+run/max_fps=60
 boot_splash/bg_color=Color(0, 0, 0, 0)
 
 [autoload]
@@ -43,6 +44,7 @@ window/energy_saving/keep_screen_on=false
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 window/handheld/orientation=1
+window/vsync/vsync_mode=0
 
 [editor]
 

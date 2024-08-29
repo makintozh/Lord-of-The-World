@@ -416,11 +416,11 @@ text = "Tech support"
 icon = ExtResource("13_wu0o0")
 icon_alignment = 2
 
-[node name="FailedToConnect" parent="." instance=ExtResource("13_r4bu3")]
+[node name="WaitingResponse" parent="." instance=ExtResource("14_mul5m")]
 visible = false
 layout_mode = 1
 
-[node name="WaitingResponse" parent="." instance=ExtResource("14_mul5m")]
+[node name="FailedToConnect" parent="." instance=ExtResource("13_r4bu3")]
 visible = false
 layout_mode = 1
 

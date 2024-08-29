@@ -101,6 +101,7 @@ func _on_login_button_pressed():
 	await get_tree().create_timer(20).timeout
 	GLOBAL.failed_reason = "No Internet Connection"
 	failed.visible = true
+	waitingresponse.visible = false
 
 
 func _on_http_request_request_completed(result, response_code, headers, body):
