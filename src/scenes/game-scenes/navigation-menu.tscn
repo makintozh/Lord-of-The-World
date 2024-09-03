@@ -1,10 +1,9 @@
-[gd_scene load_steps=343 format=3 uid="uid://pk7extbu3xea"]
+[gd_scene load_steps=348 format=3 uid="uid://pk7extbu3xea"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/navigation-menu.gd" id="1_ykvwa"]
-[ext_resource type="Texture2D" uid="uid://b08fkrst3gjpd" path="res://src/ui/elements/Group 173.png" id="2_qyodl"]
 [ext_resource type="Texture2D" uid="uid://cdbeqyu8j0hmr" path="res://src/ui/backgrounds/Главный_экран_адаптировано_под_размер_.PNG" id="3_j0xlm"]
 [ext_resource type="VideoStream" path="res://src/ui/backgrounds/Главный_экран_адаптировано_под_размер_1.ogv" id="3_q2uc8"]
-[ext_resource type="Texture2D" uid="uid://c6hdre53jhchs" path="res://src/ui/elements/Слой 7.png" id="7_gn6ft"]
+[ext_resource type="Texture2D" uid="uid://c7k87q5ed13pt" path="res://src/ui/elements/Rectangle 275.png" id="5_dxjvq"]
 [ext_resource type="Texture2D" uid="uid://bw1x5iqjlpcr8" path="res://src/ui/buildings/animated/Tavern.png" id="9_8b332"]
 [ext_resource type="Texture2D" uid="uid://b0eom03g48wmg" path="res://src/ui/buildings/animated/Osadu.png" id="9_lqhp8"]
 [ext_resource type="Texture2D" uid="uid://bk47kvndsogop" path="res://src/ui/buildings/animated/Biom.png" id="10_bbc1g"]
@@ -13,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://nr7cjatr1ahd" path="res://src/ui/buildings/animated/ClansHall.png" id="12_vctx2"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="12_yq8ua"]
 [ext_resource type="Texture2D" uid="uid://bqqkct561dww0" path="res://src/ui/buildings/animated/League.png" id="13_6paem"]
+[ext_resource type="PackedScene" uid="uid://cftgd0b0e3ei3" path="res://src/scenes/gui-scenes/chat_gui.tscn" id="13_fcvk8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vuhtl"]
 atlas = ExtResource("9_8b332")
@@ -469,6 +469,11 @@ animations = [{
 "name": &"Tavern",
 "speed": 30.0
 }]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6y5cn"]
+texture = ExtResource("5_dxjvq")
+expand_margin_left = 15.0
+expand_margin_right = 15.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xpp1x"]
 
@@ -928,6 +933,11 @@ animations = [{
 "speed": 30.0
 }]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wy7sx"]
+texture = ExtResource("5_dxjvq")
+expand_margin_left = 15.0
+expand_margin_right = 15.0
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_kywdk"]
 atlas = ExtResource("12_vctx2")
 region = Rect2(0, 0, 256, 256)
@@ -1383,6 +1393,11 @@ animations = [{
 "name": &"ClansHall",
 "speed": 30.0
 }]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vxhum"]
+texture = ExtResource("5_dxjvq")
+expand_margin_left = 15.0
+expand_margin_right = 15.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p2r1r"]
 atlas = ExtResource("13_6paem")
@@ -1840,6 +1855,11 @@ animations = [{
 "speed": 30.0
 }]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1l1kl"]
+texture = ExtResource("5_dxjvq")
+expand_margin_left = 15.0
+expand_margin_right = 15.0
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_yy313"]
 atlas = ExtResource("9_lqhp8")
 region = Rect2(0, 0, 256, 256)
@@ -2296,6 +2316,11 @@ animations = [{
 "speed": 30.0
 }]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wihig"]
+texture = ExtResource("5_dxjvq")
+expand_margin_left = 15.0
+expand_margin_right = 15.0
+
 [sub_resource type="RichTextEffect" id="RichTextEffect_atejj"]
 script = ExtResource("12_yq8ua")
 
@@ -2344,31 +2369,6 @@ expand = true
 loop = true
 metadata/_edit_use_anchors_ = true
 
-[node name="PlayerProfileUI" type="Control" parent="."]
-anchors_preset = 0
-
-[node name="PlayerProfileUI" type="MarginContainer" parent="PlayerProfileUI"]
-layout_mode = 0
-offset_right = 504.0
-offset_bottom = 109.0
-metadata/_edit_use_anchors_ = true
-
-[node name="PlayerProfileUI" type="TextureRect" parent="PlayerProfileUI/PlayerProfileUI"]
-layout_mode = 2
-texture = ExtResource("2_qyodl")
-
-[node name="ClanBackGround" type="MarginContainer" parent="PlayerProfileUI"]
-layout_mode = 0
-offset_left = 112.0
-offset_top = 70.0
-offset_right = 156.0
-offset_bottom = 113.0
-
-[node name="ClanBackGroundTexture" type="TextureRect" parent="PlayerProfileUI/ClanBackGround"]
-layout_mode = 2
-texture = ExtResource("7_gn6ft")
-expand_mode = 1
-
 [node name="Buildings" type="Control" parent="."]
 anchors_preset = 0
 
@@ -2404,7 +2404,10 @@ offset_bottom = 390.0
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxTexture_6y5cn")
 text = "Tavern"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="TavernHitBox" type="Button" parent="Buildings/Tavern"]
 layout_mode = 2
@@ -2455,7 +2458,10 @@ offset_bottom = 454.0
 [node name="BiomLabel" type="Label" parent="Buildings/Biom/BiomLabel"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxTexture_wy7sx")
 text = "Biom"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="BiomHitBox" type="Button" parent="Buildings/Biom"]
 layout_mode = 0
@@ -2508,7 +2514,10 @@ offset_bottom = 709.0
 [node name="ClansHallLabel" type="Label" parent="Buildings/ClansHall/ClansHallLabel"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxTexture_vxhum")
 text = "Clans Hall"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ClansHallHitBox" type="Button" parent="Buildings/ClansHall"]
 layout_mode = 0
@@ -2560,7 +2569,10 @@ offset_bottom = 827.0
 [node name="LeagueLabel" type="Label" parent="Buildings/League/LeagueLabel"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxTexture_1l1kl")
 text = "League"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="LeagueHitBox" type="Button" parent="Buildings/League"]
 layout_mode = 0
@@ -2617,7 +2629,10 @@ offset_bottom = 798.0
 [node name="SiegesLabel" type="Label" parent="Buildings/Sieges/SiegesLabel"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxTexture_wihig")
 text = "Sieges"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="SiegesHitBox" type="Button" parent="Buildings/Sieges"]
 layout_mode = 0
@@ -2673,6 +2688,9 @@ custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_atejj"), Sub
 max_options_count = 2
 options_alignment = 1
 options_vertical = true
+
+[node name="ChatGui" parent="." instance=ExtResource("13_fcvk8")]
+layout_mode = 1
 
 [connection signal="pressed" from="Buildings/Tavern/TavernHitBox" to="." method="_on_tavern_pressed"]
 [connection signal="pressed" from="Buildings/Biom/BiomHitBox" to="." method="_on_biom_pressed"]
