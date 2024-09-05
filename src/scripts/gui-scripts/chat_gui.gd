@@ -26,7 +26,7 @@ func _on_close_chat_pressed() -> void:
 func open_chat():
 	chat_panel.visible = false
 	open_chat_panel.visible = true
-	messages_container.position.y = 176
+	messages_container.position.y = -856
 	$"Messages-Container/Label3".autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	$"Messages-Container/Label3".text_overrun_behavior = TextServer.OVERRUN_NO_TRIM
 
@@ -36,6 +36,6 @@ func open_chat():
 func close_chat():
 	chat_panel.visible = true
 	open_chat_panel.visible = false
-	messages_container.position.y = 787
+	messages_container.position.y = -212
 	$"Messages-Container/Label3".autowrap_mode = TextServer.AUTOWRAP_OFF
 	$"Messages-Container/Label3".text_overrun_behavior = TextServer.OVERRUN_ADD_ELLIPSIS

@@ -1,12 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://cftgd0b0e3ei3"]
+[gd_scene load_steps=12 format=3 uid="uid://cftgd0b0e3ei3"]
 
 [ext_resource type="Script" path="res://src/scripts/gui-scripts/chat_gui.gd" id="1_l3oyk"]
-[ext_resource type="Texture2D" uid="uid://dcudun7a2kxgu" path="res://src/ui/elements/Panel 284.png" id="2_j1f5e"]
+[ext_resource type="Texture2D" uid="uid://k13hs5lriywa" path="res://src/ui/elements/Rectangleeee.png" id="2_jbe85"]
 [ext_resource type="Texture2D" uid="uid://yjky8xlx14ib" path="res://src/ui/elements/Rectangle 270.png" id="3_lwn0j"]
 [ext_resource type="Texture2D" uid="uid://c1onytfngar1s" path="res://src/ui/elements/Rectangle 269.png" id="4_chgh0"]
+[ext_resource type="Texture2D" uid="uid://jpwiupoxdq5b" path="res://src/ui/elements/Rectangle 284.png" id="5_38dbk"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_te34b"]
-texture = ExtResource("2_j1f5e")
+texture = ExtResource("2_jbe85")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ocxba"]
 texture = ExtResource("3_lwn0j")
@@ -18,15 +19,23 @@ expand_margin_left = 10.0
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w6j6p"]
 texture = ExtResource("3_lwn0j")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ae680"]
+texture = ExtResource("5_38dbk")
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_snwt4"]
 
 [node name="ChatGui" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
+offset_top = 111.0
+offset_bottom = 111.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
+mouse_filter = 1
 script = ExtResource("1_l3oyk")
 
 [node name="Open-Chat-Panel" type="Panel" parent="."]
@@ -37,9 +46,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -238.0
-offset_top = -418.0
+offset_top = -921.0
 offset_right = 239.0
-offset_bottom = 421.0
+offset_bottom = -134.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_te34b")
@@ -124,10 +133,10 @@ anchor_bottom = 1.0
 offset_left = -237.0
 offset_top = -220.0
 offset_right = 250.0
-offset_bottom = -78.0
+offset_bottom = -132.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxTexture_te34b")
+theme_override_styles/panel = SubResource("StyleBoxTexture_ae680")
 
 [node name="Open-Chat" type="Button" parent="Chat-Panel"]
 layout_mode = 1
@@ -151,26 +160,26 @@ flat = true
 
 [node name="Messages-Container" type="VBoxContainer" parent="."]
 layout_mode = 1
-offset_left = 24.0
-offset_top = 787.0
-offset_right = 486.0
-offset_bottom = 912.0
+offset_left = -226.0
+offset_top = -212.0
+offset_right = 236.0
+offset_bottom = -87.0
 mouse_filter = 2
 theme_override_constants/separation = 5
 
 [node name="Label" type="Label" parent="Messages-Container"]
 layout_mode = 2
-text = "DEV admin: tipo test"
-text_overrun_behavior = 3
-
-[node name="Label2" type="Label" parent="Messages-Container"]
-layout_mode = 2
-text = "LOL darky: ne test"
+text = "DEV admin: Привет, как у Вас дела?"
 text_overrun_behavior = 3
 
 [node name="Label3" type="Label" parent="Messages-Container"]
 layout_mode = 2
-text = "BAD fadeika: очень длинное сообщение, которое не помещаетcя в миниатюрный чат и его надо сократить, чтобы не портил вид"
+text = "LVM Marcuk:  Привет! Нормально! Как сам? Чем занимаешься?"
+text_overrun_behavior = 3
+
+[node name="Label2" type="Label" parent="Messages-Container"]
+layout_mode = 2
+text = "LOL darky: Погнали в Осады!"
 text_overrun_behavior = 3
 
 [connection signal="pressed" from="Open-Chat-Panel/Close-Chat" to="." method="_on_close_chat_pressed"]

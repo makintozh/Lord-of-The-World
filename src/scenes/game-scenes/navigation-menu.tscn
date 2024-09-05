@@ -1,9 +1,10 @@
-[gd_scene load_steps=348 format=3 uid="uid://pk7extbu3xea"]
+[gd_scene load_steps=349 format=3 uid="uid://pk7extbu3xea"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/navigation-menu.gd" id="1_ykvwa"]
 [ext_resource type="Texture2D" uid="uid://cdbeqyu8j0hmr" path="res://src/ui/backgrounds/Главный_экран_адаптировано_под_размер_.PNG" id="3_j0xlm"]
 [ext_resource type="VideoStream" path="res://src/ui/backgrounds/Главный_экран_адаптировано_под_размер_1.ogv" id="3_q2uc8"]
 [ext_resource type="Texture2D" uid="uid://c7k87q5ed13pt" path="res://src/ui/elements/Rectangle 275.png" id="5_dxjvq"]
+[ext_resource type="Texture2D" uid="uid://blwusk4cfv0mc" path="res://src/ui/elements/ПУ.png" id="6_ukp1m"]
 [ext_resource type="Texture2D" uid="uid://bw1x5iqjlpcr8" path="res://src/ui/buildings/animated/Tavern.png" id="9_8b332"]
 [ext_resource type="Texture2D" uid="uid://b0eom03g48wmg" path="res://src/ui/buildings/animated/Osadu.png" id="9_lqhp8"]
 [ext_resource type="Texture2D" uid="uid://bk47kvndsogop" path="res://src/ui/buildings/animated/Biom.png" id="10_bbc1g"]
@@ -472,8 +473,8 @@ animations = [{
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6y5cn"]
 texture = ExtResource("5_dxjvq")
-expand_margin_left = 15.0
-expand_margin_right = 15.0
+expand_margin_left = 30.0
+expand_margin_right = 30.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xpp1x"]
 
@@ -935,8 +936,6 @@ animations = [{
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wy7sx"]
 texture = ExtResource("5_dxjvq")
-expand_margin_left = 15.0
-expand_margin_right = 15.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kywdk"]
 atlas = ExtResource("12_vctx2")
@@ -1396,8 +1395,8 @@ animations = [{
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vxhum"]
 texture = ExtResource("5_dxjvq")
-expand_margin_left = 15.0
-expand_margin_right = 15.0
+expand_margin_left = 5.0
+expand_margin_right = 5.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p2r1r"]
 atlas = ExtResource("13_6paem")
@@ -1857,8 +1856,6 @@ animations = [{
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1l1kl"]
 texture = ExtResource("5_dxjvq")
-expand_margin_left = 15.0
-expand_margin_right = 15.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yy313"]
 atlas = ExtResource("9_lqhp8")
@@ -2318,8 +2315,6 @@ animations = [{
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wihig"]
 texture = ExtResource("5_dxjvq")
-expand_margin_left = 15.0
-expand_margin_right = 15.0
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_atejj"]
 script = ExtResource("12_yq8ua")
@@ -2346,9 +2341,9 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -21.5
+offset_top = -150.995
 offset_right = -80.0
-offset_bottom = 21.5
+offset_bottom = -107.995
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.195, 1.195)
@@ -2359,26 +2354,27 @@ stretch_mode = 4
 
 [node name="BackGround-Video" type="VideoStreamPlayer" parent="."]
 layout_mode = 1
-offset_top = -41.325
+offset_top = -150.995
 offset_right = 420.0
-offset_bottom = 901.675
+offset_bottom = 792.005
 scale = Vector2(1.195, 1.195)
 stream = ExtResource("3_q2uc8")
 autoplay = true
 expand = true
 loop = true
-metadata/_edit_use_anchors_ = true
 
 [node name="Buildings" type="Control" parent="."]
 anchors_preset = 0
+offset_top = -150.995
+offset_bottom = -150.995
 
 [node name="Tavern" type="Control" parent="Buildings"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -13.0
-offset_top = 1.0
-offset_right = -13.0
-offset_bottom = 1.0
+offset_left = -21.0
+offset_top = 16.525
+offset_right = -21.0
+offset_bottom = 16.525
 
 [node name="Tavern" type="MarginContainer" parent="Buildings/Tavern"]
 layout_mode = 0
@@ -2396,14 +2392,14 @@ autoplay = "Tavern"
 [node name="TavernLabel" type="MarginContainer" parent="Buildings/Tavern"]
 layout_mode = 0
 offset_left = 40.0
-offset_top = 344.0
-offset_right = 151.0
-offset_bottom = 390.0
+offset_top = 380.0
+offset_right = 163.0
+offset_bottom = 409.0
 
 [node name="TavernLabel" type="Label" parent="Buildings/Tavern/TavernLabel"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 34
+theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_6y5cn")
 text = "Tavern"
 horizontal_alignment = 1
@@ -2450,14 +2446,14 @@ autoplay = "Biom"
 
 [node name="BiomLabel" type="MarginContainer" parent="Buildings/Biom"]
 layout_mode = 0
-offset_left = 256.0
-offset_top = 408.0
-offset_right = 367.0
-offset_bottom = 454.0
+offset_left = 234.0
+offset_top = 449.525
+offset_right = 347.0
+offset_bottom = 478.525
 
 [node name="BiomLabel" type="Label" parent="Buildings/Biom/BiomLabel"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 34
+theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_wy7sx")
 text = "Biom"
 horizontal_alignment = 1
@@ -2506,14 +2502,14 @@ frame_progress = 0.00634395
 
 [node name="ClansHallLabel" type="MarginContainer" parent="Buildings/ClansHall"]
 layout_mode = 0
-offset_left = 35.0
-offset_top = 662.0
-offset_right = 197.0
-offset_bottom = 709.0
+offset_left = 36.0
+offset_top = 696.525
+offset_right = 147.0
+offset_bottom = 725.525
 
 [node name="ClansHallLabel" type="Label" parent="Buildings/ClansHall/ClansHallLabel"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 34
+theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_vxhum")
 text = "Clans Hall"
 horizontal_alignment = 1
@@ -2561,14 +2557,14 @@ autoplay = "League"
 
 [node name="LeagueLabel" type="MarginContainer" parent="Buildings/League"]
 layout_mode = 0
-offset_left = 356.0
-offset_top = 780.0
-offset_right = 508.0
-offset_bottom = 827.0
+offset_left = 383.0
+offset_top = 805.525
+offset_right = 492.0
+offset_bottom = 834.525
 
 [node name="LeagueLabel" type="Label" parent="Buildings/League/LeagueLabel"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 34
+theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_1l1kl")
 text = "League"
 horizontal_alignment = 1
@@ -2621,14 +2617,14 @@ autoplay = "Sieges"
 
 [node name="SiegesLabel" type="MarginContainer" parent="Buildings/Sieges"]
 layout_mode = 0
-offset_left = 349.0
-offset_top = 751.0
-offset_right = 501.0
-offset_bottom = 798.0
+offset_left = 368.0
+offset_top = 783.525
+offset_right = 489.0
+offset_bottom = 812.525
 
 [node name="SiegesLabel" type="Label" parent="Buildings/Sieges/SiegesLabel"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 34
+theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_wihig")
 text = "Sieges"
 horizontal_alignment = 1
@@ -2691,8 +2687,28 @@ options_vertical = true
 
 [node name="ChatGui" parent="." instance=ExtResource("13_fcvk8")]
 layout_mode = 1
-offset_top = 174.0
-offset_bottom = 174.0
+offset_left = 3.0
+offset_top = 24.0
+offset_right = 3.0
+offset_bottom = 24.0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -83.0
+offset_right = 250.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+texture = ExtResource("6_ukp1m")
+expand_mode = 1
 
 [connection signal="pressed" from="Buildings/Tavern/TavernHitBox" to="." method="_on_tavern_pressed"]
 [connection signal="pressed" from="Buildings/Biom/BiomHitBox" to="." method="_on_biom_pressed"]
