@@ -2691,6 +2691,8 @@ options_vertical = true
 
 [node name="ChatGui" parent="." instance=ExtResource("13_fcvk8")]
 layout_mode = 1
+offset_top = 174.0
+offset_bottom = 174.0
 
 [connection signal="pressed" from="Buildings/Tavern/TavernHitBox" to="." method="_on_tavern_pressed"]
 [connection signal="pressed" from="Buildings/Biom/BiomHitBox" to="." method="_on_biom_pressed"]
