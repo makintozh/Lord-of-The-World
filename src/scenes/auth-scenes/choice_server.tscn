@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://cys1kf7rr5t03"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/choice_server.gd" id="1_o2s7j"]
-[ext_resource type="Texture2D" uid="uid://dvq7k76euq5b1" path="res://src/ui/backgrounds/background.png" id="2_45t4e"]
-[ext_resource type="Texture2D" uid="uid://v5tk14cvhbwv" path="res://src/ui/buttons/back_button.png" id="3_nsa51"]
-[ext_resource type="Texture2D" uid="uid://26m1rmqj3f8v" path="res://src/ui/buttons/button_2.png" id="5_xjjsf"]
-[ext_resource type="Texture2D" uid="uid://d1n0rdc1jyd13" path="res://src/ui/elements/update 1.png" id="7_q5b6y"]
+[ext_resource type="Texture2D" uid="uid://bvxw60u844ekc" path="res://src/ui/backgrounds/background.png" id="2_45t4e"]
+[ext_resource type="Texture2D" uid="uid://b3hxg141ochmh" path="res://src/ui/buttons/back_button.png" id="3_nsa51"]
+[ext_resource type="Texture2D" uid="uid://y0jbxbrdt43s" path="res://src/ui/buttons/button_2.png" id="5_xjjsf"]
+[ext_resource type="Texture2D" uid="uid://b2vo2hyj6d7ni" path="res://src/ui/elements/update 1.png" id="7_q5b6y"]
 
 [sub_resource type="Animation" id="Animation_vhv4n"]
 length = 0.001

@@ -104,6 +104,8 @@ func _on_login_button_pressed():
 	waitingresponse.visible = false
 
 
+
+
 func _on_http_request_request_completed(result, response_code, headers, body):
 	var api_response = JSON.parse_string(body.get_string_from_utf8())
 	var message = str(api_response["message"])
@@ -167,7 +169,9 @@ func enable_login():
 
 func _on_remember_me_check_box_toggled(toggled_on):
 	if toggled_on:
-		is_remember = true
+		GLOBAL.is_remember = true
+	else:
+		GLOBAL.is_remember = false
 
 
 
