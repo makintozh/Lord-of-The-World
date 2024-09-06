@@ -40,13 +40,14 @@ gdscript/warnings/unused_signal=0
 window/size/viewport_width=500
 window/size/viewport_height=975
 window/size/always_on_top=true
+window/size/extend_to_title=true
 window/size/window_height_override=1050
 window/energy_saving/keep_screen_on=false
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
-window/per_pixel_transparency/allowed=true
 window/handheld/orientation=1
 window/vsync/vsync_mode=0
+window/size/window_height_override.windows=1050
 
 [editor]
 

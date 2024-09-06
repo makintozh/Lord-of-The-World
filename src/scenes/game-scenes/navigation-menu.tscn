@@ -2365,8 +2365,10 @@ loop = true
 
 [node name="Buildings" type="Control" parent="."]
 anchors_preset = 0
-offset_top = -150.995
-offset_bottom = -150.995
+offset_left = 2.0
+offset_top = -123.0
+offset_right = 2.0
+offset_bottom = -123.0
 
 [node name="Tavern" type="Control" parent="Buildings"]
 layout_mode = 3
