@@ -30,11 +30,14 @@ func navigation_manager():
 		navigation_closed.visible = false
 		navigation_opened.visible = true
 		navigation_close_hitbox.visible = true
+		#$"../ChatGui".mini_chat_active = false
+		#$"../ChatGui".scroll_container.visible = false
 	else:
 		navigation_closed.visible = true
 		navigation_opened.visible = false
 		navigation_close_hitbox.visible = false
-
+		#$"../ChatGui".mini_chat_active = true
+		#$"../ChatGui".scroll_container.visible = true
 
 
 
@@ -43,14 +46,19 @@ func _on_settings_button_pressed() -> void:
 
 
 func _on_navigation_closed_pressed() -> void:
-	navigation_opened = true
+	navigation_active = true
+	$"../ChatGui".mini_chat_active = false
+	$"../ChatGui".scroll_container.visible = false
 
 
 
 
 
 func _on_navigation_close_hit_box_pressed() -> void:
-	navigation_opened = false
+	navigation_active = false
+	$"../ChatGui".mini_chat_active = true
+	$"../ChatGui".scroll_container.visible = true
+
 
 
 

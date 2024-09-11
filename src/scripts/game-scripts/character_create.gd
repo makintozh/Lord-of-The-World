@@ -70,6 +70,7 @@ func _on_character_create_button_pressed():
 
 func _on_api_request_request_completed(result, response_code, headers, body):
 	var api_response = JSON.parse_string(body.get_string_from_utf8())
+	await get_tree().create_timer(0.3).timeout
 	var message = str(api_response["message"])
 	archetypes = api_response["archetypes"]
 	
