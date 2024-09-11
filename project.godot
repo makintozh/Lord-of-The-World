@@ -76,7 +76,7 @@ folder_colors={
 
 [gui]
 
-theme/custom_font="res://src/fonts/inika/Inika-Bold.ttf"
+theme/custom_font="res://src/fonts/ofont.ru_Hermes.ttf"
 
 [gui_transitions]
 

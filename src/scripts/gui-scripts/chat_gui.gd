@@ -46,7 +46,7 @@ func touch_api():
 	await get_tree().create_timer(0.2).timeout
 	message_list.clear()
 	api.request("http://" + GLOBAL.choiced_server_address + "/chat/1/messages", bearer_header, HTTPClient.METHOD_GET)
-
+	chat_to_down()
 
 
 
@@ -75,6 +75,7 @@ func _process(_delta):
 			if json_response:
 				#await get_tree().create_timer(2.0).timeout
 				_on_MessageReceived(json_response)
+				chat_to_down()
 			
 
 
@@ -84,6 +85,12 @@ func _process(_delta):
 			connect_to_socket()
 			socket.close()
 
+
+
+
+
+func chat_to_down():
+	scroll_container.scroll_vertical = 999999999999
 
 
 
@@ -141,6 +148,7 @@ func update_label():
 
 	text = text.strip_edges()
 	messages_label.text = text
+	chat_to_down()
 	
 
 

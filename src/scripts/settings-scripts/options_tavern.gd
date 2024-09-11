@@ -15,7 +15,7 @@ func _ready():
 
 
 func _on_close_button_pressed():
-	queue_free()
+	self.visible = false
 
 
 

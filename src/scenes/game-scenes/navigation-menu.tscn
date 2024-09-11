@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://cdbeqyu8j0hmr" path="res://src/ui/backgrounds/Главный_экран_адаптировано_под_размер_.PNG" id="3_j0xlm"]
 [ext_resource type="VideoStream" path="res://src/ui/backgrounds/Главный_экран_адаптировано_под_размер_1.ogv" id="3_q2uc8"]
 [ext_resource type="Texture2D" uid="uid://c7k87q5ed13pt" path="res://src/ui/elements/Rectangle 275.png" id="5_dxjvq"]
-[ext_resource type="Texture2D" uid="uid://blwusk4cfv0mc" path="res://src/ui/elements/ПУ.png" id="6_ukp1m"]
 [ext_resource type="Texture2D" uid="uid://bw1x5iqjlpcr8" path="res://src/ui/buildings/animated/Tavern.png" id="9_8b332"]
 [ext_resource type="Texture2D" uid="uid://b0eom03g48wmg" path="res://src/ui/buildings/animated/Osadu.png" id="9_lqhp8"]
 [ext_resource type="Texture2D" uid="uid://bk47kvndsogop" path="res://src/ui/buildings/animated/Biom.png" id="10_bbc1g"]
@@ -14,6 +13,7 @@
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="12_yq8ua"]
 [ext_resource type="Texture2D" uid="uid://bqqkct561dww0" path="res://src/ui/buildings/animated/League.png" id="13_6paem"]
 [ext_resource type="PackedScene" uid="uid://cftgd0b0e3ei3" path="res://src/scenes/gui-scenes/chat_gui.tscn" id="13_fcvk8"]
+[ext_resource type="PackedScene" uid="uid://ccq03g2w30olb" path="res://src/scenes/gui-scenes/player_gui.tscn" id="14_o1h17"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vuhtl"]
 atlas = ExtResource("9_8b332")
@@ -2341,9 +2341,9 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -127.0
+offset_top = -112.05
 offset_right = -80.0
-offset_bottom = -84.0
+offset_bottom = -69.05
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.195, 1.195)
@@ -2354,9 +2354,9 @@ stretch_mode = 4
 
 [node name="BackGround-Video" type="VideoStreamPlayer" parent="."]
 layout_mode = 1
-offset_top = -127.0
+offset_top = -112.05
 offset_right = 420.0
-offset_bottom = 816.0
+offset_bottom = 830.95
 scale = Vector2(1.195, 1.195)
 stream = ExtResource("3_q2uc8")
 autoplay = true
@@ -2366,9 +2366,9 @@ loop = true
 [node name="Buildings" type="Control" parent="."]
 anchors_preset = 0
 offset_left = 2.0
-offset_top = -123.0
+offset_top = -112.05
 offset_right = 2.0
-offset_bottom = -123.0
+offset_bottom = -112.05
 
 [node name="Tavern" type="Control" parent="Buildings"]
 layout_mode = 3
@@ -2694,23 +2694,8 @@ offset_top = 24.0
 offset_right = 3.0
 offset_bottom = 24.0
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="PlayerGui" parent="." instance=ExtResource("14_o1h17")]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -250.0
-offset_top = -94.0
-offset_right = 250.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
-layout_mode = 2
-texture = ExtResource("6_ukp1m")
-expand_mode = 1
 
 [connection signal="pressed" from="Buildings/Tavern/TavernHitBox" to="." method="_on_tavern_pressed"]
 [connection signal="pressed" from="Buildings/Biom/BiomHitBox" to="." method="_on_biom_pressed"]
