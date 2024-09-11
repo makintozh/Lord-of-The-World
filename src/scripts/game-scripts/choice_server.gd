@@ -58,7 +58,7 @@ func _on_api_request_request_completed(result, response_code, headers, body):
 func parse_json(json_string: String):
 	var result = JSON.parse_string(json_string)
 	server_massive = result["servers"]
-	print(server_massive)
+	print(str(server_massive))
 	create_server_buttons()
 
 

@@ -38,6 +38,8 @@ grow_vertical = 0
 mouse_filter = 1
 script = ExtResource("1_l3oyk")
 
+[node name="APIRequest" type="HTTPRequest" parent="."]
+
 [node name="Open-Chat-Panel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -138,13 +140,32 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxTexture_ae680")
 
-[node name="Open-Chat" type="Button" parent="Chat-Panel"]
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = -229.0
+offset_top = -214.0
+offset_right = 231.0
+offset_bottom = -140.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="Messages" type="Label" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Loading..."
+
+[node name="Open-Chat" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -237.0
+offset_top = -220.0
+offset_right = 237.0
+offset_bottom = -137.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 theme_override_styles/focus = SubResource("StyleBoxEmpty_snwt4")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_snwt4")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_snwt4")
@@ -158,29 +179,7 @@ theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_snwt4")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_snwt4")
 flat = true
 
-[node name="Messages-Container" type="VBoxContainer" parent="."]
-layout_mode = 1
-offset_left = -226.0
-offset_top = -212.0
-offset_right = 236.0
-offset_bottom = -87.0
-mouse_filter = 2
-theme_override_constants/separation = 5
-
-[node name="Label" type="Label" parent="Messages-Container"]
-layout_mode = 2
-text = "DEV admin: Привет, как у Вас дела?"
-text_overrun_behavior = 3
-
-[node name="Label3" type="Label" parent="Messages-Container"]
-layout_mode = 2
-text = "LVM Marcuk:  Привет! Нормально! Как сам? Чем занимаешься?"
-text_overrun_behavior = 3
-
-[node name="Label2" type="Label" parent="Messages-Container"]
-layout_mode = 2
-text = "LOL darky: Погнали в Осады!"
-text_overrun_behavior = 3
-
+[connection signal="request_completed" from="APIRequest" to="." method="_on_api_request_request_completed"]
 [connection signal="pressed" from="Open-Chat-Panel/Close-Chat" to="." method="_on_close_chat_pressed"]
-[connection signal="pressed" from="Chat-Panel/Open-Chat" to="." method="_on_open_chat_pressed"]
+[connection signal="pressed" from="Open-Chat-Panel/Send" to="." method="_on_send_pressed"]
+[connection signal="pressed" from="Open-Chat" to="." method="_on_open_chat_pressed"]

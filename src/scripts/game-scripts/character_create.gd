@@ -74,12 +74,21 @@ func _on_api_request_request_completed(result, response_code, headers, body):
 	archetypes = api_response["archetypes"]
 	
 	
+	#archetypes = [
+		#{
+			#"id":1,
+			#"title": "Strength"
+		#}
+	#]
+	
+	
 	print(str(result))
 	print("\nСообщение: " + message)
 	print("\nАрхетипы: " + str(archetypes))
 	
 	
-		
+	if archetypes == []:
+		printerr("Нет архетипов на сервере!")
 		
 		
 	for data in archetypes:
@@ -106,6 +115,7 @@ func _on_api_character_create_request_completed(result, response_code, headers, 
 	
 	print(api_response)
 	print(str(response_code))
+	print(message)
 	
 	
 	if response_code == 200 and message != "Token is invalid":
@@ -121,7 +131,7 @@ func _on_api_character_create_request_completed(result, response_code, headers, 
 
 func _on_api_summary_request_completed(result, response_code, headers, body):
 	var api_response = JSON.parse_string(body.get_string_from_utf8())
-	var message = str(api_response["message"])
+	var message = api_response["message"]
 	var character_info = api_response["character_info"]
 	
 	print(api_response)

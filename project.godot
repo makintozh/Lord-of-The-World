@@ -47,7 +47,7 @@ window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 window/handheld/orientation=1
 window/vsync/vsync_mode=0
-window/size/window_height_override.windows=1050
+window/size/window_height_override.windows=975
 
 [editor]
 
