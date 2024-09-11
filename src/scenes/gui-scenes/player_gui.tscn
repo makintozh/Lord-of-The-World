@@ -69,6 +69,7 @@ texture = ExtResource("3_ji7mk")
 expand_mode = 1
 
 [node name="SettingsLabel" type="Label" parent="SettingsButton/Settings"]
+layout_mode = 0
 offset_left = 17.0
 offset_top = 58.0
 offset_right = 80.0
@@ -104,6 +105,7 @@ ignore_texture_size = true
 stretch_mode = 6
 
 [node name="Background" type="TextureRect" parent="NewsButton/News"]
+layout_mode = 0
 offset_left = 8.0
 offset_top = 57.0
 offset_right = 86.0
@@ -112,6 +114,7 @@ texture = ExtResource("3_ji7mk")
 expand_mode = 1
 
 [node name="NewsLabel" type="Label" parent="NewsButton/News"]
+layout_mode = 0
 offset_left = 17.0
 offset_top = 58.0
 offset_right = 80.0
@@ -334,6 +337,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Achievments" type="TextureButton" parent="Navigation/NavigationOpened/NavigationOpened"]
+layout_mode = 0
 offset_left = 26.0
 offset_top = 2.70001
 offset_right = 76.0
@@ -348,6 +352,7 @@ ignore_texture_size = true
 stretch_mode = 6
 
 [node name="AchievmentsLabel" type="Label" parent="Navigation/NavigationOpened/NavigationOpened/Achievments"]
+layout_mode = 0
 offset_left = -11.0
 offset_top = 40.0
 offset_right = 63.0
@@ -361,6 +366,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Guides" type="TextureButton" parent="Navigation/NavigationOpened/NavigationOpened"]
+layout_mode = 0
 offset_left = 118.0
 offset_top = 1.70001
 offset_right = 168.0
@@ -375,6 +381,7 @@ ignore_texture_size = true
 stretch_mode = 6
 
 [node name="GuidesLabel" type="Label" parent="Navigation/NavigationOpened/NavigationOpened/Guides"]
+layout_mode = 0
 offset_left = -11.0
 offset_top = 40.0
 offset_right = 63.0
@@ -388,6 +395,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Hide" type="TextureButton" parent="Navigation/NavigationOpened/NavigationOpened"]
+layout_mode = 0
 offset_left = 23.0
 offset_top = 61.7
 offset_right = 83.0
@@ -402,6 +410,7 @@ ignore_texture_size = true
 stretch_mode = 6
 
 [node name="HideLabel" type="Label" parent="Navigation/NavigationOpened/NavigationOpened/Hide"]
+layout_mode = 0
 offset_left = -5.0
 offset_top = 40.0
 offset_right = 69.0
@@ -455,6 +464,7 @@ expand_mode = 1
 stretch_mode = 6
 
 [node name="NavigationClosedLabel" type="Label" parent="Navigation/NavigationClosed/NavigationClosed"]
+layout_mode = 0
 offset_left = 7.0
 offset_top = 62.0
 offset_right = 71.0
@@ -474,9 +484,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -249.755
+offset_left = -239.93
 offset_top = -938.4
-offset_right = -208.07
+offset_right = -196.645
 offset_bottom = -933.375
 grow_horizontal = 2
 grow_vertical = 0
@@ -545,6 +555,7 @@ ignore_texture_size = true
 stretch_mode = 6
 
 [node name="TavernLabel" type="Label" parent="Home/Home/Home/Tavern"]
+layout_mode = 0
 offset_left = -11.0
 offset_top = 42.0
 offset_right = 63.0
@@ -572,6 +583,7 @@ ignore_texture_size = true
 stretch_mode = 6
 
 [node name="TasksLabel" type="Label" parent="Home/Home/Home/Tasks"]
+layout_mode = 0
 offset_left = -2.0
 offset_top = 42.0
 offset_right = 72.0
@@ -599,6 +611,7 @@ ignore_texture_size = true
 stretch_mode = 6
 
 [node name="CityLabel" type="Label" parent="Home/Home/Home/City"]
+layout_mode = 0
 offset_left = -7.0
 offset_top = 42.0
 offset_right = 67.0
@@ -626,6 +639,7 @@ ignore_texture_size = true
 stretch_mode = 6
 
 [node name="ShopLabel" type="Label" parent="Home/Home/Home/Shop"]
+layout_mode = 0
 offset_left = -6.0
 offset_top = 42.0
 offset_right = 68.0
@@ -653,6 +667,7 @@ ignore_texture_size = true
 stretch_mode = 6
 
 [node name="Mail" type="Label" parent="Home/Home/Home/Mail"]
+layout_mode = 0
 offset_left = -6.0
 offset_top = 47.0
 offset_right = 68.0
