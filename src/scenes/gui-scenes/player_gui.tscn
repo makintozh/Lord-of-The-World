@@ -42,10 +42,10 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -106.0
-offset_top = 38.0
-offset_right = -11.0
-offset_bottom = 131.0
+offset_left = -92.0
+offset_top = 26.0
+offset_right = -19.29
+offset_bottom = 92.665
 grow_horizontal = 0
 
 [node name="Settings" type="TextureButton" parent="SettingsButton"]
@@ -61,18 +61,18 @@ stretch_mode = 6
 
 [node name="Background" type="TextureRect" parent="SettingsButton/Settings"]
 layout_mode = 0
-offset_left = 8.0
+offset_left = -3.0
 offset_top = 57.0
-offset_right = 86.0
+offset_right = 75.0
 offset_bottom = 81.0
 texture = ExtResource("3_ji7mk")
 expand_mode = 1
 
 [node name="SettingsLabel" type="Label" parent="SettingsButton/Settings"]
 layout_mode = 0
-offset_left = 17.0
+offset_left = 6.0
 offset_top = 58.0
-offset_right = 80.0
+offset_right = 69.0
 offset_bottom = 78.0
 theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
 theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
@@ -87,10 +87,10 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -106.0
-offset_top = 131.145
-offset_right = -11.0
-offset_bottom = 224.145
+offset_left = -92.0
+offset_top = 119.145
+offset_right = -19.29
+offset_bottom = 185.81
 grow_horizontal = 0
 
 [node name="News" type="TextureButton" parent="NewsButton"]
@@ -106,19 +106,19 @@ stretch_mode = 6
 
 [node name="Background" type="TextureRect" parent="NewsButton/News"]
 layout_mode = 0
-offset_left = 8.0
-offset_top = 57.0
-offset_right = 86.0
-offset_bottom = 81.0
+offset_left = -5.0
+offset_top = 55.855
+offset_right = 73.0
+offset_bottom = 79.855
 texture = ExtResource("3_ji7mk")
 expand_mode = 1
 
 [node name="NewsLabel" type="Label" parent="NewsButton/News"]
 layout_mode = 0
-offset_left = 17.0
-offset_top = 58.0
-offset_right = 80.0
-offset_bottom = 78.0
+offset_left = 4.0
+offset_top = 56.855
+offset_right = 67.0
+offset_bottom = 76.855
 theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
 theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
 theme_override_constants/outline_size = 2
@@ -226,15 +226,15 @@ stretch_mode = 6
 
 [node name="PlayerResourcesIcons" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 175.0
-offset_top = 44.0
-offset_right = 503.0
-offset_bottom = 1750.0
-scale = Vector2(0.07, 0.07)
+offset_left = 157.0
+offset_top = 36.0
+offset_right = 485.0
+offset_bottom = 1742.0
+scale = Vector2(0.12, 0.12)
 
 [node name="VBox" type="VBoxContainer" parent="PlayerResourcesIcons"]
 layout_mode = 2
-theme_override_constants/separation = 150
+theme_override_constants/separation = -32
 
 [node name="Coins" type="TextureRect" parent="PlayerResourcesIcons/VBox"]
 layout_mode = 2
@@ -321,8 +321,8 @@ grow_vertical = 2
 
 [node name="NavigationOpened" type="MarginContainer" parent="Navigation"]
 layout_mode = 0
-offset_top = 734.0
-offset_right = 190.0
+offset_top = 728.0
+offset_right = 226.0
 offset_bottom = 867.0
 
 [node name="NavigationOpened" type="TextureButton" parent="Navigation/NavigationOpened"]
@@ -338,10 +338,10 @@ stretch_mode = 0
 
 [node name="Achievments" type="TextureButton" parent="Navigation/NavigationOpened/NavigationOpened"]
 layout_mode = 0
-offset_left = 26.0
-offset_top = 2.70001
-offset_right = 76.0
-offset_bottom = 52.7
+offset_left = 37.185
+offset_top = 7.94
+offset_right = 97.185
+offset_bottom = 62.94
 action_mode = 0
 texture_normal = ExtResource("13_43iue")
 texture_pressed = ExtResource("13_43iue")
@@ -353,9 +353,9 @@ stretch_mode = 6
 
 [node name="AchievmentsLabel" type="Label" parent="Navigation/NavigationOpened/NavigationOpened/Achievments"]
 layout_mode = 0
-offset_left = -11.0
+offset_left = -10.0
 offset_top = 40.0
-offset_right = 63.0
+offset_right = 64.0
 offset_bottom = 60.0
 theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
 theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
@@ -367,10 +367,10 @@ vertical_alignment = 1
 
 [node name="Guides" type="TextureButton" parent="Navigation/NavigationOpened/NavigationOpened"]
 layout_mode = 0
-offset_left = 118.0
-offset_top = 1.70001
-offset_right = 168.0
-offset_bottom = 51.7
+offset_left = 135.185
+offset_top = 6.94
+offset_right = 190.185
+offset_bottom = 59.94
 action_mode = 0
 texture_normal = ExtResource("14_q3d8g")
 texture_pressed = ExtResource("14_q3d8g")
@@ -396,10 +396,10 @@ vertical_alignment = 1
 
 [node name="Hide" type="TextureButton" parent="Navigation/NavigationOpened/NavigationOpened"]
 layout_mode = 0
-offset_left = 23.0
-offset_top = 61.7
-offset_right = 83.0
-offset_bottom = 121.7
+offset_left = 26.185
+offset_top = 63.94
+offset_right = 101.185
+offset_bottom = 133.94
 action_mode = 0
 texture_normal = ExtResource("15_8sgbs")
 texture_pressed = ExtResource("15_8sgbs")
@@ -411,10 +411,9 @@ stretch_mode = 6
 
 [node name="HideLabel" type="Label" parent="Navigation/NavigationOpened/NavigationOpened/Hide"]
 layout_mode = 0
-offset_left = -5.0
-offset_top = 40.0
-offset_right = 69.0
-offset_bottom = 60.0
+offset_top = 41.0
+offset_right = 74.0
+offset_bottom = 61.0
 theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
 theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
 theme_override_constants/outline_size = 2
@@ -426,9 +425,9 @@ vertical_alignment = 1
 [node name="NavigationCloseHitBox" type="MarginContainer" parent="Navigation"]
 layout_mode = 0
 offset_left = -1.0
-offset_top = 800.0
-offset_right = 97.0
-offset_bottom = 863.0
+offset_top = 797.0
+offset_right = 119.0
+offset_bottom = 864.0
 
 [node name="NavigationCloseHitBox" type="TextureButton" parent="Navigation/NavigationCloseHitBox"]
 layout_mode = 2
@@ -437,11 +436,12 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="NavigationClosed" type="MarginContainer" parent="Navigation"]
+visible = false
 layout_mode = 0
-offset_left = 5.82
-offset_top = 774.7
-offset_right = 76.82
-offset_bottom = 842.7
+offset_left = 12.185
+offset_top = 774.94
+offset_right = 95.185
+offset_bottom = 849.94
 
 [node name="NavigationClosed" type="TextureButton" parent="Navigation/NavigationClosed"]
 layout_mode = 2
@@ -456,19 +456,18 @@ stretch_mode = 6
 
 [node name="Background" type="TextureRect" parent="Navigation/NavigationClosed/NavigationClosed"]
 layout_mode = 0
-offset_left = -6.0
-offset_right = 83.0
+offset_left = -13.0
+offset_right = 109.0
 offset_bottom = 93.0
 texture = ExtResource("17_c5xbl")
 expand_mode = 1
-stretch_mode = 6
 
 [node name="NavigationClosedLabel" type="Label" parent="Navigation/NavigationClosed/NavigationClosed"]
 layout_mode = 0
-offset_left = 7.0
-offset_top = 62.0
-offset_right = 71.0
-offset_bottom = 82.0
+offset_left = 10.0
+offset_top = 64.0
+offset_right = 74.0
+offset_bottom = 84.0
 theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
 theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
 theme_override_constants/outline_size = 2
@@ -544,8 +543,8 @@ stretch_mode = 6
 layout_mode = 0
 offset_left = 18.0
 offset_top = 5.0
-offset_right = 78.0
-offset_bottom = 67.0
+offset_right = 84.9
+offset_bottom = 70.245
 texture_normal = ExtResource("21_yte5r")
 texture_pressed = ExtResource("21_yte5r")
 texture_hover = ExtResource("21_yte5r")
@@ -556,10 +555,10 @@ stretch_mode = 6
 
 [node name="TavernLabel" type="Label" parent="Home/Home/Home/Tavern"]
 layout_mode = 0
-offset_left = -11.0
-offset_top = 42.0
-offset_right = 63.0
-offset_bottom = 62.0
+offset_left = -8.82501
+offset_top = 46.0
+offset_right = 65.175
+offset_bottom = 66.0
 theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
 theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
 theme_override_constants/outline_size = 2
@@ -572,8 +571,8 @@ vertical_alignment = 1
 layout_mode = 0
 offset_left = 106.755
 offset_top = 5.375
-offset_right = 166.755
-offset_bottom = 67.375
+offset_right = 173.655
+offset_bottom = 70.62
 texture_normal = ExtResource("22_gtcl1")
 texture_pressed = ExtResource("22_gtcl1")
 texture_hover = ExtResource("22_gtcl1")
@@ -584,10 +583,10 @@ stretch_mode = 6
 
 [node name="TasksLabel" type="Label" parent="Home/Home/Home/Tasks"]
 layout_mode = 0
-offset_left = -2.0
-offset_top = 42.0
-offset_right = 72.0
-offset_bottom = 62.0
+offset_left = 0.174993
+offset_top = 46.0
+offset_right = 74.175
+offset_bottom = 66.0
 theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
 theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
 theme_override_constants/outline_size = 2
@@ -600,8 +599,8 @@ vertical_alignment = 1
 layout_mode = 0
 offset_left = 208.755
 offset_top = 5.375
-offset_right = 268.755
-offset_bottom = 67.375
+offset_right = 275.655
+offset_bottom = 70.62
 texture_normal = ExtResource("23_q43ja")
 texture_pressed = ExtResource("23_q43ja")
 texture_hover = ExtResource("23_q43ja")
@@ -612,10 +611,10 @@ stretch_mode = 6
 
 [node name="CityLabel" type="Label" parent="Home/Home/Home/City"]
 layout_mode = 0
-offset_left = -7.0
-offset_top = 42.0
-offset_right = 67.0
-offset_bottom = 62.0
+offset_left = -4.82501
+offset_top = 46.0
+offset_right = 69.175
+offset_bottom = 66.0
 theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
 theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
 theme_override_constants/outline_size = 2
@@ -628,8 +627,8 @@ vertical_alignment = 1
 layout_mode = 0
 offset_left = 307.755
 offset_top = 5.375
-offset_right = 367.755
-offset_bottom = 67.375
+offset_right = 374.655
+offset_bottom = 70.62
 texture_normal = ExtResource("24_tfmuc")
 texture_pressed = ExtResource("24_tfmuc")
 texture_hover = ExtResource("24_tfmuc")
@@ -640,10 +639,10 @@ stretch_mode = 6
 
 [node name="ShopLabel" type="Label" parent="Home/Home/Home/Shop"]
 layout_mode = 0
-offset_left = -6.0
-offset_top = 42.0
-offset_right = 68.0
-offset_bottom = 62.0
+offset_left = -3.82501
+offset_top = 46.0
+offset_right = 70.175
+offset_bottom = 66.0
 theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
 theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
 theme_override_constants/outline_size = 2
@@ -656,8 +655,8 @@ vertical_alignment = 1
 layout_mode = 0
 offset_left = 410.755
 offset_top = 5.375
-offset_right = 470.755
-offset_bottom = 67.375
+offset_right = 477.655
+offset_bottom = 70.62
 texture_normal = ExtResource("25_0uvqi")
 texture_pressed = ExtResource("25_0uvqi")
 texture_hover = ExtResource("25_0uvqi")
@@ -668,10 +667,10 @@ stretch_mode = 6
 
 [node name="Mail" type="Label" parent="Home/Home/Home/Mail"]
 layout_mode = 0
-offset_left = -6.0
-offset_top = 47.0
-offset_right = 68.0
-offset_bottom = 67.0
+offset_left = -3.58001
+offset_top = 44.625
+offset_right = 70.42
+offset_bottom = 64.625
 theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
 theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
 theme_override_constants/outline_size = 2
@@ -679,6 +678,11 @@ theme_override_font_sizes/font_size = 13
 text = "почта"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Home/Home/Home"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="TavernHitBox" type="MarginContainer" parent="Home"]
 layout_mode = 0
