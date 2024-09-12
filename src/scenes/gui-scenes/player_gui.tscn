@@ -313,10 +313,10 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = -2.185
-offset_top = -489.44
-offset_right = 37.815
-offset_bottom = -449.44
+offset_left = -2.0
+offset_top = -478.5
+offset_right = 38.0
+offset_bottom = -438.5
 grow_vertical = 2
 
 [node name="NavigationOpened" type="MarginContainer" parent="Navigation"]

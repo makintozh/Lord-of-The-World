@@ -17,6 +17,7 @@ extends Control
 var empty_input : bool = false
 
 
+
 var mini_chat_active : bool = true
 
 
@@ -40,7 +41,7 @@ var bearer_header = ["Authorization: Bearer " + GLOBAL.from_auth_token]
 
 
 func _ready() -> void:
-	touch_api()
+	#touch_api(60)
 	connect_to_socket()
 	close_chat()
 
@@ -48,10 +49,11 @@ func _ready() -> void:
 
 
 
-func touch_api():
-	await get_tree().create_timer(0.2).timeout
+func touch_api(quantity : int):
+	#await get_tree().create_timer(0.2).timeout
+	messages_label.text = "Загрузка..."
 	message_list.clear()
-	api.request("http://" + GLOBAL.choiced_server_address + "/chat/1/messages?quantity=45", bearer_header, HTTPClient.METHOD_GET)
+	api.request("http://" + GLOBAL.choiced_server_address + "/chat/1/messages?quantity=" + str(quantity), bearer_header, HTTPClient.METHOD_GET)
 
 
 
@@ -79,7 +81,7 @@ func _process(_delta):
 			var json_response = JSON.parse_string(response)
 			print("\n[WEB-SOCKET] %s %s" % [response, "\n"])
 			
-			
+			chat_to_down()
 			if json_response:
 				#await get_tree().create_timer(2.0).timeout
 				_on_MessageReceived(json_response)
@@ -98,8 +100,7 @@ func _process(_delta):
 
 
 func chat_to_down():
-	for i in range(5):
-		scroll_container.scroll_vertical = 9999
+	scroll_container.scroll_vertical += 9999
 
 
 
@@ -132,6 +133,7 @@ func _on_send_pressed() -> void:
 		empty_input = true
 		
 	input.text = ""
+	chat_to_down()
 
 
 
@@ -178,11 +180,12 @@ func update_label():
 	for message in message_list:
 		if "username" in message:
 			text += "[font=res://src/fonts/inika/Inika-Bold.ttf]" + message.username + "[/font]: " + message.text + "\n"
-
+	
+	#print("Массив: %s  |||  Размер массива (size): %d" % [message_list , message_list.size()])
 
 	text = text.strip_edges()
 	messages_label.text = text
-	if !scroll_container.position.y == -215 and !scroll_container.position.y == -850:
+	if !scroll_container.position.y == -225 and !scroll_container.position.y == -850:
 		if !empty_input:
 			scroll_container.position.y -= 25
 			scroll_container.size.y += 20
@@ -205,6 +208,7 @@ func _on_close_chat_pressed() -> void:
 
 
 func open_chat():
+	touch_api(60)
 	mini_chat_active = false
 	chat_panel.visible = false
 	open_chat_panel.visible = true
@@ -220,6 +224,9 @@ func open_chat():
 	scroll_container.scale = Vector2(1.0 , 1.0)
 	scroll_container.scroll_vertical = 99999
 	scroll_container.vertical_scroll_mode = 1
+	messages_label.visible_characters = -1
+	#messages_label.visible_ratio = 1
+	#messages_label.visible_characters_behavior = TextServer.VC_CHARS_BEFORE_SHAPING
 	#messages_label.autowrap_mode = TextServer.AUTOWRAP_OFF
 	#messages_label.text_overrun_behavior = TextServer.OVERRUN_NO_TRIM
 	scroll_container.visible = true
@@ -230,6 +237,9 @@ func open_chat():
 
 
 func close_chat():
+	touch_api(2)
+	var label_size = messages_label.get_total_character_count()
+	print("Размер сообщений: %d" % [label_size])
 	scroll_container.visible = true
 	mini_chat_active = true
 	chat_panel.visible = true
@@ -239,8 +249,11 @@ func close_chat():
 	#messages_label.visible_characters = 50
 	#messages_label.position.y = -212
 	scroll_container.position.x = -36
-	scroll_container.position.y = -220
-	scroll_container.size.y = 83
+	scroll_container.position.y = -225
+	scroll_container.size.y = 1003
+	messages_label.visible_characters = label_size + 90
+	#messages_label.visible_ratio = label_size/30
+	#messages_label.visible_characters_behavior = TextServer.VC_GLYPHS_AUTO
 	scroll_container.scale = Vector2(1.0 , 1.0)
 	scroll_container.vertical_scroll_mode = 3
 	scroll_container.scroll_vertical = 0
