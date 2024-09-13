@@ -34,7 +34,7 @@ var bearer_header = ["Authorization: Bearer " + GLOBAL.from_auth_token]
 func _ready():
 	print(bearer_header)
 	api.request(CONFIG.api_link + "/servers", bearer_header, HTTPClient.METHOD_GET)
-
+	after_remember_me()
 
 
 
@@ -58,7 +58,7 @@ func _on_api_request_request_completed(result, response_code, headers, body):
 func parse_json(json_string: String):
 	var result = JSON.parse_string(json_string)
 	server_massive = result["servers"]
-	print(server_massive)
+	print(str(server_massive))
 	create_server_buttons()
 
 
@@ -147,7 +147,7 @@ func _on_play_button_pressed(name: String, address: String):
 	GLOBAL.choiced_server_address = address
 	print("\nВыбрано: " + GLOBAL.choiced_server_name + " " + str(GLOBAL.choiced_server_address))
 	SceneManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
-
+	remember_me()
 
 
 
@@ -163,3 +163,39 @@ func _on_back_button_pressed():
 		SceneManager.go_to_scene("res://src/scenes/auth-scenes/login_ui.tscn")
 	else:
 		SceneManager.go_to_scene("res://src/scenes/game-scenes/character_create.tscn")
+
+
+
+
+
+var data = ConfigFile.new()
+var data_path = "user://server_data.cfg"
+var data_name = "SERVER DATA"
+
+var data_server_ip = "server_ip"
+var data_server_name = "server_name"
+
+
+
+func remember_me():
+	if GLOBAL.is_remember:
+		var server_ip = GLOBAL.choiced_server_address
+		var server_name = GLOBAL.choiced_server_name
+		data.set_value(data_name, "server_ip", server_ip)
+		data.set_value(data_name, "server_name", server_name)
+		data.save_encrypted_pass(data_path, "makintosh")
+		print("Saved: " + server_ip + "  |||  " + server_name)
+
+
+
+
+
+
+func after_remember_me():
+	if FileAccess.file_exists(data_path) and GLOBAL.from_change_server == false:
+		data.load_encrypted_pass(data_path, "makintosh")
+		print("Data Exists " + data_path)
+		var server_ip = data.get_value(data_name, data_server_ip, "")
+		var server_name = data.get_value(data_name, data_server_name, "")
+		print("Loading data: " + server_ip + "  |||  " + server_name)
+		_on_play_button_pressed(server_name , server_ip)

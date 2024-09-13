@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://beimgli81xrln"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/biom-scripts/hub-scripts/taurelious-hub.gd" id="1_ydso6"]
-[ext_resource type="Texture2D" uid="uid://fwhgu1ducgwo" path="res://src/ui/backgrounds/hub-backgrounds/Гномы(Elborus).png" id="2_ingfy"]
-[ext_resource type="VideoStream" path="res://src/ui/backgrounds/hub-backgrounds/Гномы(Elborus).ogv" id="3_5gx0v"]
-[ext_resource type="Texture2D" uid="uid://cxvwvuvbhim3y" path="res://src/ui/buttons/bottom.png" id="4_2norc"]
-[ext_resource type="Texture2D" uid="uid://cq5lejgcnil4s" path="res://src/ui/elements/New item.png" id="5_4flnt"]
-[ext_resource type="Texture2D" uid="uid://cq4yc1cdcmtb5" path="res://src/ui/buttons/bottom off 3.png" id="6_6kwvh"]
-[ext_resource type="Texture2D" uid="uid://cbs8xmap4tgjv" path="res://src/ui/buttons/support green.png" id="7_52maa"]
-[ext_resource type="Texture2D" uid="uid://doq20ct6rvrxb" path="res://src/ui/buttons/back_button.png" id="8_8egkw"]
-[ext_resource type="Texture2D" uid="uid://bjbfwcm8ld8l1" path="res://src/ui/backgrounds/battle_step.png" id="9_sra0m"]
+[ext_resource type="Texture2D" uid="uid://be052pws6741k" path="res://src/ui/backgrounds/hub-backgrounds/Эльфы(Taurelious).png" id="2_3g1su"]
+[ext_resource type="VideoStream" path="res://src/ui/backgrounds/hub-backgrounds/Эльфы(Taurelious).ogv" id="3_5q5iw"]
+[ext_resource type="Texture2D" uid="uid://cedpmviec6lf" path="res://src/ui/buttons/bottom.png" id="4_2norc"]
+[ext_resource type="Texture2D" uid="uid://cymhkw2j7tc4d" path="res://src/ui/elements/New item.png" id="5_4flnt"]
+[ext_resource type="Texture2D" uid="uid://hmnv24ih5u62" path="res://src/ui/buttons/bottom off 3.png" id="6_6kwvh"]
+[ext_resource type="Texture2D" uid="uid://b1im4ry4rnu28" path="res://src/ui/buttons/support green.png" id="7_52maa"]
+[ext_resource type="Texture2D" uid="uid://b3hxg141ochmh" path="res://src/ui/buttons/back_button.png" id="8_8egkw"]
+[ext_resource type="Texture2D" uid="uid://cwqetyj7kwiqu" path="res://src/ui/backgrounds/battle_step.png" id="9_sra0m"]
 
 [node name="Taurelious-Hub" type="Control"]
 layout_mode = 3
@@ -29,7 +29,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("2_ingfy")
+texture = ExtResource("2_3g1su")
 expand_mode = 1
 stretch_mode = 6
 
@@ -45,7 +45,7 @@ stretch_mode = 3
 
 [node name="BackGround-Video" type="VideoStreamPlayer" parent="AspectRatioContainer"]
 layout_mode = 2
-stream = ExtResource("3_5gx0v")
+stream = ExtResource("3_5q5iw")
 autoplay = true
 expand = true
 loop = true
@@ -58,10 +58,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -268.0
-offset_top = -770.0
-offset_right = -268.0
-offset_bottom = -770.0
+offset_left = -259.0
+offset_top = -663.0
+offset_right = -259.0
+offset_bottom = -663.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.06, 1.06)
@@ -100,10 +100,10 @@ stretch_mode = 0
 
 [node name="Battle2" type="MarginContainer" parent="Go-Battle-Buttons"]
 layout_mode = 0
-offset_left = 329.245
-offset_top = 776.415
-offset_right = 441.245
-offset_bottom = 886.415
+offset_left = 290.566
+offset_top = 697.17
+offset_right = 402.566
+offset_bottom = 807.17
 
 [node name="Battle2" type="TextureButton" parent="Go-Battle-Buttons/Battle2"]
 layout_mode = 2
@@ -116,9 +116,9 @@ stretch_mode = 0
 
 [node name="Battle3" type="MarginContainer" parent="Go-Battle-Buttons"]
 layout_mode = 0
-offset_left = 136.792
+offset_left = 100.0
 offset_top = 731.132
-offset_right = 248.792
+offset_right = 212.0
 offset_bottom = 841.132
 
 [node name="Battle3" type="TextureButton" parent="Go-Battle-Buttons/Battle3"]
@@ -132,10 +132,10 @@ stretch_mode = 0
 
 [node name="Battle5" type="MarginContainer" parent="Go-Battle-Buttons"]
 layout_mode = 0
-offset_left = 206.604
-offset_top = 576.415
-offset_right = 318.604
-offset_bottom = 686.415
+offset_left = 182.075
+offset_top = 355.66
+offset_right = 294.076
+offset_bottom = 465.66
 
 [node name="Battle5" type="TextureButton" parent="Go-Battle-Buttons/Battle5"]
 layout_mode = 2
@@ -148,10 +148,10 @@ stretch_mode = 0
 
 [node name="Battle6" type="MarginContainer" parent="Go-Battle-Buttons"]
 layout_mode = 0
-offset_left = 85.8491
-offset_top = 552.83
-offset_right = 197.849
-offset_bottom = 662.83
+offset_left = 93.3962
+offset_top = 485.849
+offset_right = 205.396
+offset_bottom = 595.849
 
 [node name="Battle6" type="TextureButton" parent="Go-Battle-Buttons/Battle6"]
 layout_mode = 2
@@ -164,10 +164,10 @@ stretch_mode = 0
 
 [node name="Battle7" type="MarginContainer" parent="Go-Battle-Buttons"]
 layout_mode = 0
-offset_left = 324.528
-offset_top = 450.943
-offset_right = 436.528
-offset_bottom = 560.943
+offset_left = 289.623
+offset_top = 451.887
+offset_right = 401.623
+offset_bottom = 561.887
 
 [node name="Battle7" type="TextureButton" parent="Go-Battle-Buttons/Battle7"]
 layout_mode = 2
@@ -180,10 +180,10 @@ stretch_mode = 0
 
 [node name="Battle8" type="MarginContainer" parent="Go-Battle-Buttons"]
 layout_mode = 0
-offset_left = 203.774
-offset_top = 354.717
-offset_right = 315.774
-offset_bottom = 464.717
+offset_left = 194.34
+offset_top = 203.774
+offset_right = 306.34
+offset_bottom = 313.774
 
 [node name="Battle8" type="TextureButton" parent="Go-Battle-Buttons/Battle8"]
 layout_mode = 2

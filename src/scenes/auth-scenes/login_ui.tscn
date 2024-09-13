@@ -142,10 +142,10 @@ anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = 167.0
-offset_top = 127.0
-offset_right = 313.0
-offset_bottom = 195.0
+offset_left = 187.0
+offset_top = 127.5
+offset_right = 333.0
+offset_bottom = 195.5
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -416,11 +416,11 @@ text = "Tech support"
 icon = ExtResource("13_wu0o0")
 icon_alignment = 2
 
-[node name="FailedToConnect" parent="." instance=ExtResource("13_r4bu3")]
+[node name="WaitingResponse" parent="." instance=ExtResource("14_mul5m")]
 visible = false
 layout_mode = 1
 
-[node name="WaitingResponse" parent="." instance=ExtResource("14_mul5m")]
+[node name="FailedToConnect" parent="." instance=ExtResource("13_r4bu3")]
 visible = false
 layout_mode = 1
 

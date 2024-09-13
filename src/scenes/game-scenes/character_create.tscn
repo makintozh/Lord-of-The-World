@@ -1,14 +1,14 @@
 [gd_scene load_steps=20 format=3 uid="uid://do85wm7qmftwm"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/character_create.gd" id="1_t13y3"]
-[ext_resource type="Texture2D" uid="uid://dvq7k76euq5b1" path="res://src/ui/backgrounds/background.png" id="2_juskx"]
-[ext_resource type="Texture2D" uid="uid://ca8c2oawcspri" path="res://src/ui/elements/race bar.png" id="3_yt8dn"]
-[ext_resource type="Texture2D" uid="uid://c4fhrghf3a3wm" path="res://src/ui/buttons/arrow_ (1).png" id="7_bnfx2"]
-[ext_resource type="Texture2D" uid="uid://dca1p24c1tkf8" path="res://src/ui/buttons/arrow_.png" id="8_mfu6b"]
-[ext_resource type="Texture2D" uid="uid://cnsdkk42xm44r" path="res://src/ui/elements/gekso.png" id="9_0yv3s"]
-[ext_resource type="Texture2D" uid="uid://daxo25nsn56qc" path="res://src/ui/elements/input.png" id="10_n5pao"]
-[ext_resource type="Texture2D" uid="uid://cy5fg20knkhtc" path="res://src/ui/buttons/green buttom base long.png" id="11_c771i"]
-[ext_resource type="Texture2D" uid="uid://d1n0rdc1jyd13" path="res://src/ui/elements/update 1.png" id="15_hneh2"]
+[ext_resource type="Texture2D" uid="uid://bvxw60u844ekc" path="res://src/ui/backgrounds/background.png" id="2_juskx"]
+[ext_resource type="Texture2D" uid="uid://byw7utm1mv4un" path="res://src/ui/elements/race bar.png" id="3_yt8dn"]
+[ext_resource type="Texture2D" uid="uid://bcs6xgwjdf7ru" path="res://src/ui/buttons/arrow_ (1).png" id="7_bnfx2"]
+[ext_resource type="Texture2D" uid="uid://1xh06idh51fg" path="res://src/ui/buttons/arrow_.png" id="8_mfu6b"]
+[ext_resource type="Texture2D" uid="uid://7d8mdy780wbh" path="res://src/ui/elements/gekso.png" id="9_0yv3s"]
+[ext_resource type="Texture2D" uid="uid://cvf6qa4l4g30e" path="res://src/ui/elements/input.png" id="10_n5pao"]
+[ext_resource type="Texture2D" uid="uid://5h6e7r6idv4o" path="res://src/ui/buttons/green buttom base long.png" id="11_c771i"]
+[ext_resource type="Texture2D" uid="uid://b2vo2hyj6d7ni" path="res://src/ui/elements/update 1.png" id="15_hneh2"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b75u7"]
 texture = ExtResource("10_n5pao")
@@ -173,10 +173,21 @@ offset_top = 123.0
 offset_right = 277.0
 offset_bottom = 163.0
 
-[node name="Label" type="Label" parent="MainUI/Characters/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 31
-text = "ICONS PLACE"
+[node name="ColorRect" type="ColorRect" parent="MainUI/Characters"]
+offset_left = 191.0
+offset_top = 107.0
+offset_right = 272.0
+offset_bottom = 188.0
+
+[node name="Label" type="Label" parent="MainUI/Characters/ColorRect"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 19.0
+offset_right = 72.0
+offset_bottom = 62.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "ICON"
 
 [node name="ArchetypeGraph" type="Control" parent="MainUI"]
 layout_mode = 3

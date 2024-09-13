@@ -41,11 +41,13 @@ func _ready():
 
 
 func remember_me():
-	var login_remembered = login_data.text
-	var pass_remembered = password_data.text
-	data.set_value(data_name, "login", login_remembered)
-	data.set_value(data_name, "password", pass_remembered)
-	data.save_encrypted_pass(data_path, "makintosh")
+	if GLOBAL.is_remember:
+		var login_remembered = login_data.text
+		var pass_remembered = password_data.text
+		data.set_value(data_name, "login", login_remembered)
+		data.set_value(data_name, "password", pass_remembered)
+		data.save_encrypted_pass(data_path, "makintosh")
+		print("Saved: " + login_remembered + "  |||  " + pass_remembered)
 
 
 
@@ -75,9 +77,6 @@ func adaptive_keyboard():
 
 
 func _process(_delta):
-	if is_remember and logged:
-		remember_me()
-		
 	checkloginandpassword()
 	adaptive_keyboard()
 
@@ -101,6 +100,9 @@ func _on_login_button_pressed():
 	await get_tree().create_timer(20).timeout
 	GLOBAL.failed_reason = "No Internet Connection"
 	failed.visible = true
+	waitingresponse.visible = false
+
+
 
 
 func _on_http_request_request_completed(result, response_code, headers, body):
@@ -127,7 +129,7 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 	if !token == "<null>":
 		GLOBAL.from_auth_token = token
 		logged = true
-		if logged and is_remember:
+		if logged and GLOBAL.is_remember:
 			remember_me()
 		SceneManager.go_to_scene("res://src/scenes/auth-scenes/choice_server.tscn")
 	else:
@@ -166,7 +168,9 @@ func enable_login():
 
 func _on_remember_me_check_box_toggled(toggled_on):
 	if toggled_on:
-		is_remember = true
+		GLOBAL.is_remember = true
+	else:
+		GLOBAL.is_remember = false
 
 
 

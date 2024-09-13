@@ -22,6 +22,9 @@ var choiced_server_name = ""
 var sign_out:bool = false
 
 
+var is_remember:bool = false
+
+
 var from_change_server:bool = false
 
 
@@ -33,9 +36,3 @@ var player_character_name = ""    #Имя Персонажа Пользоват�
 
 var enable_button_transparent = "ffffffff"    #Прозрачность Включённой Кнопки
 var disable_button_transparent = "ffffff78"   #Прозрачность Отлючённой Кнопки
-
-
-
-
-
-

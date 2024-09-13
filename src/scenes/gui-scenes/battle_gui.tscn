@@ -509,6 +509,7 @@ stretch_mode = 2
 
 [node name="Button" type="Button" parent="."]
 self_modulate = Color(1, 1, 1, 0.176471)
+layout_mode = 0
 offset_left = 10.0
 offset_top = 468.0
 offset_right = 176.0
