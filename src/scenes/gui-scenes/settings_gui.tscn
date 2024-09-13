@@ -56,10 +56,10 @@ text = "OPTIONS"
 
 [node name="CloseButton" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 383.0
-offset_top = 72.0
-offset_right = 502.0
-offset_bottom = 126.0
+offset_left = 319.0
+offset_top = 143.0
+offset_right = 438.0
+offset_bottom = 197.0
 
 [node name="CloseButton" type="Button" parent="CloseButton"]
 layout_mode = 2

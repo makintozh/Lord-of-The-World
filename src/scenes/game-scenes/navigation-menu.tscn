@@ -1,4 +1,4 @@
-[gd_scene load_steps=349 format=3 uid="uid://pk7extbu3xea"]
+[gd_scene load_steps=351 format=3 uid="uid://pk7extbu3xea"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/navigation-menu.gd" id="1_ykvwa"]
 [ext_resource type="Texture2D" uid="uid://cdbeqyu8j0hmr" path="res://src/ui/backgrounds/Главный_экран_адаптировано_под_размер_.PNG" id="3_j0xlm"]
@@ -7,7 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://bw1x5iqjlpcr8" path="res://src/ui/buildings/animated/Tavern.png" id="9_8b332"]
 [ext_resource type="Texture2D" uid="uid://b0eom03g48wmg" path="res://src/ui/buildings/animated/Osadu.png" id="9_lqhp8"]
 [ext_resource type="Texture2D" uid="uid://bk47kvndsogop" path="res://src/ui/buildings/animated/Biom.png" id="10_bbc1g"]
+[ext_resource type="Texture2D" uid="uid://jwvwoygkxef1" path="res://src/ui/new-ui/buttons/Замок 1.png" id="10_skpi3"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="11_8sxna"]
+[ext_resource type="Texture2D" uid="uid://dqqfcxyclbynf" path="res://src/ui/new-ui/misc/Подложка кнопки.png" id="11_ltf07"]
 [ext_resource type="Resource" uid="uid://5a1rq24an53u" path="res://src/ui/dialogues/warning_back_dialogue.tres" id="12_f0vy2"]
 [ext_resource type="Texture2D" uid="uid://nr7cjatr1ahd" path="res://src/ui/buildings/animated/ClansHall.png" id="12_vctx2"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="12_yq8ua"]
@@ -2341,22 +2343,22 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -112.05
+offset_top = -74.715
 offset_right = -80.0
-offset_bottom = -69.05
+offset_bottom = 564.285
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.195, 1.195)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("3_j0xlm")
-stretch_mode = 4
+stretch_mode = 6
 
 [node name="BackGround-Video" type="VideoStreamPlayer" parent="."]
 layout_mode = 1
-offset_top = -112.05
+offset_top = -74.715
 offset_right = 420.0
-offset_bottom = 830.95
+offset_bottom = 868.285
 scale = Vector2(1.195, 1.195)
 stream = ExtResource("3_q2uc8")
 autoplay = true
@@ -2366,9 +2368,9 @@ loop = true
 [node name="Buildings" type="Control" parent="."]
 anchors_preset = 0
 offset_left = 2.0
-offset_top = -112.05
+offset_top = -74.715
 offset_right = 2.0
-offset_bottom = -112.05
+offset_bottom = -74.715
 
 [node name="Tavern" type="Control" parent="Buildings"]
 layout_mode = 3
@@ -2654,6 +2656,53 @@ theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_xpp1x")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_xpp1x")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_xpp1x")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xpp1x")
+
+[node name="LockedButton" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -490.0
+offset_top = 447.0
+offset_right = -417.29
+offset_bottom = 513.665
+grow_horizontal = 0
+scale = Vector2(1.54, 1.54)
+
+[node name="Locked" type="TextureButton" parent="LockedButton"]
+layout_mode = 2
+action_mode = 0
+texture_normal = ExtResource("10_skpi3")
+texture_pressed = ExtResource("10_skpi3")
+texture_hover = ExtResource("10_skpi3")
+texture_disabled = ExtResource("10_skpi3")
+texture_focused = ExtResource("10_skpi3")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Background" type="TextureRect" parent="LockedButton/Locked"]
+layout_mode = 0
+offset_left = -19.0
+offset_top = 57.0
+offset_right = 90.0
+offset_bottom = 81.0
+texture = ExtResource("11_ltf07")
+expand_mode = 1
+
+[node name="LockedLabel" type="Label" parent="LockedButton/Locked"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 58.0
+offset_right = 69.0
+offset_bottom = 78.0
+theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "ЗАКРЫТО"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
 
 [node name="TransparentBack" type="ColorRect" parent="."]
 visible = false

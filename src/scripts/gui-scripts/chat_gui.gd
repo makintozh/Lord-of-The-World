@@ -8,24 +8,40 @@ extends Control
 @onready var open_chat_panel = $"Open-Chat-Panel"
 @onready var messages_label = $"ScrollContainer/Messages"
 @onready var scroll_container = $ScrollContainer
-@onready var open_chat_button = $"Open-Chat"
+@onready var open_chat_hitbox = $"Open-Chat-Hitbox"
+@onready var show_chat_button = $"Show-Chat"
 @onready var hide_chat_button = $"Hide-Chat"
 @onready var hide_chat_label = $"Hide-Chat/Hide"
 @onready var input = $"Open-Chat-Panel/Input"
 
 
+@onready var chat_gui = $"."
+
+
 var empty_input : bool = false
 
 
+@export var opened_chat_position_y = -600
+@export var opened_chat_size_y = 500
+@export var closed_chat_position_y = -221
 
-var mini_chat_active : bool = true
+
+@export var mini_chat_active : bool = true
 
 
 @onready var api = $APIRequest
 var message_list = []
 
+
 var socket = WebSocketPeer.new()
-var websocket_url = "ws://" + GLOBAL.choiced_server_address + "/ws/chat/1"
+@export var websocket_url = "ws://" + GLOBAL.choiced_server_address + "/ws/chat/1"
+
+
+
+
+@onready var scene = get_tree().get_root().get_child(SceneManager.singleton_count)
+
+
 
 
 
@@ -49,6 +65,10 @@ func _ready() -> void:
 
 
 
+
+
+
+
 func touch_api(quantity : int):
 	#await get_tree().create_timer(0.2).timeout
 	messages_label.text = "Загрузка..."
@@ -67,7 +87,6 @@ func connect_to_socket():
 
 
 func _process(_delta):
-	mini_chat_manager()
 	
 	socket.poll()
 
@@ -100,6 +119,7 @@ func _process(_delta):
 
 
 func chat_to_down():
+	await get_tree().create_timer(0.6).timeout
 	scroll_container.scroll_vertical += 9999
 
 
@@ -131,7 +151,15 @@ func _on_send_pressed() -> void:
 	socket.send_text(msg)
 	if input.text == "":
 		empty_input = true
-		
+	
+	if !scroll_container.position.y == closed_chat_position_y and !scroll_container.position.y == -860:
+		if !empty_input:
+			await get_tree().create_timer(0.3).timeout
+			scroll_container.position.y -= 20
+			scroll_container.size.y += 15
+
+
+
 	input.text = ""
 	chat_to_down()
 
@@ -183,12 +211,14 @@ func update_label():
 	
 	#print("Массив: %s  |||  Размер массива (size): %d" % [message_list , message_list.size()])
 
+
+
 	text = text.strip_edges()
 	messages_label.text = text
-	if !scroll_container.position.y == -225 and !scroll_container.position.y == -850:
-		if !empty_input:
-			scroll_container.position.y -= 25
-			scroll_container.size.y += 20
+	await get_tree().create_timer(1.5).timeout
+	
+	
+	
 	chat_to_down()
 
 
@@ -208,91 +238,88 @@ func _on_close_chat_pressed() -> void:
 
 
 func open_chat():
-	touch_api(60)
-	mini_chat_active = false
+	touch_api(15)
+	#mini_chat_active = false
 	chat_panel.visible = false
 	open_chat_panel.visible = true
-	open_chat_button.visible = false
+	show_chat_button.visible = false
+	open_chat_hitbox.visible = false
 	hide_chat_button.visible = false
-	#messages_label.visible_characters = -1
-	#messages_label.position.y = -856
+	$"../PlayerGui".navigation.visible = false
 	messages_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	scroll_container.position.x = -222
-	scroll_container.position.y = -850
+	scroll_container.position.y = opened_chat_position_y
 	scroll_container.size.x = 456
-	scroll_container.size.y = 620
+	scroll_container.size.y = opened_chat_size_y
 	scroll_container.scale = Vector2(1.0 , 1.0)
 	scroll_container.scroll_vertical = 99999
 	scroll_container.vertical_scroll_mode = 1
 	messages_label.visible_characters = -1
-	#messages_label.visible_ratio = 1
-	#messages_label.visible_characters_behavior = TextServer.VC_CHARS_BEFORE_SHAPING
-	#messages_label.autowrap_mode = TextServer.AUTOWRAP_OFF
-	#messages_label.text_overrun_behavior = TextServer.OVERRUN_NO_TRIM
 	scroll_container.visible = true
-	if scroll_container.position.y == -590:
-			scroll_container.size.y = 420
+	
+	#if scroll_container.position.y == -590:
+			#scroll_container.size.y = 420
+			
 	chat_to_down()
 
 
 
 func close_chat():
-	touch_api(2)
+	touch_api(4)
 	var label_size = messages_label.get_total_character_count()
 	print("Размер сообщений: %d" % [label_size])
 	scroll_container.visible = true
 	mini_chat_active = true
 	chat_panel.visible = true
 	open_chat_panel.visible = false
-	open_chat_button.visible = true
+	open_chat_hitbox.visible = true
+	show_chat_button.visible = false
 	hide_chat_button.visible = true
-	#messages_label.visible_characters = 50
-	#messages_label.position.y = -212
+	if scene.name == "Tavern":
+		$"../PlayerGui".navigation.visible = false
+	else:
+		$"../PlayerGui".navigation.visible = true
 	scroll_container.position.x = -36
-	scroll_container.position.y = -225
+	scroll_container.position.y = closed_chat_position_y
+	scroll_container.size.x = 99999
 	scroll_container.size.y = 1003
-	messages_label.visible_characters = label_size + 90
-	#messages_label.visible_ratio = label_size/30
-	#messages_label.visible_characters_behavior = TextServer.VC_GLYPHS_AUTO
 	scroll_container.scale = Vector2(1.0 , 1.0)
 	scroll_container.vertical_scroll_mode = 3
 	scroll_container.scroll_vertical = 0
-	#messages_label.autowrap_mode = TextServer.AUTOWRAP_OFF
-	##messages_label.text_overrun_behavior = TextServer.OVERRUN_NO_TRIM
-	#messages_label.text_overrun_behavior = TextServer.OVERRUN_ADD_ELLIPSIS
 	chat_to_down()
+
+
 
 
 func hide_chat():
 	chat_panel.visible = false
-	open_chat_button.visible = false
-	hide_chat_button.position.x = 210
-	hide_chat_label.text = "показать"
+	hide_chat_button.visible = false
+	scroll_container.visible = false
+	open_chat_hitbox.visible = false
+	show_chat_button.visible = true
+
+
 
 
 func show_chat():
 	chat_panel.visible = true
-	open_chat_button.visible = true
-	hide_chat_button.position.x = -86
-	hide_chat_label.text = "скрыть"
+	open_chat_hitbox.visible = true
+	hide_chat_button.visible = true
+	scroll_container.visible = true
+	show_chat_button.visible = false
 
 
-func mini_chat_manager():
-	if mini_chat_active:
-		show_chat()
-		chat_to_down()
-	else:
-		hide_chat()
+
 
 
 
 func _on_hide_chat_pressed() -> void:
-	if mini_chat_active:
-		mini_chat_active = false
-		scroll_container.visible = false
-	else:
-		mini_chat_active = true
-		scroll_container.visible = true
-		chat_to_down()
-	
-	
+	hide_chat()
+
+
+
+
+
+func _on_show_chat_pressed() -> void:
+	show_chat()
+	$"../PlayerGui"._on_navigation_close_hit_box_pressed()

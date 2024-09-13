@@ -24,6 +24,7 @@ var singleton_count = 5
 
 
 
+
 func go_to_scene(path):
 	var current_scene = get_tree().current_scene
 	

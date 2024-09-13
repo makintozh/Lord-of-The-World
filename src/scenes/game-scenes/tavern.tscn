@@ -1,17 +1,18 @@
-[gd_scene load_steps=13 format=3 uid="uid://0xe68w41ig5c"]
+[gd_scene load_steps=14 format=3 uid="uid://0xe68w41ig5c"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/tavern.gd" id="1_06l26"]
-[ext_resource type="Texture2D" uid="uid://bvxw60u844ekc" path="res://src/ui/backgrounds/background.png" id="2_f0g80"]
-[ext_resource type="Texture2D" uid="uid://blvwcxolgwjvj" path="res://src/ui/elements/geks копия 10.png" id="3_jynqc"]
-[ext_resource type="Texture2D" uid="uid://bday84vwttrf8" path="res://src/ui/elements/base frame 4.png" id="4_etbxp"]
-[ext_resource type="Texture2D" uid="uid://y0jbxbrdt43s" path="res://src/ui/buttons/button_2.png" id="5_5p47d"]
-[ext_resource type="Texture2D" uid="uid://b3hxg141ochmh" path="res://src/ui/buttons/back_button.png" id="6_2ujnu"]
-[ext_resource type="Texture2D" uid="uid://bgpyouxqw3gas" path="res://src/ui/elements/abil.png" id="7_nsrmq"]
-[ext_resource type="Texture2D" uid="uid://dby0khb7v4k6x" path="res://src/ui/elements/Line.png" id="8_b0sav"]
-[ext_resource type="Texture2D" uid="uid://cg4eu5bqqugs0" path="res://src/ui/elements/black_info.png" id="8_syltn"]
-[ext_resource type="Texture2D" uid="uid://u2tymf188ylp" path="res://src/ui/elements/Battle_Raiting.png" id="9_2fdt2"]
-[ext_resource type="Texture2D" uid="uid://csehlsyqu15rh" path="res://src/ui/elements/on_star.png" id="10_5il1k"]
-[ext_resource type="Texture2D" uid="uid://c04vpcg1p803x" path="res://src/ui/elements/off_star.png" id="11_w6t47"]
+[ext_resource type="Texture2D" uid="uid://bgdwtn4hyecm4" path="res://src/ui/new-ui/backgrounds/Фон.png" id="2_xu8nv"]
+[ext_resource type="PackedScene" uid="uid://ccq03g2w30olb" path="res://src/scenes/gui-scenes/player_gui.tscn" id="3_7731g"]
+[ext_resource type="PackedScene" uid="uid://cftgd0b0e3ei3" path="res://src/scenes/gui-scenes/chat_gui.tscn" id="4_ysw4l"]
+[ext_resource type="Texture2D" uid="uid://bll7kks5588xw" path="res://src/ui/new-ui/misc/Mask group.png" id="5_3bmwq"]
+[ext_resource type="Texture2D" uid="uid://bpde232syxfpb" path="res://src/ui/new-ui/misc/Mask group2.png" id="6_c42ny"]
+[ext_resource type="Texture2D" uid="uid://ck1jh1ngcxbec" path="res://src/ui/new-ui/misc/Mask group333.png" id="7_atplo"]
+[ext_resource type="Texture2D" uid="uid://do27t6gkyhb7w" path="res://src/ui/new-ui/misc/Mask group4.png" id="8_ikpro"]
+[ext_resource type="Texture2D" uid="uid://dwoq1g3cws42o" path="res://src/ui/new-ui/misc/Rectangle 103.png" id="8_qvace"]
+[ext_resource type="Texture2D" uid="uid://dypwcitb3sjby" path="res://src/ui/new-ui/resources/Прокачка.png" id="9_jvu0q"]
+[ext_resource type="Texture2D" uid="uid://dkyt35muhy8mv" path="res://src/ui/new-ui/resources/Герои.png" id="10_dk88q"]
+[ext_resource type="Texture2D" uid="uid://d1dsq41gqmqwx" path="res://src/ui/new-ui/resources/Крафт.png" id="11_5a7no"]
+[ext_resource type="Texture2D" uid="uid://cdlj5j7dxd5v5" path="res://src/ui/new-ui/resources/Инвентарь.png" id="12_wiv27"]
 
 [node name="Tavern" type="Control"]
 layout_mode = 3
@@ -23,299 +24,174 @@ grow_vertical = 2
 script = ExtResource("1_06l26")
 metadata/_edit_use_anchors_ = true
 
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
-clip_contents = false
+[node name="BackGround-Image" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -212.0
-offset_right = 212.0
-offset_bottom = 570.0
 grow_horizontal = 2
 grow_vertical = 2
-follow_focus = true
-horizontal_scroll_mode = 0
-vertical_scroll_mode = 2
-
-[node name="BackGround-Image" type="TextureRect" parent="ScrollContainer"]
-layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 2
-texture = ExtResource("2_f0g80")
+texture = ExtResource("2_xu8nv")
+expand_mode = 1
 stretch_mode = 6
 
-[node name="PlayerInfo" type="Control" parent="ScrollContainer"]
-layout_mode = 2
-mouse_filter = 2
-
-[node name="Information" type="MarginContainer" parent="ScrollContainer/PlayerInfo"]
+[node name="PlayerGui" parent="." instance=ExtResource("3_7731g")]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 224.0
-offset_top = 613.0
-offset_right = 703.0
-offset_bottom = 1039.99
-grow_horizontal = 2
-mouse_filter = 2
 
-[node name="InformationBackGround" type="TextureRect" parent="ScrollContainer/PlayerInfo/Information"]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("8_syltn")
+offset_left = 13.0
+offset_top = 150.0
+offset_right = 477.33
+offset_bottom = 318.225
+texture = ExtResource("5_3bmwq")
 expand_mode = 1
 
-[node name="InformationText" type="MarginContainer" parent="ScrollContainer/PlayerInfo"]
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 13.0
+offset_top = 314.0
+offset_right = 477.33
+offset_bottom = 482.225
+texture = ExtResource("6_c42ny")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 15.0
+offset_top = 494.0
+offset_right = 479.33
+offset_bottom = 662.225
+texture = ExtResource("7_atplo")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 13.0
+offset_top = 665.0
+offset_right = 477.33
+offset_bottom = 833.225
+texture = ExtResource("8_ikpro")
+expand_mode = 1
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 206.0
+offset_top = 202.0
+offset_right = 2406.0
+offset_bottom = 5158.0
+scale = Vector2(0.12, 0.12)
+theme_override_constants/separation = 980
+alignment = 1
+
+[node name="TextureRect4" type="TextureRect" parent="VBox"]
+layout_mode = 2
+texture = ExtResource("8_qvace")
+stretch_mode = 6
+
+[node name="TextureRect8" type="TextureRect" parent="VBox"]
+layout_mode = 2
+texture = ExtResource("8_qvace")
+stretch_mode = 6
+
+[node name="TextureRect5" type="TextureRect" parent="VBox"]
+layout_mode = 2
+texture = ExtResource("8_qvace")
+stretch_mode = 6
+
+[node name="TextureRect6" type="TextureRect" parent="VBox"]
+layout_mode = 2
+texture = ExtResource("8_qvace")
+stretch_mode = 6
+
+[node name="VBox2" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 172.0
+offset_right = 1160.0
+offset_bottom = 5864.0
+scale = Vector2(0.115, 0.115)
+theme_override_constants/separation = 840
+alignment = 1
+
+[node name="TextureRect4" type="TextureRect" parent="VBox2"]
+layout_mode = 2
+texture = ExtResource("9_jvu0q")
+stretch_mode = 6
+
+[node name="TextureRect5" type="TextureRect" parent="VBox2"]
+layout_mode = 2
+texture = ExtResource("10_dk88q")
+stretch_mode = 6
+
+[node name="TextureRect6" type="TextureRect" parent="VBox2"]
+layout_mode = 2
+texture = ExtResource("11_5a7no")
+stretch_mode = 6
+
+[node name="TextureRect7" type="TextureRect" parent="VBox2"]
+layout_mode = 2
+texture = ExtResource("12_wiv27")
+stretch_mode = 6
+
+[node name="VBox3" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 291.0
+offset_top = 172.0
+offset_right = 1722.0
+offset_bottom = 5864.0
+scale = Vector2(0.115, 0.115)
+theme_override_constants/separation = 1140
+alignment = 1
+
+[node name="Label" type="Label" parent="VBox3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 330
+text = "персонаж"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Label2" type="Label" parent="VBox3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 330
+text = "герои"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Label3" type="Label" parent="VBox3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 330
+text = "крафты"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Label4" type="Label" parent="VBox3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 330
+text = "инвентарь"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="ChatGui" parent="." instance=ExtResource("4_ysw4l")]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 266.0
-offset_top = 626.0
-offset_right = 506.0
-offset_bottom = 1029.0
-grow_horizontal = 2
-mouse_filter = 2
-
-[node name="Label" type="Label" parent="ScrollContainer/PlayerInfo/InformationText"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 18
-text = "Damage: 125
-Vitality: 378
-Strength: 12
-Agility: 35
-Intelligence: 1
-Speed: 50
-Physical Resistance: 70
-Magical Resistance: 85
-Critical hit chance: 20%
-Evasion: 15%
-True Damage: 40%
-Accuracy: 80%
-Spirit: 1"
-autowrap_mode = 3
-
-[node name="VBoxContainer" type="HBoxContainer" parent="ScrollContainer/PlayerInfo"]
-layout_mode = 0
-offset_left = 353.0
-offset_top = 321.0
-offset_right = 560.0
-offset_bottom = 361.0
-mouse_filter = 2
-theme_override_constants/separation = 105
-
-[node name="lvl" type="Label" parent="ScrollContainer/PlayerInfo/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 21
-text = "lvl 31"
-
-[node name="pvp" type="Label" parent="ScrollContainer/PlayerInfo/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 21
-text = "13 982"
-
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/PlayerInfo/VBoxContainer/pvp"]
-layout_mode = 2
-offset_left = -26.0
-offset_top = 3.0
-offset_bottom = 27.0
-mouse_filter = 2
-texture = ExtResource("9_2fdt2")
-expand_mode = 1
-
-[node name="VBoxContainer2" type="HBoxContainer" parent="ScrollContainer/PlayerInfo"]
-layout_mode = 0
-offset_left = 393.0
-offset_top = 363.0
-offset_right = 501.0
-offset_bottom = 380.0
-mouse_filter = 2
-
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/PlayerInfo/VBoxContainer2"]
-layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("10_5il1k")
-
-[node name="TextureRect2" type="TextureRect" parent="ScrollContainer/PlayerInfo/VBoxContainer2"]
-layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("10_5il1k")
-
-[node name="TextureRect3" type="TextureRect" parent="ScrollContainer/PlayerInfo/VBoxContainer2"]
-layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("10_5il1k")
-
-[node name="TextureRect4" type="TextureRect" parent="ScrollContainer/PlayerInfo/VBoxContainer2"]
-layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("11_w6t47")
-
-[node name="TextureRect5" type="TextureRect" parent="ScrollContainer/PlayerInfo/VBoxContainer2"]
-layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("11_w6t47")
-
-[node name="Abilites" type="HBoxContainer" parent="ScrollContainer/PlayerInfo"]
-layout_mode = 0
-offset_left = 289.0
-offset_top = 514.0
-offset_right = 620.0
-offset_bottom = 583.0
-scale = Vector2(0.25, 0.25)
-mouse_filter = 2
-theme_override_constants/separation = 17
-
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/PlayerInfo/Abilites"]
-layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("7_nsrmq")
-
-[node name="TextureRect2" type="TextureRect" parent="ScrollContainer/PlayerInfo/Abilites"]
-layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("7_nsrmq")
-
-[node name="TextureRect3" type="TextureRect" parent="ScrollContainer/PlayerInfo/Abilites"]
-layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("7_nsrmq")
-
-[node name="TextureRect4" type="TextureRect" parent="ScrollContainer/PlayerInfo/Abilites"]
-layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("7_nsrmq")
-
-[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/PlayerInfo"]
-layout_mode = 0
-offset_left = 399.0
-offset_top = 467.0
-offset_right = 489.0
-offset_bottom = 507.0
-mouse_filter = 2
-
-[node name="Label" type="Label" parent="ScrollContainer/PlayerInfo/MarginContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 24
-text = "Abilities"
-
-[node name="TavernProfileUI" type="Control" parent="ScrollContainer"]
-layout_mode = 2
-mouse_filter = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="IconFrameContainer" type="MarginContainer" parent="ScrollContainer/TavernProfileUI"]
-layout_mode = 0
-offset_left = 313.0
-offset_top = 49.0
-offset_right = 595.0
-offset_bottom = 443.0
-mouse_filter = 2
-
-[node name="IconFrame" type="TextureRect" parent="ScrollContainer/TavernProfileUI/IconFrameContainer"]
-layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("3_jynqc")
-expand_mode = 1
-
-[node name="PlayerProfileIcon" type="MarginContainer" parent="ScrollContainer/TavernProfileUI"]
-layout_mode = 0
-offset_left = 413.0
-offset_top = 121.0
-offset_right = 551.0
-offset_bottom = 252.0
-mouse_filter = 2
-
-[node name="Label" type="Label" parent="ScrollContainer/TavernProfileUI/PlayerProfileIcon"]
-layout_mode = 2
-text = "ICON PLACE"
-
-[node name="FrameContainer" type="MarginContainer" parent="ScrollContainer/TavernProfileUI"]
-layout_mode = 0
-offset_left = 362.0
-offset_top = 75.0
-offset_right = 544.0
-offset_bottom = 258.0
-mouse_filter = 2
-
-[node name="Frame" type="TextureRect" parent="ScrollContainer/TavernProfileUI/FrameContainer"]
-layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("4_etbxp")
-expand_mode = 1
-
-[node name="UsernameBackGroundContainer" type="MarginContainer" parent="ScrollContainer/TavernProfileUI"]
-layout_mode = 0
-offset_left = 335.0
-offset_top = 263.0
-offset_right = 577.0
-offset_bottom = 319.0
-mouse_filter = 2
-
-[node name="UsernameBackGround" type="TextureRect" parent="ScrollContainer/TavernProfileUI/UsernameBackGroundContainer"]
-layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("5_5p47d")
-expand_mode = 1
-
-[node name="UsernameContainer" type="MarginContainer" parent="ScrollContainer/TavernProfileUI"]
-layout_mode = 0
-offset_left = 366.0
-offset_top = 272.0
-offset_right = 534.0
-offset_bottom = 312.0
-mouse_filter = 2
-
-[node name="Username" type="Label" parent="ScrollContainer/TavernProfileUI/UsernameContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 20
-text = "PLAYER NAME"
-
-[node name="Line" type="MarginContainer" parent="ScrollContainer/TavernProfileUI"]
-layout_mode = 0
-offset_left = 227.0
-offset_top = 459.0
-offset_right = 702.0
-offset_bottom = 462.0
-mouse_filter = 2
-
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/TavernProfileUI/Line"]
-layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("8_b0sav")
-expand_mode = 1
-
-[node name="Control" type="Control" parent="ScrollContainer/TavernProfileUI"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = 461.0
-offset_top = 451.0
-offset_right = 466.0
-offset_bottom = 498.0
-grow_horizontal = 2
-mouse_filter = 2
-
-[node name="BackButtonContainer" type="MarginContainer" parent="ScrollContainer/TavernProfileUI/Control"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = -251.0
-offset_top = -444.0
-offset_right = -188.0
-offset_bottom = -389.0
-grow_horizontal = 2
-
-[node name="BackButton" type="TextureButton" parent="ScrollContainer/TavernProfileUI/Control/BackButtonContainer"]
-layout_mode = 2
-texture_normal = ExtResource("6_2ujnu")
-texture_pressed = ExtResource("6_2ujnu")
-texture_hover = ExtResource("6_2ujnu")
-texture_focused = ExtResource("6_2ujnu")
-ignore_texture_size = true
-stretch_mode = 0
-
-[connection signal="pressed" from="ScrollContainer/TavernProfileUI/Control/BackButtonContainer/BackButton" to="." method="_on_back_button_pressed"]
+offset_top = 21.0
+offset_bottom = 21.0

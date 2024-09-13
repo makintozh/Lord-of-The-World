@@ -4,6 +4,29 @@ extends Control
 
 @onready var back_dialogue = $BackDialogue
 @onready var transparent_back = $TransparentBack
+@onready var navigation_menu = $"."
+
+
+
+
+
+
+
+
+func _process(_delta: float) -> void:
+	adaptive_keyboard()
+
+
+
+
+
+func adaptive_keyboard():
+	if OS.get_name() == "Android" or OS.get_name() == "iOS":
+		var height = DisplayServer.virtual_keyboard_get_height()
+		navigation_menu.position.y = -height/2.5
+
+
+
 
 
 

@@ -1,13 +1,13 @@
 extends Control
 
 
-@onready var username = $ScrollContainer/TavernProfileUI/UsernameContainer/Username
-
 
 
 
 func _ready():
-	username.text = GLOBAL.player_character_name
+	$PlayerGui.navigation.visible = false
+	$PlayerGui.actions.visible = false
+	$ChatGui._on_hide_chat_pressed()
 
 
 

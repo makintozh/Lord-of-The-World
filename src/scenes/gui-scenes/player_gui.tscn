@@ -1,17 +1,13 @@
-[gd_scene load_steps=27 format=3 uid="uid://ccq03g2w30olb"]
+[gd_scene load_steps=30 format=3 uid="uid://ccq03g2w30olb"]
 
 [ext_resource type="Script" path="res://src/scripts/gui-scripts/player_gui.gd" id="1_8c46b"]
 [ext_resource type="Texture2D" uid="uid://bc18jg3djtr2y" path="res://src/ui/new-ui/buttons/Настройки.png" id="2_rg8x1"]
 [ext_resource type="Texture2D" uid="uid://dqqfcxyclbynf" path="res://src/ui/new-ui/misc/Подложка кнопки.png" id="3_ji7mk"]
 [ext_resource type="Texture2D" uid="uid://l13a2ybwrhps" path="res://src/ui/new-ui/buttons/Новости.png" id="4_f1a3u"]
 [ext_resource type="PackedScene" uid="uid://xgqgl081paug" path="res://src/scenes/gui-scenes/settings_gui.tscn" id="4_i71wt"]
-[ext_resource type="Texture2D" uid="uid://b7633u778yuwt" path="res://src/ui/new-ui/misc/Подложка профиля игрока вар. 1.png" id="4_w0wx8"]
 [ext_resource type="Texture2D" uid="uid://cr3srbfy2nedy" path="res://src/ui/new-ui/misc/Рамка 1.png" id="5_s8ln3"]
 [ext_resource type="Texture2D" uid="uid://bwmkf18tw2gvk" path="res://src/ui/new-ui/misc/Строка ресурсов.png" id="6_eeg00"]
 [ext_resource type="Texture2D" uid="uid://24nnr84qh3pf" path="res://src/ui/new-ui/resources/Монеты.png" id="7_f0rq7"]
-[ext_resource type="Texture2D" uid="uid://c5ws7he3ft5ma" path="res://src/ui/new-ui/resources/Алмазы.png" id="8_8iypk"]
-[ext_resource type="Texture2D" uid="uid://ch3e3kkgwcby4" path="res://src/ui/new-ui/resources/Артефакты.png" id="9_4bcp5"]
-[ext_resource type="Texture2D" uid="uid://cqrj1mo0mle5g" path="res://src/ui/new-ui/resources/Пустоты.png" id="10_g8eol"]
 [ext_resource type="Texture2D" uid="uid://dap8si7e4y1t8" path="res://src/ui/new-ui/misc/Открытая Подложка функционального меню.png" id="12_elerv"]
 [ext_resource type="Texture2D" uid="uid://c6xgm0blv6wxn" path="res://src/ui/new-ui/buttons/Достижения.png" id="13_43iue"]
 [ext_resource type="Texture2D" uid="uid://q20xxea08od" path="res://src/ui/new-ui/buttons/Гайды 1.png" id="14_q3d8g"]
@@ -20,12 +16,29 @@
 [ext_resource type="Texture2D" uid="uid://cjpbikhstg0qw" path="res://src/ui/new-ui/misc/Подложка функционального меню.png" id="17_c5xbl"]
 [ext_resource type="Texture2D" uid="uid://dpe6653raufji" path="res://src/ui/new-ui/misc/Фон меню.png" id="18_a6nnk"]
 [ext_resource type="Texture2D" uid="uid://bvhddmk3nmvab" path="res://src/ui/new-ui/misc/Бегунок выбора главного меню.png" id="19_kj4bj"]
+[ext_resource type="Texture2D" uid="uid://cgra5d65veo57" path="res://src/ui/new-ui/misc/Подложка верхнего меню.png" id="20_disfm"]
 [ext_resource type="Texture2D" uid="uid://dbpn004u3d2x1" path="res://src/ui/new-ui/misc/Разделитель-1.png" id="20_rl2in"]
 [ext_resource type="Texture2D" uid="uid://h74metbu6s76" path="res://src/ui/new-ui/buttons/Таверна 1.png" id="21_yte5r"]
 [ext_resource type="Texture2D" uid="uid://lbswrabkcy58" path="res://src/ui/new-ui/buttons/Задания.png" id="22_gtcl1"]
 [ext_resource type="Texture2D" uid="uid://coelnpggiwffl" path="res://src/ui/new-ui/buttons/Город.png" id="23_q43ja"]
 [ext_resource type="Texture2D" uid="uid://broaeh18box4" path="res://src/ui/new-ui/buttons/Магазин.png" id="24_tfmuc"]
 [ext_resource type="Texture2D" uid="uid://cr6mlcftdyktq" path="res://src/ui/new-ui/buttons/Почта.png" id="25_0uvqi"]
+[ext_resource type="Texture2D" uid="uid://bflyy5du817gj" path="res://src/ui/new-ui/resources/Энергия 1.png" id="26_1an70"]
+[ext_resource type="Texture2D" uid="uid://b8x7icmp2n0fe" path="res://src/ui/new-ui/misc/Подложка под ник и абревиатуру клана.png" id="26_tpanq"]
+[ext_resource type="Texture2D" uid="uid://bji7f5c21h22h" path="res://src/ui/new-ui/buttons/Rectangle 121.png" id="27_5o5d3"]
+[ext_resource type="Texture2D" uid="uid://ct0gyfo6qs2ni" path="res://src/ui/new-ui/misc/Подложка под уровень.png" id="27_d6kpl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p054s"]
+texture = ExtResource("26_tpanq")
+texture_margin_left = 40.0
+texture_margin_top = 30.0
+texture_margin_bottom = 30.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vt343"]
+texture = ExtResource("27_d6kpl")
+texture_margin_left = 40.0
+texture_margin_top = 30.0
+texture_margin_bottom = 30.0
 
 [node name="PlayerGui" type="Control"]
 layout_mode = 3
@@ -37,18 +50,25 @@ grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_8c46b")
 
-[node name="SettingsButton" type="MarginContainer" parent="."]
+[node name="Actions" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 2.0
+offset_top = 117.0
+offset_right = 40.0
+offset_bottom = 151.0
+
+[node name="SettingsButton" type="MarginContainer" parent="Actions"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -92.0
+offset_left = 368.0
 offset_top = 26.0
-offset_right = -19.29
-offset_bottom = 92.665
+offset_right = 434.06
+offset_bottom = 74.925
 grow_horizontal = 0
 
-[node name="Settings" type="TextureButton" parent="SettingsButton"]
+[node name="Settings" type="TextureButton" parent="Actions/SettingsButton"]
 layout_mode = 2
 action_mode = 0
 texture_normal = ExtResource("2_rg8x1")
@@ -59,21 +79,21 @@ texture_focused = ExtResource("2_rg8x1")
 ignore_texture_size = true
 stretch_mode = 6
 
-[node name="Background" type="TextureRect" parent="SettingsButton/Settings"]
+[node name="Background" type="TextureRect" parent="Actions/SettingsButton/Settings"]
 layout_mode = 0
 offset_left = -3.0
-offset_top = 57.0
+offset_top = 37.0
 offset_right = 75.0
-offset_bottom = 81.0
+offset_bottom = 61.0
 texture = ExtResource("3_ji7mk")
 expand_mode = 1
 
-[node name="SettingsLabel" type="Label" parent="SettingsButton/Settings"]
+[node name="SettingsLabel" type="Label" parent="Actions/SettingsButton/Settings"]
 layout_mode = 0
 offset_left = 6.0
-offset_top = 58.0
+offset_top = 38.0
 offset_right = 69.0
-offset_bottom = 78.0
+offset_bottom = 58.0
 theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
 theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
 theme_override_constants/outline_size = 2
@@ -82,18 +102,18 @@ text = "настройки"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="NewsButton" type="MarginContainer" parent="."]
+[node name="NewsButton" type="MarginContainer" parent="Actions"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -92.0
-offset_top = 119.145
-offset_right = -19.29
-offset_bottom = 185.81
+offset_left = 368.0
+offset_top = 102.0
+offset_right = 434.06
+offset_bottom = 150.925
 grow_horizontal = 0
 
-[node name="News" type="TextureButton" parent="NewsButton"]
+[node name="News" type="TextureButton" parent="Actions/NewsButton"]
 layout_mode = 2
 action_mode = 0
 texture_normal = ExtResource("4_f1a3u")
@@ -104,21 +124,21 @@ texture_focused = ExtResource("4_f1a3u")
 ignore_texture_size = true
 stretch_mode = 6
 
-[node name="Background" type="TextureRect" parent="NewsButton/News"]
+[node name="Background" type="TextureRect" parent="Actions/NewsButton/News"]
 layout_mode = 0
-offset_left = -5.0
-offset_top = 55.855
-offset_right = 73.0
-offset_bottom = 79.855
+offset_left = -3.0
+offset_top = 38.855
+offset_right = 75.0
+offset_bottom = 62.855
 texture = ExtResource("3_ji7mk")
 expand_mode = 1
 
-[node name="NewsLabel" type="Label" parent="NewsButton/News"]
+[node name="NewsLabel" type="Label" parent="Actions/NewsButton/News"]
 layout_mode = 0
-offset_left = 4.0
-offset_top = 56.855
-offset_right = 67.0
-offset_bottom = 76.855
+offset_left = 6.0
+offset_top = 39.855
+offset_right = 69.0
+offset_bottom = 59.855
 theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
 theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
 theme_override_constants/outline_size = 2
@@ -127,199 +147,15 @@ text = "новости"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PlayerInfoBackground" type="MarginContainer" parent="."]
-layout_mode = 1
-offset_left = 19.0
-offset_top = 42.0
-offset_right = 157.0
-offset_bottom = 284.0
-
-[node name="TextureRect" type="TextureRect" parent="PlayerInfoBackground"]
-layout_mode = 2
-texture = ExtResource("4_w0wx8")
-expand_mode = 1
-
-[node name="Frame" type="MarginContainer" parent="."]
-layout_mode = 1
-offset_left = 35.0
-offset_top = 47.0
-offset_right = 141.0
-offset_bottom = 158.0
-
-[node name="TextureRect" type="TextureRect" parent="Frame"]
-layout_mode = 2
-texture = ExtResource("5_s8ln3")
-expand_mode = 1
-stretch_mode = 6
-
-[node name="PlayerInfo" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_left = 49.0
-offset_top = 168.0
-offset_right = 128.0
-offset_bottom = 242.0
-
-[node name="VBox" type="VBoxContainer" parent="PlayerInfo"]
-layout_mode = 2
-theme_override_constants/separation = 7
-
-[node name="NickName" type="Label" parent="PlayerInfo/VBox"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
-theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
-theme_override_constants/outline_size = 2
-theme_override_font_sizes/font_size = 16
-text = "NickName"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Clan" type="Label" parent="PlayerInfo/VBox"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
-theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
-theme_override_constants/outline_size = 2
-theme_override_font_sizes/font_size = 16
-text = "клан"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Level" type="Label" parent="PlayerInfo/VBox"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
-theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
-theme_override_constants/outline_size = 2
-theme_override_font_sizes/font_size = 16
-text = "уровень"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="PlayerResourcesFrames" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_left = 169.0
-offset_top = 40.0
-offset_right = 1121.0
-offset_bottom = 1044.0
-scale = Vector2(0.13, 0.13)
-
-[node name="VBox" type="VBoxContainer" parent="PlayerResourcesFrames"]
-layout_mode = 2
-
-[node name="ResourceFrame" type="TextureRect" parent="PlayerResourcesFrames/VBox"]
-layout_mode = 2
-texture = ExtResource("6_eeg00")
-stretch_mode = 6
-
-[node name="ResourceFrame2" type="TextureRect" parent="PlayerResourcesFrames/VBox"]
-layout_mode = 2
-texture = ExtResource("6_eeg00")
-stretch_mode = 6
-
-[node name="ResourceFrame3" type="TextureRect" parent="PlayerResourcesFrames/VBox"]
-layout_mode = 2
-texture = ExtResource("6_eeg00")
-stretch_mode = 6
-
-[node name="ResourceFrame4" type="TextureRect" parent="PlayerResourcesFrames/VBox"]
-layout_mode = 2
-texture = ExtResource("6_eeg00")
-stretch_mode = 6
-
-[node name="PlayerResourcesIcons" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_left = 157.0
-offset_top = 36.0
-offset_right = 485.0
-offset_bottom = 1742.0
-scale = Vector2(0.12, 0.12)
-
-[node name="VBox" type="VBoxContainer" parent="PlayerResourcesIcons"]
-layout_mode = 2
-theme_override_constants/separation = -32
-
-[node name="Coins" type="TextureRect" parent="PlayerResourcesIcons/VBox"]
-layout_mode = 2
-texture = ExtResource("7_f0rq7")
-stretch_mode = 6
-
-[node name="Gems" type="TextureRect" parent="PlayerResourcesIcons/VBox"]
-layout_mode = 2
-texture = ExtResource("8_8iypk")
-stretch_mode = 6
-
-[node name="Artefacts" type="TextureRect" parent="PlayerResourcesIcons/VBox"]
-layout_mode = 2
-texture = ExtResource("9_4bcp5")
-stretch_mode = 6
-
-[node name="Voids" type="TextureRect" parent="PlayerResourcesIcons/VBox"]
-layout_mode = 2
-texture = ExtResource("10_g8eol")
-stretch_mode = 6
-
-[node name="PlayerResourcesInfo" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_left = 199.0
-offset_top = 47.0
-offset_right = 278.0
-offset_bottom = 168.0
-
-[node name="VBox" type="VBoxContainer" parent="PlayerResourcesInfo"]
-layout_mode = 2
-theme_override_constants/separation = 19
-alignment = 1
-
-[node name="Coins" type="Label" parent="PlayerResourcesInfo/VBox"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
-theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
-theme_override_constants/outline_size = 2
-theme_override_font_sizes/font_size = 12
-text = "0"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Gems" type="Label" parent="PlayerResourcesInfo/VBox"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
-theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
-theme_override_constants/outline_size = 2
-theme_override_font_sizes/font_size = 12
-text = "0"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Artefacts" type="Label" parent="PlayerResourcesInfo/VBox"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
-theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
-theme_override_constants/outline_size = 2
-theme_override_font_sizes/font_size = 12
-text = "0"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Voids" type="Label" parent="PlayerResourcesInfo/VBox"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
-theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
-theme_override_constants/outline_size = 2
-theme_override_font_sizes/font_size = 12
-text = "0"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Navigation" type="Control" parent="."]
 layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = -2.0
-offset_top = -478.5
-offset_right = 38.0
-offset_bottom = -438.5
-grow_vertical = 2
+anchors_preset = 0
+offset_top = 20.0
+offset_right = 40.0
+offset_bottom = 60.0
 
 [node name="NavigationOpened" type="MarginContainer" parent="Navigation"]
+visible = false
 layout_mode = 0
 offset_top = 728.0
 offset_right = 226.0
@@ -338,10 +174,10 @@ stretch_mode = 0
 
 [node name="Achievments" type="TextureButton" parent="Navigation/NavigationOpened/NavigationOpened"]
 layout_mode = 0
-offset_left = 37.185
-offset_top = 7.94
-offset_right = 97.185
-offset_bottom = 62.94
+offset_left = 133.0
+offset_top = 10.0
+offset_right = 193.0
+offset_bottom = 65.0
 action_mode = 0
 texture_normal = ExtResource("13_43iue")
 texture_pressed = ExtResource("13_43iue")
@@ -353,10 +189,10 @@ stretch_mode = 6
 
 [node name="AchievmentsLabel" type="Label" parent="Navigation/NavigationOpened/NavigationOpened/Achievments"]
 layout_mode = 0
-offset_left = -10.0
-offset_top = 40.0
-offset_right = 64.0
-offset_bottom = 60.0
+offset_left = -7.0
+offset_top = 35.0
+offset_right = 67.0
+offset_bottom = 55.0
 theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
 theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
 theme_override_constants/outline_size = 2
@@ -367,10 +203,10 @@ vertical_alignment = 1
 
 [node name="Guides" type="TextureButton" parent="Navigation/NavigationOpened/NavigationOpened"]
 layout_mode = 0
-offset_left = 135.185
-offset_top = 6.94
-offset_right = 190.185
-offset_bottom = 59.94
+offset_left = 135.0
+offset_top = 70.0
+offset_right = 190.0
+offset_bottom = 123.0
 action_mode = 0
 texture_normal = ExtResource("14_q3d8g")
 texture_pressed = ExtResource("14_q3d8g")
@@ -396,10 +232,10 @@ vertical_alignment = 1
 
 [node name="Hide" type="TextureButton" parent="Navigation/NavigationOpened/NavigationOpened"]
 layout_mode = 0
-offset_left = 26.185
-offset_top = 63.94
-offset_right = 101.185
-offset_bottom = 133.94
+offset_left = 21.0
+offset_top = 60.0
+offset_right = 107.0
+offset_bottom = 137.0
 action_mode = 0
 texture_normal = ExtResource("15_8sgbs")
 texture_pressed = ExtResource("15_8sgbs")
@@ -411,14 +247,43 @@ stretch_mode = 6
 
 [node name="HideLabel" type="Label" parent="Navigation/NavigationOpened/NavigationOpened/Hide"]
 layout_mode = 0
-offset_top = 41.0
-offset_right = 74.0
-offset_bottom = 61.0
+offset_left = 8.0
+offset_top = 48.0
+offset_right = 82.0
+offset_bottom = 68.0
 theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
 theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
 theme_override_constants/outline_size = 2
 theme_override_font_sizes/font_size = 13
 text = "свернуть"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Mail" type="TextureButton" parent="Navigation/NavigationOpened/NavigationOpened"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 7.0
+offset_right = 93.0
+offset_bottom = 62.0
+texture_normal = ExtResource("25_0uvqi")
+texture_pressed = ExtResource("25_0uvqi")
+texture_hover = ExtResource("25_0uvqi")
+texture_disabled = ExtResource("25_0uvqi")
+texture_focused = ExtResource("25_0uvqi")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Mail" type="Label" parent="Navigation/NavigationOpened/NavigationOpened/Mail"]
+layout_mode = 0
+offset_left = -13.0
+offset_top = 39.0
+offset_right = 61.0
+offset_bottom = 59.0
+theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 13
+text = "почта"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -436,14 +301,15 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="NavigationClosed" type="MarginContainer" parent="Navigation"]
-visible = false
+z_index = 65
 layout_mode = 0
-offset_left = 12.185
-offset_top = 774.94
-offset_right = 95.185
-offset_bottom = 849.94
+offset_left = 12.0
+offset_top = 782.0
+offset_right = 81.0
+offset_bottom = 842.0
 
 [node name="NavigationClosed" type="TextureButton" parent="Navigation/NavigationClosed"]
+z_index = 1
 layout_mode = 2
 action_mode = 0
 texture_normal = ExtResource("16_vlrqu")
@@ -455,19 +321,22 @@ ignore_texture_size = true
 stretch_mode = 6
 
 [node name="Background" type="TextureRect" parent="Navigation/NavigationClosed/NavigationClosed"]
+z_index = -1
 layout_mode = 0
-offset_left = -13.0
-offset_right = 109.0
-offset_bottom = 93.0
+offset_left = -24.0
+offset_top = -11.0
+offset_right = 98.0
+offset_bottom = 82.0
 texture = ExtResource("17_c5xbl")
 expand_mode = 1
 
 [node name="NavigationClosedLabel" type="Label" parent="Navigation/NavigationClosed/NavigationClosed"]
+z_index = 2
 layout_mode = 0
 offset_left = 10.0
-offset_top = 64.0
+offset_top = 48.0
 offset_right = 74.0
-offset_bottom = 84.0
+offset_bottom = 68.0
 theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
 theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
 theme_override_constants/outline_size = 2
@@ -477,18 +346,18 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Home" type="Control" parent="."]
+top_level = true
+z_index = 1515
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -239.93
-offset_top = -938.4
-offset_right = -196.645
-offset_bottom = -933.375
+offset_left = 5.0
+offset_top = -931.0
+offset_right = 5.0
+offset_bottom = -931.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 
 [node name="Home" type="MarginContainer" parent="Home"]
 layout_mode = 1
@@ -509,16 +378,6 @@ texture = ExtResource("18_a6nnk")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="Main" type="TextureRect" parent="Home/Home/Home"]
-layout_mode = 2
-offset_left = 190.755
-offset_top = -11.625
-offset_right = 288.755
-offset_bottom = 82.375
-texture = ExtResource("19_kj4bj")
-expand_mode = 1
-stretch_mode = 6
-
 [node name="Separator" type="TextureRect" parent="Home/Home/Home"]
 layout_mode = 2
 offset_left = 87.0
@@ -536,6 +395,16 @@ offset_top = 21.375
 offset_right = 395.755
 offset_bottom = 57.375
 texture = ExtResource("20_rl2in")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Main" type="TextureRect" parent="Home/Home/Home"]
+layout_mode = 2
+offset_left = 191.0
+offset_top = -12.0
+offset_right = 292.0
+offset_bottom = 82.0
+texture = ExtResource("19_kj4bj")
 expand_mode = 1
 stretch_mode = 6
 
@@ -684,12 +553,25 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="CityHitBox" type="MarginContainer" parent="Home"]
+layout_mode = 0
+offset_left = 186.0
+offset_top = 1829.0
+offset_right = 273.0
+offset_bottom = 1904.0
+
+[node name="CityHitBox" type="TextureButton" parent="Home/CityHitBox"]
+layout_mode = 2
+action_mode = 0
+ignore_texture_size = true
+stretch_mode = 0
+
 [node name="TavernHitBox" type="MarginContainer" parent="Home"]
 layout_mode = 0
-offset_left = 0.755005
-offset_top = 865.4
-offset_right = 100.755
-offset_bottom = 940.4
+offset_left = -7.0
+offset_top = 1831.0
+offset_right = 80.0
+offset_bottom = 1906.0
 
 [node name="TavernHitBox" type="TextureButton" parent="Home/TavernHitBox"]
 layout_mode = 2
@@ -701,7 +583,215 @@ stretch_mode = 0
 visible = false
 layout_mode = 1
 
-[connection signal="pressed" from="SettingsButton/Settings" to="." method="_on_settings_button_pressed"]
+[node name="PlayerInformation" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -3.0
+offset_right = -459.0
+offset_bottom = 38.0
+grow_horizontal = 2
+
+[node name="Background" type="MarginContainer" parent="PlayerInformation"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 461.0
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="PlayerInformation/Background"]
+layout_mode = 2
+texture = ExtResource("20_disfm")
+expand_mode = 1
+
+[node name="PlayerName" type="MarginContainer" parent="PlayerInformation"]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 52.0
+offset_right = 1170.0
+offset_bottom = 212.0
+scale = Vector2(0.13, 0.13)
+
+[node name="Names" type="RichTextLabel" parent="PlayerInformation/PlayerName"]
+layout_mode = 2
+theme_override_colors/default_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_font_sizes/normal_font_size = 110
+theme_override_styles/fill = SubResource("StyleBoxTexture_p054s")
+theme_override_styles/background = SubResource("StyleBoxTexture_p054s")
+theme_override_styles/focus = SubResource("StyleBoxTexture_p054s")
+theme_override_styles/normal = SubResource("StyleBoxTexture_p054s")
+bbcode_enabled = true
+text = "Имя игрока 16с [клан]"
+fit_content = true
+
+[node name="PlayerLevel" type="MarginContainer" parent="PlayerInformation"]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 81.0
+offset_right = 562.0
+offset_bottom = 272.0
+scale = Vector2(0.13, 0.13)
+
+[node name="Level" type="RichTextLabel" parent="PlayerInformation/PlayerLevel"]
+layout_mode = 2
+theme_override_colors/default_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_font_sizes/normal_font_size = 110
+theme_override_styles/fill = SubResource("StyleBoxTexture_vt343")
+theme_override_styles/background = SubResource("StyleBoxTexture_vt343")
+theme_override_styles/focus = SubResource("StyleBoxTexture_vt343")
+theme_override_styles/normal = SubResource("StyleBoxTexture_vt343")
+bbcode_enabled = true
+text = "Уровень"
+fit_content = true
+
+[node name="ColorRect" type="ColorRect" parent="PlayerInformation"]
+layout_mode = 2
+offset_left = 32.0
+offset_top = 49.0
+offset_right = 113.0
+offset_bottom = 130.0
+
+[node name="Label" type="Label" parent="PlayerInformation/ColorRect"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 19.0
+offset_right = 73.0
+offset_bottom = 62.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "ICON"
+
+[node name="Frame" type="MarginContainer" parent="PlayerInformation"]
+layout_mode = 1
+offset_left = 19.0
+offset_top = 35.0
+offset_right = 130.0
+offset_bottom = 146.0
+
+[node name="Frame" type="TextureRect" parent="PlayerInformation/Frame"]
+layout_mode = 2
+texture = ExtResource("5_s8ln3")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="PlayerResources" type="Control" parent="PlayerInformation"]
+anchors_preset = 0
+offset_left = 308.0
+offset_top = 42.0
+offset_right = 366.0
+offset_bottom = 86.0
+
+[node name="Background" type="TextureRect" parent="PlayerInformation/PlayerResources"]
+layout_mode = 0
+offset_right = 183.0
+offset_bottom = 66.0
+texture = ExtResource("26_tpanq")
+expand_mode = 1
+
+[node name="HBox" type="HBoxContainer" parent="PlayerInformation/PlayerResources"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = 12.0
+offset_right = 333.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.42, 0.42)
+alignment = 1
+
+[node name="Coins" type="TextureRect" parent="PlayerInformation/PlayerResources/HBox"]
+layout_mode = 2
+texture = ExtResource("6_eeg00")
+
+[node name="RES1" type="RichTextLabel" parent="PlayerInformation/PlayerResources/HBox/Coins"]
+layout_mode = 0
+offset_left = 95.2381
+offset_top = 11.9048
+offset_right = 110.238
+offset_bottom = 47.9048
+theme_override_colors/default_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "0"
+fit_content = true
+
+[node name="Energy" type="TextureRect" parent="PlayerInformation/PlayerResources/HBox"]
+layout_mode = 2
+texture = ExtResource("6_eeg00")
+
+[node name="RES1" type="RichTextLabel" parent="PlayerInformation/PlayerResources/HBox/Energy"]
+layout_mode = 0
+offset_left = 95.2381
+offset_top = 11.9048
+offset_right = 110.238
+offset_bottom = 47.9048
+theme_override_colors/default_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "0"
+fit_content = true
+
+[node name="CoinsIcon" type="TextureRect" parent="PlayerInformation/PlayerResources"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 15.0
+offset_right = 31.0
+offset_bottom = 33.0
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("7_f0rq7")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="EnergyIcon" type="TextureRect" parent="PlayerInformation/PlayerResources"]
+layout_mode = 2
+offset_left = 91.0
+offset_top = 16.0
+offset_right = 91.0
+offset_bottom = 39.0
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("26_1an70")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="ShowAll" type="TextureButton" parent="PlayerInformation/PlayerResources"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 37.0
+offset_right = 184.0
+offset_bottom = 70.0
+texture_normal = ExtResource("27_5o5d3")
+texture_pressed = ExtResource("27_5o5d3")
+texture_hover = ExtResource("27_5o5d3")
+texture_disabled = ExtResource("27_5o5d3")
+texture_focused = ExtResource("27_5o5d3")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ShowAllLabel" type="RichTextLabel" parent="PlayerInformation/PlayerResources/ShowAll"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 7.0
+offset_right = 139.0
+offset_bottom = 25.0
+theme_override_colors/default_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_font_sizes/normal_font_size = 15
+bbcode_enabled = true
+text = "ПОКАЗАТЬ ВСЕ"
+fit_content = true
+
+[connection signal="pressed" from="Actions/SettingsButton/Settings" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="Navigation/NavigationCloseHitBox/NavigationCloseHitBox" to="." method="_on_navigation_close_hit_box_pressed"]
 [connection signal="pressed" from="Navigation/NavigationClosed/NavigationClosed" to="." method="_on_navigation_closed_pressed"]
+[connection signal="pressed" from="Home/CityHitBox/CityHitBox" to="." method="_on_city_hit_box_pressed"]
 [connection signal="pressed" from="Home/TavernHitBox/TavernHitBox" to="." method="_on_tavern_hit_box_pressed"]

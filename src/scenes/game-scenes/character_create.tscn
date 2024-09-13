@@ -173,10 +173,21 @@ offset_top = 123.0
 offset_right = 277.0
 offset_bottom = 163.0
 
-[node name="Label" type="Label" parent="MainUI/Characters/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 31
-text = "ICONS PLACE"
+[node name="ColorRect" type="ColorRect" parent="MainUI/Characters"]
+offset_left = 191.0
+offset_top = 107.0
+offset_right = 272.0
+offset_bottom = 188.0
+
+[node name="Label" type="Label" parent="MainUI/Characters/ColorRect"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 19.0
+offset_right = 72.0
+offset_bottom = 62.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "ICON"
 
 [node name="ArchetypeGraph" type="Control" parent="MainUI"]
 layout_mode = 3

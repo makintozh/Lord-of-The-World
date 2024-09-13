@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cftgd0b0e3ei3"]
+[gd_scene load_steps=22 format=3 uid="uid://cftgd0b0e3ei3"]
 
 [ext_resource type="Script" path="res://src/scripts/gui-scripts/chat_gui.gd" id="1_l3oyk"]
 [ext_resource type="Texture2D" uid="uid://k13hs5lriywa" path="res://src/ui/elements/Rectangleeee.png" id="2_jbe85"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cw2ip2ddryuk4" path="res://src/ui/new-ui/buttons/Кнопка _Закрыть_.png" id="5_jn22b"]
 [ext_resource type="Texture2D" uid="uid://nk0x8jb2g3ea" path="res://src/ui/new-ui/misc/Фон чата.png" id="6_5jpqw"]
 [ext_resource type="Texture2D" uid="uid://bg8b01s6jjp12" path="res://src/ui/buttons/Rectangle 269.png" id="6_rws48"]
+[ext_resource type="Texture2D" uid="uid://c65vpdhoqut3d" path="res://src/ui/new-ui/buttons/Кнопка открыть чат.png" id="9_tq0po"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ae680"]
 texture = ExtResource("6_5jpqw")
@@ -44,6 +45,9 @@ default_font = SubResource("FontVariation_qlqjo")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_snwt4"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ih56o"]
+texture = ExtResource("9_tq0po")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_byfa4"]
 texture = ExtResource("5_jn22b")
 
@@ -60,11 +64,11 @@ grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 1
 script = ExtResource("1_l3oyk")
+opened_chat_size_y = 400
 
 [node name="APIRequest" type="HTTPRequest" parent="."]
 
 [node name="Chat-Panel" type="Panel" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -80,6 +84,7 @@ grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxTexture_ae680")
 
 [node name="Open-Chat-Panel" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -225,21 +230,22 @@ text = "+"
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 0
 offset_left = -36.0
-offset_top = -221.0
-offset_right = 258.0
-offset_bottom = -137.525
+offset_top = -219.635
+offset_right = 99963.0
+offset_bottom = -136.16
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 2
 
 [node name="Messages" type="RichTextLabel" parent="ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 1
 theme = SubResource("Theme_75177")
 bbcode_enabled = true
 text = "Загрузка..."
 fit_content = true
 
-[node name="Open-Chat" type="Button" parent="."]
+[node name="Open-Chat-Hitbox" type="Button" parent="."]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -264,6 +270,46 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_snwt4")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_snwt4")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_snwt4")
 flat = true
+
+[node name="Show-Chat" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 167.0
+offset_top = -219.0
+offset_right = 251.0
+offset_bottom = -139.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+theme_override_styles/focus = SubResource("StyleBoxTexture_ih56o")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_ih56o")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_ih56o")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_ih56o")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_ih56o")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_ih56o")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ih56o")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_ih56o")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ih56o")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_ih56o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ih56o")
+
+[node name="Show" type="Label" parent="Show-Chat"]
+offset_left = 18.0
+offset_top = 21.0
+offset_right = 70.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 15
+text = "показать
+чат"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Hide-Chat" type="Button" parent="."]
 visible = false
@@ -307,5 +353,6 @@ vertical_alignment = 1
 [connection signal="request_completed" from="APIRequest" to="." method="_on_api_request_request_completed"]
 [connection signal="pressed" from="Open-Chat-Panel/Close-Chat" to="." method="_on_close_chat_pressed"]
 [connection signal="pressed" from="Open-Chat-Panel/Send" to="." method="_on_send_pressed"]
-[connection signal="pressed" from="Open-Chat" to="." method="_on_open_chat_pressed"]
+[connection signal="pressed" from="Open-Chat-Hitbox" to="." method="_on_open_chat_pressed"]
+[connection signal="pressed" from="Show-Chat" to="." method="_on_show_chat_pressed"]
 [connection signal="pressed" from="Hide-Chat" to="." method="_on_hide_chat_pressed"]
