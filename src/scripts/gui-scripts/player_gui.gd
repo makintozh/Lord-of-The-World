@@ -29,7 +29,7 @@ func _ready() -> void:
 	
 	if scene.name == "Navigation-menu":
 		current_home_texture.position.x = 190
-	elif scene.name == "Tavern":
+	elif scene.name == "Tavern" or scene.name == "Tavern-Inventory" or scene.name == "Tavern-Profile":
 		current_home_texture.position.x = 0
 
 

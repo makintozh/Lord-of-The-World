@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://0xe68w41ig5c"]
+[gd_scene load_steps=17 format=3 uid="uid://0xe68w41ig5c"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/tavern.gd" id="1_06l26"]
 [ext_resource type="Texture2D" uid="uid://bgdwtn4hyecm4" path="res://src/ui/new-ui/backgrounds/Фон.png" id="2_xu8nv"]
 [ext_resource type="PackedScene" uid="uid://ccq03g2w30olb" path="res://src/scenes/gui-scenes/player_gui.tscn" id="3_7731g"]
+[ext_resource type="Texture2D" uid="uid://fmeyv83dook0" path="res://src/ui/new-ui/misc/Линии.png" id="3_cqi27"]
 [ext_resource type="PackedScene" uid="uid://cftgd0b0e3ei3" path="res://src/scenes/gui-scenes/chat_gui.tscn" id="4_ysw4l"]
 [ext_resource type="Texture2D" uid="uid://bll7kks5588xw" path="res://src/ui/new-ui/misc/Mask group.png" id="5_3bmwq"]
 [ext_resource type="Texture2D" uid="uid://bpde232syxfpb" path="res://src/ui/new-ui/misc/Mask group2.png" id="6_c42ny"]
@@ -13,6 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://dkyt35muhy8mv" path="res://src/ui/new-ui/resources/Герои.png" id="10_dk88q"]
 [ext_resource type="Texture2D" uid="uid://d1dsq41gqmqwx" path="res://src/ui/new-ui/resources/Крафт.png" id="11_5a7no"]
 [ext_resource type="Texture2D" uid="uid://cdlj5j7dxd5v5" path="res://src/ui/new-ui/resources/Инвентарь.png" id="12_wiv27"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tr03v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yt8hq"]
 
 [node name="Tavern" type="Control"]
 layout_mode = 3
@@ -37,6 +42,18 @@ mouse_filter = 2
 texture = ExtResource("2_xu8nv")
 expand_mode = 1
 stretch_mode = 6
+
+[node name="MarginContainer20" type="MarginContainer" parent="."]
+offset_left = 10.0
+offset_top = 120.0
+offset_right = 223.0
+offset_bottom = 461.0
+scale = Vector2(2.255, 2.255)
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer20"]
+layout_mode = 2
+texture = ExtResource("3_cqi27")
+expand_mode = 1
 
 [node name="PlayerGui" parent="." instance=ExtResource("3_7731g")]
 layout_mode = 1
@@ -77,7 +94,7 @@ offset_bottom = 833.225
 texture = ExtResource("8_ikpro")
 expand_mode = 1
 
-[node name="VBox" type="VBoxContainer" parent="."]
+[node name="VBox-Frames" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 206.0
 offset_top = 202.0
@@ -87,27 +104,27 @@ scale = Vector2(0.12, 0.12)
 theme_override_constants/separation = 980
 alignment = 1
 
-[node name="TextureRect4" type="TextureRect" parent="VBox"]
+[node name="Frame" type="TextureRect" parent="VBox-Frames"]
 layout_mode = 2
 texture = ExtResource("8_qvace")
 stretch_mode = 6
 
-[node name="TextureRect8" type="TextureRect" parent="VBox"]
+[node name="Frame2" type="TextureRect" parent="VBox-Frames"]
 layout_mode = 2
 texture = ExtResource("8_qvace")
 stretch_mode = 6
 
-[node name="TextureRect5" type="TextureRect" parent="VBox"]
+[node name="Frame3" type="TextureRect" parent="VBox-Frames"]
 layout_mode = 2
 texture = ExtResource("8_qvace")
 stretch_mode = 6
 
-[node name="TextureRect6" type="TextureRect" parent="VBox"]
+[node name="Frame4" type="TextureRect" parent="VBox-Frames"]
 layout_mode = 2
 texture = ExtResource("8_qvace")
 stretch_mode = 6
 
-[node name="VBox2" type="VBoxContainer" parent="."]
+[node name="VBox-Icons" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 185.0
 offset_top = 172.0
@@ -117,27 +134,27 @@ scale = Vector2(0.115, 0.115)
 theme_override_constants/separation = 840
 alignment = 1
 
-[node name="TextureRect4" type="TextureRect" parent="VBox2"]
+[node name="Icon" type="TextureRect" parent="VBox-Icons"]
 layout_mode = 2
 texture = ExtResource("9_jvu0q")
 stretch_mode = 6
 
-[node name="TextureRect5" type="TextureRect" parent="VBox2"]
+[node name="Icon2" type="TextureRect" parent="VBox-Icons"]
 layout_mode = 2
 texture = ExtResource("10_dk88q")
 stretch_mode = 6
 
-[node name="TextureRect6" type="TextureRect" parent="VBox2"]
+[node name="Icon3" type="TextureRect" parent="VBox-Icons"]
 layout_mode = 2
 texture = ExtResource("11_5a7no")
 stretch_mode = 6
 
-[node name="TextureRect7" type="TextureRect" parent="VBox2"]
+[node name="Icon4" type="TextureRect" parent="VBox-Icons"]
 layout_mode = 2
 texture = ExtResource("12_wiv27")
 stretch_mode = 6
 
-[node name="VBox3" type="VBoxContainer" parent="."]
+[node name="VBox-Labels" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 291.0
 offset_top = 172.0
@@ -147,7 +164,7 @@ scale = Vector2(0.115, 0.115)
 theme_override_constants/separation = 1140
 alignment = 1
 
-[node name="Label" type="Label" parent="VBox3"]
+[node name="Label" type="Label" parent="VBox-Labels"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
 theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
@@ -158,7 +175,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Label2" type="Label" parent="VBox3"]
+[node name="Label2" type="Label" parent="VBox-Labels"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
 theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
@@ -169,7 +186,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Label3" type="Label" parent="VBox3"]
+[node name="Label3" type="Label" parent="VBox-Labels"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
 theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
@@ -180,7 +197,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Label4" type="Label" parent="VBox3"]
+[node name="Label4" type="Label" parent="VBox-Labels"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
 theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
@@ -191,7 +208,54 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
+[node name="Profile-HitBox" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 155.0
+offset_right = 475.0
+offset_bottom = 320.0
+
+[node name="Profile" type="Button" parent="Profile-HitBox"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tr03v")
+flat = true
+
+[node name="Inventory-HitBox" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 668.0
+offset_right = 475.0
+offset_bottom = 833.0
+
+[node name="Inventory" type="Button" parent="Inventory-HitBox"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yt8hq")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_yt8hq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_yt8hq")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_yt8hq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_yt8hq")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_yt8hq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_yt8hq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_yt8hq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yt8hq")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_yt8hq")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yt8hq")
+flat = true
+
 [node name="ChatGui" parent="." instance=ExtResource("4_ysw4l")]
 layout_mode = 1
 offset_top = 21.0
 offset_bottom = 21.0
+
+[connection signal="pressed" from="Profile-HitBox/Profile" to="." method="_on_profile_pressed"]
+[connection signal="pressed" from="Inventory-HitBox/Inventory" to="." method="_on_inventory_pressed"]

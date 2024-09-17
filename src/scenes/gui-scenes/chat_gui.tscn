@@ -65,6 +65,7 @@ grow_vertical = 0
 mouse_filter = 1
 script = ExtResource("1_l3oyk")
 opened_chat_size_y = 400
+closed_chat_position_y = -224
 
 [node name="APIRequest" type="HTTPRequest" parent="."]
 
@@ -298,6 +299,7 @@ theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_ih56o")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ih56o")
 
 [node name="Show" type="Label" parent="Show-Chat"]
+layout_mode = 0
 offset_left = 18.0
 offset_top = 21.0
 offset_right = 70.0

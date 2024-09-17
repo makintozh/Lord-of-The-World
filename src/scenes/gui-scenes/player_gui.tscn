@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://ccq03g2w30olb"]
+[gd_scene load_steps=29 format=3 uid="uid://ccq03g2w30olb"]
 
 [ext_resource type="Script" path="res://src/scripts/gui-scripts/player_gui.gd" id="1_8c46b"]
 [ext_resource type="Texture2D" uid="uid://bc18jg3djtr2y" path="res://src/ui/new-ui/buttons/Настройки.png" id="2_rg8x1"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dap8si7e4y1t8" path="res://src/ui/new-ui/misc/Открытая Подложка функционального меню.png" id="12_elerv"]
 [ext_resource type="Texture2D" uid="uid://c6xgm0blv6wxn" path="res://src/ui/new-ui/buttons/Достижения.png" id="13_43iue"]
 [ext_resource type="Texture2D" uid="uid://q20xxea08od" path="res://src/ui/new-ui/buttons/Гайды 1.png" id="14_q3d8g"]
+[ext_resource type="Texture2D" uid="uid://br0ifj3g5kk7e" path="res://src/ui/new-ui/misc/1111.png" id="14_waqlq"]
 [ext_resource type="Texture2D" uid="uid://blnyel075mbw0" path="res://src/ui/new-ui/buttons/Стрелка.png" id="15_8sgbs"]
 [ext_resource type="Texture2D" uid="uid://6pevydxxn835" path="res://src/ui/new-ui/buttons/Навигация.png" id="16_vlrqu"]
 [ext_resource type="Texture2D" uid="uid://cjpbikhstg0qw" path="res://src/ui/new-ui/misc/Подложка функционального меню.png" id="17_c5xbl"]
@@ -26,17 +27,10 @@
 [ext_resource type="Texture2D" uid="uid://bflyy5du817gj" path="res://src/ui/new-ui/resources/Энергия 1.png" id="26_1an70"]
 [ext_resource type="Texture2D" uid="uid://b8x7icmp2n0fe" path="res://src/ui/new-ui/misc/Подложка под ник и абревиатуру клана.png" id="26_tpanq"]
 [ext_resource type="Texture2D" uid="uid://bji7f5c21h22h" path="res://src/ui/new-ui/buttons/Rectangle 121.png" id="27_5o5d3"]
-[ext_resource type="Texture2D" uid="uid://ct0gyfo6qs2ni" path="res://src/ui/new-ui/misc/Подложка под уровень.png" id="27_d6kpl"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p054s"]
 texture = ExtResource("26_tpanq")
-texture_margin_left = 40.0
-texture_margin_top = 30.0
-texture_margin_bottom = 30.0
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vt343"]
-texture = ExtResource("27_d6kpl")
-texture_margin_left = 40.0
+texture_margin_left = 410.0
 texture_margin_top = 30.0
 texture_margin_bottom = 30.0
 
@@ -150,9 +144,9 @@ vertical_alignment = 1
 [node name="Navigation" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 0
-offset_top = 20.0
+offset_top = 6.0
 offset_right = 40.0
-offset_bottom = 60.0
+offset_bottom = 46.0
 
 [node name="NavigationOpened" type="MarginContainer" parent="Navigation"]
 visible = false
@@ -365,10 +359,10 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -12.245
-offset_top = 852.375
-offset_right = 447.755
-offset_bottom = 934.375
+offset_left = -12.0
+offset_top = 838.0
+offset_right = 448.0
+offset_bottom = 934.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -381,9 +375,9 @@ stretch_mode = 6
 [node name="Separator" type="TextureRect" parent="Home/Home/Home"]
 layout_mode = 2
 offset_left = 87.0
-offset_top = 21.0
+offset_top = 15.73
 offset_right = 88.0
-offset_bottom = 57.0
+offset_bottom = 60.73
 texture = ExtResource("20_rl2in")
 expand_mode = 1
 stretch_mode = 6
@@ -391,19 +385,38 @@ stretch_mode = 6
 [node name="Separator2" type="TextureRect" parent="Home/Home/Home"]
 layout_mode = 2
 offset_left = 394.755
-offset_top = 21.375
+offset_top = 15.73
 offset_right = 395.755
-offset_bottom = 57.375
+offset_bottom = 61.275
 texture = ExtResource("20_rl2in")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Separator3" type="TextureRect" parent="Home/Home/Home"]
+layout_mode = 2
+offset_left = -64.0
+offset_top = 72.0
+offset_right = 576.0
+offset_bottom = 74.0
+texture = ExtResource("14_waqlq")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Separator4" type="TextureRect" parent="Home/Home/Home"]
+layout_mode = 2
+offset_left = -64.0
+offset_right = 576.0
+offset_bottom = 2.0
+texture = ExtResource("14_waqlq")
 expand_mode = 1
 stretch_mode = 6
 
 [node name="Main" type="TextureRect" parent="Home/Home/Home"]
 layout_mode = 2
-offset_left = 191.0
-offset_top = -12.0
-offset_right = 292.0
-offset_bottom = 82.0
+offset_left = 7.905
+offset_top = -9.0
+offset_right = 108.905
+offset_bottom = 85.0
 texture = ExtResource("19_kj4bj")
 expand_mode = 1
 stretch_mode = 6
@@ -522,10 +535,10 @@ vertical_alignment = 1
 
 [node name="Mail" type="TextureButton" parent="Home/Home/Home"]
 layout_mode = 0
-offset_left = 410.755
-offset_top = 5.375
-offset_right = 477.655
-offset_bottom = 70.62
+offset_left = 417.0
+offset_top = 5.0
+offset_right = 483.9
+offset_bottom = 70.245
 texture_normal = ExtResource("25_0uvqi")
 texture_pressed = ExtResource("25_0uvqi")
 texture_hover = ExtResource("25_0uvqi")
@@ -585,12 +598,13 @@ layout_mode = 1
 
 [node name="PlayerInformation" type="Control" parent="."]
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = 15
 anchor_right = 1.0
-offset_left = -3.0
-offset_right = -459.0
-offset_bottom = 38.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_bottom = -950.0
 grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Background" type="MarginContainer" parent="PlayerInformation"]
 layout_mode = 1
@@ -609,10 +623,10 @@ expand_mode = 1
 
 [node name="PlayerName" type="MarginContainer" parent="PlayerInformation"]
 layout_mode = 0
-offset_left = 116.0
-offset_top = 52.0
-offset_right = 1170.0
-offset_bottom = 212.0
+offset_left = 93.0
+offset_top = 45.0
+offset_right = 1416.0
+offset_bottom = 236.0
 scale = Vector2(0.13, 0.13)
 
 [node name="Names" type="RichTextLabel" parent="PlayerInformation/PlayerName"]
@@ -625,53 +639,53 @@ theme_override_styles/background = SubResource("StyleBoxTexture_p054s")
 theme_override_styles/focus = SubResource("StyleBoxTexture_p054s")
 theme_override_styles/normal = SubResource("StyleBoxTexture_p054s")
 bbcode_enabled = true
-text = "Имя игрока 16с [клан]"
+text = "Имя игрока"
 fit_content = true
 
-[node name="PlayerLevel" type="MarginContainer" parent="PlayerInformation"]
+[node name="PlayerClan" type="MarginContainer" parent="PlayerInformation"]
 layout_mode = 0
-offset_left = 116.0
-offset_top = 81.0
-offset_right = 562.0
-offset_bottom = 272.0
+offset_left = 93.0
+offset_top = 71.0
+offset_right = 1416.0
+offset_bottom = 262.0
 scale = Vector2(0.13, 0.13)
 
-[node name="Level" type="RichTextLabel" parent="PlayerInformation/PlayerLevel"]
+[node name="Clan" type="RichTextLabel" parent="PlayerInformation/PlayerClan"]
 layout_mode = 2
 theme_override_colors/default_color = Color(1, 0.976471, 0.941176, 1)
 theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
 theme_override_font_sizes/normal_font_size = 110
-theme_override_styles/fill = SubResource("StyleBoxTexture_vt343")
-theme_override_styles/background = SubResource("StyleBoxTexture_vt343")
-theme_override_styles/focus = SubResource("StyleBoxTexture_vt343")
-theme_override_styles/normal = SubResource("StyleBoxTexture_vt343")
+theme_override_styles/fill = SubResource("StyleBoxTexture_p054s")
+theme_override_styles/background = SubResource("StyleBoxTexture_p054s")
+theme_override_styles/focus = SubResource("StyleBoxTexture_p054s")
+theme_override_styles/normal = SubResource("StyleBoxTexture_p054s")
 bbcode_enabled = true
-text = "Уровень"
+text = "Клан"
 fit_content = true
 
 [node name="ColorRect" type="ColorRect" parent="PlayerInformation"]
 layout_mode = 2
-offset_left = 32.0
-offset_top = 49.0
-offset_right = 113.0
-offset_bottom = 130.0
+offset_left = 31.0
+offset_top = 40.0
+offset_right = 89.0
+offset_bottom = 101.0
 
 [node name="Label" type="Label" parent="PlayerInformation/ColorRect"]
 layout_mode = 0
-offset_left = 11.0
-offset_top = 19.0
-offset_right = 73.0
-offset_bottom = 62.0
+offset_left = 3.0
+offset_top = 15.0
+offset_right = 65.0
+offset_bottom = 58.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 31
 text = "ICON"
 
 [node name="Frame" type="MarginContainer" parent="PlayerInformation"]
 layout_mode = 1
-offset_left = 19.0
-offset_top = 35.0
-offset_right = 130.0
-offset_bottom = 146.0
+offset_left = 23.0
+offset_top = 29.0
+offset_right = 100.0
+offset_bottom = 112.0
 
 [node name="Frame" type="TextureRect" parent="PlayerInformation/Frame"]
 layout_mode = 2
