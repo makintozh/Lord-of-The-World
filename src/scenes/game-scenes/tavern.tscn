@@ -1,14 +1,14 @@
 [gd_scene load_steps=17 format=3 uid="uid://0xe68w41ig5c"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/tavern.gd" id="1_06l26"]
-[ext_resource type="Texture2D" uid="uid://bgdwtn4hyecm4" path="res://src/ui/new-ui/backgrounds/Фон.png" id="2_xu8nv"]
+[ext_resource type="Texture2D" uid="uid://bhx6kdyla3bs0" path="res://src/ui/new-ui/backgrounds/Фон Таверна.png" id="2_a5hc6"]
 [ext_resource type="PackedScene" uid="uid://ccq03g2w30olb" path="res://src/scenes/gui-scenes/player_gui.tscn" id="3_7731g"]
-[ext_resource type="Texture2D" uid="uid://fmeyv83dook0" path="res://src/ui/new-ui/misc/Линии.png" id="3_cqi27"]
+[ext_resource type="Texture2D" uid="uid://blpo1pf34mbj4" path="res://src/ui/new-ui/misc/Блок персонажи.png" id="4_5txfp"]
 [ext_resource type="PackedScene" uid="uid://cftgd0b0e3ei3" path="res://src/scenes/gui-scenes/chat_gui.tscn" id="4_ysw4l"]
-[ext_resource type="Texture2D" uid="uid://bll7kks5588xw" path="res://src/ui/new-ui/misc/Mask group.png" id="5_3bmwq"]
-[ext_resource type="Texture2D" uid="uid://bpde232syxfpb" path="res://src/ui/new-ui/misc/Mask group2.png" id="6_c42ny"]
-[ext_resource type="Texture2D" uid="uid://ck1jh1ngcxbec" path="res://src/ui/new-ui/misc/Mask group333.png" id="7_atplo"]
-[ext_resource type="Texture2D" uid="uid://do27t6gkyhb7w" path="res://src/ui/new-ui/misc/Mask group4.png" id="8_ikpro"]
+[ext_resource type="Texture2D" uid="uid://b8e4yn28dbfc1" path="res://src/ui/new-ui/misc/Блок герои.png" id="5_0qsx2"]
+[ext_resource type="Texture2D" uid="uid://crclap5ixko8u" path="res://src/ui/new-ui/misc/Блок крафты.png" id="6_xjc4w"]
+[ext_resource type="Texture2D" uid="uid://h8e28lt4aqgs" path="res://src/ui/new-ui/misc/Блок инвентарь.png" id="7_68no2"]
+[ext_resource type="Texture2D" uid="uid://tei3g7vxd6sp" path="res://src/ui/new-ui/misc/Линии Таверна.png" id="8_mvcc0"]
 [ext_resource type="Texture2D" uid="uid://dwoq1g3cws42o" path="res://src/ui/new-ui/misc/Rectangle 103.png" id="8_qvace"]
 [ext_resource type="Texture2D" uid="uid://dypwcitb3sjby" path="res://src/ui/new-ui/resources/Прокачка.png" id="9_jvu0q"]
 [ext_resource type="Texture2D" uid="uid://dkyt35muhy8mv" path="res://src/ui/new-ui/resources/Герои.png" id="10_dk88q"]
@@ -39,21 +39,9 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 2
-texture = ExtResource("2_xu8nv")
+texture = ExtResource("2_a5hc6")
 expand_mode = 1
 stretch_mode = 6
-
-[node name="MarginContainer20" type="MarginContainer" parent="."]
-offset_left = 10.0
-offset_top = 120.0
-offset_right = 223.0
-offset_bottom = 461.0
-scale = Vector2(2.255, 2.255)
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer20"]
-layout_mode = 2
-texture = ExtResource("3_cqi27")
-expand_mode = 1
 
 [node name="PlayerGui" parent="." instance=ExtResource("3_7731g")]
 layout_mode = 1
@@ -64,7 +52,7 @@ offset_left = 13.0
 offset_top = 150.0
 offset_right = 477.33
 offset_bottom = 318.225
-texture = ExtResource("5_3bmwq")
+texture = ExtResource("4_5txfp")
 expand_mode = 1
 
 [node name="TextureRect2" type="TextureRect" parent="."]
@@ -73,7 +61,7 @@ offset_left = 13.0
 offset_top = 314.0
 offset_right = 477.33
 offset_bottom = 482.225
-texture = ExtResource("6_c42ny")
+texture = ExtResource("5_0qsx2")
 expand_mode = 1
 
 [node name="TextureRect3" type="TextureRect" parent="."]
@@ -82,7 +70,7 @@ offset_left = 15.0
 offset_top = 494.0
 offset_right = 479.33
 offset_bottom = 662.225
-texture = ExtResource("7_atplo")
+texture = ExtResource("6_xjc4w")
 expand_mode = 1
 
 [node name="TextureRect4" type="TextureRect" parent="."]
@@ -91,10 +79,20 @@ offset_left = 13.0
 offset_top = 665.0
 offset_right = 477.33
 offset_bottom = 833.225
-texture = ExtResource("8_ikpro")
+texture = ExtResource("7_68no2")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 29.0
+offset_top = 163.0
+offset_right = 463.0
+offset_bottom = 309.0
+texture = ExtResource("8_mvcc0")
 expand_mode = 1
 
 [node name="VBox-Frames" type="VBoxContainer" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 206.0
 offset_top = 202.0
@@ -125,6 +123,7 @@ texture = ExtResource("8_qvace")
 stretch_mode = 6
 
 [node name="VBox-Icons" type="VBoxContainer" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 185.0
 offset_top = 172.0
@@ -153,60 +152,6 @@ stretch_mode = 6
 layout_mode = 2
 texture = ExtResource("12_wiv27")
 stretch_mode = 6
-
-[node name="VBox-Labels" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 291.0
-offset_top = 172.0
-offset_right = 1722.0
-offset_bottom = 5864.0
-scale = Vector2(0.115, 0.115)
-theme_override_constants/separation = 1140
-alignment = 1
-
-[node name="Label" type="Label" parent="VBox-Labels"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
-theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
-theme_override_constants/outline_size = 25
-theme_override_font_sizes/font_size = 330
-text = "персонаж"
-horizontal_alignment = 1
-vertical_alignment = 1
-uppercase = true
-
-[node name="Label2" type="Label" parent="VBox-Labels"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
-theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
-theme_override_constants/outline_size = 25
-theme_override_font_sizes/font_size = 330
-text = "герои"
-horizontal_alignment = 1
-vertical_alignment = 1
-uppercase = true
-
-[node name="Label3" type="Label" parent="VBox-Labels"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
-theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
-theme_override_constants/outline_size = 25
-theme_override_font_sizes/font_size = 330
-text = "крафты"
-horizontal_alignment = 1
-vertical_alignment = 1
-uppercase = true
-
-[node name="Label4" type="Label" parent="VBox-Labels"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
-theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
-theme_override_constants/outline_size = 25
-theme_override_font_sizes/font_size = 330
-text = "инвентарь"
-horizontal_alignment = 1
-vertical_alignment = 1
-uppercase = true
 
 [node name="Profile-HitBox" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -251,6 +196,62 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_yt8hq")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_yt8hq")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_yt8hq")
 flat = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 204.0
+offset_top = 197.0
+offset_right = 486.0
+offset_bottom = 275.0
+theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 38
+text = "персонаж"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 261.0
+offset_top = 378.0
+offset_right = 356.0
+offset_bottom = 424.0
+theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 38
+text = "герои"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 260.0
+offset_top = 557.0
+offset_right = 395.0
+offset_bottom = 603.0
+theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 38
+text = "крафты"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 260.0
+offset_top = 727.0
+offset_right = 438.0
+offset_bottom = 773.0
+theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 38
+text = "инвентарь"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
 
 [node name="ChatGui" parent="." instance=ExtResource("4_ysw4l")]
 layout_mode = 1

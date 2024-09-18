@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://ccq03g2w30olb"]
+[gd_scene load_steps=30 format=3 uid="uid://ccq03g2w30olb"]
 
 [ext_resource type="Script" path="res://src/scripts/gui-scripts/player_gui.gd" id="1_8c46b"]
 [ext_resource type="Texture2D" uid="uid://bc18jg3djtr2y" path="res://src/ui/new-ui/buttons/Настройки.png" id="2_rg8x1"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://cjpbikhstg0qw" path="res://src/ui/new-ui/misc/Подложка функционального меню.png" id="17_c5xbl"]
 [ext_resource type="Texture2D" uid="uid://dpe6653raufji" path="res://src/ui/new-ui/misc/Фон меню.png" id="18_a6nnk"]
 [ext_resource type="Texture2D" uid="uid://bvhddmk3nmvab" path="res://src/ui/new-ui/misc/Бегунок выбора главного меню.png" id="19_kj4bj"]
+[ext_resource type="Texture2D" uid="uid://bmxnlxp7yh03s" path="res://src/ui/new-ui/misc/Нижнее меню.png" id="20_36yh7"]
 [ext_resource type="Texture2D" uid="uid://cgra5d65veo57" path="res://src/ui/new-ui/misc/Подложка верхнего меню.png" id="20_disfm"]
 [ext_resource type="Texture2D" uid="uid://dbpn004u3d2x1" path="res://src/ui/new-ui/misc/Разделитель-1.png" id="20_rl2in"]
 [ext_resource type="Texture2D" uid="uid://h74metbu6s76" path="res://src/ui/new-ui/buttons/Таверна 1.png" id="21_yte5r"]
@@ -339,21 +340,22 @@ text = "навигация"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Home" type="Control" parent="."]
+[node name="HomeOLD" type="Control" parent="."]
+visible = false
 top_level = true
 z_index = 1515
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 5.0
-offset_top = -931.0
-offset_right = 5.0
-offset_bottom = -931.0
+offset_left = 4.0
+offset_top = -813.0
+offset_right = 4.0
+offset_bottom = -813.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Home" type="MarginContainer" parent="Home"]
+[node name="Home" type="MarginContainer" parent="HomeOLD"]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -366,13 +368,13 @@ offset_bottom = 934.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Home" type="TextureRect" parent="Home/Home"]
+[node name="Home" type="TextureRect" parent="HomeOLD/Home"]
 layout_mode = 2
 texture = ExtResource("18_a6nnk")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="Separator" type="TextureRect" parent="Home/Home/Home"]
+[node name="Separator" type="TextureRect" parent="HomeOLD/Home/Home"]
 layout_mode = 2
 offset_left = 87.0
 offset_top = 15.73
@@ -382,7 +384,7 @@ texture = ExtResource("20_rl2in")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="Separator2" type="TextureRect" parent="Home/Home/Home"]
+[node name="Separator2" type="TextureRect" parent="HomeOLD/Home/Home"]
 layout_mode = 2
 offset_left = 394.755
 offset_top = 15.73
@@ -392,7 +394,7 @@ texture = ExtResource("20_rl2in")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="Separator3" type="TextureRect" parent="Home/Home/Home"]
+[node name="Separator3" type="TextureRect" parent="HomeOLD/Home/Home"]
 layout_mode = 2
 offset_left = -64.0
 offset_top = 72.0
@@ -402,7 +404,7 @@ texture = ExtResource("14_waqlq")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="Separator4" type="TextureRect" parent="Home/Home/Home"]
+[node name="Separator4" type="TextureRect" parent="HomeOLD/Home/Home"]
 layout_mode = 2
 offset_left = -64.0
 offset_right = 576.0
@@ -411,7 +413,7 @@ texture = ExtResource("14_waqlq")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="Main" type="TextureRect" parent="Home/Home/Home"]
+[node name="Main" type="TextureRect" parent="HomeOLD/Home/Home"]
 layout_mode = 2
 offset_left = 7.905
 offset_top = -9.0
@@ -421,7 +423,7 @@ texture = ExtResource("19_kj4bj")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="Tavern" type="TextureButton" parent="Home/Home/Home"]
+[node name="Tavern" type="TextureButton" parent="HomeOLD/Home/Home"]
 layout_mode = 0
 offset_left = 18.0
 offset_top = 5.0
@@ -435,7 +437,7 @@ texture_focused = ExtResource("21_yte5r")
 ignore_texture_size = true
 stretch_mode = 6
 
-[node name="TavernLabel" type="Label" parent="Home/Home/Home/Tavern"]
+[node name="TavernLabel" type="Label" parent="HomeOLD/Home/Home/Tavern"]
 layout_mode = 0
 offset_left = -8.82501
 offset_top = 46.0
@@ -449,7 +451,7 @@ text = "таверна"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Tasks" type="TextureButton" parent="Home/Home/Home"]
+[node name="Tasks" type="TextureButton" parent="HomeOLD/Home/Home"]
 layout_mode = 0
 offset_left = 106.755
 offset_top = 5.375
@@ -463,7 +465,7 @@ texture_focused = ExtResource("22_gtcl1")
 ignore_texture_size = true
 stretch_mode = 6
 
-[node name="TasksLabel" type="Label" parent="Home/Home/Home/Tasks"]
+[node name="TasksLabel" type="Label" parent="HomeOLD/Home/Home/Tasks"]
 layout_mode = 0
 offset_left = 0.174993
 offset_top = 46.0
@@ -477,7 +479,7 @@ text = "задания"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="City" type="TextureButton" parent="Home/Home/Home"]
+[node name="City" type="TextureButton" parent="HomeOLD/Home/Home"]
 layout_mode = 0
 offset_left = 208.755
 offset_top = 5.375
@@ -491,7 +493,7 @@ texture_focused = ExtResource("23_q43ja")
 ignore_texture_size = true
 stretch_mode = 6
 
-[node name="CityLabel" type="Label" parent="Home/Home/Home/City"]
+[node name="CityLabel" type="Label" parent="HomeOLD/Home/Home/City"]
 layout_mode = 0
 offset_left = -4.82501
 offset_top = 46.0
@@ -505,7 +507,7 @@ text = "город"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Shop" type="TextureButton" parent="Home/Home/Home"]
+[node name="Shop" type="TextureButton" parent="HomeOLD/Home/Home"]
 layout_mode = 0
 offset_left = 307.755
 offset_top = 5.375
@@ -519,7 +521,7 @@ texture_focused = ExtResource("24_tfmuc")
 ignore_texture_size = true
 stretch_mode = 6
 
-[node name="ShopLabel" type="Label" parent="Home/Home/Home/Shop"]
+[node name="ShopLabel" type="Label" parent="HomeOLD/Home/Home/Shop"]
 layout_mode = 0
 offset_left = -3.82501
 offset_top = 46.0
@@ -533,7 +535,7 @@ text = "магазин"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Mail" type="TextureButton" parent="Home/Home/Home"]
+[node name="Mail" type="TextureButton" parent="HomeOLD/Home/Home"]
 layout_mode = 0
 offset_left = 417.0
 offset_top = 5.0
@@ -547,7 +549,7 @@ texture_focused = ExtResource("25_0uvqi")
 ignore_texture_size = true
 stretch_mode = 6
 
-[node name="Mail" type="Label" parent="Home/Home/Home/Mail"]
+[node name="Mail" type="Label" parent="HomeOLD/Home/Home/Mail"]
 layout_mode = 0
 offset_left = -3.58001
 offset_top = 44.625
@@ -561,17 +563,212 @@ text = "почта"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Home/Home/Home"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HomeOLD/Home/Home"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="CityHitBox" type="MarginContainer" parent="Home"]
+[node name="CityHitBox" type="MarginContainer" parent="HomeOLD"]
 layout_mode = 0
 offset_left = 186.0
 offset_top = 1829.0
 offset_right = 273.0
 offset_bottom = 1904.0
+
+[node name="CityHitBox" type="TextureButton" parent="HomeOLD/CityHitBox"]
+layout_mode = 2
+action_mode = 0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TavernHitBox" type="MarginContainer" parent="HomeOLD"]
+layout_mode = 0
+offset_left = -7.0
+offset_top = 1831.0
+offset_right = 80.0
+offset_bottom = 1906.0
+
+[node name="TavernHitBox" type="TextureButton" parent="HomeOLD/TavernHitBox"]
+layout_mode = 2
+action_mode = 0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Home" type="Control" parent="."]
+top_level = true
+z_index = 1515
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -244.53
+offset_top = -1236.38
+offset_right = 256.39
+offset_bottom = -928.325
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Home" type="MarginContainer" parent="Home"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = 842.0
+offset_bottom = 934.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Home" type="TextureRect" parent="Home/Home"]
+layout_mode = 2
+texture = ExtResource("20_36yh7")
+expand_mode = 1
+
+[node name="Main" type="TextureRect" parent="Home"]
+offset_left = 190.53
+offset_top = 1145.38
+offset_right = 301.53
+offset_bottom = 1234.38
+texture = ExtResource("19_kj4bj")
+expand_mode = 1
+
+[node name="Tavern" type="TextureButton" parent="Home"]
+layout_mode = 2
+offset_left = 7.53
+offset_top = 1151.38
+offset_right = 82.53
+offset_bottom = 1225.38
+texture_normal = ExtResource("21_yte5r")
+texture_pressed = ExtResource("21_yte5r")
+texture_hover = ExtResource("21_yte5r")
+texture_disabled = ExtResource("21_yte5r")
+texture_focused = ExtResource("21_yte5r")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Tasks" type="TextureButton" parent="Home"]
+layout_mode = 2
+offset_left = 114.53
+offset_top = 1156.38
+offset_right = 172.53
+offset_bottom = 1213.38
+texture_normal = ExtResource("22_gtcl1")
+texture_pressed = ExtResource("22_gtcl1")
+texture_hover = ExtResource("22_gtcl1")
+texture_disabled = ExtResource("22_gtcl1")
+texture_focused = ExtResource("22_gtcl1")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="City" type="TextureButton" parent="Home"]
+layout_mode = 2
+offset_left = 216.53
+offset_top = 1157.38
+offset_right = 272.53
+offset_bottom = 1212.38
+texture_normal = ExtResource("23_q43ja")
+texture_pressed = ExtResource("23_q43ja")
+texture_hover = ExtResource("23_q43ja")
+texture_disabled = ExtResource("23_q43ja")
+texture_focused = ExtResource("23_q43ja")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Shop" type="TextureButton" parent="Home"]
+layout_mode = 2
+offset_left = 311.53
+offset_top = 1155.38
+offset_right = 376.53
+offset_bottom = 1216.38
+texture_normal = ExtResource("24_tfmuc")
+texture_pressed = ExtResource("24_tfmuc")
+texture_hover = ExtResource("24_tfmuc")
+texture_disabled = ExtResource("24_tfmuc")
+texture_focused = ExtResource("24_tfmuc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Mail" type="TextureButton" parent="Home"]
+layout_mode = 2
+offset_left = 413.53
+offset_top = 1155.38
+offset_right = 475.53
+offset_bottom = 1215.38
+texture_normal = ExtResource("25_0uvqi")
+texture_pressed = ExtResource("25_0uvqi")
+texture_hover = ExtResource("25_0uvqi")
+texture_disabled = ExtResource("25_0uvqi")
+texture_focused = ExtResource("25_0uvqi")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Home"]
+layout_mode = 0
+offset_left = 18.53
+offset_top = 1193.38
+offset_right = 462.53
+offset_bottom = 1233.38
+theme_override_constants/separation = 60
+
+[node name="TavernLabel" type="Label" parent="Home/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 15
+text = "таверна"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TasksLabel" type="Label" parent="Home/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 15
+text = "задания"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CityLabel" type="Label" parent="Home/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 15
+text = "город"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ShopLabel" type="Label" parent="Home/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 15
+text = "магазин"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Mail" type="Label" parent="Home/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 15
+text = "почта"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CityHitBox" type="MarginContainer" parent="Home"]
+layout_mode = 0
+offset_left = 197.53
+offset_top = 1156.38
+offset_right = 294.53
+offset_bottom = 1235.38
 
 [node name="CityHitBox" type="TextureButton" parent="Home/CityHitBox"]
 layout_mode = 2
@@ -581,10 +778,10 @@ stretch_mode = 0
 
 [node name="TavernHitBox" type="MarginContainer" parent="Home"]
 layout_mode = 0
-offset_left = -7.0
-offset_top = 1831.0
-offset_right = 80.0
-offset_bottom = 1906.0
+offset_left = -5.47
+offset_top = 1155.38
+offset_right = 94.53
+offset_bottom = 1234.38
 
 [node name="TavernHitBox" type="TextureButton" parent="Home/TavernHitBox"]
 layout_mode = 2
@@ -602,19 +799,19 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -6.0
-offset_bottom = -950.0
+offset_bottom = -954.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Background" type="MarginContainer" parent="PlayerInformation"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 461.0
-offset_bottom = 81.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -248.0
+offset_right = 253.0
+offset_bottom = 120.0
 grow_horizontal = 2
-grow_vertical = 2
 
 [node name="Background" type="TextureRect" parent="PlayerInformation/Background"]
 layout_mode = 2
@@ -624,9 +821,9 @@ expand_mode = 1
 [node name="PlayerName" type="MarginContainer" parent="PlayerInformation"]
 layout_mode = 0
 offset_left = 93.0
-offset_top = 45.0
+offset_top = 49.0
 offset_right = 1416.0
-offset_bottom = 236.0
+offset_bottom = 240.0
 scale = Vector2(0.13, 0.13)
 
 [node name="Names" type="RichTextLabel" parent="PlayerInformation/PlayerName"]
@@ -645,9 +842,9 @@ fit_content = true
 [node name="PlayerClan" type="MarginContainer" parent="PlayerInformation"]
 layout_mode = 0
 offset_left = 93.0
-offset_top = 71.0
+offset_top = 75.0
 offset_right = 1416.0
-offset_bottom = 262.0
+offset_bottom = 266.0
 scale = Vector2(0.13, 0.13)
 
 [node name="Clan" type="RichTextLabel" parent="PlayerInformation/PlayerClan"]
@@ -666,9 +863,9 @@ fit_content = true
 [node name="ColorRect" type="ColorRect" parent="PlayerInformation"]
 layout_mode = 2
 offset_left = 31.0
-offset_top = 40.0
+offset_top = 43.0
 offset_right = 89.0
-offset_bottom = 101.0
+offset_bottom = 104.0
 
 [node name="Label" type="Label" parent="PlayerInformation/ColorRect"]
 layout_mode = 0
@@ -683,9 +880,9 @@ text = "ICON"
 [node name="Frame" type="MarginContainer" parent="PlayerInformation"]
 layout_mode = 1
 offset_left = 23.0
-offset_top = 29.0
+offset_top = 33.0
 offset_right = 100.0
-offset_bottom = 112.0
+offset_bottom = 116.0
 
 [node name="Frame" type="TextureRect" parent="PlayerInformation/Frame"]
 layout_mode = 2
@@ -807,5 +1004,7 @@ fit_content = true
 [connection signal="pressed" from="Actions/SettingsButton/Settings" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="Navigation/NavigationCloseHitBox/NavigationCloseHitBox" to="." method="_on_navigation_close_hit_box_pressed"]
 [connection signal="pressed" from="Navigation/NavigationClosed/NavigationClosed" to="." method="_on_navigation_closed_pressed"]
+[connection signal="pressed" from="HomeOLD/CityHitBox/CityHitBox" to="." method="_on_city_hit_box_pressed"]
+[connection signal="pressed" from="HomeOLD/TavernHitBox/TavernHitBox" to="." method="_on_tavern_hit_box_pressed"]
 [connection signal="pressed" from="Home/CityHitBox/CityHitBox" to="." method="_on_city_hit_box_pressed"]
 [connection signal="pressed" from="Home/TavernHitBox/TavernHitBox" to="." method="_on_tavern_hit_box_pressed"]

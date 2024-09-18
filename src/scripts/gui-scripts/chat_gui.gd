@@ -275,10 +275,6 @@ func close_chat():
 	open_chat_hitbox.visible = true
 	show_chat_button.visible = false
 	hide_chat_button.visible = true
-	if scene.name == "Tavern":
-		$"../PlayerGui".navigation.visible = false
-	else:
-		$"../PlayerGui".navigation.visible = true
 	scroll_container.position.x = -36
 	scroll_container.position.y = closed_chat_position_y
 	scroll_container.size.x = 99999

@@ -29,5 +29,7 @@ func _on_back_button_pressed():
 	SceneManager.go_to_scene("res://src/scenes/game-scenes/tavern.tscn")
 
 
-func _on_back_pressed() -> void:
+
+
+func _on_back_hit_box_pressed() -> void:
 	_on_back_button_pressed()
