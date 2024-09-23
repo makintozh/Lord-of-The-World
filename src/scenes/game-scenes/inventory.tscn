@@ -89,11 +89,6 @@ expand_mode = 1
 [node name="PlayerGui" parent="." instance=ExtResource("3_hg0vp")]
 layout_mode = 1
 
-[node name="ChatGui" parent="." instance=ExtResource("13_h15mg")]
-layout_mode = 1
-offset_top = 21.0
-offset_bottom = 21.0
-
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 0
 offset_left = 37.0
@@ -267,3 +262,8 @@ texture = ExtResource("7_6voo1")
 [node name="TextureRect25" type="TextureRect" parent="ScrollContainer/GridContainer"]
 layout_mode = 2
 texture = ExtResource("7_6voo1")
+
+[node name="ChatGui" parent="." instance=ExtResource("13_h15mg")]
+layout_mode = 1
+offset_top = 21.0
+offset_bottom = 21.0
