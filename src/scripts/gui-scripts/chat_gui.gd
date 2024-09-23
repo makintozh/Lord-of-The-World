@@ -149,14 +149,19 @@ func _on_send_pressed() -> void:
 })
 	print(msg)
 	socket.send_text(msg)
+	await get_tree().create_timer(0.3).timeout
+	
 	if input.text == "":
 		empty_input = true
+	else:
+		empty_input = false
 	
-	if !scroll_container.position.y == closed_chat_position_y and !scroll_container.position.y == -860:
+	
+	if !scroll_container.position.y == closed_chat_position_y and !scroll_container.position.y == -830:
 		if !empty_input:
 			await get_tree().create_timer(0.3).timeout
-			scroll_container.position.y -= 20
-			scroll_container.size.y += 15
+			scroll_container.position.y -= 25
+			scroll_container.size.y += 25
 
 
 

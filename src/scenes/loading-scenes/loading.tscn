@@ -116,20 +116,34 @@ texture = ExtResource("2_j5dvh")
 stretch_mode = 6
 
 [node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 161.0
-offset_top = 357.0
-offset_right = 341.0
-offset_bottom = 412.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -103.5
+offset_right = 90.0
+offset_bottom = -48.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/font_size = 41
 text = "Загрузка..."
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
-layout_mode = 0
-offset_left = 25.0
-offset_top = 410.0
-offset_right = 467.0
-offset_bottom = 502.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -221.0
+offset_top = -46.0
+offset_right = 221.0
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/font_size = 31
 theme_override_styles/background = SubResource("StyleBoxTexture_pfte2")
 theme_override_styles/fill = SubResource("StyleBoxFlat_cumfj")

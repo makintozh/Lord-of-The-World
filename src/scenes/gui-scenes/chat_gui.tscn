@@ -58,16 +58,20 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_top = 111.0
-offset_bottom = 111.0
+offset_top = 65.575
+offset_bottom = 65.575
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 1
 script = ExtResource("1_l3oyk")
-opened_chat_size_y = 400
+opened_chat_position_y = -580
+opened_chat_size_y = 350
 closed_chat_position_y = -224
 
 [node name="APIRequest" type="HTTPRequest" parent="."]
+download_chunk_size = 16777216
+use_threads = true
+max_redirects = 64
 
 [node name="Chat-Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -233,7 +237,7 @@ layout_mode = 0
 offset_left = -36.0
 offset_top = -219.635
 offset_right = 99963.0
-offset_bottom = -136.16
+offset_bottom = -134.14
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 2
 
