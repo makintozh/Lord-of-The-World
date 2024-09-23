@@ -211,9 +211,9 @@ stretch_mode = 6
 [node name="MarginContainer10" type="MarginContainer" parent="."]
 layout_mode = 0
 offset_left = 44.0
-offset_top = 150.0
+offset_top = 168.0
 offset_right = 441.0
-offset_bottom = 214.0
+offset_bottom = 232.0
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer10"]
 layout_mode = 2
@@ -292,9 +292,9 @@ expand_mode = 1
 [node name="MarginContainer11" type="MarginContainer" parent="."]
 layout_mode = 0
 offset_left = 160.0
-offset_top = 97.0
+offset_top = 119.0
 offset_right = 340.0
-offset_bottom = 150.0
+offset_bottom = 172.0
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer11"]
 layout_mode = 2
