@@ -1,8 +1,7 @@
-[gd_scene load_steps=24 format=3 uid="uid://cftgd0b0e3ei3"]
+[gd_scene load_steps=22 format=3 uid="uid://cftgd0b0e3ei3"]
 
 [ext_resource type="Script" path="res://src/scripts/gui-scripts/chat_gui.gd" id="1_l3oyk"]
 [ext_resource type="Texture2D" uid="uid://k13hs5lriywa" path="res://src/ui/elements/Rectangleeee.png" id="2_jbe85"]
-[ext_resource type="Script" path="res://addons/awaitable_http_request/awaitable_http_request.gd" id="2_waau0"]
 [ext_resource type="Texture2D" uid="uid://yjky8xlx14ib" path="res://src/ui/elements/Rectangle 270.png" id="3_lwn0j"]
 [ext_resource type="Texture2D" uid="uid://bmlspma51s3vc" path="res://src/ui/buttons/Rectangle 267.png" id="3_rhaml"]
 [ext_resource type="Texture2D" uid="uid://c1onytfngar1s" path="res://src/ui/elements/Rectangle 269.png" id="4_chgh0"]
@@ -11,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://nk0x8jb2g3ea" path="res://src/ui/new-ui/misc/Фон чата.png" id="6_5jpqw"]
 [ext_resource type="Texture2D" uid="uid://bg8b01s6jjp12" path="res://src/ui/buttons/Rectangle 269.png" id="6_rws48"]
 [ext_resource type="Texture2D" uid="uid://c65vpdhoqut3d" path="res://src/ui/new-ui/buttons/Кнопка открыть чат.png" id="9_tq0po"]
-[ext_resource type="Script" path="res://addons/richtext2/richer_text_label.gd" id="10_h3qt6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ae680"]
 texture = ExtResource("6_5jpqw")
@@ -60,7 +58,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
+offset_left = 5.88499
 offset_top = 65.575
+offset_right = 5.88499
 offset_bottom = 65.575
 grow_horizontal = 2
 grow_vertical = 0
@@ -68,12 +68,11 @@ mouse_filter = 1
 script = ExtResource("1_l3oyk")
 opened_chat_position_y = -580
 opened_chat_size_y = 350
-closed_chat_position_y = -224
+closed_chat_position_y = -226
 
-[node name="ASYNC-API" type="HTTPRequest" parent="."]
+[node name="APIRequest" type="HTTPRequest" parent="."]
 use_threads = true
 accept_gzip = false
-script = ExtResource("2_waau0")
 
 [node name="Chat-Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -234,26 +233,21 @@ theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_ocxba")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ocxba")
 text = "+"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
-layout_mode = 0
-offset_left = -36.0
-offset_top = -219.635
-offset_right = 99963.0
-offset_bottom = -21.025
-horizontal_scroll_mode = 0
-vertical_scroll_mode = 2
-
-[node name="Messages" type="RichTextLabel" parent="ScrollContainer"]
+[node name="Messages" type="RichTextLabel" parent="."]
 layout_mode = 2
+offset_left = -206.315
+offset_top = -446.135
+offset_right = 99784.7
+offset_bottom = -181.735
 size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 1
 theme = SubResource("Theme_75177")
 bbcode_enabled = true
 text = "Загрузка..."
-fit_content = true
+scroll_following = true
+tab_size = 24
 threaded = true
-script = ExtResource("10_h3qt6")
 
 [node name="Open-Chat-Hitbox" type="Button" parent="."]
 visible = false
@@ -361,7 +355,7 @@ text = "скрыть"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="request_completed" from="ASYNC-API" to="." method="_on_api_request_request_completed"]
+[connection signal="request_completed" from="APIRequest" to="." method="_on_api_request_request_completed"]
 [connection signal="pressed" from="Open-Chat-Panel/Close-Chat" to="." method="_on_close_chat_pressed"]
 [connection signal="pressed" from="Open-Chat-Panel/Send" to="." method="_on_send_pressed"]
 [connection signal="pressed" from="Open-Chat-Hitbox" to="." method="_on_open_chat_pressed"]
