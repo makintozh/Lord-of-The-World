@@ -52,7 +52,8 @@ func _ready() -> void:
 	
 	#connect_to_socket()
 	socketthread.start(connect_to_socket)
-	httpthread.start(touch_api.bind(4))
+	httpthread.start(touch_api.bind(15))
+	close_chat()
 
 
 
@@ -66,6 +67,7 @@ func touch_api(quantity : int):
 	messages_label.text = loading_text
 	message_list.clear()
 	await api.request("http://" + GLOBAL.choiced_server_address + "/chat/1/messages?quantity=" + str(quantity), bearer_header, HTTPClient.METHOD_GET)
+	
 
 
 
@@ -105,6 +107,7 @@ func _process(_delta):
 			connect_to_socket()
 			socket.close()
 	
+	
 	if messages_label.text == loading_text:
 		messages_label.add_theme_font_size_override("normal_font_size", 30)
 	else:
@@ -114,8 +117,8 @@ func _process(_delta):
 
 
 func chat_to_down():
-	var s = 0
-	while s < 200:
+	var s = 1
+	while s < 1000:
 		s += 1
 		scroll_container.scroll_vertical += 9999
 
@@ -145,8 +148,8 @@ func _on_send_pressed() -> void:
 	
 })
 	print(msg)
-	socket.send_text(msg)
-	await get_tree().create_timer(0.3).timeout
+	await socket.send_text(msg)
+
 	
 	if input.text == "":
 		empty_input = true
@@ -156,15 +159,14 @@ func _on_send_pressed() -> void:
 	
 	if !scroll_container.position.y == closed_chat_position_y and !scroll_container.position.y == -830:
 		if !empty_input:
-			await get_tree().create_timer(0.3).timeout
 			scroll_container.position.y -= 25
 			scroll_container.size.y += 25
 
-
-	var s = 0
-	while s < 400:
+	var s = 1
+	while s < 500:
 		s += 1
 		input.text = ""
+
 		
 	chat_to_down()
 
@@ -243,8 +245,9 @@ func _on_close_chat_pressed() -> void:
 
 
 func open_chat():
+	#messages_label.visible_characters = -1
 	await touch_api(15)
-	#mini_chat_active = false
+	chat_to_down()
 	chat_panel.visible = false
 	open_chat_panel.visible = true
 	show_chat_button.visible = false
@@ -265,14 +268,20 @@ func open_chat():
 	#if scroll_container.position.y == -590:
 			#scroll_container.size.y = 420
 			
-	chat_to_down()
+	
 
 
 
 func close_chat():
+	#var label_size = messages_label.get_total_character_count()
+	#print("Размер сообщений: %d" % [label_size])
+	#if label_size != 11:
+		#messages_label.visible_characters = label_size/3.4
+	#else:
+		#messages_label.visible_characters = label_size*9.4
+	
+	
 	await touch_api(4)
-	var label_size = messages_label.get_total_character_count()
-	print("Размер сообщений: %d" % [label_size])
 	scroll_container.visible = true
 	mini_chat_active = true
 	chat_panel.visible = true

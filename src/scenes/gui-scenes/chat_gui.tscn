@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cftgd0b0e3ei3"]
+[gd_scene load_steps=24 format=3 uid="uid://cftgd0b0e3ei3"]
 
 [ext_resource type="Script" path="res://src/scripts/gui-scripts/chat_gui.gd" id="1_l3oyk"]
 [ext_resource type="Texture2D" uid="uid://k13hs5lriywa" path="res://src/ui/elements/Rectangleeee.png" id="2_jbe85"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://nk0x8jb2g3ea" path="res://src/ui/new-ui/misc/Фон чата.png" id="6_5jpqw"]
 [ext_resource type="Texture2D" uid="uid://bg8b01s6jjp12" path="res://src/ui/buttons/Rectangle 269.png" id="6_rws48"]
 [ext_resource type="Texture2D" uid="uid://c65vpdhoqut3d" path="res://src/ui/new-ui/buttons/Кнопка открыть чат.png" id="9_tq0po"]
+[ext_resource type="Script" path="res://addons/richtext2/richer_text_label.gd" id="10_h3qt6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ae680"]
 texture = ExtResource("6_5jpqw")
@@ -238,18 +239,21 @@ layout_mode = 0
 offset_left = -36.0
 offset_top = -219.635
 offset_right = 99963.0
-offset_bottom = -134.14
+offset_bottom = -21.025
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 2
 
 [node name="Messages" type="RichTextLabel" parent="ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 3
 mouse_filter = 1
 theme = SubResource("Theme_75177")
 bbcode_enabled = true
 text = "Загрузка..."
 fit_content = true
+threaded = true
+script = ExtResource("10_h3qt6")
 
 [node name="Open-Chat-Hitbox" type="Button" parent="."]
 visible = false
