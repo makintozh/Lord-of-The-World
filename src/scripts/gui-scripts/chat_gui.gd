@@ -13,53 +13,46 @@ extends Control
 @onready var hide_chat_button = $"Hide-Chat"
 @onready var hide_chat_label = $"Hide-Chat/Hide"
 @onready var input = $"Open-Chat-Panel/Input"
-
-
 @onready var chat_gui = $"."
+@onready var scene = get_tree().get_root().get_child(SceneManager.singleton_count)
+@onready var api = $"ASYNC-API"
 
 
-var empty_input : bool = false
 
 
 @export var opened_chat_position_y = -600
 @export var opened_chat_size_y = 500
 @export var closed_chat_position_y = -221
-
-
 @export var mini_chat_active : bool = true
-
-
-@onready var api = $APIRequest
-var message_list = []
-
-
-var socket = WebSocketPeer.new()
+@export var loading_text:String = "Загрузка..."
 @export var websocket_url = "ws://" + GLOBAL.choiced_server_address + "/ws/chat/1"
 
 
 
 
-@onready var scene = get_tree().get_root().get_child(SceneManager.singleton_count)
-
-
+var message_list = []
+var socket = WebSocketPeer.new()
+var empty_input : bool = false
+var bearer_header = ["Authorization: Bearer " + GLOBAL.from_auth_token]
+var socketthread = Thread.new()
+var httpthread = Thread.new()
 
 
 
 var token = JSON.stringify({
 		"token":GLOBAL.from_auth_token
 	})
-
-
-
-var bearer_header = ["Authorization: Bearer " + GLOBAL.from_auth_token]
+	
+	
 
 
 
 
 func _ready() -> void:
-	#touch_api(60)
-	connect_to_socket()
-	close_chat()
+	
+	#connect_to_socket()
+	socketthread.start(connect_to_socket)
+	httpthread.start(touch_api.bind(4))
 
 
 
@@ -70,24 +63,22 @@ func _ready() -> void:
 
 
 func touch_api(quantity : int):
-	#await get_tree().create_timer(0.2).timeout
-	messages_label.text = "Загрузка..."
+	messages_label.text = loading_text
 	message_list.clear()
-	api.request("http://" + GLOBAL.choiced_server_address + "/chat/1/messages?quantity=" + str(quantity), bearer_header, HTTPClient.METHOD_GET)
+	await api.request("http://" + GLOBAL.choiced_server_address + "/chat/1/messages?quantity=" + str(quantity), bearer_header, HTTPClient.METHOD_GET)
 
 
 
 
 func connect_to_socket():
 	socket.set_handshake_headers(bearer_header)
-	if socket.connect_to_url(websocket_url) != OK:
+	if await socket.connect_to_url(websocket_url) != OK:
 		printerr("[WEB-SOCKET] Невозможно подключиться!")
 	
 
 
 
 func _process(_delta):
-	
 	socket.poll()
 
 
@@ -100,10 +91,10 @@ func _process(_delta):
 			var json_response = JSON.parse_string(response)
 			print("\n[WEB-SOCKET] %s %s" % [response, "\n"])
 			
-			chat_to_down()
+			await chat_to_down()
 			if json_response:
 				#await get_tree().create_timer(2.0).timeout
-				_on_MessageReceived(json_response)
+				await _on_MessageReceived(json_response)
 
 
 
@@ -113,14 +104,20 @@ func _process(_delta):
 			printerr("\n[WEB-SOCKET] Оборвано соединение с Веб-Сокет: %d. Clean: %s" % [code, code != -1])
 			connect_to_socket()
 			socket.close()
-
+	
+	if messages_label.text == loading_text:
+		messages_label.add_theme_font_size_override("normal_font_size", 30)
+	else:
+		messages_label.add_theme_font_size_override("normal_font_size", 16)
 
 
 
 
 func chat_to_down():
-	await get_tree().create_timer(0.6).timeout
-	scroll_container.scroll_vertical += 9999
+	var s = 0
+	while s < 200:
+		s += 1
+		scroll_container.scroll_vertical += 9999
 
 
 
@@ -164,8 +161,11 @@ func _on_send_pressed() -> void:
 			scroll_container.size.y += 25
 
 
-
-	input.text = ""
+	var s = 0
+	while s < 400:
+		s += 1
+		input.text = ""
+		
 	chat_to_down()
 
 
@@ -199,8 +199,8 @@ func _on_api_request_request_completed(result: int, response_code: int, headers:
 
 
 func _on_MessageReceived(message):
-	message_list.append(message)
-	update_label()
+		message_list.append(message)
+		update_label()
 
 
 
@@ -220,7 +220,7 @@ func update_label():
 
 	text = text.strip_edges()
 	messages_label.text = text
-	await get_tree().create_timer(1.5).timeout
+	#await get_tree().create_timer(0.3).timeout
 	
 	
 	
@@ -243,7 +243,7 @@ func _on_close_chat_pressed() -> void:
 
 
 func open_chat():
-	touch_api(15)
+	await touch_api(15)
 	#mini_chat_active = false
 	chat_panel.visible = false
 	open_chat_panel.visible = true
@@ -270,7 +270,7 @@ func open_chat():
 
 
 func close_chat():
-	touch_api(4)
+	await touch_api(4)
 	var label_size = messages_label.get_total_character_count()
 	print("Размер сообщений: %d" % [label_size])
 	scroll_container.visible = true

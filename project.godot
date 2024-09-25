@@ -60,7 +60,7 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/CodeEditorBackground/plugin.cfg", "res://addons/debug_menu/plugin.cfg", "res://addons/dialogue_nodes/plugin.cfg", "res://addons/script-ide/plugin.cfg", "res://addons/shaker/plugin.cfg")
+enabled=PackedStringArray("res://addons/CodeEditorBackground/plugin.cfg", "res://addons/awaitable_http_request/plugin.cfg", "res://addons/debug_menu/plugin.cfg", "res://addons/dialogue_nodes/plugin.cfg", "res://addons/script-ide/plugin.cfg", "res://addons/shaker/plugin.cfg")
 
 [file_customization]
 
