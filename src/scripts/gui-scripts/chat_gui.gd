@@ -284,6 +284,7 @@ func close_chat():
 
 func hide_chat():
 	chat_panel.visible = false
+	messages_label.visible = false
 	hide_chat_button.visible = false
 	open_chat_hitbox.visible = false
 	show_chat_button.visible = true
@@ -293,6 +294,7 @@ func hide_chat():
 
 func show_chat():
 	chat_panel.visible = true
+	messages_label.visible = true
 	open_chat_hitbox.visible = true
 	hide_chat_button.visible = true
 	show_chat_button.visible = false
