@@ -1,0 +1,475 @@
+[gd_scene load_steps=25 format=3 uid="uid://byq6xvsghpq0l"]
+
+[ext_resource type="Script" path="res://src/scripts/game-scripts/profile.gd" id="1_i4wyw"]
+[ext_resource type="Texture2D" uid="uid://bgdwtn4hyecm4" path="res://src/ui/new-ui/backgrounds/Фон Профиль.png" id="2_svbct"]
+[ext_resource type="PackedScene" uid="uid://ccq03g2w30olb" path="res://src/scenes/gui-scenes/player_gui.tscn" id="3_2gba7"]
+[ext_resource type="Texture2D" uid="uid://vqsi2xceq2aj" path="res://src/ui/new-ui/misc/ПодложкаProfile.png" id="3_o3ik3"]
+[ext_resource type="PackedScene" uid="uid://cftgd0b0e3ei3" path="res://src/scenes/gui-scenes/chat_gui.tscn" id="4_6q5mg"]
+[ext_resource type="Texture2D" uid="uid://crwbfgo4npx33" path="res://src/ui/new-ui/misc/NazadBack.png" id="5_nmv2o"]
+[ext_resource type="Texture2D" uid="uid://dxi0gxdug10mj" path="res://src/ui/new-ui/buttons/Group 16.png" id="6_2rkkd"]
+[ext_resource type="Texture2D" uid="uid://cecdoardu6qjj" path="res://src/ui/new-ui/misc/Иконка.png" id="6_gdxdk"]
+[ext_resource type="Texture2D" uid="uid://c7dktbvvd34er" path="res://src/ui/new-ui/misc/Линия.png" id="7_8gi3w"]
+[ext_resource type="Texture2D" uid="uid://bdx77hg5h5ndv" path="res://src/ui/new-ui/misc/Resources.png" id="8_7wkpw"]
+[ext_resource type="Texture2D" uid="uid://drkrcqx0x8if5" path="res://src/ui/new-ui/misc/Карта.png" id="9_gkp10"]
+[ext_resource type="Texture2D" uid="uid://bjcc6kdkiiqkc" path="res://src/ui/new-ui/misc/Перс.png" id="10_bbkaa"]
+[ext_resource type="Texture2D" uid="uid://4kl18ynemumn" path="res://src/ui/new-ui/misc/Ник.png" id="11_436va"]
+[ext_resource type="Texture2D" uid="uid://cs5nbwdqpdb8c" path="res://src/ui/new-ui/misc/Класс и подкласс.png" id="12_q3o7d"]
+[ext_resource type="Texture2D" uid="uid://ccejtvdp2qj4w" path="res://src/ui/new-ui/misc/Виньетка.png" id="14_g8tdu"]
+[ext_resource type="Texture2D" uid="uid://26r6686vqe64" path="res://src/ui/new-ui/misc/Звезды.png" id="15_oga4l"]
+[ext_resource type="Texture2D" uid="uid://b2g67fge4nfls" path="res://src/ui/new-ui/misc/Раса _Тест иконка_.png" id="16_tr7rd"]
+[ext_resource type="Texture2D" uid="uid://cm8u2udsfc5to" path="res://src/ui/new-ui/misc/Скилы.png" id="17_gs6gm"]
+[ext_resource type="Texture2D" uid="uid://dddou35jmjx3i" path="res://src/ui/new-ui/buttons/Снаряга.png" id="18_nygk6"]
+[ext_resource type="Texture2D" uid="uid://cnorttilmaouw" path="res://src/ui/new-ui/buttons/Мощь.png" id="19_6y6xd"]
+[ext_resource type="Texture2D" uid="uid://qds2xeaqpagy" path="res://src/ui/new-ui/buttons/Кнопка сменить расу и класс.png" id="20_sxv2t"]
+[ext_resource type="Texture2D" uid="uid://cc0bpuafg26q8" path="res://src/ui/new-ui/misc/Уровень.png" id="21_xdayv"]
+[ext_resource type="Texture2D" uid="uid://6fnif71kyx6j" path="res://src/ui/new-ui/misc/Руны.png" id="22_nqwjt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wjli7"]
+
+[node name="Tavern-Profile" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i4wyw")
+metadata/_edit_use_anchors_ = true
+
+[node name="BackGround-Image" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+texture = ExtResource("2_svbct")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="MarginContainer4" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -318.5
+offset_top = -206.0
+offset_right = 318.5
+offset_bottom = -58.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer4"]
+layout_mode = 2
+texture = ExtResource("3_o3ik3")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -155.0
+offset_right = 77.0
+offset_bottom = -93.0
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+texture = ExtResource("5_nmv2o")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/TextureRect"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = -1.0
+offset_right = 62.0
+offset_bottom = 49.0
+texture = ExtResource("6_gdxdk")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MarginContainer/TextureRect/TextureRect"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 41.0
+offset_right = 49.0
+offset_bottom = 61.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 4
+text = "назад"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -248.0
+offset_top = 325.66
+offset_right = -161.0
+offset_bottom = 398.66
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back" type="Button" parent="MarginContainer2"]
+layout_mode = 2
+flat = true
+
+[node name="MarginContainer5" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -148.0
+offset_top = -161.0
+offset_right = 150.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer5"]
+layout_mode = 2
+texture = ExtResource("6_2rkkd")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MarginContainer5/TextureRect"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 17.0
+offset_right = 276.0
+offset_bottom = 51.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 28
+text = "ПОВЫСИТЬ УРОВЕНЬ"
+uppercase = true
+
+[node name="MarginContainer6" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -317.0
+offset_top = -208.0
+offset_right = 292.0
+offset_bottom = -206.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer6"]
+layout_mode = 2
+texture = ExtResource("7_8gi3w")
+expand_mode = 1
+
+[node name="MarginContainer7" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 778.0
+offset_right = 410.0
+offset_bottom = 807.0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer7"]
+layout_mode = 2
+texture = ExtResource("8_7wkpw")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="MarginContainer8" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 126.0
+offset_right = 453.0
+offset_bottom = 761.0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer8"]
+layout_mode = 2
+texture = ExtResource("9_gkp10")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer8/TextureRect"]
+layout_mode = 2
+offset_left = 31.0
+offset_top = 24.0
+offset_right = 382.0
+offset_bottom = 630.0
+texture = ExtResource("10_bbkaa")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="MarginContainer10" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 168.0
+offset_right = 441.0
+offset_bottom = 232.0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer10"]
+layout_mode = 2
+texture = ExtResource("11_436va")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="MarginContainer10/TextureRect"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 14.0
+offset_right = 278.0
+offset_bottom = 50.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 30
+text = "ИМЯ ИГРОКА"
+
+[node name="MarginContainer9" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 126.0
+offset_right = 128.0
+offset_bottom = 209.0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer9"]
+layout_mode = 2
+texture = ExtResource("12_q3o7d")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 134.0
+offset_top = 776.0
+offset_right = 364.0
+offset_bottom = 810.0
+theme_override_constants/separation = 100
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 20
+text = "0"
+uppercase = true
+
+[node name="Label2" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 20
+text = "0"
+uppercase = true
+
+[node name="Label3" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 20
+text = "0"
+uppercase = true
+
+[node name="MarginContainer12" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 440.0
+offset_right = 448.0
+offset_bottom = 757.0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer12"]
+layout_mode = 2
+texture = ExtResource("14_g8tdu")
+expand_mode = 1
+
+[node name="MarginContainer11" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 119.0
+offset_right = 340.0
+offset_bottom = 172.0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer11"]
+layout_mode = 2
+texture = ExtResource("15_oga4l")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="MarginContainer13" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 369.0
+offset_top = 126.0
+offset_right = 452.0
+offset_bottom = 208.0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer13"]
+layout_mode = 2
+texture = ExtResource("16_tr7rd")
+expand_mode = 1
+
+[node name="MarginContainer16" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 516.0
+offset_right = 403.0
+offset_bottom = 584.0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer16"]
+layout_mode = 2
+texture = ExtResource("17_gs6gm")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="MarginContainer18" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 590.0
+offset_right = 403.0
+offset_bottom = 683.0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer18"]
+layout_mode = 2
+texture = ExtResource("18_nygk6")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="MarginContainer19" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 687.0
+offset_right = 424.0
+offset_bottom = 748.0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer19"]
+layout_mode = 2
+texture = ExtResource("19_6y6xd")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="MarginContainer17" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 473.0
+offset_right = 318.0
+offset_bottom = 511.0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer17"]
+layout_mode = 2
+texture = ExtResource("20_sxv2t")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="MarginContainer17/TextureRect"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 3.0
+offset_right = 209.0
+offset_bottom = 64.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 28
+text = "сменить"
+uppercase = true
+
+[node name="MarginContainer14" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 233.0
+offset_right = 124.0
+offset_bottom = 264.0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer14"]
+layout_mode = 2
+texture = ExtResource("21_xdayv")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MarginContainer14/TextureRect"]
+layout_mode = 0
+offset_left = 21.0
+offset_right = 27.0
+offset_bottom = 20.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 4
+text = "1"
+
+[node name="Label2" type="Label" parent="MarginContainer14/TextureRect"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 14.0
+offset_right = 56.0
+offset_bottom = 34.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 12
+text = "уровень"
+
+[node name="MarginContainer15" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 264.0
+offset_right = 106.0
+offset_bottom = 300.0
+scale = Vector2(1.415, 1.415)
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer15"]
+layout_mode = 2
+texture = ExtResource("22_nqwjt")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="MarginContainer15/TextureRect"]
+layout_mode = 0
+offset_left = 8.48057
+offset_top = 26.1484
+offset_right = 30.4806
+offset_bottom = 46.1484
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 7
+text = "руны"
+
+[node name="ChatGui" parent="." instance=ExtResource("4_6q5mg")]
+layout_mode = 1
+offset_top = 21.0
+offset_bottom = 21.0
+
+[node name="PlayerGui" parent="." instance=ExtResource("3_2gba7")]
+layout_mode = 1
+offset_left = 6.0
+offset_right = 6.0
+
+[node name="BackHitBox" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = -159.0
+offset_right = 79.0
+offset_bottom = -87.0
+grow_vertical = 0
+
+[node name="BackHitBox" type="Button" parent="BackHitBox"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wjli7")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_wjli7")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_wjli7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_wjli7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_wjli7")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_wjli7")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wjli7")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_wjli7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wjli7")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_wjli7")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wjli7")
+flat = true
+
+[connection signal="pressed" from="MarginContainer2/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="BackHitBox/BackHitBox" to="." method="_on_back_hit_box_pressed"]

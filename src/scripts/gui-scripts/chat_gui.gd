@@ -6,42 +6,36 @@ extends Control
 
 @onready var chat_panel = $"Chat-Panel"
 @onready var open_chat_panel = $"Open-Chat-Panel"
-@onready var messages_label = $"ScrollContainer/Messages"
-@onready var scroll_container = $ScrollContainer
+@onready var messages_label = $"Messages"
 @onready var open_chat_hitbox = $"Open-Chat-Hitbox"
 @onready var show_chat_button = $"Show-Chat"
+@onready var send_button = $"Open-Chat-Panel/Send"
 @onready var hide_chat_button = $"Hide-Chat"
 @onready var hide_chat_label = $"Hide-Chat/Hide"
 @onready var input = $"Open-Chat-Panel/Input"
-
-
 @onready var chat_gui = $"."
+@onready var scene = get_tree().get_root().get_child(SceneManager.singleton_count)
+@onready var api = $"APIRequest"
 
 
-var empty_input : bool = false
 
 
 @export var opened_chat_position_y = -600
 @export var opened_chat_size_y = 500
 @export var closed_chat_position_y = -221
-
-
 @export var mini_chat_active : bool = true
-
-
-@onready var api = $APIRequest
-var message_list = []
-
-
-var socket = WebSocketPeer.new()
+@export var loading_text:String = "Загрузка..."
 @export var websocket_url = "ws://" + GLOBAL.choiced_server_address + "/ws/chat/1"
 
 
 
 
-@onready var scene = get_tree().get_root().get_child(SceneManager.singleton_count)
-
-
+var message_list = []
+var socket = WebSocketPeer.new()
+var empty_input : bool = false
+var bearer_header = ["Authorization: Bearer " + GLOBAL.from_auth_token]
+var is_opened:bool = false
+var is_max:bool = false
 
 
 
@@ -51,13 +45,13 @@ var token = JSON.stringify({
 
 
 
-var bearer_header = ["Authorization: Bearer " + GLOBAL.from_auth_token]
+
 
 
 
 
 func _ready() -> void:
-	#touch_api(60)
+	touch_api(15)
 	connect_to_socket()
 	close_chat()
 
@@ -70,10 +64,10 @@ func _ready() -> void:
 
 
 func touch_api(quantity : int):
-	#await get_tree().create_timer(0.2).timeout
-	messages_label.text = "Загрузка..."
+	messages_label.text = loading_text
 	message_list.clear()
 	api.request("http://" + GLOBAL.choiced_server_address + "/chat/1/messages?quantity=" + str(quantity), bearer_header, HTTPClient.METHOD_GET)
+	
 
 
 
@@ -87,7 +81,6 @@ func connect_to_socket():
 
 
 func _process(_delta):
-	
 	socket.poll()
 
 
@@ -100,10 +93,19 @@ func _process(_delta):
 			var json_response = JSON.parse_string(response)
 			print("\n[WEB-SOCKET] %s %s" % [response, "\n"])
 			
-			chat_to_down()
+			
 			if json_response:
-				#await get_tree().create_timer(2.0).timeout
 				_on_MessageReceived(json_response)
+				
+			if is_opened and !messages_label.position.y == -850 and !empty_input:
+				is_max = true
+				messages_label.position.y -= 25
+				messages_label.size.y += 15
+			if messages_label.position.y == -850 and !messages_label.size.y == 625:
+				messages_label.size.y += 15
+
+
+
 
 
 
@@ -113,14 +115,29 @@ func _process(_delta):
 			printerr("\n[WEB-SOCKET] Оборвано соединение с Веб-Сокет: %d. Clean: %s" % [code, code != -1])
 			connect_to_socket()
 			socket.close()
+	
+	
+	if messages_label.text == loading_text:
+		messages_label.add_theme_font_size_override("normal_font_size", 30)
+	else:
+		messages_label.add_theme_font_size_override("normal_font_size", 16)
+
+
+
+
+	if input.text == '':
+		empty_input = true
+	else:
+		empty_input = false
+
+
 
 
 
 
 
 func chat_to_down():
-	await get_tree().create_timer(0.6).timeout
-	scroll_container.scroll_vertical += 9999
+	messages_label.scroll_to_line(messages_label.get_line_count())
 
 
 
@@ -141,27 +158,24 @@ func _input(event):
 
 
 func _on_send_pressed() -> void:
-	
 	var msg = JSON.stringify({
 	
 	"text": input.text
 	
 })
+
+
 	print(msg)
-	socket.send_text(msg)
-	if input.text == "":
-		empty_input = true
+	if send_button.disabled == false:
+		await socket.send_text(msg)
 	
-	if !scroll_container.position.y == closed_chat_position_y and !scroll_container.position.y == -860:
-		if !empty_input:
-			await get_tree().create_timer(0.3).timeout
-			scroll_container.position.y -= 20
-			scroll_container.size.y += 15
-
-
-
+	send_button.disabled = true
+	
+	await get_tree().create_timer(0.25).timeout
 	input.text = ""
-	chat_to_down()
+	send_button.disabled = false
+
+
 
 
 
@@ -176,26 +190,19 @@ func _on_send_pressed() -> void:
 func _on_api_request_request_completed(result: int, response_code: int, headers: PackedStringArray, body: PackedByteArray) -> void:
 	var api_response = JSON.parse_string(body.get_string_from_utf8())
 	print(api_response)
-	
-	#var username = api_response[0]["username"]
-	#var text = api_response[0]["text"]
-	#var message = username + ": " + text
-	#message_list.append(message)
-	
-	#printerr(text)
 
-	#for amount in message_list:
-		#messages_label.text = message_list[0]
-
+	
 	
 	for message in api_response:
 		_on_MessageReceived(message)
 
 
 
+
+
 func _on_MessageReceived(message):
-	message_list.append(message)
-	update_label()
+		message_list.append(message)
+		update_label()
 
 
 
@@ -209,17 +216,14 @@ func update_label():
 		if "username" in message:
 			text += "[font=res://src/fonts/inika/Inika-Bold.ttf]" + message.username + "[/font]: " + message.text + "\n"
 	
-	#print("Массив: %s  |||  Размер массива (size): %d" % [message_list , message_list.size()])
-
+	
 
 
 	text = text.strip_edges()
 	messages_label.text = text
-	await get_tree().create_timer(1.5).timeout
 	
 	
-	
-	chat_to_down()
+
 
 
 
@@ -231,15 +235,22 @@ func _on_open_chat_pressed() -> void:
 
 func _on_close_chat_pressed() -> void:
 	close_chat()
-	chat_to_down()
+
 
 
 
 
 
 func open_chat():
-	touch_api(15)
-	#mini_chat_active = false
+	is_opened = true
+	messages_label.size.x = 465
+	messages_label.position.x = -227
+	if !is_max:
+		messages_label.size.y = 355
+		messages_label.position.y = -575
+	else:
+		messages_label.size.y = 625
+		messages_label.position.y = -850
 	chat_panel.visible = false
 	open_chat_panel.visible = true
 	show_chat_button.visible = false
@@ -247,45 +258,25 @@ func open_chat():
 	hide_chat_button.visible = false
 	$"../PlayerGui".navigation.visible = false
 	messages_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	scroll_container.position.x = -222
-	scroll_container.position.y = opened_chat_position_y
-	scroll_container.size.x = 456
-	scroll_container.size.y = opened_chat_size_y
-	scroll_container.scale = Vector2(1.0 , 1.0)
-	scroll_container.scroll_vertical = 99999
-	scroll_container.vertical_scroll_mode = 1
 	messages_label.visible_characters = -1
-	scroll_container.visible = true
-	
-	#if scroll_container.position.y == -590:
-			#scroll_container.size.y = 420
-			
 	chat_to_down()
 
 
 
+
+
 func close_chat():
-	touch_api(4)
-	var label_size = messages_label.get_total_character_count()
-	print("Размер сообщений: %d" % [label_size])
-	scroll_container.visible = true
+	is_opened = false
 	mini_chat_active = true
 	chat_panel.visible = true
 	open_chat_panel.visible = false
 	open_chat_hitbox.visible = true
 	show_chat_button.visible = false
 	hide_chat_button.visible = true
-	if scene.name == "Tavern":
-		$"../PlayerGui".navigation.visible = false
-	else:
-		$"../PlayerGui".navigation.visible = true
-	scroll_container.position.x = -36
-	scroll_container.position.y = closed_chat_position_y
-	scroll_container.size.x = 99999
-	scroll_container.size.y = 1003
-	scroll_container.scale = Vector2(1.0 , 1.0)
-	scroll_container.vertical_scroll_mode = 3
-	scroll_container.scroll_vertical = 0
+	messages_label.position.x = -35
+	messages_label.position.y = closed_chat_position_y
+	messages_label.size.x = 99999
+	messages_label.size.y = 88
 	chat_to_down()
 
 
@@ -294,7 +285,6 @@ func close_chat():
 func hide_chat():
 	chat_panel.visible = false
 	hide_chat_button.visible = false
-	scroll_container.visible = false
 	open_chat_hitbox.visible = false
 	show_chat_button.visible = true
 
@@ -305,7 +295,6 @@ func show_chat():
 	chat_panel.visible = true
 	open_chat_hitbox.visible = true
 	hide_chat_button.visible = true
-	scroll_container.visible = true
 	show_chat_button.visible = false
 
 

@@ -8,7 +8,7 @@ extends Control
 
 @onready var nickname_label = $PlayerInformation/PlayerName/Names
 
-@onready var current_home_texture = $Home/Home/Home/Main
+@onready var current_home_texture = $Home/Main
 
 @onready var navigation = $Navigation
 @onready var navigation_closed = $Navigation/NavigationClosed
@@ -28,9 +28,11 @@ func _ready() -> void:
 	nickname_label.text = GLOBAL.player_character_name
 	
 	if scene.name == "Navigation-menu":
-		current_home_texture.position.x = 190
-	elif scene.name == "Tavern":
-		current_home_texture.position.x = 0
+		current_home_texture.position.x = 191
+		navigation.visible = true
+	elif scene.name == "Tavern" or scene.name == "Tavern-Inventory" or scene.name == "Tavern-Profile":
+		current_home_texture.position.x = -9
+		navigation.visible = false
 
 
 

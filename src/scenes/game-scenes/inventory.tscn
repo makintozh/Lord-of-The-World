@@ -1,0 +1,336 @@
+[gd_scene load_steps=10 format=3 uid="uid://d4gab5d16y41x"]
+
+[ext_resource type="Script" path="res://src/scripts/game-scripts/inventory.gd" id="1_w2ad0"]
+[ext_resource type="Texture2D" uid="uid://b3fi3d1oo3o4m" path="res://src/ui/new-ui/backgrounds/Фон Инвентарь.png" id="2_4udfr"]
+[ext_resource type="PackedScene" uid="uid://ccq03g2w30olb" path="res://src/scenes/gui-scenes/player_gui.tscn" id="3_hg0vp"]
+[ext_resource type="Texture2D" uid="uid://b3kife8j8ghgg" path="res://src/ui/new-ui/misc/Подложка.png" id="5_nuqqo"]
+[ext_resource type="Texture2D" uid="uid://bmhryrnsgw04o" path="res://src/ui/new-ui/buttons/Кнопка сортировки.png" id="6_jcomx"]
+[ext_resource type="Texture2D" uid="uid://bhuwmumjuhob8" path="res://src/ui/new-ui/misc/Rectangle 205.png" id="7_6voo1"]
+[ext_resource type="Texture2D" uid="uid://bwx4784vsbdl6" path="res://src/ui/new-ui/misc/ПодложкаINVENTOR.png" id="8_pdo2r"]
+[ext_resource type="PackedScene" uid="uid://cftgd0b0e3ei3" path="res://src/scenes/gui-scenes/chat_gui.tscn" id="13_h15mg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_urc66"]
+texture = ExtResource("6_jcomx")
+expand_margin_left = 180.0
+expand_margin_top = 5.0
+expand_margin_right = 180.0
+expand_margin_bottom = 5.0
+
+[node name="Tavern-Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w2ad0")
+metadata/_edit_use_anchors_ = true
+
+[node name="BackGround-Image" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+texture = ExtResource("2_4udfr")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -34.0
+offset_top = 115.0
+offset_right = 528.0
+offset_bottom = 227.0
+texture = ExtResource("5_nuqqo")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 131.0
+offset_right = 320.0
+offset_bottom = 171.0
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "инвентарь"
+uppercase = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 187.0
+offset_right = 329.0
+offset_bottom = 227.0
+
+[node name="Button" type="Button" parent="MarginContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 31
+theme_override_styles/normal = SubResource("StyleBoxTexture_urc66")
+text = "СОРТИРОВКА"
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 238.0
+offset_right = 472.0
+offset_bottom = 1015.0
+texture = ExtResource("8_pdo2r")
+expand_mode = 1
+
+[node name="PlayerGui" parent="." instance=ExtResource("3_hg0vp")]
+layout_mode = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -213.0
+offset_top = -244.5
+offset_right = 271.0
+offset_bottom = 568.01
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.905, 0.905)
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+layout_mode = 2
+columns = 5
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect2" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect3" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect63" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect64" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect68" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect43" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect65" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect66" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect67" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect41" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect42" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect44" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect45" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect46" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect47" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect48" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect69" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect70" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect71" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect103" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect104" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect105" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect106" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect107" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect108" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect109" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect110" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect111" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect112" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect8" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect17" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect18" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect40" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect19" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect20" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect21" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect22" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect26" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect27" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect28" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect29" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect30" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect31" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect32" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect33" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect34" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect35" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect36" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect37" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect38" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect39" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect23" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect24" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="TextureRect25" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_6voo1")
+
+[node name="ChatGui" parent="." instance=ExtResource("13_h15mg")]
+layout_mode = 1
+offset_top = 21.0
+offset_bottom = 21.0

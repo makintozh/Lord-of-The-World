@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bmxnlxp7yh03s"
+path="res://.godot/imported/Нижнее меню.png-c28ca95432038c6f330e4896f0b7503e.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://src/ui/new-ui/misc/Нижнее меню.png"
+dest_files=["res://.godot/imported/Нижнее меню.png-c28ca95432038c6f330e4896f0b7503e.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=1
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=true
+process/normal_map_invert_y=false
+process/hdr_as_srgb=true
+process/hdr_clamp_exposure=true
+process/size_limit=0
+detect_3d/compress_to=0
