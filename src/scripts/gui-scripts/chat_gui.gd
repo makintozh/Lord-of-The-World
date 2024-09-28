@@ -47,16 +47,22 @@ var token = JSON.stringify({
 
 
 
-
+@onready var api_thread = Thread.new()
+@onready var websocket_thread = Thread.new()
+@onready var mutex = Mutex.new()
 
 
 func _ready() -> void:
-	touch_api(15)
-	connect_to_socket()
+	mutex.unlock()
+	api_thread.start(touch_api.bind(15), 2)
+	websocket_thread.start(connect_to_socket, 2)
 	close_chat()
 
 
 
+func _exit_tree():
+	api_thread.wait_to_finish()
+	websocket_thread.wait_to_finish()
 
 
 
@@ -167,7 +173,7 @@ func _on_send_pressed() -> void:
 
 	print(msg)
 	if send_button.disabled == false:
-		await socket.send_text(msg)
+		await Thread.new().start(socket.send_text.bind(msg))
 	
 	send_button.disabled = true
 	

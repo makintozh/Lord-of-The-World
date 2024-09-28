@@ -48,7 +48,7 @@ func _ready() -> void:
 		menu_city.scale = other_menu_scale
 
 
-	if scene.name == "Tavern" or scene.name == "Tavern-Inventory" or scene.name == "Tavern-Profile":
+	if scene.name == "Tavern" or scene.name == "Tavern-Inventory" or scene.name == "Tavern-Profile" or scene.name == "Tavern-Heroes":
 		current_home_texture.position.x = -9
 		menu_tavern.scale = current_menu_scale
 		menu_tavern.position = Vector2(0.53, 1140.0)

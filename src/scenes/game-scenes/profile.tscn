@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://byq6xvsghpq0l"]
+[gd_scene load_steps=59 format=3 uid="uid://byq6xvsghpq0l"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/profile.gd" id="1_i4wyw"]
 [ext_resource type="Texture2D" uid="uid://bgdwtn4hyecm4" path="res://src/ui/new-ui/backgrounds/Фон Профиль.png" id="2_svbct"]
@@ -28,13 +28,16 @@
 [ext_resource type="Texture2D" uid="uid://damcaehkr0ex1" path="res://src/ui/new-ui/resources/free-icon-shield-571923 1.png" id="24_5768i"]
 [ext_resource type="Texture2D" uid="uid://brttss4d7gf0n" path="res://src/ui/new-ui/resources/free-icon-power-1477228 1.png" id="25_ymx1i"]
 [ext_resource type="Texture2D" uid="uid://cqtr4x7t6y1r5" path="res://src/ui/new-ui/buttons/ParameterButton.png" id="26_0rr8l"]
+[ext_resource type="Texture2D" uid="uid://cqd8n0or4tgd6" path="res://src/ui/new-ui/buttons/close.png" id="27_jtf2h"]
 [ext_resource type="Texture2D" uid="uid://dncei5qte33jw" path="res://src/ui/new-ui/misc/EquipmentBG.png" id="27_yl0fe"]
+[ext_resource type="Texture2D" uid="uid://crlgn6vti3upa" path="res://src/ui/new-ui/misc/Rectangle 327.png" id="28_k821i"]
 [ext_resource type="Texture2D" uid="uid://baavmnnu8aaic" path="res://src/ui/new-ui/misc/set.png" id="28_s1grp"]
 [ext_resource type="Texture2D" uid="uid://bp7nmi54681th" path="res://src/ui/new-ui/misc/EquipElementBG.png" id="29_yo7yt"]
 [ext_resource type="Texture2D" uid="uid://cu8e6ly05v0ou" path="res://src/ui/new-ui/buttons/EquipAdd.png" id="30_bahi5"]
 [ext_resource type="Texture2D" uid="uid://ct143svyfr3s5" path="res://src/ui/new-ui/buttons/GREENEquipAdd.png" id="31_ll7ux"]
 [ext_resource type="Texture2D" uid="uid://c6a85ed1ru6ol" path="res://src/ui/new-ui/buttons/ORANGEEquipAdd.png" id="32_nj7tt"]
 [ext_resource type="Texture2D" uid="uid://bt2by1p6f8yxm" path="res://src/ui/new-ui/buttons/PURPLEEquipAdd.png" id="33_kxrgl"]
+[ext_resource type="Texture2D" uid="uid://c8ahsnq1apdxe" path="res://src/ui/new-ui/misc/equipment10.png" id="34_4fykp"]
 [ext_resource type="Texture2D" uid="uid://ch0o4g4ou11ha" path="res://src/ui/new-ui/misc/SkillsBG.png" id="34_n6pnh"]
 [ext_resource type="Texture2D" uid="uid://crd06cvef1h4h" path="res://src/ui/new-ui/misc/WHITESkill.png" id="35_lb2lk"]
 [ext_resource type="Texture2D" uid="uid://bjp1f0kahnsr7" path="res://src/ui/new-ui/misc/GREENSkill.png" id="36_m2nr2"]
@@ -44,11 +47,22 @@
 [ext_resource type="Texture2D" uid="uid://cudworw8bm0q4" path="res://src/ui/new-ui/buttons/LOCKED.png" id="40_qgd03"]
 [ext_resource type="Texture2D" uid="uid://d4eyxhtvj1fbo" path="res://src/ui/new-ui/misc/PURPLESkill.png" id="41_d5yir"]
 [ext_resource type="Texture2D" uid="uid://b1s0hju08vusr" path="res://src/ui/new-ui/buttons/Кнопка смены.png" id="42_rihu6"]
+[ext_resource type="Texture2D" uid="uid://w037ycda8a5j" path="res://src/ui/new-ui/misc/DialogBG.png" id="45_pouob"]
+[ext_resource type="Texture2D" uid="uid://d4hr2id4elqro" path="res://src/ui/new-ui/misc/GraphColor.png" id="46_u13mk"]
+[ext_resource type="Texture2D" uid="uid://c7bjgr8727lv7" path="res://src/ui/new-ui/misc/bonusclass.png" id="47_5m3yu"]
+[ext_resource type="Texture2D" uid="uid://bht3p3veeiw4p" path="res://src/ui/new-ui/buttons/red.png" id="48_k0amk"]
+[ext_resource type="Texture2D" uid="uid://dgnmy7vfcxgvv" path="res://src/ui/new-ui/misc/RasaDialogBG.png" id="49_qdq51"]
+[ext_resource type="Texture2D" uid="uid://ctmnjnjqy04dy" path="res://src/ui/new-ui/misc/Rectangle 259.png" id="50_yjoo6"]
+[ext_resource type="Texture2D" uid="uid://bkcndarp858l0" path="res://src/ui/new-ui/misc/rasa-graph.png" id="51_avmnq"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wjli7"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h1fgd"]
 load_path = "res://.godot/imported/Resources.png-646c1d9722c23ad7ccefb82c0175927f.editor.ctex"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t0vp7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hodhg"]
 
 [node name="Tavern-Profile" type="Control"]
 layout_mode = 3
@@ -99,9 +113,9 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 2.0
+offset_left = -1.0
 offset_top = -155.0
-offset_right = 77.0
+offset_right = 74.0
 offset_bottom = -93.0
 grow_vertical = 0
 
@@ -121,13 +135,13 @@ expand_mode = 1
 
 [node name="BackButtonLabel" type="Label" parent="BackButton/BackButton/BackButton"]
 layout_mode = 0
-offset_left = 9.0
+offset_left = 2.0
 offset_top = 41.0
-offset_right = 49.0
+offset_right = 53.0
 offset_bottom = 61.0
 theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
 theme_override_constants/outline_size = 4
-text = "назад"
+text = "закрыть"
 
 [node name="Line" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -153,9 +167,9 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = -5.0
+offset_left = -8.0
 offset_top = -159.0
-offset_right = 79.0
+offset_right = 76.0
 offset_bottom = -87.0
 grow_vertical = 0
 
@@ -501,6 +515,28 @@ texture = ExtResource("12_q3o7d")
 expand_mode = 1
 stretch_mode = 6
 
+[node name="ClassHitbox" type="MarginContainer" parent="CardFunctional"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 118.0
+offset_right = 115.0
+offset_bottom = 205.0
+
+[node name="ClassHitbox" type="Button" parent="CardFunctional/ClassHitbox"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t0vp7")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_t0vp7")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_t0vp7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_t0vp7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_t0vp7")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_t0vp7")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t0vp7")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_t0vp7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_t0vp7")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_t0vp7")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_t0vp7")
+flat = true
+
 [node name="Rasa" type="MarginContainer" parent="CardFunctional"]
 layout_mode = 0
 offset_left = 378.0
@@ -513,6 +549,28 @@ layout_mode = 2
 texture = ExtResource("16_tr7rd")
 expand_mode = 1
 stretch_mode = 6
+
+[node name="RasaHitbox" type="MarginContainer" parent="CardFunctional"]
+layout_mode = 0
+offset_left = 369.0
+offset_top = 119.0
+offset_right = 455.0
+offset_bottom = 198.0
+
+[node name="RasaHitbox" type="Button" parent="CardFunctional/RasaHitbox"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hodhg")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_hodhg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hodhg")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_hodhg")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_hodhg")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_hodhg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_hodhg")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_hodhg")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_hodhg")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_hodhg")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hodhg")
+flat = true
 
 [node name="ChangeButton" type="MarginContainer" parent="CardFunctional"]
 layout_mode = 0
@@ -752,6 +810,7 @@ theme_override_font_sizes/font_size = 10
 text = "300 000"
 
 [node name="StrengthIcon" type="MarginContainer" parent="CardParameter"]
+visible = false
 layout_mode = 0
 offset_left = 345.0
 offset_top = 685.0
@@ -787,6 +846,7 @@ theme_override_font_sizes/font_size = 14
 text = "мощи"
 
 [node name="ParameterButton" type="MarginContainer" parent="CardParameter"]
+visible = false
 layout_mode = 0
 offset_left = 178.0
 offset_top = 674.0
@@ -814,6 +874,160 @@ theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
 theme_override_constants/outline_size = 2
 theme_override_font_sizes/font_size = 6
 text = "параметры"
+
+[node name="CloseButton" type="MarginContainer" parent="CardParameter"]
+layout_mode = 0
+offset_left = 345.0
+offset_top = 676.0
+offset_right = 390.0
+offset_bottom = 713.0
+scale = Vector2(1.415, 1.415)
+
+[node name="CloseButton" type="TextureButton" parent="CardParameter/CloseButton"]
+layout_mode = 2
+texture_normal = ExtResource("27_jtf2h")
+texture_pressed = ExtResource("27_jtf2h")
+texture_hover = ExtResource("27_jtf2h")
+texture_disabled = ExtResource("27_jtf2h")
+texture_focused = ExtResource("27_jtf2h")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="CloseButtonLabel" type="Label" parent="CardParameter/CloseButton/CloseButton"]
+layout_mode = 0
+offset_left = 14.841
+offset_top = 25.4417
+offset_right = 40.8409
+offset_bottom = 45.4417
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 6
+text = "закрыть"
+
+[node name="MaximizedParameter" type="Control" parent="CardParameter"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Iconn3" type="MarginContainer" parent="CardParameter/MaximizedParameter"]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 676.0
+offset_right = 155.0
+offset_bottom = 693.0
+
+[node name="Iconn" type="TextureRect" parent="CardParameter/MaximizedParameter/Iconn3"]
+layout_mode = 2
+texture = ExtResource("28_k821i")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Iconn" type="Label" parent="CardParameter/MaximizedParameter/Iconn3/Iconn"]
+layout_mode = 2
+offset_left = 19.0
+offset_top = 3.0
+offset_right = 66.0
+offset_bottom = 18.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 10
+text = "300 000"
+
+[node name="Iconn2" type="MarginContainer" parent="CardParameter/MaximizedParameter"]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 694.0
+offset_right = 154.0
+offset_bottom = 711.0
+
+[node name="Iconn" type="TextureRect" parent="CardParameter/MaximizedParameter/Iconn2"]
+layout_mode = 2
+texture = ExtResource("28_k821i")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Iconn" type="Label" parent="CardParameter/MaximizedParameter/Iconn2/Iconn"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 3.0
+offset_right = 66.0
+offset_bottom = 18.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 10
+text = "100.0%"
+
+[node name="Iconn" type="MarginContainer" parent="CardParameter/MaximizedParameter"]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 712.0
+offset_right = 154.0
+offset_bottom = 728.0
+
+[node name="Iconn" type="TextureRect" parent="CardParameter/MaximizedParameter/Iconn"]
+layout_mode = 2
+texture = ExtResource("28_k821i")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Iconn" type="Label" parent="CardParameter/MaximizedParameter/Iconn/Iconn"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 3.0
+offset_right = 66.0
+offset_bottom = 18.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 10
+text = "100.0%"
+
+[node name="Iconn4" type="MarginContainer" parent="CardParameter/MaximizedParameter"]
+layout_mode = 0
+offset_left = 201.0
+offset_top = 676.0
+offset_right = 217.0
+offset_bottom = 693.0
+
+[node name="Iconn" type="TextureRect" parent="CardParameter/MaximizedParameter/Iconn4"]
+layout_mode = 2
+texture = ExtResource("28_k821i")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Iconn" type="Label" parent="CardParameter/MaximizedParameter/Iconn4/Iconn"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 3.0
+offset_right = 66.0
+offset_bottom = 18.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 10
+text = "100.0%"
+
+[node name="Iconn5" type="MarginContainer" parent="CardParameter/MaximizedParameter"]
+layout_mode = 0
+offset_left = 201.0
+offset_top = 694.0
+offset_right = 217.0
+offset_bottom = 710.0
+
+[node name="Iconn" type="TextureRect" parent="CardParameter/MaximizedParameter/Iconn5"]
+layout_mode = 2
+texture = ExtResource("28_k821i")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Iconn" type="Label" parent="CardParameter/MaximizedParameter/Iconn5/Iconn"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 3.0
+offset_right = 66.0
+offset_bottom = 18.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 10
+text = "100.0%"
 
 [node name="CardEquipment" type="Control" parent="."]
 anchors_preset = 0
@@ -1090,13 +1304,24 @@ layout_mode = 0
 offset_top = -39.0
 offset_right = 51.0
 offset_bottom = 12.0
-texture_normal = ExtResource("32_nj7tt")
-texture_pressed = ExtResource("32_nj7tt")
-texture_hover = ExtResource("32_nj7tt")
-texture_disabled = ExtResource("32_nj7tt")
-texture_focused = ExtResource("32_nj7tt")
+texture_normal = ExtResource("34_4fykp")
+texture_pressed = ExtResource("34_4fykp")
+texture_hover = ExtResource("34_4fykp")
+texture_disabled = ExtResource("34_4fykp")
+texture_focused = ExtResource("34_4fykp")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="SkillLabel" type="Label" parent="CardEquipment/EquipElements/TextureRect4/TextureRect7"]
+offset_left = 38.0
+offset_top = 40.0
+offset_right = 85.0
+offset_bottom = 57.0
+theme_override_colors/font_color = Color(1, 0.431373, 0, 1)
+theme_override_colors/font_outline_color = Color(0.407843, 0.176471, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 8
+text = "10"
 
 [node name="TextureRect5" type="TextureRect" parent="CardEquipment/EquipElements"]
 layout_mode = 0
@@ -1376,6 +1601,522 @@ texture_focused = ExtResource("42_rihu6")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="ClassAllianceDescription" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="ClassAllianceDescription"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 115.0
+offset_right = 443.0
+offset_bottom = 497.0
+texture = ExtResource("45_pouob")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ClassAllianceDescription/TextureRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 8.0
+offset_right = 143.0
+offset_bottom = 48.0
+theme_override_font_sizes/normal_font_size = 11
+bbcode_enabled = true
+text = "Класс - [color=00B2FF]Интеллект"
+scroll_active = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="ClassAllianceDescription/TextureRect"]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 8.0
+offset_right = 232.0
+offset_bottom = 48.0
+theme_override_font_sizes/normal_font_size = 11
+bbcode_enabled = true
+text = "Альянс - [color=6C7BFF]Маги"
+scroll_active = false
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="ClassAllianceDescription/TextureRect"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 199.0
+offset_right = 384.0
+offset_bottom = 239.0
+theme_override_font_sizes/normal_font_size = 11
+bbcode_enabled = true
+text = "[color=6C7BFF]Маг[color=FFF9F0] — надежный член отряда, наносящий основной урон в боях."
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="ClassAllianceDescription/TextureRect"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 39.0
+offset_right = 403.0
+offset_bottom = 164.0
+theme_override_font_sizes/normal_font_size = 14
+bbcode_enabled = true
+text = "Герой данного [color=00B2FF]класса[color=FFF9F0] с шансом[color=00B2FF] 15%[color=FFF9F0] может критически удвоить параметр способности. Наносит на [color=00B2FF]25%[color=FFF9F0] больше урона героям класса[color=FF0000] сила, [color=FFF9F0]а также получает на [color=00B2FF]25% [color=FFF9F0]меньше урона от них."
+fit_content = true
+scroll_active = false
+
+[node name="Graph" type="TextureRect" parent="ClassAllianceDescription"]
+layout_mode = 0
+offset_left = 174.0
+offset_top = 207.0
+offset_right = 276.0
+offset_bottom = 294.0
+texture = ExtResource("46_u13mk")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="ClassAllianceDescription/Graph"]
+offset_left = 43.0
+offset_top = 21.0
+offset_right = 74.0
+offset_bottom = 43.0
+theme_override_font_sizes/normal_font_size = 7
+bbcode_enabled = true
+text = "СИЛА"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="ClassAllianceDescription/Graph"]
+offset_left = 78.0
+offset_top = 75.0
+offset_right = 109.0
+offset_bottom = 97.0
+theme_override_font_sizes/normal_font_size = 5
+bbcode_enabled = true
+text = "ЛОВКОСТЬ"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="ClassAllianceDescription/Graph"]
+offset_left = 2.0
+offset_top = 75.0
+offset_right = 33.0
+offset_bottom = 97.0
+theme_override_font_sizes/normal_font_size = 5
+bbcode_enabled = true
+text = "ИНТЕЛЛЕКТ"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="ClassAllianceDescription/Graph"]
+offset_left = 47.0
+offset_top = 66.0
+offset_right = 78.0
+offset_bottom = 88.0
+theme_override_font_sizes/normal_font_size = 5
+bbcode_enabled = true
+text = "25%"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel7" type="RichTextLabel" parent="ClassAllianceDescription/Graph"]
+offset_left = 74.0
+offset_top = 34.0
+offset_right = 105.0
+offset_bottom = 56.0
+rotation = 0.698132
+theme_override_font_sizes/normal_font_size = 5
+bbcode_enabled = true
+text = "25%"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel8" type="RichTextLabel" parent="ClassAllianceDescription/Graph"]
+offset_left = 21.0
+offset_top = 40.0
+offset_right = 52.0
+offset_bottom = 62.0
+rotation = -0.698132
+theme_override_font_sizes/normal_font_size = 5
+bbcode_enabled = true
+text = "25%"
+fit_content = true
+scroll_active = false
+
+[node name="Bonus" type="TextureRect" parent="ClassAllianceDescription"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 341.0
+offset_right = 77.0
+offset_bottom = 380.0
+texture = ExtResource("47_5m3yu")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="ClassAllianceDescription/Bonus"]
+offset_left = 39.0
+offset_top = 10.0
+offset_right = 70.0
+offset_bottom = 32.0
+theme_override_font_sizes/normal_font_size = 10
+bbcode_enabled = true
+text = "бонус"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="ClassAllianceDescription/Bonus"]
+offset_left = 14.0
+offset_top = 28.0
+offset_right = 25.0
+offset_bottom = 42.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/normal_font_size = 9
+bbcode_enabled = true
+text = "2"
+fit_content = true
+scroll_active = false
+
+[node name="Bonus2" type="TextureRect" parent="ClassAllianceDescription"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 383.0
+offset_right = 77.0
+offset_bottom = 422.0
+texture = ExtResource("47_5m3yu")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="ClassAllianceDescription/Bonus2"]
+offset_left = 39.0
+offset_top = 10.0
+offset_right = 70.0
+offset_bottom = 32.0
+theme_override_font_sizes/normal_font_size = 10
+bbcode_enabled = true
+text = "бонус"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="ClassAllianceDescription/Bonus2"]
+offset_left = 14.0
+offset_top = 28.0
+offset_right = 25.0
+offset_bottom = 42.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/normal_font_size = 9
+bbcode_enabled = true
+text = "4"
+fit_content = true
+scroll_active = false
+
+[node name="Bonus3" type="TextureRect" parent="ClassAllianceDescription"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 426.0
+offset_right = 77.0
+offset_bottom = 465.0
+texture = ExtResource("47_5m3yu")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="ClassAllianceDescription/Bonus3"]
+offset_left = 39.0
+offset_top = 10.0
+offset_right = 70.0
+offset_bottom = 32.0
+theme_override_font_sizes/normal_font_size = 10
+bbcode_enabled = true
+text = "бонус"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="ClassAllianceDescription/Bonus3"]
+offset_left = 14.0
+offset_top = 28.0
+offset_right = 25.0
+offset_bottom = 42.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/normal_font_size = 9
+bbcode_enabled = true
+text = "6"
+fit_content = true
+scroll_active = false
+
+[node name="ClassCloseButton" type="MarginContainer" parent="ClassAllianceDescription"]
+offset_left = 178.0
+offset_top = 453.0
+offset_right = 264.0
+offset_bottom = 475.0
+scale = Vector2(1.415, 1.415)
+
+[node name="ClassCloseButton" type="TextureButton" parent="ClassAllianceDescription/ClassCloseButton"]
+layout_mode = 2
+texture_normal = ExtResource("48_k0amk")
+texture_pressed = ExtResource("48_k0amk")
+texture_hover = ExtResource("48_k0amk")
+texture_disabled = ExtResource("48_k0amk")
+texture_focused = ExtResource("48_k0amk")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ClassCloseButtonLabel" type="Label" parent="ClassAllianceDescription/ClassCloseButton/ClassCloseButton"]
+layout_mode = 0
+offset_left = 15.5477
+offset_top = 2.82686
+offset_right = 77.5477
+offset_bottom = 22.8269
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+text = "закрыть"
+uppercase = true
+
+[node name="RasaDescription" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 30.0
+
+[node name="TextureRect" type="TextureRect" parent="RasaDescription"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 115.0
+offset_right = 443.0
+offset_bottom = 483.0
+texture = ExtResource("49_qdq51")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="RasaDescription/TextureRect"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 6.0
+offset_right = 45.0
+offset_bottom = 44.0
+texture = ExtResource("50_yjoo6")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RasaDescription/TextureRect/TextureRect"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 11.0
+offset_right = 181.0
+offset_bottom = 51.0
+theme_override_font_sizes/normal_font_size = 17
+bbcode_enabled = true
+text = "Раса - [color=FFE500]Человек"
+scroll_active = false
+
+[node name="TextureRect2" type="TextureRect" parent="RasaDescription/TextureRect"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 62.0
+offset_right = 45.0
+offset_bottom = 100.0
+texture = ExtResource("50_yjoo6")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RasaDescription/TextureRect/TextureRect2"]
+layout_mode = 0
+offset_left = 40.0
+offset_right = 339.0
+offset_bottom = 63.0
+theme_override_font_sizes/normal_font_size = 13
+bbcode_enabled = true
+text = "[color=CC00FF]Паралич[color=FFF9F0]— обездвиживает цель на [color=CC00FF]n[color=FFF9F0] ходов с шансом [color=CC00FF]10%[color=FFF9F0]. Следующая атака по цели нанесет в [color=CC00FF]2[color=FFF9F0] раза больше урона."
+fit_content = true
+scroll_active = false
+
+[node name="TextureRect3" type="TextureRect" parent="RasaDescription/TextureRect"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 119.0
+offset_right = 45.0
+offset_bottom = 157.0
+texture = ExtResource("50_yjoo6")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RasaDescription/TextureRect/TextureRect3"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 1.0
+offset_right = 339.0
+offset_bottom = 64.0
+theme_override_font_sizes/normal_font_size = 13
+bbcode_enabled = true
+text = "[color=00F0FF]Иммунитет[color=FFF0F0] к кровотечению — данный эффект не действует на этого героя."
+fit_content = true
+scroll_active = false
+
+[node name="TextureRect4" type="TextureRect" parent="RasaDescription/TextureRect"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 168.0
+offset_right = 45.0
+offset_bottom = 206.0
+texture = ExtResource("50_yjoo6")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RasaDescription/TextureRect/TextureRect4"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 1.0
+offset_right = 339.0
+offset_bottom = 64.0
+theme_override_font_sizes/normal_font_size = 13
+bbcode_enabled = true
+text = "[color=FF6B00]Неприязнь[color=FFF9F0] к зверям — наносит на[color=FF6B00] 25% [color=FFF9F0]больше урона по зверям. Получает на[color=FF6B00] 25%[color=FFF9F0] меньше урона от зверей."
+fit_content = true
+scroll_active = false
+
+[node name="TextureRect5" type="TextureRect" parent="RasaDescription/TextureRect"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 206.0
+offset_right = 324.0
+offset_bottom = 307.0
+texture = ExtResource("51_avmnq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RasaDescription/TextureRect/TextureRect5"]
+offset_left = 6.0
+offset_top = 13.0
+offset_right = 305.0
+offset_bottom = 76.0
+theme_override_font_sizes/normal_font_size = 11
+bbcode_enabled = true
+text = "люди"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="RasaDescription/TextureRect/TextureRect5"]
+offset_left = 65.0
+offset_top = 13.0
+offset_right = 364.0
+offset_bottom = 76.0
+theme_override_font_sizes/normal_font_size = 11
+bbcode_enabled = true
+text = "звери"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="RasaDescription/TextureRect/TextureRect5"]
+offset_left = 126.0
+offset_top = 13.0
+offset_right = 425.0
+offset_bottom = 76.0
+theme_override_font_sizes/normal_font_size = 11
+bbcode_enabled = true
+text = "гномы"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="RasaDescription/TextureRect/TextureRect5"]
+offset_left = 183.0
+offset_top = 13.0
+offset_right = 482.0
+offset_bottom = 76.0
+theme_override_font_sizes/normal_font_size = 11
+bbcode_enabled = true
+text = "демоны"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="RasaDescription/TextureRect/TextureRect5"]
+offset_left = 1.0
+offset_top = 77.0
+offset_right = 300.0
+offset_bottom = 140.0
+theme_override_font_sizes/normal_font_size = 7
+bbcode_enabled = true
+text = "перворожд"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="RasaDescription/TextureRect/TextureRect5"]
+offset_left = 246.0
+offset_top = 13.0
+offset_right = 545.0
+offset_bottom = 76.0
+theme_override_font_sizes/normal_font_size = 11
+bbcode_enabled = true
+text = "нежить"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel7" type="RichTextLabel" parent="RasaDescription/TextureRect/TextureRect5"]
+offset_left = 66.0
+offset_top = 74.0
+offset_right = 365.0
+offset_bottom = 137.0
+theme_override_font_sizes/normal_font_size = 11
+bbcode_enabled = true
+text = "энты"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel8" type="RichTextLabel" parent="RasaDescription/TextureRect/TextureRect5"]
+offset_left = 127.0
+offset_top = 74.0
+offset_right = 426.0
+offset_bottom = 137.0
+theme_override_font_sizes/normal_font_size = 11
+bbcode_enabled = true
+text = "мехи"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel9" type="RichTextLabel" parent="RasaDescription/TextureRect/TextureRect5"]
+offset_left = 188.0
+offset_top = 74.0
+offset_right = 487.0
+offset_bottom = 137.0
+theme_override_font_sizes/normal_font_size = 11
+bbcode_enabled = true
+text = "орки"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel10" type="RichTextLabel" parent="RasaDescription/TextureRect/TextureRect5"]
+offset_left = 247.0
+offset_top = 74.0
+offset_right = 546.0
+offset_bottom = 137.0
+theme_override_font_sizes/normal_font_size = 11
+bbcode_enabled = true
+text = "эльфы"
+fit_content = true
+scroll_active = false
+
+[node name="RasaCloseButton" type="MarginContainer" parent="RasaDescription"]
+offset_left = 178.0
+offset_top = 434.0
+offset_right = 264.0
+offset_bottom = 456.0
+scale = Vector2(1.415, 1.415)
+
+[node name="RasaCloseButton" type="TextureButton" parent="RasaDescription/RasaCloseButton"]
+layout_mode = 2
+texture_normal = ExtResource("48_k0amk")
+texture_pressed = ExtResource("48_k0amk")
+texture_hover = ExtResource("48_k0amk")
+texture_disabled = ExtResource("48_k0amk")
+texture_focused = ExtResource("48_k0amk")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="RasaCloseButtonLabel" type="Label" parent="RasaDescription/RasaCloseButton/RasaCloseButton"]
+layout_mode = 0
+offset_left = 15.5477
+offset_top = 2.82686
+offset_right = 77.5477
+offset_bottom = 22.8269
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+text = "закрыть"
+uppercase = true
+
 [node name="ChatGui" parent="." instance=ExtResource("4_6q5mg")]
 visible = false
 layout_mode = 1
@@ -1389,3 +2130,9 @@ offset_left = 6.0
 offset_right = 6.0
 
 [connection signal="pressed" from="BackHitBox/BackHitBox" to="." method="_on_back_hit_box_pressed"]
+[connection signal="pressed" from="CardFunctional/ClassHitbox/ClassHitbox" to="." method="_on_class_hitbox_pressed"]
+[connection signal="pressed" from="CardFunctional/RasaHitbox/RasaHitbox" to="." method="_on_rasa_hitbox_pressed"]
+[connection signal="pressed" from="CardParameter/ParameterButton/ParameterButton" to="." method="_on_parameter_button_pressed"]
+[connection signal="pressed" from="CardParameter/CloseButton/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="ClassAllianceDescription/ClassCloseButton/ClassCloseButton" to="." method="_on_class_close_button_pressed"]
+[connection signal="pressed" from="RasaDescription/RasaCloseButton/RasaCloseButton" to="." method="_on_rasa_close_button_pressed"]

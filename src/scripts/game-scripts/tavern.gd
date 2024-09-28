@@ -35,3 +35,9 @@ func _on_profile_pressed() -> void:
 
 func _on_inventory_pressed() -> void:
 	SceneManager.go_to_scene("res://src/scenes/game-scenes/inventory.tscn")
+
+
+
+
+func _on_heroes_pressed() -> void:
+	SceneManager.go_to_scene("res://src/scenes/game-scenes/heroes.tscn")

@@ -42,18 +42,18 @@ func _ready():
 
 func _on_character_create_button_pressed(): 
 	var character_data = JSON.stringify({
-  "name": player_character_name.text,
+  "name": "string",
   "avatar": "#",
-  "race_id": 0,
-  "class_id": 0,
-  "subclass_id": 0,
+  "race_id": 1,
+  "class_id": 1,
+  "subclass_id": 1,
   "character_type": "string",
   "summand_params": {
-	"damage": 0,
-	"vitality": 0,
-	"speed": 0,
-	"resistance": 0,
-	"evasion": 0
+	"damage": 10,
+	"vitality": 10,
+	"speed": 10,
+	"resistance": 10,
+	"evasion": 10
   },
   "multiplier_params": {
 	"damage": 1,
@@ -86,13 +86,13 @@ func _on_api_character_create_request_completed(result, response_code, headers, 
 	print(str(response_code))
 	
 	
-	if response_code == 200:
-		SceneManager.go_to_scene("res://src/scenes/game-scenes/navigation-menu.tscn")
-		refreshing.visible = false
-	else:
-		printerr("Token is invalid on Character Create")
-		push_error("Token is invalid on Character Create")
-		SceneManager.exit_app("/createcharacter token error")
+	#if response_code == 200:
+	SceneManager.go_to_scene("res://src/scenes/game-scenes/navigation-menu.tscn")
+	refreshing.visible = false
+	#else:
+		#printerr("Token is invalid on Character Create")
+		#push_error("Token is invalid on Character Create")
+		#SceneManager.exit_app("/createcharacter token error")
 
 
 
