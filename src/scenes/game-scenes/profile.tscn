@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://byq6xvsghpq0l"]
+[gd_scene load_steps=47 format=3 uid="uid://byq6xvsghpq0l"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/profile.gd" id="1_i4wyw"]
 [ext_resource type="Texture2D" uid="uid://bgdwtn4hyecm4" path="res://src/ui/new-ui/backgrounds/Фон Профиль.png" id="2_svbct"]
@@ -9,22 +9,46 @@
 [ext_resource type="Texture2D" uid="uid://dxi0gxdug10mj" path="res://src/ui/new-ui/buttons/Group 16.png" id="6_2rkkd"]
 [ext_resource type="Texture2D" uid="uid://cecdoardu6qjj" path="res://src/ui/new-ui/misc/Иконка.png" id="6_gdxdk"]
 [ext_resource type="Texture2D" uid="uid://c7dktbvvd34er" path="res://src/ui/new-ui/misc/Линия.png" id="7_8gi3w"]
-[ext_resource type="Texture2D" uid="uid://bdx77hg5h5ndv" path="res://src/ui/new-ui/misc/Resources.png" id="8_7wkpw"]
-[ext_resource type="Texture2D" uid="uid://drkrcqx0x8if5" path="res://src/ui/new-ui/misc/Карта.png" id="9_gkp10"]
+[ext_resource type="Texture2D" uid="uid://b7c7ihbiyo0ce" path="res://src/ui/new-ui/misc/CardEllipse.png" id="7_nc4g5"]
 [ext_resource type="Texture2D" uid="uid://bjcc6kdkiiqkc" path="res://src/ui/new-ui/misc/Перс.png" id="10_bbkaa"]
+[ext_resource type="Texture2D" uid="uid://cm2wscetywcsn" path="res://src/ui/new-ui/misc/CardFrame.png" id="10_sohps"]
 [ext_resource type="Texture2D" uid="uid://4kl18ynemumn" path="res://src/ui/new-ui/misc/Ник.png" id="11_436va"]
+[ext_resource type="Texture2D" uid="uid://btt6w586fh2vg" path="res://src/ui/new-ui/misc/ActiveStar.png" id="12_3vpuq"]
 [ext_resource type="Texture2D" uid="uid://cs5nbwdqpdb8c" path="res://src/ui/new-ui/misc/Класс и подкласс.png" id="12_q3o7d"]
+[ext_resource type="Texture2D" uid="uid://bljaw1cgxyqf2" path="res://src/ui/new-ui/misc/DisabledStar.png" id="13_xoj40"]
 [ext_resource type="Texture2D" uid="uid://ccejtvdp2qj4w" path="res://src/ui/new-ui/misc/Виньетка.png" id="14_g8tdu"]
-[ext_resource type="Texture2D" uid="uid://26r6686vqe64" path="res://src/ui/new-ui/misc/Звезды.png" id="15_oga4l"]
-[ext_resource type="Texture2D" uid="uid://b2g67fge4nfls" path="res://src/ui/new-ui/misc/Раса _Тест иконка_.png" id="16_tr7rd"]
-[ext_resource type="Texture2D" uid="uid://cm8u2udsfc5to" path="res://src/ui/new-ui/misc/Скилы.png" id="17_gs6gm"]
-[ext_resource type="Texture2D" uid="uid://dddou35jmjx3i" path="res://src/ui/new-ui/buttons/Снаряга.png" id="18_nygk6"]
-[ext_resource type="Texture2D" uid="uid://cnorttilmaouw" path="res://src/ui/new-ui/buttons/Мощь.png" id="19_6y6xd"]
+[ext_resource type="Texture2D" uid="uid://6fnif71kyx6j" path="res://src/ui/new-ui/buttons/Руны.png" id="15_374xr"]
+[ext_resource type="Texture2D" uid="uid://vt54qu4f8cmo" path="res://src/ui/new-ui/misc/класс.png" id="15_peaja"]
+[ext_resource type="Texture2D" uid="uid://cucpock8yo3a1" path="res://src/ui/new-ui/misc/Раса _Тест иконка_.png" id="16_tr7rd"]
 [ext_resource type="Texture2D" uid="uid://qds2xeaqpagy" path="res://src/ui/new-ui/buttons/Кнопка сменить расу и класс.png" id="20_sxv2t"]
+[ext_resource type="Texture2D" uid="uid://bvipwyrf2nnvu" path="res://src/ui/new-ui/misc/BGCardStrength.png" id="21_iwmsx"]
 [ext_resource type="Texture2D" uid="uid://cc0bpuafg26q8" path="res://src/ui/new-ui/misc/Уровень.png" id="21_xdayv"]
-[ext_resource type="Texture2D" uid="uid://6fnif71kyx6j" path="res://src/ui/new-ui/misc/Руны.png" id="22_nqwjt"]
+[ext_resource type="Texture2D" uid="uid://bc3n3a53wrce2" path="res://src/ui/new-ui/resources/free-icon-heart-753252.png" id="22_wfnrq"]
+[ext_resource type="Texture2D" uid="uid://ba3p5hawdpubu" path="res://src/ui/new-ui/resources/free-icon-magic-staff-10606252.png" id="23_ouaxv"]
+[ext_resource type="Texture2D" uid="uid://damcaehkr0ex1" path="res://src/ui/new-ui/resources/free-icon-shield-571923 1.png" id="24_5768i"]
+[ext_resource type="Texture2D" uid="uid://brttss4d7gf0n" path="res://src/ui/new-ui/resources/free-icon-power-1477228 1.png" id="25_ymx1i"]
+[ext_resource type="Texture2D" uid="uid://cqtr4x7t6y1r5" path="res://src/ui/new-ui/buttons/ParameterButton.png" id="26_0rr8l"]
+[ext_resource type="Texture2D" uid="uid://dncei5qte33jw" path="res://src/ui/new-ui/misc/EquipmentBG.png" id="27_yl0fe"]
+[ext_resource type="Texture2D" uid="uid://baavmnnu8aaic" path="res://src/ui/new-ui/misc/set.png" id="28_s1grp"]
+[ext_resource type="Texture2D" uid="uid://bp7nmi54681th" path="res://src/ui/new-ui/misc/EquipElementBG.png" id="29_yo7yt"]
+[ext_resource type="Texture2D" uid="uid://cu8e6ly05v0ou" path="res://src/ui/new-ui/buttons/EquipAdd.png" id="30_bahi5"]
+[ext_resource type="Texture2D" uid="uid://ct143svyfr3s5" path="res://src/ui/new-ui/buttons/GREENEquipAdd.png" id="31_ll7ux"]
+[ext_resource type="Texture2D" uid="uid://c6a85ed1ru6ol" path="res://src/ui/new-ui/buttons/ORANGEEquipAdd.png" id="32_nj7tt"]
+[ext_resource type="Texture2D" uid="uid://bt2by1p6f8yxm" path="res://src/ui/new-ui/buttons/PURPLEEquipAdd.png" id="33_kxrgl"]
+[ext_resource type="Texture2D" uid="uid://ch0o4g4ou11ha" path="res://src/ui/new-ui/misc/SkillsBG.png" id="34_n6pnh"]
+[ext_resource type="Texture2D" uid="uid://crd06cvef1h4h" path="res://src/ui/new-ui/misc/WHITESkill.png" id="35_lb2lk"]
+[ext_resource type="Texture2D" uid="uid://bjp1f0kahnsr7" path="res://src/ui/new-ui/misc/GREENSkill.png" id="36_m2nr2"]
+[ext_resource type="Texture2D" uid="uid://bykphop3u5wa8" path="res://src/ui/new-ui/misc/BLUESkill.png" id="37_nboov"]
+[ext_resource type="Texture2D" uid="uid://77tvisddnd10" path="res://src/ui/new-ui/buttons/UPGRADE.png" id="38_4okbv"]
+[ext_resource type="Texture2D" uid="uid://b5dqk6iwkcq5e" path="res://src/ui/new-ui/misc/ORANGESkill.png" id="39_x4mux"]
+[ext_resource type="Texture2D" uid="uid://cudworw8bm0q4" path="res://src/ui/new-ui/buttons/LOCKED.png" id="40_qgd03"]
+[ext_resource type="Texture2D" uid="uid://d4eyxhtvj1fbo" path="res://src/ui/new-ui/misc/PURPLESkill.png" id="41_d5yir"]
+[ext_resource type="Texture2D" uid="uid://b1s0hju08vusr" path="res://src/ui/new-ui/buttons/Кнопка смены.png" id="42_rihu6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wjli7"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h1fgd"]
+load_path = "res://.godot/imported/Resources.png-646c1d9722c23ad7ccefb82c0175927f.editor.ctex"
 
 [node name="Tavern-Profile" type="Control"]
 layout_mode = 3
@@ -51,7 +75,7 @@ texture = ExtResource("2_svbct")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="MarginContainer4" type="MarginContainer" parent="."]
+[node name="DownBG" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -65,12 +89,12 @@ offset_bottom = -58.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer4"]
+[node name="DownBG" type="TextureRect" parent="DownBG"]
 layout_mode = 2
 texture = ExtResource("3_o3ik3")
 expand_mode = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="BackButton" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -81,12 +105,12 @@ offset_right = 77.0
 offset_bottom = -93.0
 grow_vertical = 0
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+[node name="BackButton" type="TextureRect" parent="BackButton"]
 layout_mode = 2
 texture = ExtResource("5_nmv2o")
 expand_mode = 1
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/TextureRect"]
+[node name="BackButton" type="TextureRect" parent="BackButton/BackButton"]
 layout_mode = 0
 offset_left = 11.0
 offset_top = -1.0
@@ -95,7 +119,7 @@ offset_bottom = 49.0
 texture = ExtResource("6_gdxdk")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="MarginContainer/TextureRect/TextureRect"]
+[node name="BackButtonLabel" type="Label" parent="BackButton/BackButton/BackButton"]
 layout_mode = 0
 offset_left = 9.0
 offset_top = 41.0
@@ -105,56 +129,7 @@ theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
 theme_override_constants/outline_size = 4
 text = "назад"
 
-[node name="MarginContainer2" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -248.0
-offset_top = 325.66
-offset_right = -161.0
-offset_bottom = 398.66
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Back" type="Button" parent="MarginContainer2"]
-layout_mode = 2
-flat = true
-
-[node name="MarginContainer5" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -148.0
-offset_top = -161.0
-offset_right = 150.0
-offset_bottom = -96.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer5"]
-layout_mode = 2
-texture = ExtResource("6_2rkkd")
-expand_mode = 1
-
-[node name="Label" type="Label" parent="MarginContainer5/TextureRect"]
-layout_mode = 0
-offset_left = 43.0
-offset_top = 17.0
-offset_right = 276.0
-offset_bottom = 51.0
-theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
-theme_override_constants/outline_size = 4
-theme_override_font_sizes/font_size = 28
-text = "ПОВЫСИТЬ УРОВЕНЬ"
-uppercase = true
-
-[node name="MarginContainer6" type="MarginContainer" parent="."]
+[node name="Line" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -168,282 +143,10 @@ offset_bottom = -206.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer6"]
+[node name="Line" type="TextureRect" parent="Line"]
 layout_mode = 2
 texture = ExtResource("7_8gi3w")
 expand_mode = 1
-
-[node name="MarginContainer7" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_left = 85.0
-offset_top = 778.0
-offset_right = 410.0
-offset_bottom = 807.0
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer7"]
-layout_mode = 2
-texture = ExtResource("8_7wkpw")
-expand_mode = 1
-stretch_mode = 6
-
-[node name="MarginContainer8" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 126.0
-offset_right = 453.0
-offset_bottom = 761.0
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer8"]
-layout_mode = 2
-texture = ExtResource("9_gkp10")
-expand_mode = 1
-
-[node name="TextureRect2" type="TextureRect" parent="MarginContainer8/TextureRect"]
-layout_mode = 2
-offset_left = 31.0
-offset_top = 24.0
-offset_right = 382.0
-offset_bottom = 630.0
-texture = ExtResource("10_bbkaa")
-expand_mode = 1
-stretch_mode = 6
-
-[node name="MarginContainer10" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_left = 44.0
-offset_top = 168.0
-offset_right = 441.0
-offset_bottom = 232.0
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer10"]
-layout_mode = 2
-texture = ExtResource("11_436va")
-expand_mode = 1
-stretch_mode = 6
-
-[node name="Label" type="Label" parent="MarginContainer10/TextureRect"]
-layout_mode = 0
-offset_left = 126.0
-offset_top = 14.0
-offset_right = 278.0
-offset_bottom = 50.0
-theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
-theme_override_constants/outline_size = 4
-theme_override_font_sizes/font_size = 30
-text = "ИМЯ ИГРОКА"
-
-[node name="MarginContainer9" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_left = 44.0
-offset_top = 126.0
-offset_right = 128.0
-offset_bottom = 209.0
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer9"]
-layout_mode = 2
-texture = ExtResource("12_q3o7d")
-expand_mode = 1
-stretch_mode = 6
-
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 134.0
-offset_top = 776.0
-offset_right = 364.0
-offset_bottom = 810.0
-theme_override_constants/separation = 100
-
-[node name="Label" type="Label" parent="HBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
-theme_override_constants/outline_size = 4
-theme_override_font_sizes/font_size = 20
-text = "0"
-uppercase = true
-
-[node name="Label2" type="Label" parent="HBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
-theme_override_constants/outline_size = 4
-theme_override_font_sizes/font_size = 20
-text = "0"
-uppercase = true
-
-[node name="Label3" type="Label" parent="HBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
-theme_override_constants/outline_size = 4
-theme_override_font_sizes/font_size = 20
-text = "0"
-uppercase = true
-
-[node name="MarginContainer12" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_left = 48.0
-offset_top = 440.0
-offset_right = 448.0
-offset_bottom = 757.0
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer12"]
-layout_mode = 2
-texture = ExtResource("14_g8tdu")
-expand_mode = 1
-
-[node name="MarginContainer11" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_left = 160.0
-offset_top = 119.0
-offset_right = 340.0
-offset_bottom = 172.0
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer11"]
-layout_mode = 2
-texture = ExtResource("15_oga4l")
-expand_mode = 1
-stretch_mode = 6
-
-[node name="MarginContainer13" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_left = 369.0
-offset_top = 126.0
-offset_right = 452.0
-offset_bottom = 208.0
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer13"]
-layout_mode = 2
-texture = ExtResource("16_tr7rd")
-expand_mode = 1
-
-[node name="MarginContainer16" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_left = 89.0
-offset_top = 516.0
-offset_right = 403.0
-offset_bottom = 584.0
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer16"]
-layout_mode = 2
-texture = ExtResource("17_gs6gm")
-expand_mode = 1
-stretch_mode = 6
-
-[node name="MarginContainer18" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_left = 89.0
-offset_top = 590.0
-offset_right = 403.0
-offset_bottom = 683.0
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer18"]
-layout_mode = 2
-texture = ExtResource("18_nygk6")
-expand_mode = 1
-stretch_mode = 6
-
-[node name="MarginContainer19" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_left = 80.0
-offset_top = 687.0
-offset_right = 424.0
-offset_bottom = 748.0
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer19"]
-layout_mode = 2
-texture = ExtResource("19_6y6xd")
-expand_mode = 1
-stretch_mode = 6
-
-[node name="MarginContainer17" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_left = 165.0
-offset_top = 473.0
-offset_right = 318.0
-offset_bottom = 511.0
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer17"]
-layout_mode = 2
-texture = ExtResource("20_sxv2t")
-expand_mode = 1
-stretch_mode = 6
-
-[node name="Label" type="Label" parent="MarginContainer17/TextureRect"]
-layout_mode = 0
-offset_left = 23.0
-offset_top = 3.0
-offset_right = 209.0
-offset_bottom = 64.0
-theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
-theme_override_constants/outline_size = 4
-theme_override_font_sizes/font_size = 28
-text = "сменить"
-uppercase = true
-
-[node name="MarginContainer14" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_left = 70.0
-offset_top = 233.0
-offset_right = 124.0
-offset_bottom = 264.0
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer14"]
-layout_mode = 2
-texture = ExtResource("21_xdayv")
-expand_mode = 1
-
-[node name="Label" type="Label" parent="MarginContainer14/TextureRect"]
-layout_mode = 0
-offset_left = 21.0
-offset_right = 27.0
-offset_bottom = 20.0
-theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
-theme_override_constants/outline_size = 4
-text = "1"
-
-[node name="Label2" type="Label" parent="MarginContainer14/TextureRect"]
-layout_mode = 0
-offset_left = 6.0
-offset_top = 14.0
-offset_right = 56.0
-offset_bottom = 34.0
-theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
-theme_override_constants/outline_size = 4
-theme_override_font_sizes/font_size = 12
-text = "уровень"
-
-[node name="MarginContainer15" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_left = 71.0
-offset_top = 264.0
-offset_right = 106.0
-offset_bottom = 300.0
-scale = Vector2(1.415, 1.415)
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer15"]
-layout_mode = 2
-texture = ExtResource("22_nqwjt")
-expand_mode = 1
-stretch_mode = 6
-
-[node name="Label" type="Label" parent="MarginContainer15/TextureRect"]
-layout_mode = 0
-offset_left = 8.48057
-offset_top = 26.1484
-offset_right = 30.4806
-offset_bottom = 46.1484
-theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
-theme_override_constants/outline_size = 2
-theme_override_font_sizes/font_size = 7
-text = "руны"
-
-[node name="ChatGui" parent="." instance=ExtResource("4_6q5mg")]
-layout_mode = 1
-offset_top = 21.0
-offset_bottom = 21.0
-
-[node name="PlayerGui" parent="." instance=ExtResource("3_2gba7")]
-layout_mode = 1
-offset_left = 6.0
-offset_right = 6.0
 
 [node name="BackHitBox" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -471,5 +174,1218 @@ theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_wjli7")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_wjli7")
 flat = true
 
-[connection signal="pressed" from="MarginContainer2/Back" to="." method="_on_back_pressed"]
+[node name="ProfileResources" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -975.0
+offset_right = -210.0
+offset_bottom = -935.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ResBG" type="MarginContainer" parent="ProfileResources"]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 778.0
+offset_right = 410.0
+offset_bottom = 807.0
+
+[node name="ResBG" type="TextureRect" parent="ProfileResources/ResBG"]
+layout_mode = 2
+texture = SubResource("CompressedTexture2D_h1fgd")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Res1" type="Label" parent="ProfileResources"]
+layout_mode = 2
+offset_left = 134.0
+offset_top = 783.0
+offset_right = 142.0
+offset_bottom = 803.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 16
+text = "0"
+uppercase = true
+
+[node name="Res2" type="Label" parent="ProfileResources"]
+layout_mode = 2
+offset_left = 242.0
+offset_top = 783.0
+offset_right = 250.0
+offset_bottom = 803.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 16
+text = "0"
+uppercase = true
+
+[node name="Res3" type="Label" parent="ProfileResources"]
+layout_mode = 2
+offset_left = 353.0
+offset_top = 783.0
+offset_right = 361.0
+offset_bottom = 803.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 16
+text = "0"
+uppercase = true
+
+[node name="LevelUPButton" type="MarginContainer" parent="ProfileResources"]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 814.0
+offset_right = 400.0
+offset_bottom = 879.0
+
+[node name="LevelUP" type="TextureButton" parent="ProfileResources/LevelUPButton"]
+layout_mode = 2
+texture_normal = ExtResource("6_2rkkd")
+texture_pressed = ExtResource("6_2rkkd")
+texture_hover = ExtResource("6_2rkkd")
+texture_disabled = ExtResource("6_2rkkd")
+texture_focused = ExtResource("6_2rkkd")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="LevelUPLabel" type="Label" parent="ProfileResources/LevelUPButton/LevelUP"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 17.0
+offset_right = 276.0
+offset_bottom = 51.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 28
+text = "ПОВЫСИТЬ УРОВЕНЬ"
+uppercase = true
+
+[node name="PlayerCardDesign" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CardBG" type="MarginContainer" parent="PlayerCardDesign"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 127.0
+offset_right = 99.0
+offset_bottom = 1576.0
+scale = Vector2(0.435, 0.435)
+
+[node name="CardBG" type="ColorRect" parent="PlayerCardDesign/CardBG"]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CardBG2" type="MarginContainer" parent="PlayerCardDesign"]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 127.0
+offset_right = 467.0
+offset_bottom = 1576.0
+scale = Vector2(0.435, 0.435)
+
+[node name="CardBG" type="ColorRect" parent="PlayerCardDesign/CardBG2"]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CardBG3" type="MarginContainer" parent="PlayerCardDesign"]
+layout_mode = 0
+offset_left = 435.0
+offset_top = 128.0
+offset_right = 489.0
+offset_bottom = 1001.0
+rotation = 1.5708
+scale = Vector2(0.435, 0.435)
+
+[node name="CardBG" type="ColorRect" parent="PlayerCardDesign/CardBG3"]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CardBG4" type="MarginContainer" parent="PlayerCardDesign"]
+layout_mode = 0
+offset_left = 435.0
+offset_top = 736.0
+offset_right = 481.0
+offset_bottom = 1642.0
+rotation = 1.5708
+scale = Vector2(0.435, 0.435)
+
+[node name="CardBG" type="ColorRect" parent="PlayerCardDesign/CardBG4"]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CardEllipse" type="MarginContainer" parent="PlayerCardDesign"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 127.0
+offset_right = 969.0
+offset_bottom = 1575.9
+scale = Vector2(0.435, 0.435)
+
+[node name="CardEllipse" type="TextureRect" parent="PlayerCardDesign/CardEllipse"]
+layout_mode = 2
+texture = ExtResource("7_nc4g5")
+expand_mode = 1
+
+[node name="Icon" type="MarginContainer" parent="PlayerCardDesign"]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 153.0
+offset_right = 872.0
+offset_bottom = 1493.0
+scale = Vector2(0.435, 0.435)
+
+[node name="Icon" type="TextureRect" parent="PlayerCardDesign/Icon"]
+layout_mode = 2
+texture = ExtResource("10_bbkaa")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="PlayerName" type="MarginContainer" parent="PlayerCardDesign"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 153.0
+offset_right = 441.0
+offset_bottom = 192.0
+
+[node name="PlayerName" type="TextureRect" parent="PlayerCardDesign/PlayerName"]
+layout_mode = 2
+texture = ExtResource("11_436va")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="PlayerNameLabel" type="Label" parent="PlayerCardDesign/PlayerName/PlayerName"]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 2.0
+offset_right = 281.0
+offset_bottom = 38.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 26
+text = "ИМЯ ИГРОКА"
+
+[node name="CardFrame" type="MarginContainer" parent="PlayerCardDesign"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 127.0
+offset_right = 969.0
+offset_bottom = 1575.9
+scale = Vector2(0.435, 0.435)
+
+[node name="CardFrame" type="TextureRect" parent="PlayerCardDesign/CardFrame"]
+layout_mode = 2
+texture = ExtResource("10_sohps")
+expand_mode = 1
+
+[node name="Shadow" type="MarginContainer" parent="PlayerCardDesign"]
+modulate = Color(1, 1, 1, 0.541176)
+layout_mode = 0
+offset_left = 35.0
+offset_top = 487.0
+offset_right = 971.0
+offset_bottom = 1108.0
+scale = Vector2(0.435, 0.435)
+
+[node name="Shadow" type="TextureRect" parent="PlayerCardDesign/Shadow"]
+layout_mode = 2
+texture = ExtResource("14_g8tdu")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Stars" type="Control" parent="PlayerCardDesign"]
+anchors_preset = 0
+offset_left = 106.0
+offset_top = -3.0
+offset_right = 146.0
+offset_bottom = 37.0
+
+[node name="FirstStar" type="MarginContainer" parent="PlayerCardDesign/Stars"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 127.0
+offset_right = 111.0
+offset_bottom = 207.0
+scale = Vector2(0.435, 0.435)
+
+[node name="FirstStar" type="TextureRect" parent="PlayerCardDesign/Stars/FirstStar"]
+layout_mode = 2
+texture = ExtResource("12_3vpuq")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="SecondStar" type="MarginContainer" parent="PlayerCardDesign/Stars"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 120.0
+offset_right = 164.0
+offset_bottom = 217.0
+scale = Vector2(0.435, 0.435)
+
+[node name="SecondStar" type="TextureRect" parent="PlayerCardDesign/Stars/SecondStar"]
+layout_mode = 2
+texture = ExtResource("12_3vpuq")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="ThirdStar" type="MarginContainer" parent="PlayerCardDesign/Stars"]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 115.0
+offset_right = 217.0
+offset_bottom = 223.0
+scale = Vector2(0.435, 0.435)
+
+[node name="ThirdStar" type="TextureRect" parent="PlayerCardDesign/Stars/ThirdStar"]
+layout_mode = 2
+texture = ExtResource("12_3vpuq")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="FourthStar" type="MarginContainer" parent="PlayerCardDesign/Stars"]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 120.0
+offset_right = 252.0
+offset_bottom = 217.0
+scale = Vector2(0.435, 0.435)
+
+[node name="FourthStar" type="TextureRect" parent="PlayerCardDesign/Stars/FourthStar"]
+layout_mode = 2
+texture = ExtResource("13_xoj40")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="FifthStar" type="MarginContainer" parent="PlayerCardDesign/Stars"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 126.0
+offset_right = 274.0
+offset_bottom = 206.0
+scale = Vector2(0.435, 0.435)
+
+[node name="FifthStar" type="TextureRect" parent="PlayerCardDesign/Stars/FifthStar"]
+layout_mode = 2
+texture = ExtResource("13_xoj40")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="CardFunctional" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ClassFrame" type="MarginContainer" parent="CardFunctional"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 125.0
+offset_right = 109.0
+offset_bottom = 193.0
+
+[node name="ClassIcon" type="TextureRect" parent="CardFunctional/ClassFrame"]
+layout_mode = 2
+texture = ExtResource("15_peaja")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="ClassFrame" type="TextureRect" parent="CardFunctional/ClassFrame"]
+layout_mode = 2
+texture = ExtResource("12_q3o7d")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Rasa" type="MarginContainer" parent="CardFunctional"]
+layout_mode = 0
+offset_left = 378.0
+offset_top = 125.0
+offset_right = 446.0
+offset_bottom = 190.0
+
+[node name="Rasa" type="TextureRect" parent="CardFunctional/Rasa"]
+layout_mode = 2
+texture = ExtResource("16_tr7rd")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="ChangeButton" type="MarginContainer" parent="CardFunctional"]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 405.0
+offset_right = 318.0
+offset_bottom = 446.0
+
+[node name="ChangeButton" type="TextureButton" parent="CardFunctional/ChangeButton"]
+layout_mode = 2
+texture_normal = ExtResource("20_sxv2t")
+texture_pressed = ExtResource("20_sxv2t")
+texture_hover = ExtResource("20_sxv2t")
+texture_disabled = ExtResource("20_sxv2t")
+texture_focused = ExtResource("20_sxv2t")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ChangeButtonLabel" type="Label" parent="CardFunctional/ChangeButton/ChangeButton"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 3.0
+offset_right = 209.0
+offset_bottom = 64.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 28
+text = "сменить"
+uppercase = true
+
+[node name="Level" type="MarginContainer" parent="CardFunctional"]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 233.0
+offset_right = 117.0
+offset_bottom = 264.0
+
+[node name="Level" type="TextureRect" parent="CardFunctional/Level"]
+layout_mode = 2
+texture = ExtResource("21_xdayv")
+expand_mode = 1
+
+[node name="Level" type="Label" parent="CardFunctional/Level/Level"]
+layout_mode = 0
+offset_left = 21.0
+offset_right = 27.0
+offset_bottom = 20.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 4
+text = "1"
+
+[node name="LavelLVL" type="Label" parent="CardFunctional/Level/Level"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 14.0
+offset_right = 56.0
+offset_bottom = 34.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 12
+text = "уровень"
+
+[node name="RunesButton" type="MarginContainer" parent="CardFunctional"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 270.0
+offset_right = 100.0
+offset_bottom = 306.0
+scale = Vector2(1.415, 1.415)
+
+[node name="RunesButton" type="TextureButton" parent="CardFunctional/RunesButton"]
+layout_mode = 2
+texture_normal = ExtResource("15_374xr")
+texture_pressed = ExtResource("15_374xr")
+texture_hover = ExtResource("15_374xr")
+texture_disabled = ExtResource("15_374xr")
+texture_focused = ExtResource("15_374xr")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="RunesButtonLabel" type="Label" parent="CardFunctional/RunesButton/RunesButton"]
+layout_mode = 0
+offset_left = 10.6007
+offset_top = 27.5618
+offset_right = 32.6007
+offset_bottom = 47.5618
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 6
+text = "руны"
+
+[node name="StyleButton" type="MarginContainer" parent="CardFunctional"]
+layout_mode = 0
+offset_left = 364.0
+offset_top = 198.0
+offset_right = 399.0
+offset_bottom = 234.0
+scale = Vector2(1.415, 1.415)
+
+[node name="StyleButton" type="TextureButton" parent="CardFunctional/StyleButton"]
+layout_mode = 2
+texture_normal = ExtResource("15_374xr")
+texture_pressed = ExtResource("15_374xr")
+texture_hover = ExtResource("15_374xr")
+texture_disabled = ExtResource("15_374xr")
+texture_focused = ExtResource("15_374xr")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="StyleButtonLabel" type="Label" parent="CardFunctional/StyleButton/StyleButton"]
+layout_mode = 0
+offset_left = 9.18728
+offset_top = 27.5618
+offset_right = 31.1873
+offset_bottom = 47.5618
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 6
+text = "образы"
+
+[node name="PresetButton" type="MarginContainer" parent="CardFunctional"]
+layout_mode = 0
+offset_left = 364.0
+offset_top = 250.0
+offset_right = 399.0
+offset_bottom = 286.0
+scale = Vector2(1.415, 1.415)
+
+[node name="PresetButton" type="TextureButton" parent="CardFunctional/PresetButton"]
+layout_mode = 2
+texture_normal = ExtResource("15_374xr")
+texture_pressed = ExtResource("15_374xr")
+texture_hover = ExtResource("15_374xr")
+texture_disabled = ExtResource("15_374xr")
+texture_focused = ExtResource("15_374xr")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="PresetButtonLabel" type="Label" parent="CardFunctional/PresetButton/PresetButton"]
+layout_mode = 0
+offset_left = 8.48054
+offset_top = 27.5618
+offset_right = 30.4806
+offset_bottom = 47.5618
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 6
+text = "пресеты"
+
+[node name="CardParameter" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ParameretBG" type="MarginContainer" parent="CardParameter"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 668.0
+offset_right = 416.0
+offset_bottom = 736.0
+
+[node name="ParameretBG" type="TextureRect" parent="CardParameter/ParameretBG"]
+layout_mode = 2
+texture = ExtResource("21_iwmsx")
+expand_mode = 1
+
+[node name="HealthIcon" type="MarginContainer" parent="CardParameter"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 675.0
+offset_right = 89.0
+offset_bottom = 692.0
+
+[node name="HealthIcon" type="TextureRect" parent="CardParameter/HealthIcon"]
+layout_mode = 2
+texture = ExtResource("22_wfnrq")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Health" type="Label" parent="CardParameter/HealthIcon/HealthIcon"]
+layout_mode = 2
+offset_left = 19.0
+offset_top = 3.0
+offset_right = 66.0
+offset_bottom = 18.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 10
+text = "3 000 000"
+
+[node name="MagicIcon" type="MarginContainer" parent="CardParameter"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 694.0
+offset_right = 88.0
+offset_bottom = 711.0
+
+[node name="MagicIcon" type="TextureRect" parent="CardParameter/MagicIcon"]
+layout_mode = 2
+texture = ExtResource("23_ouaxv")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Magic" type="Label" parent="CardParameter/MagicIcon/MagicIcon"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 3.0
+offset_right = 66.0
+offset_bottom = 18.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 10
+text = "300 000"
+
+[node name="DefendIcon" type="MarginContainer" parent="CardParameter"]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 712.0
+offset_right = 87.0
+offset_bottom = 728.0
+
+[node name="DefendIcon" type="TextureRect" parent="CardParameter/DefendIcon"]
+layout_mode = 2
+texture = ExtResource("24_5768i")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Defend" type="Label" parent="CardParameter/DefendIcon/DefendIcon"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 3.0
+offset_right = 66.0
+offset_bottom = 18.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 10
+text = "300 000"
+
+[node name="StrengthIcon" type="MarginContainer" parent="CardParameter"]
+layout_mode = 0
+offset_left = 345.0
+offset_top = 685.0
+offset_right = 371.0
+offset_bottom = 714.0
+
+[node name="StrengthIcon" type="TextureRect" parent="CardParameter/StrengthIcon"]
+layout_mode = 2
+texture = ExtResource("25_ymx1i")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Strength" type="Label" parent="CardParameter/StrengthIcon/StrengthIcon"]
+layout_mode = 2
+offset_left = -73.0
+offset_top = -3.0
+offset_right = -5.0
+offset_bottom = 24.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 22
+text = "300 000"
+
+[node name="Type" type="Label" parent="CardParameter/StrengthIcon/StrengthIcon"]
+layout_mode = 2
+offset_left = -54.0
+offset_top = 18.0
+offset_right = 14.0
+offset_bottom = 45.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+text = "мощи"
+
+[node name="ParameterButton" type="MarginContainer" parent="CardParameter"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 674.0
+offset_right = 218.0
+offset_bottom = 712.0
+scale = Vector2(1.415, 1.415)
+
+[node name="ParameterButton" type="TextureButton" parent="CardParameter/ParameterButton"]
+layout_mode = 2
+texture_normal = ExtResource("26_0rr8l")
+texture_pressed = ExtResource("26_0rr8l")
+texture_hover = ExtResource("26_0rr8l")
+texture_disabled = ExtResource("26_0rr8l")
+texture_focused = ExtResource("26_0rr8l")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ParameterButtonLabel" type="Label" parent="CardParameter/ParameterButton/ParameterButton"]
+layout_mode = 0
+offset_left = 7.77385
+offset_top = 25.4417
+offset_right = 33.7738
+offset_bottom = 45.4417
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 6
+text = "параметры"
+
+[node name="CardEquipment" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="EquipmentBG" type="MarginContainer" parent="CardEquipment"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 550.0
+offset_right = 416.0
+offset_bottom = 662.0
+
+[node name="EquipmentBG" type="TextureRect" parent="CardEquipment/EquipmentBG"]
+layout_mode = 2
+texture = ExtResource("27_yl0fe")
+expand_mode = 1
+
+[node name="AllSetsButton" type="MarginContainer" parent="CardEquipment"]
+layout_mode = 0
+offset_left = 306.0
+offset_top = 631.0
+offset_right = 406.0
+offset_bottom = 657.0
+
+[node name="AllSetsButton" type="TextureButton" parent="CardEquipment/AllSetsButton"]
+layout_mode = 2
+texture_normal = ExtResource("20_sxv2t")
+texture_pressed = ExtResource("20_sxv2t")
+texture_hover = ExtResource("20_sxv2t")
+texture_disabled = ExtResource("20_sxv2t")
+texture_focused = ExtResource("20_sxv2t")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="AllSetsButtonLabel" type="Label" parent="CardEquipment/AllSetsButton/AllSetsButton"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 3.0
+offset_right = 199.0
+offset_bottom = 64.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 18
+text = "все сеты"
+uppercase = true
+
+[node name="SetLabel" type="MarginContainer" parent="CardEquipment"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 635.0
+offset_right = 199.0
+offset_bottom = 661.0
+
+[node name="SetLabel" type="RichTextLabel" parent="CardEquipment/SetLabel"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 14
+bbcode_enabled = true
+text = "[color=FF6E00]Легендарный[color=F000000] сет:"
+fit_content = true
+
+[node name="Sets" type="Control" parent="CardEquipment"]
+anchors_preset = 0
+offset_left = 197.0
+offset_top = 624.0
+offset_right = 237.0
+offset_bottom = 664.0
+scale = Vector2(0.125, 0.125)
+
+[node name="TextureRect" type="TextureRect" parent="CardEquipment/Sets"]
+layout_mode = 2
+texture = ExtResource("28_s1grp")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="ParameterButtonLabel" type="Label" parent="CardEquipment/Sets/TextureRect"]
+layout_mode = 0
+offset_left = 141.667
+offset_top = 25.0002
+offset_right = 327.667
+offset_bottom = 116.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 17
+theme_override_font_sizes/font_size = 65
+text = "120.1%"
+
+[node name="TextureRect2" type="TextureRect" parent="CardEquipment/Sets"]
+layout_mode = 2
+offset_left = 325.0
+offset_right = 325.0
+texture = ExtResource("28_s1grp")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="ParameterButtonLabel" type="Label" parent="CardEquipment/Sets/TextureRect2"]
+layout_mode = 0
+offset_left = 141.667
+offset_top = 25.0002
+offset_right = 327.667
+offset_bottom = 116.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 17
+theme_override_font_sizes/font_size = 65
+text = "120.1%"
+
+[node name="TextureRect3" type="TextureRect" parent="CardEquipment/Sets"]
+layout_mode = 2
+offset_top = 151.923
+offset_bottom = 151.923
+texture = ExtResource("28_s1grp")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="ParameterButtonLabel" type="Label" parent="CardEquipment/Sets/TextureRect3"]
+layout_mode = 0
+offset_left = 141.667
+offset_top = 25.0002
+offset_right = 327.667
+offset_bottom = 116.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 17
+theme_override_font_sizes/font_size = 65
+text = "120.1%"
+
+[node name="TextureRect4" type="TextureRect" parent="CardEquipment/Sets"]
+layout_mode = 2
+offset_left = 325.0
+offset_top = 151.923
+offset_right = 325.0
+offset_bottom = 151.923
+texture = ExtResource("28_s1grp")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="ParameterButtonLabel" type="Label" parent="CardEquipment/Sets/TextureRect4"]
+layout_mode = 0
+offset_left = 141.667
+offset_top = 25.0002
+offset_right = 327.667
+offset_bottom = 116.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 17
+theme_override_font_sizes/font_size = 65
+text = "120.1%"
+
+[node name="EquipElements" type="Control" parent="CardEquipment"]
+anchors_preset = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 45.0
+offset_bottom = 45.0
+
+[node name="TextureRect" type="TextureRect" parent="CardEquipment/EquipElements"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 590.0
+offset_right = 126.0
+offset_bottom = 616.0
+texture = ExtResource("29_yo7yt")
+expand_mode = 1
+
+[node name="Res1" type="Label" parent="CardEquipment/EquipElements/TextureRect"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 13.0
+offset_right = 66.0
+offset_bottom = 33.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 8
+text = "оружие"
+
+[node name="TextureRect7" type="TextureButton" parent="CardEquipment/EquipElements/TextureRect"]
+layout_mode = 0
+offset_top = -39.0
+offset_right = 51.0
+offset_bottom = 12.0
+texture_normal = ExtResource("30_bahi5")
+texture_pressed = ExtResource("30_bahi5")
+texture_hover = ExtResource("30_bahi5")
+texture_disabled = ExtResource("30_bahi5")
+texture_focused = ExtResource("30_bahi5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureRect2" type="TextureRect" parent="CardEquipment/EquipElements"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 590.0
+offset_right = 179.0
+offset_bottom = 616.0
+texture = ExtResource("29_yo7yt")
+expand_mode = 1
+
+[node name="Res1" type="Label" parent="CardEquipment/EquipElements/TextureRect2"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 13.0
+offset_right = 67.0
+offset_bottom = 33.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 8
+text = "голова"
+
+[node name="TextureRect7" type="TextureButton" parent="CardEquipment/EquipElements/TextureRect2"]
+layout_mode = 0
+offset_top = -39.0
+offset_right = 51.0
+offset_bottom = 12.0
+texture_normal = ExtResource("31_ll7ux")
+texture_pressed = ExtResource("31_ll7ux")
+texture_hover = ExtResource("31_ll7ux")
+texture_disabled = ExtResource("31_ll7ux")
+texture_focused = ExtResource("31_ll7ux")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureRect3" type="TextureRect" parent="CardEquipment/EquipElements"]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 590.0
+offset_right = 232.0
+offset_bottom = 616.0
+texture = ExtResource("29_yo7yt")
+expand_mode = 1
+
+[node name="Res1" type="Label" parent="CardEquipment/EquipElements/TextureRect3"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 13.0
+offset_right = 70.0
+offset_bottom = 33.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 8
+text = "торс"
+
+[node name="TextureRect7" type="TextureButton" parent="CardEquipment/EquipElements/TextureRect3"]
+layout_mode = 0
+offset_top = -39.0
+offset_right = 51.0
+offset_bottom = 12.0
+texture_normal = ExtResource("31_ll7ux")
+texture_pressed = ExtResource("31_ll7ux")
+texture_hover = ExtResource("31_ll7ux")
+texture_disabled = ExtResource("31_ll7ux")
+texture_focused = ExtResource("31_ll7ux")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureRect4" type="TextureRect" parent="CardEquipment/EquipElements"]
+layout_mode = 0
+offset_left = 234.0
+offset_top = 590.0
+offset_right = 285.0
+offset_bottom = 616.0
+texture = ExtResource("29_yo7yt")
+expand_mode = 1
+
+[node name="Res1" type="Label" parent="CardEquipment/EquipElements/TextureRect4"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 13.0
+offset_right = 70.0
+offset_bottom = 33.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 8
+text = "руки"
+
+[node name="TextureRect7" type="TextureButton" parent="CardEquipment/EquipElements/TextureRect4"]
+layout_mode = 0
+offset_top = -39.0
+offset_right = 51.0
+offset_bottom = 12.0
+texture_normal = ExtResource("32_nj7tt")
+texture_pressed = ExtResource("32_nj7tt")
+texture_hover = ExtResource("32_nj7tt")
+texture_disabled = ExtResource("32_nj7tt")
+texture_focused = ExtResource("32_nj7tt")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureRect5" type="TextureRect" parent="CardEquipment/EquipElements"]
+layout_mode = 0
+offset_left = 287.0
+offset_top = 590.0
+offset_right = 338.0
+offset_bottom = 616.0
+texture = ExtResource("29_yo7yt")
+expand_mode = 1
+
+[node name="Res1" type="Label" parent="CardEquipment/EquipElements/TextureRect5"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 13.0
+offset_right = 70.0
+offset_bottom = 33.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 8
+text = "пояс"
+
+[node name="TextureRect7" type="TextureButton" parent="CardEquipment/EquipElements/TextureRect5"]
+layout_mode = 0
+offset_top = -39.0
+offset_right = 51.0
+offset_bottom = 12.0
+texture_normal = ExtResource("33_kxrgl")
+texture_pressed = ExtResource("33_kxrgl")
+texture_hover = ExtResource("33_kxrgl")
+texture_disabled = ExtResource("33_kxrgl")
+texture_focused = ExtResource("33_kxrgl")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureRect6" type="TextureRect" parent="CardEquipment/EquipElements"]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 590.0
+offset_right = 391.0
+offset_bottom = 616.0
+texture = ExtResource("29_yo7yt")
+expand_mode = 1
+
+[node name="Res1" type="Label" parent="CardEquipment/EquipElements/TextureRect6"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 13.0
+offset_right = 69.0
+offset_bottom = 33.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 8
+text = "ноги"
+
+[node name="TextureRect7" type="TextureButton" parent="CardEquipment/EquipElements/TextureRect6"]
+layout_mode = 0
+offset_top = -39.0
+offset_right = 51.0
+offset_bottom = 12.0
+texture_normal = ExtResource("32_nj7tt")
+texture_pressed = ExtResource("32_nj7tt")
+texture_hover = ExtResource("32_nj7tt")
+texture_disabled = ExtResource("32_nj7tt")
+texture_focused = ExtResource("32_nj7tt")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="CardSkills" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SkillsBG" type="MarginContainer" parent="CardSkills"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 452.0
+offset_right = 416.0
+offset_bottom = 542.0
+
+[node name="SkillsBG" type="TextureRect" parent="CardSkills/SkillsBG"]
+layout_mode = 2
+texture = ExtResource("34_n6pnh")
+expand_mode = 1
+
+[node name="SkillsLabel" type="Label" parent="CardSkills/SkillsBG/SkillsBG"]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 73.0
+offset_right = 199.0
+offset_bottom = 90.0
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+text = "навыки"
+
+[node name="Skill" type="MarginContainer" parent="CardSkills"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 458.0
+offset_right = 121.0
+offset_bottom = 516.0
+
+[node name="Skill" type="TextureRect" parent="CardSkills/Skill"]
+layout_mode = 2
+texture = ExtResource("35_lb2lk")
+expand_mode = 1
+
+[node name="SkillLabel" type="Label" parent="CardSkills/Skill/Skill"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 46.0
+offset_right = 87.0
+offset_bottom = 63.0
+theme_override_colors/font_outline_color = Color(0.407843, 0.176471, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 10
+text = "1
+"
+
+[node name="Skill2" type="MarginContainer" parent="CardSkills"]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 458.0
+offset_right = 176.0
+offset_bottom = 516.0
+
+[node name="Skill" type="TextureRect" parent="CardSkills/Skill2"]
+layout_mode = 2
+texture = ExtResource("36_m2nr2")
+expand_mode = 1
+
+[node name="SkillLabel" type="Label" parent="CardSkills/Skill2/Skill"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 46.0
+offset_right = 82.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(0, 1, 0.278431, 1)
+theme_override_colors/font_outline_color = Color(0, 0.392157, 0.109804, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 10
+text = "250"
+
+[node name="Skill3" type="MarginContainer" parent="CardSkills"]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 458.0
+offset_right = 231.0
+offset_bottom = 516.0
+
+[node name="Skill" type="TextureRect" parent="CardSkills/Skill3"]
+layout_mode = 2
+texture = ExtResource("37_nboov")
+expand_mode = 1
+
+[node name="Skill2" type="TextureRect" parent="CardSkills/Skill3/Skill"]
+layout_mode = 2
+offset_left = 37.0
+offset_top = -5.0
+offset_right = 59.0
+offset_bottom = 15.0
+texture = ExtResource("38_4okbv")
+expand_mode = 1
+
+[node name="SkillLabel" type="Label" parent="CardSkills/Skill3/Skill"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 46.0
+offset_right = 82.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(0, 0.968627, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.298039, 0.309804, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 10
+text = "500
+"
+
+[node name="Skill4" type="MarginContainer" parent="CardSkills"]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 458.0
+offset_right = 286.0
+offset_bottom = 516.0
+
+[node name="Skill" type="TextureRect" parent="CardSkills/Skill4"]
+layout_mode = 2
+texture = ExtResource("39_x4mux")
+expand_mode = 1
+
+[node name="Locked" type="TextureRect" parent="CardSkills/Skill4/Skill"]
+layout_mode = 2
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 80.0
+offset_bottom = 70.0
+scale = Vector2(0.47, 0.47)
+texture = ExtResource("40_qgd03")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CardSkills/Skill4/Skill/Locked"]
+layout_mode = 0
+offset_left = -19.1489
+offset_top = 59.5745
+offset_right = 98.201
+offset_bottom = 109.574
+theme_override_font_sizes/normal_font_size = 19
+bbcode_enabled = true
+text = "откроется после 4 "
+fit_content = true
+scroll_active = false
+
+[node name="Star" type="TextureRect" parent="CardSkills/Skill4/Skill/Locked"]
+offset_left = 42.5532
+offset_top = 87.234
+offset_right = 57.5532
+offset_bottom = 102.234
+texture = ExtResource("12_3vpuq")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Skill5" type="MarginContainer" parent="CardSkills"]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 458.0
+offset_right = 341.0
+offset_bottom = 516.0
+
+[node name="Skill" type="TextureRect" parent="CardSkills/Skill5"]
+layout_mode = 2
+texture = ExtResource("41_d5yir")
+expand_mode = 1
+
+[node name="Locked" type="TextureRect" parent="CardSkills/Skill5/Skill"]
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 80.0
+offset_bottom = 70.0
+scale = Vector2(0.47, 0.47)
+texture = ExtResource("40_qgd03")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CardSkills/Skill5/Skill/Locked"]
+layout_mode = 0
+offset_left = -19.1489
+offset_top = 59.5745
+offset_right = 98.201
+offset_bottom = 109.574
+theme_override_font_sizes/normal_font_size = 19
+bbcode_enabled = true
+text = "откроется после 5 "
+fit_content = true
+scroll_active = false
+
+[node name="Star" type="TextureRect" parent="CardSkills/Skill5/Skill/Locked"]
+offset_left = 42.5532
+offset_top = 87.234
+offset_right = 57.5532
+offset_bottom = 102.234
+texture = ExtResource("12_3vpuq")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="ChangeSkill" type="MarginContainer" parent="CardSkills"]
+layout_mode = 0
+offset_left = 345.0
+offset_top = 458.0
+offset_right = 405.53
+offset_bottom = 516.0
+
+[node name="ChangeSkill" type="TextureButton" parent="CardSkills/ChangeSkill"]
+layout_mode = 2
+texture_normal = ExtResource("42_rihu6")
+texture_pressed = ExtResource("42_rihu6")
+texture_hover = ExtResource("42_rihu6")
+texture_disabled = ExtResource("42_rihu6")
+texture_focused = ExtResource("42_rihu6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ChatGui" parent="." instance=ExtResource("4_6q5mg")]
+visible = false
+layout_mode = 1
+offset_top = 21.0
+offset_bottom = 21.0
+
+[node name="PlayerGui" parent="." instance=ExtResource("3_2gba7")]
+visible = false
+layout_mode = 1
+offset_left = 6.0
+offset_right = 6.0
+
 [connection signal="pressed" from="BackHitBox/BackHitBox" to="." method="_on_back_hit_box_pressed"]

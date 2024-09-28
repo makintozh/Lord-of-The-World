@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cucpock8yo3a1"
-path="res://.godot/imported/Раса _Тест иконка_.png-4beb25327203c4c4b10649b2d3ec31ac.ctex"
+uid="uid://b7c7ihbiyo0ce"
+path="res://.godot/imported/CardEllipse.png-dcf5f0a97e844c75c711b7d7eb3b80dc.ctex"
 metadata={
 "has_editor_variant": true,
 "vram_texture": false
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://src/ui/new-ui/misc/Раса _Тест иконка_.png"
-dest_files=["res://.godot/imported/Раса _Тест иконка_.png-4beb25327203c4c4b10649b2d3ec31ac.ctex"]
+source_file="res://src/ui/new-ui/misc/CardEllipse.png"
+dest_files=["res://.godot/imported/CardEllipse.png-dcf5f0a97e844c75c711b7d7eb3b80dc.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=351 format=3 uid="uid://pk7extbu3xea"]
+[gd_scene load_steps=345 format=3 uid="uid://pk7extbu3xea"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/navigation-menu.gd" id="1_ykvwa"]
 [ext_resource type="Texture2D" uid="uid://cdbeqyu8j0hmr" path="res://src/ui/backgrounds/Главный_экран_адаптировано_под_размер_.PNG" id="3_j0xlm"]
@@ -8,11 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://b0eom03g48wmg" path="res://src/ui/buildings/animated/Osadu.png" id="9_lqhp8"]
 [ext_resource type="Texture2D" uid="uid://bk47kvndsogop" path="res://src/ui/buildings/animated/Biom.png" id="10_bbc1g"]
 [ext_resource type="Texture2D" uid="uid://jwvwoygkxef1" path="res://src/ui/new-ui/buttons/Замок 1.png" id="10_skpi3"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="11_8sxna"]
 [ext_resource type="Texture2D" uid="uid://dqqfcxyclbynf" path="res://src/ui/new-ui/misc/Подложка кнопки.png" id="11_ltf07"]
-[ext_resource type="Resource" uid="uid://5a1rq24an53u" path="res://src/ui/dialogues/warning_back_dialogue.tres" id="12_f0vy2"]
 [ext_resource type="Texture2D" uid="uid://nr7cjatr1ahd" path="res://src/ui/buildings/animated/ClansHall.png" id="12_vctx2"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="12_yq8ua"]
 [ext_resource type="Texture2D" uid="uid://bqqkct561dww0" path="res://src/ui/buildings/animated/League.png" id="13_6paem"]
 [ext_resource type="PackedScene" uid="uid://cftgd0b0e3ei3" path="res://src/scenes/gui-scenes/chat_gui.tscn" id="13_fcvk8"]
 [ext_resource type="PackedScene" uid="uid://ccq03g2w30olb" path="res://src/scenes/gui-scenes/player_gui.tscn" id="14_o1h17"]
@@ -2318,15 +2315,6 @@ animations = [{
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wihig"]
 texture = ExtResource("5_dxjvq")
 
-[sub_resource type="RichTextEffect" id="RichTextEffect_atejj"]
-script = ExtResource("12_yq8ua")
-
-[sub_resource type="RichTextEffect" id="RichTextEffect_sprpr"]
-script = ExtResource("12_yq8ua")
-
-[sub_resource type="RichTextEffect" id="RichTextEffect_iqsd7"]
-script = ExtResource("12_yq8ua")
-
 [node name="Navigation-menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -2704,43 +2692,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="TransparentBack" type="ColorRect" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -477.0
-offset_top = -279.0
-offset_right = 828.0
-offset_bottom = 1395.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0.529412)
-
-[node name="BackDialogue" type="Panel" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -250.0
-offset_top = -120.0
-offset_right = 251.0
-offset_bottom = 184.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("11_8sxna")
-data = ExtResource("12_f0vy2")
-start_id = "warning"
-hide_portrait = true
-custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_atejj"), SubResource("RichTextEffect_sprpr"), SubResource("RichTextEffect_iqsd7")])
-max_options_count = 2
-options_alignment = 1
-options_vertical = true
-
 [node name="PlayerGui" parent="." instance=ExtResource("14_o1h17")]
 layout_mode = 1
 mouse_filter = 2
@@ -2758,4 +2709,3 @@ offset_bottom = 24.0
 [connection signal="pressed" from="Buildings/League/LeagueHitBox" to="." method="_on_league_pressed"]
 [connection signal="pressed" from="Buildings/Sieges/Sieges/Sieges" to="." method="_on_osada_pressed"]
 [connection signal="pressed" from="Buildings/Sieges/SiegesHitBox" to="." method="_on_sieges_pressed"]
-[connection signal="dialogue_signal" from="BackDialogue" to="." method="_on_back_dialogue_dialogue_signal"]

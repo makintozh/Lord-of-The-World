@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cucpock8yo3a1"
-path="res://.godot/imported/Раса _Тест иконка_.png-4beb25327203c4c4b10649b2d3ec31ac.ctex"
+uid="uid://b1s0hju08vusr"
+path="res://.godot/imported/Кнопка смены.png-aef2d3898d9c21a74bb89200c29b91e1.ctex"
 metadata={
 "has_editor_variant": true,
 "vram_texture": false
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://src/ui/new-ui/misc/Раса _Тест иконка_.png"
-dest_files=["res://.godot/imported/Раса _Тест иконка_.png-4beb25327203c4c4b10649b2d3ec31ac.ctex"]
+source_file="res://src/ui/new-ui/buttons/Кнопка смены.png"
+dest_files=["res://.godot/imported/Кнопка смены.png-aef2d3898d9c21a74bb89200c29b91e1.ctex"]
 
 [params]
 

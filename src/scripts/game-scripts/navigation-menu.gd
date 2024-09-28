@@ -2,7 +2,7 @@ extends Control
 
 
 
-@onready var back_dialogue = $BackDialogue
+
 @onready var transparent_back = $TransparentBack
 @onready var navigation_menu = $"."
 
@@ -53,26 +53,7 @@ func _on_sieges_pressed() -> void:
 
 
 func _on_back_button_pressed():
-	if not back_dialogue.is_running():
-		transparent_back.visible = true
-		back_dialogue.start()
-
-
-
-func close_dialogue():
-	back_dialogue.stop()
-	transparent_back.visible = false
-
-
-
-
-func _on_back_dialogue_dialogue_signal(value):
-	
-	print(value)
-	
-	if value == 'YES':
-		GLOBAL.from_change_server = false
-		SceneManager.go_to_scene("res://src/scenes/auth-scenes/choice_server.tscn")
-
-	if value == 'NO':
-		close_dialogue()
+	#if not back_dialogue.is_running():
+		#transparent_back.visible = true
+		#back_dialogue.start()
+	pass

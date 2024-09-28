@@ -3,6 +3,9 @@ extends Control
 
 
 
+@onready var player_name = $PlayerCardDesign/PlayerName/PlayerName/PlayerNameLabel
+
+
 
 
 func _ready():
@@ -11,7 +14,7 @@ func _ready():
 	$ChatGui._on_hide_chat_pressed()
 	
 	
-	$MarginContainer10/TextureRect/Label.text = GLOBAL.player_character_name
+	player_name.text = GLOBAL.player_character_name
 
 
 

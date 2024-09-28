@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cucpock8yo3a1"
-path="res://.godot/imported/Раса _Тест иконка_.png-4beb25327203c4c4b10649b2d3ec31ac.ctex"
+uid="uid://d4eyxhtvj1fbo"
+path="res://.godot/imported/PURPLESkill.png-19722983e5ac4d4b34dba2bebb9309a6.ctex"
 metadata={
 "has_editor_variant": true,
 "vram_texture": false
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://src/ui/new-ui/misc/Раса _Тест иконка_.png"
-dest_files=["res://.godot/imported/Раса _Тест иконка_.png-4beb25327203c4c4b10649b2d3ec31ac.ctex"]
+source_file="res://src/ui/new-ui/misc/PURPLESkill.png"
+dest_files=["res://.godot/imported/PURPLESkill.png-19722983e5ac4d4b34dba2bebb9309a6.ctex"]
 
 [params]
 

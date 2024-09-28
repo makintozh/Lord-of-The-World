@@ -2,17 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cucpock8yo3a1"
-path="res://.godot/imported/Раса _Тест иконка_.png-4beb25327203c4c4b10649b2d3ec31ac.ctex"
+uid="uid://brttss4d7gf0n"
+path="res://.godot/imported/free-icon-power-1477228 1.png-f0f3fde5a2e35554511d5d33d65e0ff8.ctex"
 metadata={
-"has_editor_variant": true,
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/new-ui/misc/Раса _Тест иконка_.png"
-dest_files=["res://.godot/imported/Раса _Тест иконка_.png-4beb25327203c4c4b10649b2d3ec31ac.ctex"]
+source_file="res://src/ui/new-ui/resources/free-icon-power-1477228 1.png"
+dest_files=["res://.godot/imported/free-icon-power-1477228 1.png-f0f3fde5a2e35554511d5d33d65e0ff8.ctex"]
 
 [params]
 

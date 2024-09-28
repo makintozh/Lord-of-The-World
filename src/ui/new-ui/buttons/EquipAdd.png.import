@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cucpock8yo3a1"
-path="res://.godot/imported/Раса _Тест иконка_.png-4beb25327203c4c4b10649b2d3ec31ac.ctex"
+uid="uid://cu8e6ly05v0ou"
+path="res://.godot/imported/EquipAdd.png-3c4b935903ec36d0428267dde0a57112.ctex"
 metadata={
 "has_editor_variant": true,
 "vram_texture": false
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://src/ui/new-ui/misc/Раса _Тест иконка_.png"
-dest_files=["res://.godot/imported/Раса _Тест иконка_.png-4beb25327203c4c4b10649b2d3ec31ac.ctex"]
+source_file="res://src/ui/new-ui/buttons/EquipAdd.png"
+dest_files=["res://.godot/imported/EquipAdd.png-3c4b935903ec36d0428267dde0a57112.ctex"]
 
 [params]
 

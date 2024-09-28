@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cucpock8yo3a1"
-path="res://.godot/imported/Раса _Тест иконка_.png-4beb25327203c4c4b10649b2d3ec31ac.ctex"
+uid="uid://c3psedygjext7"
+path="res://.godot/imported/ResourceMAXIMIZEDПодложка.png-3d5f37e15e0093e8b22f5a91d90636ff.ctex"
 metadata={
 "has_editor_variant": true,
 "vram_texture": false
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://src/ui/new-ui/misc/Раса _Тест иконка_.png"
-dest_files=["res://.godot/imported/Раса _Тест иконка_.png-4beb25327203c4c4b10649b2d3ec31ac.ctex"]
+source_file="res://src/ui/new-ui/misc/ResourceMAXIMIZEDПодложка.png"
+dest_files=["res://.godot/imported/ResourceMAXIMIZEDПодложка.png-3d5f37e15e0093e8b22f5a91d90636ff.ctex"]
 
 [params]
 

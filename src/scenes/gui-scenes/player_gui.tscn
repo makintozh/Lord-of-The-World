@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://ccq03g2w30olb"]
+[gd_scene load_steps=33 format=3 uid="uid://ccq03g2w30olb"]
 
 [ext_resource type="Script" path="res://src/scripts/gui-scripts/player_gui.gd" id="1_8c46b"]
 [ext_resource type="Texture2D" uid="uid://bc18jg3djtr2y" path="res://src/ui/new-ui/buttons/Настройки.png" id="2_rg8x1"]
@@ -24,10 +24,13 @@
 [ext_resource type="Texture2D" uid="uid://lbswrabkcy58" path="res://src/ui/new-ui/buttons/Задания.png" id="22_gtcl1"]
 [ext_resource type="Texture2D" uid="uid://coelnpggiwffl" path="res://src/ui/new-ui/buttons/Город.png" id="23_q43ja"]
 [ext_resource type="Texture2D" uid="uid://broaeh18box4" path="res://src/ui/new-ui/buttons/Магазин.png" id="24_tfmuc"]
+[ext_resource type="Texture2D" uid="uid://dxd1h1yutdxiu" path="res://src/ui/new-ui/misc/Аватар.png" id="24_tqh4d"]
 [ext_resource type="Texture2D" uid="uid://cr6mlcftdyktq" path="res://src/ui/new-ui/buttons/Почта.png" id="25_0uvqi"]
 [ext_resource type="Texture2D" uid="uid://bflyy5du817gj" path="res://src/ui/new-ui/resources/Энергия 1.png" id="26_1an70"]
 [ext_resource type="Texture2D" uid="uid://b8x7icmp2n0fe" path="res://src/ui/new-ui/misc/Подложка под ник и абревиатуру клана.png" id="26_tpanq"]
 [ext_resource type="Texture2D" uid="uid://bji7f5c21h22h" path="res://src/ui/new-ui/buttons/Rectangle 121.png" id="27_5o5d3"]
+[ext_resource type="Texture2D" uid="uid://c3psedygjext7" path="res://src/ui/new-ui/misc/ResourceMAXIMIZEDПодложка.png" id="29_re62n"]
+[ext_resource type="Texture2D" uid="uid://d12qolcbtb8kd" path="res://src/ui/new-ui/buttons/Кнопка.png" id="30_g8glm"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p054s"]
 texture = ExtResource("26_tpanq")
@@ -628,6 +631,7 @@ texture = ExtResource("20_36yh7")
 expand_mode = 1
 
 [node name="Main" type="TextureRect" parent="Home"]
+layout_mode = 0
 offset_left = 190.53
 offset_top = 1145.38
 offset_right = 301.53
@@ -860,22 +864,18 @@ bbcode_enabled = true
 text = "Клан"
 fit_content = true
 
-[node name="ColorRect" type="ColorRect" parent="PlayerInformation"]
-layout_mode = 2
-offset_left = 31.0
+[node name="Avatar" type="MarginContainer" parent="PlayerInformation"]
+layout_mode = 1
+offset_left = 30.0
 offset_top = 43.0
-offset_right = 89.0
-offset_bottom = 104.0
+offset_right = 93.0
+offset_bottom = 107.0
 
-[node name="Label" type="Label" parent="PlayerInformation/ColorRect"]
-layout_mode = 0
-offset_left = 3.0
-offset_top = 15.0
-offset_right = 65.0
-offset_bottom = 58.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 31
-text = "ICON"
+[node name="Avatar" type="TextureRect" parent="PlayerInformation/Avatar"]
+layout_mode = 2
+texture = ExtResource("24_tqh4d")
+expand_mode = 1
+stretch_mode = 6
 
 [node name="Frame" type="MarginContainer" parent="PlayerInformation"]
 layout_mode = 1
@@ -890,39 +890,41 @@ texture = ExtResource("5_s8ln3")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="PlayerResources" type="Control" parent="PlayerInformation"]
+[node name="MINIMIZEDPlayerResources" type="Control" parent="PlayerInformation"]
 anchors_preset = 0
 offset_left = 308.0
 offset_top = 42.0
 offset_right = 366.0
 offset_bottom = 86.0
 
-[node name="Background" type="TextureRect" parent="PlayerInformation/PlayerResources"]
+[node name="Background" type="TextureRect" parent="PlayerInformation/MINIMIZEDPlayerResources"]
 layout_mode = 0
 offset_right = 183.0
 offset_bottom = 66.0
+mouse_filter = 2
 texture = ExtResource("26_tpanq")
 expand_mode = 1
 
-[node name="HBox" type="HBoxContainer" parent="PlayerInformation/PlayerResources"]
+[node name="ResGrid" type="GridContainer" parent="PlayerInformation/MINIMIZEDPlayerResources"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 11.0
-offset_top = 12.0
+offset_top = 6.99998
 offset_right = 333.0
-offset_bottom = 30.0
+offset_bottom = 355.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.42, 0.42)
-alignment = 1
+mouse_filter = 2
+columns = 2
 
-[node name="Coins" type="TextureRect" parent="PlayerInformation/PlayerResources/HBox"]
+[node name="Coins" type="TextureRect" parent="PlayerInformation/MINIMIZEDPlayerResources/ResGrid"]
 layout_mode = 2
 texture = ExtResource("6_eeg00")
 
-[node name="RES1" type="RichTextLabel" parent="PlayerInformation/PlayerResources/HBox/Coins"]
+[node name="RES1" type="RichTextLabel" parent="PlayerInformation/MINIMIZEDPlayerResources/ResGrid/Coins"]
 layout_mode = 0
 offset_left = 95.2381
 offset_top = 11.9048
@@ -935,46 +937,46 @@ bbcode_enabled = true
 text = "0"
 fit_content = true
 
-[node name="Energy" type="TextureRect" parent="PlayerInformation/PlayerResources/HBox"]
+[node name="CoinsIcon" type="TextureRect" parent="PlayerInformation/MINIMIZEDPlayerResources/ResGrid/Coins"]
 layout_mode = 2
-texture = ExtResource("6_eeg00")
-
-[node name="RES1" type="RichTextLabel" parent="PlayerInformation/PlayerResources/HBox/Energy"]
-layout_mode = 0
-offset_left = 95.2381
-offset_top = 11.9048
-offset_right = 110.238
-offset_bottom = 47.9048
-theme_override_colors/default_color = Color(1, 0.976471, 0.941176, 1)
-theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
-theme_override_font_sizes/normal_font_size = 30
-bbcode_enabled = true
-text = "0"
-fit_content = true
-
-[node name="CoinsIcon" type="TextureRect" parent="PlayerInformation/PlayerResources"]
-layout_mode = 2
-offset_left = 5.0
-offset_top = 15.0
-offset_right = 31.0
-offset_bottom = 33.0
-scale = Vector2(0.065, 0.065)
+offset_left = -11.9048
+offset_top = 2.38096
+offset_right = 25.0952
+offset_bottom = 75.381
+scale = Vector2(0.175, 0.175)
 texture = ExtResource("7_f0rq7")
 expand_mode = 1
 stretch_mode = 2
 
-[node name="EnergyIcon" type="TextureRect" parent="PlayerInformation/PlayerResources"]
+[node name="Energy" type="TextureRect" parent="PlayerInformation/MINIMIZEDPlayerResources/ResGrid"]
 layout_mode = 2
-offset_left = 91.0
-offset_top = 16.0
-offset_right = 91.0
-offset_bottom = 39.0
-scale = Vector2(0.12, 0.12)
+texture = ExtResource("6_eeg00")
+
+[node name="RES1" type="RichTextLabel" parent="PlayerInformation/MINIMIZEDPlayerResources/ResGrid/Energy"]
+layout_mode = 0
+offset_left = 95.2381
+offset_top = 11.9048
+offset_right = 110.238
+offset_bottom = 47.9048
+theme_override_colors/default_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "0"
+fit_content = true
+
+[node name="EnergyIcon" type="TextureRect" parent="PlayerInformation/MINIMIZEDPlayerResources/ResGrid/Energy"]
+layout_mode = 2
+offset_left = -1.52388
+offset_top = 7.14286
+offset_right = -1.52388
+offset_bottom = 30.1429
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("26_1an70")
 expand_mode = 1
 stretch_mode = 2
 
-[node name="ShowAll" type="TextureButton" parent="PlayerInformation/PlayerResources"]
+[node name="ShowAll" type="TextureButton" parent="PlayerInformation/MINIMIZEDPlayerResources"]
 layout_mode = 0
 offset_left = -3.0
 offset_top = 37.0
@@ -988,17 +990,414 @@ texture_focused = ExtResource("27_5o5d3")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="ShowAllLabel" type="RichTextLabel" parent="PlayerInformation/PlayerResources/ShowAll"]
+[node name="ShowAllLabel" type="RichTextLabel" parent="PlayerInformation/MINIMIZEDPlayerResources/ShowAll"]
 layout_mode = 0
 offset_left = 47.0
 offset_top = 7.0
 offset_right = 139.0
 offset_bottom = 25.0
+mouse_filter = 2
 theme_override_colors/default_color = Color(1, 0.976471, 0.941176, 1)
 theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
 theme_override_font_sizes/normal_font_size = 15
 bbcode_enabled = true
 text = "ПОКАЗАТЬ ВСЕ"
+fit_content = true
+
+[node name="MAXIMIZEDPlayerResources" type="Control" parent="PlayerInformation"]
+visible = false
+anchors_preset = 0
+offset_left = 308.0
+offset_top = 42.0
+offset_right = 366.0
+offset_bottom = 86.0
+
+[node name="Background" type="TextureRect" parent="PlayerInformation/MAXIMIZEDPlayerResources"]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 182.0
+offset_bottom = 202.0
+mouse_filter = 2
+texture = ExtResource("29_re62n")
+expand_mode = 1
+
+[node name="ResGrid" type="GridContainer" parent="PlayerInformation/MAXIMIZEDPlayerResources"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = 6.99998
+offset_right = 333.0
+offset_bottom = 355.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.42, 0.42)
+mouse_filter = 2
+columns = 2
+
+[node name="Coins" type="TextureRect" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid"]
+layout_mode = 2
+texture = ExtResource("6_eeg00")
+
+[node name="RES1" type="RichTextLabel" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid/Coins"]
+layout_mode = 0
+offset_left = 95.2381
+offset_top = 11.9048
+offset_right = 110.238
+offset_bottom = 47.9048
+theme_override_colors/default_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "0"
+fit_content = true
+
+[node name="CoinsIcon" type="TextureRect" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid/Coins"]
+layout_mode = 2
+offset_left = -11.9048
+offset_top = 2.38096
+offset_right = 25.0952
+offset_bottom = 75.381
+scale = Vector2(0.175, 0.175)
+texture = ExtResource("7_f0rq7")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="Energy3" type="TextureRect" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid"]
+layout_mode = 2
+texture = ExtResource("6_eeg00")
+
+[node name="RES1" type="RichTextLabel" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid/Energy3"]
+layout_mode = 0
+offset_left = 95.2381
+offset_top = 11.9048
+offset_right = 110.238
+offset_bottom = 47.9048
+theme_override_colors/default_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "0"
+fit_content = true
+
+[node name="EnergyIcon" type="TextureRect" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid/Energy3"]
+layout_mode = 2
+offset_left = -1.52388
+offset_top = 7.14286
+offset_right = -1.52388
+offset_bottom = 30.1429
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("26_1an70")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="Coins3" type="TextureRect" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid"]
+layout_mode = 2
+texture = ExtResource("6_eeg00")
+
+[node name="RES1" type="RichTextLabel" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid/Coins3"]
+layout_mode = 0
+offset_left = 95.2381
+offset_top = 11.9048
+offset_right = 110.238
+offset_bottom = 47.9048
+theme_override_colors/default_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "0"
+fit_content = true
+
+[node name="CoinsIcon" type="TextureRect" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid/Coins3"]
+layout_mode = 2
+offset_left = -11.9048
+offset_top = 2.38096
+offset_right = 25.0952
+offset_bottom = 75.381
+scale = Vector2(0.175, 0.175)
+texture = ExtResource("7_f0rq7")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="Energy" type="TextureRect" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid"]
+layout_mode = 2
+texture = ExtResource("6_eeg00")
+
+[node name="RES1" type="RichTextLabel" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid/Energy"]
+layout_mode = 0
+offset_left = 95.2381
+offset_top = 11.9048
+offset_right = 110.238
+offset_bottom = 47.9048
+theme_override_colors/default_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "0"
+fit_content = true
+
+[node name="EnergyIcon" type="TextureRect" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid/Energy"]
+layout_mode = 2
+offset_left = -1.52388
+offset_top = 7.14286
+offset_right = -1.52388
+offset_bottom = 30.1429
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("26_1an70")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="Coins4" type="TextureRect" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid"]
+layout_mode = 2
+texture = ExtResource("6_eeg00")
+
+[node name="RES1" type="RichTextLabel" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid/Coins4"]
+layout_mode = 0
+offset_left = 95.2381
+offset_top = 11.9048
+offset_right = 110.238
+offset_bottom = 47.9048
+theme_override_colors/default_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "0"
+fit_content = true
+
+[node name="CoinsIcon" type="TextureRect" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid/Coins4"]
+layout_mode = 2
+offset_left = -11.9048
+offset_top = 2.38096
+offset_right = 25.0952
+offset_bottom = 75.381
+scale = Vector2(0.175, 0.175)
+texture = ExtResource("7_f0rq7")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="Energy4" type="TextureRect" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid"]
+layout_mode = 2
+texture = ExtResource("6_eeg00")
+
+[node name="RES1" type="RichTextLabel" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid/Energy4"]
+layout_mode = 0
+offset_left = 95.2381
+offset_top = 11.9048
+offset_right = 110.238
+offset_bottom = 47.9048
+theme_override_colors/default_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "0"
+fit_content = true
+
+[node name="EnergyIcon" type="TextureRect" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid/Energy4"]
+layout_mode = 2
+offset_left = -1.52388
+offset_top = 7.14286
+offset_right = -1.52388
+offset_bottom = 30.1429
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("26_1an70")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="Coins5" type="TextureRect" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid"]
+layout_mode = 2
+texture = ExtResource("6_eeg00")
+
+[node name="RES1" type="RichTextLabel" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid/Coins5"]
+layout_mode = 0
+offset_left = 95.2381
+offset_top = 11.9048
+offset_right = 110.238
+offset_bottom = 47.9048
+theme_override_colors/default_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "0"
+fit_content = true
+
+[node name="CoinsIcon" type="TextureRect" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid/Coins5"]
+layout_mode = 2
+offset_left = -11.9048
+offset_top = 2.38096
+offset_right = 25.0952
+offset_bottom = 75.381
+scale = Vector2(0.175, 0.175)
+texture = ExtResource("7_f0rq7")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="Energy5" type="TextureRect" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid"]
+layout_mode = 2
+texture = ExtResource("6_eeg00")
+
+[node name="RES1" type="RichTextLabel" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid/Energy5"]
+layout_mode = 0
+offset_left = 95.2381
+offset_top = 11.9048
+offset_right = 110.238
+offset_bottom = 47.9048
+theme_override_colors/default_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "0"
+fit_content = true
+
+[node name="EnergyIcon" type="TextureRect" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid/Energy5"]
+layout_mode = 2
+offset_left = -1.52388
+offset_top = 7.14286
+offset_right = -1.52388
+offset_bottom = 30.1429
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("26_1an70")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="Coins6" type="TextureRect" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid"]
+layout_mode = 2
+texture = ExtResource("6_eeg00")
+
+[node name="RES1" type="RichTextLabel" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid/Coins6"]
+layout_mode = 0
+offset_left = 95.2381
+offset_top = 11.9048
+offset_right = 110.238
+offset_bottom = 47.9048
+theme_override_colors/default_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "0"
+fit_content = true
+
+[node name="CoinsIcon" type="TextureRect" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid/Coins6"]
+layout_mode = 2
+offset_left = -11.9048
+offset_top = 2.38096
+offset_right = 25.0952
+offset_bottom = 75.381
+scale = Vector2(0.175, 0.175)
+texture = ExtResource("7_f0rq7")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="Energy6" type="TextureRect" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid"]
+layout_mode = 2
+texture = ExtResource("6_eeg00")
+
+[node name="RES1" type="RichTextLabel" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid/Energy6"]
+layout_mode = 0
+offset_left = 95.2381
+offset_top = 11.9048
+offset_right = 110.238
+offset_bottom = 47.9048
+theme_override_colors/default_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "0"
+fit_content = true
+
+[node name="EnergyIcon" type="TextureRect" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid/Energy6"]
+layout_mode = 2
+offset_left = -1.52388
+offset_top = 7.14286
+offset_right = -1.52388
+offset_bottom = 30.1429
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("26_1an70")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="Coins2" type="TextureRect" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid"]
+layout_mode = 2
+texture = ExtResource("6_eeg00")
+
+[node name="RES1" type="RichTextLabel" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid/Coins2"]
+layout_mode = 0
+offset_left = 95.2381
+offset_top = 11.9048
+offset_right = 110.238
+offset_bottom = 47.9048
+theme_override_colors/default_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "0"
+fit_content = true
+
+[node name="CoinsIcon" type="TextureRect" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid/Coins2"]
+layout_mode = 2
+offset_left = -11.9048
+offset_top = 2.38096
+offset_right = 25.0952
+offset_bottom = 75.381
+scale = Vector2(0.175, 0.175)
+texture = ExtResource("7_f0rq7")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="Energy2" type="TextureRect" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid"]
+layout_mode = 2
+texture = ExtResource("6_eeg00")
+
+[node name="RES1" type="RichTextLabel" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid/Energy2"]
+layout_mode = 0
+offset_left = 95.2381
+offset_top = 11.9048
+offset_right = 110.238
+offset_bottom = 47.9048
+theme_override_colors/default_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "0"
+fit_content = true
+
+[node name="EnergyIcon" type="TextureRect" parent="PlayerInformation/MAXIMIZEDPlayerResources/ResGrid/Energy2"]
+layout_mode = 2
+offset_left = -1.52388
+offset_top = 7.14286
+offset_right = -1.52388
+offset_bottom = 30.1429
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("26_1an70")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="HideAll" type="TextureButton" parent="PlayerInformation/MAXIMIZEDPlayerResources"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 171.0
+offset_right = 185.0
+offset_bottom = 204.0
+texture_normal = ExtResource("30_g8glm")
+texture_pressed = ExtResource("30_g8glm")
+texture_hover = ExtResource("30_g8glm")
+texture_disabled = ExtResource("30_g8glm")
+texture_focused = ExtResource("30_g8glm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="HideAllLabel" type="RichTextLabel" parent="PlayerInformation/MAXIMIZEDPlayerResources/HideAll"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 9.0
+offset_right = 158.0
+offset_bottom = 27.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 0.976471, 0.941176, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_font_sizes/normal_font_size = 13
+bbcode_enabled = true
+text = "ЗАКРЫТЬ"
 fit_content = true
 
 [connection signal="pressed" from="Actions/SettingsButton/Settings" to="." method="_on_settings_button_pressed"]
@@ -1008,3 +1407,5 @@ fit_content = true
 [connection signal="pressed" from="HomeOLD/TavernHitBox/TavernHitBox" to="." method="_on_tavern_hit_box_pressed"]
 [connection signal="pressed" from="Home/CityHitBox/CityHitBox" to="." method="_on_city_hit_box_pressed"]
 [connection signal="pressed" from="Home/TavernHitBox/TavernHitBox" to="." method="_on_tavern_hit_box_pressed"]
+[connection signal="pressed" from="PlayerInformation/MINIMIZEDPlayerResources/ShowAll" to="." method="_on_show_all_pressed"]
+[connection signal="pressed" from="PlayerInformation/MAXIMIZEDPlayerResources/HideAll" to="." method="_on_hide_all_pressed"]
