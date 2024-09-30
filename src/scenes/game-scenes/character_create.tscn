@@ -103,6 +103,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_t13y3")
 
+[node name="APIValidator" type="HTTPRequest" parent="."]
+
 [node name="APICharacterCreate" type="HTTPRequest" parent="."]
 
 [node name="BackGround-Image" type="TextureRect" parent="."]
@@ -399,6 +401,7 @@ theme_override_font_sizes/font_size = 21
 text = "Wait..."
 horizontal_alignment = 1
 
+[connection signal="request_completed" from="APIValidator" to="." method="_on_api_validator_request_completed"]
 [connection signal="request_completed" from="APICharacterCreate" to="." method="_on_api_character_create_request_completed"]
 [connection signal="pressed" from="MainUI/CharacterCreateButton/CharacterCreateButtonContainer/CharacterCreateButton" to="." method="_on_character_create_button_pressed"]
 [connection signal="pressed" from="MainUI/Index_Buttons/RightButton/RightButton" to="." method="_on_right_button_pressed"]

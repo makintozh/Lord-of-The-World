@@ -33,7 +33,6 @@ texture = ExtResource("2_b50jt")
 expand_mode = 1
 
 [node name="PlayerGui" parent="." instance=ExtResource("6_7bk2o")]
-visible = false
 layout_mode = 1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
@@ -346,6 +345,7 @@ texture = ExtResource("4_die6v")
 stretch_mode = 5
 
 [node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = -3.00005
 offset_top = 829.0
 offset_right = 215.0
@@ -360,6 +360,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Names" type="RichTextLabel" parent="TextureButton"]
+layout_mode = 0
 offset_left = 35.2941
 offset_top = 14.1176
 offset_right = 204.294
@@ -375,6 +376,7 @@ fit_content = true
 scroll_active = false
 
 [node name="TextureButton2" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 328.0
 offset_top = 830.0
 offset_right = 521.0
@@ -389,6 +391,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Names" type="RichTextLabel" parent="TextureButton2"]
+layout_mode = 0
 offset_left = 35.2941
 offset_top = 14.1176
 offset_right = 204.294
@@ -404,6 +407,7 @@ fit_content = true
 scroll_active = false
 
 [node name="TextureButton3" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 409.0
 offset_top = 829.0
 offset_right = 627.0
@@ -418,6 +422,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Names" type="RichTextLabel" parent="TextureButton3"]
+layout_mode = 0
 offset_left = 35.2941
 offset_top = 14.1176
 offset_right = 204.294
@@ -454,6 +459,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Names" type="RichTextLabel" parent="Control/TextureButton"]
+layout_mode = 0
 offset_left = 68.2353
 offset_top = 18.8235
 offset_right = 148.235
@@ -484,6 +490,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Names" type="RichTextLabel" parent="Control/Klassgold"]
+layout_mode = 0
 offset_left = 49.2374
 offset_top = 19.5207
 offset_right = 168.237
@@ -516,6 +523,7 @@ texture = ExtResource("8_0nh3i")
 expand_mode = 1
 
 [node name="Names" type="RichTextLabel" parent="Control/Klassgold/TextureRect/TextureRect"]
+layout_mode = 0
 offset_left = 57.4096
 offset_top = 10.6667
 offset_right = 159.41
@@ -549,6 +557,7 @@ texture = ExtResource("8_0nh3i")
 expand_mode = 1
 
 [node name="Names" type="RichTextLabel" parent="Control/Klassgold/TextureRect/TextureRect2"]
+layout_mode = 0
 offset_left = 57.0
 offset_top = 11.0
 offset_right = 170.0
@@ -582,6 +591,7 @@ texture = ExtResource("8_0nh3i")
 expand_mode = 1
 
 [node name="Names" type="RichTextLabel" parent="Control/Klassgold/TextureRect/TextureRect3"]
+layout_mode = 0
 offset_left = 57.0
 offset_top = 11.0
 offset_right = 181.0
@@ -621,6 +631,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Names" type="RichTextLabel" parent="Control/klassdefault"]
+layout_mode = 0
 offset_left = 49.2374
 offset_top = 19.5207
 offset_right = 168.237
@@ -651,6 +662,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Names" type="RichTextLabel" parent="Control/alliancegold"]
+layout_mode = 0
 offset_left = 49.0
 offset_top = 20.0
 offset_right = 195.0
@@ -683,6 +695,7 @@ texture = ExtResource("8_0nh3i")
 expand_mode = 1
 
 [node name="Names" type="RichTextLabel" parent="Control/alliancegold/TextureRect/TextureRect"]
+layout_mode = 0
 offset_left = 57.4096
 offset_top = 10.6667
 offset_right = 159.41
@@ -716,6 +729,7 @@ texture = ExtResource("8_0nh3i")
 expand_mode = 1
 
 [node name="Names" type="RichTextLabel" parent="Control/alliancegold/TextureRect/TextureRect2"]
+layout_mode = 0
 offset_left = 57.0
 offset_top = 11.0
 offset_right = 170.0
@@ -749,6 +763,7 @@ texture = ExtResource("8_0nh3i")
 expand_mode = 1
 
 [node name="Names" type="RichTextLabel" parent="Control/alliancegold/TextureRect/TextureRect3"]
+layout_mode = 0
 offset_left = 57.0
 offset_top = 11.0
 offset_right = 181.0
@@ -782,6 +797,7 @@ texture = ExtResource("8_0nh3i")
 expand_mode = 1
 
 [node name="Names" type="RichTextLabel" parent="Control/alliancegold/TextureRect/TextureRect4"]
+layout_mode = 0
 offset_left = 57.0
 offset_top = 11.0
 offset_right = 181.0
@@ -815,6 +831,7 @@ texture = ExtResource("8_0nh3i")
 expand_mode = 1
 
 [node name="Names" type="RichTextLabel" parent="Control/alliancegold/TextureRect/TextureRect5"]
+layout_mode = 0
 offset_left = 50.5444
 offset_top = 15.4771
 offset_right = 256.544
@@ -848,6 +865,7 @@ texture = ExtResource("8_0nh3i")
 expand_mode = 1
 
 [node name="Names" type="RichTextLabel" parent="Control/alliancegold/TextureRect/TextureRect6"]
+layout_mode = 0
 offset_left = 57.0
 offset_top = 11.0
 offset_right = 181.0
@@ -881,6 +899,7 @@ texture = ExtResource("8_0nh3i")
 expand_mode = 1
 
 [node name="Names" type="RichTextLabel" parent="Control/alliancegold/TextureRect/TextureRect7"]
+layout_mode = 0
 offset_left = 57.4096
 offset_top = 10.6667
 offset_right = 159.41
@@ -914,6 +933,7 @@ texture = ExtResource("8_0nh3i")
 expand_mode = 1
 
 [node name="Names" type="RichTextLabel" parent="Control/alliancegold/TextureRect/TextureRect8"]
+layout_mode = 0
 offset_left = 57.0
 offset_top = 11.0
 offset_right = 170.0
@@ -947,6 +967,7 @@ texture = ExtResource("8_0nh3i")
 expand_mode = 1
 
 [node name="Names" type="RichTextLabel" parent="Control/alliancegold/TextureRect/TextureRect9"]
+layout_mode = 0
 offset_left = 57.0
 offset_top = 11.0
 offset_right = 181.0
@@ -980,6 +1001,7 @@ texture = ExtResource("8_0nh3i")
 expand_mode = 1
 
 [node name="Names" type="RichTextLabel" parent="Control/alliancegold/TextureRect/TextureRect10"]
+layout_mode = 0
 offset_left = 57.4096
 offset_top = 10.6667
 offset_right = 159.41
@@ -1013,6 +1035,7 @@ texture = ExtResource("8_0nh3i")
 expand_mode = 1
 
 [node name="Names" type="RichTextLabel" parent="Control/alliancegold/TextureRect/TextureRect11"]
+layout_mode = 0
 offset_left = 57.0
 offset_top = 11.0
 offset_right = 170.0
@@ -1046,6 +1069,7 @@ texture = ExtResource("8_0nh3i")
 expand_mode = 1
 
 [node name="Names" type="RichTextLabel" parent="Control/alliancegold/TextureRect/TextureRect12"]
+layout_mode = 0
 offset_left = 57.0
 offset_top = 11.0
 offset_right = 181.0
@@ -1079,6 +1103,7 @@ texture = ExtResource("8_0nh3i")
 expand_mode = 1
 
 [node name="Names" type="RichTextLabel" parent="Control/alliancegold/TextureRect/TextureRect13"]
+layout_mode = 0
 offset_left = 57.4096
 offset_top = 10.6667
 offset_right = 159.41
@@ -1112,6 +1137,7 @@ texture = ExtResource("8_0nh3i")
 expand_mode = 1
 
 [node name="Names" type="RichTextLabel" parent="Control/alliancegold/TextureRect/TextureRect14"]
+layout_mode = 0
 offset_left = 57.0
 offset_top = 11.0
 offset_right = 170.0
@@ -1145,6 +1171,7 @@ texture = ExtResource("8_0nh3i")
 expand_mode = 1
 
 [node name="Names" type="RichTextLabel" parent="Control/alliancegold/TextureRect/TextureRect15"]
+layout_mode = 0
 offset_left = 54.0305
 offset_top = 13.6905
 offset_right = 246.031
@@ -1184,6 +1211,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Names" type="RichTextLabel" parent="Control/alliancedefault"]
+layout_mode = 0
 offset_left = 49.0
 offset_top = 20.0
 offset_right = 204.0
@@ -1214,6 +1242,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Names" type="RichTextLabel" parent="Control/rasagold"]
+layout_mode = 0
 offset_left = 64.488
 offset_top = 19.1721
 offset_right = 210.488
@@ -1246,6 +1275,7 @@ texture = ExtResource("8_0nh3i")
 expand_mode = 1
 
 [node name="Names" type="RichTextLabel" parent="Control/rasagold/TextureRect/TextureRect"]
+layout_mode = 0
 offset_left = 57.4096
 offset_top = 10.6667
 offset_right = 159.41
@@ -1279,6 +1309,7 @@ texture = ExtResource("8_0nh3i")
 expand_mode = 1
 
 [node name="Names" type="RichTextLabel" parent="Control/rasagold/TextureRect/TextureRect2"]
+layout_mode = 0
 offset_left = 57.0
 offset_top = 11.0
 offset_right = 170.0
@@ -1312,6 +1343,7 @@ texture = ExtResource("8_0nh3i")
 expand_mode = 1
 
 [node name="Names" type="RichTextLabel" parent="Control/rasagold/TextureRect/TextureRect3"]
+layout_mode = 0
 offset_left = 57.0
 offset_top = 11.0
 offset_right = 181.0
@@ -1345,6 +1377,7 @@ texture = ExtResource("8_0nh3i")
 expand_mode = 1
 
 [node name="Names" type="RichTextLabel" parent="Control/rasagold/TextureRect/TextureRect4"]
+layout_mode = 0
 offset_left = 57.0
 offset_top = 11.0
 offset_right = 181.0
@@ -1378,6 +1411,7 @@ texture = ExtResource("8_0nh3i")
 expand_mode = 1
 
 [node name="Names" type="RichTextLabel" parent="Control/rasagold/TextureRect/TextureRect5"]
+layout_mode = 0
 offset_left = 50.5444
 offset_top = 15.4771
 offset_right = 256.544
@@ -1411,6 +1445,7 @@ texture = ExtResource("8_0nh3i")
 expand_mode = 1
 
 [node name="Names" type="RichTextLabel" parent="Control/rasagold/TextureRect/TextureRect6"]
+layout_mode = 0
 offset_left = 57.0
 offset_top = 11.0
 offset_right = 181.0
@@ -1444,6 +1479,7 @@ texture = ExtResource("8_0nh3i")
 expand_mode = 1
 
 [node name="Names" type="RichTextLabel" parent="Control/rasagold/TextureRect/TextureRect7"]
+layout_mode = 0
 offset_left = 57.4096
 offset_top = 10.6667
 offset_right = 159.41
@@ -1477,6 +1513,7 @@ texture = ExtResource("8_0nh3i")
 expand_mode = 1
 
 [node name="Names" type="RichTextLabel" parent="Control/rasagold/TextureRect/TextureRect8"]
+layout_mode = 0
 offset_left = 57.0
 offset_top = 11.0
 offset_right = 211.0
@@ -1510,6 +1547,7 @@ texture = ExtResource("8_0nh3i")
 expand_mode = 1
 
 [node name="Names" type="RichTextLabel" parent="Control/rasagold/TextureRect/TextureRect9"]
+layout_mode = 0
 offset_left = 57.0
 offset_top = 11.0
 offset_right = 181.0
@@ -1543,6 +1581,7 @@ texture = ExtResource("8_0nh3i")
 expand_mode = 1
 
 [node name="Names" type="RichTextLabel" parent="Control/rasagold/TextureRect/TextureRect10"]
+layout_mode = 0
 offset_left = 55.6664
 offset_top = 19.1722
 offset_right = 282.666
@@ -1583,6 +1622,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Names" type="RichTextLabel" parent="Control/rasadefault"]
+layout_mode = 0
 offset_left = 64.488
 offset_top = 19.172
 offset_right = 219.488

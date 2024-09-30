@@ -3,7 +3,6 @@ extends Control
 
 
 
-@onready var transparent_back = $TransparentBack
 @onready var navigation_menu = $"."
 
 
