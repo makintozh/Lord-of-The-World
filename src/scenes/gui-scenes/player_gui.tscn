@@ -147,10 +147,13 @@ vertical_alignment = 1
 
 [node name="Navigation" type="Control" parent="."]
 layout_mode = 1
-anchors_preset = 0
-offset_top = 6.0
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -969.0
 offset_right = 40.0
-offset_bottom = 46.0
+offset_bottom = -929.0
+grow_vertical = 0
 
 [node name="NavigationOpened" type="MarginContainer" parent="Navigation"]
 visible = false

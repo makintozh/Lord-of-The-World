@@ -172,10 +172,12 @@ func _on_style_button_pressed() -> void:
 
 func _on_info_hit_box_pressed() -> void:
 	$ChangeCard/Info_ChangeCard.visible = true
+	$ChangeCard/InfoClose.visible = true
 
 
 func _on_info_close_pressed() -> void:
 	$ChangeCard/Info_ChangeCard.visible = false
+	$ChangeCard/InfoClose.visible = false
 
 
 func _on_preset_button_pressed() -> void:

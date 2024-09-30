@@ -1,4 +1,4 @@
-[gd_scene load_steps=345 format=3 uid="uid://pk7extbu3xea"]
+[gd_scene load_steps=348 format=3 uid="uid://pk7extbu3xea"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/navigation-menu.gd" id="1_ykvwa"]
 [ext_resource type="Texture2D" uid="uid://cdbeqyu8j0hmr" path="res://src/ui/backgrounds/Главный_экран_адаптировано_под_размер_.PNG" id="3_j0xlm"]
@@ -12,7 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://nr7cjatr1ahd" path="res://src/ui/buildings/animated/ClansHall.png" id="12_vctx2"]
 [ext_resource type="Texture2D" uid="uid://bqqkct561dww0" path="res://src/ui/buildings/animated/League.png" id="13_6paem"]
 [ext_resource type="PackedScene" uid="uid://cftgd0b0e3ei3" path="res://src/scenes/gui-scenes/chat_gui.tscn" id="13_fcvk8"]
+[ext_resource type="Texture2D" uid="uid://bgiqkioy1814b" path="res://src/ui/new-ui/buttons/equipedelement.png" id="14_j361x"]
 [ext_resource type="PackedScene" uid="uid://ccq03g2w30olb" path="res://src/scenes/gui-scenes/player_gui.tscn" id="14_o1h17"]
+[ext_resource type="Texture2D" uid="uid://bht3p3veeiw4p" path="res://src/ui/new-ui/buttons/red.png" id="15_kya5b"]
+[ext_resource type="Texture2D" uid="uid://dl3o8tqqj16yo" path="res://src/ui/new-ui/buttons/choice.png" id="16_34mdh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vuhtl"]
 atlas = ExtResource("9_8b332")
@@ -2703,9 +2706,118 @@ offset_top = 24.0
 offset_right = 3.0
 offset_bottom = 24.0
 
+[node name="BackDialog" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="BackDialog"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_top = -30.0
+offset_right = 480.0
+offset_bottom = 963.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.796078)
+
+[node name="TextureRect" type="TextureRect" parent="BackDialog"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 244.0
+offset_right = 443.0
+offset_bottom = 658.0
+texture = ExtResource("14_j361x")
+expand_mode = 1
+
+[node name="RichTextLabel8" type="RichTextLabel" parent="BackDialog"]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 250.0
+offset_right = 420.0
+offset_bottom = 322.0
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[color=FF6E00]Подтвердите действие"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel9" type="RichTextLabel" parent="BackDialog"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 293.0
+offset_right = 371.0
+offset_bottom = 395.0
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "Вы точно хотите возвратиться на окно выбора сервера?"
+fit_content = true
+scroll_active = false
+
+[node name="Cancel" type="TextureButton" parent="BackDialog"]
+layout_mode = 0
+offset_left = 247.0
+offset_top = 591.0
+offset_right = 333.0
+offset_bottom = 615.0
+scale = Vector2(1.8, 1.8)
+texture_normal = ExtResource("15_kya5b")
+texture_pressed = ExtResource("15_kya5b")
+texture_hover = ExtResource("15_kya5b")
+texture_disabled = ExtResource("15_kya5b")
+texture_focused = ExtResource("15_kya5b")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Cancel" type="Label" parent="BackDialog/Cancel"]
+layout_mode = 0
+offset_left = 18.6916
+offset_top = 4.2056
+offset_right = 80.6916
+offset_bottom = 24.2056
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 13
+text = "ОТМЕНА"
+uppercase = true
+
+[node name="Back" type="TextureButton" parent="BackDialog"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 591.0
+offset_right = 174.0
+offset_bottom = 615.0
+scale = Vector2(1.8, 1.8)
+texture_normal = ExtResource("16_34mdh")
+texture_pressed = ExtResource("16_34mdh")
+texture_hover = ExtResource("16_34mdh")
+texture_disabled = ExtResource("16_34mdh")
+texture_focused = ExtResource("16_34mdh")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Back" type="Label" parent="BackDialog/Back"]
+layout_mode = 0
+offset_left = 3.88889
+offset_top = 3.33335
+offset_right = 85.8889
+offset_bottom = 23.3334
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 13
+text = "ПОДТВЕРДИТЬ"
+uppercase = true
+
 [connection signal="pressed" from="Buildings/Tavern/TavernHitBox" to="." method="_on_tavern_pressed"]
 [connection signal="pressed" from="Buildings/Biom/BiomHitBox" to="." method="_on_biom_pressed"]
 [connection signal="pressed" from="Buildings/ClansHall/ClansHallHitBox" to="." method="_on_clans_hall_pressed"]
 [connection signal="pressed" from="Buildings/League/LeagueHitBox" to="." method="_on_league_pressed"]
 [connection signal="pressed" from="Buildings/Sieges/Sieges/Sieges" to="." method="_on_osada_pressed"]
 [connection signal="pressed" from="Buildings/Sieges/SiegesHitBox" to="." method="_on_sieges_pressed"]
+[connection signal="pressed" from="BackDialog/Cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="BackDialog/Back" to="." method="_on_back_pressed"]

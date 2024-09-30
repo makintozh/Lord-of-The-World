@@ -424,9 +424,14 @@ layout_mode = 1
 visible = false
 layout_mode = 1
 
+[node name="APIWaitResponseTimer" type="Timer" parent="."]
+wait_time = 20.0
+one_shot = true
+
 [connection signal="request_completed" from="APIRequest" to="." method="_on_http_request_request_completed"]
 [connection signal="toggled" from="UI/PasswordHideUI/PasswordHideButton" to="." method="_on_password_hide_button_toggled"]
 [connection signal="toggled" from="UI/RememberMeUI/RememberMeCheckBox" to="." method="_on_remember_me_check_box_toggled"]
 [connection signal="pressed" from="UI/ForgotPasswordUI/ForgotPasswordButton" to="." method="_on_forgot_password_button_pressed"]
 [connection signal="pressed" from="Navigation/NavigationContainer/RegisterButton" to="." method="_on_sign_up_button_pressed"]
 [connection signal="pressed" from="Navigation/NavigationContainer/LoginButton" to="." method="_on_login_button_pressed"]
+[connection signal="timeout" from="APIWaitResponseTimer" to="." method="_on_api_wait_response_timer_timeout"]
