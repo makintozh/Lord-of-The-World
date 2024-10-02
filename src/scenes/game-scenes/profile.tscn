@@ -96,11 +96,6 @@ grow_vertical = 2
 script = ExtResource("1_i4wyw")
 metadata/_edit_use_anchors_ = true
 
-[node name="PlayerGui" parent="." instance=ExtResource("3_2gba7")]
-layout_mode = 1
-offset_left = 6.0
-offset_right = 6.0
-
 [node name="BackGround-Image" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -115,6 +110,11 @@ mouse_filter = 2
 texture = ExtResource("2_svbct")
 expand_mode = 1
 stretch_mode = 6
+
+[node name="PlayerGui" parent="." instance=ExtResource("3_2gba7")]
+layout_mode = 1
+offset_left = 6.0
+offset_right = 6.0
 
 [node name="DownBG" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -4632,27 +4632,20 @@ text = "закрыть"
 uppercase = true
 
 [node name="ChangeCard" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="LearnedClose" type="TextureButton" parent="ChangeCard"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 4.0
-offset_top = -173.0
-offset_right = 90.0
-offset_bottom = -149.0
-grow_horizontal = 2
-grow_vertical = 0
+layout_mode = 0
+offset_left = 255.0
+offset_top = 802.0
+offset_right = 341.0
+offset_bottom = 826.0
 scale = Vector2(1.91, 1.91)
 texture_normal = ExtResource("48_k0amk")
 texture_pressed = ExtResource("48_k0amk")
@@ -4674,20 +4667,14 @@ theme_override_font_sizes/font_size = 13
 text = "закрыть"
 uppercase = true
 
-[node name="LearnedClose2" type="TextureButton" parent="ChangeCard"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -165.0
-offset_top = -173.0
-offset_right = -79.0
-offset_bottom = -149.0
-grow_horizontal = 2
-grow_vertical = 0
+[node name="SaveButton" type="TextureButton" parent="ChangeCard"]
+offset_left = 87.0
+offset_top = 802.0
+offset_right = 173.0
+offset_bottom = 826.0
 scale = Vector2(1.91, 1.91)
+disabled = true
+action_mode = 0
 texture_normal = ExtResource("51_to7ss")
 texture_pressed = ExtResource("51_to7ss")
 texture_hover = ExtResource("51_to7ss")
@@ -4696,7 +4683,7 @@ texture_focused = ExtResource("51_to7ss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="LearnedClose" type="Label" parent="ChangeCard/LearnedClose2"]
+[node name="SaveButton" type="Label" parent="ChangeCard/SaveButton"]
 layout_mode = 0
 offset_left = 12.0419
 offset_top = 4.18847
@@ -4836,7 +4823,6 @@ text = "закрыть"
 uppercase = true
 
 [node name="PresetsWindow" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -4851,18 +4837,10 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="LearnedClose" type="TextureButton" parent="PresetsWindow"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 234.0
-offset_top = 762.0
-offset_right = 320.0
-offset_bottom = 786.0
-grow_horizontal = 2
-grow_vertical = 0
+offset_left = 255.0
+offset_top = 802.0
+offset_right = 341.0
+offset_bottom = 826.0
 scale = Vector2(1.91, 1.91)
 texture_normal = ExtResource("48_k0amk")
 texture_pressed = ExtResource("48_k0amk")
@@ -4884,20 +4862,14 @@ theme_override_font_sizes/font_size = 13
 text = "закрыть"
 uppercase = true
 
-[node name="LearnedClose2" type="TextureButton" parent="PresetsWindow"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 234.0
-offset_top = 762.0
-offset_right = 320.0
-offset_bottom = 786.0
-grow_horizontal = 2
-grow_vertical = 0
+[node name="SaveButton" type="TextureButton" parent="PresetsWindow"]
+offset_left = 87.0
+offset_top = 802.0
+offset_right = 173.0
+offset_bottom = 826.0
 scale = Vector2(1.91, 1.91)
+disabled = true
+action_mode = 0
 texture_normal = ExtResource("51_to7ss")
 texture_pressed = ExtResource("51_to7ss")
 texture_hover = ExtResource("51_to7ss")
@@ -4906,7 +4878,7 @@ texture_focused = ExtResource("51_to7ss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="LearnedClose" type="Label" parent="PresetsWindow/LearnedClose2"]
+[node name="SaveButton" type="Label" parent="PresetsWindow/SaveButton"]
 layout_mode = 0
 offset_left = 12.0419
 offset_top = 4.18847
@@ -4974,7 +4946,6 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_re48x")
 flat = true
 
 [node name="ChatGui" parent="." instance=ExtResource("4_6q5mg")]
-visible = false
 layout_mode = 1
 offset_top = 21.0
 offset_bottom = 21.0
@@ -5025,10 +4996,10 @@ offset_bottom = 21.0
 [connection signal="pressed" from="UnEquipedElement/Choice" to="." method="_on_choice_pressed"]
 [connection signal="pressed" from="StylesWindow/LearnedClose" to="." method="_on_learned_close_pressed"]
 [connection signal="pressed" from="ChangeCard/LearnedClose" to="." method="_on_learned_close_pressed"]
-[connection signal="pressed" from="ChangeCard/LearnedClose2" to="." method="_on_learned_close_pressed"]
+[connection signal="pressed" from="ChangeCard/SaveButton" to="." method="_on_learned_close_pressed"]
 [connection signal="pressed" from="ChangeCard/Info_HitBox" to="." method="_on_info_hit_box_pressed"]
 [connection signal="pressed" from="ChangeCard/InfoClose" to="." method="_on_info_close_pressed"]
 [connection signal="pressed" from="PresetsWindow/LearnedClose" to="." method="_on_learned_close_pressed"]
-[connection signal="pressed" from="PresetsWindow/LearnedClose2" to="." method="_on_learned_close_pressed"]
+[connection signal="pressed" from="PresetsWindow/SaveButton" to="." method="_on_learned_close_pressed"]
 [connection signal="pressed" from="CloseElementHitBox" to="." method="_on_close_element_hit_box_pressed"]
 [connection signal="pressed" from="CloseElementHitBox2" to="." method="_on_close_element_hit_box_pressed"]

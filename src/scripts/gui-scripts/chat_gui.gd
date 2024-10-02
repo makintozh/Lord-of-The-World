@@ -72,7 +72,7 @@ func _exit_tree():
 func touch_api(quantity : int):
 	messages_label.text = loading_text
 	message_list.clear()
-	api.request("http://" + GLOBAL.choiced_server_address + "/chat/1/messages?quantity=" + str(quantity), bearer_header, HTTPClient.METHOD_GET)
+	await api.request("http://" + GLOBAL.choiced_server_address + "/chat/1/messages?quantity=" + str(quantity), bearer_header, HTTPClient.METHOD_GET)
 	
 
 
@@ -177,7 +177,7 @@ func _on_send_pressed() -> void:
 	
 	send_button.disabled = true
 	
-	await get_tree().create_timer(0.25).timeout
+	await get_tree().create_timer(0.5).timeout
 	input.text = ""
 	send_button.disabled = false
 

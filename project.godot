@@ -17,7 +17,6 @@ run/main_scene="res://src/scenes/auth-scenes/login_ui.tscn"
 config/quit_on_go_back=false
 config/features=PackedStringArray("4.3", "Mobile")
 run/max_fps=60
-run/low_processor_mode=true
 boot_splash/bg_color=Color(0, 0, 0, 0)
 boot_splash/show_image=false
 boot_splash/fullsize=false
