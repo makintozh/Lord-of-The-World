@@ -52,6 +52,12 @@ texture = ExtResource("9_tq0po")
 texture = ExtResource("5_jn22b")
 
 [node name="ChatGui" type="Control"]
+process_priority = 5
+process_physics_priority = 5
+process_thread_group = 1
+process_thread_group_order = 0
+process_thread_messages = 3
+physics_interpolation_mode = 0
 layout_mode = 3
 anchors_preset = 7
 anchor_left = 0.5
@@ -71,8 +77,13 @@ opened_chat_size_y = 350
 closed_chat_position_y = -226
 
 [node name="APIRequest" type="HTTPRequest" parent="."]
+process_mode = 3
+process_priority = 1
+process_physics_priority = 1
+process_thread_group = 1
+process_thread_group_order = 0
+process_thread_messages = 3
 use_threads = true
-accept_gzip = false
 
 [node name="Chat-Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -234,6 +245,10 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_ocxba")
 text = "+"
 
 [node name="Messages" type="RichTextLabel" parent="."]
+process_mode = 3
+process_thread_group = 1
+process_thread_group_order = 0
+process_thread_messages = 3
 layout_mode = 2
 offset_left = -206.315
 offset_top = -446.135

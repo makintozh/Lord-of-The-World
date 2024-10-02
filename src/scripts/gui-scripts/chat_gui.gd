@@ -47,22 +47,26 @@ var token = JSON.stringify({
 
 
 
-@onready var api_thread = Thread.new()
+
 @onready var websocket_thread = Thread.new()
-@onready var mutex = Mutex.new()
+
+
+
 
 
 func _ready() -> void:
-	mutex.unlock()
-	api_thread.start(touch_api.bind(15), 2)
+	touch_api(15)
 	websocket_thread.start(connect_to_socket, 2)
 	close_chat()
+	var aa = Thread.new()
 
 
 
 func _exit_tree():
-	api_thread.wait_to_finish()
 	websocket_thread.wait_to_finish()
+
+
+
 
 
 
@@ -72,7 +76,7 @@ func _exit_tree():
 func touch_api(quantity : int):
 	messages_label.text = loading_text
 	message_list.clear()
-	await api.request("http://" + GLOBAL.choiced_server_address + "/chat/1/messages?quantity=" + str(quantity), bearer_header, HTTPClient.METHOD_GET)
+	api.request("http://" + GLOBAL.choiced_server_address + "/chat/1/messages?quantity=" + str(quantity), bearer_header, HTTPClient.METHOD_GET)
 	
 
 
@@ -86,7 +90,7 @@ func connect_to_socket():
 
 
 
-func _process(_delta):
+func _physics_process(_delta: float) -> void:
 	socket.poll()
 
 
@@ -101,7 +105,8 @@ func _process(_delta):
 			
 			
 			if json_response:
-				_on_MessageReceived(json_response)
+				message_received(json_response)
+				
 				
 			if is_opened and !messages_label.position.y == -850 and !empty_input:
 				is_max = true
@@ -109,18 +114,14 @@ func _process(_delta):
 				messages_label.size.y += 15
 			if messages_label.position.y == -850 and !messages_label.size.y == 625:
 				messages_label.size.y += 15
-
-
-
-
-
-
-
+				
+				
+				
 	elif state == WebSocketPeer.STATE_CLOSED:
 			var code = socket.get_close_code()
 			printerr("\n[WEB-SOCKET] Оборвано соединение с Веб-Сокет: %d. Clean: %s" % [code, code != -1])
 			connect_to_socket()
-			socket.close()
+	
 	
 	
 	if messages_label.text == loading_text:
@@ -173,17 +174,11 @@ func _on_send_pressed() -> void:
 
 	print(msg)
 	if send_button.disabled == false:
-		var messgae_thread = Thread.new()
-		await messgae_thread.start(socket.send_text.bind(msg))
-		messgae_thread.wait_to_finish()
+		await Thread.new().start(socket.send_text.bind(msg), 2)
 		input.text = ""
-
-
-	send_button.disabled = true
-	
-	await get_tree().create_timer(0.3).timeout
-	
-	send_button.disabled = false
+		send_button.disabled = true
+		await get_tree().create_timer(0.3).timeout
+		send_button.disabled = false
 
 
 
@@ -204,13 +199,13 @@ func _on_api_request_request_completed(result: int, response_code: int, headers:
 	
 	
 	for message in api_response:
-		_on_MessageReceived(message)
+		message_received(message)
 
 
 
 
 
-func _on_MessageReceived(message):
+func message_received(message):
 		message_list.append(message)
 		update_label()
 
@@ -227,12 +222,9 @@ func update_label():
 			text += "[font=res://src/fonts/inika/Inika-Bold.ttf]" + message.username + "[/font]: " + message.text + "\n"
 	
 	
-
-
-	text = text.strip_edges()
-	messages_label.text = text
 	
-	
+	messages_label.text = text.strip_edges()
+
 
 
 

@@ -2357,6 +2357,12 @@ expand = true
 loop = true
 
 [node name="Buildings" type="Control" parent="."]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 anchors_preset = 0
 offset_left = 2.0
 offset_top = -74.715
@@ -2364,6 +2370,12 @@ offset_right = 2.0
 offset_bottom = -74.715
 
 [node name="Tavern" type="Control" parent="Buildings"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 3
 anchors_preset = 0
 offset_left = -21.0
@@ -2372,6 +2384,12 @@ offset_right = -21.0
 offset_bottom = 16.525
 
 [node name="Tavern" type="MarginContainer" parent="Buildings/Tavern"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 0
 offset_left = 4.0
 offset_top = 196.0
@@ -2379,12 +2397,24 @@ offset_right = 158.0
 offset_bottom = 346.0
 
 [node name="Taverna_Animated" type="AnimatedSprite2D" parent="Buildings/Tavern/Tavern"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 position = Vector2(88, 134)
 sprite_frames = SubResource("SpriteFrames_2rkp6")
 animation = &"Tavern"
 autoplay = "Tavern"
 
 [node name="TavernLabel" type="MarginContainer" parent="Buildings/Tavern"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 0
 offset_left = 40.0
 offset_top = 380.0
@@ -2392,6 +2422,12 @@ offset_right = 163.0
 offset_bottom = 409.0
 
 [node name="TavernLabel" type="Label" parent="Buildings/Tavern/TavernLabel"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 20
@@ -2402,6 +2438,12 @@ vertical_alignment = 1
 uppercase = true
 
 [node name="TavernHitBox" type="Button" parent="Buildings/Tavern"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 2
 offset_left = 7.0
 offset_top = 235.0
@@ -2420,6 +2462,12 @@ theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_xpp1x")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xpp1x")
 
 [node name="Biom" type="Control" parent="Buildings"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 3
 anchors_preset = 0
 offset_left = 9.0
@@ -2428,6 +2476,12 @@ offset_right = 9.0
 offset_bottom = 60.0
 
 [node name="Biom" type="MarginContainer" parent="Buildings/Biom"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 0
 offset_left = 232.0
 offset_top = 283.0
@@ -2435,12 +2489,24 @@ offset_right = 386.0
 offset_bottom = 433.0
 
 [node name="Biom_Animated" type="AnimatedSprite2D" parent="Buildings/Biom/Biom"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 position = Vector2(74, 98)
 sprite_frames = SubResource("SpriteFrames_ibxjl")
 animation = &"Biom"
 autoplay = "Biom"
 
 [node name="BiomLabel" type="MarginContainer" parent="Buildings/Biom"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 0
 offset_left = 234.0
 offset_top = 449.525
@@ -2448,6 +2514,12 @@ offset_right = 347.0
 offset_bottom = 478.525
 
 [node name="BiomLabel" type="Label" parent="Buildings/Biom/BiomLabel"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_wy7sx")
@@ -2457,6 +2529,12 @@ vertical_alignment = 1
 uppercase = true
 
 [node name="BiomHitBox" type="Button" parent="Buildings/Biom"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 0
 offset_left = 216.0
 offset_top = 322.0
@@ -2475,6 +2553,12 @@ theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_xpp1x")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xpp1x")
 
 [node name="ClansHall" type="Control" parent="Buildings"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 3
 anchors_preset = 0
 offset_left = -23.0
@@ -2483,6 +2567,12 @@ offset_right = -23.0
 offset_bottom = 136.995
 
 [node name="ClansHall" type="MarginContainer" parent="Buildings/ClansHall"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 0
 offset_left = 10.0
 offset_top = 534.0
@@ -2490,6 +2580,12 @@ offset_right = 186.0
 offset_bottom = 711.0
 
 [node name="ClansHall_Animated" type="AnimatedSprite2D" parent="Buildings/ClansHall/ClansHall"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 position = Vector2(82, 95)
 scale = Vector2(1.08, 1.08)
 sprite_frames = SubResource("SpriteFrames_fah3o")
@@ -2498,6 +2594,12 @@ autoplay = "ClansHall"
 frame_progress = 0.00634395
 
 [node name="ClansHallLabel" type="MarginContainer" parent="Buildings/ClansHall"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 0
 offset_left = 36.0
 offset_top = 696.525
@@ -2505,6 +2607,12 @@ offset_right = 147.0
 offset_bottom = 725.525
 
 [node name="ClansHallLabel" type="Label" parent="Buildings/ClansHall/ClansHallLabel"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_vxhum")
@@ -2514,6 +2622,12 @@ vertical_alignment = 1
 uppercase = true
 
 [node name="ClansHallHitBox" type="Button" parent="Buildings/ClansHall"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 0
 offset_left = 18.0
 offset_top = 549.0
@@ -2532,6 +2646,12 @@ theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_xpp1x")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xpp1x")
 
 [node name="League" type="Control" parent="Buildings"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 3
 anchors_preset = 0
 offset_left = -24.0
@@ -2540,6 +2660,12 @@ offset_right = -24.0
 offset_bottom = -435.005
 
 [node name="League" type="MarginContainer" parent="Buildings/League"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 0
 offset_left = 359.0
 offset_top = 637.0
@@ -2547,6 +2673,12 @@ offset_right = 541.0
 offset_bottom = 794.0
 
 [node name="League_Animated" type="AnimatedSprite2D" parent="Buildings/League/League"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 position = Vector2(85, 87)
 scale = Vector2(1.14, 1.14)
 sprite_frames = SubResource("SpriteFrames_3kjc4")
@@ -2554,6 +2686,12 @@ animation = &"League"
 autoplay = "League"
 
 [node name="LeagueLabel" type="MarginContainer" parent="Buildings/League"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 0
 offset_left = 383.0
 offset_top = 805.525
@@ -2561,6 +2699,12 @@ offset_right = 492.0
 offset_bottom = 834.525
 
 [node name="LeagueLabel" type="Label" parent="Buildings/League/LeagueLabel"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_1l1kl")
@@ -2570,6 +2714,12 @@ vertical_alignment = 1
 uppercase = true
 
 [node name="LeagueHitBox" type="Button" parent="Buildings/League"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 0
 offset_left = 333.0
 offset_top = 631.0
@@ -2588,6 +2738,12 @@ theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_xpp1x")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xpp1x")
 
 [node name="Sieges" type="Control" parent="Buildings"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 3
 anchors_preset = 0
 offset_left = -5.0
@@ -2596,6 +2752,12 @@ offset_right = -5.0
 offset_bottom = 151.995
 
 [node name="Sieges" type="MarginContainer" parent="Buildings/Sieges"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 0
 offset_left = 359.0
 offset_top = 637.0
@@ -2603,11 +2765,23 @@ offset_right = 541.0
 offset_bottom = 794.0
 
 [node name="Sieges" type="TextureButton" parent="Buildings/Sieges/Sieges"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 2
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Sieges_Animated" type="AnimatedSprite2D" parent="Buildings/Sieges/Sieges"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 position = Vector2(85, 87)
 scale = Vector2(1.14, 1.14)
 sprite_frames = SubResource("SpriteFrames_unykc")
@@ -2615,6 +2789,12 @@ animation = &"Sieges"
 autoplay = "Sieges"
 
 [node name="SiegesLabel" type="MarginContainer" parent="Buildings/Sieges"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 0
 offset_left = 368.0
 offset_top = 783.525
@@ -2622,6 +2802,12 @@ offset_right = 489.0
 offset_bottom = 812.525
 
 [node name="SiegesLabel" type="Label" parent="Buildings/Sieges/SiegesLabel"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_wihig")
@@ -2631,6 +2817,12 @@ vertical_alignment = 1
 uppercase = true
 
 [node name="SiegesHitBox" type="Button" parent="Buildings/Sieges"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 0
 offset_left = 333.0
 offset_top = 631.0
