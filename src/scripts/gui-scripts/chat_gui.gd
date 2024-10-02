@@ -173,12 +173,16 @@ func _on_send_pressed() -> void:
 
 	print(msg)
 	if send_button.disabled == false:
-		await Thread.new().start(socket.send_text.bind(msg))
-	
+		var messgae_thread = Thread.new()
+		await messgae_thread.start(socket.send_text.bind(msg))
+		messgae_thread.wait_to_finish()
+		input.text = ""
+
+
 	send_button.disabled = true
 	
-	await get_tree().create_timer(0.5).timeout
-	input.text = ""
+	await get_tree().create_timer(0.3).timeout
+	
 	send_button.disabled = false
 
 
