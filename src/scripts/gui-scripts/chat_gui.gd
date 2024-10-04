@@ -16,6 +16,7 @@ extends Control
 @onready var chat_gui = $"."
 @onready var scene = get_tree().get_root().get_child(SceneManager.singleton_count)
 @onready var api = $"APIRequest"
+@onready var refresh = $Refresh
 
 
 
@@ -24,21 +25,17 @@ extends Control
 @export var opened_chat_size_y = 500
 @export var closed_chat_position_y = -221
 @export var mini_chat_active : bool = true
-@export var loading_text:String = "Загрузка..."
 @export var websocket_url = "ws://" + GLOBAL.choiced_server_address + "/ws/chat/1"
 
 
 
 
-var message_list = []
 var socket = WebSocketPeer.new()
 var empty_input : bool = false
 var bearer_header = ["Authorization: Bearer " + GLOBAL.from_auth_token]
 var is_opened:bool = false
 var is_max:bool = false
-
-
-
+var json_response
 var token = JSON.stringify({
 		"token":GLOBAL.from_auth_token
 	})
@@ -46,24 +43,23 @@ var token = JSON.stringify({
 
 
 
-
-
 @onready var websocket_thread = Thread.new()
-
+@onready var message_sender_thread = Thread.new()
 
 
 
 
 func _ready() -> void:
-	touch_api(15)
-	websocket_thread.start(connect_to_socket, 2)
+	load_chat_history_from_api(15)
+	websocket_thread.start(connect_to_socket)
 	close_chat()
-	var aa = Thread.new()
+
 
 
 
 func _exit_tree():
 	websocket_thread.wait_to_finish()
+	message_sender_thread.wait_to_finish()
 
 
 
@@ -73,11 +69,37 @@ func _exit_tree():
 
 
 
-func touch_api(quantity : int):
-	messages_label.text = loading_text
-	message_list.clear()
+func load_chat_history_from_api(quantity : int):
 	api.request("http://" + GLOBAL.choiced_server_address + "/chat/1/messages?quantity=" + str(quantity), bearer_header, HTTPClient.METHOD_GET)
-	
+	open_chat_hitbox.visible = false
+	messages_label.visible = false
+	show_chat_button.disabled = true
+	hide_chat_button.disabled = true
+
+
+
+
+func _on_api_request_request_completed(result: int, response_code: int, headers: PackedStringArray, body: PackedByteArray) -> void:
+	var api_response = JSON.parse_string(body.get_string_from_utf8())
+	print(api_response)
+	print('%d %s' % [response_code, '  Chat History Load'])
+
+
+	for message in api_response:
+		messages_label.append_text("[font=res://src/fonts/inika/Inika-Bold.ttf] %s [/font]:  %s \n" % [message.username , message.text])
+
+
+	if response_code == 200:
+		show_chat_button.disabled = false
+		hide_chat_button.disabled = false
+		open_chat_hitbox.visible = true
+		refresh.visible = false
+		messages_label.visible = true
+		await  get_tree().create_timer(0.5).timeout
+		print(json_response)
+		message_sender_thread.start(display_messages)
+		print('message_sender_thread   STARTED!')
+
 
 
 
@@ -89,7 +111,6 @@ func connect_to_socket():
 	
 
 
-
 func _physics_process(_delta: float) -> void:
 	socket.poll()
 
@@ -97,21 +118,26 @@ func _physics_process(_delta: float) -> void:
 	var state = socket.get_ready_state()
 
 
+
+
 	if state == WebSocketPeer.STATE_OPEN:
 		while socket.get_available_packet_count():
 			var response = socket.get_packet().get_string_from_utf8()
-			var json_response = JSON.parse_string(response)
+			json_response = JSON.parse_string(response)
 			print("\n[WEB-SOCKET] %s %s" % [response, "\n"])
 			
 			
 			if json_response:
-				message_received(json_response)
-				
-				
-			if is_opened and !messages_label.position.y == -850 and !empty_input:
+				if !json_response.text == "You are successfully connected to chat!":
+					#message_sender_thread.call('display_messages')
+					display_messages()
+
+
+
+			if is_opened and !messages_label.position.y == -844:
 				is_max = true
-				messages_label.position.y -= 25
-				messages_label.size.y += 15
+				messages_label.position.y -= 22
+				messages_label.size.y += 20
 			if messages_label.position.y == -850 and !messages_label.size.y == 625:
 				messages_label.size.y += 15
 				
@@ -120,25 +146,22 @@ func _physics_process(_delta: float) -> void:
 	elif state == WebSocketPeer.STATE_CLOSED:
 			var code = socket.get_close_code()
 			printerr("\n[WEB-SOCKET] Оборвано соединение с Веб-Сокет: %d. Clean: %s" % [code, code != -1])
-			connect_to_socket()
-	
-	
-	
-	if messages_label.text == loading_text:
-		messages_label.add_theme_font_size_override("normal_font_size", 30)
-	else:
-		messages_label.add_theme_font_size_override("normal_font_size", 16)
-
-
-
 
 	if input.text == '':
 		empty_input = true
+		send_button.disabled = true
 	else:
 		empty_input = false
+		send_button.disabled = false
 
 
 
+
+
+func display_messages():
+	if json_response:
+		if !json_response.text == "You are successfully connected to chat!":
+			messages_label.append_text("[font=res://src/fonts/inika/Inika-Bold.ttf] %s [/font]:  %s \n" % [json_response.username , json_response.text])
 
 
 
@@ -172,13 +195,11 @@ func _on_send_pressed() -> void:
 })
 
 
-	print(msg)
+
 	if send_button.disabled == false:
-		await Thread.new().start(socket.send_text.bind(msg), 2)
+		await socket.send_text(msg)
+		print('[WEB-SOCKET] %s   SENDED' % [msg])
 		input.text = ""
-		send_button.disabled = true
-		await get_tree().create_timer(0.3).timeout
-		send_button.disabled = false
 
 
 
@@ -192,38 +213,10 @@ func _on_send_pressed() -> void:
 
 
 
-func _on_api_request_request_completed(result: int, response_code: int, headers: PackedStringArray, body: PackedByteArray) -> void:
-	var api_response = JSON.parse_string(body.get_string_from_utf8())
-	print(api_response)
-
-	
-	
-	for message in api_response:
-		message_received(message)
 
 
 
 
-
-func message_received(message):
-		message_list.append(message)
-		update_label()
-
-
-
-
-
-func update_label():
-	var text = ""
-	
-	
-	for message in message_list:
-		if "username" in message:
-			text += "[font=res://src/fonts/inika/Inika-Bold.ttf]" + message.username + "[/font]: " + message.text + "\n"
-	
-	
-	
-	messages_label.text = text.strip_edges()
 
 
 
@@ -249,7 +242,7 @@ func open_chat():
 	messages_label.position.x = -227
 	if !is_max:
 		messages_label.size.y = 355
-		messages_label.position.y = -575
+		messages_label.position.y = opened_chat_position_y
 	else:
 		messages_label.size.y = 625
 		messages_label.position.y = -850
@@ -279,6 +272,7 @@ func close_chat():
 	messages_label.position.y = closed_chat_position_y
 	messages_label.size.x = 99999
 	messages_label.size.y = 88
+	$"../PlayerGui".navigation.visible = true
 	chat_to_down()
 
 
@@ -290,6 +284,7 @@ func hide_chat():
 	hide_chat_button.visible = false
 	open_chat_hitbox.visible = false
 	show_chat_button.visible = true
+	refresh.visible = false
 
 
 
@@ -300,7 +295,7 @@ func show_chat():
 	open_chat_hitbox.visible = true
 	hide_chat_button.visible = true
 	show_chat_button.visible = false
-
+	$"../PlayerGui"._on_navigation_close_hit_box_pressed()
 
 
 
@@ -311,8 +306,5 @@ func _on_hide_chat_pressed() -> void:
 
 
 
-
-
 func _on_show_chat_pressed() -> void:
 	show_chat()
-	$"../PlayerGui"._on_navigation_close_hit_box_pressed()

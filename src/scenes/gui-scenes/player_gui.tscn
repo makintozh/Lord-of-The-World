@@ -796,10 +796,6 @@ action_mode = 0
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Settings" parent="." instance=ExtResource("4_i71wt")]
-visible = false
-layout_mode = 1
-
 [node name="PlayerInformation" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -1402,6 +1398,10 @@ theme_override_font_sizes/normal_font_size = 13
 bbcode_enabled = true
 text = "ЗАКРЫТЬ"
 fit_content = true
+
+[node name="Settings" parent="." instance=ExtResource("4_i71wt")]
+visible = false
+layout_mode = 1
 
 [connection signal="pressed" from="Actions/SettingsButton/Settings" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="Navigation/NavigationCloseHitBox/NavigationCloseHitBox" to="." method="_on_navigation_close_hit_box_pressed"]

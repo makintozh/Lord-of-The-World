@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cftgd0b0e3ei3"]
+[gd_scene load_steps=26 format=3 uid="uid://cftgd0b0e3ei3"]
 
 [ext_resource type="Script" path="res://src/scripts/gui-scripts/chat_gui.gd" id="1_l3oyk"]
 [ext_resource type="Texture2D" uid="uid://k13hs5lriywa" path="res://src/ui/elements/Rectangleeee.png" id="2_jbe85"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://nk0x8jb2g3ea" path="res://src/ui/new-ui/misc/Фон чата.png" id="6_5jpqw"]
 [ext_resource type="Texture2D" uid="uid://bg8b01s6jjp12" path="res://src/ui/buttons/Rectangle 269.png" id="6_rws48"]
 [ext_resource type="Texture2D" uid="uid://c65vpdhoqut3d" path="res://src/ui/new-ui/buttons/Кнопка открыть чат.png" id="9_tq0po"]
+[ext_resource type="Texture2D" uid="uid://b2vo2hyj6d7ni" path="res://src/ui/elements/update 1.png" id="11_kk7il"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ae680"]
 texture = ExtResource("6_5jpqw")
@@ -50,6 +51,68 @@ texture = ExtResource("9_tq0po")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_byfa4"]
 texture = ExtResource("5_jn22b")
+
+[sub_resource type="Animation" id="Animation_vhv4n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:flip_v")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_n6wnf"]
+resource_name = "refreshing"
+length = 0.35
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath(".:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [true, false, false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:flip_v")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5avx2"]
+_data = {
+"RESET": SubResource("Animation_vhv4n"),
+"refreshing": SubResource("Animation_n6wnf")
+}
 
 [node name="ChatGui" type="Control"]
 process_priority = 5
@@ -249,6 +312,7 @@ process_mode = 3
 process_thread_group = 1
 process_thread_group_order = 0
 process_thread_messages = 3
+visible = false
 layout_mode = 2
 offset_left = -206.315
 offset_top = -446.135
@@ -259,7 +323,6 @@ size_flags_vertical = 3
 mouse_filter = 1
 theme = SubResource("Theme_75177")
 bbcode_enabled = true
-text = "Загрузка..."
 scroll_following = true
 tab_size = 24
 threaded = true
@@ -291,6 +354,7 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_snwt4")
 flat = true
 
 [node name="Show-Chat" type="Button" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -369,6 +433,45 @@ theme_override_font_sizes/font_size = 15
 text = "скрыть"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Refresh" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 97.115
+offset_top = 22.4251
+offset_right = 97.115
+offset_bottom = 22.4251
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.655, 0.655)
+
+[node name="Refresh" type="MarginContainer" parent="Refresh"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -366.0
+offset_right = 40.0
+offset_bottom = -256.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Refresh" type="TextureRect" parent="Refresh/Refresh"]
+layout_mode = 2
+texture = ExtResource("11_kk7il")
+expand_mode = 1
+flip_h = true
+
+[node name="RefreshAnimation" type="AnimationPlayer" parent="Refresh/Refresh/Refresh"]
+libraries = {
+"": SubResource("AnimationLibrary_5avx2")
+}
+autoplay = "refreshing"
 
 [connection signal="request_completed" from="APIRequest" to="." method="_on_api_request_request_completed"]
 [connection signal="pressed" from="Open-Chat-Panel/Close-Chat" to="." method="_on_close_chat_pressed"]
