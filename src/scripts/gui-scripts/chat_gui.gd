@@ -58,8 +58,11 @@ func _ready() -> void:
 
 
 func _exit_tree():
-	websocket_thread.wait_to_finish()
-	message_sender_thread.wait_to_finish()
+	if websocket_thread.is_started():
+		websocket_thread.wait_to_finish()
+		
+	if message_sender_thread.is_started():
+		message_sender_thread.wait_to_finish()
 
 
 
@@ -90,12 +93,12 @@ func _on_api_request_request_completed(result: int, response_code: int, headers:
 
 
 	if response_code == 200:
+		await  get_tree().create_timer(0.5).timeout
 		show_chat_button.disabled = false
 		hide_chat_button.disabled = false
 		open_chat_hitbox.visible = true
 		refresh.visible = false
 		messages_label.visible = true
-		await  get_tree().create_timer(0.5).timeout
 		print(json_response)
 		message_sender_thread.start(display_messages)
 		print('message_sender_thread   STARTED!')
@@ -272,7 +275,10 @@ func close_chat():
 	messages_label.position.y = closed_chat_position_y
 	messages_label.size.x = 99999
 	messages_label.size.y = 88
-	$"../PlayerGui".navigation.visible = true
+	if scene.name == "Navigation-menu":
+		$"../PlayerGui".navigation.visible = true
+	else:
+		$"../PlayerGui".navigation.visible = false
 	chat_to_down()
 
 
