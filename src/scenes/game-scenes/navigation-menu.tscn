@@ -1,4 +1,4 @@
-[gd_scene load_steps=351 format=3 uid="uid://pk7extbu3xea"]
+[gd_scene load_steps=348 format=3 uid="uid://pk7extbu3xea"]
 
 [ext_resource type="Script" path="res://src/scripts/game-scripts/navigation-menu.gd" id="1_ykvwa"]
 [ext_resource type="Texture2D" uid="uid://cdbeqyu8j0hmr" path="res://src/ui/backgrounds/Главный_экран_адаптировано_под_размер_.PNG" id="3_j0xlm"]
@@ -8,14 +8,14 @@
 [ext_resource type="Texture2D" uid="uid://b0eom03g48wmg" path="res://src/ui/buildings/animated/Osadu.png" id="9_lqhp8"]
 [ext_resource type="Texture2D" uid="uid://bk47kvndsogop" path="res://src/ui/buildings/animated/Biom.png" id="10_bbc1g"]
 [ext_resource type="Texture2D" uid="uid://jwvwoygkxef1" path="res://src/ui/new-ui/buttons/Замок 1.png" id="10_skpi3"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="11_8sxna"]
 [ext_resource type="Texture2D" uid="uid://dqqfcxyclbynf" path="res://src/ui/new-ui/misc/Подложка кнопки.png" id="11_ltf07"]
-[ext_resource type="Resource" uid="uid://5a1rq24an53u" path="res://src/ui/dialogues/warning_back_dialogue.tres" id="12_f0vy2"]
 [ext_resource type="Texture2D" uid="uid://nr7cjatr1ahd" path="res://src/ui/buildings/animated/ClansHall.png" id="12_vctx2"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="12_yq8ua"]
 [ext_resource type="Texture2D" uid="uid://bqqkct561dww0" path="res://src/ui/buildings/animated/League.png" id="13_6paem"]
 [ext_resource type="PackedScene" uid="uid://cftgd0b0e3ei3" path="res://src/scenes/gui-scenes/chat_gui.tscn" id="13_fcvk8"]
+[ext_resource type="Texture2D" uid="uid://bgiqkioy1814b" path="res://src/ui/new-ui/buttons/equipedelement.png" id="14_j361x"]
 [ext_resource type="PackedScene" uid="uid://ccq03g2w30olb" path="res://src/scenes/gui-scenes/player_gui.tscn" id="14_o1h17"]
+[ext_resource type="Texture2D" uid="uid://bht3p3veeiw4p" path="res://src/ui/new-ui/buttons/red.png" id="15_kya5b"]
+[ext_resource type="Texture2D" uid="uid://dl3o8tqqj16yo" path="res://src/ui/new-ui/buttons/choice.png" id="16_34mdh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vuhtl"]
 atlas = ExtResource("9_8b332")
@@ -2318,15 +2318,6 @@ animations = [{
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wihig"]
 texture = ExtResource("5_dxjvq")
 
-[sub_resource type="RichTextEffect" id="RichTextEffect_atejj"]
-script = ExtResource("12_yq8ua")
-
-[sub_resource type="RichTextEffect" id="RichTextEffect_sprpr"]
-script = ExtResource("12_yq8ua")
-
-[sub_resource type="RichTextEffect" id="RichTextEffect_iqsd7"]
-script = ExtResource("12_yq8ua")
-
 [node name="Navigation-menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -2366,6 +2357,12 @@ expand = true
 loop = true
 
 [node name="Buildings" type="Control" parent="."]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 anchors_preset = 0
 offset_left = 2.0
 offset_top = -74.715
@@ -2373,6 +2370,12 @@ offset_right = 2.0
 offset_bottom = -74.715
 
 [node name="Tavern" type="Control" parent="Buildings"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 3
 anchors_preset = 0
 offset_left = -21.0
@@ -2381,6 +2384,12 @@ offset_right = -21.0
 offset_bottom = 16.525
 
 [node name="Tavern" type="MarginContainer" parent="Buildings/Tavern"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 0
 offset_left = 4.0
 offset_top = 196.0
@@ -2388,12 +2397,24 @@ offset_right = 158.0
 offset_bottom = 346.0
 
 [node name="Taverna_Animated" type="AnimatedSprite2D" parent="Buildings/Tavern/Tavern"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 position = Vector2(88, 134)
 sprite_frames = SubResource("SpriteFrames_2rkp6")
 animation = &"Tavern"
 autoplay = "Tavern"
 
 [node name="TavernLabel" type="MarginContainer" parent="Buildings/Tavern"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 0
 offset_left = 40.0
 offset_top = 380.0
@@ -2401,6 +2422,12 @@ offset_right = 163.0
 offset_bottom = 409.0
 
 [node name="TavernLabel" type="Label" parent="Buildings/Tavern/TavernLabel"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 20
@@ -2411,6 +2438,12 @@ vertical_alignment = 1
 uppercase = true
 
 [node name="TavernHitBox" type="Button" parent="Buildings/Tavern"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 2
 offset_left = 7.0
 offset_top = 235.0
@@ -2429,6 +2462,12 @@ theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_xpp1x")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xpp1x")
 
 [node name="Biom" type="Control" parent="Buildings"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 3
 anchors_preset = 0
 offset_left = 9.0
@@ -2437,6 +2476,12 @@ offset_right = 9.0
 offset_bottom = 60.0
 
 [node name="Biom" type="MarginContainer" parent="Buildings/Biom"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 0
 offset_left = 232.0
 offset_top = 283.0
@@ -2444,12 +2489,24 @@ offset_right = 386.0
 offset_bottom = 433.0
 
 [node name="Biom_Animated" type="AnimatedSprite2D" parent="Buildings/Biom/Biom"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 position = Vector2(74, 98)
 sprite_frames = SubResource("SpriteFrames_ibxjl")
 animation = &"Biom"
 autoplay = "Biom"
 
 [node name="BiomLabel" type="MarginContainer" parent="Buildings/Biom"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 0
 offset_left = 234.0
 offset_top = 449.525
@@ -2457,6 +2514,12 @@ offset_right = 347.0
 offset_bottom = 478.525
 
 [node name="BiomLabel" type="Label" parent="Buildings/Biom/BiomLabel"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_wy7sx")
@@ -2466,6 +2529,12 @@ vertical_alignment = 1
 uppercase = true
 
 [node name="BiomHitBox" type="Button" parent="Buildings/Biom"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 0
 offset_left = 216.0
 offset_top = 322.0
@@ -2484,6 +2553,12 @@ theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_xpp1x")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xpp1x")
 
 [node name="ClansHall" type="Control" parent="Buildings"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 3
 anchors_preset = 0
 offset_left = -23.0
@@ -2492,6 +2567,12 @@ offset_right = -23.0
 offset_bottom = 136.995
 
 [node name="ClansHall" type="MarginContainer" parent="Buildings/ClansHall"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 0
 offset_left = 10.0
 offset_top = 534.0
@@ -2499,6 +2580,12 @@ offset_right = 186.0
 offset_bottom = 711.0
 
 [node name="ClansHall_Animated" type="AnimatedSprite2D" parent="Buildings/ClansHall/ClansHall"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 position = Vector2(82, 95)
 scale = Vector2(1.08, 1.08)
 sprite_frames = SubResource("SpriteFrames_fah3o")
@@ -2507,6 +2594,12 @@ autoplay = "ClansHall"
 frame_progress = 0.00634395
 
 [node name="ClansHallLabel" type="MarginContainer" parent="Buildings/ClansHall"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 0
 offset_left = 36.0
 offset_top = 696.525
@@ -2514,6 +2607,12 @@ offset_right = 147.0
 offset_bottom = 725.525
 
 [node name="ClansHallLabel" type="Label" parent="Buildings/ClansHall/ClansHallLabel"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_vxhum")
@@ -2523,6 +2622,12 @@ vertical_alignment = 1
 uppercase = true
 
 [node name="ClansHallHitBox" type="Button" parent="Buildings/ClansHall"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 0
 offset_left = 18.0
 offset_top = 549.0
@@ -2541,6 +2646,12 @@ theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_xpp1x")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xpp1x")
 
 [node name="League" type="Control" parent="Buildings"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 3
 anchors_preset = 0
 offset_left = -24.0
@@ -2549,6 +2660,12 @@ offset_right = -24.0
 offset_bottom = -435.005
 
 [node name="League" type="MarginContainer" parent="Buildings/League"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 0
 offset_left = 359.0
 offset_top = 637.0
@@ -2556,6 +2673,12 @@ offset_right = 541.0
 offset_bottom = 794.0
 
 [node name="League_Animated" type="AnimatedSprite2D" parent="Buildings/League/League"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 position = Vector2(85, 87)
 scale = Vector2(1.14, 1.14)
 sprite_frames = SubResource("SpriteFrames_3kjc4")
@@ -2563,6 +2686,12 @@ animation = &"League"
 autoplay = "League"
 
 [node name="LeagueLabel" type="MarginContainer" parent="Buildings/League"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 0
 offset_left = 383.0
 offset_top = 805.525
@@ -2570,6 +2699,12 @@ offset_right = 492.0
 offset_bottom = 834.525
 
 [node name="LeagueLabel" type="Label" parent="Buildings/League/LeagueLabel"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_1l1kl")
@@ -2579,6 +2714,12 @@ vertical_alignment = 1
 uppercase = true
 
 [node name="LeagueHitBox" type="Button" parent="Buildings/League"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 0
 offset_left = 333.0
 offset_top = 631.0
@@ -2597,6 +2738,12 @@ theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_xpp1x")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xpp1x")
 
 [node name="Sieges" type="Control" parent="Buildings"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 3
 anchors_preset = 0
 offset_left = -5.0
@@ -2605,6 +2752,12 @@ offset_right = -5.0
 offset_bottom = 151.995
 
 [node name="Sieges" type="MarginContainer" parent="Buildings/Sieges"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 0
 offset_left = 359.0
 offset_top = 637.0
@@ -2612,11 +2765,23 @@ offset_right = 541.0
 offset_bottom = 794.0
 
 [node name="Sieges" type="TextureButton" parent="Buildings/Sieges/Sieges"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 2
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Sieges_Animated" type="AnimatedSprite2D" parent="Buildings/Sieges/Sieges"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 position = Vector2(85, 87)
 scale = Vector2(1.14, 1.14)
 sprite_frames = SubResource("SpriteFrames_unykc")
@@ -2624,6 +2789,12 @@ animation = &"Sieges"
 autoplay = "Sieges"
 
 [node name="SiegesLabel" type="MarginContainer" parent="Buildings/Sieges"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 0
 offset_left = 368.0
 offset_top = 783.525
@@ -2631,6 +2802,12 @@ offset_right = 489.0
 offset_bottom = 812.525
 
 [node name="SiegesLabel" type="Label" parent="Buildings/Sieges/SiegesLabel"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_wihig")
@@ -2640,6 +2817,12 @@ vertical_alignment = 1
 uppercase = true
 
 [node name="SiegesHitBox" type="Button" parent="Buildings/Sieges"]
+process_mode = 3
+process_priority = 10
+process_physics_priority = 10
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
 layout_mode = 0
 offset_left = 333.0
 offset_top = 631.0
@@ -2704,43 +2887,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="TransparentBack" type="ColorRect" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -477.0
-offset_top = -279.0
-offset_right = 828.0
-offset_bottom = 1395.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0.529412)
-
-[node name="BackDialogue" type="Panel" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -250.0
-offset_top = -120.0
-offset_right = 251.0
-offset_bottom = 184.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("11_8sxna")
-data = ExtResource("12_f0vy2")
-start_id = "warning"
-hide_portrait = true
-custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_atejj"), SubResource("RichTextEffect_sprpr"), SubResource("RichTextEffect_iqsd7")])
-max_options_count = 2
-options_alignment = 1
-options_vertical = true
-
 [node name="PlayerGui" parent="." instance=ExtResource("14_o1h17")]
 layout_mode = 1
 mouse_filter = 2
@@ -2752,10 +2898,118 @@ offset_top = 24.0
 offset_right = 3.0
 offset_bottom = 24.0
 
+[node name="BackDialog" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="BackDialog"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_top = -30.0
+offset_right = 480.0
+offset_bottom = 963.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.796078)
+
+[node name="TextureRect" type="TextureRect" parent="BackDialog"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 244.0
+offset_right = 443.0
+offset_bottom = 658.0
+texture = ExtResource("14_j361x")
+expand_mode = 1
+
+[node name="RichTextLabel8" type="RichTextLabel" parent="BackDialog"]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 250.0
+offset_right = 420.0
+offset_bottom = 322.0
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[color=FF6E00]Подтвердите действие"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel9" type="RichTextLabel" parent="BackDialog"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 293.0
+offset_right = 371.0
+offset_bottom = 395.0
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "Вы точно хотите возвратиться на окно выбора сервера?"
+fit_content = true
+scroll_active = false
+
+[node name="Cancel" type="TextureButton" parent="BackDialog"]
+layout_mode = 0
+offset_left = 247.0
+offset_top = 591.0
+offset_right = 333.0
+offset_bottom = 615.0
+scale = Vector2(1.8, 1.8)
+texture_normal = ExtResource("15_kya5b")
+texture_pressed = ExtResource("15_kya5b")
+texture_hover = ExtResource("15_kya5b")
+texture_disabled = ExtResource("15_kya5b")
+texture_focused = ExtResource("15_kya5b")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Cancel" type="Label" parent="BackDialog/Cancel"]
+layout_mode = 0
+offset_left = 18.6916
+offset_top = 4.2056
+offset_right = 80.6916
+offset_bottom = 24.2056
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 13
+text = "ОТМЕНА"
+uppercase = true
+
+[node name="Back" type="TextureButton" parent="BackDialog"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 591.0
+offset_right = 174.0
+offset_bottom = 615.0
+scale = Vector2(1.8, 1.8)
+texture_normal = ExtResource("16_34mdh")
+texture_pressed = ExtResource("16_34mdh")
+texture_hover = ExtResource("16_34mdh")
+texture_disabled = ExtResource("16_34mdh")
+texture_focused = ExtResource("16_34mdh")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Back" type="Label" parent="BackDialog/Back"]
+layout_mode = 0
+offset_left = 3.88889
+offset_top = 3.33335
+offset_right = 85.8889
+offset_bottom = 23.3334
+theme_override_colors/font_outline_color = Color(0.662745, 0.443137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 13
+text = "ПОДТВЕРДИТЬ"
+uppercase = true
+
 [connection signal="pressed" from="Buildings/Tavern/TavernHitBox" to="." method="_on_tavern_pressed"]
 [connection signal="pressed" from="Buildings/Biom/BiomHitBox" to="." method="_on_biom_pressed"]
 [connection signal="pressed" from="Buildings/ClansHall/ClansHallHitBox" to="." method="_on_clans_hall_pressed"]
 [connection signal="pressed" from="Buildings/League/LeagueHitBox" to="." method="_on_league_pressed"]
 [connection signal="pressed" from="Buildings/Sieges/Sieges/Sieges" to="." method="_on_osada_pressed"]
 [connection signal="pressed" from="Buildings/Sieges/SiegesHitBox" to="." method="_on_sieges_pressed"]
-[connection signal="dialogue_signal" from="BackDialogue" to="." method="_on_back_dialogue_dialogue_signal"]
+[connection signal="pressed" from="BackDialog/Cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="BackDialog/Back" to="." method="_on_back_pressed"]

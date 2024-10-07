@@ -175,6 +175,50 @@ theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_tr03v")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_tr03v")
 flat = true
 
+[node name="Heroes-HitBox" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 322.0
+offset_right = 475.0
+offset_bottom = 487.0
+
+[node name="Heroes" type="Button" parent="Heroes-HitBox"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tr03v")
+flat = true
+
+[node name="Crafts-HitBox" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 499.0
+offset_right = 475.0
+offset_bottom = 664.0
+
+[node name="Crafts" type="Button" parent="Crafts-HitBox"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_tr03v")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tr03v")
+flat = true
+
 [node name="Inventory-HitBox" type="MarginContainer" parent="."]
 layout_mode = 0
 offset_left = -4.0
@@ -198,6 +242,7 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_yt8hq")
 flat = true
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = 204.0
 offset_top = 197.0
 offset_right = 486.0
@@ -212,6 +257,7 @@ vertical_alignment = 1
 uppercase = true
 
 [node name="Label2" type="Label" parent="."]
+layout_mode = 0
 offset_left = 261.0
 offset_top = 378.0
 offset_right = 356.0
@@ -226,6 +272,7 @@ vertical_alignment = 1
 uppercase = true
 
 [node name="Label3" type="Label" parent="."]
+layout_mode = 0
 offset_left = 260.0
 offset_top = 557.0
 offset_right = 395.0
@@ -240,6 +287,7 @@ vertical_alignment = 1
 uppercase = true
 
 [node name="Label4" type="Label" parent="."]
+layout_mode = 0
 offset_left = 260.0
 offset_top = 727.0
 offset_right = 438.0
@@ -259,4 +307,5 @@ offset_top = 21.0
 offset_bottom = 21.0
 
 [connection signal="pressed" from="Profile-HitBox/Profile" to="." method="_on_profile_pressed"]
+[connection signal="pressed" from="Heroes-HitBox/Heroes" to="." method="_on_heroes_pressed"]
 [connection signal="pressed" from="Inventory-HitBox/Inventory" to="." method="_on_inventory_pressed"]

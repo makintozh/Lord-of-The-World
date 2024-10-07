@@ -18,14 +18,18 @@ config/quit_on_go_back=false
 config/features=PackedStringArray("4.3", "Mobile")
 run/max_fps=60
 boot_splash/bg_color=Color(0, 0, 0, 0)
+boot_splash/show_image=false
+boot_splash/fullsize=false
+boot_splash/use_filter=false
+config/icon="res://src/ui/new-ui/misc/Аватар.png"
 
 [autoload]
 
 GLOBAL="*res://src/scripts/singleton/global_variables.gd"
 CONFIG="*res://src/scripts/singleton/config.gd"
 SceneManager="*res://src/scripts/singleton/SceneManager.gd"
-DebugMenu="*res://addons/debug_menu/debug_menu.tscn"
 Shaker="*res://addons/shaker/src/Shaker.gd"
+DebugMenu="*res://addons/debug_menu/debug_menu.tscn"
 
 [debug]
 
@@ -46,7 +50,7 @@ window/energy_saving/keep_screen_on=false
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_width"
 window/per_pixel_transparency/allowed=true
-window/handheld/orientation=1
+window/handheld/orientation=5
 window/vsync/vsync_mode=0
 window/size/window_height_override.windows=975
 
@@ -60,7 +64,7 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/CodeEditorBackground/plugin.cfg", "res://addons/debug_menu/plugin.cfg", "res://addons/dialogue_nodes/plugin.cfg", "res://addons/script-ide/plugin.cfg", "res://addons/shaker/plugin.cfg")
+enabled=PackedStringArray("res://addons/CodeEditorBackground/plugin.cfg", "res://addons/debug_menu/plugin.cfg", "res://addons/script-ide/plugin.cfg", "res://addons/shaker/plugin.cfg")
 
 [file_customization]
 
@@ -157,6 +161,10 @@ ENTER={
 
 pointing/emulate_touch_from_mouse=true
 
+[physics]
+
+2d/run_on_separate_thread=true
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=2
@@ -165,6 +173,7 @@ renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
 textures/lossless_compression/force_png=true
 textures/default_filters/use_nearest_mipmap_filter=true
+environment/glow/upscale_mode=0
 environment/defaults/default_clear_color=Color(0.255659, 0.255659, 0.255659, 1)
 anti_aliasing/quality/msaa_2d=2
 viewport/hdr_2d=true

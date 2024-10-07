@@ -14,6 +14,13 @@ extends Control
 @onready var navigation_closed = $Navigation/NavigationClosed
 @onready var navigation_close_hitbox = $Navigation/NavigationCloseHitBox
 @onready var navigation_opened = $Navigation/NavigationOpened
+@onready var maximized_resources = $PlayerInformation/MAXIMIZEDPlayerResources
+@onready var minimized_resources = $PlayerInformation/MINIMIZEDPlayerResources
+@onready var menu_tavern = $Home/Tavern
+@onready var menu_tasks = $Home/Tasks
+@onready var menu_city = $Home/City
+@onready var menu_shop = $Home/Shop
+@onready var menu_mail = $Home/Mail
 var navigation_active : bool = false
 
 
@@ -22,17 +29,32 @@ var navigation_active : bool = false
 @onready var scene = get_tree().get_root().get_child(SceneManager.singleton_count)
 
 
+var current_menu_scale = Vector2(1.2, 1.2)
+var other_menu_scale = Vector2(1.0, 1.0)
 
 
 func _ready() -> void:
-	nickname_label.text = GLOBAL.player_character_name
+	minimize_resources()
 	
+	nickname_label.text = GLOBAL.player_character_name
+
+
 	if scene.name == "Navigation-menu":
 		current_home_texture.position.x = 191
+		menu_city.scale = current_menu_scale
+		menu_city.position = Vector2(212.0, 1152.0)
 		navigation.visible = true
-	elif scene.name == "Tavern" or scene.name == "Tavern-Inventory" or scene.name == "Tavern-Profile":
+	else:
+		menu_city.scale = other_menu_scale
+
+
+	if scene.name == "Tavern" or scene.name == "Tavern-Inventory" or scene.name == "Tavern-Profile" or scene.name == "Tavern-Heroes":
 		current_home_texture.position.x = -9
+		menu_tavern.scale = current_menu_scale
+		menu_tavern.position = Vector2(0.53, 1140.0)
 		navigation.visible = false
+	else:
+		menu_tavern.scale = other_menu_scale
 
 
 
@@ -56,8 +78,16 @@ func navigation_manager():
 		navigation_close_hitbox.visible = false
 		#$"../ChatGui".mini_chat_active = true
 		#$"../ChatGui".scroll_container.visible = true
-		
-		
+
+
+
+func maximize_resources():
+	maximized_resources.visible = true
+	minimized_resources = false
+
+func minimize_resources():
+	maximized_resources.visible = false
+	minimized_resources = true
 
 
 
@@ -69,7 +99,7 @@ func _on_navigation_closed_pressed() -> void:
 	navigation_active = true
 	$"../ChatGui".chat_panel.visible = false
 	$"../ChatGui".hide_chat_button.visible = false
-	$"../ChatGui".scroll_container.visible = false
+	$"../ChatGui".messages_label.visible = false
 
 
 
@@ -79,7 +109,7 @@ func _on_navigation_close_hit_box_pressed() -> void:
 	navigation_active = false
 	$"../ChatGui".chat_panel.visible = true
 	$"../ChatGui".hide_chat_button.visible = true
-	$"../ChatGui".scroll_container.visible = true
+	$"../ChatGui".messages_label.visible = true
 
 
 
@@ -94,3 +124,11 @@ func _on_tavern_hit_box_pressed() -> void:
 func _on_city_hit_box_pressed() -> void:
 	if !scene.name == "Navigation-menu":
 		SceneManager.go_to_scene("res://src/scenes/game-scenes/navigation-menu.tscn")
+
+
+func _on_show_all_pressed() -> void:
+	maximize_resources()
+
+
+func _on_hide_all_pressed() -> void:
+	minimize_resources()

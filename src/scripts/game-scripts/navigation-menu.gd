@@ -2,12 +2,18 @@ extends Control
 
 
 
-@onready var back_dialogue = $BackDialogue
-@onready var transparent_back = $TransparentBack
+
 @onready var navigation_menu = $"."
+@onready var back_dialog = $BackDialog
 
 
 
+
+
+
+
+func _ready() -> void:
+	back_dialog.visible = false
 
 
 
@@ -24,7 +30,6 @@ func adaptive_keyboard():
 	if OS.get_name() == "Android" or OS.get_name() == "iOS":
 		var height = DisplayServer.virtual_keyboard_get_height()
 		navigation_menu.position.y = -height/2.5
-
 
 
 
@@ -53,26 +58,13 @@ func _on_sieges_pressed() -> void:
 
 
 func _on_back_button_pressed():
-	if not back_dialogue.is_running():
-		transparent_back.visible = true
-		back_dialogue.start()
+	if back_dialog.visible == false:
+		back_dialog.visible = true
 
 
+func _on_cancel_pressed() -> void:
+	back_dialog.visible = false
 
-func close_dialogue():
-	back_dialogue.stop()
-	transparent_back.visible = false
-
-
-
-
-func _on_back_dialogue_dialogue_signal(value):
-	
-	print(value)
-	
-	if value == 'YES':
-		GLOBAL.from_change_server = false
-		SceneManager.go_to_scene("res://src/scenes/auth-scenes/choice_server.tscn")
-
-	if value == 'NO':
-		close_dialogue()
+func _on_back_pressed() -> void:
+	GLOBAL.from_change_server = true
+	SceneManager.go_to_scene("res://src/scenes/auth-scenes/choice_server.tscn")

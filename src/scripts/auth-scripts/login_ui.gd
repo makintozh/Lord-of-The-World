@@ -15,6 +15,7 @@ var password_remember = "password"
 @onready var passwordhidebutton = $UI/PasswordHideUI/PasswordHideButton
 @onready var loginbutton = $Navigation/NavigationContainer/LoginButton
 @onready var api = $APIRequest
+@onready var api_waitresponse_timer = $APIWaitResponseTimer
 @onready var failed = $FailedToConnect
 @onready var waitingresponse = $WaitingResponse
 
@@ -97,10 +98,15 @@ func _on_login_button_pressed():
 		
 	api.request(CONFIG.api_link + "/auth", CONFIG.api_headers, HTTPClient.METHOD_POST, authpost)
 	print(authpost)
-	await get_tree().create_timer(20).timeout
-	GLOBAL.failed_reason = "No Internet Connection"
+	#await get_tree().create_timer(20).timeout
+	api_waitresponse_timer.start()
+
+
+
+
+func _on_api_wait_response_timer_timeout() -> void:
+	GLOBAL.failed_reason = "No Internet"
 	failed.visible = true
-	waitingresponse.visible = false
 
 
 

@@ -103,9 +103,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_t13y3")
 
-[node name="APIRequest" type="HTTPRequest" parent="."]
-
-[node name="APISummary" type="HTTPRequest" parent="."]
+[node name="APIValidator" type="HTTPRequest" parent="."]
 
 [node name="APICharacterCreate" type="HTTPRequest" parent="."]
 
@@ -174,6 +172,7 @@ offset_right = 277.0
 offset_bottom = 163.0
 
 [node name="ColorRect" type="ColorRect" parent="MainUI/Characters"]
+layout_mode = 0
 offset_left = 191.0
 offset_top = 107.0
 offset_right = 272.0
@@ -402,8 +401,7 @@ theme_override_font_sizes/font_size = 21
 text = "Wait..."
 horizontal_alignment = 1
 
-[connection signal="request_completed" from="APIRequest" to="." method="_on_api_request_request_completed"]
-[connection signal="request_completed" from="APISummary" to="." method="_on_api_summary_request_completed"]
+[connection signal="request_completed" from="APIValidator" to="." method="_on_api_validator_request_completed"]
 [connection signal="request_completed" from="APICharacterCreate" to="." method="_on_api_character_create_request_completed"]
 [connection signal="pressed" from="MainUI/CharacterCreateButton/CharacterCreateButtonContainer/CharacterCreateButton" to="." method="_on_character_create_button_pressed"]
 [connection signal="pressed" from="MainUI/Index_Buttons/RightButton/RightButton" to="." method="_on_right_button_pressed"]

@@ -15,6 +15,8 @@ extends Control
 
 
 @onready var api = $APIRequest
+@onready var api_waitresponse_timer = $APIWaitResponseTimer
+
 
 var registered = false
 var privacynotice_enabled = false
@@ -95,10 +97,15 @@ func _on_sign_up_button_pressed():
 		
 	api.request(CONFIG.api_link + "/register", CONFIG.api_headers, HTTPClient.METHOD_POST, authpost)
 	print(authpost)
-	await get_tree().create_timer(20).timeout
+	#await get_tree().create_timer(20).timeout
+	api_waitresponse_timer.start()
+
+
+
+
+func _on_api_wait_response_timer_timeout() -> void:
 	GLOBAL.failed_reason = "No Internet"
 	failed.visible = true
-
 
 
 
