@@ -64,7 +64,7 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/CodeEditorBackground/plugin.cfg", "res://addons/debug_menu/plugin.cfg", "res://addons/script-ide/plugin.cfg", "res://addons/shaker/plugin.cfg")
+enabled=PackedStringArray("res://addons/debug_menu/plugin.cfg", "res://addons/shaker/plugin.cfg")
 
 [file_customization]
 
@@ -160,10 +160,6 @@ ENTER={
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
-
-[physics]
-
-2d/run_on_separate_thread=true
 
 [rendering]
 
